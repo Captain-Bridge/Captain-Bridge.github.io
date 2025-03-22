@@ -1387,7 +1387,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #4b2dff;
+    background: #afe3a7;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1814,7 +1814,7 @@ pre code {
   width: 100%;
 }
 .with-love {
-  color: #f00;
+  color: #fff;
   display: inline-block;
   margin: 0 5px;
 }
@@ -2973,6 +2973,79 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+.fa-bilibili {
+  background: url("/images/bilibili-fill.svg");
+  background-posion: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+.fa-tiktok {
+  background: url("/images/tiktok.svg");
+  background-posion: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+.fa-Destiny {
+  background: url("/images/Destiny2.svg");
+  background-posion: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+.fa-raidreport {
+  background: url("/images/raid.svg");
+  background-posion: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+.fa-test_1 {
+  background: url("/images/Destiny2.svg");
+  background-posion: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+.fa-test_2 {
+  background: url("/images/Destiny2.png");
+  background-posion: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+.fa-steam {
+  background: url("/images/Destiny2.svg");
+  background-posion: 50% 75%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+.posts-expand .post-title-link {
+  color: #000;
+}
+.posts-expand .post-meta-container {
+  color: #000;
+}
+.sidebar {
+  opacity: 0.85;
+}
+.main-inner > .sub-menu,
+.main-inner > .post-block,
+.main-inner > .tabs-comment,
+.main-inner > .comments,
+.main-inner > .pagination {
+  background: rgba(245,245,245,0.85);
+}
+body {
+  background: url("/images/background.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-pisition: 50% 50%;
+  background-size: cover;
+  color: #000;
 }
 .posts-expand .post-title-link {
   color: #000;
