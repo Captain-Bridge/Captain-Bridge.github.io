@@ -1387,7 +1387,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff2dff;
+    background: #bf063c;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1634,7 +1634,7 @@ pre code {
   color: #fc6423;
 }
 .site-author-image {
-  border: 1px solid #eee;
+  border: 1px solid rgba(0,0,0,0);
   max-width: 120px;
   padding: 2px;
 }
