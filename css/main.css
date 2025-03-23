@@ -1387,7 +1387,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #cde763;
+    background: #d105ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3004,11 +3004,10 @@ body {
   height: 1rem;
   width: 1rem;
 }
-.fa-linkinpark {
-  background: url("/images/linkinpark.png");
-  background-posion: 20% 20%;
+.fa-leetcode {
+  background: url("/images/leetcode.svg");
+  background-posion: 50% 75%;
   background-repeat: no-repeat;
-  background-size: 100% auto;
   height: 1rem;
   width: 1rem;
 }
