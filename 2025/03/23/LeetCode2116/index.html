@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="LeetCode.2116:判断一个括号字符串是否有效一个括号字符串是只由 ‘(‘ 和 ‘)’ 组成的 非空 字符串。如果一个字符串满足下面 任意 一个条件，那么它就是有效的： 字符串为 ().它可以表示为 AB（A 与 B 连接），其中A 和 B 都是有效括号字符串。它可以表示为 (A) ，其中 A 是一个有效括号字符串。给你一个括号字符串 s 和一个字符串 locked ，两者长度都为 n 。">
+    <meta name="description" content="LeetCode.2116:判断一个括号字符串是否有效​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的LeetCode.1963很像,不过那一道用双指针，感觉比这一道题简单一点。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode_2116">
 <meta property="og:url" content="http://example.com/2025/03/23/LeetCode2116/index.html">
 <meta property="og:site_name" content="Deep Stone Crypt">
-<meta property="og:description" content="LeetCode.2116:判断一个括号字符串是否有效一个括号字符串是只由 ‘(‘ 和 ‘)’ 组成的 非空 字符串。如果一个字符串满足下面 任意 一个条件，那么它就是有效的： 字符串为 ().它可以表示为 AB（A 与 B 连接），其中A 和 B 都是有效括号字符串。它可以表示为 (A) ，其中 A 是一个有效括号字符串。给你一个括号字符串 s 和一个字符串 locked ，两者长度都为 n 。">
+<meta property="og:description" content="LeetCode.2116:判断一个括号字符串是否有效​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的LeetCode.1963很像,不过那一道用双指针，感觉比这一道题简单一点。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-23T02:35:20.000Z">
-<meta property="article:modified_time" content="2025-03-23T02:35:35.473Z">
+<meta property="article:modified_time" content="2025-03-23T02:37:40.374Z">
 <meta property="article:author" content="白枭">
 <meta property="article:tag" content="栈">
 <meta property="article:tag" content="贪心">
@@ -218,7 +218,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-03-23 10:35:20 / 修改时间：10:35:35" itemprop="dateCreated datePublished" datetime="2025-03-23T10:35:20+08:00">2025-03-23</time>
+      <time title="创建时间：2025-03-23 10:35:20 / 修改时间：10:37:40" itemprop="dateCreated datePublished" datetime="2025-03-23T10:35:20+08:00">2025-03-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -254,13 +254,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="LeetCode-2116-判断一个括号字符串是否有效"><a href="#LeetCode-2116-判断一个括号字符串是否有效" class="headerlink" title="LeetCode.2116:判断一个括号字符串是否有效"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid/description/?envType=daily-question&envId=2025-03-23">LeetCode.2116</a>:判断一个括号字符串是否有效</h1><p>一个括号字符串是只由 ‘(‘ 和 ‘)’ 组成的 非空 字符串。如果一个字符串满足下面 任意 一个条件，那么它就是有效的：</p>
-<p>字符串为 ().<br>它可以表示为 AB（A 与 B 连接），其中A 和 B 都是有效括号字符串。<br>它可以表示为 (A) ，其中 A 是一个有效括号字符串。<br>给你一个括号字符串 s 和一个字符串 locked ，两者长度都为 n 。locked 是一个二进制字符串，只包含 ‘0’ 和 ‘1’ 。对于 locked 中 每一个 下标 i ：</p>
-<p>如果 locked[i] 是 ‘1’ ，你 不能 改变 s[i] 。<br>如果 locked[i] 是 ‘0’ ，你 可以 将 s[i] 变为 ‘(‘ 或者 ‘)’ 。<br>如果你可以将 s 变为有效括号字符串，请你返回 true ，否则返回 false 。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="LeetCode-2116-判断一个括号字符串是否有效"><a href="#LeetCode-2116-判断一个括号字符串是否有效" class="headerlink" title="LeetCode.2116:判断一个括号字符串是否有效"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid/description/?envType=daily-question&envId=2025-03-23">LeetCode.2116</a>:判断一个括号字符串是否有效</h1><p>​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/?envType=daily-question&envId=2025-03-23">LeetCode.1963</a>很像,不过那一道用双指针，感觉比这一道题简单一点。</p>
 <span id="more"></span>
 
-
-
+<p>一个括号字符串是只由 ‘(‘ 和 ‘)’ 组成的 非空 字符串。如果一个字符串满足下面 任意 一个条件，那么它就是有效的：</p>
+<p>字符串为 ().<br>它可以表示为 AB（A 与 B 连接），其中A 和 B 都是有效括号字符串。<br>它可以表示为 (A) ，其中 A 是一个有效括号字符串。<br>给你一个括号字符串 s 和一个字符串 locked ，两者长度都为 n 。locked 是一个二进制字符串，只包含 ‘0’ 和 ‘1’ 。对于 locked 中 每一个 下标 i ：</p>
+<p>如果 locked[i] 是 ‘1’ ，你 不能 改变 s[i] 。<br>如果 locked[i] 是 ‘0’ ，你 可以 将 s[i] 变为 ‘(‘ 或者 ‘)’ 。<br>如果你可以将 s 变为有效括号字符串，请你返回 true ，否则返回 false 。</p>
 <p>示例1：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;))()))&quot;, locked = &quot;010100&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：locked[1] == &#x27;1&#x27; 和 locked[3] == &#x27;1&#x27; ，所以我们无法改变 s[1] 或者 s[3] 。</span><br><span class="line">我们可以将 s[0] 和 s[4] 变为 &#x27;(&#x27; ，不改变 s[2] 和 s[5] ，使 s 变为有效字符串。</span><br></pre></td></tr></table></figure>
 
@@ -273,8 +272,7 @@
 <p>示例4：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;(((())(((())&quot;, locked = &quot;111111010111&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：locked 允许我们改变 s[6] 和 s[8]。</span><br><span class="line">我们将 s[6] 和 s[8] 改为 &#x27;)&#x27; 使 s 变为有效字符串。</span><br></pre></td></tr></table></figure>
 
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/?envType=daily-question&envId=2025-03-23">LeetCode.1963</a>很像,不过那一道用双指针，感觉比这一道题简单一点。</p>
-<p>​	话说回来，拿到数组第一步将<code>（</code>转换成1，将<code>）</code>转换成-1，这样才能适应求前缀和的方法。然后根据 <em>有效括号字符串</em> 的定义，其实就是括号能配上对，我们可以知道一个括号字符串有效用前缀和来表示就是该字符串总的分数为0，且任意一个位置前缀和都大于等于0。</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>​	拿到字符串第一件事就是把<code>（</code>转换成1，把<code>）</code>转换成-1，这样才能适应求前缀和的方法。然后根据 <em>有效括号字符串</em> 的定义，其实就是括号能配上对，我们可以知道一个括号字符串有效用前缀和来表示就是该字符串总的分数为0，且任意一个位置前缀和都大于等于0。</p>
 <p>​	官方题解说让自行尝试证明，我反正搞不懂咋证明，我一开始看了一眼相关标签，里面明明白白写着个栈，我就在那入栈出栈捣鼓半天，也不知道是智力不够还是通宵通的反正搞不懂。</p>
 <p>​	说回来，题解在这里给出了一个 <em>有效前缀</em> 的定义，就是说一个字符串的某个前缀字符串满足它本身以及它所有的前缀的分数均大于等于零，则称该前缀为有效前缀。相对于 <em>有效括号字符串</em>  来说，将定义放宽至了其本身的分数可以大于零。</p>
 <p>​	然后对字符串 <code>s</code> 定义最大有效分数<code>mx</code>和最小有效分数<code>mn</code>，具体地：</p>
