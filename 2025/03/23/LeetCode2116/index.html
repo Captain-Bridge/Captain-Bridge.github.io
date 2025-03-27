@@ -28,7 +28,7 @@
 <meta property="og:description" content="LeetCode.2116:判断一个括号字符串是否有效​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的LeetCode.1963很像,不过那一道用双指针，感觉比这一道题简单一点。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-23T02:35:20.000Z">
-<meta property="article:modified_time" content="2025-03-23T19:10:15.603Z">
+<meta property="article:modified_time" content="2025-03-27T15:10:32.784Z">
 <meta property="article:author" content="白枭">
 <meta property="article:tag" content="栈">
 <meta property="article:tag" content="贪心">
@@ -55,7 +55,11 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -233,7 +237,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-24 03:10:15" itemprop="dateModified" datetime="2025-03-24T03:10:15+08:00">2025-03-24</time>
+      <time title="修改时间：2025-03-27 23:10:32" itemprop="dateModified" datetime="2025-03-27T23:10:32+08:00">2025-03-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -276,9 +280,9 @@
     <div class="post-body" itemprop="articleBody"><h1 id="LeetCode-2116-判断一个括号字符串是否有效"><a href="#LeetCode-2116-判断一个括号字符串是否有效" class="headerlink" title="LeetCode.2116:判断一个括号字符串是否有效"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid">LeetCode.2116</a>:判断一个括号字符串是否有效</h1><p>​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/?envType=daily-question&envId=2025-03-23">LeetCode.1963</a>很像,不过那一道用双指针，感觉比这一道题简单一点。</p>
 <span id="more"></span>
 
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>一个括号字符串是只由 ‘(‘ 和 ‘)’ 组成的 非空 字符串。如果一个字符串满足下面 任意 一个条件，那么它就是有效的：</p>
-<p>字符串为 ().<br>它可以表示为 AB（A 与 B 连接），其中A 和 B 都是有效括号字符串。<br>它可以表示为 (A) ，其中 A 是一个有效括号字符串。<br>给你一个括号字符串 s 和一个字符串 locked ，两者长度都为 n 。locked 是一个二进制字符串，只包含 ‘0’ 和 ‘1’ 。对于 locked 中 每一个 下标 i ：</p>
-<p>如果 locked[i] 是 ‘1’ ，你 不能 改变 s[i] 。<br>如果 locked[i] 是 ‘0’ ，你 可以 将 s[i] 变为 ‘(‘ 或者 ‘)’ 。<br>如果你可以将 s 变为有效括号字符串，请你返回 true ，否则返回 false 。</p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>一个括号字符串是只由 <code>(</code>和 <code>)</code> 组成的 非空 字符串。如果一个字符串满足下面 任意 一个条件，那么它就是有效的：</p>
+<p>字符串为 ().<br>它可以表示为 AB（A 与 B 连接），其中A 和 B 都是有效括号字符串。<br>它可以表示为 (A) ，其中 A 是一个有效括号字符串。<br>给你一个括号字符串 s 和一个字符串 locked ，两者长度都为 n 。locked 是一个二进制字符串，只包含 <code>0</code> 和<code>1</code> 。对于 locked 中 每一个 下标 i ：</p>
+<p>如果 <code>locked[i]</code> 是 <code>1</code> ，你 不能 改变 s[i] 。<br>如果 <code>locked[i]</code> 是 <code> 0</code> ，你 可以 将 <code>s[i]</code> 变为 <code>(</code> 或者 <code>)</code> 。<br>如果你可以将 s 变为有效括号字符串，请你返回 true ，否则返回 false 。</p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>示例1：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;))()))&quot;, locked = &quot;010100&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：locked[1] == &#x27;1&#x27; 和 locked[3] == &#x27;1&#x27; ，所以我们无法改变 s[1] 或者 s[3] 。</span><br><span class="line">我们可以将 s[0] 和 s[4] 变为 &#x27;(&#x27; ，不改变 s[2] 和 s[5] ，使 s 变为有效字符串。</span><br></pre></td></tr></table></figure>
 
@@ -482,6 +486,12 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 
