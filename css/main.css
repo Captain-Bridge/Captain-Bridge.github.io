@@ -35,7 +35,7 @@
     --selection-bg: #bbb;
     --selection-color: #333;
     --blockquote-color: #bbb;
-    --link-color: #ccc;
+    --link-color: #555;
     --link-hover-color: #eee;
     --brand-color: #ddd;
     --brand-hover-color: #ddd;
@@ -1387,7 +1387,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #4d67c9;
+    background: #45ff1b;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
