@@ -19,27 +19,26 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="LeetCode.3110:字符串的分数​	和3340一样，简单的API练习题。">
+    <meta name="description" content="曲面的表示方法1：参数化形式 $X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$  支持从二维区域映射到三维空间  2：隐式表示 $f(x,y,z) &#x3D; 0$  用于重建、隐函数建模(SDF)  3：显式表示 $z&#x3D;f(x,y)$  表达能力弱，仅可用于特定局部场景  混合积 (Mixed Product)给定三个三维向量$a,b,c$，它们的混合">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode3110">
-<meta property="og:url" content="http://baixiao.club/2025/03/30/LeetCode3110/index.html">
+<meta property="og:title" content="微分几何-曲面">
+<meta property="og:url" content="http://baixiao.club/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E9%9D%A2/index.html">
 <meta property="og:site_name" content="Talos I">
-<meta property="og:description" content="LeetCode.3110:字符串的分数​	和3340一样，简单的API练习题。">
+<meta property="og:description" content="曲面的表示方法1：参数化形式 $X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$  支持从二维区域映射到三维空间  2：隐式表示 $f(x,y,z) &#x3D; 0$  用于重建、隐函数建模(SDF)  3：显式表示 $z&#x3D;f(x,y)$  表达能力弱，仅可用于特定局部场景  混合积 (Mixed Product)给定三个三维向量$a,b,c$，它们的混合">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-30T14:26:24.000Z">
-<meta property="article:modified_time" content="2025-03-30T14:29:03.175Z">
+<meta property="article:published_time" content="2025-07-02T01:49:10.000Z">
+<meta property="article:modified_time" content="2025-07-02T01:49:47.090Z">
 <meta property="article:author" content="白枭">
-<meta property="article:tag" content="字符串">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://baixiao.club/2025/03/30/LeetCode3110/">
+<link rel="canonical" href="http://baixiao.club/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E9%9D%A2/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/03/30/LeetCode3110/","path":"2025/03/30/LeetCode3110/","title":"LeetCode3110"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E9%9D%A2/","path":"2025/07/02/微分几何-曲面/","title":"微分几何-曲面"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>LeetCode3110 | Talos I</title>
+<title>微分几何-曲面 | Talos I</title>
   
 
 
@@ -122,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode-3110-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">LeetCode.3110:字符串的分数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.3.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.4.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B2%E9%9D%A2%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">曲面的表示方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E5%90%88%E7%A7%AF-Mixed-Product"><span class="nav-number">2.</span> <span class="nav-text">混合积 (Mixed Product)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E5%8F%98%E5%AF%BC%E6%95%B0-Covariant-Derivative"><span class="nav-number">3.</span> <span class="nav-text">共变导数 (Covariant Derivative)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B4%E8%A7%82%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">直观定义</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,38 +187,10 @@
   </div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/03/30/LeetCode3340/" rel="bookmark">
+      <a class="popular-posts-link" href="/2025/03/30/LeetCode2109/" rel="bookmark">
         <time class="popular-posts-time">2025-03-30</time>
         <br>
-      LeetCode3340
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/03/24/LeetCode2255/" rel="bookmark">
-        <time class="popular-posts-time">2025-03-24</time>
-        <br>
-      LeetCode2255
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/03/30/LeetCode2012/" rel="bookmark">
-        <time class="popular-posts-time">2025-03-30</time>
-        <br>
-      LeetCode2012
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/03/31/LeetCode2278/" rel="bookmark">
-        <time class="popular-posts-time">2025-03-31</time>
-        <br>
-      LeetCode2278
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/03/25/LeetCode2614/" rel="bookmark">
-        <time class="popular-posts-time">2025-03-25</time>
-        <br>
-      LeetCode2614
+      LeetCode2109
       </a>
     </li>
   </ul>
@@ -243,7 +214,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/03/30/LeetCode3110/">
+    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E9%9D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chloe.png">
@@ -256,12 +227,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="LeetCode3110 | Talos I">
+      <meta itemprop="name" content="微分几何-曲面 | Talos I">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          LeetCode3110
+          微分几何-曲面
         </h1>
 
         <div class="post-meta-container">
@@ -273,20 +244,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-03-30 22:26:24 / 修改时间：22:29:03" itemprop="dateCreated datePublished" datetime="2025-03-30T22:26:24+08:00">2025-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode每日一题</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/LeetCode%E7%AE%80%E5%8D%95/" itemprop="url" rel="index"><span itemprop="name">LeetCode简单</span></a>
-        </span>
+      <time title="创建时间：2025-07-02 09:49:10 / 修改时间：09:49:47" itemprop="dateCreated datePublished" datetime="2025-07-02T09:49:10+08:00">2025-07-02</time>
     </span>
 
   
@@ -296,7 +254,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>270</span>
+      <span>407</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -313,29 +271,47 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="LeetCode-3110-字符串的分数"><a href="#LeetCode-3110-字符串的分数" class="headerlink" title="LeetCode.3110:字符串的分数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-balanced-string">LeetCode.3110</a>:字符串的分数</h1><p>​	和<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-balanced-string">3340</a>一样，简单的API练习题。</p>
-<span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><!---->
 
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给你一个字符串 <code>s</code> 。一个字符串的 <strong>分数</strong> 定义为相邻字符 <strong>ASCII</strong> 码差值绝对值的和。</p>
-<p>请你返回 <code>s</code> 的 <strong>分数</strong> 。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>示例1：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;hello&quot;</span><br><span class="line"></span><br><span class="line">输出：13</span><br><span class="line"></span><br><span class="line">解释：</span><br><span class="line"></span><br><span class="line">s 中字符的 ASCII 码分别为：&#x27;h&#x27; = 104 ，&#x27;e&#x27; = 101 ，&#x27;l&#x27; = 108 ，&#x27;o&#x27; = 111 。所以 s 的分数为 |104 - 101| + |101 - 108| + |108 - 108| + |108 - 111| = 3 + 7 + 0 + 3 = 13 。</span><br></pre></td></tr></table></figure>
-
-<p>示例2：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;zaz&quot;</span><br><span class="line"></span><br><span class="line">输出：50</span><br><span class="line"></span><br><span class="line">解释：</span><br><span class="line"></span><br><span class="line">s 中字符的 ASCII 码分别为：&#x27;z&#x27; = 122 ，&#x27;a&#x27; = 97 。所以 s 的分数为 |122 - 97| + |97 - 122| = 25 + 25 = 50 。</span><br></pre></td></tr></table></figure>
-
-
-<p>提示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 &lt;= s.length &lt;= 100</span><br><span class="line">s 只包含小写英文字母。</span><br></pre></td></tr></table></figure>
-
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>​	同样首先注意到数据范围$2 &lt;&#x3D; s.length &lt;&#x3D; 100$，选择的方法自然是从头到尾的遍历。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">scoreOfString</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n-<span class="number">1</span>; i++)&#123;</span><br><span class="line">            x = s.charAt(i) - s.charAt(i+<span class="number">1</span>);</span><br><span class="line">            res = res + (x&gt;<span class="number">0</span>?x:-x);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>复杂度分析</strong></p>
+<h3 id="曲面的表示方法"><a href="#曲面的表示方法" class="headerlink" title="曲面的表示方法"></a>曲面的表示方法</h3><p>1：参数化形式</p>
+<p>$X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$</p>
 <ul>
-<li>时间复杂度：$O(n)$，其中 $n$ 是 $s$ 的长度。</li>
-<li>空间复杂度：$O(1)$。</li>
+<li>支持从二维区域映射到三维空间</li>
 </ul>
+<p>2：隐式表示</p>
+<p>$f(x,y,z) &#x3D; 0$</p>
+<ul>
+<li>用于重建、隐函数建模(SDF)</li>
+</ul>
+<p>3：显式表示</p>
+<p>$z&#x3D;f(x,y)$</p>
+<ul>
+<li>表达能力弱，仅可用于特定局部场景</li>
+</ul>
+<h3 id="混合积-Mixed-Product"><a href="#混合积-Mixed-Product" class="headerlink" title="混合积 (Mixed Product)"></a>混合积 (Mixed Product)</h3><p>给定三个三维向量$a,b,c$，它们的混合积定义为：</p>
+<p>$[a,b,c] &#x3D; a·(b×c)$</p>
+<p>几何意义：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">混合积表示的是由三维向量a,b,c构成的平行六面体的有向体积</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>若混合积＞0：右手系，体积为正</li>
+<li>若混合积＜0：左手系，体积为负</li>
+<li>若混合积＝0：三向量共面，体积为0</li>
+</ul>
+<p>无向体积：$V &#x3D; |[a,b,c]|$</p>
+<p>使用场景：判断三向量是否共面</p>
+<h3 id="共变导数-Covariant-Derivative"><a href="#共变导数-Covariant-Derivative" class="headerlink" title="共变导数 (Covariant Derivative)"></a>共变导数 (Covariant Derivative)</h3><p>为了解决一个根本问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在弯曲空间或曲面上，怎么“正确地”比较两个不同点处的向量？</span><br></pre></td></tr></table></figure>
+
+<h4 id="直观定义"><a href="#直观定义" class="headerlink" title="直观定义"></a>直观定义</h4><p><strong>共变导数是对向量场在曲面上“沿某方向的变化率”的一种“内在”测量方式。</strong></p>
+<p>它修正了普通导数无法在曲面上比较向量的问题，使得“方向导数”在曲面中也能有明确的几何意义。</p>
+<p>设 $\vec{X}$ 是曲面上的一个向量场，$\vec{V}$ 是一个方向向量，则：</p>
+<p>$\nabla_{\vec{V}}\vec{X}$</p>
+<p>表示 <strong>在方向 $\vec{V}$ 上，向量场 $\vec{X}$ 的共变导数</strong>。</p>
+<p>它满足类似普通导数的线性性质，但多了一个重要限制：</p>
+<blockquote>
+<p><strong>结果依然属于切空间（tangent space）</strong>，不会“跳出曲面”。</p>
+</blockquote>
 
     </div>
 
@@ -411,22 +387,16 @@
   </div>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/03/30/LeetCode3340/" rel="prev" title="LeetCode3340">
-                  <i class="fa fa-angle-left"></i> LeetCode3340
+                <a href="/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E7%BA%BF/" rel="prev" title="微分几何-曲线">
+                  <i class="fa fa-angle-left"></i> 微分几何-曲线
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/03/30/%E8%8C%83%E8%BF%9B%E4%B8%AD%E4%B8%BE/" rel="next" title="范进中举">
-                  范进中举 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
