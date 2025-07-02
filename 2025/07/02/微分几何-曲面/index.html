@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="曲面的表示方法1：参数化形式 $X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$  支持从二维区域映射到三维空间">
+    <meta name="description" content="曲面的表示方法1：参数化形式$$X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$$  支持从二维区域映射到三维空间  2：隐式表示$$f(x,y,z) &#x3D; 0$$  用于重建、隐函数建模(SDF)  3：显式表示$$z&#x3D;f(x,y)$$  表达能力弱，仅可用于特定局部场景  混合积 (Mixed Product)给定三个三维向量$a,b,c$，它们的混">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微分几何-曲面">
 <meta property="og:url" content="http://baixiao.club/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E9%9D%A2/index.html">
 <meta property="og:site_name" content="Talos I">
-<meta property="og:description" content="曲面的表示方法1：参数化形式 $X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$  支持从二维区域映射到三维空间">
+<meta property="og:description" content="曲面的表示方法1：参数化形式$$X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$$  支持从二维区域映射到三维空间  2：隐式表示$$f(x,y,z) &#x3D; 0$$  用于重建、隐函数建模(SDF)  3：显式表示$$z&#x3D;f(x,y)$$  表达能力弱，仅可用于特定局部场景  混合积 (Mixed Product)给定三个三维向量$a,b,c$，它们的混">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-02T01:49:10.000Z">
-<meta property="article:modified_time" content="2025-07-02T01:54:55.063Z">
+<meta property="article:modified_time" content="2025-07-02T03:04:40.583Z">
 <meta property="article:author" content="白枭">
 <meta name="twitter:card" content="summary">
 
@@ -121,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B2%E9%9D%A2%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">曲面的表示方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E5%90%88%E7%A7%AF-Mixed-Product"><span class="nav-number">2.</span> <span class="nav-text">混合积 (Mixed Product)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E5%8F%98%E5%AF%BC%E6%95%B0-Covariant-Derivative"><span class="nav-number">3.</span> <span class="nav-text">共变导数 (Covariant Derivative)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B4%E8%A7%82%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">直观定义</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B2%E9%9D%A2%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">曲面的表示方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E5%90%88%E7%A7%AF-Mixed-Product"><span class="nav-number">2.</span> <span class="nav-text">混合积 (Mixed Product)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E5%8F%98%E5%AF%BC%E6%95%B0-Covariant-Derivative"><span class="nav-number">3.</span> <span class="nav-text">共变导数 (Covariant Derivative)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">基本定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">计算过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Christoffel-%E7%AC%A6%E5%8F%B7%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number"></span> <span class="nav-text">Christoffel 符号的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E6%B5%8B%E5%9C%B0%E7%BA%BF%E6%96%B9%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">0.1.</span> <span class="nav-text">在测地线方程中的应用</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -187,10 +187,10 @@
   </div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/03/30/LeetCode2109/" rel="bookmark">
-        <time class="popular-posts-time">2025-03-30</time>
+      <a class="popular-posts-link" href="/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E7%BA%BF/" rel="bookmark">
+        <time class="popular-posts-time">2025-07-02</time>
         <br>
-      LeetCode2109
+      微分几何-曲线
       </a>
     </li>
   </ul>
@@ -244,7 +244,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-07-02 09:49:10 / 修改时间：09:54:55" itemprop="dateCreated datePublished" datetime="2025-07-02T09:49:10+08:00">2025-07-02</time>
+      <time title="创建时间：2025-07-02 09:49:10 / 修改时间：11:04:40" itemprop="dateCreated datePublished" datetime="2025-07-02T09:49:10+08:00">2025-07-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -263,14 +263,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>408</span>
+      <span>572</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -280,26 +280,20 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="曲面的表示方法"><a href="#曲面的表示方法" class="headerlink" title="曲面的表示方法"></a>曲面的表示方法</h3><p>1：参数化形式</p>
-<p>$X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))$</p>
+    <div class="post-body" itemprop="articleBody"><h3 id="曲面的表示方法"><a href="#曲面的表示方法" class="headerlink" title="曲面的表示方法"></a>曲面的表示方法</h3><p>1：参数化形式<br>$$<br>X(u,v) &#x3D; (x(u,v),y(u,v),z(u,v))<br>$$</p>
 <ul>
 <li>支持从二维区域映射到三维空间</li>
 </ul>
-<span id="more"></span>
-
-<p>2：隐式表示</p>
-<p>$f(x,y,z) &#x3D; 0$</p>
+<p>2：隐式表示<br>$$<br>f(x,y,z) &#x3D; 0<br>$$</p>
 <ul>
 <li>用于重建、隐函数建模(SDF)</li>
 </ul>
-<p>3：显式表示</p>
-<p>$z&#x3D;f(x,y)$</p>
+<p>3：显式表示<br>$$<br>z&#x3D;f(x,y)<br>$$</p>
 <ul>
 <li>表达能力弱，仅可用于特定局部场景</li>
 </ul>
 <h3 id="混合积-Mixed-Product"><a href="#混合积-Mixed-Product" class="headerlink" title="混合积 (Mixed Product)"></a>混合积 (Mixed Product)</h3><p>给定三个三维向量$a,b,c$，它们的混合积定义为：</p>
-<p>$[a,b,c] &#x3D; a·(b×c)$</p>
-<p>几何意义：</p>
+<p>$$<br>[a,b,c] &#x3D; a·(b×c)<br>$$<br>几何意义：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">混合积表示的是由三维向量a,b,c构成的平行六面体的有向体积</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -312,15 +306,20 @@
 <h3 id="共变导数-Covariant-Derivative"><a href="#共变导数-Covariant-Derivative" class="headerlink" title="共变导数 (Covariant Derivative)"></a>共变导数 (Covariant Derivative)</h3><p>为了解决一个根本问题：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在弯曲空间或曲面上，怎么“正确地”比较两个不同点处的向量？</span><br></pre></td></tr></table></figure>
 
-<h4 id="直观定义"><a href="#直观定义" class="headerlink" title="直观定义"></a>直观定义</h4><p><strong>共变导数是对向量场在曲面上“沿某方向的变化率”的一种“内在”测量方式。</strong></p>
-<p>它修正了普通导数无法在曲面上比较向量的问题，使得“方向导数”在曲面中也能有明确的几何意义。</p>
-<p>设 $\vec{X}$ 是曲面上的一个向量场，$\vec{V}$ 是一个方向向量，则：</p>
+<h4 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h4><p>设 $M$ 是一个曲面或流形，$\vec{X}$ 是一个向量场，$\vec{V} \in T_pM$ 是某点处的切向量，则：</p>
 <p>$\nabla_{\vec{V}}\vec{X}$</p>
-<p>表示 <strong>在方向 $\vec{V}$ 上，向量场 $\vec{X}$ 的共变导数</strong>。</p>
-<p>它满足类似普通导数的线性性质，但多了一个重要限制：</p>
-<blockquote>
-<p><strong>结果依然属于切空间（tangent space）</strong>，不会“跳出曲面”。</p>
-</blockquote>
+<p>表示：<strong>在方向 $\vec{V}$ 上，向量场 $\vec{X}$ 的变化率，结果仍在切空间 $T_pM$ 内部。</strong></p>
+<p>它是一种“修正过的导数”，避免了将向量导出曲面的错误。</p>
+<h4 id="计算过程"><a href="#计算过程" class="headerlink" title="计算过程"></a>计算过程</h4><p>令 $x^1, x^2, \dots, x^n$ 是局部坐标系</p>
+<p>设向量场：<br>$$<br>\vec{X} &#x3D; X^i \frac{\partial}{\partial x^i}<br>$$<br>共变导数公式:<br>$$<br>\nabla_j X^i &#x3D; \frac{\partial X^i}{\partial x^j} + \Gamma^i_{jk} X^k<br>$$<br>其中：</p>
+<ul>
+<li><p>$\Gamma^i_{jk}$ 是 <strong>Christoffel 符号（联络系数）</strong>，反映了坐标轴自身的“弯曲”。</p>
+</li>
+<li><h2 id="Christoffel-符号的计算"><a href="#Christoffel-符号的计算" class="headerlink" title="Christoffel 符号的计算"></a>Christoffel 符号的计算</h2><p>若给定度量 $g_{ij}$（即第一基本形式），则 Christoffel 符号通过如下公式计算：<br>$$<br>\Gamma^i_{jk} &#x3D; \frac{1}{2} g^{im} \left( \frac{\partial g_{mj}}{\partial x^k} + \frac{\partial g_{mk}}{\partial x^j} - \frac{\partial g_{jk}}{\partial x^m} \right)<br>$$<br>其中 $g^{im}$ 是 $g_{ij}$ 的逆矩阵。</p>
+</li>
+</ul>
+<h4 id="在测地线方程中的应用"><a href="#在测地线方程中的应用" class="headerlink" title="在测地线方程中的应用"></a>在测地线方程中的应用</h4><p>测地线要求：<br>$$<br>\nabla_{\dot{\gamma}} \dot{\gamma} &#x3D; 0<br>$$<br>也就是说，<strong>速度向量场在自身方向上的共变导数为零</strong>。</p>
+<p>展开成坐标形式：<br>$$<br>\ddot{x}^i + \Gamma^i_{jk} \dot{x}^j \dot{x}^k &#x3D; 0<br>\quad \text{for all } i &#x3D; 1, 2, \dots, n<br>$$<br>这就是<strong>测地线方程的局部表达式</strong>。</p>
 
     </div>
 
@@ -436,7 +435,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">46k</span>
+    <span title="站点总字数">47k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
