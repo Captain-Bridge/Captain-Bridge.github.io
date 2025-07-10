@@ -27,7 +27,7 @@
 <meta property="og:description" content="测地线等距不变性：同一个模型，不同的姿势，两个定点之间的测地线距离不会发生变化">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-10T02:19:20.000Z">
-<meta property="article:modified_time" content="2025-07-10T02:50:18.680Z">
+<meta property="article:modified_time" content="2025-07-10T03:11:42.345Z">
 <meta property="article:author" content="白枭">
 <meta name="twitter:card" content="summary">
 
@@ -207,13 +207,6 @@
       SDF与三维重构
       </a>
     </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/07/08/%E6%97%A0%E7%9B%91%E7%9D%A3%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%9B%9B%E8%BE%B9%E5%BD%A2%E7%BD%91%E6%A0%BC%E9%87%8D%E5%BB%BA/" rel="bookmark">
-        <time class="popular-posts-time">2025-07-08</time>
-        <br>
-      无监督深度学习的四边形网格重建
-      </a>
-    </li>
   </ul>
 
           </div>
@@ -265,7 +258,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-07-10 10:19:20 / 修改时间：10:50:18" itemprop="dateCreated datePublished" datetime="2025-07-10T10:19:20+08:00">2025-07-10</time>
+      <time title="创建时间：2025-07-10 10:19:20 / 修改时间：11:11:42" itemprop="dateCreated datePublished" datetime="2025-07-10T10:19:20+08:00">2025-07-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,18 +307,32 @@
 <h3 id="网格上的函数"><a href="#网格上的函数" class="headerlink" title="网格上的函数"></a>网格上的函数</h3><p>顶点上的值赋值 : $f(x_i) &#x3D; f_i$<br>三角形内部的线性插值 : $f(x) &#x3D; f_iB_i(x) + f_jB_j(x) + f_kB_k(x)$</p>
 <p>梯度：<br>$$<br>分片线性插值的梯度公式 : \nabla f(x) &#x3D; f_i\nabla B_i(x) + f_j\nabla B_j(x) + f_k\nabla B_k(x)<br> &#x3D;  \frac{f_i}{2A_T}(x_k-x_j)^\bot + \frac{f_j}{2A_T}(x_i-x_k)^\bot + \frac{f_k}{2A_T}(x_j-x_i)^\bot<br>$$</p>
 <p>最陡上升方向 $\nabla B_i(x) &#x3D; \nabla B_i &#x3D; \frac{(x_k - x_j)^\bot}{2A_T}$</p>
-<h3 id="向量场中的散度"><a href="#向量场中的散度" class="headerlink" title="向量场中的散度"></a>向量场中的散度</h3><p>一个向量场在三角形内部是分片连续的;<br>$$<br>散度定理 : \int_U divV &#x3D; \int_{\partial U}V.n<br>$$<br>即：一个区域内的散度积分等于其边界上的通量。<br>$$<br>离散散度表达式：div(V)<em>iA(i) &#x3D; \sum</em>{ijk}V_{ijk}(xj-xk)^\bot<br>$$<br>顶点面积 : $A(i) &#x3D; \frac{1}{3}\sum_{i\in T}A_T$</p>
+<h3 id="向量场中的散度"><a href="#向量场中的散度" class="headerlink" title="向量场中的散度"></a>向量场中的散度</h3><p>一个向量场在三角形内部是分片连续的;<br>$$<br>散度定理 : \int_U divV &#x3D; \int_{\partial U}V.n<br>$$<br>即：一个区域内的散度积分等于其边界上的通量。</p>
+<p>$$<br>离散散度表达式：div(V)<em>iA(i) &#x3D; \sum</em>{ijk}V_{ijk}(xj-xk)^\bot<br>$$</p>
+<p>顶点面积 : $A(i) &#x3D; \frac{1}{3}\sum_{i\in T}A_T$</p>
 <p>即：顶点 $i$ 的面积等于其关联三角形面积的 $\frac{1}{3}$ 加权和。</p>
 <h3 id="网格上的拉普拉斯算子"><a href="#网格上的拉普拉斯算子" class="headerlink" title="网格上的拉普拉斯算子"></a>网格上的拉普拉斯算子</h3><p>$$<br>梯度在三角形 $\triangle(x_i, x_j, x_k)$ 内的表达式：(\nabla f)<em>{ijk} &#x3D; \frac{f_i}{2A</em>{ijk}}(x_k-x_j)^\bot + \frac{f_j}{2A_{ijk}}(x_i-x_k)^\bot + \frac{f_k}{2A_{ijk}}(x_j-x_i)^\bot<br>$$</p>
-<p>是每个顶点函数值与对边法向量的线性组合。<br>$$<br>拉普拉斯离散形式：(Lf)<em>iA(i) &#x3D; \sum</em>{ijk}(\nabla f)<em>{ijk}.(x_j-x_k)^\bot &#x3D; \sum</em>{ij}\frac{1}{2}(cot\alpha_{ij}+cos\beta_{ij})(f_i-f_j)<br>$$<br>其中 $\alpha_{ij}, \beta_{ij}$ 是边 $(i, j)$ 对应的两个角。</p>
+<p>是每个顶点函数值与对边法向量的线性组合。</p>
+<p>$$<br>拉普拉斯离散形式：(Lf)<em>iA(i) &#x3D; \sum</em>{ijk}(\nabla f)<em>{ijk}.(x_j-x_k)^\bot &#x3D; \sum</em>{ij}\frac{1}{2}(cot\alpha_{ij}+cos\beta_{ij})(f_i-f_j)<br>$$</p>
+<p>其中 $\alpha_{ij}, \beta_{ij}$ 是边 $(i, j)$ 对应的两个角。</p>
 <p>**性质： 如果 $f$ 是常函数，则： : $Lf &#x3D; 0$ 。**即常函数的拉普拉斯为零。</p>
-<p>拉普拉斯矩阵 $L$ 的大小为 $n \times n$，其中 $n$ 是顶点个数。<br>$$<br>矩阵系数定义：L_{ij}A(j) &#x3D; \frac{1}{2}cot(\alpha) + \frac{1}{2}cot(\beta)<br>$$<br>矩阵形式（带质量矩阵 $A$）： : $AL &#x3D; -W$<br>$$<br>其中 W 是权重矩阵，定义为：W_{ij} &#x3D;<br>\left{<br>	\begin{aligned}<br>		\frac{1}{2}(cot(\alpha)+cot{\beta}),if:i ~ j\<br>		-\sum_j W_{ij}, if:i&#x3D;j\<br>		0, otherwise<br>	\end{aligned}<br>\right.<br>$$</p>
-<p>$$<br>质量矩阵 A（Mass Matrix）：A_{ij} &#x3D;<br>\left{<br>	\begin{aligned}<br>		A(j),if:i &#x3D; j\<br>		0,otherwise<br>	\end{aligned}<br>\right.<br>$$</p>
+<p>拉普拉斯矩阵 $L$ 的大小为 $n \times n$，其中 $n$ 是顶点个数。<br>$$<br>矩阵系数定义：L_{ij}A(j) &#x3D; \frac{1}{2}cot(\alpha) + \frac{1}{2}cot(\beta)<br>$$</p>
+<p>矩阵形式（带质量矩阵 $A$）： : $AL &#x3D; -W$</p>
+<p>其中 W 是权重矩阵，定义为：$W_{ij}$ </p>
+<p>当$i \textasciitilde j$时</p>
+<ul>
+<li>$W_{ij} &#x3D; \frac{1}{2}(cot(\alpha)+cot{\beta})$</li>
+</ul>
+<p>当$i&#x3D;j$时</p>
+<ul>
+<li>$ W_{ij}&#x3D;-\sum_j W_{ij}$</li>
+</ul>
+<p>其它情况下$W_{ij} &#x3D; 0$</p>
+<p>质量矩阵 $A（Mass Matrix）$：$A_{ij} &#x3D;$<br>当$i&#x3D;j$时，$A_{ij}  &#x3D; A(j)$其它情况下$A_{ij} &#x3D;0$。</p>
 <h3 id="曲面上的热传导方程"><a href="#曲面上的热传导方程" class="headerlink" title="曲面上的热传导方程"></a>曲面上的热传导方程</h3><p>给定一个紧致曲面（compact surface），热传导方程为 ： $\frac{\partial f}{\partial t} &#x3D; \nabla f$</p>
 <p>时间离散化：$\frac{f_{t+1}-f_t}{dt} &#x3D; \nabla f_{t+1}$</p>
 <p>空间离散化 ： $\frac{f_{t+1}-f_t}{dt} &#x3D; -A^{-1}Wf_{t+1}$</p>
-<p>重排得到的线性系统（求解 $f_{t+1}$）：$(A+dtW)f_{t+1} &#x3D; Af_t$<br>$$</p>
-<p>热核定义：k_t(x,y):\mathbb{R}^+\times M \times M \to \mathbb{R}<br>$$<br>它表示在时间$t$内，从点$x$传递到点$y$的热量。<br>$$<br>热扩散公式：f(x,t) &#x3D;\int_M k_t(x,y)f(y,0)dy<br>$$<br>表示初始热分布$f(y,0)$在时间$t$后在点$x$的热量。<br>$$<br>谱展开形式：k_t(x,y) &#x3D; \sum_iexp(-t\lambda_i)\phi_i(x)\phi_i(y)<br>$$<br>其中：</p>
+<p>重排得到的线性系统（求解 $f_{t+1}$）：$(A+dtW)f_{t+1} &#x3D; Af_t$<br>$$<br>热核定义：k_t(x,y):\mathbb{R}^+\times M \times M \to \mathbb{R}<br>$$<br>它表示在时间$t$内，从点$x$传递到点$y$的热量。<br>$$<br>热扩散公式：f(x,t) &#x3D;\int_M k_t(x,y)f(y,0)dy<br>$$<br>表示初始热分布$f(y,0)$在时间$t$后在点$x$的热量。<br>$$<br>谱展开形式：k_t(x,y) &#x3D; \sum_iexp(-t\lambda_i)\phi_i(x)\phi_i(y)<br>$$<br>其中：</p>
 <ul>
 <li>$\lambda_i,\phi_i$ 表示拉普拉斯算子的特征值和特征函数;</li>
 <li>在网格上可用离散拉普拉斯算子的本征对进行数值计算。</li>
