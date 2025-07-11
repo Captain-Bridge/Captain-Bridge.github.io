@@ -19,26 +19,26 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="网格曲面的基本结构-拉普拉斯算子拉普拉斯算子在连续情况下，拉普拉斯算子是：$$\Delta u &#x3D; \nabla \cdot \nabla u$$而在网格曲面上（离散几何处理），它通常使用cotangent Laplacian表示为：$$\Delta u_i &#x3D; \frac{1}{2A_i} \sum_{j\in N(i)}(cot\alpha_{ij}+cot\beta_{i">
+    <meta name="description" content="空间划分结构KD-Tree基本概念 KD-Tree 是一种二叉树结构，用于在 k 维空间中对点集进行递归划分。每个节点表示一个超平面划分，该超平面与某一维的坐标轴对齐。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网格曲面的基本结构-拉普拉斯算子">
-<meta property="og:url" content="http://baixiao.club/2025/07/03/%E7%BD%91%E6%A0%BC%E6%9B%B2%E9%9D%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/index.html">
+<meta property="og:title" content="空间划分结构">
+<meta property="og:url" content="http://baixiao.club/2025/07/11/%E7%A9%BA%E9%97%B4%E5%88%92%E5%88%86%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Talos I">
-<meta property="og:description" content="网格曲面的基本结构-拉普拉斯算子拉普拉斯算子在连续情况下，拉普拉斯算子是：$$\Delta u &#x3D; \nabla \cdot \nabla u$$而在网格曲面上（离散几何处理），它通常使用cotangent Laplacian表示为：$$\Delta u_i &#x3D; \frac{1}{2A_i} \sum_{j\in N(i)}(cot\alpha_{ij}+cot\beta_{i">
+<meta property="og:description" content="空间划分结构KD-Tree基本概念 KD-Tree 是一种二叉树结构，用于在 k 维空间中对点集进行递归划分。每个节点表示一个超平面划分，该超平面与某一维的坐标轴对齐。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-03T02:52:07.000Z">
-<meta property="article:modified_time" content="2025-07-03T02:57:16.918Z">
+<meta property="article:published_time" content="2025-07-11T02:27:01.000Z">
+<meta property="article:modified_time" content="2025-07-11T02:27:21.793Z">
 <meta property="article:author" content="白枭">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://baixiao.club/2025/07/03/%E7%BD%91%E6%A0%BC%E6%9B%B2%E9%9D%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/">
+<link rel="canonical" href="http://baixiao.club/2025/07/11/%E7%A9%BA%E9%97%B4%E5%88%92%E5%88%86%E7%BB%93%E6%9E%84/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/07/03/%E7%BD%91%E6%A0%BC%E6%9B%B2%E9%9D%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/","path":"2025/07/03/网格曲面的基本结构-拉普拉斯算子/","title":"网格曲面的基本结构-拉普拉斯算子"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/07/11/%E7%A9%BA%E9%97%B4%E5%88%92%E5%88%86%E7%BB%93%E6%9E%84/","path":"2025/07/11/空间划分结构/","title":"空间划分结构"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>网格曲面的基本结构-拉普拉斯算子 | Talos I</title>
+<title>空间划分结构 | Talos I</title>
   
 
 
@@ -121,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E6%A0%BC%E6%9B%B2%E9%9D%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90"><span class="nav-number">1.</span> <span class="nav-text">网格曲面的基本结构-拉普拉斯算子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90"><span class="nav-number">1.1.</span> <span class="nav-text">拉普拉斯算子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E6%96%B9%E7%A8%8B%EF%BC%9A-Delta-u-0"><span class="nav-number">1.1.1.</span> <span class="nav-text">拉普拉斯方程：$\Delta u &#x3D; 0$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%8A%E6%9D%BE%E6%96%B9%E7%A8%8B%EF%BC%9A-Delta-u-f"><span class="nav-number">1.1.2.</span> <span class="nav-text">泊松方程：$\Delta u &#x3D; f$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E6%BA%90%E7%83%AD%E6%96%B9%E7%A8%8B%EF%BC%9A-frac-partial-u-partial-t-Delta-u"><span class="nav-number">1.1.3.</span> <span class="nav-text">无源热方程：$\frac{\partial u}{\partial t} &#x3D; \Delta u$</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%AF%E5%8A%A8%E6%A8%A1%E6%80%81%E6%96%B9%E7%A8%8B%EF%BC%9A-frac-partial-2-u-partial-t-2-Delta-u"><span class="nav-number">1.1.4.</span> <span class="nav-text">振动模态方程：$\frac{\partial^2 u}{\partial t^2} &#x3D; \Delta u$</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%88%92%E5%88%86%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">空间划分结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KD-Tree"><span class="nav-number">1.1.</span> <span class="nav-text">KD-Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Octree%EF%BC%88%E5%85%AB%E5%8F%89%E6%A0%91%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">Octree（八叉树）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BSP%EF%BC%88Binary-Space-Partitioning%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">BSP（Binary Space Partitioning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BVH%EF%BC%88Bounding-Volume-Hierarchy%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">BVH（Bounding Volume Hierarchy）</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -180,30 +180,6 @@
   
     
         <div class="pjax">
-        <div class="sidebar-inner sidebar-post-related">
-          <div class="animated">
-              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
-    相关文章
-  </div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/07/10/%E6%B5%8B%E5%9C%B0%E7%BA%BF/" rel="bookmark">
-        <time class="popular-posts-time">2025-07-10</time>
-        <br>
-      测地线
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E9%9D%A2/" rel="bookmark">
-        <time class="popular-posts-time">2025-07-02</time>
-        <br>
-      微分几何-曲面
-      </a>
-    </li>
-  </ul>
-
-          </div>
-        </div>
         </div>
   </aside>
 
@@ -221,7 +197,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/07/03/%E7%BD%91%E6%A0%BC%E6%9B%B2%E9%9D%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/">
+    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/07/11/%E7%A9%BA%E9%97%B4%E5%88%92%E5%88%86%E7%BB%93%E6%9E%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chloe.png">
@@ -234,12 +210,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="网格曲面的基本结构-拉普拉斯算子 | Talos I">
+      <meta itemprop="name" content="空间划分结构 | Talos I">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          网格曲面的基本结构-拉普拉斯算子
+          空间划分结构
         </h1>
 
         <div class="post-meta-container">
@@ -251,7 +227,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-07-03 10:52:07 / 修改时间：10:57:16" itemprop="dateCreated datePublished" datetime="2025-07-03T10:52:07+08:00">2025-07-03</time>
+      <time title="创建时间：2025-07-11 10:27:01 / 修改时间：10:27:21" itemprop="dateCreated datePublished" datetime="2025-07-11T10:27:01+08:00">2025-07-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -270,7 +246,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>705</span>
+      <span>858</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -287,67 +263,100 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="网格曲面的基本结构-拉普拉斯算子"><a href="#网格曲面的基本结构-拉普拉斯算子" class="headerlink" title="网格曲面的基本结构-拉普拉斯算子"></a>网格曲面的基本结构-拉普拉斯算子</h2><h3 id="拉普拉斯算子"><a href="#拉普拉斯算子" class="headerlink" title="拉普拉斯算子"></a>拉普拉斯算子</h3><p>在连续情况下，拉普拉斯算子是：<br>$$<br>\Delta u &#x3D; \nabla \cdot \nabla u<br>$$<br>而在网格曲面上（离散几何处理），它通常使用cotangent Laplacian表示为：<br>$$<br>\Delta u_i &#x3D; \frac{1}{2A_i} \sum_{j\in N(i)}(cot\alpha_{ij}+cot\beta_{ij})(u_j-u_i)<br>$$</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="空间划分结构"><a href="#空间划分结构" class="headerlink" title="空间划分结构"></a>空间划分结构</h2><h3 id="KD-Tree"><a href="#KD-Tree" class="headerlink" title="KD-Tree"></a>KD-Tree</h3><p>基本概念</p>
+<p>KD-Tree 是一种<strong>二叉树结构</strong>，用于在 k 维空间中对点集进行递归划分。每个节点表示一个<strong>超平面划分</strong>，该超平面与某一维的坐标轴对齐。</p>
 <span id="more"></span>
 
-<p>其中：</p>
+<p>构建方式</p>
+<ol>
+<li>给定一组 k 维点。</li>
+<li>初始从根节点开始，选择一个维度（如 x 轴）作为划分维度。</li>
+<li>找到该维度的中位数作为划分点，构建平面将空间分为左右两个子空间。</li>
+<li>对两个子空间递归进行相同操作，每层轮换划分维度。</li>
+</ol>
+<p>应用场景</p>
 <ul>
-<li>$u_i$是顶点上的函数值，如温度、高程、颜色等</li>
-<li>$A_i$是顶点面积权重，如Voronoi面积或1&#x2F;3面积</li>
-<li>$\alpha,\beta$是相邻三角形对该边的对角</li>
+<li>点云搜索（最近邻&#x2F;范围查询）</li>
+<li>光线追踪（早期）</li>
+<li>机器学习（KNN 分类器）</li>
+<li>地图构建、碰撞检测</li>
 </ul>
-<h4 id="拉普拉斯方程：-Delta-u-0"><a href="#拉普拉斯方程：-Delta-u-0" class="headerlink" title="拉普拉斯方程：$\Delta u &#x3D; 0$"></a>拉普拉斯方程：$\Delta u &#x3D; 0$</h4><p>定义：无源稳态的扩散问题（调和函数）</p>
-<p>几何 &#x2F; 物理意义：</p>
+<p>特点</p>
 <ul>
-<li>系统已经达到稳定状态，没有任何源项</li>
-<li>函数值在局部邻域内的<strong>加权平均等于自身</strong> -&gt; “无弯曲方向”</li>
-<li>等价于极小化函数在曲面上的<strong>Dirichlet能量</strong></li>
+<li>对静态点集效果良好</li>
+<li>不适合频繁插入和删除</li>
+<li>适合低维数据（2D~10D）</li>
 </ul>
-<p>曲面网格上的应用：</p>
-<ul>
-<li>利用$\Delta u &#x3D; 0$消除高频扰动，用于Mesh Fairing &#x2F; 平滑</li>
-<li>利用调和映射保持角度结构，用于UV参数化</li>
+<h3 id="Octree（八叉树）"><a href="#Octree（八叉树）" class="headerlink" title="Octree（八叉树）"></a>Octree（八叉树）</h3><p>基本概念</p>
+<p>Octree 是一种<strong>递归八叉划分结构</strong>，用于在 3D 空间中对场景&#x2F;体素&#x2F;点云进行管理。每个节点将空间分为 8 个等体积的子空间。</p>
+<p>构建方式</p>
+<ol>
+<li>从整个空间开始作为根节点。</li>
+<li>若当前节点中包含的点&#x2F;物体数量大于阈值：<ul>
+<li>则将该节点划分为 8 个子立方体，并递归构建。</li>
 </ul>
-<h4 id="泊松方程：-Delta-u-f"><a href="#泊松方程：-Delta-u-f" class="headerlink" title="泊松方程：$\Delta u &#x3D; f$"></a>泊松方程：$\Delta u &#x3D; f$</h4><p>定义：有源稳态扩散项，源项$f$指定了空间中函数变化的“原因”</p>
-<p>几何 &#x2F; 物理意义：</p>
-<ul>
-<li><p>系统稳定但内部有源项，如热源，电荷，外力等</p>
 </li>
-<li><p>拉普拉斯方程的推广，可用最小能量原理表示为：<br>$$<br>\underset{u}{min}\int_M||\nabla u||^2 - 2fu<br>$$</p>
+<li>若子块为空则可不存储，形成稀疏结构。</li>
+</ol>
+<p>应用场景</p>
+<ul>
+<li>3D 游戏碰撞检测</li>
+<li>点云压缩与表示（如 PCL）</li>
+<li>体绘制（volume rendering）</li>
+<li>地图建模（SLAM）</li>
+</ul>
+<p>特点</p>
+<ul>
+<li>结构紧凑，适合稀疏3D数据</li>
+<li>动态更新比 KD-Tree 更方便</li>
+<li>空间局部性强，适合体素类操作</li>
+</ul>
+<h3 id="BSP（Binary-Space-Partitioning）"><a href="#BSP（Binary-Space-Partitioning）" class="headerlink" title="BSP（Binary Space Partitioning）"></a>BSP（Binary Space Partitioning）</h3><p>基本概念</p>
+<p>BSP 是一种基于<strong>任意平面划分</strong>的二叉空间结构，最早用于2D&#x2F;3D场景中快速<strong>可见性计算</strong>与<strong>绘制顺序排序</strong>。</p>
+<p>构建方式</p>
+<ol>
+<li>选择一个<strong>物体面片</strong>作为划分平面。</li>
+<li>用该平面将场景划分为前后两部分：<ul>
+<li>在该面前的物体放入“前子树”</li>
+<li>在该面后的物体放入“后子树”</li>
+<li>相交的要进行裁剪或特殊处理</li>
+</ul>
 </li>
-</ul>
-<p>网格曲面上的应用：</p>
+<li>递归对每个子空间执行相同划分。</li>
+</ol>
+<p>应用场景</p>
 <ul>
-<li>利用点云-&gt;法向-&gt;源项$f$这一思路重建表面，即泊松表面重建</li>
-<li>利用源图像梯度作为$f$，实现图像融合</li>
-<li>基于法线散度生成泊松源项，求解SDF</li>
+<li>经典 FPS 游戏（如《DOOM》）</li>
+<li>可见性计算（从某一点看有哪些物体）</li>
+<li>渲染排序（Painter’s algorithm）</li>
 </ul>
-<h4 id="无源热方程：-frac-partial-u-partial-t-Delta-u"><a href="#无源热方程：-frac-partial-u-partial-t-Delta-u" class="headerlink" title="无源热方程：$\frac{\partial u}{\partial t} &#x3D; \Delta u$"></a>无源热方程：$\frac{\partial u}{\partial t} &#x3D; \Delta u$</h4><p>定义：描述随时间演化的扩散过程（如热传导、污染扩散）</p>
-<p>几何 &#x2F; 物理意义：</p>
+<p>特点</p>
 <ul>
-<li>初始函数$u(x,0)$经过拉普拉斯控制的平滑演化；</li>
-<li>模型具有“高频信息快速衰减”的特性；</li>
-<li>时间越长越趋于均匀分布。</li>
+<li>可以使用<strong>任意方向平面</strong>（比 KD-Tree 更灵活）</li>
+<li>适合静态场景；动态场景构建代价高</li>
+<li>可用于处理非轴对齐几何体（如不规则墙面）</li>
 </ul>
-<p>网格曲面上的应用：</p>
+<h3 id="BVH（Bounding-Volume-Hierarchy）"><a href="#BVH（Bounding-Volume-Hierarchy）" class="headerlink" title="BVH（Bounding Volume Hierarchy）"></a>BVH（Bounding Volume Hierarchy）</h3><p>基本概念</p>
+<p>BVH 是一种用于快速相交检测的<strong>层次包围体结构</strong>，常用于光线追踪、碰撞检测等。每个节点代表一个包围体（如 AABB、OBB、球体等），其子节点代表更小的子物体或子包围体。</p>
+<p>构建方式</p>
+<ol>
+<li>对所有物体构建包围盒（如 AABB）。</li>
+<li>将它们划分为两个子集合，使得两个集合的包围盒重叠最小（如用中轴或 SAH 面积启发式）。</li>
+<li>递归构建左右子树，每个节点保存当前包围体信息。</li>
+</ol>
+<p>应用场景</p>
 <ul>
-<li>利用热扩散定义的点的局部特征实现Heat Kernel Signature</li>
-<li>利用热扩散+归一化梯度场反推测地线估计距离</li>
+<li>光线追踪（ray tracing）</li>
+<li>碰撞检测</li>
+<li>GPU 渲染加速</li>
 </ul>
-<h4 id="振动模态方程：-frac-partial-2-u-partial-t-2-Delta-u"><a href="#振动模态方程：-frac-partial-2-u-partial-t-2-Delta-u" class="headerlink" title="振动模态方程：$\frac{\partial^2 u}{\partial t^2} &#x3D; \Delta u$"></a>振动模态方程：$\frac{\partial^2 u}{\partial t^2} &#x3D; \Delta u$</h4><p>也写作$\Delta \phi &#x3D; -\lambda \phi$ (特征值问题)</p>
-<p>定义：描述物体随时间的自然振动，如鼓面、琴弦等。</p>
-<p>几何 &#x2F; 物理意义：</p>
+<p>特点</p>
 <ul>
-<li>在曲面上传播的波动现象；</li>
-<li>不同频率的特征函数$\phi_i$，表示不同的振动模式；</li>
-<li>常用于找出“物体最自然的变形方向”。</li>
+<li>动态更新成本比 KD-Tree 小</li>
+<li>对复杂物体结构更友好</li>
+<li>使用启发式可提高构建质量（如 SAH）</li>
 </ul>
-<p>网格曲面上的应用：</p>
-<ul>
-<li>利用拉普拉斯特征函数变形共振模式以实现模态分析</li>
-<li>利用特征值作为全局shape descriptor实现形状检索</li>
-<li>利用振动模态构成模拟基础来实现物理仿真</li>
-</ul>
+<p>扩展文章 : [Curve Complexity Heuristic KD-trees for Neighborhood-based Exploration of 3D Curves](</p>
 
     </div>
 
@@ -428,14 +437,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/07/02/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E6%9B%B2%E9%9D%A2/" rel="prev" title="微分几何-曲面">
-                  <i class="fa fa-angle-left"></i> 微分几何-曲面
+                <a href="/2025/07/10/%E6%B5%8B%E5%9C%B0%E7%BA%BF/" rel="prev" title="测地线">
+                  <i class="fa fa-angle-left"></i> 测地线
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/07/06/%E7%BD%91%E6%A0%BC%E6%9B%B2%E9%9D%A2%E7%9A%84%E6%8F%90%E5%8F%96/" rel="next" title="网格曲面的提取">
-                  网格曲面的提取 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
