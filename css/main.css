@@ -1229,7 +1229,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ffe;
+    background: #9ebbff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2837,6 +2837,55 @@ body {
 .main-inner > .comments,
 .main-inner > .pagination {
   background: rgba(245,245,245,0.85);
+}
+.links-of-blogroll {
+  margin-top: 20px;
+  padding: 18px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.links-of-blogroll-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+.links-of-blogroll-title i {
+  color: #333;
+  margin-right: 8px;
+}
+.links-of-blogroll-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.links-of-blogroll-item {
+  margin-bottom: 10px;
+}
+.links-of-blogroll-item:last-child {
+  margin-bottom: 0;
+}
+.links-of-blogroll-item a {
+  display: block;
+  color: #555;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+}
+.links-of-blogroll-item a:hover {
+  color: #333;
+  transform: translateX(3px);
+}
+.links-of-blogroll-item i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+  color: #007acc;
 }
 .posts-expand .post-title-link {
   color: #000;
