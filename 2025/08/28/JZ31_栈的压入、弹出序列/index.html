@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="JZ31  栈的压入、弹出序列（TODO）描述输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。">
+    <meta name="description" content="JZ31  栈的压入、弹出序列描述输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JZ31 栈的压入、弹出序列">
 <meta property="og:url" content="http://baixiao.club/2025/08/28/JZ31_%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/index.html">
 <meta property="og:site_name" content="Talos I">
-<meta property="og:description" content="JZ31  栈的压入、弹出序列（TODO）描述输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。">
+<meta property="og:description" content="JZ31  栈的压入、弹出序列描述输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-28T10:51:17.000Z">
-<meta property="article:modified_time" content="2025-08-28T11:15:58.447Z">
+<meta property="article:modified_time" content="2025-08-29T03:17:54.321Z">
 <meta property="article:author" content="白枭">
 <meta property="article:tag" content="数据结构">
 <meta property="article:tag" content="队列&amp;栈">
@@ -123,7 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JZ31-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97%EF%BC%88TODO%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">JZ31  栈的压入、弹出序列（TODO）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JZ31-%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">JZ31  栈的压入、弹出序列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -138,7 +138,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">63</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,7 +149,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -295,9 +295,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-08-28 18:51:17 / 修改时间：19:15:58" itemprop="dateCreated datePublished" datetime="2025-08-28T18:51:17+08:00">2025-08-28</time>
+      <time title="创建时间：2025-08-28 18:51:17" itemprop="dateCreated datePublished" datetime="2025-08-28T18:51:17+08:00">2025-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-29 11:17:54" itemprop="dateModified" datetime="2025-08-29T11:17:54+08:00">2025-08-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -316,14 +322,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>378</span>
+      <span>502</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -333,7 +339,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="JZ31-栈的压入、弹出序列（TODO）"><a href="#JZ31-栈的压入、弹出序列（TODO）" class="headerlink" title="JZ31  栈的压入、弹出序列（TODO）"></a>JZ31  栈的压入、弹出序列（TODO）</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="JZ31-栈的压入、弹出序列"><a href="#JZ31-栈的压入、弹出序列" class="headerlink" title="JZ31  栈的压入、弹出序列"></a>JZ31  栈的压入、弹出序列</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。</p>
 <span id="more"></span>
 
 <p>例如序列1,2,3,4,5是某栈的压入顺序，序列4,5,3,2,1是该压栈序列对应的一个弹出序列，但4,3,5,1,2就不可能是该压栈序列的弹出序列。</p>
@@ -349,8 +355,9 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：[1,2,3,4,5],[4,3,5,1,2]</span><br><span class="line">返回值：false</span><br><span class="line">说明：</span><br><span class="line">由于是[1,2,3,4,5]的压入顺序，[4,3,5,1,2]的弹出顺序，要求4，3，5必须在1，2前压入，且1，2不能弹出，但是这样压入的顺序，1又不能在2之前弹出，所以无法形成的，返回false      </span><br></pre></td></tr></table></figure>
 
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>初见思路：压入顺序一定是正确的，只需要判断弹出顺序是否是对的即可。按照压入顺序开始压入，直到压入到弹出顺序中的第一个为止，从此开始，只要弹出的和已经压入的栈顶元素不相同，就尝试压入下一个元素，如果下一个元素不是弹出的元素，则返回错误即可，直到弹出序列结束为止。</p>
+<p>实际上每次压入之后都可以进行弹出判断，每次压入之后都尝试弹出即可。</p>
 <p><strong>代码</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * @param pushV int整型vector</span></span><br><span class="line"><span class="comment">     * @param popV int整型vector</span></span><br><span class="line"><span class="comment">     * @return bool布尔型</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">IsPopOrder</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; pushV, vector&lt;<span class="type">int</span>&gt;&amp; popV)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> pushCount = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> popCount = <span class="number">0</span>;</span><br><span class="line">        stack&lt;<span class="type">int</span>&gt; st;</span><br><span class="line">        <span class="keyword">while</span> (pushCount &lt; pushV.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            st.<span class="built_in">push</span>(pushV[pushCount]);</span><br><span class="line">            pushCount++;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (!st.<span class="built_in">empty</span>() &amp;&amp; popCount &lt; popV.<span class="built_in">size</span>() &amp;&amp; st.<span class="built_in">top</span>() == popV[popCount]) &#123;</span><br><span class="line">                st.<span class="built_in">pop</span>();</span><br><span class="line">                popCount++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (popCount==popV.<span class="built_in">size</span>()) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -441,6 +448,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2025/08/29/JZ73_%E5%8F%8D%E8%BD%AC%E5%8D%95%E8%AF%8D%E5%BA%8F%E5%88%97/" rel="next" title="JZ73 反转单词序列">
+                  JZ73 反转单词序列 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -471,13 +481,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">71k</span>
+    <span title="站点总字数">74k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:18</span>
+    <span title="站点阅读时长">4:30</span>
   </span>
 </div>
   <div class="powered-by">
