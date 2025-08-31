@@ -46,7 +46,7 @@ function initMusicPlayer() {
     autoplay: false, //自动播放
     loop: 'all', //音频循环播放, 可选值: 'all'全部循环, 'one'单曲循环, 'none'不循环
     fixed: true,
-    volume: 0.5,
+    volume: 0.05,
     listFolded: true,//列表默认折叠
     listMaxHeight: 3,//列表最大高度
     mutex: true,
@@ -98,6 +98,12 @@ function initMusicPlayer() {
         url: '/music/Various Artists - May I (Unshaken).mp3',
         cover: '/images/RPR2.jpg',
         theme: '#BA0619',
+    },{
+        name: 'Jet Pack Blues',
+        artist: 'Fall Out Boy',
+        url: '/music/Fall Out Boy - Jet Pack Blues.flac',
+        cover: '/images/American Beauty _ American Psycho.jpg',
+        theme: '#d9b597',
     }
   ]
   });
