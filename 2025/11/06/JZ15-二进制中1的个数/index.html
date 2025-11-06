@@ -27,7 +27,7 @@
 <meta property="og:description" content="JZ15 二进制中1的个数描述输入一个整数 n ，输出该数32位二进制表示中1的个数。其中负数用补码表示。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-11-06T02:49:01.000Z">
-<meta property="article:modified_time" content="2025-11-06T02:56:08.278Z">
+<meta property="article:modified_time" content="2025-11-06T05:16:33.277Z">
 <meta property="article:author" content="白枭">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="位运算">
@@ -133,7 +133,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-count">95</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -144,7 +144,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -198,6 +198,23 @@
 
     
         <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/11/06/JZ43-%E4%BB%8E1%E5%88%B0n%E6%95%B4%E6%95%B0%E4%B8%AD1%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/" rel="bookmark">
+        <time class="popular-posts-time">2025-11-06</time>
+        <br>
+      JZ43 从1到n整数中1出现的次数
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
         </div>
   </aside>
 
@@ -245,7 +262,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-11-06 10:49:01 / 修改时间：10:56:08" itemprop="dateCreated datePublished" datetime="2025-11-06T10:49:01+08:00">2025-11-06</time>
+      <time title="创建时间：2025-11-06 10:49:01 / 修改时间：13:16:33" itemprop="dateCreated datePublished" datetime="2025-11-06T10:49:01+08:00">2025-11-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,7 +281,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>245</span>
+      <span>344</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -295,6 +312,12 @@
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>首先将数字转换为无符号数，具体的转换方法就是使用0xFFFFFFFF和原数字做与运算，此后创建一个掩码，其中只有第i位是1，逐个检查该位是否是1。</p>
 <p><strong>代码</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># @param n int整型 </span></span><br><span class="line"><span class="comment"># @return int整型</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">NumberOf1</span>(<span class="params">self , n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        n_unsigned = n &amp; <span class="number">0xFFFFFFFF</span></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">32</span>):</span><br><span class="line">            <span class="keyword">if</span> n_unsigned &amp; (<span class="number">1</span> &lt;&lt; i):</span><br><span class="line">                count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> count</span><br></pre></td></tr></table></figure>
+
+<p><strong>Brain Kernighan算法</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">count_ones_brian_kernighan</span>(<span class="params">n</span>):</span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> n:</span><br><span class="line">        n &amp;= n - <span class="number">1</span></span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> count</span><br></pre></td></tr></table></figure>
+
+<p>详解：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">n-1				使得除了最低位的1变成0，且最低位右侧的0全部变成1(向最低位借位)</span><br><span class="line">n &amp; n-1				使得最低位左侧不变，右侧的1恢复成0</span><br><span class="line">最终实现删除最低位的1</span><br><span class="line">不断重复直到所有1变为0结束</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -418,13 +441,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">86k</span>
+    <span title="站点总字数">89k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5:13</span>
+    <span title="站点阅读时长">5:25</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

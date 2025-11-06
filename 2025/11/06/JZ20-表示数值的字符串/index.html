@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/chloe_big.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/chloe_medium.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/chloe_small.jpg">
+  <link rel="mask-icon" href="/images/chloe.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="JZ20 表示数值的字符串描述请实现一个函数用来判断字符串str是否表示数值（包括科学计数法的数字，小数和整数）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JZ20 表示数值的字符串">
+<meta property="og:url" content="http://baixiao.club/2025/11/06/JZ20-%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
+<meta property="og:site_name" content="Talos I">
+<meta property="og:description" content="JZ20 表示数值的字符串描述请实现一个函数用来判断字符串str是否表示数值（包括科学计数法的数字，小数和整数）。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-06T05:29:25.000Z">
+<meta property="article:modified_time" content="2025-11-06T05:41:07.033Z">
+<meta property="article:author" content="白枭">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="模拟">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://baixiao.club/2025/11/06/JZ20-%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/11/06/JZ20-%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/","path":"2025/11/06/JZ20-表示数值的字符串/","title":"JZ20 表示数值的字符串"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JZ20 表示数值的字符串 | Talos I</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Talos I</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember Me</p>
+      <img class="custom-logo-image" src="/images/Transtar_Logo.webp" alt="Talos I">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-简历"><a href="/resume/" rel="section"><i class="fa fa-file-alt fa-fw"></i>简历</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JZ20-%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.</span> <span class="nav-text">JZ20 表示数值的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白枭"
+      src="/images/chloe.png">
+  <p class="site-author-name" itemprop="name">白枭</p>
+  <div class="site-description" itemprop="description">Good morning Morgan Yu</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Captain-Bridge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Captain-Bridge" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P" title="E-Mail → http:&#x2F;&#x2F;mail.qq.com&#x2F;cgi-bin&#x2F;qm_share?t&#x3D;qm_mailme&amp;email&#x3D;Ik5LUFdMU0tDTRViU1MMQU1P" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/273349653" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;273349653" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://raid.report/pc/4611686018489316181" title="Raid Report → https:&#x2F;&#x2F;raid.report&#x2F;pc&#x2F;4611686018489316181" rel="noopener me" target="_blank"><i class="fab fa-destiny fa-fw"></i>Raid Report</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/RememberM3" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;RememberM3" rel="noopener me" target="_blank"><i class="fab fa-steam fa-fw"></i>Steam</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://leetcode.cn/u/captainbridge/" title="LeetCode → https:&#x2F;&#x2F;leetcode.cn&#x2F;u&#x2F;captainbridge&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-leetcode fa-fw"></i>LeetCode</a>
+      </span>
+  </div>
+<!-- 精选日志区域 -->
+<div class="links-of-blogroll motion-element">
+  <div class="links-of-blogroll-title">
+    <i class="fa fa-star fa-fw"></i>
+    精选内容
+  </div>
+  <ul class="links-of-blogroll-list">
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/24/JZ-offer/" title="剑指Offer" target="_blank">
+        剑指Offer
+      </a>
+    </li>
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/15/暑期班汇总/" title="2025年暑期班" target="_blank">
+        2025年暑期班
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/11/06/JZ67-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0-atoi/" rel="bookmark">
+        <time class="popular-posts-time">2025-11-06</time>
+        <br>
+      JZ67 把字符串转换成整数(atoi)
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/11/06/JZ29-%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" rel="bookmark">
+        <time class="popular-posts-time">2025-11-06</time>
+        <br>
+      JZ29 顺时针打印矩阵
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/30/LeetCode2012/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-30</time>
+        <br>
+      LeetCode2012
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/31/JZ48_%E6%9C%80%E9%95%BF%E4%B8%8D%E5%90%AB%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-31</time>
+        <br>
+      JZ48 最长不含重复字符的子字符串
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/30/LeetCode3110/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-30</time>
+        <br>
+      LeetCode3110
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/11/06/JZ20-%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chloe.png">
+      <meta itemprop="name" content="白枭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talos I">
+      <meta itemprop="description" content="Good morning Morgan Yu">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JZ20 表示数值的字符串 | Talos I">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JZ20 表示数值的字符串
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-11-06 13:29:25 / 修改时间：13:41:07" itemprop="dateCreated datePublished" datetime="2025-11-06T13:29:25+08:00">2025-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>676</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="JZ20-表示数值的字符串"><a href="#JZ20-表示数值的字符串" class="headerlink" title="JZ20 表示数值的字符串"></a>JZ20 表示数值的字符串</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>请实现一个函数用来判断字符串str是否表示数值（包括科学计数法的数字，小数和整数）。</p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">科学计数法的数字(按顺序）可以分成以下几个部分:</span><br><span class="line"><span class="number">1.</span>若干空格</span><br><span class="line"><span class="number">2.</span>一个整数或者小数</span><br><span class="line"><span class="number">3.</span>（可选）一个 <span class="string">&#x27;e&#x27;</span> 或 <span class="string">&#x27;E&#x27;</span> ，后面跟着一个整数(可正可负)</span><br><span class="line"><span class="number">4.</span>若干空格</span><br><span class="line">         </span><br><span class="line">小数（按顺序）可以分成以下几个部分：</span><br><span class="line"><span class="number">1.</span>若干空格</span><br><span class="line"><span class="number">2.</span>（可选）一个符号字符（<span class="string">&#x27;+&#x27;</span> 或 <span class="string">&#x27;-&#x27;</span>）</span><br><span class="line"><span class="number">3.</span> 可能是以下描述格式之一:</span><br><span class="line"><span class="number">3.1</span> 至少一位数字，后面跟着一个点 <span class="string">&#x27;.&#x27;</span></span><br><span class="line"><span class="number">3.2</span> 至少一位数字，后面跟着一个点 <span class="string">&#x27;.&#x27;</span> ，后面再跟着至少一位数字</span><br><span class="line"><span class="number">3.3</span> 一个点 <span class="string">&#x27;.&#x27;</span> ，后面跟着至少一位数字</span><br><span class="line"><span class="number">4.</span>若干空格</span><br><span class="line"></span><br><span class="line">整数（按顺序）可以分成以下几个部分：</span><br><span class="line"><span class="number">1.</span>若干空格</span><br><span class="line"><span class="number">2.</span>（可选）一个符号字符（<span class="string">&#x27;+&#x27;</span> 或 <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line"><span class="number">3.</span> 至少一位数字</span><br><span class="line"><span class="number">4.</span>若干空格</span><br></pre></td></tr></table></figure>
+
+<p>例如，字符串[“+100”,”5e2”,”-123”,”3.1416”,”-1E-16”]都表示数值。<br>但是[“12e”,”1a3.14”,”1.2.3”,”+-5”,”12e+4.3”]都不是数值。</p>
+<p>提示:</p>
+<p>$1 &lt;&#x3D; str.length &lt;&#x3D; 25 \ str 仅含英文字母（大写和小写），数字（0-9），加号 ‘+’ ，减号 ‘-‘ ，空格 ‘ ‘ 或者点 ‘.’ \ 如果怀疑用例是不是能表示为数值的，可以使用python的print(float(str))去查看$</p>
+<p>进阶：时间复杂度$O(n)$，空间复杂度$O(n)$</p>
+<p><strong>示例1</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="string">&quot;123.45e+6&quot;</span></span><br><span class="line">返回值：true</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例2</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="string">&quot;1.2.3&quot;</span></span><br><span class="line">返回值：false</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例3</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="string">&quot;.&quot;</span></span><br><span class="line">返回值：false</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例4</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：<span class="string">&quot;    .2  &quot;</span></span><br><span class="line">返回值：true</span><br></pre></td></tr></table></figure>
+
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>这道题其实和<a href="../JZ67-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0-atoi">上一题</a>差不多，纯模拟也可以做，但是这道题的官方题解给到了一个有限状态机(Finite State Machine)的解法，通过检查每个字符的状态，控制合法的状态转移以及合法的结束状态实现。</p>
+<p><strong>代码</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">isNumeric</span>(<span class="params">self, <span class="built_in">str</span></span>):</span><br><span class="line">        <span class="comment"># 定义状态转移表</span></span><br><span class="line">        states = [</span><br><span class="line">            &#123;<span class="string">&quot; &quot;</span>: <span class="number">0</span>, <span class="string">&quot;s&quot;</span>: <span class="number">1</span>, <span class="string">&quot;d&quot;</span>: <span class="number">2</span>, <span class="string">&quot;.&quot;</span>: <span class="number">4</span>&#125;,  <span class="comment"># 0. 起始状态，处理前导空格</span></span><br><span class="line">            &#123;<span class="string">&quot;d&quot;</span>: <span class="number">2</span>, <span class="string">&quot;.&quot;</span>: <span class="number">4</span>&#125;,  <span class="comment"># 1. 符号之后</span></span><br><span class="line">            &#123;<span class="string">&quot;d&quot;</span>: <span class="number">2</span>, <span class="string">&quot;.&quot;</span>: <span class="number">3</span>, <span class="string">&quot;e&quot;</span>: <span class="number">5</span>, <span class="string">&quot; &quot;</span>: <span class="number">8</span>&#125;,  <span class="comment"># 2. 小数点前的数字</span></span><br><span class="line">            &#123;<span class="string">&quot;d&quot;</span>: <span class="number">3</span>, <span class="string">&quot;e&quot;</span>: <span class="number">5</span>, <span class="string">&quot; &quot;</span>: <span class="number">8</span>&#125;,  <span class="comment"># 3. 小数点后的数字</span></span><br><span class="line">            &#123;<span class="string">&quot;d&quot;</span>: <span class="number">3</span>&#125;,  <span class="comment"># 4. 只有小数点（前面没有数字）</span></span><br><span class="line">            &#123;<span class="string">&quot;s&quot;</span>: <span class="number">6</span>, <span class="string">&quot;d&quot;</span>: <span class="number">7</span>&#125;,  <span class="comment"># 5. 指数e之后</span></span><br><span class="line">            &#123;<span class="string">&quot;d&quot;</span>: <span class="number">7</span>&#125;,  <span class="comment"># 6. 指数符号之后</span></span><br><span class="line">            &#123;<span class="string">&quot;d&quot;</span>: <span class="number">7</span>, <span class="string">&quot; &quot;</span>: <span class="number">8</span>&#125;,  <span class="comment"># 7. 指数数字</span></span><br><span class="line">            &#123;<span class="string">&quot; &quot;</span>: <span class="number">8</span>&#125;,  <span class="comment"># 8. 后导空格</span></span><br><span class="line">        ]</span><br><span class="line"></span><br><span class="line">        p = <span class="number">0</span>  <span class="comment"># 初始状态</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;0&quot;</span> &lt;= c &lt;= <span class="string">&quot;9&quot;</span>:</span><br><span class="line">                t = <span class="string">&quot;d&quot;</span>  <span class="comment"># digit</span></span><br><span class="line">            <span class="keyword">elif</span> c <span class="keyword">in</span> <span class="string">&quot;+-&quot;</span>:</span><br><span class="line">                t = <span class="string">&quot;s&quot;</span>  <span class="comment"># sign</span></span><br><span class="line">            <span class="keyword">elif</span> c <span class="keyword">in</span> <span class="string">&quot;eE&quot;</span>:</span><br><span class="line">                t = <span class="string">&quot;e&quot;</span>  <span class="comment"># exponent</span></span><br><span class="line">            <span class="keyword">elif</span> c <span class="keyword">in</span> <span class="string">&quot;. &quot;</span>:</span><br><span class="line">                t = c  <span class="comment"># dot or space</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                t = <span class="string">&quot;?&quot;</span>  <span class="comment"># unknown</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> t <span class="keyword">not</span> <span class="keyword">in</span> states[p]:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            p = states[p][t]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 可接受的结束状态：2(数字), 3(小数), 7(指数数字), 8(后导空格)</span></span><br><span class="line">        <span class="keyword">return</span> p <span class="keyword">in</span> (<span class="number">2</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">8</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Captain-Bridge">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P">
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+
+            <span class="label">E-Mail</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://steamcommunity.com/id/RememberM3">
+            <span class="icon">
+              <i class="fab fa-steam"></i>
+            </span>
+
+            <span class="label">Steam</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/273349653">
+            <span class="icon">
+              <i class="fab fa-bilibili"></i>
+            </span>
+
+            <span class="label">Bilibili</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://raid.report/pc/4611686018489316181">
+            <span class="icon">
+              <i class="fab fa-destiny"></i>
+            </span>
+
+            <span class="label">Raid-report</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://leetcode.cn/u/captainbridge/">
+            <span class="icon">
+              <i class="fab fa-leetcode"></i>
+            </span>
+
+            <span class="label">LeetCode</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+              <a href="/tags/%E6%A8%A1%E6%8B%9F/" rel="tag"><i class="fa fa-tag"></i> 模拟</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/11/06/JZ67-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0-atoi/" rel="prev" title="JZ67 把字符串转换成整数(atoi)">
+                  <i class="fa fa-angle-left"></i> JZ67 把字符串转换成整数(atoi)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/11/06/JZ66-%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84/" rel="next" title="JZ66 构建乘积数组">
+                  JZ66 构建乘积数组 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">白枭</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">89k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:25</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
