@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/chloe_big.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/chloe_medium.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/chloe_small.jpg">
+  <link rel="mask-icon" href="/images/chloe.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="LeetCode.2712:使所有字符串相等的最小成本​	学习是有用的！大概在上个星期，做了一道关于动态规划的题2272，上次连转移方程都看了半天才看懂*（真的不是题解写的叽里咕噜的吗）*。这次可以手撕了，虽然好像也不是动的很态。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode2712">
+<meta property="og:url" content="http://baixiao.club/2025/03/27/LeetCode2712/index.html">
+<meta property="og:site_name" content="Talos I">
+<meta property="og:description" content="LeetCode.2712:使所有字符串相等的最小成本​	学习是有用的！大概在上个星期，做了一道关于动态规划的题2272，上次连转移方程都看了半天才看懂*（真的不是题解写的叽里咕噜的吗）*。这次可以手撕了，虽然好像也不是动的很态。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-27T13:35:41.000Z">
+<meta property="article:modified_time" content="2025-11-06T00:48:43.870Z">
+<meta property="article:author" content="白枭">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="字符串">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://baixiao.club/2025/03/27/LeetCode2712/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/03/27/LeetCode2712/","path":"2025/03/27/LeetCode2712/","title":"LeetCode2712"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LeetCode2712 | Talos I</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Talos I</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember Me</p>
+      <img class="custom-logo-image" src="/images/Transtar_Logo.webp" alt="Talos I">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-简历"><a href="/resume/" rel="section"><i class="fa fa-file-alt fa-fw"></i>简历</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode-2712-%E4%BD%BF%E6%89%80%E6%9C%89%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E7%AD%89%E7%9A%84%E6%9C%80%E5%B0%8F%E6%88%90%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">LeetCode.2712:使所有字符串相等的最小成本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E9%A2%98%E8%A7%A3%EF%BC%9A%E7%BA%AF%E8%B4%AA%E5%BF%83"><span class="nav-number">1.3.</span> <span class="nav-text">我的题解：纯贪心</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">1.4.</span> <span class="nav-text">我的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%E6%B3%951%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="nav-number">1.5.</span> <span class="nav-text">官方题解法1：动态规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%E6%B3%951%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.</span> <span class="nav-text">官方题解法1代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%E6%B3%952%EF%BC%9A%E4%B8%80%E6%AC%A1%E9%81%8D%E5%8E%86"><span class="nav-number">1.7.</span> <span class="nav-text">官方题解法2：一次遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%E6%B3%952%E4%BB%A3%E7%A0%81"><span class="nav-number">1.8.</span> <span class="nav-text">官方题解法2代码</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白枭"
+      src="/images/chloe.png">
+  <p class="site-author-name" itemprop="name">白枭</p>
+  <div class="site-description" itemprop="description">Good morning Morgan Yu</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Captain-Bridge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Captain-Bridge" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P" title="E-Mail → http:&#x2F;&#x2F;mail.qq.com&#x2F;cgi-bin&#x2F;qm_share?t&#x3D;qm_mailme&amp;email&#x3D;Ik5LUFdMU0tDTRViU1MMQU1P" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/273349653" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;273349653" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://raid.report/pc/4611686018489316181" title="Raid Report → https:&#x2F;&#x2F;raid.report&#x2F;pc&#x2F;4611686018489316181" rel="noopener me" target="_blank"><i class="fab fa-destiny fa-fw"></i>Raid Report</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/RememberM3" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;RememberM3" rel="noopener me" target="_blank"><i class="fab fa-steam fa-fw"></i>Steam</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://leetcode.cn/u/captainbridge/" title="LeetCode → https:&#x2F;&#x2F;leetcode.cn&#x2F;u&#x2F;captainbridge&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-leetcode fa-fw"></i>LeetCode</a>
+      </span>
+  </div>
+<!-- 精选日志区域 -->
+<div class="links-of-blogroll motion-element">
+  <div class="links-of-blogroll-title">
+    <i class="fa fa-star fa-fw"></i>
+    精选内容
+  </div>
+  <ul class="links-of-blogroll-list">
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/24/JZ-offer/" title="剑指Offer" target="_blank">
+        剑指Offer
+      </a>
+    </li>
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/15/暑期班汇总/" title="2025年暑期班" target="_blank">
+        2025年暑期班
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/30/LeetCode3110/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-30</time>
+        <br>
+      LeetCode3110
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/26/LeetCode2680/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-26</time>
+        <br>
+      LeetCode2680
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/30/LeetCode3340/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-30</time>
+        <br>
+      LeetCode3340
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/03/27/LeetCode2712/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chloe.png">
+      <meta itemprop="name" content="白枭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talos I">
+      <meta itemprop="description" content="Good morning Morgan Yu">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LeetCode2712 | Talos I">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode2712
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-03-27 21:35:41" itemprop="dateCreated datePublished" datetime="2025-03-27T21:35:41+08:00">2025-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-06 08:48:43" itemprop="dateModified" datetime="2025-11-06T08:48:43+08:00">2025-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode每日一题</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/LeetCode%E4%B8%AD%E7%AD%89/" itemprop="url" rel="index"><span itemprop="name">LeetCode中等</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="LeetCode-2712-使所有字符串相等的最小成本"><a href="#LeetCode-2712-使所有字符串相等的最小成本" class="headerlink" title="LeetCode.2712:使所有字符串相等的最小成本"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-cost-to-make-all-characters-equal">LeetCode.2712</a>:使所有字符串相等的最小成本</h1><p>​	学习是有用的！大概在上个星期，做了一道关于动态规划的题<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/substring-with-largest-variance">2272</a>，上次连转移方程都看了半天才看懂*（真的不是题解写的叽里咕噜的吗）*。这次可以手撕了，虽然好像也不是动的很态。</p>
+<span id="more"></span>
+
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给你一个下标从 <strong>0</strong> 开始、长度为 <code>n</code> 的二进制字符串 <code>s</code> ，你可以对其执行两种操作：</p>
+<ul>
+<li>选中一个下标 <code>i</code> 并且反转从下标 <code>0</code> 到下标 <code>i</code>（包括下标 <code>0</code> 和下标 <code>i</code> ）的所有字符，成本为 <code>i + 1</code> 。</li>
+<li>选中一个下标 <code>i</code> 并且反转从下标 <code>i</code> 到下标 <code>n - 1</code>（包括下标 <code>i</code> 和下标 <code>n - 1</code> ）的所有字符，成本为 <code>n - i</code> 。</li>
+</ul>
+<p>返回使字符串内所有字符 <strong>相等</strong> 需要的 <strong>最小成本</strong> 。</p>
+<p><strong>反转</strong> 字符意味着：如果原来的值是 ‘0’ ，则反转后值变为 ‘1’ ，反之亦然。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>示例1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;0011&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：执行第二种操作，选中下标 i = 2 ，可以得到 s = &quot;0000&quot; ，成本为 2 。可以证明 2 是使所有字符相等的最小成本。</span><br></pre></td></tr></table></figure>
+
+<p>示例2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;010101&quot;</span><br><span class="line">输出：9</span><br><span class="line">解释：执行第一种操作，选中下标 i = 2 ，可以得到 s = &quot;101101&quot; ，成本为 3 。</span><br><span class="line">执行第一种操作，选中下标 i = 1 ，可以得到 s = &quot;011101&quot; ，成本为 2 。</span><br><span class="line">执行第一种操作，选中下标 i = 0 ，可以得到 s = &quot;111101&quot; ，成本为 1 。</span><br><span class="line">执行第二种操作，选中下标 i = 4 ，可以得到 s = &quot;111110&quot; ，成本为 2 。</span><br><span class="line">执行第二种操作，选中下标 i = 5 ，可以得到 s = &quot;111111&quot; ，成本为 1 。</span><br><span class="line">使所有字符相等的总成本等于 9 。可以证明 9 是使所有字符相等的最小成本。 </span><br></pre></td></tr></table></figure>
+
+<p>提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= s.length == n &lt;= 105</span><br><span class="line">s[i] 为 &#x27;0&#x27; 或 &#x27;1&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="我的题解：纯贪心"><a href="#我的题解：纯贪心" class="headerlink" title="我的题解：纯贪心"></a>我的题解：纯贪心</h2><p>​	观察了一会，从示例2中观察到一个规律：</p>
+<p>$	在\frac{n}{2}左侧的字符，使用方法1翻转的cost最小，在\frac{n}{2}右侧的字符，使用方法2翻转的cost最小。$</p>
+<p>​	由此，我们只需要判断到底是把字符串全部变成1还是全部变成0即可。至于这个判断则是基于前面的观察，$\frac{n}{2}$左侧的全部使用方法1翻转，右侧使用方法2翻转，检索时从中间向两侧检索。最终计算将全变成1的成本和全变成0的成本哪个更低，则直接返回更低的即可。题设还是仁慈了，很幸运$O(n)$的方法没有TLE。</p>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">minimumCost</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> n = s.<span class="built_in">length</span>();</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> ans_1 = <span class="number">0</span>;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> ans_0 = <span class="number">0</span>;</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i = n/<span class="number">2</span>; i &gt;= <span class="number">0</span> ; i--)&#123;</span><br><span class="line">            <span class="keyword">if</span>((s[i] == <span class="string">&#x27;0&#x27;</span> &amp;&amp; !flag)||(s[i]!=<span class="string">&#x27;0&#x27;</span> &amp;&amp; flag))&#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                flag = !flag;</span><br><span class="line">                ans_0 = ans_0 + i + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i = n/<span class="number">2</span> + <span class="number">1</span>; i &lt; n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((s[i] == <span class="string">&#x27;0&#x27;</span> &amp;&amp; !flag)||(s[i]!=<span class="string">&#x27;0&#x27;</span> &amp;&amp; flag))&#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                flag = !flag;</span><br><span class="line">                ans_0 = ans_0 + n - i;</span><br><span class="line">            &#125;</span><br><span class="line">                    </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i = n/<span class="number">2</span>; i &gt;= <span class="number">0</span> ; i--)&#123;</span><br><span class="line">            <span class="keyword">if</span>((s[i] == <span class="string">&#x27;1&#x27;</span> &amp;&amp; !flag)||(s[i]!=<span class="string">&#x27;1&#x27;</span> &amp;&amp; flag))</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                flag = !flag;</span><br><span class="line">                ans_1 = ans_1 + i + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">                    </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i = n/<span class="number">2</span> + <span class="number">1</span>; i &lt; n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((s[i] == <span class="string">&#x27;1&#x27;</span> &amp;&amp; !flag)||(s[i]!=<span class="string">&#x27;1&#x27;</span> &amp;&amp; flag))</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                flag = !flag;</span><br><span class="line">                ans_1 = ans_1 + n - i;</span><br><span class="line">            &#125;</span><br><span class="line">                    </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans_0 &lt; ans_1 ? ans_0 : ans_1 ;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>复杂度分析：</p>
+<ul>
+<li>时间复杂度：$O(n)$</li>
+<li>空间复杂度：$O(1)$</li>
+</ul>
+<h2 id="官方题解法1：动态规划"><a href="#官方题解法1：动态规划" class="headerlink" title="官方题解法1：动态规划"></a>官方题解法1：动态规划</h2><p>我们可以维护一个前缀全部变成 0 或 1 的最小成本，同时维护后缀全部变成 0 和 1 的最小成本来求解答案。</p>
+<p>定义$ suf[i][0] $表示从第<code>i</code>个字符开始的后缀全部变成<code>0</code>所需要的最小成本，定义$ suf[i][1] $表示从第 i 个字符的后缀全部变成 1 所需的最小成本，转移方程为：</p>
+<p>若 s[i] 为 1，则：</p>
+<ul>
+<li>$suf[i][1]&#x3D;suf[i+1][1]$</li>
+<li>$suf[i][0]&#x3D;suf[i+1][0]+(n−i)$</li>
+</ul>
+<p>若 s[i] 为 0，则：</p>
+<ul>
+<li>$suf[i][1]&#x3D;suf[i+1][0]+(n−i)$</li>
+<li>$suf[i][0]&#x3D;suf[i+1][0]$</li>
+</ul>
+<p>前缀的状态$ pre[i][0] $和 $pre[i][1] $的定义和转移过程类似：</p>
+<p>遍历所有的<code> i</code>，求解$ min(pre[i][0]+suf[i+1][0],pre[i][1]+suf[i+1][1]) $的最小值即可。</p>
+<h2 id="官方题解法1代码"><a href="#官方题解法1代码" class="headerlink" title="官方题解法1代码"></a>官方题解法1代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line">    <span class="function">ll <span class="title">minimumCost</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = s.<span class="built_in">size</span>();</span><br><span class="line">        vector&lt;vector&lt;ll&gt;&gt; <span class="built_in">suf</span>(n + <span class="number">1</span>, <span class="built_in">vector</span>&lt;ll&gt;(<span class="number">2</span>, <span class="number">0</span>));</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                suf[i][<span class="number">1</span>] = suf[i + <span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">                suf[i][<span class="number">0</span>] = suf[i + <span class="number">1</span>][<span class="number">1</span>] + (n - i);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                suf[i][<span class="number">1</span>] = suf[i + <span class="number">1</span>][<span class="number">0</span>] + (n - i);</span><br><span class="line">                suf[i][<span class="number">0</span>] = suf[i + <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function">vector&lt;ll&gt; <span class="title">pre</span><span class="params">(<span class="number">2</span>)</span></span>;</span><br><span class="line">        ll res = <span class="number">1e18</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                pre[<span class="number">0</span>] = pre[<span class="number">1</span>] + i + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                pre[<span class="number">1</span>] = pre[<span class="number">0</span>] + i + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            res = <span class="built_in">min</span>(res, <span class="built_in">min</span>(pre[<span class="number">0</span>] + suf[i + <span class="number">1</span>][<span class="number">0</span>], pre[<span class="number">1</span>] + suf[i + <span class="number">1</span>][<span class="number">1</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>复杂度分析：</p>
+<ul>
+<li><p>时间复杂度：$O(n)$，其中 n 是字符串 s 的长度。状态转移的时间复杂度为$ O(1)$，共有$ O(n) $个状态，因此总体时间复杂度为 $O(n)$。</p>
+</li>
+<li><p>空间复杂度：$O(n)$。存储后缀状态的空间复杂度为$ O(n)$。</p>
+</li>
+</ul>
+<h2 id="官方题解法2：一次遍历"><a href="#官方题解法2：一次遍历" class="headerlink" title="官方题解法2：一次遍历"></a>官方题解法2：一次遍历</h2><p>我们并不关心字符最终会变成 0 还是 1，只要它们相等即可。因此需要关注每对相邻字符的相等关系。一次操作有如下性质：</p>
+<p>一次操作可以且一定改变一对相邻字符的关系。<br>对于两个相邻且不相等的字符，必须经过一次操作才能使它们相等。<br>对某两个相邻字符操作结束后，左侧和右侧所有的相邻字符的相等关系不变。<br>因此，我们只需枚举所有的相邻字符，对不同的进行操作。操作时选择成本更小的一侧，其总和就是答案。</p>
+<p><del>这个方法比我的还贪</del></p>
+<h2 id="官方题解法2代码"><a href="#官方题解法2代码" class="headerlink" title="官方题解法2代码"></a>官方题解法2代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">minimumCost</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = s.<span class="built_in">size</span>();</span><br><span class="line">        ll res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] != s[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                res += <span class="built_in">min</span>(i, n - i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>复杂度分析：</p>
+<ul>
+<li>时间复杂度：$O(n)$，其中 <em>n</em> 是字符串 <em>s</em> 的长度。</li>
+<li>空间复杂度：$O(1)$。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Captain-Bridge">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P">
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+
+            <span class="label">E-Mail</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://steamcommunity.com/id/RememberM3">
+            <span class="icon">
+              <i class="fab fa-steam"></i>
+            </span>
+
+            <span class="label">Steam</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/273349653">
+            <span class="icon">
+              <i class="fab fa-bilibili"></i>
+            </span>
+
+            <span class="label">Bilibili</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://raid.report/pc/4611686018489316181">
+            <span class="icon">
+              <i class="fab fa-destiny"></i>
+            </span>
+
+            <span class="label">Raid-report</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://leetcode.cn/u/captainbridge/">
+            <span class="icon">
+              <i class="fab fa-leetcode"></i>
+            </span>
+
+            <span class="label">LeetCode</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"><i class="fa fa-tag"></i> 动态规划</a>
+              <a href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag"><i class="fa fa-tag"></i> 贪心</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/03/26/LeetCode2680/" rel="prev" title="LeetCode2680">
+                  <i class="fa fa-angle-left"></i> LeetCode2680
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/03/27/LeetCode2272/" rel="next" title="LeetCode2272">
+                  LeetCode2272 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">白枭</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">82k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:01</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

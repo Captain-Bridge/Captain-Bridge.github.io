@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/chloe_big.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/chloe_medium.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/chloe_small.jpg">
+  <link rel="mask-icon" href="/images/chloe.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="剑指offer C++实现、题解$.cpp$ 代码同步更新于 $github$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指offer C++">
+<meta property="og:url" content="http://baixiao.club/2025/08/24/JZ-offer/index.html">
+<meta property="og:site_name" content="Talos I">
+<meta property="og:description" content="剑指offer C++实现、题解$.cpp$ 代码同步更新于 $github$">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-24T13:32:06.000Z">
+<meta property="article:modified_time" content="2025-11-06T00:48:43.768Z">
+<meta property="article:author" content="白枭">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://baixiao.club/2025/08/24/JZ-offer/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/08/24/JZ-offer/","path":"2025/08/24/JZ-offer/","title":"剑指offer C++"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>剑指offer C++ | Talos I</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Talos I</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember Me</p>
+      <img class="custom-logo-image" src="/images/Transtar_Logo.webp" alt="Talos I">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-简历"><a href="/resume/" rel="section"><i class="fa fa-file-alt fa-fw"></i>简历</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%91%E6%8C%87offer-C-%E5%AE%9E%E7%8E%B0%E3%80%81%E9%A2%98%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">剑指offer C++实现、题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91"><span class="nav-number">1.1.2.</span> <span class="nav-text">树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%9F%E5%88%97-%E6%A0%88"><span class="nav-number">1.1.3.</span> <span class="nav-text">队列&amp;栈</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="nav-number">1.2.1.</span> <span class="nav-text">搜索算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="nav-number">1.2.2.</span> <span class="nav-text">动态规划</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白枭"
+      src="/images/chloe.png">
+  <p class="site-author-name" itemprop="name">白枭</p>
+  <div class="site-description" itemprop="description">Good morning Morgan Yu</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Captain-Bridge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Captain-Bridge" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P" title="E-Mail → http:&#x2F;&#x2F;mail.qq.com&#x2F;cgi-bin&#x2F;qm_share?t&#x3D;qm_mailme&amp;email&#x3D;Ik5LUFdMU0tDTRViU1MMQU1P" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/273349653" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;273349653" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://raid.report/pc/4611686018489316181" title="Raid Report → https:&#x2F;&#x2F;raid.report&#x2F;pc&#x2F;4611686018489316181" rel="noopener me" target="_blank"><i class="fab fa-destiny fa-fw"></i>Raid Report</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/RememberM3" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;RememberM3" rel="noopener me" target="_blank"><i class="fab fa-steam fa-fw"></i>Steam</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://leetcode.cn/u/captainbridge/" title="LeetCode → https:&#x2F;&#x2F;leetcode.cn&#x2F;u&#x2F;captainbridge&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-leetcode fa-fw"></i>LeetCode</a>
+      </span>
+  </div>
+<!-- 精选日志区域 -->
+<div class="links-of-blogroll motion-element">
+  <div class="links-of-blogroll-title">
+    <i class="fa fa-star fa-fw"></i>
+    精选内容
+  </div>
+  <ul class="links-of-blogroll-list">
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/24/JZ-offer/" title="剑指Offer" target="_blank">
+        剑指Offer
+      </a>
+    </li>
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/15/暑期班汇总/" title="2025年暑期班" target="_blank">
+        2025年暑期班
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/30/JZ10_%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-30</time>
+        <br>
+      JZ10 斐波那契数列
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/29/JZ53_%E6%95%B0%E5%AD%97%E5%9C%A8%E5%8D%87%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-29</time>
+        <br>
+      JZ53 数字在升序数组中出现的次数
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/16/JZ32_%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-16</time>
+        <br>
+      从上往下打印二叉树
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/09/01/JZ46_%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="bookmark">
+        <time class="popular-posts-time">2025-09-01</time>
+        <br>
+      JZ46 把数字翻译成字符串
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/30/JZ69_%E8%B7%B3%E5%8F%B0%E9%98%B6/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-30</time>
+        <br>
+      JZ69 跳台阶
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/08/24/JZ-offer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chloe.png">
+      <meta itemprop="name" content="白枭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talos I">
+      <meta itemprop="description" content="Good morning Morgan Yu">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="剑指offer C++ | Talos I">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          剑指offer C++
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-24 21:32:06" itemprop="dateCreated datePublished" datetime="2025-08-24T21:32:06+08:00">2025-08-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-06 08:48:43" itemprop="dateModified" datetime="2025-11-06T08:48:43+08:00">2025-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%91%E6%8C%87offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>927</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="剑指offer-C-实现、题解"><a href="#剑指offer-C-实现、题解" class="headerlink" title="剑指offer C++实现、题解"></a>剑指offer C++实现、题解</h1><p>$.cpp$ 代码同步更新于 <a target="_blank" rel="noopener" href="https://github.com/Captain-Bridge/Sword-Finger-Offer-C.git">$github$</a> </p>
+<span id="more"></span>
+
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><table>
+<thead>
+<tr>
+<th>题号</th>
+<th>难度</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ6</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ6_%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/">从尾到头打印链表</a></td>
+</tr>
+<tr>
+<td>JZ24</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ24_%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">反转链表</a></td>
+</tr>
+<tr>
+<td>JZ25</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ25_%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E5%88%97%E8%A1%A8/">合并两个排序的列表</a></td>
+</tr>
+<tr>
+<td>JZ23</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/17/JZ23_%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9/">链表中环的入口结点</a></td>
+</tr>
+<tr>
+<td>JZ52</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/17/JZ52_%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/">两个链表的第一个公共节点</a></td>
+</tr>
+<tr>
+<td>JZ22</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ22_%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E6%9C%80%E5%90%8Ek%E4%B8%AA%E7%BB%93%E7%82%B9/">链表中倒数最后k个结点</a></td>
+</tr>
+<tr>
+<td>JZ35</td>
+<td><span style="color:red;">较难</span></td>
+<td><a href="../../../../2025/08/16/%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/">复杂链表的复制</a></td>
+</tr>
+<tr>
+<td>JZ76</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ76_%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E8%8A%82%E7%82%B9/">删除链表中重复的节点</a></td>
+</tr>
+<tr>
+<td>JZ18</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ18_%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/">删除链表的节点</a></td>
+</tr>
+</tbody></table>
+<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><table>
+<thead>
+<tr>
+<th>题号</th>
+<th>难度</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ55</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ55_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6/">二叉树的深度</a></td>
+</tr>
+<tr>
+<td>JZ77</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ77_%E6%8C%89%E4%B9%8B%E5%AD%97%E5%BD%A2%E9%A1%BA%E5%BA%8F%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/">按之字形顺序打印二叉树</a></td>
+</tr>
+<tr>
+<td>JZ54</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ54_%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9/">二叉搜索树的第k个节点</a></td>
+</tr>
+<tr>
+<td>JZ7</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ7_%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/">重建二叉树</a></td>
+</tr>
+<tr>
+<td>JZ26</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ26_%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/">树的子结构</a></td>
+</tr>
+<tr>
+<td>JZ27</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ27_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/">二叉树的镜像</a></td>
+</tr>
+<tr>
+<td>JZ32</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ32_%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/">从上往下打印二叉树</a></td>
+</tr>
+<tr>
+<td>JZ33</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ33_%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/">二叉搜索树的后序遍历序列</a></td>
+</tr>
+<tr>
+<td>JZ82</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ82_%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84%EF%BC%88%E4%B8%80%EF%BC%89/">二叉树中和为某一值的路径（一）</a></td>
+</tr>
+<tr>
+<td>JZ34</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ34_%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84%EF%BC%88%E4%BA%8C%EF%BC%89/">二叉树中和为某一值的路径（二）</a></td>
+</tr>
+<tr>
+<td>JZ36</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ36_%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">二叉搜索树与双向链表</a></td>
+</tr>
+<tr>
+<td>JZ79</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ79_%E5%88%A4%E6%96%AD%E6%98%AF%E4%B8%8D%E6%98%AF%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">判断是不是平衡二叉树</a></td>
+</tr>
+<tr>
+<td>JZ8</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ8_%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/">二叉树的下一个结点</a></td>
+</tr>
+<tr>
+<td>JZ28</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/16/JZ28_%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/">对称的二叉树</a></td>
+</tr>
+<tr>
+<td>JZ78</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ78_%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C/">把二叉树打印成多行</a></td>
+</tr>
+<tr>
+<td>JZ37</td>
+<td><span style="color:red;">较难</span></td>
+<td><a href="../../../../2025/08/16/JZ37_%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/">序列化二叉树</a></td>
+</tr>
+<tr>
+<td>JZ84</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/16/JZ84_%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84%EF%BC%88%E4%B8%89%EF%BC%89/">二叉树中和为某一值的路径（三）</a></td>
+</tr>
+<tr>
+<td>JZ86</td>
+<td><span style="color:orange;">中等</span></td>
+<td><a href="../../../../2025/08/28/JZ86_%E5%9C%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%BE%E5%88%B0%E4%B8%A4%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">在二叉树中找到两个节点的最近公共祖先</a></td>
+</tr>
+<tr>
+<td>JZ68</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/28/JZ68_%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">二叉搜索树的最近公共祖先</a></td>
+</tr>
+</tbody></table>
+<h3 id="队列-栈"><a href="#队列-栈" class="headerlink" title="队列&amp;栈"></a>队列&amp;栈</h3><table>
+<thead>
+<tr>
+<th>题号</th>
+<th>难度</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ9</td>
+<td><span style="color:green;">简单</span></td>
+<td><a href="../../../../2025/08/28/JZ9_%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">用两个栈实现队列</a></td>
+</tr>
+<tr>
+<td>JZ30</td>
+<td><span style="color:Green">简单</span></td>
+<td><a href="../../../../2025/08/28/JZ30_%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/">包含min函数的栈</a></td>
+</tr>
+<tr>
+<td>JZ31</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/08/28/JZ31_%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/">栈的压入、弹出序列</a></td>
+</tr>
+<tr>
+<td>JZ73</td>
+<td><span style="color:Green">简单</span></td>
+<td><a href="../../../../2025/08/29/JZ73_%E5%8F%8D%E8%BD%AC%E5%8D%95%E8%AF%8D%E5%BA%8F%E5%88%97/">反转单词序列</a></td>
+</tr>
+<tr>
+<td>JZ59</td>
+<td><span style="color:red">较难</span></td>
+<td><a href="../../../../2025/08/29/JZ59_%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/">滑动窗口的最大值</a></td>
+</tr>
+</tbody></table>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h3><table>
+<thead>
+<tr>
+<th>题号</th>
+<th>难度</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ53</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/08/29/JZ53_%E6%95%B0%E5%AD%97%E5%9C%A8%E5%8D%87%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/">数字在升序数组中出现的次数</a></td>
+</tr>
+<tr>
+<td>JZ4</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/08/29/JZ4_%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">二维数组中的查找</a></td>
+</tr>
+<tr>
+<td>JZ11</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/08/29/JZ11_%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/">旋转数组的最小数字</a></td>
+</tr>
+<tr>
+<td>JZ38</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/08/29/JZ38_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97/">字符串的排列</a></td>
+</tr>
+<tr>
+<td>JZ44</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/08/29/JZ44_%E6%95%B0%E5%AD%97%E5%BA%8F%E5%88%97%E4%B8%AD%E6%9F%90%E4%B8%80%E4%BD%8D%E7%9A%84%E6%95%B0%E5%AD%97/">数字序列中某一位的数字</a></td>
+</tr>
+</tbody></table>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><table>
+<thead>
+<tr>
+<th>题号</th>
+<th>难度</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ42</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/08/30/JZ42_%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/">连续子数组的最大和</a></td>
+</tr>
+<tr>
+<td>JZ85</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/08/30/JZ85_%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C%EF%BC%88%E4%BA%8C%EF%BC%89/">连续子数组的最大和（二）</a></td>
+</tr>
+<tr>
+<td>JZ69</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/08/30/JZ69_%E8%B7%B3%E5%8F%B0%E9%98%B6/">跳台阶</a></td>
+</tr>
+<tr>
+<td>JZ10</td>
+<td><span style="color:black">入门</span></td>
+<td><a href="../../../../2025/08/30/JZ10_%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/">斐波那契数列</a></td>
+</tr>
+<tr>
+<td>JZ19</td>
+<td><span style="color:red">较难</span></td>
+<td><a href="../../../../2025/08/30/JZ19_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/">正则表达式匹配</a></td>
+</tr>
+<tr>
+<td>JZ71</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/08/31/JZ71_%E8%B7%B3%E5%8F%B0%E9%98%B6%E6%89%A9%E5%B1%95%E9%97%AE%E9%A2%98/">跳台阶扩展问题</a></td>
+</tr>
+<tr>
+<td>JZ70</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/08/31/JZ70_%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96/">矩形覆盖</a></td>
+</tr>
+<tr>
+<td>JZ63</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/08/31/JZ63_%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E5%A5%BD%E6%97%B6%E6%9C%BA%EF%BC%88%E4%B8%80%EF%BC%89/">买卖股票的最好时机（一）</a></td>
+</tr>
+<tr>
+<td>JZ47</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/08/31/JZ47_%E7%A4%BC%E7%89%A9%E7%9A%84%E6%9C%80%E5%A4%A7%E4%BB%B7%E5%80%BC/">礼物的最大价值</a></td>
+</tr>
+<tr>
+<td>JZ48</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/08/31/JZ48_%E6%9C%80%E9%95%BF%E4%B8%8D%E5%90%AB%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/">最长不含重复字符的子字符串</a></td>
+</tr>
+<tr>
+<td>JZ46</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/09/01/JZ46_%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/">把数字翻译成字符串</a></td>
+</tr>
+</tbody></table>
+<p>回溯</p>
+<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>难度</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ12</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/09/01/JZ12_%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/">矩阵中的路径</a></td>
+</tr>
+<tr>
+<td>JZ13</td>
+<td><span style="color:red">较难</span></td>
+<td><a href="../../../../2025/09/01/JZ13_%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/">机器人的运动范围</a></td>
+</tr>
+</tbody></table>
+<p>排序</p>
+<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>难度</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ3</td>
+<td><span style="color:green">简单</span></td>
+<td><a href="../../../../2025/09/01/JZ3_%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/">数组中重复的数字</a></td>
+</tr>
+<tr>
+<td>JZ51</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/09/01/JZ51_%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E6%95%B0/">数组中的逆序数</a></td>
+</tr>
+<tr>
+<td>JZ40</td>
+<td><span style="color:orange">中等</span></td>
+<td><a href="../../../../2025/09/01/JZ40_%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/">最小的K个数</a></td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Captain-Bridge">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P">
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+
+            <span class="label">E-Mail</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://steamcommunity.com/id/RememberM3">
+            <span class="icon">
+              <i class="fab fa-steam"></i>
+            </span>
+
+            <span class="label">Steam</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/273349653">
+            <span class="icon">
+              <i class="fab fa-bilibili"></i>
+            </span>
+
+            <span class="label">Bilibili</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://raid.report/pc/4611686018489316181">
+            <span class="icon">
+              <i class="fab fa-destiny"></i>
+            </span>
+
+            <span class="label">Raid-report</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://leetcode.cn/u/captainbridge/">
+            <span class="icon">
+              <i class="fab fa-leetcode"></i>
+            </span>
+
+            <span class="label">LeetCode</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/17/JZ23_%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9/" rel="prev" title="链表中环的入口结点">
+                  <i class="fa fa-angle-left"></i> 链表中环的入口结点
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/08/28/JZ86_%E5%9C%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%BE%E5%88%B0%E4%B8%A4%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/" rel="next" title="JZ86 在二叉树中找到两个节点的最近公共祖先">
+                  JZ86 在二叉树中找到两个节点的最近公共祖先 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">白枭</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">82k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:01</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

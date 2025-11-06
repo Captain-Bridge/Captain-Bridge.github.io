@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/chloe_big.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/chloe_medium.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/chloe_small.jpg">
+  <link rel="mask-icon" href="/images/chloe.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="LeetCode.2116:判断一个括号字符串是否有效​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的LeetCode.1963很像,不过那一道用双指针，感觉比这一道题简单一点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode2116">
+<meta property="og:url" content="http://baixiao.club/2025/03/23/LeetCode2116/index.html">
+<meta property="og:site_name" content="Talos I">
+<meta property="og:description" content="LeetCode.2116:判断一个括号字符串是否有效​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的LeetCode.1963很像,不过那一道用双指针，感觉比这一道题简单一点。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-23T02:35:20.000Z">
+<meta property="article:modified_time" content="2025-11-06T00:48:43.858Z">
+<meta property="article:author" content="白枭">
+<meta property="article:tag" content="栈">
+<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="字符串">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://baixiao.club/2025/03/23/LeetCode2116/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/03/23/LeetCode2116/","path":"2025/03/23/LeetCode2116/","title":"LeetCode2116"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LeetCode2116 | Talos I</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Talos I</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember Me</p>
+      <img class="custom-logo-image" src="/images/Transtar_Logo.webp" alt="Talos I">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-简历"><a href="/resume/" rel="section"><i class="fa fa-file-alt fa-fw"></i>简历</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode-2116-%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E6%8B%AC%E5%8F%B7%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E6%9C%89%E6%95%88"><span class="nav-number">1.</span> <span class="nav-text">LeetCode.2116:判断一个括号字符串是否有效</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3"><span class="nav-number">1.3.</span> <span class="nav-text">官方题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E4%BB%A3%E7%A0%81"><span class="nav-number">1.4.</span> <span class="nav-text">最终代码</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白枭"
+      src="/images/chloe.png">
+  <p class="site-author-name" itemprop="name">白枭</p>
+  <div class="site-description" itemprop="description">Good morning Morgan Yu</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Captain-Bridge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Captain-Bridge" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P" title="E-Mail → http:&#x2F;&#x2F;mail.qq.com&#x2F;cgi-bin&#x2F;qm_share?t&#x3D;qm_mailme&amp;email&#x3D;Ik5LUFdMU0tDTRViU1MMQU1P" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/273349653" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;273349653" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://raid.report/pc/4611686018489316181" title="Raid Report → https:&#x2F;&#x2F;raid.report&#x2F;pc&#x2F;4611686018489316181" rel="noopener me" target="_blank"><i class="fab fa-destiny fa-fw"></i>Raid Report</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/RememberM3" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;RememberM3" rel="noopener me" target="_blank"><i class="fab fa-steam fa-fw"></i>Steam</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://leetcode.cn/u/captainbridge/" title="LeetCode → https:&#x2F;&#x2F;leetcode.cn&#x2F;u&#x2F;captainbridge&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-leetcode fa-fw"></i>LeetCode</a>
+      </span>
+  </div>
+<!-- 精选日志区域 -->
+<div class="links-of-blogroll motion-element">
+  <div class="links-of-blogroll-title">
+    <i class="fa fa-star fa-fw"></i>
+    精选内容
+  </div>
+  <ul class="links-of-blogroll-list">
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/24/JZ-offer/" title="剑指Offer" target="_blank">
+        剑指Offer
+      </a>
+    </li>
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/15/暑期班汇总/" title="2025年暑期班" target="_blank">
+        2025年暑期班
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/30/LeetCode3340/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-30</time>
+        <br>
+      LeetCode3340
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/03/23/LeetCode2116/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chloe.png">
+      <meta itemprop="name" content="白枭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talos I">
+      <meta itemprop="description" content="Good morning Morgan Yu">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LeetCode2116 | Talos I">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode2116
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-03-23 10:35:20" itemprop="dateCreated datePublished" datetime="2025-03-23T10:35:20+08:00">2025-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-06 08:48:43" itemprop="dateModified" datetime="2025-11-06T08:48:43+08:00">2025-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode每日一题</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/LeetCode%E4%B8%AD%E7%AD%89/" itemprop="url" rel="index"><span itemprop="name">LeetCode中等</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="LeetCode-2116-判断一个括号字符串是否有效"><a href="#LeetCode-2116-判断一个括号字符串是否有效" class="headerlink" title="LeetCode.2116:判断一个括号字符串是否有效"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid">LeetCode.2116</a>:判断一个括号字符串是否有效</h1><p>​	通宵一夜之后上午边吃早饭边写的这道题。看到括号，配对类的很明显是要求前缀和了，这道题和前几天做的<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/?envType=daily-question&envId=2025-03-23">LeetCode.1963</a>很像,不过那一道用双指针，感觉比这一道题简单一点。</p>
+<span id="more"></span>
+
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>一个括号字符串是只由 <code>(</code>和 <code>)</code> 组成的 非空 字符串。如果一个字符串满足下面 任意 一个条件，那么它就是有效的：</p>
+<p>字符串为 ().<br>它可以表示为 AB（A 与 B 连接），其中A 和 B 都是有效括号字符串。<br>它可以表示为 (A) ，其中 A 是一个有效括号字符串。<br>给你一个括号字符串 s 和一个字符串 locked ，两者长度都为 n 。locked 是一个二进制字符串，只包含 <code>0</code> 和<code>1</code> 。对于 locked 中 每一个 下标 i ：</p>
+<p>如果 <code>locked[i]</code> 是 <code>1</code> ，你 不能 改变 s[i] 。<br>如果 <code>locked[i]</code> 是 <code> 0</code> ，你 可以 将 <code>s[i]</code> 变为 <code>(</code> 或者 <code>)</code> 。<br>如果你可以将 s 变为有效括号字符串，请你返回 true ，否则返回 false 。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>示例1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;))()))&quot;, locked = &quot;010100&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：locked[1] == &#x27;1&#x27; 和 locked[3] == &#x27;1&#x27; ，所以我们无法改变 s[1] 或者 s[3] 。</span><br><span class="line">我们可以将 s[0] 和 s[4] 变为 &#x27;(&#x27; ，不改变 s[2] 和 s[5] ，使 s 变为有效字符串。</span><br></pre></td></tr></table></figure>
+
+<p>示例2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;()()&quot;, locked = &quot;0000&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：我们不需要做任何改变，因为 s 已经是有效字符串了。</span><br></pre></td></tr></table></figure>
+
+<p>示例3：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;)&quot;, locked = &quot;0&quot;</span><br><span class="line">输出：false</span><br><span class="line">解释：locked 允许改变 s[0] 。</span><br><span class="line">但无论将 s[0] 变为 &#x27;(&#x27; 或者 &#x27;)&#x27; 都无法使 s 变为有效字符串。</span><br></pre></td></tr></table></figure>
+
+<p>示例4：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;(((())(((())&quot;, locked = &quot;111111010111&quot;</span><br><span class="line">输出：true</span><br><span class="line">解释：locked 允许我们改变 s[6] 和 s[8]。</span><br><span class="line">我们将 s[6] 和 s[8] 改为 &#x27;)&#x27; 使 s 变为有效字符串。</span><br></pre></td></tr></table></figure>
+
+<p>提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">n == s.length == locked.length</span><br><span class="line">1 &lt;= n &lt;= 105</span><br><span class="line">s[i] 要么是 &#x27;(&#x27; 要么是 &#x27;)&#x27; 。</span><br><span class="line">locked[i] 要么是 &#x27;0&#x27; 要么是 &#x27;1&#x27; 。</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a>官方题解</h2><p>​	拿到字符串第一件事就是把<code>（</code>转换成1，把<code>）</code>转换成-1，这样才能适应求前缀和的方法。然后根据 <em>有效括号字符串</em> 的定义，其实就是括号能配上对，我们可以知道一个括号字符串有效用前缀和来表示就是该字符串总的分数为0，且任意一个位置前缀和都大于等于0。</p>
+<p>​	官方题解说让自行尝试证明，我反正搞不懂咋证明，我一开始看了一眼相关标签，里面明明白白写着个栈，我就在那入栈出栈捣鼓半天，也不知道是智力不够还是通宵通的反正搞不懂。</p>
+<p>​	说回来，题解在这里给出了一个 <em>有效前缀</em> 的定义，就是说一个字符串的某个前缀字符串满足它本身以及它所有的前缀的分数均大于等于零，则称该前缀为有效前缀。相对于 <em>有效括号字符串</em>  来说，将定义放宽至了其本身的分数可以大于零。</p>
+<p>​	然后对字符串 <code>s</code> 定义最大有效分数<code>mx</code>和最小有效分数<code>mn</code>，具体地：</p>
+<ul>
+<li><p><code>mx</code>代表前缀<code>s[0...i]</code>可以达到的最大分数。</p>
+</li>
+<li><p><code>mn</code>代表前缀<code>s[0...i]</code>可以到达的最小分数以及作为有效前缀所需的最小分数的二者的较大值。</p>
+</li>
+</ul>
+<p>​	其中 <em>作为有效前缀所需的最小分数</em> 的取值，由于字符串长度的奇偶一定和其最小前缀和的奇偶性相同，故而取值不是0就是1，即为<code>(i+1)mod2</code>。当<code>i=0</code>时，有<code>mx = mn = 0</code>。<br>​	然后从左至右遍历字符串<code>s</code>，维护<code>mx</code>和<code>mn</code>数组的当前值，我们可以知道在当前的<code>mx</code>和<code>mn</code>的值满足条件的情况下，其前缀一定满足条件，故而不需要去维护整个数组。<br>​	根据<code>locked[i]</code>的取值，可以获得以下情况：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">locked[i] = 1, 此时s[i]无法更改。因此mx = mx + diff, 其中diff为s[i]的分数。同理，mn = max(mn+diff, (i+1)mod2)。</span><br><span class="line">locked[i] = 0, 此时s[i]可以更改。因此mx = mx + 1，且mn = max(mn-1, (i+1)mod2)。</span><br></pre></td></tr></table></figure>
+
+<p>​	遍历过程中，若是出现某一下标<code>i</code>有<code>mx&lt;mn</code>，则<code>s[0...i]</code>无法通过变换成为有效前缀，即<code>s</code><strong>无法通过变换成为 <em>有效括号字符串</em></strong> ，此时返回<code>false</code>。<br>​	遍历结束后，只需要确定<code>s</code>是否可以通过变换使得分数为0即可。假定<code>s</code>长度为<code>n</code>，这等价于判断<code>mn</code>是否为0，如果<code>mn=0</code>，则<code>s</code>可以通过变换成为 <em>有效括号字符串</em> ，返回<code>true</code>，否则返回<code>false</code>。</p>
+<h2 id="最终代码"><a href="#最终代码" class="headerlink" title="最终代码"></a>最终代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canBeValid</span><span class="params">(String s, String locked)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="type">int</span> <span class="variable">mx</span> <span class="operator">=</span> <span class="number">0</span>;   <span class="comment">// 可以达到的最大分数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">mn</span> <span class="operator">=</span> <span class="number">0</span>;   <span class="comment">// 可以达到的最小分数 与 最小有效前缀对应分数 的较大值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (locked.charAt(i) == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                <span class="comment">// 此时对应字符无法更改</span></span><br><span class="line">                <span class="type">int</span> diff;</span><br><span class="line">                <span class="keyword">if</span> (s.charAt(i) == <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                    diff = <span class="number">1</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    diff = -<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                mx += diff;</span><br><span class="line">                mn = Math.max(mn + diff, (i + <span class="number">1</span>) % <span class="number">2</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 此时对应字符可以更改</span></span><br><span class="line">                ++mx;</span><br><span class="line">                mn = Math.max(mn - <span class="number">1</span>, (i + <span class="number">1</span>) % <span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (mx &lt; mn) &#123;</span><br><span class="line">                <span class="comment">// 此时该前缀无法变为有效前缀</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 最终确定 s 能否通过变换使得分数为 0（成为有效字符串）</span></span><br><span class="line">        <span class="keyword">return</span> mn == <span class="number">0</span>;</span><br><span class="line">   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Captain-Bridge">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P">
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+
+            <span class="label">E-Mail</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://steamcommunity.com/id/RememberM3">
+            <span class="icon">
+              <i class="fab fa-steam"></i>
+            </span>
+
+            <span class="label">Steam</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/273349653">
+            <span class="icon">
+              <i class="fab fa-bilibili"></i>
+            </span>
+
+            <span class="label">Bilibili</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://raid.report/pc/4611686018489316181">
+            <span class="icon">
+              <i class="fab fa-destiny"></i>
+            </span>
+
+            <span class="label">Raid-report</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://leetcode.cn/u/captainbridge/">
+            <span class="icon">
+              <i class="fab fa-leetcode"></i>
+            </span>
+
+            <span class="label">LeetCode</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%A0%88/" rel="tag"><i class="fa fa-tag"></i> 栈</a>
+              <a href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag"><i class="fa fa-tag"></i> 贪心</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/03/23/hello-world/" rel="prev" title="hello-world">
+                  <i class="fa fa-angle-left"></i> hello-world
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/03/23/LeetCode1963/" rel="next" title="LeetCode1963">
+                  LeetCode1963 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">白枭</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">82k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:01</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

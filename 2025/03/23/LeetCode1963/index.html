@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/chloe_big.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/chloe_medium.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/chloe_small.jpg">
+  <link rel="mask-icon" href="/images/chloe.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"baixiao.club","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="LeetCode.1963:使字符串平衡的最小交换次数​	这是一道被我手撕了的双指针问题，一开始的思路就是从左往右找，左括号不够了就从右往左换，但是今天看了题解，感觉我写的好复杂。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode1963">
+<meta property="og:url" content="http://baixiao.club/2025/03/23/LeetCode1963/index.html">
+<meta property="og:site_name" content="Talos I">
+<meta property="og:description" content="LeetCode.1963:使字符串平衡的最小交换次数​	这是一道被我手撕了的双指针问题，一开始的思路就是从左往右找，左括号不够了就从右往左换，但是今天看了题解，感觉我写的好复杂。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-23T08:42:42.000Z">
+<meta property="article:modified_time" content="2025-11-06T00:48:43.853Z">
+<meta property="article:author" content="白枭">
+<meta property="article:tag" content="栈">
+<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="双指针">
+<meta property="article:tag" content="字符串">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://baixiao.club/2025/03/23/LeetCode1963/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://baixiao.club/2025/03/23/LeetCode1963/","path":"2025/03/23/LeetCode1963/","title":"LeetCode1963"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LeetCode1963 | Talos I</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Talos I</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Remember Me</p>
+      <img class="custom-logo-image" src="/images/Transtar_Logo.webp" alt="Talos I">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-简历"><a href="/resume/" rel="section"><i class="fa fa-file-alt fa-fw"></i>简历</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#LeetCode-1963-%E4%BD%BF%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B9%B3%E8%A1%A1%E7%9A%84%E6%9C%80%E5%B0%8F%E4%BA%A4%E6%8D%A2%E6%AC%A1%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">LeetCode.1963:使字符串平衡的最小交换次数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E9%A2%98%E8%A7%A3%EF%BC%9A%E5%8F%8C%E6%8C%87%E9%92%88%E9%81%8D%E5%8E%86"><span class="nav-number">1.3.</span> <span class="nav-text">我的题解：双指针遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">1.4.</span> <span class="nav-text">我的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%EF%BC%9A%E7%8C%9C%E6%B5%8B%E7%BB%93%E8%AE%BA-%E6%9E%84%E9%80%A0%E7%AD%94%E6%A1%88"><span class="nav-number">1.5.</span> <span class="nav-text">官方题解：猜测结论+构造答案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.</span> <span class="nav-text">官方题解代码</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白枭"
+      src="/images/chloe.png">
+  <p class="site-author-name" itemprop="name">白枭</p>
+  <div class="site-description" itemprop="description">Good morning Morgan Yu</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Captain-Bridge" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Captain-Bridge" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P" title="E-Mail → http:&#x2F;&#x2F;mail.qq.com&#x2F;cgi-bin&#x2F;qm_share?t&#x3D;qm_mailme&amp;email&#x3D;Ik5LUFdMU0tDTRViU1MMQU1P" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/273349653" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;273349653" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://raid.report/pc/4611686018489316181" title="Raid Report → https:&#x2F;&#x2F;raid.report&#x2F;pc&#x2F;4611686018489316181" rel="noopener me" target="_blank"><i class="fab fa-destiny fa-fw"></i>Raid Report</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/id/RememberM3" title="Steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;id&#x2F;RememberM3" rel="noopener me" target="_blank"><i class="fab fa-steam fa-fw"></i>Steam</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://leetcode.cn/u/captainbridge/" title="LeetCode → https:&#x2F;&#x2F;leetcode.cn&#x2F;u&#x2F;captainbridge&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-leetcode fa-fw"></i>LeetCode</a>
+      </span>
+  </div>
+<!-- 精选日志区域 -->
+<div class="links-of-blogroll motion-element">
+  <div class="links-of-blogroll-title">
+    <i class="fa fa-star fa-fw"></i>
+    精选内容
+  </div>
+  <ul class="links-of-blogroll-list">
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/24/JZ-offer/" title="剑指Offer" target="_blank">
+        剑指Offer
+      </a>
+    </li>
+    
+    <li class="links-of-blogroll-item">
+      <a href="/2025/08/15/暑期班汇总/" title="2025年暑期班" target="_blank">
+        2025年暑期班
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/30/LeetCode3340/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-30</time>
+        <br>
+      LeetCode3340
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/03/26/LeetCode2829/" rel="bookmark">
+        <time class="popular-posts-time">2025-03-26</time>
+        <br>
+      LeetCode2829
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://baixiao.club/2025/03/23/LeetCode1963/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chloe.png">
+      <meta itemprop="name" content="白枭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talos I">
+      <meta itemprop="description" content="Good morning Morgan Yu">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LeetCode1963 | Talos I">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode1963
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-03-23 16:42:42" itemprop="dateCreated datePublished" datetime="2025-03-23T16:42:42+08:00">2025-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-06 08:48:43" itemprop="dateModified" datetime="2025-11-06T08:48:43+08:00">2025-11-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">LeetCode每日一题</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/LeetCode%E4%B8%AD%E7%AD%89/" itemprop="url" rel="index"><span itemprop="name">LeetCode中等</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="LeetCode-1963-使字符串平衡的最小交换次数"><a href="#LeetCode-1963-使字符串平衡的最小交换次数" class="headerlink" title="LeetCode.1963:使字符串平衡的最小交换次数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-swaps-to-make-the-string-balanced">LeetCode.1963</a>:使字符串平衡的最小交换次数</h1><p>​	这是一道被我手撕了的双指针问题，一开始的思路就是从左往右找，左括号不够了就从右往左换，但是今天看了题解，感觉我写的好复杂。</p>
+<span id="more"></span>
+
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>​	给你一个字符串 <code>s</code> ，下标从 0 开始 ，且长度为偶数 <code>n</code> 。字符串 恰好 由 <code>n / 2</code> 个开括号 <code>&#39;[&#39;</code> 和 <code>n / 2</code> 个闭括号 <code>&#39;]&#39;</code> 组成。​	<br>​	只有能满足下述所有条件的字符串才能称为 <em>平衡字符串</em> ：</p>
+<ul>
+<li><p>字符串是一个空字符串，或者</p>
+</li>
+<li><p>字符串可以记作 AB ，其中 A 和 B 都是 <em>平衡字符串</em> ，或者</p>
+</li>
+<li><p>字符串可以写成 [C] ，其中 C 是一个 <em>平衡字符串</em> 。</p>
+</li>
+</ul>
+<p>​	你可以交换 任意 两个下标所对应的括号 任意 次数。<br>​	返回使 s 变成 <em>平衡字符串</em> 所需要的 最小 交换次数。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>示例 1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;][][&quot;</span><br><span class="line">输出：1</span><br><span class="line">解释：交换下标 0 和下标 3 对应的括号，可以使字符串变成平衡字符串。</span><br><span class="line">最终字符串变成 &quot;[[]]&quot; 。</span><br></pre></td></tr></table></figure>
+
+<p>示例 2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;]]][[[&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：执行下述操作可以使字符串变成平衡字符串：</span><br><span class="line">- 交换下标 0 和下标 4 对应的括号，s = &quot;[]][][&quot; 。</span><br><span class="line">- 交换下标 1 和下标 5 对应的括号，s = &quot;[[][]]&quot; 。</span><br><span class="line">最终字符串变成 &quot;[[][]]&quot; 。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;[]&quot;</span><br><span class="line">输出：0</span><br><span class="line">解释：这个字符串已经是平衡字符串。</span><br></pre></td></tr></table></figure>
+
+<p>提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">n == s.length</span><br><span class="line">2 &lt;= n &lt;= 106</span><br><span class="line">n 为偶数</span><br><span class="line">s[i] 为&#x27;[&#x27; 或 &#x27;]&#x27;</span><br><span class="line">开括号 &#x27;[&#x27; 的数目为 n / 2 ，闭括号 &#x27;]&#x27; 的数目也是 n / 2</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="我的题解：双指针遍历"><a href="#我的题解：双指针遍历" class="headerlink" title="我的题解：双指针遍历"></a>我的题解：双指针遍历</h2><p>​	第一步自然是把字符串转换为<code>1</code>和<code>1-</code>的数组，而后定义前指针<code>front</code>和后指针<code>back</code>，再从左往右遍历直到到某下标前缀和小于0，则将当前的<code>S[front]</code>我们假定此时已经从右侧<code>&#39;借&#39;</code>了一个<code>[</code>过来，然后开始从右往左遍历。在从右往左遍历的时候，找到一个1，把它反转为0，即相当于把刚刚在左侧添加的<code>[</code>还回到右侧，在这里完成了一次交换，<code>ans + 1</code>，然后继续从刚刚的<code>front</code>从左往右遍历，直到<code>front &lt; back</code>为止。由于题目限制字符串 <em><strong>恰好</strong></em> 由 <code>n / 2</code> 个开括号 <code>&#39;[&#39;</code> 和 <code>n / 2</code> 个闭括号 <code>&#39;]&#39;</code> 组成，所以在两侧指针相撞之后一定可以使字符串平衡。</p>
+<h2 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minSwaps</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="type">int</span>[] S = <span class="keyword">new</span> <span class="title class_">int</span>[n];</span><br><span class="line">        <span class="type">int</span> <span class="variable">front</span> <span class="operator">=</span> <span class="number">0</span>, back = n-<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sumLeft</span> <span class="operator">=</span> <span class="number">0</span>, sumRight = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)==<span class="string">&#x27;[&#x27;</span>)</span><br><span class="line">                S[i] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                S[i] = -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">true</span>; <span class="comment">//true 代表从左往右 false 代表从右往左</span></span><br><span class="line">        <span class="keyword">while</span>(front &lt; back)&#123;</span><br><span class="line">            <span class="keyword">if</span>(flag)&#123;</span><br><span class="line">                sumLeft += S[front];</span><br><span class="line">                <span class="keyword">if</span> (sumLeft &lt; <span class="number">0</span>)&#123;</span><br><span class="line">                    S[front] = <span class="number">1</span>;</span><br><span class="line">                    flag = <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                front = front+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!flag)&#123;</span><br><span class="line">                <span class="keyword">if</span>(S[back] == <span class="number">1</span>)&#123;</span><br><span class="line">                    S[back] = -<span class="number">1</span>;</span><br><span class="line">                    flag = <span class="literal">true</span>;</span><br><span class="line">                    sumLeft+=<span class="number">2</span>;</span><br><span class="line">                    ans++;</span><br><span class="line">                &#125;</span><br><span class="line">                back = back-<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="官方题解：猜测结论-构造答案"><a href="#官方题解：猜测结论-构造答案" class="headerlink" title="官方题解：猜测结论+构造答案"></a>官方题解：猜测结论+构造答案</h2><p>​	求前缀和的思路，感觉更符合算法题的思路。记 <code>cn[i]</code> 表示字符串 <code>s[0...i]</code> 的前缀和，其中左括号和右括号的处理方式与我的题解相同。如果所有的前缀和均大于等于0，则字符串 <code>s</code> 平衡。看到这里我豁然开朗，这里的判断方式和<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-if-a-parentheses-string-can-be-valid?envType=daily-question&envId=2025-03-23">LeetCode.2116</a>的判断方式完全相同，如果我那天看了这道题解，今天早上就不会做那么久了。<br>​	然后猜测结论：</p>
+<p>设 <code>cnt</code> 中的最小值为 <code>cnt[i]</code> ，那么最少需要交换的次数为：<br>$$<br>\lceil\frac{-cnt[i]}{2}\rceil<br>$$<br>​	其中 <code>⌈x⌉</code> 表示将<code>x</code>向上取整。以下解释原因：在<code>cnt[i]</code> 表示遍历的过程中，最多欠了<code>-cnt[i]</code>个左括号。为了使<code>s</code>平衡，我们需要在<code>i</code>左侧补上一些，而其唯一方法则是将前面的<code>]</code>和后面的<code>[</code>交换，一次交换会使得<code>cnt[i]</code>的值增加2(原本为-1，交换后为+1，Δ &#x3D; 2), 因此至少交换$\lceil\frac{-cnt[i]}{2}\rceil$次。所以以构造出交换$\lceil\frac{-cnt[i]}{2}\rceil$次的方法为目标，希望每减少一次则<code>cnt[i]</code>的值减2，使用数学归纳法有：</p>
+<ul>
+<li>当<code>-cnt[i] = 0</code>时，<code>s</code>平衡，需要的交换次数为0；</li>
+<li>假设当<code>-cnt[i] = k</code>时需要交换的次数和我们的猜测相符合，则当 <code>-cnt[i] = k + 2</code>时：<ul>
+<li>记<code>cnt</code>中第一个负数的出现位置为<code>first</code>，那么<code>s[first]</code>一定是右括号；</li>
+<li>记<code>cnt</code>中最后一个负数出现的为止为<code>last</code>，那么<code>last</code>一定不为<code>n-1</code>(因为<code>s</code>中左右括号数量相同)，并且<code>s[last +1 ]</code>一定是一个左括号；</li>
+<li>我们交换<code>s[first]</code>与<code>s[last+1]</code>。对于所有在<code>[0,first−1]∪[last+1,n−1)</code>范围内的下标，它们对应的<code>cnt</code>值均为不变（且均为非负数），对于所有在<code>[first,last]</code>范围内的下标，它们对应的<code>cnt</code>值均增加了 2。由于所有的负数都在<code>[first,last]</code>范围内，因此<code>cnt[i]</code>也会增加 2，那么我们通过一次交换就归纳到了<code>−cnt[i] = k</code>的情况。</li>
+</ul>
+</li>
+<li>值得注意的是，<code>-cnt = 1</code>的情况也会归纳到<code>-cnt[i] = 0</code>(而非<code>-cnt[i] = -1</code>)，这也是答案向上取整的原由。<br>​	通过数学归纳法给出了一种交换的构造，因此最少的交换次数即为$\lceil\frac{-cnt[i]}{2}\rceil$中的最小值。</li>
+</ul>
+<p>其实和我的题解的思想是相同的，同样的有借有还，只不过我的方法仍然停留在模拟的阶段，而这个题解直接跳过了模拟的部分获得答案了。</p>
+<h2 id="官方题解代码"><a href="#官方题解代码" class="headerlink" title="官方题解代码"></a>官方题解代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minSwaps</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> <span class="number">0</span>, mincnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> ch : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (ch == <span class="string">&#x27;[&#x27;</span>) &#123;</span><br><span class="line">                cnt += <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cnt -= <span class="number">1</span>;</span><br><span class="line">                mincnt = Math.min(mincnt, cnt);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (-mincnt + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/Captain-Bridge">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ik5LUFdMU0tDTRViU1MMQU1P">
+            <span class="icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+
+            <span class="label">E-Mail</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://steamcommunity.com/id/RememberM3">
+            <span class="icon">
+              <i class="fab fa-steam"></i>
+            </span>
+
+            <span class="label">Steam</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/273349653">
+            <span class="icon">
+              <i class="fab fa-bilibili"></i>
+            </span>
+
+            <span class="label">Bilibili</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://raid.report/pc/4611686018489316181">
+            <span class="icon">
+              <i class="fab fa-destiny"></i>
+            </span>
+
+            <span class="label">Raid-report</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://leetcode.cn/u/captainbridge/">
+            <span class="icon">
+              <i class="fab fa-leetcode"></i>
+            </span>
+
+            <span class="label">LeetCode</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%A0%88/" rel="tag"><i class="fa fa-tag"></i> 栈</a>
+              <a href="/tags/%E8%B4%AA%E5%BF%83/" rel="tag"><i class="fa fa-tag"></i> 贪心</a>
+              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"><i class="fa fa-tag"></i> 双指针</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/03/23/LeetCode2116/" rel="prev" title="LeetCode2116">
+                  <i class="fa fa-angle-left"></i> LeetCode2116
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/03/24/LeetCode2255/" rel="next" title="LeetCode2255">
+                  LeetCode2255 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">白枭</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">82k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:01</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
