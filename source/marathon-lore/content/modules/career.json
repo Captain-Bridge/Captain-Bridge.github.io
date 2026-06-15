@@ -1,0 +1,2381 @@
+{
+  "id": "career",
+  "title": "生涯",
+  "count": "130 / 130",
+  "icon": "/marathon-lore/assets/images/icons/career.svg",
+  "sections": [
+    {
+      "id": "season-rank",
+      "title": "赛季等级",
+      "count": "16 / 16",
+      "icon": "/marathon-lore/assets/images/icons/season_rank.svg",
+      "nodes": [
+        {
+          "id": "season-one",
+          "title": "第一赛季",
+          "count": "9 / 9",
+          "icon": "/marathon-lore/assets/images/icons/season_rank.svg",
+          "children": [
+            {
+              "id": "season-level-five",
+              "title": "赛季等级5",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_white.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级5。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-white.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_white.png"
+            },
+            {
+              "id": "season-level-ten",
+              "title": "赛季等级10",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_green.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级10。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-green.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_green.png"
+            },
+            {
+              "id": "season-level-fifteen",
+              "title": "赛季等级15",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_green.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级15。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-green.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_green.png"
+            },
+            {
+              "id": "season-level-twenty",
+              "title": "赛季等级20",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_green.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级20。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-green.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_green.png"
+            },
+            {
+              "id": "season-level-thirty",
+              "title": "赛季等级30",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_blue.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级30。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-blue.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_blue.png"
+            },
+            {
+              "id": "season-level-forty",
+              "title": "赛季等级40",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_blue.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级40。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-blue.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_blue.png"
+            },
+            {
+              "id": "season-level-fifty",
+              "title": "赛季等级50",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_blue.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级50。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-blue.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_blue.png"
+            },
+            {
+              "id": "season-level-seventy-five",
+              "title": "赛季等级75",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_purple.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级75。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-purple.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_purple.png"
+            },
+            {
+              "id": "season-level-hundred",
+              "title": "赛季等级100",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_golden.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "当前赛季期间，达到赛季等级100。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "第一赛季"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/season_one/season-level-golden.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/season_one/season_level_main_golden.png"
+            }
+          ]
+        },
+        {
+          "id": "achievements",
+          "title": "里程碑",
+          "count": "3 / 3",
+          "icon": "/marathon-lore/assets/images/icons/season_rank.svg",
+          "children": [
+            {
+              "id": "any-season-level-hundred",
+              "title": "赛季等级100",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在任意赛季达到赛季等级100。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "里程碑"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/achievement/恶名远扬.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/achievement/恶名远扬.png"
+            },
+            {
+              "id": "season-one-accomplisher",
+              "title": "第一赛季达成者",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第一赛季达到赛季等级100。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "里程碑"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手.png"
+            },
+            {
+              "id": "season-two-accomplisher",
+              "title": "第二赛季达成者",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手II_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第二赛季达到赛季等级100。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "里程碑"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手II.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手II.png"
+            }
+          ]
+        },
+        {
+          "id": "returning_player",
+          "title": "回归玩家",
+          "count": "4 / 4",
+          "icon": "/marathon-lore/assets/images/icons/season_rank.svg",
+          "children": [
+            {
+              "id": "pre_level_10",
+              "title": "10级老手",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_green_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在前一赛季达到赛季等级10。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "回归玩家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_green.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_green.png"
+            },
+            {
+              "id": "pre_level_25",
+              "title": "25级老手",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_green_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在前一赛季达到赛季等级25。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "回归玩家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_green.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_green.png"
+            },
+            {
+              "id": "pre_level_50",
+              "title": "50级老手",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_blue_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在前一赛季达到赛季等级50。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "回归玩家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_blue.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_blue.png"
+            },
+            {
+              "id": "pre_level_75",
+              "title": "75级老手",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_purple_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在前一赛季达到赛季等级75。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "回归玩家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_purple.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/returning_player/cyac_purple.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rating",
+      "title": "排名赛季",
+      "count": "35 / 35",
+      "icon": "/marathon-lore/assets/images/icons/rating.svg",
+      "nodes": [
+        {
+          "id": "rank",
+          "title": "排位",
+          "count": "17 / 17",
+          "icon": "/marathon-lore/assets/images/icons/rating.svg",
+          "children": [
+            {
+              "id": "brozonII",
+              "title": "青铜II",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/bronze_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到青铜II",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/blue_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/bronze_icon.png"
+            },
+            {
+              "id": "brozonI",
+              "title": "青铜I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/bronze_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到青铜I",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/blue_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/bronze_icon.png"
+            },
+            {
+              "id": "silverIII",
+              "title": "白银III",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/silver_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到白银III",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/purple_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/silver_A_icon.png"
+            },
+            {
+              "id": "silverII",
+              "title": "白银II",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/silver_B_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到白银II",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/blue_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/silver_B_icon.png"
+            },
+            {
+              "id": "silverI",
+              "title": "白银I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/silver_B_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到白银I",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/blue_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/silver_B_icon.png"
+            },
+            {
+              "id": "goldIII",
+              "title": "黄金III",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/gold_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到黄金III",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/purple_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/gold_A_icon.png"
+            },
+            {
+              "id": "goldII",
+              "title": "黄金II",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/gold_B_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到黄金II",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/blue_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/gold_B_icon.png"
+            },
+            {
+              "id": "goldI",
+              "title": "黄金I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/gold_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到黄金I",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/purple_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/gold_A_icon.png"
+            },
+            {
+              "id": "platinumIII",
+              "title": "白金III",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/platinum_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到白金III",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/purple_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/platinum_A_icon.png"
+            },
+            {
+              "id": "platinumII",
+              "title": "白金II",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/platinum_B_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到白金II",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/blue_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/platinum_B_icon.png"
+            },
+            {
+              "id": "platinumI",
+              "title": "白金I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/platinum_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到白金I",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/purple_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/platinum_A_icon.png"
+            },
+            {
+              "id": "diamonIII",
+              "title": "钻石III",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/diamond_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到钻石III",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/gold_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/diamond_A_icon.png"
+            },
+            {
+              "id": "diamondII",
+              "title": "钻石II",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/diamond_B_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到钻石II",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/purple_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/diamond_B_icon.png"
+            },
+            {
+              "id": "diamonI",
+              "title": "钻石I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/diamond_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到钻石I",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/gold_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/diamond_A_icon.png"
+            },
+            {
+              "id": "perfectionIII",
+              "title": "至臻III",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/perfection_A_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到至臻II",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/purple_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/perfection_A_icon.png"
+            },
+            {
+              "id": "perfectionII",
+              "title": "至臻II",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/perfection_B_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到至臻II",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/gold_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/perfection_B_icon.png"
+            },
+            {
+              "id": "perfectionI",
+              "title": "至臻I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/rank/perfection_B_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在本赛季达到至臻I",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "排位"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/rank/gold_rank_rewards.md",
+              "image": "/marathon-lore/content/docs/career/rating/rank/perfection_B_icon.png"
+            }
+          ]
+        },
+        {
+          "id": "season_one_skin",
+          "title": "第一赛季装饰",
+          "count": "5 / 5",
+          "icon": "/marathon-lore/assets/images/icons/rating.svg",
+          "children": [
+            {
+              "id": "season_one_silver",
+              "title": "第一赛季：白银",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_silver_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第一赛季中达到白银I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第一赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_silver.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_silver.png"
+            },
+            {
+              "id": "season_one_gold",
+              "title": "第一赛季：黄金III",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_goldIII_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第一赛季中达到黄金III。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第一赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_goldIII.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_goldIII.png"
+            },
+            {
+              "id": "season_one_platinumI",
+              "title": "第一赛季：白金I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_platinumI_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第一赛季中达到白金I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第一赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_platinumI.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_platinumI.png"
+            },
+            {
+              "id": "season_one_钻石I",
+              "title": "第一赛季：钻石I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_diamondI_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第一赛季中达到钻石I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第一赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_diamondI.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_diamondI.png"
+            },
+            {
+              "id": "season_one_perfectionI",
+              "title": "第一赛季：至臻I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_perfectionI_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第一赛季中达到至臻I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第一赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_perfectionI.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_one_skin/season_one_perfectionI.png"
+            }
+          ]
+        },
+        {
+          "id": "season_two_skin",
+          "title": "第二赛季装饰",
+          "count": "5 / 5",
+          "icon": "/marathon-lore/assets/images/icons/rating.svg",
+          "children": [
+            {
+              "id": "season_two_silver",
+              "title": "第二赛季：白银",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_silver_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第二赛季中达到白银I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第二赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_silver.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_silver.png"
+            },
+            {
+              "id": "season_two_gold",
+              "title": "第二赛季：黄金III",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_gold_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第二赛季中达到黄金I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第二赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_gold.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_gold.png"
+            },
+            {
+              "id": "season_two_platinumI",
+              "title": "第二赛季：白金I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_platinum_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第二赛季中达到白金I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第二赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_platinum.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_platinum.png"
+            },
+            {
+              "id": "season_two_钻石I",
+              "title": "第二赛季：钻石I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_diamond_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第二赛季中达到钻石I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第二赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_diamond.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_diamond.png"
+            },
+            {
+              "id": "season_two_perfectionI",
+              "title": "第二赛季：至臻I",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_perfection_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第二赛季中达到至臻I。",
+              "meta": [
+                "生涯",
+                "排位赛季",
+                "第二赛季装饰"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_perfection.md",
+              "image": "/marathon-lore/content/docs/career/rating/season_two_skin/season_two_perfection.png"
+            }
+          ]
+        },
+        {
+          "id": "title",
+          "title": "称号",
+          "count": "2 / 2",
+          "icon": "/marathon-lore/assets/images/icons/rating.svg",
+          "children": [
+            {
+              "id": "golden_survivor",
+              "title": "镀金生存者",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "达到黄金I后可在赛季结束时领取相应称号。领取期限截至下个排名赛季末。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "称号"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/titles/golden_survivor.md",
+              "image": "/marathon-lore/content/docs/career/rating/titles/golden_survivor.png"
+            },
+            {
+              "id": "outstanding_survivor",
+              "title": "卓然生存者",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_gold.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "达到至臻I后可在赛季结束时领取相应称号。领取期限截至下个排名赛季末。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "称号"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/titles/outstanding_survivor.md",
+              "image": "/marathon-lore/content/docs/career/rating/titles/outstanding_survivor.png"
+            }
+          ]
+        },
+        {
+          "id": "emblem",
+          "title": "徽标",
+          "count": "6 / 6",
+          "icon": "/marathon-lore/assets/images/icons/rating.svg",
+          "children": [
+            {
+              "id": "brozon",
+              "title": "青铜",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/emblem/brozon_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "只会授予所达到的最高排位的徽标。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "徽标"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/emblem/brozon.md",
+              "image": "/marathon-lore/content/docs/career/rating/emblem/brozon.png"
+            },
+            {
+              "id": "silver",
+              "title": "白银",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/emblem/silver_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "只会授予所达到的最高排位的徽标。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "徽标"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/emblem/silver.md",
+              "image": "/marathon-lore/content/docs/career/rating/emblem/silver.png"
+            },
+            {
+              "id": "gold",
+              "title": "黄金",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/emblem/gold_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "只会授予所达到的最高排位的徽标。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "徽标"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/emblem/gold.md",
+              "image": "/marathon-lore/content/docs/career/rating/emblem/gold.png"
+            },
+            {
+              "id": "platinum",
+              "title": "白金",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/emblem/platinum_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "只会授予所达到的最高排位的徽标。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "徽标"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/emblem/platinum.md",
+              "image": "/marathon-lore/content/docs/career/rating/emblem/platinum.png"
+            },
+            {
+              "id": "diamond",
+              "title": "钻石",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/emblem/diamond_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "只会授予所达到的最高排位的徽标。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "徽标"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/emblem/diamond.md",
+              "image": "/marathon-lore/content/docs/career/rating/emblem/diamond.png"
+            },
+            {
+              "id": "perfection",
+              "title": "至臻",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/rating/emblem/perfection_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "只会授予所达到的最高排位的徽标。",
+              "meta": [
+                "生涯",
+                "排名赛季",
+                "徽标"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/rating/emblem/perfection.md",
+              "image": "/marathon-lore/content/docs/career/rating/emblem/perfection.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mastery",
+      "title": "精通技艺",
+      "count": "14 / 14",
+      "icon": "/marathon-lore/assets/images/icons/mastery.svg",
+      "nodes": [
+        {
+          "id": "welcome-center",
+          "title": "迎宾中心",
+          "count": "8 / 8",
+          "icon": "/marathon-lore/assets/images/icons/mastery.svg",
+          "children": [
+            {
+              "id": "runner-initiate",
+              "title": "疾行者初始化",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/mastery/welcome_center/runner_initiate_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成首次发射",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/runner_initiate.md",
+              "image": "/marathon-lore/content/docs/career/mastery/welcome_center/runner_initiate.png"
+            },
+            {
+              "id": "escape_make_me",
+              "title": "逃亡令我···",
+              "icon": "badge",
+              "count": "已完成",
+              "summary": "成功撤离",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/career/mastery/welcome_center/escape_make_me_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/escape_make_me.md",
+              "image": "/marathon-lore/content/docs/career/mastery/welcome_center/escape_make_me.png",
+              "logs": [
+                {
+                  "id": "escape_make_me_01",
+                  "title": "疾行者和外壳",
+                  "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/runner_and_shell.md",
+                  "image": "/marathon-lore/content/docs/career/mastery/welcome_center/runner_and_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "this_is_marathon",
+              "title": "这就是马拉松",
+              "icon": "badge",
+              "count": "已完成",
+              "summary": "被消灭后撤离失败。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/career/mastery/welcome_center/this_is_marathon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/this_is_marathon.md",
+              "image": "/marathon-lore/content/docs/career/mastery/welcome_center/this_is_marathon.png",
+              "logs": [
+                {
+                  "id": "this_is_marathon_01",
+                  "title": "外壳“死亡”",
+                  "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/shell_death.md",
+                  "image": "/marathon-lore/content/docs/career/mastery/welcome_center/shell_death.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "far_from_end",
+              "title": "远未结束",
+              "icon": "badge",
+              "count": "已完成",
+              "summary": "被击倒或消灭后完成重启。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/career/mastery/welcome_center/far_from_end_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/far_from_end.md",
+              "image": "/marathon-lore/content/docs/career/mastery/welcome_center/far_from_end.png",
+              "logs": [
+                {
+                  "id": "shell_resume_01",
+                  "title": "外壳复苏",
+                  "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/shell_resume.md",
+                  "image": "/marathon-lore/content/docs/career/mastery/welcome_center/shell_resume.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "patching_up",
+              "title": "打补丁",
+              "icon": "badge",
+              "count": "已完成",
+              "summary": "使用一次高级修补包。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/career/mastery/welcome_center/patching_up_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/patching_up.md",
+              "image": "/marathon-lore/content/docs/career/mastery/welcome_center/patching_up.png",
+              "logs": [
+                {
+                  "id": "shell_repair_01",
+                  "title": "外壳修复",
+                  "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/shell_repair.md",
+                  "image": "/marathon-lore/content/docs/career/mastery/welcome_center/shell_repair.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "half_mec_requiem",
+              "title": "半机械人安魂曲",
+              "icon": "badge",
+              "count": "已完成",
+              "summary": "击败一名疾行者。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/career/mastery/welcome_center/half_mec_requiem_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/half_mec_requiem.md",
+              "image": "/marathon-lore/content/docs/career/mastery/welcome_center/half_mec_requiem.png",
+              "logs": [
+                {
+                  "id": "enemy_runner_01",
+                  "title": "疾行者对手",
+                  "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/enemy_runner.md",
+                  "image": "/marathon-lore/content/docs/career/mastery/welcome_center/enemy_runner.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "like_a_trillion_dollars",
+              "title": "像一万亿美元",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "a",
+              "accent": "green",
+              "summary": "购买一次阵营升级。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "logs": [
+                {
+                  "id": "upgrade",
+                  "title": "升级",
+                  "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/upgrade.md",
+                  "image": "/marathon-lore/content/docs/career/mastery/welcome_center/upgrade.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "low_profile_tools",
+              "title": "低调工具",
+              "icon": "badge",
+              "count": "已完成",
+              "summary": "在军械库中购买一把奔袭突击步枪。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/career/mastery/welcome_center/low_profile_tools_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/low_profile_tools.md",
+              "image": "/marathon-lore/content/docs/career/mastery/welcome_center/low_profile_tools.png",
+              "logs": [
+                {
+                  "id": "credit_and_armory_01",
+                  "title": "信用点和军械库",
+                  "bodyFile": "/marathon-lore/content/docs/career/mastery/welcome_center/credit_and_armory.md",
+                  "image": "/marathon-lore/content/docs/career/mastery/welcome_center/credit_and_armory.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "legendary",
+          "title": "传说",
+          "count": "6 / 6",
+          "icon": "/marathon-lore/assets/images/icons/mastery.svg",
+          "children": [
+            {
+              "id": "opportunist",
+              "title": "投机分子",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_gold.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "账户总资产达到至少100万信用点。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "传说"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/legendary/opportunist.md",
+              "image": "/marathon-lore/content/docs/career/mastery/legendary/投机分子.png"
+            },
+            {
+              "id": "VIP",
+              "title": "尊贵客户",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/mastery/legendary/VIP_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "携带一件尊享货品撤离。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "传说"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/legendary/VIP.md",
+              "image": "/marathon-lore/content/docs/career/mastery/legendary/VIP.png"
+            },
+            {
+              "id": "quadruple_threat",
+              "title": "四管齐发",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/mastery/legendary/quadruple_threat_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在两个武器栏都装备WSTR战斗霰弹枪时撤离。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "传说"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/legendary/quadruple_threat.md",
+              "image": "/marathon-lore/content/docs/career/mastery/legendary/quadruple_threat.png"
+            },
+            {
+              "id": "diplomat",
+              "title": "外交官",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/mastery/legendary/diplomat_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "同时获得所有阵营的VIP等级。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "传说"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/legendary/diplomat.md",
+              "image": "/marathon-lore/content/docs/career/mastery/legendary/diplomat.png"
+            },
+            {
+              "id": "struggle_escape",
+              "title": "爬出生天",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/mastery/legendary/struggle_escape_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在被击倒的情况下撤离。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "传说"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/legendary/struggle_escape.md",
+              "image": "/marathon-lore/content/docs/career/mastery/legendary/struggle_escape.png"
+            },
+            {
+              "id": "runner_never_dies",
+              "title": "疾行者永不死亡",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/mastery/legendary/runner_never_dies_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "被消灭并重启，然后成功撤离。",
+              "meta": [
+                "生涯",
+                "精通技艺",
+                "传说"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/mastery/legendary/runner_never_dies.md",
+              "image": "/marathon-lore/content/docs/career/mastery/legendary/runner_never_dies.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "titles",
+      "title": "称号",
+      "count": "67 / 67",
+      "icon": "/marathon-lore/assets/images/icons/title.svg",
+      "nodes": [
+        {
+          "id": "spy_master",
+          "title": "侦察大师",
+          "count": "8 / 8",
+          "icon": "/marathon-lore/assets/images/icons/title.svg",
+          "children": [
+            {
+              "id": "masterpiece",
+              "title": "大师级别",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_gold.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有侦察大师挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/masterpiece.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/masterpiece.png"
+            },
+            {
+              "id": "gaming_burnout",
+              "title": "爆肝综合征",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/spy_master/gaming_burnout_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有侦察大师挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/gaming_burnout.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/gaming_burnout.png"
+            },
+            {
+              "id": "totaly_assassinated",
+              "title": "全面刺杀",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/spy_master/totaly_assassinated_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在一次疾行中通过近战伤害消灭25名敌对目标。",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/totaly_assassinated.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/totaly_assassinated.png"
+            },
+            {
+              "id": "injured_extraction",
+              "title": "带伤撤离",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/spy_master/injured_extraction_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "不使用任何治疗消耗品，从低温档案室撤离。",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/injured_extraction.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/injured_extraction.png"
+            },
+            {
+              "id": "jurisdiction_annihilation",
+              "title": "管辖歼灭",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/spy_master/jurisdiction_annihilation_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "使用手雷消灭一名UESC看守者。",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/jurisdiction_annihilation.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/jurisdiction_annihilation.png"
+            },
+            {
+              "id": "beat_rook",
+              "title": "打倒鲁克",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/spy_master/beat_rook_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在一次疾行中消灭3名鲁克。",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/beat_rook.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/beat_rook.png"
+            },
+            {
+              "id": "seven_colum",
+              "title": "拿下七杀",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/spy_master/seven_colum_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在一次疾行中消灭7名低温档案室的敌对疾行者。",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/seven_colum.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/seven_colum.png"
+            },
+            {
+              "id": "beyond_curtain",
+              "title": "绯幕之外",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/spy_master/beyond_curtain_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在噩梦尽头掠夺载具。",
+              "meta": [
+                "生涯",
+                "称号",
+                "侦察大师"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/spy_master/beyond_curtain.md",
+              "image": "/marathon-lore/content/docs/career/titles/spy_master/beyond_curtain.png"
+            }
+          ]
+        },
+        {
+          "id": "archivist",
+          "title": "档案员",
+          "count": "9 / 9",
+          "icon": "/marathon-lore/assets/images/icons/title.svg",
+          "children": [
+            {
+              "id": "archivist_masterpiece",
+              "title": "档案员",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_purple.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有档案员挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "档案员"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/archivist/archivist_masterpiece.md",
+              "image": "/marathon-lore/content/docs/career/titles/archivist/archivist_masterpiece.png"
+            },
+            {
+              "id": "perimeter_info",
+              "title": "外围区域情报",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/archivist/perimeter_info_logo.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成外围区域收藏品挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "档案员"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/archivist/perimeter_info.md",
+              "image": "/marathon-lore/content/docs/career/titles/archivist/perimeter_info.png"
+            },
+            {
+              "id": "dire_mush_info",
+              "title": "恐怖沼泽情报",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/archivist/dire_mush_info_logo.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成恐怖沼泽收藏品挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "档案员"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/archivist/dire_mush_info.md",
+              "image": "/marathon-lore/content/docs/career/titles/archivist/dire_mush_info.png"
+            },
+            {
+              "id": "out_post_info",
+              "title": "前哨情报",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/archivist/out_post_info_logo.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成前哨收藏品挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "档案员"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/archivist/out_post_info.md",
+              "image": "/marathon-lore/content/docs/career/titles/archivist/out_post_info.png"
+            },
+            {
+              "id": "CR_info",
+              "title": "低温档案室情报",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/archivist/CR_info_logo.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成低温档案室收藏品挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "档案员"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/archivist/CR_info.md",
+              "image": "/marathon-lore/content/docs/career/titles/archivist/CR_info.png"
+            },
+            {
+              "id": "nv_info",
+              "title": "纽卡洛里情报",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成纽卡洛里合约挑战"
+            },
+            {
+              "id": "terax_info",
+              "title": "特莱克斯情报",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成特莱克斯合约挑战"
+            },
+            {
+              "id": "mida_info",
+              "title": "米达情报",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成米达合约挑战"
+            },
+            {
+              "id": "sekiguchi_info",
+              "title": "关口情报",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成关口合约挑战"
+            }
+          ]
+        },
+        {
+          "id": "tomb_raider",
+          "title": "盗墓者",
+          "count": "8 / 8",
+          "icon": "/marathon-lore/assets/images/icons/title.svg",
+          "children": [
+            {
+              "id": "tomb_raider_masterpiece",
+              "title": "盗墓者",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_purple.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有盗墓者挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/tomb_raider/tomb_raider_masterpiece.md",
+              "image": "/marathon-lore/content/docs/career/titles/tomb_raider/tomb_raider_masterpiece.png"
+            },
+            {
+              "id": "big_deal",
+              "title": "大买卖",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/tomb_raider/big_deal_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在一次疾行中获得的战利品价值超过10000。",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/tomb_raider/big_deal.md",
+              "image": "/marathon-lore/content/docs/career/titles/tomb_raider/big_deal.png"
+            },
+            {
+              "id": "waiting_for_repair",
+              "title": "等待修缮",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在受损物品上使用物质固定剂以去除效果。",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ]
+            },
+            {
+              "id": "high_end_robbery",
+              "title": "高端劫案",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/tomb_raider/high_end_robbery_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "打开尊享上锁房间。",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/tomb_raider/high_end_robbery.md",
+              "image": "/marathon-lore/content/docs/career/titles/tomb_raider/high_end_robbery.png"
+            },
+            {
+              "id": "collector",
+              "title": "收集者",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/tomb_raider/collector_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在一次疾行中，通过唯物主义者获取7种不同的回收资源。",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/tomb_raider/collector.md",
+              "image": "/marathon-lore/content/docs/career/titles/tomb_raider/collector.png"
+            },
+            {
+              "id": "locksmith",
+              "title": "锁匠",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/tomb_raider/locksmith_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "携带一个卓越或尊享钥匙模板撤离。",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/tomb_raider/locksmith.md",
+              "image": "/marathon-lore/content/docs/career/titles/tomb_raider/locksmith.png"
+            },
+            {
+              "id": "exquisite_taste",
+              "title": "精致品味",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "携带尊享回收资源撤离。",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ]
+            },
+            {
+              "id": "emotional_value",
+              "title": "情感价值",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/tomb_raider/emotional_value_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "出售一件至少被携带撤离过3次的持久物品。",
+              "meta": [
+                "生涯",
+                "称号",
+                "盗墓者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/tomb_raider/emotional_value.md",
+              "image": "/marathon-lore/content/docs/career/titles/tomb_raider/emotional_value.png"
+            }
+          ]
+        },
+        {
+          "id": "CR_expert",
+          "title": "低温专家",
+          "count": "11 / 11",
+          "icon": "/marathon-lore/assets/images/icons/title.svg",
+          "children": [
+            {
+              "id": "CR_expert_masterpiece",
+              "title": "低温专家",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_purple.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有低温专家挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/CR_expert/CR_expert_masterpiece.md",
+              "image": "/marathon-lore/content/docs/career/titles/CR_expert/CR_expert_masterpiece.png"
+            },
+            {
+              "id": "frosty_fusion",
+              "title": "冰冷融合",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/CR_expert/frosty_fusion_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室使用ZEUS电磁炮击杀UESC指挥官。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/CR_expert/frosty_fusion.md",
+              "image": "/marathon-lore/content/docs/career/titles/CR_expert/frosty_fusion.png"
+            },
+            {
+              "id": "compiler_requiem",
+              "title": "编译者安魂曲",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/CR_expert/compiler_requiem_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室消灭一名编译者后撤离。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/CR_expert/compiler_requiem.md",
+              "image": "/marathon-lore/content/docs/career/titles/CR_expert/compiler_requiem.png"
+            },
+            {
+              "id": "curiosity_bloom",
+              "title": "好奇心爆发···",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/CR_expert/curiosity_bloom_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室使用混合武器消灭10名敌对目标。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/CR_expert/curiosity_bloom.md",
+              "image": "/marathon-lore/content/docs/career/titles/CR_expert/curiosity_bloom.png"
+            },
+            {
+              "id": "blasting_ventilation_core",
+              "title": "爆破通风核心",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/CR_expert/blasting_ventilation_core_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室使用破片手雷摧毁一个通风口格栅。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/CR_expert/blasting_ventilation_core.md",
+              "image": "/marathon-lore/content/docs/career/titles/CR_expert/blasting_ventilation_core.png"
+            },
+            {
+              "id": "colonial_spaceship_sale",
+              "title": "殖民飞船大甩卖",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室找到一个隐藏的储藏箱。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ]
+            },
+            {
+              "id": "security_threat_level_III",
+              "title": "3级安全威胁",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室执行3级安全扫描。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ]
+            },
+            {
+              "id": "no_battery_attached",
+              "title": "未附电池",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室使用电池。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ]
+            },
+            {
+              "id": "security_threat_level_V",
+              "title": "5级安全威胁",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在低温档案室获得5级安全通行卡。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ]
+            },
+            {
+              "id": "open_the_door",
+              "title": "“舱”开大门",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "访问低温档案室的5级安全舱门。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ]
+            },
+            {
+              "id": "get_in_if_wanna_kill",
+              "title": "如欲屠杀，请入内",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在一次疾行中消灭低温档案室的100名UESC单位。",
+              "meta": [
+                "生涯",
+                "称号",
+                "低温专家"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "regional_warden",
+          "title": "区域典狱官",
+          "count": "8 / 8",
+          "icon": "/marathon-lore/assets/images/icons/title.svg",
+          "children": [
+            {
+              "id": "regional_warden_masterpiece",
+              "title": "区域典狱官",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_purple.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有档案员挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/regional_warden_masterpiece.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/regional_warden_masterpiece.png"
+            },
+            {
+              "id": "mark_on_triple_star",
+              "title": "涂上三星",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/regional_warden/mark_on_triple_star_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "作为团队的最后一名幸村成员击败3名疾行者。",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/mark_on_triple_star.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/mark_on_triple_star.png"
+            },
+            {
+              "id": "hidden_strike",
+              "title": "隐蔽之击",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/regional_warden/hidden_strike_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "使用消音武器在自身不被消灭的情况下击败3名敌对目标。",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/hidden_strike.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/hidden_strike.png"
+            },
+            {
+              "id": "luminous_double_star",
+              "title": "荧惑双星",
+              "icon": "badge",
+              "count": "已完成",
+              "summary": "在一次疾行中，将消灭过你的疾行者击败",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "iconImage": "/marathon-lore/content/docs/career/titles/regional_warden/luminous_double_star_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/luminous_double_star.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/luminous_double_star.png"
+            },
+            {
+              "id": "god_will_judge_the_dead",
+              "title": "神来裁决亡者···",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/regional_warden/god_will_judge_the_dead_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在消灭至少9名疾行者后，通过最终撤离完成撤离。",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/god_will_judge_the_dead.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/god_will_judge_the_dead.png"
+            },
+            {
+              "id": "tough_or_hot",
+              "title": "你选硬的还是烫的？",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/regional_warden/tough_or_hot_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在一次疾行中，使用近战攻击和手雷各击败一名疾行者",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/tough_or_hot.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/tough_or_hot.png"
+            },
+            {
+              "id": "all_for_nothing",
+              "title": "功亏一篑",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/regional_warden/all_for_nothing_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在已激活撤离区域内使用终结技击倒一名倒地的疾行者。",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/all_for_nothing.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/all_for_nothing.png"
+            },
+            {
+              "id": "rook_VS_Tauciti_checkmate",
+              "title": "鲁克对天仓IV，将杀",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/regional_warden/rook_VS_Tauciti_checkmate_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "使用鲁克框架，通过精准狙击伤害击败一名敌对疾行者。",
+              "meta": [
+                "生涯",
+                "称号",
+                "区域典狱官"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/regional_warden/rook_VS_Tauciti_checkmate.md",
+              "image": "/marathon-lore/content/docs/career/titles/regional_warden/rook_VS_Tauciti_checkmate.png"
+            }
+          ]
+        },
+        {
+          "id": "pioneer",
+          "title": "先行者",
+          "count": "12 / 12",
+          "icon": "/marathon-lore/assets/images/icons/title.svg",
+          "children": [
+            {
+              "id": "pioneer_masterpiece",
+              "title": "先行者",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有先行者挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/pioneer/pioneer_masterpiece.md",
+              "image": "/marathon-lore/content/docs/career/titles/pioneer/pioneer_masterpiece.png"
+            },
+            {
+              "id": "meet_new_frends",
+              "title": "结识新朋友",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "选择鲁克游玩时，与另一名疾行者共享撤离点。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "fire_covered",
+              "title": "火力掩护",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "辅助队友完成UESC消灭。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "combination_punch",
+              "title": "组合拳",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "辅助队友完成疾行者消灭。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "i_got_u",
+              "title": "我罩你",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "复活队友。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "Subcontractor",
+              "title": "转包商",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "辅助队友完成合约目标。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "Resident_contributors",
+              "title": "常驻贡献者",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在不同疾行中辅助队友完成合约目标。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "Sword with Hero",
+              "title": "宝剑配英雄",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "让队友使用你借出的武器消灭UESC单位。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "raid_team",
+              "title": "劫掠小队",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在外围区域，和一名队友骇入并掠夺一个警戒中的UESC容器。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "strength_in_numbers",
+              "title": "人多力量大",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "和一名队友击败外围区域的看守者。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "divide_spoils",
+              "title": "坐地分赃",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "和一名队友打开一个UESC封锁容器。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            },
+            {
+              "id": "strange_cargo",
+              "title": "奇异货物",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "和一名队友携带时间碎片撤离。",
+              "meta": [
+                "生涯",
+                "称号",
+                "先行者"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "night_hunter",
+          "title": "夜行猎手",
+          "count": "11 / 11",
+          "icon": "/marathon-lore/assets/images/icons/title.svg",
+          "children": [
+            {
+              "id": "night_hunter_masterpiece",
+              "title": "夜行猎手",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/title_purple.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "完成所有夜行猎手挑战",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/night_hunter_masterpiece.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/night_hunter_masterpiece.png"
+            },
+            {
+              "id": "high_profile_route",
+              "title": "高调路线",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/night_hunter/high_profile_route_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "通过电梯进入上层设施的综合设施控制区。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/high_profile_route.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/high_profile_route.png"
+            },
+            {
+              "id": "silent_route",
+              "title": "静默路线",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/night_hunter/silent_route_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "通过操作维护访问面板进入上层设施的综合设施控制区。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/silent_route.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/silent_route.png"
+            },
+            {
+              "id": "the_only_exit",
+              "title": "唯一出口",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "使用地堡中的撤离面板激活撤离点。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ]
+            },
+            {
+              "id": "hitchhike",
+              "title": "搭便车",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/night_hunter/hitchhike_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在未通过地堡激活撤离点的情况下撤离。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/hitchhike.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/hitchhike.png"
+            },
+            {
+              "id": "expropriator",
+              "title": "征用者",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/night_hunter/expropriator_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "激活恐怖沼泽（夜间）的每一类UESC网络信号塔。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/expropriator.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/expropriator.png"
+            },
+            {
+              "id": "tranmissian_delay",
+              "title": "物流延误",
+              "icon": "None",
+              "count": "已完成",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "掠夺危害物运输无人机。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ]
+            },
+            {
+              "id": "stargazer",
+              "title": "观星者",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/night_hunter/stargazer_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "进入恐怖沼泽（夜间）综合设施控制区的观察实验室。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/stargazer.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/stargazer.png"
+            },
+            {
+              "id": "space_coin",
+              "title": "太空币",
+              "icon": "None",
+              "count": "已完成",
+              "accent": "blue",
+              "summary": "使用UESC认证。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ]
+            },
+            {
+              "id": "ICU",
+              "title": "白衣夜行",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/night_hunter/ICU_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在恐怖沼泽（夜间）装备暗视瞄具击败敌对目标。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/ICU.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/ICU.png"
+            },
+            {
+              "id": "marsh_party",
+              "title": "沼泽狂欢",
+              "icon": "badge",
+              "count": "已完成",
+              "iconImage": "/marathon-lore/content/docs/career/titles/night_hunter/marsh_party_icon.png",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在恐怖沼泽（夜间）击败收矢量手雷或矢量弹影响的敌对目标。",
+              "meta": [
+                "生涯",
+                "称号",
+                "夜行猎手"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/titles/night_hunter/marsh_party.md",
+              "image": "/marathon-lore/content/docs/career/titles/night_hunter/marsh_party.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

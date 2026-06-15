@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect width="100%" height="100%" fill="#20242c" />
+  <path d="M 89.32 68.11 L 88.68 68.75 L 88.68 79.51 L 89.32 80.14 L 93.11 80.14 L 93.75 79.51 L 93.75 68.75 L 93.11 68.11 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 76.03 68.11 L 74.76 69.38 L 74.76 85.84 L 76.03 87.1 L 79.19 87.1 L 80.46 85.84 L 80.46 69.38 L 79.19 68.11 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 48.81 68.11 L 48.18 68.75 L 48.18 86.47 L 49.44 87.1 L 51.97 87.1 L 53.24 85.84 L 53.24 68.75 L 52.61 68.11 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 35.52 68.11 L 34.25 69.38 L 34.25 78.87 L 35.52 80.14 L 38.68 80.14 L 39.95 78.87 L 39.95 69.38 L 38.68 68.11 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 102.61 54.82 L 101.97 55.46 L 101.97 59.25 L 102.61 59.89 L 106.41 59.89 L 107.04 59.25 L 108.94 59.25 L 109.57 59.89 L 109.57 61.15 L 108.94 61.78 L 108.94 66.22 L 109.57 66.85 L 109.57 68.11 L 108.94 68.75 L 107.04 68.75 L 106.41 68.11 L 102.61 68.11 L 101.97 68.75 L 101.97 72.54 L 102.61 73.18 L 113.37 73.18 L 114 72.54 L 114 55.46 L 113.37 54.82 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 14.63 54.82 L 14 56.09 L 14 71.91 L 14.63 73.18 L 25.39 73.18 L 26.03 72.54 L 26.03 68.75 L 25.39 68.11 L 21.59 68.11 L 20.96 68.75 L 19.7 68.75 L 18.43 67.48 L 18.43 66.85 L 19.7 65.58 L 19.7 62.42 L 18.43 61.15 L 18.43 60.52 L 19.7 59.25 L 20.96 59.25 L 21.59 59.89 L 25.39 59.89 L 26.03 59.25 L 26.03 55.46 L 25.39 54.82 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 89.32 47.86 L 88.68 48.49 L 88.68 59.25 L 89.32 59.89 L 93.11 59.89 L 93.75 59.25 L 93.75 48.49 L 93.11 47.86 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 35.52 47.86 L 34.25 49.13 L 34.25 58.62 L 35.52 59.89 L 38.68 59.89 L 39.95 58.62 L 39.95 49.13 L 38.68 47.86 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 76.03 40.9 L 74.76 42.16 L 74.76 58.62 L 76.03 59.89 L 79.19 59.89 L 80.46 58.62 L 80.46 42.16 L 79.19 40.9 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 49.44 40.9 L 48.18 41.53 L 48.18 59.25 L 48.81 59.89 L 52.61 59.89 L 53.24 59.25 L 53.24 42.16 L 51.97 40.9 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+  <path d="M 62.1 27.61 L 61.47 28.24 L 61.47 99.76 L 62.1 100.39 L 65.9 100.39 L 66.53 99.76 L 66.53 28.24 L 65.9 27.61 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
+</svg>

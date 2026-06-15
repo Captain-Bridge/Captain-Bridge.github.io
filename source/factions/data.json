@@ -1,0 +1,1041 @@
+{
+  "title": "阵营升级图谱",
+  "summary": "独立于百科的阵营升级展示页样板。左侧节点使用固定画布绝对定位，便于手动维护坐标。",
+  "factions": [
+    {
+      "id": "cyac",
+      "title": "赛博艾克米",
+      "shortLabel": "I",
+      "icon": "/marathon-lore/assets/images/icons/cyac.png",
+      "nodeTheme": {
+        "accent": "#6be3ff",
+        "barActiveBg": "#6be3ff",
+        "barActiveBorder": "rgba(107, 227, 255, .7)"
+      },
+      "topLeftLabel": "阵营详情",
+      "topLeftSubLabel": "医疗升级 · 成功",
+      "topRightLabel": "赛博艾克米 商品 · 低温 · 建立",
+      "detailLevelLabel": "赛博艾克米17级",
+      "progressText": "3 / 6 巅峰升级已解锁",
+      "canvasWidth": 1360,
+      "canvasHeight": 920,
+      "resources": [
+        {
+          "label": "信用点",
+          "value": "3 4,000（6.7万）"
+        },
+        {
+          "label": "当前阵营",
+          "value": "赛博艾克米17级"
+        }
+      ],
+      "decorators": [
+        {
+          "id": "top-line",
+          "type": "line-h",
+          "x": 18,
+          "y": 12,
+          "width": 1290,
+          "height": 1
+        },
+        {
+          "id": "bottom-line",
+          "type": "line-h",
+          "x": 18,
+          "y": 880,
+          "width": 1290,
+          "height": 1
+        },
+        {
+          "id": "spark-upper",
+          "type": "spark",
+          "x": 666,
+          "y": 280,
+          "width": 180,
+          "height": 160
+        },
+        {
+          "id": "spark-lower",
+          "type": "spark",
+          "x": 874,
+          "y": 490,
+          "width": 180,
+          "height": 160
+        }
+      ],
+      "nodes": [
+        {
+          "id": "root_grid",
+          "title": "核心结构",
+          "groupLabel": "核心枢纽",
+          "kicker": "系统模块",
+          "description": "用于样板定位的核心起点节点。后续你可以直接调整坐标和尺寸来还原真实阵营图。",
+          "icon": "brace",
+          "status": "locked",
+          "badge": "锁",
+          "shape": "square",
+          "x": 48,
+          "y": 62,
+          "width": 206,
+          "height": 206,
+          "barActive": 3,
+          "barTotal": 5,
+          "defaultLevel": 4,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                },
+                {
+                  "label": "信用点",
+                  "value": "4,000"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+1行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                },
+                {
+                  "label": "信用点",
+                  "value": "8,000"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+2行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                },
+                {
+                  "label": "信用点",
+                  "value": "12,000"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+3行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                },
+                {
+                  "label": "信用点",
+                  "value": "16,000"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+4行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                },
+                {
+                  "label": "信用点",
+                  "value": "20,000"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+5行"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "top_small_a",
+          "title": "前置模组 A",
+          "groupLabel": "上层支线",
+          "kicker": "节点样板",
+          "description": "展示上方小节点的位置与尺寸。",
+          "icon": "tech",
+          "status": "active",
+          "shape": "wide",
+          "x": 296,
+          "y": 111,
+          "width": 142,
+          "height": 124,
+          "barActive": 2,
+          "barTotal": 4,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 A",
+                  "value": "x2"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "+10%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "top_small_b",
+          "title": "前置模组 B",
+          "groupLabel": "上层支线",
+          "kicker": "节点样板",
+          "description": "展示上方长条连接的第二个节点。",
+          "icon": "cache",
+          "status": "active",
+          "shape": "wide",
+          "x": 506,
+          "y": 98,
+          "width": 148,
+          "height": 148,
+          "barActive": 3,
+          "barTotal": 5,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 B",
+                  "value": "x1"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "解锁预览"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "top_right_cache",
+          "title": "扩容",
+          "groupLabel": "物品栏",
+          "kicker": "数据详情",
+          "description": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "icon": "cache",
+          "status": "active",
+          "shape": "square",
+          "x": 1112,
+          "y": 84,
+          "width": 176,
+          "height": 176,
+          "barActive": 1,
+          "barTotal": 3,
+          "defaultLevel": 4,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "信用点",
+                  "value": "2,000"
+                },
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+1行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "信用点",
+                  "value": "4,000"
+                },
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+2行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "信用点",
+                  "value": "8,000"
+                },
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+3行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "信用点",
+                  "value": "12,000"
+                },
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+4行"
+                }
+              ]
+            },
+            {
+              "materials": [
+                {
+                  "label": "信用点",
+                  "value": "16,000"
+                },
+                {
+                  "label": "物品栏",
+                  "value": "赛博艾克米17级"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "保险库容量",
+                  "value": "+5行"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mid_left_top",
+          "title": "中层节点 A1",
+          "groupLabel": "左侧纵向",
+          "kicker": "节点样板",
+          "description": "左侧中层上方节点。",
+          "icon": "module",
+          "status": "active",
+          "shape": "tall",
+          "x": 92,
+          "y": 328,
+          "width": 118,
+          "height": 154,
+          "barActive": 1,
+          "barTotal": 2,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 C",
+                  "value": "x2"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "+1级"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mid_mid_top",
+          "title": "中层节点 B1",
+          "groupLabel": "左侧纵向",
+          "kicker": "节点样板",
+          "description": "中间纵向上方节点。",
+          "icon": "module",
+          "status": "active",
+          "shape": "tall",
+          "x": 298,
+          "y": 328,
+          "width": 118,
+          "height": 154,
+          "barActive": 1,
+          "barTotal": 2,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 D",
+                  "value": "x2"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "+1级"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mid_mid_stub",
+          "title": "占位节点",
+          "groupLabel": "隐藏分支",
+          "kicker": "节点样板",
+          "description": "用于占位的未激活节点。",
+          "icon": "module",
+          "status": "muted",
+          "shape": "square",
+          "x": 508,
+          "y": 345,
+          "width": 122,
+          "height": 122,
+          "barActive": 0,
+          "barTotal": 1,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料",
+                  "value": "待填充"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "待填充"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mid_left_bottom",
+          "title": "中层节点 A2",
+          "groupLabel": "左侧纵向",
+          "kicker": "节点样板",
+          "description": "左侧中层下方大节点。",
+          "icon": "module",
+          "status": "active",
+          "shape": "large",
+          "x": 68,
+          "y": 516,
+          "width": 140,
+          "height": 168,
+          "barActive": 1,
+          "barTotal": 2,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 E",
+                  "value": "x3"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "+2级"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mid_mid_bottom",
+          "title": "中层节点 B2",
+          "groupLabel": "左侧纵向",
+          "kicker": "节点样板",
+          "description": "中间纵向下方未激活节点。",
+          "icon": "module",
+          "status": "muted",
+          "shape": "large",
+          "x": 272,
+          "y": 516,
+          "width": 140,
+          "height": 168,
+          "barActive": 0,
+          "barTotal": 2,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 F",
+                  "value": "待填充"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "待填充"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bottom_left_entry",
+          "title": "底部入口",
+          "groupLabel": "底部链路",
+          "kicker": "节点样板",
+          "description": "底部左侧起始节点。",
+          "icon": "signal",
+          "status": "active",
+          "shape": "wide",
+          "x": 84,
+          "y": 740,
+          "width": 128,
+          "height": 128,
+          "barActive": 2,
+          "barTotal": 3,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 G",
+                  "value": "x2"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "入口开启"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bottom_chain_a",
+          "title": "底部链路 A",
+          "groupLabel": "底部链路",
+          "kicker": "节点样板",
+          "description": "底部中段链路节点。",
+          "icon": "faction",
+          "status": "active",
+          "shape": "wide",
+          "x": 508,
+          "y": 742,
+          "width": 142,
+          "height": 126,
+          "barActive": 1,
+          "barTotal": 3,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 H",
+                  "value": "x3"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "+5%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bottom_chain_b",
+          "title": "底部链路 B",
+          "groupLabel": "底部链路",
+          "kicker": "节点样板",
+          "description": "底部中段第二个节点。",
+          "icon": "faction",
+          "status": "active",
+          "shape": "wide",
+          "x": 720,
+          "y": 732,
+          "width": 142,
+          "height": 144,
+          "barActive": 1,
+          "barTotal": 4,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 I",
+                  "value": "x3"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "+5%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bottom_chain_c",
+          "title": "底部链路 C",
+          "groupLabel": "底部链路",
+          "kicker": "节点样板",
+          "description": "底部中段第三个节点。",
+          "icon": "faction",
+          "status": "active",
+          "shape": "wide",
+          "x": 930,
+          "y": 732,
+          "width": 142,
+          "height": 144,
+          "barActive": 1,
+          "barTotal": 4,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 J",
+                  "value": "x3"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "+5%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bottom_chain_d",
+          "title": "底部链路 D",
+          "groupLabel": "底部链路",
+          "kicker": "节点样板",
+          "description": "底部右侧终点节点。",
+          "icon": "faction",
+          "status": "muted",
+          "shape": "wide",
+          "x": 1142,
+          "y": 740,
+          "width": 128,
+          "height": 128,
+          "barActive": 0,
+          "barTotal": 1,
+          "levels": [
+            {
+              "materials": [
+                {
+                  "label": "材料 K",
+                  "value": "待填充"
+                }
+              ],
+              "effects": [
+                {
+                  "label": "效果",
+                  "value": "待填充"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "peakButtons": [
+        {
+          "id": "peak-1",
+          "label": "I",
+          "title": "巅峰升级 I",
+          "icon": ""
+        },
+        {
+          "id": "peak-2",
+          "label": "II",
+          "title": "巅峰升级 II",
+          "icon": ""
+        },
+        {
+          "id": "peak-3",
+          "label": "III",
+          "title": "巅峰升级 III",
+          "icon": ""
+        },
+        {
+          "id": "peak-4",
+          "label": "IV",
+          "title": "巅峰升级 IV",
+          "icon": ""
+        },
+        {
+          "id": "peak-5",
+          "label": "V",
+          "title": "巅峰升级 V",
+          "icon": ""
+        },
+        {
+          "id": "peak-6",
+          "label": "VI",
+          "title": "巅峰升级 VI",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "id": "nv",
+      "title": "纽卡洛里",
+      "shortLabel": "II",
+      "icon": "/marathon-lore/assets/images/icons/nv.png",
+      "nodeTheme": {
+        "accent": "#9f7dff",
+        "barActiveBg": "#9f7dff",
+        "barActiveBorder": "rgba(159, 125, 255, .7)"
+      },
+      "topLeftLabel": "阵营详情",
+      "topLeftSubLabel": "物流升级 · 成功",
+      "topRightLabel": "纽卡洛里 预览样板",
+      "detailLevelLabel": "纽卡洛里12级",
+      "progressText": "2 / 6 巅峰升级已解锁",
+      "resources": [
+        {
+          "label": "信用点",
+          "value": "2 8,500"
+        },
+        {
+          "label": "当前阵营",
+          "value": "纽卡洛里12级"
+        }
+      ],
+      "decorators": [],
+      "nodes": [],
+      "peakButtons": [
+        {
+          "id": "peak-1",
+          "label": "I",
+          "title": "巅峰升级 I",
+          "icon": ""
+        },
+        {
+          "id": "peak-2",
+          "label": "II",
+          "title": "巅峰升级 II",
+          "icon": ""
+        },
+        {
+          "id": "peak-3",
+          "label": "III",
+          "title": "巅峰升级 III",
+          "icon": ""
+        },
+        {
+          "id": "peak-4",
+          "label": "IV",
+          "title": "巅峰升级 IV",
+          "icon": ""
+        },
+        {
+          "id": "peak-5",
+          "label": "V",
+          "title": "巅峰升级 V",
+          "icon": ""
+        },
+        {
+          "id": "peak-6",
+          "label": "VI",
+          "title": "巅峰升级 VI",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "id": "telrax",
+      "title": "特莱克斯",
+      "shortLabel": "III",
+      "icon": "/marathon-lore/assets/images/icons/telrax.png",
+      "nodeTheme": {
+        "accent": "#ff9c54",
+        "barActiveBg": "#ff9c54",
+        "barActiveBorder": "rgba(255, 156, 84, .7)"
+      },
+      "topLeftLabel": "阵营详情",
+      "topLeftSubLabel": "战术升级 · 成功",
+      "topRightLabel": "特尔拉克 预览样板",
+      "detailLevelLabel": "特尔拉克14级",
+      "progressText": "1 / 6 巅峰升级已解锁",
+      "resources": [
+        {
+          "label": "信用点",
+          "value": "1 6,000"
+        },
+        {
+          "label": "当前阵营",
+          "value": "特尔拉克14级"
+        }
+      ],
+      "decorators": [],
+      "nodes": [],
+      "peakButtons": [
+        {
+          "id": "peak-1",
+          "label": "I",
+          "title": "巅峰升级 I",
+          "icon": ""
+        },
+        {
+          "id": "peak-2",
+          "label": "II",
+          "title": "巅峰升级 II",
+          "icon": ""
+        },
+        {
+          "id": "peak-3",
+          "label": "III",
+          "title": "巅峰升级 III",
+          "icon": ""
+        },
+        {
+          "id": "peak-4",
+          "label": "IV",
+          "title": "巅峰升级 IV",
+          "icon": ""
+        },
+        {
+          "id": "peak-5",
+          "label": "V",
+          "title": "巅峰升级 V",
+          "icon": ""
+        },
+        {
+          "id": "peak-6",
+          "label": "VI",
+          "title": "巅峰升级 VI",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "id": "mida",
+      "title": "米达",
+      "shortLabel": "IV",
+      "icon": "/marathon-lore/assets/images/icons/mida.png",
+      "nodeTheme": {
+        "accent": "#ffc94d",
+        "barActiveBg": "#ffc94d",
+        "barActiveBorder": "rgba(255, 201, 77, .7)"
+      },
+      "topLeftLabel": "阵营详情",
+      "topLeftSubLabel": "研究升级 · 成功",
+      "topRightLabel": "米达 预览样板",
+      "detailLevelLabel": "米达9级",
+      "progressText": "4 / 6 巅峰升级已解锁",
+      "resources": [
+        {
+          "label": "信用点",
+          "value": "5 2,000"
+        },
+        {
+          "label": "当前阵营",
+          "value": "米达9级"
+        }
+      ],
+      "decorators": [],
+      "nodes": [],
+      "peakButtons": [
+        {
+          "id": "peak-1",
+          "label": "I",
+          "title": "巅峰升级 I",
+          "icon": ""
+        },
+        {
+          "id": "peak-2",
+          "label": "II",
+          "title": "巅峰升级 II",
+          "icon": ""
+        },
+        {
+          "id": "peak-3",
+          "label": "III",
+          "title": "巅峰升级 III",
+          "icon": ""
+        },
+        {
+          "id": "peak-4",
+          "label": "IV",
+          "title": "巅峰升级 IV",
+          "icon": ""
+        },
+        {
+          "id": "peak-5",
+          "label": "V",
+          "title": "巅峰升级 V",
+          "icon": ""
+        },
+        {
+          "id": "peak-6",
+          "label": "VI",
+          "title": "巅峰升级 VI",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "id": "arachne",
+      "title": "阿拉克尼",
+      "shortLabel": "V",
+      "icon": "/marathon-lore/assets/images/icons/arachne.png",
+      "nodeTheme": {
+        "accent": "#ff6aa8",
+        "barActiveBg": "#ff6aa8",
+        "barActiveBorder": "rgba(255, 106, 168, .7)"
+      },
+      "topLeftLabel": "阵营详情",
+      "topLeftSubLabel": "异常升级 · 成功",
+      "topRightLabel": "阿拉克尼 预览样板",
+      "detailLevelLabel": "阿拉克尼20级",
+      "progressText": "5 / 6 巅峰升级已解锁",
+      "resources": [
+        {
+          "label": "信用点",
+          "value": "7 0,000"
+        },
+        {
+          "label": "当前阵营",
+          "value": "阿拉克尼20级"
+        }
+      ],
+      "decorators": [],
+      "nodes": [],
+      "peakButtons": [
+        {
+          "id": "peak-1",
+          "label": "I",
+          "title": "巅峰升级 I",
+          "icon": ""
+        },
+        {
+          "id": "peak-2",
+          "label": "II",
+          "title": "巅峰升级 II",
+          "icon": ""
+        },
+        {
+          "id": "peak-3",
+          "label": "III",
+          "title": "巅峰升级 III",
+          "icon": ""
+        },
+        {
+          "id": "peak-4",
+          "label": "IV",
+          "title": "巅峰升级 IV",
+          "icon": ""
+        },
+        {
+          "id": "peak-5",
+          "label": "V",
+          "title": "巅峰升级 V",
+          "icon": ""
+        },
+        {
+          "id": "peak-6",
+          "label": "VI",
+          "title": "巅峰升级 VI",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "id": "sekiguchi",
+      "title": "关口",
+      "shortLabel": "VI",
+      "icon": "/marathon-lore/assets/images/icons/sekiguchi.png",
+      "nodeTheme": {
+        "accent": "#55e59d",
+        "barActiveBg": "#55e59d",
+        "barActiveBorder": "rgba(85, 229, 157, .7)"
+      },
+      "topLeftLabel": "阵营详情",
+      "topLeftSubLabel": "驻防升级 · 成功",
+      "topRightLabel": "关口 预览样板",
+      "detailLevelLabel": "关口8级",
+      "progressText": "6 / 6 巅峰升级已解锁",
+      "resources": [
+        {
+          "label": "信用点",
+          "value": "9 1,000"
+        },
+        {
+          "label": "当前阵营",
+          "value": "关口8级"
+        }
+      ],
+      "decorators": [],
+      "nodes": [],
+      "peakButtons": [
+        {
+          "id": "peak-1",
+          "label": "I",
+          "title": "巅峰升级 I",
+          "icon": ""
+        },
+        {
+          "id": "peak-2",
+          "label": "II",
+          "title": "巅峰升级 II",
+          "icon": ""
+        },
+        {
+          "id": "peak-3",
+          "label": "III",
+          "title": "巅峰升级 III",
+          "icon": ""
+        },
+        {
+          "id": "peak-4",
+          "label": "IV",
+          "title": "巅峰升级 IV",
+          "icon": ""
+        },
+        {
+          "id": "peak-5",
+          "label": "V",
+          "title": "巅峰升级 V",
+          "icon": ""
+        },
+        {
+          "id": "peak-6",
+          "label": "VI",
+          "title": "巅峰升级 VI",
+          "icon": ""
+        }
+      ]
+    }
+  ]
+}

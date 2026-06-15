@@ -1,0 +1,41 @@
+﻿// ============================================================
+// 移动端
+// ============================================================
+@media (max-width: 767px) {
+  .posts-expand {
+    grid-template-columns: 1fr;
+  }
+
+  .post-block {
+    height: auto;
+    min-height: 240px;
+  }
+
+  .sidebar {
+    background: rgba(5,7,10,0.98);
+  }
+
+  .header {
+    backdrop-filter: blur(8px);
+  }
+}
+
+// ============================================================
+// NexT 鍏煎鎬т慨姝?// ============================================================
+.posts-expand .post-title-link {
+  color: $text-primary;
+}
+
+.posts-expand .post-meta-container {
+  color: $text-dim;
+}
+
+.main-inner > .sub-menu,
+.main-inner > .post-block,
+.main-inner > .tabs-comment,
+.main-inner > .comments,
+.main-inner > .pagination {
+  background: transparent;
+  box-shadow: none;
+}
+

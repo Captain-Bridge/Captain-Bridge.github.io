@@ -1,0 +1,107 @@
+---
+title: 百科
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>百科</title>
+  <meta name="description" content="百科">
+  <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <link rel="stylesheet" href="/marathon-lore/assets/style.css?v=20260609-deeplinkfix1">
+</head>
+<style>
+  /* 这里可以放一些 Lore 页面特有的样式 */
+  .frame-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.2;
+  }
+</style>
+<body class="marathon-lore-page">
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+  <main class="lore-shell" id="lore-app">
+    <header class="hud-top">
+      <div class="hud-metrics">
+        <!-- <div class="metric metric-pill"><span class="metric-icon">◔</span><span class="metric-value">150</span></div>
+        <div class="metric metric-chip">Ⅲ</div>
+        <div class="metric"><span class="metric-label">缓存</span><span class="metric-value">150</span></div>
+        <div class="metric"><span class="metric-label">同步</span><span class="metric-value">140/140</span></div>
+        <div class="metric"><span class="metric-label">信用</span><span class="metric-value">370,455</span></div> -->
+      </div>
+      <div class="hud-title">
+        <span class="hud-title-main">百科</span>
+        <span class="hud-title-sub">COL-NET</span>
+      </div>
+      <a class="blog-return" href="/">首页</a>
+    </header>
+
+    <aside class="hud-left">
+      <div class="left-brand">
+        <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/cyac.png" alt="Marathon">
+          </div>
+        <div class="left-brand-copy">
+          <span>COL-NET</span>
+          <span>神经网络已连接</span>
+        </div>
+      </div>
+      <div class="left-diagnostics">
+        <small>[唤醒]</small>
+        <small>感官(模式)已通过</small>
+        <small>感官(记忆)稳定</small>
+        <small>核心已就绪</small>
+        <small></small>
+        <small>正在初始化···</small>
+        <small>外壳系统已连接</small>
+        <small>  (记忆)库1-7写入检查</small>
+        <small> B1..................正常</small>
+        <small> B2..................正常</small>
+        <small> B3..................正常</small>
+        <small> B4..................正常</small>
+        <small> B5..................正常</small>
+        <small> B6..................正常</small>
+        <small> B7..................正常</small>
+        <small>神经网络预览完成</small>
+        <small>正在验证···100%</small>
+        <small></small>
+        <small>[链接已建立]</small>
+        <small>神经网络已连接</small>
+        <small>神经...链接建立中···</small>
+        <small>[系统正常]</small>
+        <small>检测到异常...0</small>
+        <small> 正在抑制脑岛失谐</small>
+        <small></small>
+        <small>[系统正常1]</small>
+        <small>[系统正常2]</small>
+      </div>
+    </aside>
+
+    <section class="viewport">
+      <div class="frame-header">
+        <div class="frame-label"><small>殖民-网络</small><small>同步_已通过</small> </div>
+        <div class="frame-id">REMOTE 0209.08.25.2337</div>
+      </div>
+      <div id="app-view" class="view-root" aria-live="polite"></div>
+    </section>
+
+    <footer class="hud-bottom">
+      <div class="hud-actions-left">
+        <button class="action-key" type="button" data-action="back">Esc 返回</button>
+      </div>
+      <!-- <div class="hud-actions-right">
+        <span class="action-icon">◌</span>
+        <span class="action-icon">✦</span>
+        <span class="action-icon">◌</span>
+        <span class="action-state">1 在线</span>
+      </div> -->
+    </footer>
+  </main>
+  <noscript>此页面需要 JavaScript 才能展示多级 Lore 结构。</noscript>
+  <script src="/marathon-lore/assets/app.js?v=20260609-deeplinkfix1" defer></script>
+</body>
+</html>

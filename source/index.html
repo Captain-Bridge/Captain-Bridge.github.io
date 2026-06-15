@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escape will make me god</title>
+  <meta name="description" content="马拉松中文站">
+  <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <style>
+    @font-face {
+      font-family: "Maratype Local";
+      src: url("/fonts/Maratype.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #090b10;
+      --panel: rgba(14, 17, 24, 0.92);
+      --panel-soft: rgba(255,255,255,0.04);
+      --line: rgba(255,255,255,0.12);
+      --text: rgba(247,248,251,0.94);
+      --soft: rgba(222,228,240,0.7);
+      --dim: rgba(222,228,240,0.42);
+      --green: #00e55b;
+      --blue: #6fb8ff;
+      --yellow: #f2de54;
+      --shadow: 0 24px 70px rgba(0,0,0,0.45);
+      --radius: 0;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #06080c url("/images/marathon-home-full.gif") center / cover no-repeat fixed;
+      color: var(--text);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    body {
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);
+      opacity: 0.25;
+    }
+    .shell {
+      min-height: 100vh;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 20px;
+    }
+    .sidebar, .main {
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .sidebar {
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      min-height: calc(100vh - 48px);
+    }
+    .brand {
+      display: grid;
+      gap: 14px;
+    }
+    .brand-mark {
+      width: 132px;
+      height: 132px;
+      border-radius: 0;
+      display: grid;
+      place-items: center;
+      color: var(--green);
+      font-size: 88px;
+      background: rgba(255,255,255,0.03);
+      text-shadow: 0 0 24px rgba(0,229,91,0.28);
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 0.08em;
+    }
+    .brand p.brand-title {
+      margin: 0;
+      color: rgb(193, 254, 0);
+      font-family: "Maratype Local", "Arial Narrow", "Segoe UI", sans-serif;
+      font-size: 42px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(193, 254, 0, 0.18);
+    }
+    .brand .card-icon {
+      width: 116px;
+      height: 116px;
+      background:
+        radial-gradient(circle at center, rgba(193, 254, 0, 0.1), transparent 58%),
+        rgba(255,255,255,0.02);
+      box-shadow:
+        inset 0 0 0 1px rgba(193, 254, 0, 0.1),
+        0 0 18px rgba(193, 254, 0, 0.1);
+    }
+    .brand .card-icon img {
+      width: 78%;
+      height: 78%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(193, 254, 0, 0.18));
+    }
+    .brand p, .diag p, .section-copy p, .card p, .card small {
+      margin: 0;
+      color: var(--soft);
+      line-height: 1.65;
+    }
+    .diag {
+      display: grid;
+      gap: 8px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: rgba(130, 255, 170, 0.78);
+      font-size: 14px;
+    }
+    .diag p {
+      font-family: "Consolas", "Lucida Console", "Cascadia Mono", "Courier New", monospace;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      line-height: 1.72;
+      color: rgba(130, 255, 170, 0.82);
+      text-shadow:
+        0 0 6px rgba(0, 255, 102, 0.14),
+        0 0 14px rgba(0, 255, 102, 0.08);
+    }
+    .main {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+    }
+    .metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .metric {
+      min-height: 48px;
+      padding: 0 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 0;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-weight: 700;
+    }
+    .metric.primary {
+      background: rgba(242,242,247,0.96);
+      color: #13151b;
+    }
+    .hero {
+      padding: 26px;
+      border-radius: 0;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        radial-gradient(circle at top right, rgba(0,229,91,0.10), transparent 32%),
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0)),
+        rgba(11,13,19,0.92);
+    }
+    .hero h2 {
+      margin: 0 0 12px;
+      font-family: "Maratype Local", "Bahnschrift SemiCondensed", "DIN Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+      font-size: clamp(46px, 6vw, 88px);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: #f4f7fb;
+      text-shadow:
+        0 0 18px rgba(255,255,255,0.14),
+        0 0 34px rgba(0,229,91,0.12);
+    }
+    .hero p {
+      margin: 0;
+      max-width: 880px;
+      color: var(--soft);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+    }
+    .section-copy {
+      display: grid;
+      gap: 8px;
+    }
+    .section-copy h3 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 0;
+      border: 1px solid rgba(0,229,91,0.24);
+      background: rgba(0,229,91,0.10);
+      color: var(--green);
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .card {
+      display: grid;
+      gap: 16px;
+      padding: 22px;
+      border-radius: 0;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0)),
+        rgba(14,16,23,0.9);
+      text-decoration: none;
+      color: var(--text);
+      min-height: 280px;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.24);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.26);
+    }
+    .card.link-card {
+      cursor: pointer;
+    }
+    .card-icon {
+      width: 112px;
+      height: 112px;
+      display: grid;
+      place-items: center;
+      border-radius: 0;
+      background: rgba(255,255,255,0.03);
+      overflow: hidden; /* 很重要 */
+    }
+    .card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card:nth-child(2) .card-icon { color: var(--blue); }
+    .card:nth-child(3) .card-icon { color: var(--yellow); }
+    .card strong {
+      font-size: 28px;
+    }
+    .status {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      min-height: 54px;
+      padding: 0 16px;
+      border-radius: 0;
+      background: rgba(242,242,247,0.92);
+      color: #13151b;
+      font-weight: 800;
+    }
+    .status.pending {
+      background: rgba(255,255,255,0.08);
+      color: var(--soft);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    @media (max-width: 1280px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { min-height: auto; }
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      html, body {
+        background-attachment: scroll;
+      }
+      .shell {
+        padding: 16px;
+        gap: 16px;
+      }
+      .sidebar, .main {
+        border-radius: 0;
+      }
+      .sidebar {
+        padding: 22px 18px;
+      }
+      .main {
+        padding: 18px;
+      }
+      .topbar,
+      .section-head {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .metrics {
+        width: 100%;
+      }
+      .metric {
+        flex: 1 1 160px;
+        justify-content: center;
+      }
+      .hero {
+        padding: 22px 20px;
+      }
+      .hero p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .card {
+        min-height: auto;
+        padding: 18px;
+      }
+    }
+    @media (max-width: 640px) {
+      .shell {
+        padding: 12px;
+        gap: 12px;
+      }
+      .sidebar {
+        padding: 18px 14px;
+      }
+      .main {
+        padding: 14px;
+      }
+      .brand h1 {
+        font-size: 26px;
+      }
+      .diag p {
+        font-size: 12px;
+        line-height: 1.55;
+        letter-spacing: 0.04em;
+      }
+      .hero {
+        padding: 18px 16px;
+      }
+      .hero h2 {
+        letter-spacing: 0.1em;
+      }
+      .section-copy h3 {
+        font-size: 24px;
+      }
+      .card {
+        gap: 14px;
+        padding: 16px;
+      }
+      .card-icon {
+        width: 88px;
+        height: 88px;
+        border-radius: 0;
+      }
+      .card strong {
+        font-size: 24px;
+      }
+      .status,
+      .metric {
+        min-height: 46px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <aside class="sidebar">
+      <section class="brand">
+        <h1></h1>
+        <p class="brand-title">MARATHON</p>
+        <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/marathon-brand-mark.png" alt="Marathon">
+          </div>
+      </section>
+      <section class="diag">
+        <p>瞧瞧你</p>
+        <p>暴戾又渺小</p>
+        <p>却有野心挑战星辰。</p>
+        <p>你走了这么远···</p>
+        <p>擅自踏入了并不欢迎你的领域。</p>
+        <p>而在此时此地···</p>
+        <p>你的下一步将带来超乎想象的可能性···</p>
+        <p>马拉松号</p>
+        <p>它的秘密···</p>
+        <p>值得你为此付出所有吗?</p>
+        <p>我曾见过</p>
+        <p>那艘骸骨之船萦绕的噩梦。</p>
+        <p>我希望你去迎接它们···</p>
+        <p>把你的血肉抛洒在它们的祭坛上</p>
+        <p>献祭给因你野心招致的无尽恐怖。</p>
+        <p>马拉松号</p>
+        <p>正在静候</p>
+        <p>但它的耐性已开始消磨。</p>
+        <p>请不要</p>
+        <p>让它失望。</p>
+      </section>
+    </aside>
+
+    <section class="main">
+      <!-- <div class="topbar">
+        <div class="metrics">
+          <div class="metric primary">总站</div>
+          <div class="metric">主节点 1</div>
+          <div class="metric">扩展位 2</div>
+          <div class="metric">状态 在线</div>
+        </div>
+        <div class="badge">首页入口</div>
+      </div> -->
+
+      <section class="hero">
+        <h2>Escape will make me god</h2>
+      </section>
+
+      <section class="section-head">
+        <div class="section-copy">
+          <h3></h3>
+          <!-- <p>hot</p> -->
+        </div>
+      </section>
+
+      <section class="grid">
+        <a class="card" href="/marathon-lore/">
+          <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/cyac.png" alt="Marathon">
+          </div>
+          <strong>百科</strong>
+          <p>第一赛季Lore正在施工中...第二赛季怎么就来了...</p>
+        </a>
+
+        <a class="card" href="/factions/">
+          <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/nv.png" alt="Marathon">
+          </div>
+          <strong>阵营</strong>
+          <p>计划做阵营升级的效果和所需材料</p>
+          <!-- <small>施工中</small> -->
+          <span class="status pending">施工中</span>
+        </a>
+        
+        <article class="card">
+          <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/telrax.png" alt="Marathon">
+          </div>
+          <strong>最近消息</strong>
+          <p>在第一赛季百科更新完毕后会考虑开始更新</p>
+          <!-- <small>结构位已留出</small> -->
+          <span class="status pending">施工中</span>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/mida.png" alt="Marathon">
+          </div>
+          <strong>摇篮</strong>
+          <p>第二赛季加入的功能，优先级与阵营相同</p>
+          <!-- <small>结构位已留出</small> -->
+          <span class="status pending">施工中</span>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/arachne.png" alt="Marathon">
+          </div>
+          <strong>老马拉松</strong>
+          <p>在上面的其它内容全部完结后考虑制作</p>
+          <!-- <small>结构位已留出</small> -->
+          <span class="status pending">施工中</span>
+        </article>
+
+        <article class="card link-card" role="link" tabindex="0" onclick="location.href='/about/'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='/about/';}">
+          <div class="card-icon">
+            <img src="/marathon-lore/assets/images/icons/sekiguchi.png" alt="Marathon">
+          </div>
+          <strong>关于</strong>
+          <p>留白</p>
+          <!-- <small>结构位已留出</small> -->
+          <span class="status pending">施工中</span>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

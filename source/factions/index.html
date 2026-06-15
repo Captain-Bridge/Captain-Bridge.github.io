@@ -1,0 +1,1276 @@
+---
+title: 阵营
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>阵营升级图谱</title>
+  <meta name="description" content="Marathon 阵营升级图谱展示页">
+  <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <style>
+    :root {
+      --bg: #07090d;
+      --panel: rgba(12, 14, 20, 0.92);
+      --line: rgba(255,255,255,0.12);
+      --text: rgba(245,247,250,0.95);
+      --soft: rgba(214,223,236,0.72);
+      --dim: rgba(214,223,236,0.42);
+      --green: #00e55b;
+      --shadow: 0 24px 80px rgba(0,0,0,0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background:
+        radial-gradient(circle at top, rgba(42,57,92,.18), transparent 34%),
+        linear-gradient(180deg, rgba(13,15,22,.92), rgba(8,9,13,.98)),
+        var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    body::before {
+      background: repeating-linear-gradient(to bottom, rgba(255,255,255,.018), rgba(255,255,255,.018) 1px, transparent 1px, transparent 3px);
+      opacity: .24;
+      z-index: 10;
+    }
+
+    body::after {
+      background-image:
+        radial-gradient(rgba(255,255,255,.06) .6px, transparent .6px),
+        radial-gradient(rgba(255,255,255,.03) .6px, transparent .6px);
+      background-position: 0 0, 24px 24px;
+      background-size: 32px 32px;
+      opacity: .08;
+      z-index: 9;
+    }
+
+    .page {
+      position: relative;
+      z-index: 2;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 60px minmax(0, 1fr) 30px;
+      gap: 8px;
+      padding: 8px 18px;
+    }
+
+    .hud-top,
+    .viewport,
+    .hud-bottom {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hud-top {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 8px 14px;
+    }
+
+    .hud-chip,
+    .nav-link {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 14px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .hud-chip {
+      background: rgba(242,242,247,.96);
+      color: #111822;
+    }
+
+    .hud-copy {
+      display: grid;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .hud-copy strong {
+      font-size: 18px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hud-copy span {
+      color: var(--soft);
+      font-size: 13px;
+      letter-spacing: .06em;
+    }
+
+    .hud-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-link:hover {
+      border-color: rgba(255,255,255,.24);
+      background: rgba(255,255,255,.08);
+    }
+
+    .viewport {
+      min-height: 0;
+      overflow: hidden;
+      padding: 12px;
+    }
+
+    .force-view {
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .force-head {
+      display: grid;
+      gap: 4px;
+      flex: 0 0 auto;
+    }
+
+    .force-head small {
+      color: var(--dim);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .force-head h1 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: .08em;
+      line-height: 1.1;
+    }
+
+    .force-head p {
+      margin: 0;
+      color: var(--soft);
+      line-height: 1.5;
+      font-size: 14px;
+      max-width: 920px;
+    }
+
+    .force-faction-rail {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .force-faction-button {
+      min-height: 64px;
+      padding: 8px 10px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)), rgba(18,21,29,.96);
+      color: var(--soft);
+      font: inherit;
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .force-faction-button.active {
+      background: #aeb4c3;
+      color: #10131a;
+    }
+
+    .force-faction-button-visual {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .force-faction-button.active .force-faction-button-visual {
+      border-color: rgba(16,19,26,.12);
+      background: rgba(16,19,26,.08);
+    }
+
+    .force-faction-button-visual img,
+    .force-faction-button-visual svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .force-faction-button-copy {
+      min-width: 0;
+      display: grid;
+      gap: 2px;
+    }
+
+    .force-faction-button-copy strong {
+      display: block;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .force-faction-button-copy span {
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
+    .force-faction-button.active .force-faction-button-copy span {
+      color: rgba(16,19,26,.72);
+    }
+
+    .force-shell {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.82fr) minmax(280px, .66fr);
+      gap: 12px;
+      overflow: hidden;
+    }
+
+    .force-map-panel,
+    .force-detail-panel {
+      min-height: 0;
+      border: 1px solid var(--line);
+      background: rgba(12,14,20,.84);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .force-map-panel {
+      padding: 10px 10px 8px;
+    }
+
+    .force-map-scroller {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      padding-right: 0;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,.22) transparent;
+    }
+
+    .force-map-scroller::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    .force-map-scroller::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,.22);
+    }
+
+    .force-map-canvas {
+      position: relative;
+      width: var(--canvas-width, 1360px);
+      height: var(--canvas-height, 920px);
+      border: 1px solid rgba(255,255,255,.08);
+      background:
+        radial-gradient(circle at 18% 14%, rgba(255,255,255,.035), transparent 18%),
+        radial-gradient(circle at 72% 72%, rgba(0,229,91,.03), transparent 20%),
+        linear-gradient(180deg, rgba(255,255,255,.015), rgba(255,255,255,0)),
+        rgba(11,13,19,.98);
+      transform-origin: top left;
+      will-change: transform;
+    }
+
+    .force-map-canvas::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(to bottom, rgba(255,255,255,.018), rgba(255,255,255,.018) 1px, transparent 1px, transparent 3px);
+      opacity: .25;
+      pointer-events: none;
+    }
+
+    .force-map-fit {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .force-map-scale {
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .force-map-caption {
+      position: absolute;
+      z-index: 1;
+      display: grid;
+      gap: 2px;
+      color: var(--dim);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .force-map-caption.left {
+      left: 26px;
+      top: 14px;
+    }
+
+    .force-map-caption.right {
+      right: 24px;
+      top: 16px;
+      justify-items: end;
+    }
+
+    .force-decorator {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .force-decorator.line-h {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
+    }
+
+    .force-decorator.spark {
+      border-top: 2px solid rgba(125,72,133,.56);
+      border-bottom: 2px solid rgba(81,170,181,.45);
+      border-left: 1px solid rgba(125,72,133,.2);
+      border-right: 1px solid rgba(81,170,181,.2);
+      opacity: .7;
+    }
+
+    .force-decorator.spark::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: radial-gradient(circle, rgba(115,67,170,.85) 0 35%, rgba(115,67,170,.15) 55%, transparent 72%);
+    }
+
+    .force-node {
+      --node-accent: var(--green);
+      --node-bar-active-bg: var(--node-accent);
+      --node-bar-active-border: rgba(0,229,91,.6);
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0)), rgba(56,60,72,.4);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03), 0 0 0 4px rgba(255,255,255,.02);
+      color: #99a0b3;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .force-node::before,
+    .force-node::after {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border: 1px solid rgba(255,255,255,.06);
+      pointer-events: none;
+    }
+
+    .force-node::after {
+      inset: -14px;
+      opacity: .8;
+    }
+
+    .force-node.active-node {
+      border-color: rgba(255,255,255,.16);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 0 0 4px rgba(255,255,255,.025), 0 0 22px rgba(0,0,0,.18);
+    }
+
+    .force-node.is-active .force-node-icon,
+    .force-node.active-node .force-node-icon {
+      color: var(--node-accent);
+    }
+
+    .force-node.is-muted {
+      color: #676d7f;
+    }
+
+    .force-node.is-locked .force-node-icon {
+      color: #303542;
+    }
+
+    .force-node-badge {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border: 1px solid currentColor;
+      font-size: 12px;
+      line-height: 1;
+      color: #d8dae3;
+    }
+
+    .force-node-icon,
+    .force-node-icon img,
+    .force-node-icon svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .force-node-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+    }
+
+    .force-node-icon img {
+      object-fit: contain;
+    }
+
+    .force-node-bars {
+      position: absolute;
+      left: 50%;
+      bottom: 12px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 4px;
+    }
+
+    .force-node-bar {
+      width: 18px;
+      height: 6px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(11,13,19,.9);
+    }
+
+    .force-node-bar.is-active {
+      background: var(--node-bar-active-bg);
+      border-color: var(--node-bar-active-border);
+    }
+
+    .force-map-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 8px;
+    }
+
+    .force-peak-switch {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .force-peak-pill {
+      min-height: 50px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)), rgba(18,21,29,.96);
+      color: var(--soft);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .force-peak-pill-media {
+      width: 100%;
+      height: 100%;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .force-peak-pill-media img,
+    .force-peak-pill-media svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .force-peak-pill span {
+      font-size: 18px;
+    }
+
+    .force-peak-pill.active {
+      background: #aeb4c3;
+      color: #10131a;
+    }
+
+    .force-progress-copy {
+      margin: 0;
+      color: var(--soft);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .force-detail-panel {
+      padding: 14px 14px 12px;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .force-detail-copy {
+      display: grid;
+      gap: 12px;
+    }
+
+    .force-detail-kicker {
+      margin: 0;
+      color: var(--dim);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .force-detail-copy h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .force-detail-meta,
+    .force-detail-description {
+      margin: 0;
+      color: var(--soft);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .force-level-switch {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
+      gap: 8px;
+    }
+
+    .force-level-pill {
+      min-height: 40px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.04);
+      color: var(--soft);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .force-level-pill.active {
+      background: #f1f2f5;
+      color: #0f1218;
+    }
+
+    .force-detail-block {
+      display: grid;
+      gap: 8px;
+    }
+
+    .force-detail-block h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .force-stat-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .force-stat-row,
+    .force-resource-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .force-stat-row strong,
+    .force-resource-row strong {
+      color: var(--soft);
+    }
+
+    .force-stat-row.highlight strong {
+      color: #b7ff2c;
+    }
+
+    .force-detail-footer {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      display: grid;
+      gap: 8px;
+    }
+
+    .hud-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 0 12px;
+      color: var(--dim);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .status-text {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .empty-state {
+      display: grid;
+      gap: 8px;
+      color: var(--soft);
+    }
+
+    @media (max-width: 1280px) {
+      body {
+        overflow: auto;
+      }
+
+      .page {
+        height: auto;
+        min-height: 100vh;
+        grid-template-rows: auto auto auto;
+      }
+
+      .force-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .viewport {
+        overflow: visible;
+      }
+
+      .force-map-panel {
+        min-height: 460px;
+      }
+
+      .force-detail-panel {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 10px 12px;
+      }
+
+      .hud-top {
+        grid-template-columns: 1fr;
+      }
+
+      .viewport {
+        padding: 10px;
+      }
+
+      .force-map-panel {
+        min-height: 380px;
+      }
+
+      .force-faction-rail,
+      .force-peak-switch {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 8px 10px;
+      }
+
+      .hud-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 12px;
+      }
+
+      .force-head h1 {
+        font-size: 28px;
+      }
+
+      .force-map-panel,
+      .force-detail-panel {
+        padding: 12px;
+      }
+
+      .force-map-panel {
+        min-height: 320px;
+      }
+
+      .force-faction-rail {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .force-faction-button {
+        min-height: 58px;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 8px;
+        padding: 8px;
+      }
+
+      .force-faction-button-visual {
+        width: 34px;
+        height: 34px;
+      }
+
+      .force-faction-button-copy strong {
+        font-size: 12px;
+      }
+
+      .force-faction-button-copy span,
+      .force-peak-pill span {
+        font-size: 16px;
+      }
+
+      .force-peak-pill {
+        min-height: 44px;
+      }
+
+      .force-progress-copy {
+        font-size: 11px;
+      }
+
+      .force-peak-pill span {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hud-top">
+      <div class="hud-chip">FACTIONS</div>
+      <div class="hud-copy">
+        <strong>Faction Upgrade Atlas</strong>
+        <span>阵营升级展示页 / 与百科平级的独立页面</span>
+      </div>
+      <nav class="hud-nav">
+        <a class="nav-link" href="/">返回首页</a>
+        <a class="nav-link" href="/marathon-lore/">进入百科</a>
+      </nav>
+    </header>
+
+    <section class="viewport">
+      <div id="app" class="force-view"></div>
+    </section>
+
+    <footer class="hud-bottom">
+      <span>固定画布 · 绝对坐标维护</span>
+      <span class="status-text">JSON Driven</span>
+    </footer>
+  </main>
+
+  <script>
+    const app = document.getElementById('app');
+    const DEFAULT_PEAK_LABELS = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+    const state = {
+      data: null,
+      factionId: null,
+      nodeId: null,
+      level: null,
+      peakIndex: 0
+    };
+
+    function iconMarkup(name) {
+      const icons = {
+        brace: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"><path d="M18 16h8v10H18v12h8v10h-8"/><path d="M46 16h-8v10h8v12h-8v10h8"/><path d="M28 32h8"/></svg>',
+        tech: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5"><rect x="18" y="18" width="28" height="28" rx="4"/><path d="M8 24h10M46 24h10M8 40h10M46 40h10M24 8v10M40 8v10M24 46v10M40 46v10"/></svg>',
+        cache: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"><path d="M14 22h36l8 8v14l-8 8H14l-8-8V30z"/><path d="M14 22l10 10h16l10-10"/><path d="M14 52l10-10h16l10 10"/></svg>',
+        module: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5"><rect x="16" y="24" width="32" height="16" rx="4"/><path d="M10 32h6M48 32h6M24 24v16M40 24v16"/></svg>',
+        signal: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5"><path d="M16 44h8M28 36h8M40 28h8"/><path d="M16 20h32"/></svg>',
+        faction: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"><path d="M32 8l14 8v16l-14 8-14-8V16z"/><path d="M18 32v16l14 8 14-8V32"/></svg>'
+      };
+
+      return icons[name] || icons.module;
+    }
+
+    function getFactions() {
+      return Array.isArray(state.data?.factions) ? state.data.factions : [];
+    }
+
+    function cloneValue(value) {
+      return JSON.parse(JSON.stringify(value));
+    }
+
+    function createDefaultPeakButtons() {
+      return DEFAULT_PEAK_LABELS.map((label, index) => ({
+        id: 'peak-' + (index + 1),
+        label,
+        title: '巅峰升级 ' + label,
+        icon: ''
+      }));
+    }
+
+    function normalizeFactionData(data) {
+      if (!data || !Array.isArray(data.factions) || !data.factions.length) {
+        return data;
+      }
+
+      const template = data.factions.find(item => Array.isArray(item?.nodes) && item.nodes.length) || data.factions[0];
+      if (!template) return data;
+      const templatePeakButtons = Array.isArray(template.peakButtons) && template.peakButtons.length === 6
+        ? template.peakButtons
+        : createDefaultPeakButtons();
+
+      for (const faction of data.factions) {
+        if (!Array.isArray(faction.nodes) || !faction.nodes.length) {
+          faction.nodes = cloneValue(template.nodes || []);
+        }
+
+        if (!Array.isArray(faction.decorators) || !faction.decorators.length) {
+          faction.decorators = cloneValue(template.decorators || []);
+        }
+
+        if (!faction.canvasWidth) {
+          faction.canvasWidth = template.canvasWidth || 1360;
+        }
+
+        if (!faction.canvasHeight) {
+          faction.canvasHeight = template.canvasHeight || 920;
+        }
+
+        if (!Array.isArray(faction.peakButtons) || faction.peakButtons.length !== 6) {
+          faction.peakButtons = cloneValue(templatePeakButtons);
+        }
+      }
+
+      return data;
+    }
+
+    function getPrototypeFaction() {
+      return getFactions().find(item => Array.isArray(item?.nodes) && item.nodes.length) || null;
+    }
+
+    function getFaction() {
+      const factions = getFactions();
+      return factions.find(item => item.id === state.factionId) || factions[0] || null;
+    }
+
+    function getFactionNodes(faction) {
+      if (Array.isArray(faction?.nodes) && faction.nodes.length) return faction.nodes;
+      return getPrototypeFaction()?.nodes || [];
+    }
+
+    function getFactionDecorators(faction) {
+      if (Array.isArray(faction?.decorators) && faction.decorators.length) return faction.decorators;
+      return getPrototypeFaction()?.decorators || [];
+    }
+
+    function getPeakButtons(faction) {
+      if (Array.isArray(faction?.peakButtons) && faction.peakButtons.length) return faction.peakButtons;
+      const prototypeFaction = getPrototypeFaction();
+      if (Array.isArray(prototypeFaction?.peakButtons) && prototypeFaction.peakButtons.length) {
+        return prototypeFaction.peakButtons;
+      }
+      return createDefaultPeakButtons();
+    }
+
+    function getNode(faction) {
+      const nodes = getFactionNodes(faction);
+      return nodes.find(item => item.id === state.nodeId) || nodes[0] || null;
+    }
+
+    function clampPeakIndex(faction, peakIndex) {
+      const total = getPeakButtons(faction).length || 1;
+      const parsed = Number.parseInt(peakIndex, 10);
+      if (!Number.isFinite(parsed) || parsed < 0) return 0;
+      return Math.min(total - 1, parsed);
+    }
+
+    function clampLevel(node, level) {
+      const total = Array.isArray(node?.levels) && node.levels.length ? node.levels.length : 1;
+      const fallback = Number.parseInt(node?.defaultLevel, 10);
+      const defaultLevel = Number.isFinite(fallback) && fallback >= 1 ? fallback : 1;
+      const parsed = Number.parseInt(level, 10);
+      if (!Number.isFinite(parsed) || parsed < 1) return Math.min(total, defaultLevel);
+      return Math.min(total, parsed);
+    }
+
+    function getLevelData(node) {
+      if (!node) return null;
+      if (!Array.isArray(node.levels) || !node.levels.length) {
+        return { level: 1, materials: [], effects: [] };
+      }
+      const level = clampLevel(node, state.level);
+      return { ...node.levels[level - 1], level };
+    }
+
+    function renderBars(node) {
+      const total = Math.max(1, Number.parseInt(node?.barTotal, 10) || 4);
+      const active = Math.max(0, Math.min(total, Number.parseInt(node?.barActive, 10) || 0));
+      return '<div class="force-node-bars">' + Array.from({ length: total }, (_, index) => (
+        '<span class="force-node-bar' + (index < active ? ' is-active' : '') + '"></span>'
+      )).join('') + '</div>';
+    }
+
+    function renderDecorator(item) {
+      const cls = item.type === 'spark' ? 'spark' : 'line-h';
+      return '<div class="force-decorator ' + cls + '" data-layout-kind="decorator" data-base-x="' + item.x + '" data-base-width="' + item.width + '" style="left:' + item.x + 'px;top:' + item.y + 'px;width:' + item.width + 'px;height:' + item.height + 'px;"></div>';
+    }
+
+    function clampValue(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function remapHorizontalEdge(x, baseWidth, targetWidth, padding) {
+      if (targetWidth >= baseWidth) return x;
+      const originStart = padding;
+      const originEnd = baseWidth - padding;
+      const targetEnd = targetWidth - padding;
+      if (originEnd <= originStart || targetEnd <= originStart) {
+        return clampValue(x, padding, targetEnd);
+      }
+      const ratio = clampValue((x - originStart) / (originEnd - originStart), 0, 1);
+      return originStart + (targetEnd - originStart) * ratio;
+    }
+
+    function remapHorizontalPosition(x, width, baseWidth, targetWidth, padding) {
+      if (targetWidth >= baseWidth) return x;
+      const originStart = padding;
+      const originEnd = baseWidth - padding - width;
+      const targetEnd = targetWidth - padding - width;
+      if (originEnd <= originStart || targetEnd <= originStart) {
+        return clampValue(x, padding, targetEnd);
+      }
+      const ratio = clampValue((x - originStart) / (originEnd - originStart), 0, 1);
+      return originStart + (targetEnd - originStart) * ratio;
+    }
+
+    function isAssetPath(value) {
+      return typeof value === 'string' && /^([/.]|[A-Za-z]:\\)/.test(value);
+    }
+
+    function renderNodeIcon(node) {
+      if (isAssetPath(node.icon)) {
+        return '<img src="' + node.icon + '" alt="' + (node.title || 'node') + '">';
+      }
+      return iconMarkup(node.icon);
+    }
+
+    function getNodeStyleVars(faction, node) {
+      const colors = {
+        ...(faction?.nodeTheme || {}),
+        ...(node?.colors || {})
+      };
+      const styleMap = {
+        '--node-accent': colors.accent,
+        '--node-bar-active-bg': colors.barActiveBg,
+        '--node-bar-active-border': colors.barActiveBorder
+      };
+
+      return Object.entries(styleMap)
+        .filter(([, value]) => typeof value === 'string' && value.trim())
+        .map(([key, value]) => key + ':' + value)
+        .join(';');
+    }
+
+    function getNodeInlineStyle(faction, node) {
+      const layout = 'left:' + node.x + 'px;top:' + node.y + 'px;width:' + node.width + 'px;height:' + node.height + 'px;';
+      const colorVars = getNodeStyleVars(faction, node);
+      return colorVars ? layout + colorVars + ';' : layout;
+    }
+
+    function renderFactionButtonVisual(faction) {
+      const icon = faction?.switchIcon || faction?.icon;
+      if (isAssetPath(icon)) {
+        return '<img src="' + icon + '" alt="' + (faction?.title || 'faction') + '">';
+      }
+      return iconMarkup('faction');
+    }
+
+    function renderFactionButton(faction, isActive) {
+      return [
+        '<button class="force-faction-button' + (isActive ? ' active' : '') + '" type="button" data-faction-id="' + faction.id + '">',
+        '<span class="force-faction-button-visual">' + renderFactionButtonVisual(faction) + '</span>',
+        '<span class="force-faction-button-copy"><strong>' + (faction.title || faction.id) + '</strong><span>' + (faction.shortLabel || faction.id) + '</span></span>',
+        '</button>'
+      ].join('');
+    }
+
+    function renderPeakButtonVisual(button) {
+      if (isAssetPath(button?.icon)) {
+        return '<img src="' + button.icon + '" alt="' + (button.title || button.label || 'peak') + '">';
+      }
+      return '<span>' + (button?.label || '') + '</span>';
+    }
+
+    function renderPeakButton(button, index, isActive) {
+      return [
+        '<button class="force-peak-pill' + (isActive ? ' active' : '') + '" type="button" data-peak-index="' + index + '" title="' + (button?.title || button?.label || '') + '">',
+        '<span class="force-peak-pill-media">' + renderPeakButtonVisual(button) + '</span>',
+        '</button>'
+      ].join('');
+    }
+
+    function setStateForFaction(faction) {
+      if (!faction) return;
+      state.factionId = faction.id;
+      state.peakIndex = clampPeakIndex(faction, state.peakIndex);
+      const node = getNode(faction);
+      state.nodeId = node?.id || null;
+      state.level = clampLevel(node, state.level);
+    }
+
+    function render() {
+      const faction = getFaction();
+      if (!faction) {
+        app.innerHTML = '<div class="empty-state"><h1>加载失败</h1><p>未找到阵营数据。</p></div>';
+        return;
+      }
+
+      const nodes = getFactionNodes(faction);
+      const node = getNode(faction);
+      if (node && state.nodeId !== node.id) state.nodeId = node.id;
+      const levelData = getLevelData(node);
+      state.level = levelData?.level || 1;
+
+      const materials = Array.isArray(levelData?.materials) ? levelData.materials : [];
+      const effects = Array.isArray(levelData?.effects) ? levelData.effects : [];
+      const resources = Array.isArray(faction.resources) ? faction.resources : [];
+      const peakButtons = getPeakButtons(faction);
+      state.peakIndex = clampPeakIndex(faction, state.peakIndex);
+
+      app.innerHTML = [
+        '<div class="force-head">',
+        '<small>平级模块</small>',
+        '<h1>' + (state.data?.title || '阵营升级图谱') + '</h1>',
+        '<p>' + (state.data?.summary || '') + '</p>',
+        '<div class="force-faction-rail">',
+        getFactions().map(item => renderFactionButton(item, item.id === faction.id)).join(''),
+        '</div>',
+        '</div>',
+        '<div class="force-shell">',
+        '<section class="force-map-panel">',
+        '<div class="force-map-scroller">',
+        '<div class="force-map-fit">',
+        '<div class="force-map-scale" data-map-scale>',
+        '<div class="force-map-canvas" data-map-canvas data-base-width="' + (faction.canvasWidth || 1360) + '" data-base-height="' + (faction.canvasHeight || 920) + '" style="--canvas-width:' + (faction.canvasWidth || 1360) + 'px;--canvas-height:' + (faction.canvasHeight || 920) + 'px;">',
+        getFactionDecorators(faction).map(renderDecorator).join(''),
+        nodes.map(item => {
+          const classes = ['force-node'];
+          if (item.status) classes.push('is-' + item.status);
+          if (item.id === node?.id) classes.push('active-node');
+          return [
+            '<button class="' + classes.join(' ') + '" type="button" data-layout-kind="node" data-base-x="' + item.x + '" data-base-width="' + item.width + '" data-node-id="' + item.id + '"',
+            ' style="' + getNodeInlineStyle(faction, item) + '">',
+            item.badge ? '<span class="force-node-badge">' + item.badge + '</span>' : '',
+            '<span class="force-node-icon">' + renderNodeIcon(item) + '</span>',
+            renderBars(item),
+            '</button>'
+          ].join('');
+        }).join(''),
+        '</div>',
+        '</div>',
+        '</div>',
+        '</div>',
+        '<div class="force-map-footer">',
+        '<div class="force-peak-switch">',
+        peakButtons.map((item, index) => renderPeakButton(item, index, index === state.peakIndex)).join(''),
+        '</div>',
+        '<p class="force-progress-copy">' + (faction.progressText || '') + '</p>',
+        '</div>',
+        '</section>',
+        '<aside class="force-detail-panel">',
+        '<div class="force-detail-copy">',
+        '<p class="force-detail-kicker">' + (node?.kicker || faction.title) + '</p>',
+        '<h2>' + (node?.title || '未选择节点') + '</h2>',
+        '<p class="force-detail-meta">' + (node?.groupLabel || '升级节点') + ' · ' + (faction.detailLevelLabel || faction.title) + '</p>',
+        '<div class="force-level-switch">',
+        (node?.levels || []).map((_, index) => {
+          const level = index + 1;
+          return '<button class="force-level-pill' + (level === state.level ? ' active' : '') + '" type="button" data-level="' + level + '">' + level + '</button>';
+        }).join(''),
+        '</div>',
+        node?.description ? '<p class="force-detail-description">' + node.description + '</p>' : '',
+        '<div class="force-detail-block"><h3>材料</h3><div class="force-stat-list">' +
+        materials.map(item => '<div class="force-stat-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') +
+        '</div></div>',
+        '<div class="force-detail-block"><h3>效果</h3><div class="force-stat-list">' +
+        effects.map(item => '<div class="force-stat-row highlight"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') +
+        '</div></div>',
+        '</div>',
+        '<div class="force-detail-footer">' +
+        resources.map(item => '<div class="force-resource-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') +
+        '</div>',
+        '</aside>',
+        '</div>'
+      ].join('');
+
+      app.querySelectorAll('[data-faction-id]').forEach(button => {
+        button.addEventListener('click', () => {
+          state.factionId = button.dataset.factionId;
+          state.nodeId = null;
+          state.level = null;
+          setStateForFaction(getFaction());
+          render();
+        });
+      });
+
+      app.querySelectorAll('[data-peak-index]').forEach(button => {
+        button.addEventListener('click', () => {
+          state.peakIndex = Number.parseInt(button.dataset.peakIndex, 10) || 0;
+          render();
+        });
+      });
+
+      app.querySelectorAll('[data-node-id]').forEach(button => {
+        button.addEventListener('click', () => {
+          state.nodeId = button.dataset.nodeId;
+          state.level = null;
+          render();
+        });
+      });
+
+      app.querySelectorAll('[data-level]').forEach(button => {
+        button.addEventListener('click', () => {
+          state.level = Number.parseInt(button.dataset.level, 10) || 1;
+          render();
+        });
+      });
+
+      requestAnimationFrame(applyMapFit);
+    }
+
+    function applyMapFit() {
+      const fit = app.querySelector('.force-map-fit');
+      const scroller = app.querySelector('.force-map-scroller');
+      const scaleWrap = app.querySelector('[data-map-scale]');
+      const canvas = app.querySelector('[data-map-canvas]');
+      if (!fit || !scroller || !scaleWrap || !canvas) return;
+
+      const baseCanvasWidth = Number.parseFloat(canvas.dataset.baseWidth) || canvas.offsetWidth;
+      const baseCanvasHeight = Number.parseFloat(canvas.dataset.baseHeight) || canvas.offsetHeight;
+      if (!baseCanvasWidth || !baseCanvasHeight) return;
+
+      const heightScale = fit.clientHeight / baseCanvasHeight;
+      const isNarrow = window.innerWidth <= 1280;
+      const baseScale = isNarrow
+        ? Math.min(heightScale, 1) * 0.96
+        : Math.min(heightScale, 1) * 0.9;
+      const scale = isNarrow
+        ? Math.max(baseScale, 0.58)
+        : baseScale;
+      const targetCanvasWidth = Math.min(baseCanvasWidth, fit.clientWidth / Math.max(scale, 0.001));
+      const horizontalPadding = 18;
+      const layoutRects = [];
+
+      canvas.style.setProperty('--canvas-width', targetCanvasWidth + 'px');
+      canvas.style.setProperty('--canvas-height', baseCanvasHeight + 'px');
+
+      canvas.querySelectorAll('[data-layout-kind="node"]').forEach(node => {
+        const baseX = Number.parseFloat(node.dataset.baseX) || 0;
+        const nodeWidth = Number.parseFloat(node.dataset.baseWidth) || node.offsetWidth || 0;
+        const left = remapHorizontalPosition(baseX, nodeWidth, baseCanvasWidth, targetCanvasWidth, horizontalPadding);
+        node.style.left = left + 'px';
+        layoutRects.push({ element: node, left, width: nodeWidth });
+      });
+
+      canvas.querySelectorAll('[data-layout-kind="decorator"]').forEach(item => {
+        const baseX = Number.parseFloat(item.dataset.baseX) || 0;
+        const itemWidth = Number.parseFloat(item.dataset.baseWidth) || item.offsetWidth || 0;
+        const left = remapHorizontalEdge(baseX, baseCanvasWidth, targetCanvasWidth, horizontalPadding);
+        const right = remapHorizontalEdge(baseX + itemWidth, baseCanvasWidth, targetCanvasWidth, horizontalPadding);
+        const width = Math.max(1, right - left);
+        item.style.left = left + 'px';
+        item.style.width = width + 'px';
+        layoutRects.push({ element: item, left, width });
+      });
+
+      if (layoutRects.length) {
+        const minLeft = Math.min(...layoutRects.map(item => item.left));
+        const maxRight = Math.max(...layoutRects.map(item => item.left + item.width));
+        const contentWidth = maxRight - minLeft;
+        const idealLeft = (targetCanvasWidth - contentWidth) / 2;
+        const minOffset = horizontalPadding - minLeft;
+        const maxOffset = (targetCanvasWidth - horizontalPadding) - maxRight;
+        const offset = clampValue(idealLeft - minLeft, minOffset, maxOffset);
+
+        layoutRects.forEach(item => {
+          item.element.style.left = (item.left + offset) + 'px';
+        });
+      }
+
+      let cropStart = 0;
+      let visibleWidth = targetCanvasWidth;
+      if (!isNarrow && layoutRects.length) {
+        const shiftedMinLeft = Math.min(...layoutRects.map(item => Number.parseFloat(item.element.style.left) || 0));
+        const shiftedMaxRight = Math.max(...layoutRects.map(item => (Number.parseFloat(item.element.style.left) || 0) + item.width));
+        cropStart = Math.max(0, shiftedMinLeft - horizontalPadding);
+        const cropEnd = Math.min(targetCanvasWidth, shiftedMaxRight + horizontalPadding);
+        visibleWidth = Math.max(1, cropEnd - cropStart);
+      }
+
+      canvas.style.marginLeft = (-cropStart) + 'px';
+      scaleWrap.style.width = (visibleWidth * scale) + 'px';
+      scaleWrap.style.height = (baseCanvasHeight * scale) + 'px';
+      canvas.style.transform = 'scale(' + scale + ')';
+
+      scroller.style.overflow = isNarrow ? 'auto' : 'hidden';
+      fit.style.overflow = isNarrow ? 'auto' : 'hidden';
+      fit.style.justifyContent = isNarrow ? 'flex-start' : 'center';
+    }
+
+    async function bootstrap() {
+      const response = await fetch('/factions/data.json');
+      if (!response.ok) throw new Error('Failed to load factions data.json');
+      state.data = normalizeFactionData(await response.json());
+      setStateForFaction(getFaction());
+      render();
+    }
+
+    bootstrap().catch(error => {
+      console.error(error);
+      app.innerHTML = '<div class="empty-state"><h1>加载失败</h1><p>阵营页面数据未能正确读取。</p></div>';
+    });
+    window.addEventListener('resize', () => {
+      requestAnimationFrame(applyMapFit);
+    });
+  </script>
+</body>
+</html>
