@@ -279,7 +279,20 @@ body {
   padding:0 20px 20px;
   display:flex;
   flex-direction:column;
-  overflow:hidden
+  overflow:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(255,255,255,.22) transparent
+}
+
+#app-view::-webkit-scrollbar {
+  width:8px;
+  height:8px
+}
+
+#app-view::-webkit-scrollbar-thumb {
+  background:rgba(255,255,255,.22);
+  border-radius:0
 }
 
 .hud-bottom {
@@ -334,12 +347,13 @@ body {
 }
 
 .view {
-  height:100%;
+  height:auto;
   min-height:0;
+  min-height:100%;
   display:flex;
   flex-direction:column;
   gap:10px;
-  overflow:hidden
+  overflow:visible
 }
 
 .section-tabs {
@@ -402,13 +416,13 @@ body {
 }
 
 .top-grid {
-  flex:1;
+  flex:none;
   grid-template-columns:repeat(3,minmax(0,1fr));
   align-content:start
 }
 
 .section-grid {
-  flex:1;
+  flex:none;
   grid-template-columns:repeat(5,minmax(0,1fr));
   align-content:start
 }
@@ -1615,5 +1629,28 @@ body {
     font-size:15px
   }
 
+}
+
+@media (max-height:980px) {
+  #app-view {
+    overflow:auto;
+    overscroll-behavior:contain;
+  }
+
+  .view {
+    height:auto;
+    min-height:100%;
+  }
+
+  .top-grid,
+  .section-grid,
+  .tag-layout {
+    flex:none;
+  }
+
+  .top-grid,
+  .section-grid {
+    padding-bottom:8px;
+  }
 }
 
