@@ -5152,10 +5152,10 @@
               ],
               "logs": [
                 {
-                  "id": "uesc_grenadier_cmd",
+                  "id": "uesc_assult_troops",
                   "title": "UESC突击单位",
-                  "bodyFile": "/marathon-lore/content/docs/world/threats/UESC/uesc_grenadier_cmd.md",
-                  "image": "/marathon-lore/content/docs/world/threats/UESC/uesc_grenadier_cmd.png",
+                  "bodyFile": "/marathon-lore/content/docs/world/threats/UESC/uesc_assult_troops.md",
+                  "image": "/marathon-lore/content/docs/world/threats/UESC/uesc_assult_troops.png",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -5178,7 +5178,7 @@
                   "id": "uesc_assult_troops_cmd",
                   "title": "UESC突击指挥官",
                   "bodyFile": "/marathon-lore/content/docs/world/threats/UESC/uesc_assult_troops_cmd.md",
-                  "image": "/marathon-lore/content/docs/world/threats/UESC/uesc_grenadier_cmd.png",
+                  "image": "/marathon-lore/content/docs/world/threats/UESC/uesc_assult_troops.png",
                   "meta": [
                     "疾行者指南"
                   ]
