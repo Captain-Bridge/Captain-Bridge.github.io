@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>关于 / Escape will make me god</title>
-  <meta name="description" content="站长信息、站点信息与贡献者名单">
+  <title>关于本站 / Escape will make me god</title>
+  <meta name="description" content="站长档案、马拉松设定简介与官方入口占位">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
   <style>
+    @font-face {
+      font-family:"Maratype Local";
+      src:url("/fonts/Maratype.otf") format("opentype");
+      font-display:swap;
+    }
+
     :root {
       --bg:#07090d;
       --panel:rgba(10,12,18,.92);
@@ -194,6 +200,16 @@
       letter-spacing:.06em;
     }
 
+    .profile-copy p {
+      margin:0;
+      color: rgb(193, 254, 0);
+      font-family:"Maratype Local","Bahnschrift SemiCondensed","DIN Condensed","Arial Narrow","Segoe UI",sans-serif;
+      font-size:20px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      text-shadow: 0 0 10px rgba(193, 254, 0, 0.18);
+    }
+
     .profile-copy span {
       color:var(--blue);
       font-family:"Consolas","Courier New",monospace;
@@ -208,6 +224,16 @@
       font-size:13px;
       line-height:1.72;
       text-shadow:0 0 8px rgba(0,255,102,.12);
+    }
+
+    .terminal-block a {
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid rgba(130,255,170,.28);
+    }
+
+    .terminal-block a:hover {
+      border-bottom-color:rgba(130,255,170,.72);
     }
 
     .side-links {
@@ -226,6 +252,39 @@
       color:var(--text);
       text-decoration:none;
       font-weight:700;
+    }
+
+    .side-link.with-icon {
+      grid-template-columns:18px minmax(0,1fr);
+      gap:10px;
+      justify-items:start;
+    }
+
+    .side-link-icon {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:18px;
+      height:18px;
+      color:var(--soft);
+    }
+
+    .side-link-icon svg {
+      display:block;
+      width:100%;
+      height:100%;
+      fill:currentColor;
+    }
+
+    .side-link-icon img {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    .side-link:hover .side-link-icon {
+      color:var(--text);
     }
 
     .side-link:hover {
@@ -288,7 +347,7 @@
 
     .section-grid {
       display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
+      grid-template-columns:minmax(0,1fr);
       gap:18px;
     }
 
@@ -322,7 +381,9 @@
 
     .panel-body {
       display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
       gap:12px;
+      align-items:start;
     }
 
     .info-card,
@@ -338,6 +399,29 @@
     .info-card strong,
     .credit-card strong {
       font-size:18px;
+    }
+
+    .disclaimer-note {
+      padding:14px 16px;
+      border:1px solid rgba(255,255,255,.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.018), rgba(255,255,255,0)),
+        rgba(10,12,18,.72);
+      color:var(--dim);
+      font-size:13px;
+      line-height:1.75;
+      box-shadow:var(--shadow);
+    }
+
+    .disclaimer-note strong {
+      color:var(--soft);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .disclaimer-note p {
+      margin:8px 0 0;
     }
 
     .meta-label {
@@ -387,6 +471,10 @@
 
       .section-grid,
       .credit-grid {
+        grid-template-columns:1fr;
+      }
+
+      .panel-body {
         grid-template-columns:1fr;
       }
     }
@@ -491,8 +579,8 @@
     <header class="hud-top">
       <div class="hud-chip primary">ABOUT</div>
       <div class="hud-copy">
-        <strong>Durandal Terminal</strong>
-        <span>关于站长 / 站点 / 贡献者</span>
+        <strong>Somewhere in the heavens, they are waiting.</strong>
+        <span>关于本站</span>
       </div>
       <nav class="hud-nav">
         <a class="nav-link" href="/">返回首页</a>
@@ -503,11 +591,11 @@
     <aside class="hud-left">
       <section class="profile-block">
         <div class="avatar-frame">
-          <img src="/marathon-lore/assets/images/icons/marathon-icon.jpg" alt="Avatar">
+          <img src="/marathon-lore/assets/images/icons/marathon-brand-mark.png" alt="Marathon">
         </div>
         <div class="profile-copy">
-          <strong>Captain-Bridge</strong>
-          <span>ID / Captain-Bridge</span>
+          <strong style="color: rgb(193, 254, 0);">失落星船：马拉松中文站</strong>
+          <p>CN-Marathon</p>
         </div>
       </section>
 
@@ -515,28 +603,42 @@
         <div>STATUS : ONLINE</div>
         <div>NODE   : ABOUT PAGE</div>
         <div>MODE   : STATIC ARCHIVE</div>
-        <div>ROOT   : cnmarathon.cn</div>
+        <div>ROOT   : <a href="https://cnmarathon.cn" target="_blank" rel="noreferrer">cnmarathon.cn</a></div>
       </section>
 
       <nav class="side-links">
-        <a class="side-link" href="#site">网站信息</a>
-        <a class="side-link" href="#credits">感谢贡献者</a>
+        <a class="side-link with-icon" href="https://store.steampowered.com/app/3065800/">
+          <span class="side-link-icon" aria-hidden="true">
+            <img src="/marathon-lore/assets/images/icons/steam.svg" alt="">
+          </span>
+          <span>商店页面</span>
+        </a>
+        <a class="side-link with-icon" href="https://www.marathonthegame.com/">
+          <span class="side-link-icon" aria-hidden="true">
+            <img src="/images/bungie-favicon.ico" alt="">
+          </span>
+          <span>游戏官网</span>
+        </a>
+        <a class="side-link with-icon" href="https://space.bilibili.com/3690991259224768">
+          <span class="side-link-icon" aria-hidden="true">
+            <img src="/marathon-lore/assets/images/icons/bilibili.svg" alt="">
+          </span>
+          <span>官方B站</span>
+        </a>
+        <a class="side-link with-icon" href="https://www.douyin.com/user/MS4wLjABAAAAT88MU3VIrwmGZrTyhkvjVxuOSgx5QmHbQtzfdsaz7WhW3Y62W_fBx7Mnbc0dujlo?from_tab_name=main&is_search=1&list_name=follow&nt=0">
+          <span class="side-link-icon" aria-hidden="true">
+            <img src="/marathon-lore/assets/images/icons/tiktok.svg" alt="">
+          </span>
+          <span>官方抖音</span>
+        </a>
 
-        <!-- <a class="side-link external" href="https://github.com/Captain-Bridge" target="_blank" rel="noreferrer">
-          <small>External</small>
-          <span>GitHub / Captain-Bridge</span>
-        </a> -->
         <a class="side-link external pending" href="https://steamcommunity.com/id/RememberM3/">
-          <small>External</small>
+          <small>本站作者</small>
           <span>Steam / 白枭</span>
         </a>
         <a class="side-link external pending" href="https://space.bilibili.com/273349653">
-          <small>External</small>
+          <small>本站作者</small>
           <span>Bilibili / 告知幸运的白枭</span>
-        </a>
-        <a class="side-link external" href="https://cnmarathon.cn" target="_blank" rel="noreferrer">
-          <small>External</small>
-          <span>Domain / cnmarathon.cn</span>
         </a>
       </nav>
     </aside>
@@ -544,62 +646,41 @@
     <section class="viewport">
       <div class="view">
         <section class="hero-panel">
-          <h1>Escape will make me god</h1>
-          <p>这里是主站的静态关于页面。页面风格独立于 NexT，直接沿用 Marathon Lore 的终端气质，并向老马拉松 / 杜兰达尔界面靠拢。</p>
+          <h1 style="color: rgb(193, 254, 0); text-shadow: 0 0 10px rgba(193, 254, 0, 0.18);">失落星船：马拉松</h1>
+          <p>《光环》和《命运》创作者推出高风险生存第一人称射击游戏，玩家将探索失落的天仓五IV殖民地并搜寻物资。</p>
         </section>
 
         <div class="section-grid">
-          <section class="panel" id="site">
+          <section class="panel" id="marathon">
             <div class="panel-head">
-              <h2>网站信息</h2>
-              <p>当前站点的定位、结构和维护方式。</p>
+              <h2>游戏简介</h2>
+              <p>在《失落星船：马拉松》中，潜入充满敌对玩家、敌对势力和变幻莫测危险的黑暗科幻世界。单人或组队搜寻地图，然后在紧张刺激的PVP和PVE战斗中杀出重围，成功撤离。</p>
             </div>
             <div class="panel-body">
               <div class="info-card">
-                <strong>站点名称</strong>
-                <p>Escape will make me god</p>
+                <strong>生存与发展</strong>
+                <p>在失落殖民地搜寻危险区域，寻找货品、战利品和情报。</p>
+                <p>从被击败的玩家和敌人身上缴获装备。成功撤离，填满你的保险库。</p>
+                <p>完成合约赢取奖励，升级配装，变得更强。</p>
               </div>
               <div class="info-card">
-                <strong>项目定位</strong>
-                <p>以 Marathon 游戏相关资料整理、中文索引、百科化展示和后续扩展内容为主。</p>
+                <strong>疾行者策略由你来定</strong>
+                <p>选择适合你游戏风格的疾行者外壳，每个外壳都拥有独特技能。</p>
+                <p>使用各类可改装武器和自定义技能升级配装。</p>
+                <p>打造无数配装，从隐蔽的渗透者到前线的硬汉，再到支援专家，应有尽有。</p>
               </div>
               <div class="info-card">
-                <strong>部署方式</strong>
-                <p>Hexo 静态站点 + GitHub Pages，自定义域名 `cnmarathon.cn`。</p>
+                <strong>依靠团队，相信自己</strong>
+                <p>组队（两人或三人）或独自挑战天仓五。</p>
+                <p>建立危险而脆弱的临时联盟。与敌对玩家达成交易，或为了自己的利益背叛其信任。</p>
+                <p>成为单人拾荒者鲁克，除了沿途所获，没有什么可失去的。</p>
               </div>
               <div class="info-card">
-                <strong>内容维护</strong>
-                <p>主要通过 `source/marathon-lore/content/docs/` 下的 Markdown 与图片素材进行手动管理。</p>
+                <strong>勇往直前，提升力量</strong>
+                <p>在赛季中不断提升力量，拿出最强装备，赢取丰厚奖励。</p>
+                <p>攀登天梯，在排名模式中证明你是顶尖疾行者。</p>
+                <p>进入低温档案室，挑战突袭式挑战，解决层层谜题，并与敌方团队争夺顶级战利品。</p>
               </div>
-            </div>
-          </section>
-
-          <section class="panel" id="credits">
-            <div class="panel-head">
-              <h2>感谢贡献者</h2>
-              <p>记录参与这个项目的人、工具或后续协作者。</p>
-            </div>
-            <div class="credit-grid">
-              <article class="credit-card">
-                <span class="meta-label">Owner</span>
-                <strong>Captain-Bridge</strong>
-                <p>负责内容整理、素材录入、结构定义与最终发布。</p>
-              </article>
-              <article class="credit-card">
-                <span class="meta-label">Build</span>
-                <strong>Codex</strong>
-                <p>协助完成页面结构、前端交互、Markdown 文件化管理与静态部署工作流。</p>
-              </article>
-              <article class="credit-card">
-                <span class="meta-label">Placeholder</span>
-                <strong>待补充贡献者</strong>
-                <p>这里可以继续补充资料提供者、翻译者、校对者或其他协作成员。</p>
-              </article>
-              <article class="credit-card">
-                <span class="meta-label">Maintenance</span>
-                <strong>手动可编辑</strong>
-                <p>如果要替换左侧外链或头像，直接编辑本文件即可。</p>
-              </article>
             </div>
           </section>
         </div>
@@ -607,8 +688,7 @@
     </section>
 
     <footer class="hud-bottom">
-      <span>Marathon Archive / About Node</span>
-      <strong>Durandal Style Static Page</strong>
+      <span>本站为《失落星船：马拉松》相关的非官方粉丝资料整理页，与Bungie及《失落星船：马拉松》官方无任何隶属、授权或背书关系。本站中涉及的名称、商标、Logo、角色、图像及相关素材，其版权与商标权均归原权利人所有。本站内容仅用于中文整理、介绍与交流参考，如有疏漏或错误，请以官方发布信息为准。</span>
     </footer>
   </main>
 </body>

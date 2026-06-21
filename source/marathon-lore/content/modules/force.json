@@ -1,8 +1,2810 @@
 {
   "id": "force",
   "title": "阵营",
-  "count": "0 / 0",
-  "icon": "/marathon-lore/assets/images/icons/rook.svg",
+  "count": "128 / 128",
+  "icon": "/marathon-lore/assets/images/icons/forces.svg",
   "summary": "组织、势力与关系脉络。",
-  "sections": []
+  "sections": [
+    {
+      "id": "cyac",
+      "title": "赛博艾克米",
+      "count": "14 / 14",
+      "icon": "/marathon-lore/assets/images/icons/cyac.svg",
+      "nodes": [
+        {
+          "id": "cyac_trans",
+          "title": "通讯",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "link_cyac",
+              "title": "建立链接：赛博艾克米",
+              "count": "已完成",
+              "summary": "建立链接至赛博艾克米代理：ONI。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "通讯"
+              ],
+              "logs": [
+                {
+                  "id": "cyac_log",
+                  "title": "赛博艾克米",
+                  "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_log.md",
+                  "image": "/marathon-lore/content/docs/forces/cyac/cyac_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyac_level",
+          "title": "等级",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "cyac_II",
+              "title": "赛博艾克米II",
+              "count": "已完成",
+              "summary": "达到赛博艾克米声望等级2。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_II_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_II.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_II.png"
+            },
+            {
+              "id": "cyac_X",
+              "title": "赛博艾克米X",
+              "count": "已完成",
+              "summary": "达到赛博艾克米声望等级10。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_X_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_X.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_X.png"
+            },
+            {
+              "id": "cyac_XX",
+              "title": "赛博艾克米XX",
+              "count": "已完成",
+              "summary": "达到赛博艾克米声望等级20。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_XX_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_XX.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_XX.png"
+            },
+            {
+              "id": "cyac_VIP",
+              "title": "赛博艾克米VIP",
+              "count": "已完成",
+              "summary": "达到赛博艾克米VIP声望。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_VIP.png"
+            },
+            {
+              "id": "cyac_early_VIP",
+              "title": "早鸟VIP",
+              "count": "已完成",
+              "summary": "在第1赛季或第2赛季达到赛博艾克米VIP声望。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP.png"
+            }
+          ]
+        },
+        {
+          "id": "cyac_level_up",
+          "title": "升级",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "cyac_level_up",
+              "title": "赛博艾克米已升级",
+              "count": "已完成",
+              "summary": "获取赛博艾克米巅峰升级：宝藏_猎人。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "升级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_level_up_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_level_up.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_level_up.png"
+            }
+          ]
+        },
+        {
+          "id": "sponsor_kit",
+          "title": "赞助包",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "cyac_randal",
+              "title": "赛博艾克米赞助暴徒",
+              "count": "已完成",
+              "summary": "在使用赛博艾克米赞助包和暴徒外壳后撤离。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_randal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_randal.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_randal.png"
+            },
+            {
+              "id": "cyac_triage",
+              "title": "赛博艾克米赞助救援",
+              "count": "已完成",
+              "summary": "在使用赛博艾克米赞助包和救援外壳后撤离。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_triage_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_triage.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_triage.png"
+            },
+            {
+              "id": "cyac_destroyer",
+              "title": "赛博艾克米赞助毁灭者",
+              "count": "已完成",
+              "summary": "在使用赛博艾克米赞助包和毁灭者外壳后撤离。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer.png"
+            },
+            {
+              "id": "cyac_assassin",
+              "title": "赛博艾克米赞助刺客",
+              "count": "已完成",
+              "summary": "在使用赛博艾克米赞助包和刺客外壳后撤离。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_assassin_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_assassin.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_assassin.png"
+            },
+            {
+              "id": "cyac_thief",
+              "title": "赛博艾克米赞助盗贼",
+              "count": "已完成",
+              "summary": "在使用赛博艾克米赞助包和盗贼外壳后撤离。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_thief_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_thief.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_thief.png"
+            },
+            {
+              "id": "cyac_recon",
+              "title": "赛博艾克米赞助侦察",
+              "count": "已完成",
+              "summary": "在使用赛博艾克米赞助包和侦察外壳后撤离。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_recon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_recon.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_recon.png"
+            },
+            {
+              "id": "cyac_sentinel",
+              "title": "赛博艾克米赞助哨兵",
+              "count": "已完成",
+              "summary": "在使用赛博艾克米赞助包和哨兵外壳后撤离。",
+              "meta": [
+                "阵营",
+                "赛博艾克米",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel.md",
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nv",
+      "title": "纽卡洛里",
+      "count": "25 / 25",
+      "icon": "/marathon-lore/assets/images/icons/nv.svg",
+      "nodes": [
+        {
+          "id": "nv_trans",
+          "title": "通讯",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "link_nv",
+              "title": "建立链接：纽卡洛里",
+              "count": "已完成",
+              "summary": "建立链接至纽卡洛里代理：盖乌斯。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "通讯"
+              ],
+              "logs": [
+                {
+                  "id": "nv_log",
+                  "title": "纽卡洛里",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_log.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/nv_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contract",
+          "title": "合约",
+          "count": "11 / 11",
+          "children": [
+            {
+              "id": "data_reconstruct_1",
+              "title": "数据重构[1/3]",
+              "count": "已完成",
+              "summary": "完成数据重构[1/3]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "agricultural_inspection",
+                  "title": "农业检查",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/agricultural_inspection.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "传染病",
+                    "德莱厄斯",
+                    "新卡斯卡迪亚",
+                    "D · 里德",
+                    "C · 宋"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "data_reconstruct_2",
+              "title": "数据重构[2/3]",
+              "count": "已完成",
+              "summary": "完成数据重构[2/3]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "seed_bank",
+                  "title": "安全录音：种子库",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/seed_bank.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "人工智能",
+                    "传染病",
+                    "德莱厄斯",
+                    "新卡斯卡迪亚",
+                    "种子库",
+                    "C · 宋"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "data_reconstruct_3",
+              "title": "数据重构[3/3]",
+              "count": "已完成",
+              "summary": "完成数据重构[3/3]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "maintaince_log_druis",
+                  "title": "维护部日志：德莱厄斯",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/maintaince_log_druis.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "人工智能",
+                    "传染病",
+                    "德莱厄斯",
+                    "新卡斯卡迪亚"
+                  ]
+                },
+                {
+                  "id": "diagnostic_analysis_druis",
+                  "title": "诊断分析：德莱厄斯",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/diagnostic_analysis_druis.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "人工智能",
+                    "德莱厄斯",
+                    "新卡斯卡迪亚",
+                    "oni",
+                    "狂暴"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "evolutionary_pressure_1",
+              "title": "演化压力[1/4]",
+              "count": "已完成",
+              "summary": "完成演化压力[1/4]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "code_snippet_cerberus",
+                  "title": "代码片段：刻耳柏洛斯",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/code_snippet_cerberus.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "刻耳柏洛斯",
+                    "oni",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "evolutionary_pressure_3",
+              "title": "演化压力[3/4]",
+              "count": "已完成",
+              "summary": "完成演化压力[3/4]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "laboratory_report_new_infectious_diseases",
+                  "title": "实验室报告：新型传染病",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/laboratory_report_new_infectious_diseases.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "传染病",
+                    "新卡斯卡迪亚",
+                    "C · 宋",
+                    "M · 韦尔斯"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "evolutionary_pressure_4",
+              "title": "演化压力[4/4]",
+              "count": "已完成",
+              "summary": "完成演化压力[4/4]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "field_application_C_Song",
+                  "title": "外勤申请：C · 宋",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/field_application_C_Song.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "传染病",
+                    "新卡斯卡迪亚",
+                    "C · 宋"
+                  ]
+                },
+                {
+                  "id": "quality_analysis_new_infectious_diseases",
+                  "title": "质量分析：新型传染病",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/quality_analysis_new_infectious_diseases.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "传染病",
+                    "盖乌斯",
+                    "纽卡洛里"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "paradigm_shift_1",
+              "title": "范式偏转[1/5]",
+              "count": "已完成",
+              "summary": "完成范式偏转[1/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "field_application_C_Song_1",
+                  "title": "外勤申请：C · 宋",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/field_application_C_Song_1.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "传染病",
+                    "德莱厄斯",
+                    "冲突",
+                    "噩梦",
+                    "C · 宋"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "paradigm_shift_2",
+              "title": "范式偏转[2/5]",
+              "count": "已完成",
+              "summary": "完成范式偏转[2/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "UESC_isolation_standards",
+                  "title": "UESC隔离标准",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/UESC_isolation_standards.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "传染病",
+                    "D · 里德",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "paradigm_shift_3",
+              "title": "范式偏转[3/5]",
+              "count": "已完成",
+              "summary": "完成范式偏转[3/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "broadcast_caruso",
+                  "title": "广播：卡鲁索",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/broadcast_caruso.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "L · 卡鲁索",
+                    "传染病",
+                    "新卡斯卡迪亚",
+                    "uesc马拉松号"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "paradigm_shift_4",
+              "title": "范式偏转[4/5]",
+              "count": "已完成",
+              "summary": "完成范式偏转[4/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "medical_artificial_intelligence_residue",
+                  "title": "医疗人工智能残留物",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/medical_artificial_intelligence_residue.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "异常点",
+                    "传染病",
+                    "加布里埃尔"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "paradigm_shift_5",
+              "title": "范式偏转[5/5]",
+              "count": "已完成",
+              "summary": "完成范式偏转[5/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "soundscape",
+                  "title": "音景",
+                  "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/soundscape.md",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "meta": [
+                    "异常",
+                    "认知风险",
+                    "传染病"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nv_level",
+          "title": "等级",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "nv_II",
+              "title": "纽卡洛里II",
+              "count": "已完成",
+              "summary": "达到纽卡洛里声望等级2。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_II_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_II.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_II.png"
+            },
+            {
+              "id": "nv_X",
+              "title": "纽卡洛里X",
+              "count": "已完成",
+              "summary": "达到纽卡洛里声望等级10。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_X_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_X.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_X.png"
+            },
+            {
+              "id": "nv_XX",
+              "title": "纽卡洛里XX",
+              "count": "已完成",
+              "summary": "达到纽卡洛里声望等级20。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_XX_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_XX.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_XX.png"
+            },
+            {
+              "id": "nv_VIP",
+              "title": "纽卡洛里VIP",
+              "count": "已完成",
+              "summary": "达到纽卡洛里VIP声望。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_VIP.png"
+            },
+            {
+              "id": "nv_early_VIP",
+              "title": "早鸟VIP",
+              "count": "已完成",
+              "summary": "在第1赛季或第2赛季达到纽卡洛里VIP声望。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_early_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_early_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_early_VIP.png"
+            }
+          ]
+        },
+        {
+          "id": "nv_level_up",
+          "title": "升级",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "nv_level_up",
+              "title": "纽卡洛里已升级",
+              "count": "已完成",
+              "summary": "获取纽卡洛里巅峰升级：宝藏_猎人。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "升级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_level_up_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_level_up.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_level_up.png"
+            }
+          ]
+        },
+        {
+          "id": "sponsor_kit",
+          "title": "赞助包",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "nv_randal",
+              "title": "纽卡洛里赞助暴徒",
+              "count": "已完成",
+              "summary": "在使用纽卡洛里赞助包和暴徒外壳后撤离。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_randal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_randal.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_randal.png"
+            },
+            {
+              "id": "nv_triage",
+              "title": "纽卡洛里赞助救援",
+              "count": "已完成",
+              "summary": "在使用纽卡洛里赞助包和救援外壳后撤离。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_triage_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_triage.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_triage.png"
+            },
+            {
+              "id": "nv_destroyer",
+              "title": "纽卡洛里赞助毁灭者",
+              "count": "已完成",
+              "summary": "在使用纽卡洛里赞助包和毁灭者外壳后撤离。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_destroyer_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_destroyer.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_destroyer.png"
+            },
+            {
+              "id": "nv_assassin",
+              "title": "纽卡洛里赞助刺客",
+              "count": "已完成",
+              "summary": "在使用纽卡洛里赞助包和刺客外壳后撤离。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_assassin_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_assassin.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_assassin.png"
+            },
+            {
+              "id": "nv_thief",
+              "title": "纽卡洛里赞助盗贼",
+              "count": "已完成",
+              "summary": "在使用纽卡洛里赞助包和盗贼外壳后撤离。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_thief_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_thief.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_thief.png"
+            },
+            {
+              "id": "nv_recon",
+              "title": "纽卡洛里赞助侦察",
+              "count": "已完成",
+              "summary": "在使用纽卡洛里赞助包和侦察外壳后撤离。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_recon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_recon.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_recon.png"
+            },
+            {
+              "id": "nv_sentinel",
+              "title": "纽卡洛里赞助哨兵",
+              "count": "已完成",
+              "summary": "在使用纽卡洛里赞助包和哨兵外壳后撤离。",
+              "meta": [
+                "阵营",
+                "纽卡洛里",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_sentinel_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_sentinel.md",
+              "image": "/marathon-lore/content/docs/forces/nv/nv_sentinel.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "terex",
+      "title": "特莱克斯",
+      "count": "26 / 26",
+      "icon": "/marathon-lore/assets/images/icons/terex.svg",
+      "nodes": [
+        {
+          "id": "terex_trans",
+          "title": "通讯",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "link_terex",
+              "title": "建立链接：特莱克斯",
+              "count": "已完成",
+              "summary": "建立链接至特莱克斯代理：伏尔甘。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "通讯"
+              ],
+              "logs": [
+                {
+                  "id": "terex_log",
+                  "title": "特莱克斯",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_log.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/terex_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contract",
+          "title": "合约",
+          "count": "10 / 10",
+          "children": [
+            {
+              "id": "equitable_distribution_1",
+              "title": "公平分配[1/4]",
+              "count": "已完成",
+              "summary": "完成公平分配[1/4]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "tau_ceti_status_report",
+                  "title": "天仓五状态报告",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/tau_ceti_status_report.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "奥瑞恩",
+                    "疾行者",
+                    "天仓五iv",
+                    "uesc",
+                    "uesc马拉松号"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "equitable_distribution_2",
+              "title": "公平分配[2/4]",
+              "count": "已完成",
+              "summary": "完成公平分配[2/4]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "list_of_UESC_drones",
+                  "title": "UESC无人机清单",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/list_of_UESC_drones.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "奥瑞恩",
+                    "uesc"
+                  ]
+                },
+                {
+                  "id": "UESC_communication_anomaly",
+                  "title": "UESC通讯：异常点",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_communication_anomaly.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "奥瑞恩",
+                    "C · 苏莱拉",
+                    "天仓五IV",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "equitable_distribution_3",
+              "title": "公平分配[3/4]",
+              "count": "已完成",
+              "summary": "完成公平分配[3/4]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "recording_of_council_meeting",
+                  "title": "理事会会议录音",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/recording_of_council_meeting.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "L · 卡鲁索",
+                    "V · 科尔",
+                    "新卡斯卡迪亚",
+                    "D · 里德",
+                    "uesc"
+                  ]
+                },
+                {
+                  "id": "anomaly_accident_report",
+                  "title": "异常点事故报告",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/anomaly_accident_report.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "巴斯申",
+                    "V · 科尔",
+                    "遭遇"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "return_on_investment_1",
+              "title": "投资回报率[1/5]",
+              "count": "已完成",
+              "summary": "完成投资回报率[1/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "colonial_proclamation",
+                  "title": "殖民地公告",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/colonial_proclamation.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "L · 卡鲁索"
+                  ]
+                },
+                {
+                  "id": "oral_email",
+                  "title": "邮件口述",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/oral_email.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "L · 卡鲁索",
+                    "V · 科尔",
+                    "冲突",
+                    "新卡斯卡迪亚",
+                    "D · 里德",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "return_on_investment_3",
+              "title": "投资回报率[3/5]",
+              "count": "已完成",
+              "summary": "完成投资回报率[3/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "UESC_communication_interference_from_runner",
+                  "title": "UESC通讯：疾行者干扰",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_communication_interference_from_runner.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "奥瑞恩",
+                    "疾行者",
+                    "C · 苏莱拉",
+                    "天仓五IV",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "return_on_investment_5",
+              "title": "投资回报率[5/5]",
+              "count": "已完成",
+              "summary": "完成投资回报率[5/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "application_for_extension_of_anomaly_task_force",
+                  "title": "异常点特遣部队延期申请",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/application_for_extension_of_anomaly_task_force.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "L · 卡鲁索",
+                    "V · 卡鲁索",
+                    "乔伊",
+                    "D · 里德"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "unconventional_conflict_1",
+              "title": "无规冲突[1/5]",
+              "count": "已完成",
+              "summary": "完成无规冲突[1/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "UESC_report_anomaly",
+                  "title": "UESC报告：异常点",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_report_anomaly.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "unconventional_conflict_3",
+              "title": "无规冲突[3/5]",
+              "count": "已完成",
+              "summary": "完成无规冲突[3/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "anomaly_record",
+                  "title": "异常点录音",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/anomaly_record.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "L · 卡鲁索",
+                    "V · 科尔",
+                    "D · 里德"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "unconventional_conflict_4",
+              "title": "无规冲突[4/5]",
+              "count": "已完成",
+              "summary": "完成无规冲突[4/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "UESC_report_combat_protocal",
+                  "title": "UESC报告：战斗协议",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_report_combat_protocal.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "刻耳柏洛斯",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "unconventional_conflict_5",
+              "title": "无规冲突[5/5]",
+              "count": "已完成",
+              "summary": "完成无规冲突[5/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "terex_UESC_communication",
+                  "title": "特莱克斯-UESC通讯",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/terex_UESC_communication.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "疾行者",
+                    "C · 苏莱拉",
+                    "天仓五IV",
+                    "特莱克斯外星工业",
+                    "uesc",
+                    "伏尔甘"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limited_contract",
+          "title": "限定合约",
+          "count": "2 / 2",
+          "children": [
+            {
+              "id": "proof_of_concept",
+              "title": "概念验证",
+              "count": "已完成",
+              "summary": "完成概念验证。",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept.md",
+              "image": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept.png",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "限定合约"
+              ],
+              "logs": [
+                {
+                  "id": "scan_results",
+                  "title": "扫描结果",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/scan_results.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "异常点",
+                    "特莱克斯",
+                    "伏尔甘"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "market_interference",
+              "title": "市场干扰",
+              "count": "已完成",
+              "summary": "完成市场干扰。",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/contract/market_interference_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/market_interference.md",
+              "image": "/marathon-lore/content/docs/forces/terex/contract/market_interference.png",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "限定合约"
+              ],
+              "logs": [
+                {
+                  "id": "performance_report",
+                  "title": "表现报告",
+                  "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/performance_report.md",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "meta": [
+                    "疾行者",
+                    "特莱克斯",
+                    "伏尔甘"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "terex_level",
+          "title": "等级",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "terex_II",
+              "title": "特莱克斯II",
+              "count": "已完成",
+              "summary": "达到特莱克斯声望等级2。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_II_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_II.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_II.png"
+            },
+            {
+              "id": "terex_X",
+              "title": "特莱克斯X",
+              "count": "已完成",
+              "summary": "达到特莱克斯声望等级10。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_X_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_X.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_X.png"
+            },
+            {
+              "id": "terex_XX",
+              "title": "特莱克斯XX",
+              "count": "已完成",
+              "summary": "达到特莱克斯声望等级20。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_XX_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_XX.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_XX.png"
+            },
+            {
+              "id": "terex_VIP",
+              "title": "特莱克斯VIP",
+              "count": "已完成",
+              "summary": "达到特莱克斯VIP声望。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_VIP.png"
+            },
+            {
+              "id": "terex_early_VIP",
+              "title": "早鸟VIP",
+              "count": "已完成",
+              "summary": "在第1赛季或第2赛季达到特莱克斯VIP声望。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_early_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_early_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_early_VIP.png"
+            }
+          ]
+        },
+        {
+          "id": "terex_level_up",
+          "title": "升级",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "terex_level_up",
+              "title": "特莱克斯已升级",
+              "count": "已完成",
+              "summary": "获取特莱克斯巅峰升级：宝藏_猎人。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "升级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_level_up_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_level_up.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_level_up.png"
+            }
+          ]
+        },
+        {
+          "id": "sponsor_kit",
+          "title": "赞助包",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "terex_randal",
+              "title": "特莱克斯赞助暴徒",
+              "count": "已完成",
+              "summary": "在使用特莱克斯赞助包和暴徒外壳后撤离。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_randal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_randal.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_randal.png"
+            },
+            {
+              "id": "terex_triage",
+              "title": "特莱克斯赞助救援",
+              "count": "已完成",
+              "summary": "在使用特莱克斯赞助包和救援外壳后撤离。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_triage_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_triage.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_triage.png"
+            },
+            {
+              "id": "terex_destroyer",
+              "title": "特莱克斯赞助毁灭者",
+              "count": "已完成",
+              "summary": "在使用特莱克斯赞助包和毁灭者外壳后撤离。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_destroyer_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_destroyer.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_destroyer.png"
+            },
+            {
+              "id": "terex_assassin",
+              "title": "特莱克斯赞助刺客",
+              "count": "已完成",
+              "summary": "在使用特莱克斯赞助包和刺客外壳后撤离。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_assassin_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_assassin.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_assassin.png"
+            },
+            {
+              "id": "terex_thief",
+              "title": "特莱克斯赞助盗贼",
+              "count": "已完成",
+              "summary": "在使用特莱克斯赞助包和盗贼外壳后撤离。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_thief_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_thief.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_thief.png"
+            },
+            {
+              "id": "terex_recon",
+              "title": "特莱克斯赞助侦察",
+              "count": "已完成",
+              "summary": "在使用特莱克斯赞助包和侦察外壳后撤离。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_recon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_recon.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_recon.png"
+            },
+            {
+              "id": "terex_sentinel",
+              "title": "特莱克斯赞助哨兵",
+              "count": "已完成",
+              "summary": "在使用特莱克斯赞助包和哨兵外壳后撤离。",
+              "meta": [
+                "阵营",
+                "特莱克斯",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_sentinel_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_sentinel.md",
+              "image": "/marathon-lore/content/docs/forces/terex/terex_sentinel.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mida",
+      "title": "米达",
+      "count": "28 / 28",
+      "icon": "/marathon-lore/assets/images/icons/mida.svg",
+      "nodes": [
+        {
+          "id": "mida_trans",
+          "title": "通讯",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "link_mida",
+              "title": "建立链接：米达",
+              "count": "已完成",
+              "summary": "建立链接至米达代理：_甘特里。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "通讯"
+              ],
+              "logs": [
+                {
+                  "id": "mida_log",
+                  "title": "米达",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_log.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/mida_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contract",
+          "title": "合约",
+          "count": "12 / 12",
+          "children": [
+            {
+              "id": "protect_destroy_2",
+              "title": "保护/毁灭[2/5]",
+              "count": "已完成",
+              "summary": "完成保护/毁灭[2/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "work_instruction_135239",
+                  "title": "工作指令#135239",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/work_instruction.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "生物制剂",
+                    "奥瑞恩",
+                    "特莱克斯外星",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "protect_destroy_3",
+              "title": "保护/毁灭[3/5]",
+              "count": "已完成",
+              "summary": "完成保护/毁灭[3/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "personnel_file_oren",
+                  "title": "人事档案：“奥瑞恩”",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/personnel_file_oren.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "刻耳柏洛斯",
+                    "月球",
+                    "火星",
+                    "米达",
+                    "奥瑞恩",
+                    "uesc",
+                    "_甘特里"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "running_hide_1",
+              "title": "疾行/藏身[1/6]",
+              "count": "已完成",
+              "summary": "完成疾行/藏身[1/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "message_oren_1",
+                  "title": "消息：奥瑞恩[1]",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/message_oren_1.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "奥瑞恩",
+                    "米达",
+                    "天仓五IV",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "running_hide_2",
+              "title": "疾行/藏身[2/6]",
+              "count": "已完成",
+              "summary": "完成疾行/藏身[2/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "message_oren_2",
+                  "title": "消息：奥瑞恩[2]",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/message_oren_2.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "奥瑞恩",
+                    "米达",
+                    "天仓五IV",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "running_hide_3",
+              "title": "疾行/藏身[3/6]",
+              "count": "已完成",
+              "summary": "完成疾行/藏身[3/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "kerberos_code_fragment",
+                  "title": "刻耳柏洛斯代码碎片",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/kerberos_code_fragment.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "刻耳柏洛斯",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "running_hide_5",
+              "title": "疾行/藏身[5/6]",
+              "count": "已完成",
+              "summary": "完成疾行/藏身[5/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "monitoring_records",
+                  "title": "监控记录",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/monitoring_records.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "凯莱蒂",
+                    "奥瑞恩",
+                    "米达",
+                    "天仓五IV",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "running_hide_6",
+              "title": "疾行/藏身[6/6]",
+              "count": "已完成",
+              "summary": "完成疾行/藏身[6/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "personal_diary_orien",
+                  "title": "个人日志：奥瑞恩",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/personal_diary_orien.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "接触事件",
+                    "奥瑞恩",
+                    "天仓五IV",
+                    "uesc",
+                    "uesc马拉松号"
+                  ]
+                },
+                {
+                  "id": "post_analysis",
+                  "title": "【隐藏】事后剖析，1",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/post_analysis_1.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "接触事件",
+                    "D · 里德",
+                    "uesc",
+                    "uesc马拉松号"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trust_lie_2",
+              "title": "信任/谎言[2/6]",
+              "count": "已完成",
+              "summary": "完成信任/谎言[2/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "post_analysis",
+                  "title": "【隐藏】事后剖析，2",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/post_analysis_2.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "接触事件",
+                    "D · 里德",
+                    "uesc",
+                    "uesc马拉松号"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trust_lie_3",
+              "title": "信任/谎言[3/6]",
+              "count": "已完成",
+              "summary": "完成信任/谎言[3/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "unknown_sample_file",
+                  "title": "未知样本文件",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/unknown_sample_file.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trust_lie_4",
+              "title": "信任/谎言[4/6]",
+              "count": "已完成",
+              "summary": "完成信任/谎言[4/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "UESC_communication_combat_report",
+                  "title": "UESC通讯：战斗报告",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/UESC_communication_combat_report.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "T · 凯莱蒂",
+                    "奥瑞恩",
+                    "天仓五IV",
+                    "uesc",
+                    "_甘特里"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trust_lie_5",
+              "title": "信任/谎言[5/6]",
+              "count": "已完成",
+              "summary": "完成信任/谎言[5/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "UESC_communication_unstable_sample",
+                  "title": "UESC通讯：不稳定样本",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/UESC_communication_unstable_sample.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "冲突",
+                    "奥瑞恩",
+                    "天仓五IV",
+                    "uesc",
+                    "uesc马拉松号"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trust_lie_6",
+              "title": "信任/谎言[6/6]",
+              "count": "已完成",
+              "summary": "完成信任/谎言[6/6]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "米达",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "mida_annoucement",
+                  "title": "米达宣言",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/mida_annoucement.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "米达",
+                    "uesc",
+                    "_甘特里"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "limited_contract",
+          "title": "限定合约",
+          "count": "2 / 2",
+          "children": [
+            {
+              "id": "burn_reveal",
+              "title": "燃烧/揭露",
+              "count": "已完成",
+              "summary": "完成燃烧/揭露。",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal.md",
+              "image": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal.png",
+              "meta": [
+                "阵营",
+                "米达",
+                "限定合约"
+              ],
+              "logs": [
+                {
+                  "id": "experimental_log",
+                  "title": "实验日志",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/experimental_log.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "异常点",
+                    "刻耳柏洛斯",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "comfortable_maze",
+              "title": "安逸/牢笼",
+              "count": "已完成",
+              "summary": "完成安逸/牢笼。",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze.md",
+              "image": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze.png",
+              "meta": [
+                "阵营",
+                "米达",
+                "限定合约"
+              ],
+              "logs": [
+                {
+                  "id": "arrchne_proposal",
+                  "title": "阿拉克尼提案",
+                  "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/arrchne_proposal.md",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "meta": [
+                    "阿拉克尼",
+                    "米达"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mida_level",
+          "title": "等级",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "mida_II",
+              "title": "米达II",
+              "count": "已完成",
+              "summary": "达到米达声望等级2。",
+              "meta": [
+                "阵营",
+                "米达",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_II_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_II.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_II.png"
+            },
+            {
+              "id": "mida_X",
+              "title": "米达X",
+              "count": "已完成",
+              "summary": "达到米达声望等级10。",
+              "meta": [
+                "阵营",
+                "米达",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_X_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_X.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_X.png"
+            },
+            {
+              "id": "mida_XX",
+              "title": "米达XX",
+              "count": "已完成",
+              "summary": "达到米达声望等级20。",
+              "meta": [
+                "阵营",
+                "米达",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_XX_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_XX.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_XX.png"
+            },
+            {
+              "id": "mida_VIP",
+              "title": "米达VIP",
+              "count": "已完成",
+              "summary": "达到米达VIP声望。",
+              "meta": [
+                "阵营",
+                "米达",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_VIP.png"
+            },
+            {
+              "id": "mida_early_VIP",
+              "title": "早鸟VIP",
+              "count": "已完成",
+              "summary": "在第1赛季或第2赛季达到米达VIP声望。",
+              "meta": [
+                "阵营",
+                "米达",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_early_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_early_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_early_VIP.png"
+            }
+          ]
+        },
+        {
+          "id": "mida_level_up",
+          "title": "升级",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "mida_level_up",
+              "title": "米达已升级",
+              "count": "已完成",
+              "summary": "获取米达巅峰升级：宝藏_猎人。",
+              "meta": [
+                "阵营",
+                "米达",
+                "升级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_level_up_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_level_up.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_level_up.png"
+            }
+          ]
+        },
+        {
+          "id": "sponsor_kit",
+          "title": "赞助包",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "mida_randal",
+              "title": "米达赞助暴徒",
+              "count": "已完成",
+              "summary": "在使用米达赞助包和暴徒外壳后撤离。",
+              "meta": [
+                "阵营",
+                "米达",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_randal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_randal.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_randal.png"
+            },
+            {
+              "id": "mida_triage",
+              "title": "米达赞助救援",
+              "count": "已完成",
+              "summary": "在使用米达赞助包和救援外壳后撤离。",
+              "meta": [
+                "阵营",
+                "米达",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_triage_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_triage.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_triage.png"
+            },
+            {
+              "id": "mida_destroyer",
+              "title": "米达赞助毁灭者",
+              "count": "已完成",
+              "summary": "在使用米达赞助包和毁灭者外壳后撤离。",
+              "meta": [
+                "阵营",
+                "米达",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_destroyer_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_destroyer.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_destroyer.png"
+            },
+            {
+              "id": "mida_assassin",
+              "title": "米达赞助刺客",
+              "count": "已完成",
+              "summary": "在使用米达赞助包和刺客外壳后撤离。",
+              "meta": [
+                "阵营",
+                "米达",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_assassin_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_assassin.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_assassin.png"
+            },
+            {
+              "id": "mida_thief",
+              "title": "米达赞助盗贼",
+              "count": "已完成",
+              "summary": "在使用米达赞助包和盗贼外壳后撤离。",
+              "meta": [
+                "阵营",
+                "米达",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_thief_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_thief.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_thief.png"
+            },
+            {
+              "id": "mida_recon",
+              "title": "米达赞助侦察",
+              "count": "已完成",
+              "summary": "在使用米达赞助包和侦察外壳后撤离。",
+              "meta": [
+                "阵营",
+                "米达",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_recon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_recon.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_recon.png"
+            },
+            {
+              "id": "mida_sentinel",
+              "title": "米达赞助哨兵",
+              "count": "已完成",
+              "summary": "在使用米达赞助包和哨兵外壳后撤离。",
+              "meta": [
+                "阵营",
+                "米达",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_sentinel_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_sentinel.md",
+              "image": "/marathon-lore/content/docs/forces/mida/mida_sentinel.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrchne",
+      "title": "阿拉克尼",
+      "count": "14 / 14",
+      "icon": "/marathon-lore/assets/images/icons/arrchne.svg",
+      "nodes": [
+        {
+          "id": "arrchne_trans",
+          "title": "通讯",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "link_arrchne",
+              "title": "建立链接：阿拉克尼",
+              "count": "已完成",
+              "summary": "建立链接至阿拉克尼代理：查特。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "通讯"
+              ],
+              "logs": [
+                {
+                  "id": "arrchne_log",
+                  "title": "阿拉克尼",
+                  "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_log.md",
+                  "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arrchne_level",
+          "title": "等级",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "arrchne_II",
+              "title": "阿拉克尼II",
+              "count": "已完成",
+              "summary": "达到阿拉克尼声望等级2。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_II_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_II.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_II.png"
+            },
+            {
+              "id": "arrchne_X",
+              "title": "阿拉克尼X",
+              "count": "已完成",
+              "summary": "达到阿拉克尼声望等级10。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_X_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_X.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_X.png"
+            },
+            {
+              "id": "arrchne_XX",
+              "title": "阿拉克尼XX",
+              "count": "已完成",
+              "summary": "达到阿拉克尼声望等级20。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX.png"
+            },
+            {
+              "id": "arrchne_VIP",
+              "title": "阿拉克尼VIP",
+              "count": "已完成",
+              "summary": "达到阿拉克尼VIP声望。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP.png"
+            },
+            {
+              "id": "arrchne_early_VIP",
+              "title": "早鸟VIP",
+              "count": "已完成",
+              "summary": "在第1赛季或第2赛季达到阿拉克尼VIP声望。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP.png"
+            }
+          ]
+        },
+        {
+          "id": "arrchne_level_up",
+          "title": "升级",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "arrchne_level_up",
+              "title": "阿拉克尼已升级",
+              "count": "已完成",
+              "summary": "获取阿拉克尼巅峰升级：宝藏_猎人。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "升级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up.png"
+            }
+          ]
+        },
+        {
+          "id": "sponsor_kit",
+          "title": "赞助包",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "arrchne_randal",
+              "title": "阿拉克尼赞助暴徒",
+              "count": "已完成",
+              "summary": "在使用阿拉克尼赞助包和暴徒外壳后撤离。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal.png"
+            },
+            {
+              "id": "arrchne_triage",
+              "title": "阿拉克尼赞助救援",
+              "count": "已完成",
+              "summary": "在使用阿拉克尼赞助包和救援外壳后撤离。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage.png"
+            },
+            {
+              "id": "arrchne_destroyer",
+              "title": "阿拉克尼赞助毁灭者",
+              "count": "已完成",
+              "summary": "在使用阿拉克尼赞助包和毁灭者外壳后撤离。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer.png"
+            },
+            {
+              "id": "arrchne_assassin",
+              "title": "阿拉克尼赞助刺客",
+              "count": "已完成",
+              "summary": "在使用阿拉克尼赞助包和刺客外壳后撤离。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin.png"
+            },
+            {
+              "id": "arrchne_thief",
+              "title": "阿拉克尼赞助盗贼",
+              "count": "已完成",
+              "summary": "在使用阿拉克尼赞助包和盗贼外壳后撤离。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief.png"
+            },
+            {
+              "id": "arrchne_recon",
+              "title": "阿拉克尼赞助侦察",
+              "count": "已完成",
+              "summary": "在使用阿拉克尼赞助包和侦察外壳后撤离。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon.png"
+            },
+            {
+              "id": "arrchne_sentinel",
+              "title": "阿拉克尼赞助哨兵",
+              "count": "已完成",
+              "summary": "在使用阿拉克尼赞助包和哨兵外壳后撤离。",
+              "meta": [
+                "阵营",
+                "阿拉克尼",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel.md",
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sekiguchi",
+      "title": "关口",
+      "count": "21 / 21 ",
+      "icon": "/marathon-lore/assets/images/icons/sekiguchi.svg",
+      "nodes": [
+        {
+          "id": "sekiguchi_trans",
+          "title": "通讯",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "link_sekiguchi",
+              "title": "建立链接：关口",
+              "count": "已完成",
+              "summary": "建立链接至关口代理：诺娜。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "通讯"
+              ],
+              "logs": [
+                {
+                  "id": "sekiguchi_log",
+                  "title": "关口",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_log.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contract",
+          "title": "合约",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "parasitic_relationship_1",
+              "title": "寄生关系[1/5]",
+              "count": "已完成",
+              "summary": "完成寄生关系[1/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "code_snippet_optimization",
+                  "title": "代码片段：优化",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/code_snippet_optimization.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "刻耳柏洛斯",
+                    "认知危害",
+                    "oni",
+                    "uesc"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "parasitic_relationship_2",
+              "title": "寄生关系[2/5]",
+              "count": "已完成",
+              "summary": "完成寄生关系[2/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "death_and_strange_women",
+                  "title": "代码片段：优化",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/death_and_strange_women.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "诺娜",
+                    "关口基因"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "parasitic_relationship_3",
+              "title": "寄生关系[3/5]",
+              "count": "已完成",
+              "summary": "完成寄生关系[3/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "special_research",
+                  "title": "特别研究",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/special_research.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "L · 卡鲁索",
+                    "真菌",
+                    "F · 莫雷诺",
+                    "C · 宋"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "parasitic_relationship_5",
+              "title": "寄生关系[5/5]",
+              "count": "已完成",
+              "summary": "完成寄生关系[5/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "code_snippet_pseudo_organism",
+                  "title": "代码片段：拟生体",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/code_snippet_pseudo_organism.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "认知危害",
+                    "oni",
+                    "关口基因",
+                    "拟生体"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "coevolution_1",
+              "title": "协同进化[1/5]",
+              "count": "已完成",
+              "summary": "完成协同进化[1/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "war_and_weaver",
+                  "title": "战争与织者",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/war_and_weaver.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "诺娜",
+                    "关口基因"
+                  ]
+                },
+                {
+                  "id": "laboratory_transcription",
+                  "title": "实验室转录",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/laboratory_transcription.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "生物基因",
+                    "神经机械",
+                    "F · 莫雷诺"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "coevolution_4",
+              "title": "协同进化[4/5]",
+              "count": "已完成",
+              "summary": "完成协同进化[4/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "metabolic_reading",
+                  "title": "新陈代谢读数",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/metabolic_reading.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "诺娜",
+                    "oni",
+                    "关口基因",
+                    "拟生体"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "coevolution_5",
+              "title": "协同进化[5/5]",
+              "count": "已完成",
+              "summary": "完成协同进化[5/5]。",
+              "icon": "None",
+              "meta": [
+                "阵营",
+                "关口",
+                "合约"
+              ],
+              "logs": [
+                {
+                  "id": "inter_enterprise_transmission",
+                  "title": "企业间传输",
+                  "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/inter_enterprise_transmission.md",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "meta": [
+                    "诺娜",
+                    "关口基因",
+                    "拟生体"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sekiguchi_level",
+          "title": "等级",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "sekiguchi_II",
+              "title": "关口II",
+              "count": "已完成",
+              "summary": "达到关口声望等级2。",
+              "meta": [
+                "阵营",
+                "关口",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II.png"
+            },
+            {
+              "id": "sekiguchi_X",
+              "title": "关口X",
+              "count": "已完成",
+              "summary": "达到关口声望等级10。",
+              "meta": [
+                "阵营",
+                "关口",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X.png"
+            },
+            {
+              "id": "sekiguchi_XX",
+              "title": "关口XX",
+              "count": "已完成",
+              "summary": "达到关口声望等级20。",
+              "meta": [
+                "阵营",
+                "关口",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX.png"
+            },
+            {
+              "id": "sekiguchi_VIP",
+              "title": "关口VIP",
+              "count": "已完成",
+              "summary": "达到关口VIP声望。",
+              "meta": [
+                "阵营",
+                "关口",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP.png"
+            },
+            {
+              "id": "sekiguchi_early_VIP",
+              "title": "早鸟VIP",
+              "count": "已完成",
+              "summary": "在第1赛季或第2赛季达到关口VIP声望。",
+              "meta": [
+                "阵营",
+                "关口",
+                "等级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP.png"
+            }
+          ]
+        },
+        {
+          "id": "sekiguchi_level_up",
+          "title": "升级",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "sekiguchi_level_up",
+              "title": "关口已升级",
+              "count": "已完成",
+              "summary": "获取关口巅峰升级：宝藏_猎人。",
+              "meta": [
+                "阵营",
+                "关口",
+                "升级"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up.png"
+            }
+          ]
+        },
+        {
+          "id": "sponsor_kit",
+          "title": "赞助包",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "sekiguchi_randal",
+              "title": "关口赞助暴徒",
+              "count": "已完成",
+              "summary": "在使用关口赞助包和暴徒外壳后撤离。",
+              "meta": [
+                "阵营",
+                "关口",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal.png"
+            },
+            {
+              "id": "sekiguchi_triage",
+              "title": "关口赞助救援",
+              "count": "已完成",
+              "summary": "在使用关口赞助包和救援外壳后撤离。",
+              "meta": [
+                "阵营",
+                "关口",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage.png"
+            },
+            {
+              "id": "sekiguchi_destroyer",
+              "title": "关口赞助毁灭者",
+              "count": "已完成",
+              "summary": "在使用关口赞助包和毁灭者外壳后撤离。",
+              "meta": [
+                "阵营",
+                "关口",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer.png"
+            },
+            {
+              "id": "sekiguchi_assassin",
+              "title": "关口赞助刺客",
+              "count": "已完成",
+              "summary": "在使用关口赞助包和刺客外壳后撤离。",
+              "meta": [
+                "阵营",
+                "关口",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin.png"
+            },
+            {
+              "id": "sekiguchi_thief",
+              "title": "关口赞助盗贼",
+              "count": "已完成",
+              "summary": "在使用关口赞助包和盗贼外壳后撤离。",
+              "meta": [
+                "阵营",
+                "关口",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief.png"
+            },
+            {
+              "id": "sekiguchi_recon",
+              "title": "关口赞助侦察",
+              "count": "已完成",
+              "summary": "在使用关口赞助包和侦察外壳后撤离。",
+              "meta": [
+                "阵营",
+                "关口",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon.png"
+            },
+            {
+              "id": "sekiguchi_sentinel",
+              "title": "关口赞助哨兵",
+              "count": "已完成",
+              "summary": "在使用关口赞助包和哨兵外壳后撤离。",
+              "meta": [
+                "阵营",
+                "关口",
+                "赞助包"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel.md",
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

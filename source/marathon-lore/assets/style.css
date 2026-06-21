@@ -1215,10 +1215,11 @@ body {
 }
 
 .section-card {
-  min-height:470px;
+  min-height:300px;
   display:flex;
   flex-direction:column;
-  justify-content:space-between
+  justify-content:flex-start;
+  gap:18px
 }
 
 .entry-card {
