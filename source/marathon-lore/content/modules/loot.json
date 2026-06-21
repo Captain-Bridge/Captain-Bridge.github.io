@@ -1,8 +1,1116 @@
 {
   "id": "loot",
   "title": "掠夺",
-  "count": "0 / 0",
+  "count": "78 / 78",
   "icon": "/marathon-lore/assets/images/icons/loot.svg",
   "summary": "装备、掉落与收藏条目。",
-  "sections": []
+  "sections": [
+    {
+      "id": "weapon",
+      "title": "武器",
+      "count": "32 / 32",
+      "icon": "/marathon-lore/assets/images/icons/weapon.svg",
+      "nodes": [
+        {
+          "id": "assault_rifle",
+          "title": "突击步枪",
+          "count": "4 / 4",
+          "children": [
+            {
+              "id": "M77",
+              "title": "M77突击步枪",
+              "count": "已完成",
+              "summary": "在一次疾行中，使用瞄准镜在65+米以外以及不使用瞄准镜在25米以内完成消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "突击步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/M77_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/M77.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/M77.png"
+            },
+            {
+              "id": "overrun",
+              "title": "奔袭突击步枪",
+              "count": "已完成",
+              "summary": "在一次疾行中，使用腰射和精准伤害完成消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "突击步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/overrun_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/overrun.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/overrun.png"
+            },
+            {
+              "id": "impact",
+              "title": "冲击重型突击步枪",
+              "count": "已完成",
+              "summary": "在25+米以外完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "突击步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/impact_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/impact.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/impact.png"
+            },
+            {
+              "id": "V75",
+              "title": "V75 SCAR",
+              "count": "已完成",
+              "summary": "在武器未过热的情况下快速完成2次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "突击步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V75_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V75.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V75.png"
+            }
+          ]
+        },
+        {
+          "id": "machine_gun",
+          "title": "机枪",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "conquest_LMG",
+              "title": "征服轻机枪",
+              "count": "已完成",
+              "summary": "在蹲伏时连续完成2次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "机枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/conquest_LMG_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/conquest_LMG.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/conquest_LMG.png"
+            },
+            {
+              "id": "retaliator_LMG",
+              "title": "复仇者轻机枪",
+              "count": "已完成",
+              "summary": "在一次疾行中，在瞄准期间且激活护盾的情况下完成5次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "机枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/retaliator_LMG_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/retaliator_LMG.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/retaliator_LMG.png"
+            },
+            {
+              "id": "demolition_HMG",
+              "title": "爆破重机枪",
+              "count": "已完成",
+              "summary": "在不进行填装的情况下完成3次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "机枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/demolition_HMG_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/demolition_HMG.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/demolition_HMG.png"
+            }
+          ]
+        },
+        {
+          "id": "precision_rifle ",
+          "title": "精密步枪",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "hardline_PR",
+              "title": "铁律精密步枪",
+              "count": "已完成",
+              "summary": "在30+米以外完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "精密步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/hardline_PR_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/hardline_PR.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/hardline_PR.png"
+            },
+            {
+              "id": "repeater_HPR",
+              "title": "连击者重型精密步枪",
+              "count": "已完成",
+              "summary": "在30+米以外完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "精密步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/repeater_HPR_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/repeater_HPR.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/repeater_HPR.png"
+            },
+            {
+              "id": "V66_Lookout",
+              "title": "V66 瞭望",
+              "count": "已完成",
+              "summary": "使用充能射击完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "精密步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V66_Lookout_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V66_Lookout.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V66_Lookout.png"
+            },
+            {
+              "id": "stryder_M1T",
+              "title": "风行者M1T",
+              "count": "已完成",
+              "summary": "在15米内没有敌对目标的情况下完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "精密步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/stryder_M1T_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/stryder_M1T.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/stryder_M1T.png"
+            },
+            {
+              "id": "twin_tap_HBR",
+              "title": "双击重型战斗步枪",
+              "count": "已完成",
+              "summary": "在7秒内完成2次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "精密步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/twin_tap_HBR_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/twin_tap_HBR.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/twin_tap_HBR.png"
+            },
+            {
+              "id": "BR33_volley_rifle",
+              "title": "BR33连发步枪",
+              "count": "已完成",
+              "summary": "在腰射时完成一次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "精密步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/BR33_volley_rifle_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/BR33_volley_rifle.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/BR33_volley_rifle.png"
+            }
+          ]
+        },
+        {
+          "id": "pistols",
+          "title": "手枪",
+          "count": "4 / 4",
+          "children": [
+            {
+              "id": "CE_tactical_sidearm",
+              "title": "近战战术手枪",
+              "count": "已完成",
+              "summary": "在切换至该武器后短时间内击败一个敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "手枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/CE_tactical_sidearm_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/CE_tactical_sidearm.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/CE_tactical_sidearm.png"
+            },
+            {
+              "id": "V11_punch",
+              "title": "V11重拳",
+              "count": "已完成",
+              "summary": "通过一发充能射击击败一个敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "手枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V11_punch_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V11_punch.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V11_punch.png"
+            },
+            {
+              "id": "magnum_MC",
+              "title": "马格南巨极",
+              "count": "已完成",
+              "summary": "在不进行填装的情况下通过精准伤害快速连续击败2个敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "手枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/magnum_MC_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/magnum_MC.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/magnum_MC.png"
+            },
+            {
+              "id": "D54_battle_pistol",
+              "title": "D54战斗手枪",
+              "count": "已完成",
+              "summary": "在切换武器后短时间内使用D54战斗手枪击败敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "手枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/D54_battle_pistol_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/D54_battle_pistol.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/D54_battle_pistol.png"
+            }
+          ]
+        },
+        {
+          "id": "rail_gun",
+          "title": "电磁炮",
+          "count": "2 / 2",
+          "children": [
+            {
+              "id": "V00_ZEUS_RG",
+              "title": "V00 ZEUS电磁炮",
+              "count": "已完成",
+              "summary": "在30+米以外完成一次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "电磁炮"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V00_ZEUS_RG_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V00_ZEUS_RG.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V00_ZEUS_RG.png"
+            },
+            {
+              "id": "ARES_RG",
+              "title": "ARES电磁炮",
+              "count": "已完成",
+              "summary": "在30+米以外完成一次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "电磁炮"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/ARES_RG_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/ARES_RG.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/ARES_RG.png"
+            }
+          ]
+        },
+        {
+          "id": "shotgun",
+          "title": "霰弹枪",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "WSTR_combat_shotgun",
+              "title": "WSTR战斗霰弹枪",
+              "count": "已完成",
+              "summary": "在不进行填装的情况下消灭2个敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "霰弹枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/WSTR_combat_shotgun_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/WSTR_combat_shotgun.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/WSTR_combat_shotgun.png"
+            },
+            {
+              "id": "misriah_2442",
+              "title": "米斯利亚2442",
+              "count": "已完成",
+              "summary": "在滑行后短时间内击败一个敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "霰弹枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/misriah_2442_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/misriah_2442.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/misriah_2442.png"
+            },
+            {
+              "id": "V85_circuit_breaker",
+              "title": "V85断路器",
+              "count": "已完成",
+              "summary": "在完全充能时击败一个敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "霰弹枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V85_circuit_breaker_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V85_circuit_breaker.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V85_circuit_breaker.png"
+            }
+          ]
+        },
+        {
+          "id": "sniper_rifles",
+          "title": "狙击步枪",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "longshot",
+              "title": "远征",
+              "count": "已完成",
+              "summary": "在50+米以外完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "狙击步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/longshot_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/longshot.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/longshot.png"
+            },
+            {
+              "id": "outland",
+              "title": "边界",
+              "count": "已完成",
+              "summary": "在50+米以外完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "狙击步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/outland_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/outland.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/outland.png"
+            },
+            {
+              "id": "V99_channel_rifle",
+              "title": "V99聚能步枪",
+              "count": "已完成",
+              "summary": "在完全充能时完成一次精准消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "狙击步枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V99_channel_rifle_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V99_channel_rifle.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V99_channel_rifle.png"
+            }
+          ]
+        },
+        {
+          "id": "submachine_guns ",
+          "title": "冲锋枪",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "BRRT_SMG",
+              "title": "BRRT冲锋枪",
+              "count": "已完成",
+              "summary": "在腰射时快速连续完成2次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "冲锋枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/BRRT_SMG_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/BRRT_SMG.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/BRRT_SMG.png"
+            },
+            {
+              "id": "copperhead_RF",
+              "title": "铜斑蛇速射",
+              "count": "已完成",
+              "summary": "在填装后短时间内完成一次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "冲锋枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/copperhead_RF_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/copperhead_RF.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/copperhead_RF.png"
+            },
+            {
+              "id": "bully_SMG",
+              "title": "恶霸冲锋枪",
+              "count": "已完成",
+              "summary": "在被敌对目标包围时完成一次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "冲锋枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/bully_SMG_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/bully_SMG.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/bully_SMG.png"
+            },
+            {
+              "id": "V22_Volt_thrower",
+              "title": "V22伏特放射器",
+              "count": "已完成",
+              "summary": "在武器未过热的情况下快速连续完成2次消灭",
+              "meta": [
+                "掠夺",
+                "武器",
+                "冲锋枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V22_Volt_thrower_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V22_Volt_thrower.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V22_Volt_thrower.png"
+            },
+            {
+              "id": "KKV_9SD",
+              "title": "KKV_9SD",
+              "count": "已完成",
+              "summary": "使用KKV_9SD在10米内击败敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "冲锋枪"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/KKV_9SD_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/KKV_9SD.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/KKV_9SD.png"
+            }
+          ]
+        },
+        {
+          "id": "melee",
+          "title": "近战",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "knife",
+              "title": "多功能匕首",
+              "count": "已完成",
+              "summary": "从背后击败一名敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "近战"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/knife_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/knife.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/knife.png"
+            }
+          ]
+        },
+        {
+          "id": "secret_collection",
+          "title": "秘藏",
+          "count": "1 / 1",
+          "children": [
+            {
+              "id": "biotoxic_disinjector",
+              "title": "生物毒素分离注射器",
+              "count": "已完成",
+              "summary": "在低温档案室的一次疾行中，使用生物毒素分离注射器的每种射击模式各击杀14名敌对目标。",
+              "meta": [
+                "掠夺",
+                "武器",
+                "近战"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/biotoxic_disinjector_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/biotoxic_disinjector.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/biotoxic_disinjector.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combat_tools",
+      "title": "战斗实用工具",
+      "count": "17 / 17",
+      "icon": "/marathon-lore/assets/images/icons/combat_tools.svg",
+      "nodes": [
+        {
+          "id": "equipment",
+          "title": "装备",
+          "count": "5 / 5",
+          "children": [
+            {
+              "id": "grenade",
+              "title": "幸运聚爆",
+              "count": "已完成",
+              "summary": "在一次疾行中使用破片手雷击败2名敌对目标。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "装备"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "grenade",
+                  "title": "破片手雷",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/grenade.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/grenade.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trap_package",
+              "title": "贪心不足",
+              "count": "已完成",
+              "summary": "用陷阱包击倒一名疾行者。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "装备"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "trap_package",
+                  "title": "陷阱包",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/trap_package.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/trap_package.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "frost_nade",
+              "title": "冰霜地雷",
+              "count": "已完成",
+              "summary": "使用冰霜地雷",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "装备"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "frost_nade",
+                  "title": "冰霜地雷",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/frost_nade.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/frost_nade.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "flare",
+              "title": "信号弹",
+              "count": "已完成",
+              "summary": "使用信号弹",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "装备"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "flare",
+                  "title": "信号弹",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/flare.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/flare.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vector_nade",
+              "title": "矢量手雷",
+              "count": "已完成",
+              "summary": "使用矢量手雷",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "装备"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "vector_nade",
+                  "title": "矢量手雷",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/vector_nade.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/vector_nade.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "consumables",
+          "title": "消耗品",
+          "count": "12 / 12",
+          "children": [
+            {
+              "id": "repair_kit",
+              "title": "修补包",
+              "count": "已完成",
+              "summary": "使用修补包。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "repair_kit",
+                  "title": "修补包概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/repair_kit.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/repair_kit.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "shield_battery",
+              "title": "护盾电池",
+              "count": "已完成",
+              "summary": "使用护盾电池。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "shield_battery",
+                  "title": "护盾电池概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/shield_battery.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/shield_battery.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "phoniex",
+              "title": "万能药工具包",
+              "count": "已完成",
+              "summary": "使用万能药工具包。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "phoniex",
+                  "title": "万能药工具包概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/phoniex.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/phoniex.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "operating_system_debugging",
+              "title": "操作系统调试",
+              "count": "已完成",
+              "summary": "使用操作系统调试。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "operating_system_debugging",
+                  "title": "操作系统调试概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/operating_system_debugging.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/operating_system_debugging.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mechanical_package",
+              "title": "机械包",
+              "count": "已完成",
+              "summary": "使用机械包。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "mechanical_package",
+                  "title": "机械包概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/mechanical_package.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/mechanical_package.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "antivirus_package",
+              "title": "杀毒包",
+              "count": "已完成",
+              "summary": "使用杀毒包。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "antivirus_package",
+                  "title": "杀毒包概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/antivirus_package.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/antivirus_package.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cardiopulmonary_resuscitation",
+              "title": "心肺复苏",
+              "count": "已完成",
+              "summary": "使用心肺复苏。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "cardiopulmonary_resuscitation",
+                  "title": "心肺复苏概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/cardiopulmonary_resuscitation.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/cardiopulmonary_resuscitation.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "energy_boost",
+              "title": "能量增幅",
+              "count": "已完成",
+              "summary": "使用能量增幅。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "energy_boost",
+                  "title": "能量增幅概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/energy_boost.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/energy_boost.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "self_revive",
+              "title": "自我复活",
+              "count": "已完成",
+              "summary": "使用自我复活。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "self_revive",
+                  "title": "自我复活概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/self_revive.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/self_revive.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "singal_jam",
+              "title": "信号干扰器",
+              "count": "已完成",
+              "summary": "使用信号干扰器。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "singal_jam",
+                  "title": "信号干扰器概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/singal_jam.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/singal_jam.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "boot_in_primary_skills",
+              "title": "增幅主要技能",
+              "count": "已完成",
+              "summary": "在能量增幅生效期间使用你的外壳的主要技能。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "boot_in_primary_skills",
+                  "title": "增幅主要技能",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/boot_in_primary_skills.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/energy_boost.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "blocking_jammer",
+              "title": "阻断型干扰器",
+              "count": "已完成",
+              "summary": "在信号干扰器激活时击败一个敌对目标。",
+              "meta": [
+                "掠夺",
+                "战斗实用工具",
+                "消耗品"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "blocking_jammer",
+                  "title": "阻断型干扰器",
+                  "bodyFile": "/marathon-lore/content/docs/loot/combat_tools/blocking_jammer.md",
+                  "image": "/marathon-lore/content/docs/loot/combat_tools/blocking_jammer.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ] 
+        }        
+      ]
+    },
+    {
+      "id": "items",
+      "title": "已获取的物品",
+      "count": "15 / 15",
+      "icon": "/marathon-lore/assets/images/icons/items.svg",
+      "nodes": [
+        {
+          "id": "recycle",
+          "title": "装备",
+          "count": "15 / 15",
+          "children": [
+            {
+              "id": "standard_recycling_resources",
+              "title": "标准回收资源",
+              "count": "已完成",
+              "summary": "携带任意标准非怪奇回收资源撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "standard_recycling_resources",
+                  "title": "标准回收资源",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/standard_recycling_resources.md",
+                  "image": "/marathon-lore/content/docs/loot/items/standard_recycling_resources.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "strengthen_recycling_resources",
+              "title": "强化回收资源",
+              "count": "已完成",
+              "summary": "携带任意强化非怪奇回收资源撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "strengthen_recycling_resources",
+                  "title": "强化回收资源",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/strengthen_recycling_resources.md",
+                  "image": "/marathon-lore/content/docs/loot/items/strengthen_recycling_resources.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "luxury_recycling_resources",
+              "title": "豪华回收资源",
+              "count": "已完成",
+              "summary": "携带任意豪华非怪奇回收资源撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "luxury_recycling_resources",
+                  "title": "豪华回收资源",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/luxury_recycling_resources.md",
+                  "image": "/marathon-lore/content/docs/loot/items/luxury_recycling_resources.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "UESC_obeys_matrix",
+              "title": "UESC服从矩阵",
+              "count": "已完成",
+              "summary": "携带UESC服从矩阵撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/UESC_obeys_matrix_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/UESC_obeys_matrix.md",
+              "image": "/marathon-lore/content/docs/loot/items/UESC_obeys_matrix.png",
+              "logs": [
+                {
+                  "id": "UESC_obeys_matrix",
+                  "title": "UESC服从矩阵",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/UESC_obeys_matrix_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/UESC_obeys_matrix_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "prediction_framework",
+              "title": "预测框架",
+              "count": "已完成",
+              "summary": "携带预测框架撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/prediction_framework_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/prediction_framework.md",
+              "image": "/marathon-lore/content/docs/loot/items/prediction_framework.png",
+              "logs": [
+                {
+                  "id": "prediction_framework",
+                  "title": "预测框架",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/prediction_framework_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/prediction_framework_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ] 
+        }        
+      ]
+    }
+  ]
 }
