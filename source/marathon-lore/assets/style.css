@@ -267,6 +267,8 @@ body {
 .hud-left .card-icon {
   width:var(--sidebar-logo-size);
   height:var(--sidebar-logo-size);
+  background:transparent;
+  border-radius:0;
 }
 
 .viewport {
@@ -1256,6 +1258,29 @@ body {
   width:16px;
   height:16px;
   line-height:1
+}
+
+.lore-mask-icon {
+  display:block;
+  width:100%;
+  height:100%;
+  background-color:currentColor;
+  -webkit-mask-image:url("/marathon-lore/assets/images/icons/lore.svg");
+  mask-image:url("/marathon-lore/assets/images/icons/lore.svg");
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-size:contain;
+  mask-size:contain
+}
+
+.lore-mask-icon.green {
+  color:var(--green)
+}
+
+.lore-mask-icon.black {
+  color:#05070c
 }
 
 .entry-log-badge-icon svg {
