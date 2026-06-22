@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
-  <rect width="100%" height="100%" fill="#20242c" />
   <path d="M 89.32 68.11 L 88.68 68.75 L 88.68 79.51 L 89.32 80.14 L 93.11 80.14 L 93.75 79.51 L 93.75 68.75 L 93.11 68.11 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
   <path d="M 76.03 68.11 L 74.76 69.38 L 74.76 85.84 L 76.03 87.1 L 79.19 87.1 L 80.46 85.84 L 80.46 69.38 L 79.19 68.11 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />
   <path d="M 48.81 68.11 L 48.18 68.75 L 48.18 86.47 L 49.44 87.1 L 51.97 87.1 L 53.24 85.84 L 53.24 68.75 L 52.61 68.11 Z" fill="#898C99" stroke="none" stroke-width="0" fill-rule="nonzero" />

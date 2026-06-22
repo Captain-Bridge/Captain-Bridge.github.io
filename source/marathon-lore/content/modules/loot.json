@@ -984,7 +984,7 @@
       "nodes": [
         {
           "id": "recycle",
-          "title": "装备",
+          "title": "回收",
           "count": "15 / 15",
           "children": [
             {
@@ -1107,6 +1107,509 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "ballistic_turbine",
+              "title": "弹道涡轮",
+              "count": "已完成",
+              "summary": "携带弹道涡轮撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/ballistic_turbine_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/ballistic_turbine.md",
+              "image": "/marathon-lore/content/docs/loot/items/ballistic_turbine.png",
+              "logs": [
+                {
+                  "id": "ballistic_turbine",
+                  "title": "弹道涡轮",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/ballistic_turbine_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/ballistic_turbine_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reflective_coil",
+              "title": "反射线圈",
+              "count": "已完成",
+              "summary": "携带反射线圈撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/reflective_coil_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/reflective_coil.md",
+              "image": "/marathon-lore/content/docs/loot/items/reflective_coil.png",
+              "logs": [
+                {
+                  "id": "reflective_coil",
+                  "title": "反射线圈",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/reflective_coil_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/reflective_coil_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "biological_lens_seeds",
+              "title": "生物透镜种子",
+              "count": "已完成",
+              "summary": "携带生物透镜种子撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/biological_lens_seeds_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/biological_lens_seeds.md",
+              "image": "/marathon-lore/content/docs/loot/items/biological_lens_seeds.png",
+              "logs": [
+                {
+                  "id": "biological_lens_seeds",
+                  "title": "生物透镜种子",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/biological_lens_seeds_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/biological_lens_seeds_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "neural_insulator",
+              "title": "神经绝缘体",
+              "count": "已完成",
+              "summary": "携带神经绝缘体撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/neural_insulator_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/neural_insulator.md",
+              "image": "/marathon-lore/content/docs/loot/items/neural_insulator.png",
+              "logs": [
+                {
+                  "id": "neural_insulator",
+                  "title": "神经绝缘体",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/neural_insulator_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/neural_insulator_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "enzyme_replicator",
+              "title": "酶复制器",
+              "count": "已完成",
+              "summary": "携带酶复制器撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/enzyme_replicator_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/enzyme_replicator.md",
+              "image": "/marathon-lore/content/docs/loot/items/enzyme_replicator.png",
+              "logs": [
+                {
+                  "id": "enzyme_replicator",
+                  "title": "酶复制器",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/enzyme_replicator_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/enzyme_replicator_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "shell_ID",
+              "title": "外壳ID",
+              "count": "已完成",
+              "summary": "携带外壳ID撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/shell_ID_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/shell_ID.md",
+              "image": "/marathon-lore/content/docs/loot/items/shell_ID.png",
+              "logs": [
+                {
+                  "id": "shell_ID",
+                  "title": "外壳ID",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/shell_ID_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/shell_ID_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "alien_alloy",
+              "title": "外星合金",
+              "count": "已完成",
+              "summary": "携带外星合金撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/alien_alloy_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/alien_alloy.md",
+              "image": "/marathon-lore/content/docs/loot/items/alien_alloy.png",
+              "logs": [
+                {
+                  "id": "alien_alloy",
+                  "title": "外星合金",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/alien_alloy_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/alien_alloy_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "hazard_capsule",
+              "title": "危害胶囊",
+              "count": "已完成",
+              "summary": "携带危害胶囊撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/hazard_capsule_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/hazard_capsule.md",
+              "image": "/marathon-lore/content/docs/loot/items/hazard_capsule.png",
+              "logs": [
+                {
+                  "id": "hazard_capsule",
+                  "title": "危害胶囊",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/hazard_capsule_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/hazard_capsule_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "synaptic_cube",
+              "title": "突触立方",
+              "count": "已完成",
+              "summary": "携带突触立方撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/synaptic_cube_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/synaptic_cube.md",
+              "image": "/marathon-lore/content/docs/loot/items/synaptic_cube.png",
+              "logs": [
+                {
+                  "id": "synaptic_cube",
+                  "title": "突触立方",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/synaptic_cube_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/synaptic_cube_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "compiler's_ganglion",
+              "title": "编译者神经节",
+              "count": "已完成",
+              "summary": "携带编译者神经节撤离。",
+              "meta": [
+                "掠夺",
+                "已获取的物品",
+                "回收"
+              ],
+              "icon": "badge",
+              "iconImage":"/marathon-lore/content/docs/loot/items/compiler's_ganglion_icon.png",
+              "bodyFile":"/marathon-lore/content/docs/loot/items/compiler's_ganglion.md",
+              "image": "/marathon-lore/content/docs/loot/items/compiler's_ganglion.png",
+              "logs": [
+                {
+                  "id": "compiler's_ganglion",
+                  "title": "编译者神经节",
+                  "bodyFile": "/marathon-lore/content/docs/loot/items/compiler's_ganglion_log.md",
+                  "image": "/marathon-lore/content/docs/loot/items/compiler's_ganglion_log.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ] 
+        }        
+      ]
+    },
+    {
+      "id": "cradle",
+      "title": "摇篮",
+      "count": "14 / 14",
+      "icon": "/marathon-lore/assets/images/icons/cradle.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "4 / 4",
+          "children": [
+            {
+              "id": "cradle_material_converted",
+              "title": "摇篮：物质，已转换",
+              "count": "已完成",
+              "summary": "将任意物品转换为摇篮经验值。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "cradle_overview",
+                  "title": "摇篮概览",
+                  "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_overview.md",
+                  "image": "/marathon-lore/content/docs/loot/cradle/cradle_overview.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cradle_customization_architecture",
+              "title": "摇篮：定制架构",
+              "count": "已完成",
+              "summary": "从摇篮中解锁一项特性。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "cradle_function",
+                  "title": "摇篮功能",
+                  "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_overview.md",
+                  "image": "/marathon-lore/content/docs/loot/cradle/cradle_overview.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cradle_secondary_consideration",
+              "title": "摇篮：二次考量",
+              "count": "已完成",
+              "summary": "重置摇篮。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "cradle_customization",
+                  "title": "摇篮自定义",
+                  "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_customization.md",
+                  "image": "/marathon-lore/content/docs/loot/cradle/cradle_customization.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cradle_comprehensive_development",
+              "title": "摇篮：全面发展",
+              "count": "已完成",
+              "summary": "将织虫能量分配到各个类别。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "cradle_optimization",
+                  "title": "摇篮优化",
+                  "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_optimization.md",
+                  "image": "/marathon-lore/content/docs/loot/cradle/cradle_optimization.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ] 
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "10 / 10",
+          "children": [
+            {
+              "id": "master_of_weaving_insects",
+              "title": "织虫大师",
+              "count": "已完成",
+              "summary": "完成所有摇篮精通挑战。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/master_of_weaving_insects_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/master_of_weaving_insects.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/master_of_weaving_insects.png"
+            },
+            {
+              "id": "that_honey",
+              "title": "彼之蜜糖···",
+              "count": "已完成",
+              "summary": "转换一件尊享稀有度物品。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/that_honey_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/that_honey.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/that_honey.png"
+            },
+            {
+              "id": "worm_world",
+              "title": "蠕虫世界",
+              "count": "已完成",
+              "summary": "摇篮等级达到60。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/worm_world_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/worm_world.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/worm_world.png"
+            },
+            {
+              "id": "crowded_cradle",
+              "title": "喧嚣摇篮",
+              "count": "已完成",
+              "summary": "摇篮等级达到70。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "None"
+            },
+            {
+              "id": "weave_dream",
+              "title": "织造梦想",
+              "count": "已完成",
+              "summary": "完全完成4只织虫。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "None"
+            },
+            {
+              "id": "first_worm_leave_confilct",
+              "title": "养虫优先，冲突靠边",
+              "count": "已完成",
+              "summary": "转换武器或武器模组。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "None"
+            },
+            {
+              "id": "spiritual_nourishment",
+              "title": "精神食粮",
+              "count": "已完成",
+              "summary": "转换植入物或核心。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "None"
+            },
+            {
+              "id": "bag_recycling",
+              "title": "包袋回收",
+              "count": "已完成",
+              "summary": "转换背包。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "None"
+            },
+            {
+              "id": "that_poison",
+              "title": "彼之砒霜···",
+              "count": "已完成",
+              "summary": "转换回收资源。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "None"
+            },
+            {
+              "id": "organic_insect_food",
+              "title": "有机虫食",
+              "count": "已完成",
+              "summary": "转换装备或消耗品。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "精通"
+              ],
+              "icon": "None"
             }
           ] 
         }        

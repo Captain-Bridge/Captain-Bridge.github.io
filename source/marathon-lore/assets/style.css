@@ -626,6 +626,13 @@ body {
   gap:12px
 }
 
+.entry-rail,
+.detail-rail {
+  overflow:auto;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+}
+
 .entry-stage {
   height:100%;
   max-height:100%;
@@ -769,6 +776,10 @@ body {
   place-items:center;
   background:rgba(255,255,255,.04);
   color:var(--green)
+}
+
+.entry-rail .hero-badge {
+  background:transparent;
 }
 
 .hero-badge svg,.card-icon svg,.visual-fallback svg {
@@ -1203,6 +1214,10 @@ body {
   overflow:hidden;
 }
 
+#app-view.is-tags {
+  max-height:calc(100dvh - 220px);
+}
+
 .tag-searchbar {
   display:flex;
   align-items:center;
@@ -1434,7 +1449,7 @@ body {
   width:120px;
   height:120px;
   border-radius:24px;
-  background:rgba(255,255,255,.03)
+  background:transparent
 }
 
 .card-icon-preview {

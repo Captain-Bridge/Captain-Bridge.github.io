@@ -140,16 +140,16 @@ function isCustomIconAsset(value) {
 
 function iconVisual(item) {
   const iconName = item?.icon;
+  if (item?.iconImage) {
+    return `<img src="${item.iconImage}" alt="${item.title || 'Icon'}">`;
+  }
+
   if (iconName == null || iconName === 'None' || iconName === 'none') {
     return '';
   }
 
   if (isCustomIconAsset(iconName)) {
     return `<img src="${iconName}" alt="${item.title || 'Icon'}">`;
-  }
-
-  if (item?.iconImage) {
-    return `<img src="${item.iconImage}" alt="${item.title || 'Icon'}">`;
   }
 
   return iconMarkup(iconName);
@@ -180,7 +180,17 @@ function tagResultVisual(item) {
 
 function getDisplayIconImage(item) {
   if (!item) return null;
-  return item.variantB?.iconImage || item.iconImage || null;
+  return item.variantB?.iconImage || item.iconImage || getEntryFallbackIconImage(item) || null;
+}
+
+function getEntryFallbackIconImage(entry) {
+  if (!entry) return null;
+
+  const iconValue = String(entry.icon || '').trim().toLowerCase();
+  if (iconValue !== 'none') return null;
+
+  const logs = getLogs(entry);
+  return logs[0]?.image || null;
 }
 
 function getPreviewBodyFile(item) {
@@ -1527,15 +1537,13 @@ function escapeAttr(text) {
 function getEntriesPanelState(category, section) {
   const sectionItems = getSectionItems(section);
   const parentNodes = sectionItems.filter(isFolderNode);
-  const useSectionRail = (category?.sections?.length || 0) > 1 && parentNodes.length <= 1;
+  const useSectionRail = (category?.sections?.length || 0) > 1 && parentNodes.length === 0;
 
   if (useSectionRail) {
     const railItems = category.sections;
     const activeSection = getSection(category, state.sectionId) || section || railItems[0] || null;
     const activeSectionItems = getSectionItems(activeSection);
-    const activeParentNodes = activeSectionItems.filter(isFolderNode);
 
-    if (!activeParentNodes.length) {
     return {
       railMode: 'sections',
       railItems,
@@ -1548,28 +1556,6 @@ function getEntriesPanelState(category, section) {
       headerTitle: activeSection?.title || section.title,
       headerText: activeSection?.note || activeSection?.summary || section.note || section.summary || '',
       breadcrumbItems: [activeSection?.title || section.title]
-      };
-    }
-
-    const activeRootId = activeParentNodes.some(item => item.id === state.nodePath[0])
-      ? state.nodePath[0]
-      : activeParentNodes[0]?.id;
-    const path = activeRootId ? [activeRootId, ...state.nodePath.slice(1)] : [];
-    const folderContext = getFolderContext(activeSection, path);
-    const currentFolder = folderContext.current || activeParentNodes[0] || null;
-
-    return {
-      railMode: 'sections',
-      railItems,
-      selectedSectionId: activeSection?.id || null,
-      selectedRootId: currentFolder?.id || null,
-      activeSection,
-      currentFolder,
-      folderContext,
-      contentItems: mergeDisplayItems(folderContext.items),
-      headerTitle: currentFolder?.title || activeSection?.title || section.title,
-      headerText: currentFolder?.summary || currentFolder?.note || activeSection?.note || activeSection?.summary || section.note || section.summary || '',
-      breadcrumbItems: [activeSection?.title || section.title, ...folderContext.chain.map(item => item.title)]
     };
   }
 
@@ -1862,9 +1848,8 @@ function entriesView() {
                             ` : ''}
                             ${previewBodyFile ? `data-preview-body-file="${previewBodyFile}"` : ''}
                           >${(() => {
-                            const iconItem = getDisplayIconImage(item)
-                              ? { ...item, iconImage: getDisplayIconImage(item) }
-                              : item;
+                            const iconImage = getDisplayIconImage(item);
+                            const iconItem = iconImage ? { ...item, iconImage } : item;
                             return iconVisual(iconItem);
                           })()}</span>
 		                      <div>
