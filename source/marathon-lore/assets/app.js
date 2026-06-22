@@ -2,6 +2,7 @@
 const categoryModuleCache = new Map();
 
 const appView = document.getElementById('app-view');
+const viewport = document.querySelector('.viewport');
 const state = {
   view: 'root',
   categoryId: null,
@@ -17,9 +18,30 @@ const markdownSourceCache = new Map();
 const previewCache = new Map();
 let tagIndex = [];
 let tagSearchQuery = '';
+let tagRailScrollTop = 0;
 let previewTooltip = null;
 let activePreviewAnchor = null;
 let activePreviewToken = 0;
+
+function syncLayoutState() {
+  const isTagsView = state.view === 'tags';
+  appView.classList.toggle('is-tags', isTagsView);
+  viewport?.classList.toggle('is-tags', isTagsView);
+}
+
+function rememberTagRailScroll() {
+  const tagRail = appView.querySelector('.tag-rail');
+  if (tagRail) {
+    tagRailScrollTop = tagRail.scrollTop;
+  }
+}
+
+function restoreTagRailScroll() {
+  const tagRail = appView.querySelector('.tag-rail');
+  if (tagRail) {
+    tagRail.scrollTop = tagRailScrollTop;
+  }
+}
 
 function iconMarkup(name) {
   const icons = {
@@ -263,7 +285,11 @@ function rebuildTagIndex() {
         return left.localeCompare(right, 'zh-Hans-CN');
       })
     }))
-    .sort((a, b) => a.tag.localeCompare(b.tag, 'zh-Hans-CN'));
+    .sort((a, b) => {
+      const countDiff = b.items.length - a.items.length;
+      if (countDiff !== 0) return countDiff;
+      return a.tag.localeCompare(b.tag, 'zh-Hans-CN');
+    });
 }
 
 function getTagContext(tag) {
@@ -1575,13 +1601,16 @@ function tagsView() {
   const current = visibleTags.find(item => getTagKey(item.tag) === getTagKey(state.tag)) || visibleTags[0] || null;
   const activeTag = current?.tag || state.tag || '';
   const items = current?.items || [];
+  const headerTitle = activeTag || '全部标签';
+  const headerSummary = items.length ? `${items.length} 个命中条目` : '暂无命中结果。';
 
   appView.innerHTML = `
-    <div class="view">
+    <div class="view view-tags">
       <div class="section-header">
         <div class="section-header-copy">
-          <h2>标签</h2>
-          <p>${activeTag ? `当前标签：${activeTag}` : '从所有日志末尾的标签自动聚合。'}</p>
+          ${buildBreadcrumbs(['百科', '标签', headerTitle])}
+          <h2>${headerTitle}</h2>
+          <p>${headerSummary}</p>
         </div>
       </div>
       <form class="tag-searchbar" data-tag-search-form>
@@ -1615,13 +1644,6 @@ function tagsView() {
           `).join('')}
         </aside>
         <section class="tag-stage">
-          <div class="tag-stage-head">
-            <div class="entry-header-copy">
-              ${buildBreadcrumbs(['百科', '标签', activeTag || '全部'])}
-              <h2>${activeTag || '全部标签'}</h2>
-              <p>${items.length ? `${items.length} 个命中条目` : '暂无命中结果。'}</p>
-            </div>
-          </div>
           <div class="tag-grid scrollbar">
             ${items.map(item => `
               <button
@@ -1957,6 +1979,7 @@ function bind() {
           state.tag = tagIndex[0].tag;
         }
       } else if (type === 'tag') {
+        rememberTagRailScroll();
         state.view = 'tags';
         state.tag = node.dataset.tag || null;
         state.categoryId = null;
@@ -2039,6 +2062,7 @@ function bind() {
   if (tagSearchForm) {
     tagSearchForm.addEventListener('submit', async event => {
       event.preventDefault();
+      rememberTagRailScroll();
       const input = tagSearchForm.querySelector('.tag-search-input');
       tagSearchQuery = input ? input.value : '';
       state.view = 'tags';
@@ -2066,7 +2090,11 @@ async function render() {
     rootView();
   }
 
+  syncLayoutState();
   bind();
+  if (state.view === 'tags') {
+    restoreTagRailScroll();
+  }
   applyManifestLayout(appView);
   refreshDetailTickers(appView);
   setTimeout(() => refreshDetailTickers(appView), 120);

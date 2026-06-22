@@ -1103,11 +1103,18 @@ body {
   overflow:hidden;
 }
 
+.view.view-tags {
+  height:100%;
+  min-height:0;
+  overflow:hidden;
+}
+
 .tag-searchbar {
   display:flex;
   align-items:center;
   gap:12px;
   min-height:48px;
+  margin-bottom:4px;
 }
 
 .tag-search-input {
@@ -1162,6 +1169,7 @@ body {
   min-height:0;
   overflow:auto;
   display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
   gap:10px;
   padding-right:4px;
 }
@@ -1191,27 +1199,27 @@ body {
   min-height:0;
   display:flex;
   flex-direction:column;
-  gap:18px;
+  gap:0;
   overflow:hidden;
 }
 
 .tag-grid {
   min-height:0;
   overflow:auto;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:flex-start;
-  align-content:flex-start;
-  justify-content:flex-start;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  align-content:start;
   gap:14px;
   padding-right:4px;
 }
 
+.tag-item {
+  min-width:0;
+}
+
 .tag-result {
-  flex:0 1 420px;
-  width:auto;
-  max-width:min(100%,520px);
-  align-self:flex-start;
+  min-width:0;
+  width:100%;
   justify-content:flex-start;
   align-items:flex-start;
   flex-direction:column;
@@ -1537,6 +1545,29 @@ body {
     display:none
   }
 
+  .viewport.is-tags {
+    min-height:0;
+    overflow:hidden;
+  }
+
+  #app-view.is-tags,
+  .view.view-tags,
+  .view.view-tags .tag-stage {
+    min-height:0;
+    overflow:hidden;
+  }
+
+  .view.view-tags .tag-layout {
+    flex:1;
+    min-height:0;
+    overflow:hidden;
+  }
+
+  .view.view-tags .tag-rail,
+  .view.view-tags .tag-grid {
+    overflow:auto;
+  }
+
 }
 
 @media (max-width:720px) {
@@ -1669,6 +1700,27 @@ body {
     padding:16px
   }
 
+  .view.view-tags,
+  .tag-stage {
+    overflow:visible;
+  }
+
+  .tag-layout {
+    grid-template-columns:1fr;
+    overflow:visible;
+  }
+
+  .tag-rail,
+  .tag-grid {
+    overflow:visible;
+    padding-right:0;
+  }
+
+  .tag-rail,
+  .tag-grid {
+    grid-template-columns:1fr;
+  }
+
   .card-icon {
     width:72px;
     height:72px
@@ -1724,7 +1776,7 @@ body {
     overscroll-behavior:contain;
   }
 
-  .view {
+  .view:not(.view-tags) {
     height:auto;
     min-height:100%;
   }
@@ -1733,6 +1785,11 @@ body {
   .section-grid,
   .tag-layout {
     flex:none;
+  }
+
+  .view.view-tags .tag-layout {
+    flex:1;
+    min-height:0;
   }
 
   .top-grid,
