@@ -1,0 +1,50 @@
+<style>
+  .site-esc-back {
+    position: fixed;
+    left: 22px;
+    bottom: 18px;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(226,232,244,.78);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-decoration: none;
+    user-select: none;
+  }
+
+  .site-esc-back::before {
+    content: "Esc";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 18px;
+    padding: 0 6px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: rgba(226,232,244,.82);
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .site-esc-back:hover {
+    color: rgba(255,255,255,.92);
+  }
+
+  .site-esc-back:hover::before {
+    background: transparent;
+  }
+
+  @media (max-width: 900px) {
+    .site-esc-back {
+      left: 14px;
+      bottom: 12px;
+      font-size: 13px;
+    }
+  }
+</style>

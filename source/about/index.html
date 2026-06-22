@@ -647,7 +647,8 @@
       <div class="view">
         <section class="hero-panel">
           <h1 style="color: rgb(193, 254, 0); text-shadow: 0 0 10px rgba(193, 254, 0, 0.18);">失落星船：马拉松</h1>
-          <p>《光环》和《命运》创作者推出高风险生存第一人称射击游戏，玩家将探索失落的天仓五IV殖民地并搜寻物资。</p>
+          <p>《光环》和《命运》创作者推出高风险生存第一人称射击游戏，玩家将探索失落的天仓五IV殖民地并搜寻物资。</p><br>
+          <p style="color: rgb(242, 222, 84);">无数伟大和勇敢的人齐聚一堂，共同规划、设计并执行了这场前所未有的跨越群星的旅程。  ——达维克 · 里德</p>
         </section>
 
         <div class="section-grid">
@@ -691,5 +692,18 @@
       <span>本站为《失落星船：马拉松》相关的非官方粉丝资料整理页，与Bungie及《失落星船：马拉松》官方无任何隶属、授权或背书关系。本站中涉及的名称、商标、Logo、角色、图像及相关素材，其版权与商标权均归原权利人所有。本站内容仅用于中文整理、介绍与交流参考，如有疏漏或错误，请以官方发布信息为准。</span>
     </footer>
   </main>
+  <script>
+    window.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      var active = document.activeElement;
+      var tagName = active && active.tagName ? active.tagName.toLowerCase() : '';
+      if (tagName === 'input' || tagName === 'textarea' || (active && active.isContentEditable)) return;
+      if (window.history.length > 1 && document.referrer) {
+        window.history.back();
+        return;
+      }
+      window.location.href = '/';
+    });
+  </script>
 </body>
 </html>

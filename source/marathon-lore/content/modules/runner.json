@@ -1,8 +1,175 @@
 {
   "id": "runner",
   "title": "疾行者",
-  "count": "0 / 0",
+  "count": "70 / 70",
   "icon": "/marathon-lore/assets/images/icons/runners.svg",
   "summary": "角色、身份与个体档案。",
-  "sections": []
+  "sections": [
+    {
+      "id": "vandal",
+      "title": "暴徒",
+      "count": "9 / 9",
+      "icon": "/marathon-lore/assets/images/icons/vandal.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "vandal_extraction",
+              "title": "暴徒撤离",
+              "count": "已完成",
+              "summary": "使用暴徒外壳撤离。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/vandal/vandal_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/vandal/vandal_extraction.png",
+              "logs": [
+                {
+                  "id": "vandal_shell",
+                  "title": "暴徒外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_vandal",
+              "title": "战术暴徒",
+              "count": "已完成",
+              "summary": "使用暴徒外壳的战术技能：破坏炮。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "vandal_tatical",
+                  "title": "暴徒：破坏炮",
+                  "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_vandal",
+              "title": "主要暴徒",
+              "count": "已完成",
+              "summary": "使用暴徒外壳的主要技能：增幅。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/vandal/mainly_vandal_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/vandal/mainly_vandal.md",
+              "image": "/marathon-lore/content/docs/runner/vandal/mainly_vandal.png",
+              "logs": [
+                {
+                  "id": "vandal_mainly",
+                  "title": "暴徒：增幅",
+                  "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "watch_it",
+              "title": "看好了！",
+              "count": "已完成",
+              "summary": "完成所有暴徒精通挑战。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/vandal/watch_it_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/vandal/watch_it.md",
+              "image": "/marathon-lore/content/docs/runner/vandal/watch_it.png"
+            },
+            {
+              "id": "safe_on_the_barrier",
+              "title": "安全上垒",
+              "count": "已完成",
+              "summary": "使用动力滑行进入一个已激活的撤离点。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "精通"
+              ]
+            },
+            {
+              "id": "oops",
+              "title": "啊哦！",
+              "count": "已完成",
+              "summary": "通过一次破坏炮爆炸击中3名敌对目标。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "精通"
+              ]
+            },
+            {
+              "id": "let's_go",
+              "title": "走你！",
+              "count": "已完成",
+              "summary": "使用破坏炮将一名疾行者送入空中后将其击败。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "精通"
+              ]
+            },
+            {
+              "id": "on_the_top",
+              "title": "看上面！",
+              "count": "已完成",
+              "summary": "从20米高空击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "精通"
+              ]
+            },
+            {
+              "id": "face_to_face_greeting",
+              "title": "贴脸问候",
+              "count": "已完成",
+              "summary": "在动力滑行后使用霰弹枪击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "暴徒",
+                "精通"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

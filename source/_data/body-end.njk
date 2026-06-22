@@ -1,0 +1,27 @@
+<a class="site-esc-back" href="javascript:void(0)" data-site-esc-back><span>Esc</span><span>返回</span></a>
+<script>
+  (function () {
+    function goBack() {
+      if (window.history.length > 1) {
+        window.history.back();
+        return;
+      }
+      window.location.href = '/';
+    }
+
+    document.addEventListener('click', function (event) {
+      var trigger = event.target.closest('[data-site-esc-back]');
+      if (!trigger) return;
+      event.preventDefault();
+      goBack();
+    });
+
+    window.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      var active = document.activeElement;
+      var tagName = active && active.tagName ? active.tagName.toLowerCase() : '';
+      if (tagName === 'input' || tagName === 'textarea' || active?.isContentEditable) return;
+      goBack();
+    });
+  })();
+</script>

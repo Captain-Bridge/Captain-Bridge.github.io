@@ -71,218 +71,270 @@ layout: false
       z-index: 2;
       height: 100vh;
       display: grid;
-      grid-template-rows: 60px minmax(0, 1fr) 30px;
-      gap: 8px;
-      padding: 8px 18px;
-    }
-
-    .hud-top,
-    .viewport,
-    .hud-bottom {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      box-shadow: var(--shadow);
+      grid-template-rows: minmax(0, 1fr) 58px;
+      gap: 0;
+      padding: 0 24px;
     }
 
     .hud-top {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 14px;
-      align-items: center;
-      padding: 8px 14px;
-    }
-
-    .hud-chip,
-    .nav-link {
-      min-height: 36px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 14px;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 700;
-      letter-spacing: .04em;
-    }
-
-    .hud-chip {
-      background: rgba(242,242,247,.96);
-      color: #111822;
-    }
-
-    .hud-copy {
-      display: grid;
-      gap: 4px;
-      min-width: 0;
-    }
-
-    .hud-copy strong {
-      font-size: 18px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .hud-copy span {
-      color: var(--soft);
-      font-size: 13px;
-      letter-spacing: .06em;
-    }
-
-    .hud-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .nav-link:hover {
-      border-color: rgba(255,255,255,.24);
-      background: rgba(255,255,255,.08);
+      display: none;
     }
 
     .viewport {
       min-height: 0;
       overflow: hidden;
-      padding: 12px;
+      padding: 18px 0 10px;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
     }
 
     .force-view {
       height: 100%;
       min-height: 0;
+    }
+
+    .force-screen {
+      height: 100%;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 36px;
+      align-items: stretch;
+    }
+
+    .force-sidebar {
+      min-height: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      justify-content: center;
+      gap: 22px;
+      padding: 58px 0 28px;
+    }
+
+    .force-sidebar-block {
+      position: relative;
+      border: 1px solid rgba(255,255,255,.06);
+      background: rgba(10,12,18,.58);
+      overflow: hidden;
+    }
+
+    .force-sidebar-block::before,
+    .force-sidebar-block::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-top: 1px solid rgba(255,255,255,.35);
+      border-left: 1px solid rgba(255,255,255,.35);
+      opacity: .8;
+    }
+
+    .force-sidebar-block::before {
+      top: 14px;
+      left: 14px;
+    }
+
+    .force-sidebar-block::after {
+      right: 14px;
+      bottom: 14px;
+      transform: rotate(180deg);
+    }
+
+    .force-sidebar-logo {
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      background: rgba(10,12,18,.58);
+      color: rgba(255,255,255,.28);
+    }
+
+    .force-sidebar-logo-mark {
+      width: 56%;
+      aspect-ratio: 1;
+      border: 1px dashed rgba(255,255,255,.2);
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-indent: .16em;
+    }
+
+    .force-sidebar-logo-mark::after {
+      content: "";
+      display: none;
+    }
+
+    .force-sidebar-card {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: 48px minmax(180px, 1fr);
+      background: rgba(6,8,12,.62);
+    }
+
+    .force-sidebar-card-head {
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #04120a;
+      background: linear-gradient(180deg, rgba(0,255,110,.96), rgba(0,230,101,.9));
+    }
+
+    .force-sidebar-card-body {
+      position: relative;
+      overflow: hidden;
+      background: rgba(8,10,18,.92);
+    }
+
+    .force-sidebar-card-body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 0 14%, rgba(255,255,255,.04) 14% 16%, transparent 16% 80%, rgba(255,255,255,.04) 80% 82%, transparent 82%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 4px);
+      opacity: .45;
+    }
+
+    .force-sidebar-card-media {
+      position: absolute;
+      inset: 18px;
+      display: grid;
+      place-items: center;
+      border: 1px dashed rgba(255,255,255,.14);
+      border-radius: 8px;
+      color: rgba(255,255,255,.28);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-indent: .12em;
+    }
+
+    .force-sidebar-card-media img,
+    .force-sidebar-card-media svg {
+      display: none;
+    }
+
+    .force-workspace {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 18px;
     }
 
     .force-head {
       display: grid;
-      gap: 4px;
-      flex: 0 0 auto;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 18px;
+      padding-top: 2px;
     }
 
-    .force-head small {
+    .force-head-copy {
+      display: grid;
+      gap: 8px;
+      align-content: start;
       color: var(--dim);
-      letter-spacing: .12em;
+      font-size: 12px;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
 
-    .force-head h1 {
-      margin: 0;
-      font-size: 24px;
-      letter-spacing: .08em;
-      line-height: 1.1;
+    .force-head-copy strong {
+      color: rgba(255,255,255,.3);
+      font-weight: 600;
     }
 
-    .force-head p {
-      margin: 0;
-      color: var(--soft);
-      line-height: 1.5;
-      font-size: 14px;
-      max-width: 920px;
+    .force-head-copy span {
+      color: rgba(255,255,255,.16);
+      max-width: 720px;
+      line-height: 1.45;
     }
 
     .force-faction-rail {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 12px;
     }
 
     .force-faction-button {
-      min-height: 64px;
-      padding: 8px 10px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)), rgba(18,21,29,.96);
-      color: var(--soft);
+      min-width: 92px;
+      min-height: 38px;
+      padding: 0 16px;
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 4px;
+      background: rgba(255,255,255,.06);
+      color: rgba(214,223,236,.7);
       font: inherit;
-      display: grid;
-      grid-template-columns: 40px minmax(0, 1fr);
-      gap: 10px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      display: inline-flex;
       align-items: center;
-      text-align: left;
+      justify-content: center;
+      gap: 8px;
       cursor: pointer;
     }
 
     .force-faction-button.active {
-      background: #aeb4c3;
+      background: rgba(242,242,247,.96);
       color: #10131a;
     }
 
     .force-faction-button-visual {
-      width: 40px;
-      height: 40px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.04);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .force-faction-button.active .force-faction-button-visual {
-      border-color: rgba(16,19,26,.12);
-      background: rgba(16,19,26,.08);
-    }
-
-    .force-faction-button-visual img,
-    .force-faction-button-visual svg {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
+      display: none;
     }
 
     .force-faction-button-copy {
       min-width: 0;
-      display: grid;
-      gap: 2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .force-faction-button-copy strong {
       display: block;
-      font-size: 13px;
-      line-height: 1.2;
+      font-size: 16px;
+      line-height: 1;
+      white-space: nowrap;
     }
 
     .force-faction-button-copy span {
-      font-size: 11px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--dim);
-    }
-
-    .force-faction-button.active .force-faction-button-copy span {
-      color: rgba(16,19,26,.72);
+      display: none;
     }
 
     .force-shell {
-      flex: 1;
       min-height: 0;
       display: grid;
-      grid-template-columns: minmax(0, 1.82fr) minmax(280px, .66fr);
-      gap: 12px;
+      grid-template-columns: minmax(0, 1fr) 410px;
+      gap: 24px;
       overflow: hidden;
     }
 
     .force-map-panel,
     .force-detail-panel {
       min-height: 0;
-      border: 1px solid var(--line);
-      background: rgba(12,14,20,.84);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(9,11,15,.72);
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
 
     .force-map-panel {
-      padding: 10px 10px 8px;
+      padding: 18px 18px 14px;
     }
 
     .force-map-scroller {
       flex: 1;
       min-height: 0;
       overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
       padding-right: 0;
       scrollbar-width: thin;
       scrollbar-color: rgba(255,255,255,.22) transparent;
@@ -303,8 +355,6 @@ layout: false
       height: var(--canvas-height, 920px);
       border: 1px solid rgba(255,255,255,.08);
       background:
-        radial-gradient(circle at 18% 14%, rgba(255,255,255,.035), transparent 18%),
-        radial-gradient(circle at 72% 72%, rgba(0,229,91,.03), transparent 20%),
         linear-gradient(180deg, rgba(255,255,255,.015), rgba(255,255,255,0)),
         rgba(11,13,19,.98);
       transform-origin: top left;
@@ -340,8 +390,8 @@ layout: false
       z-index: 1;
       display: grid;
       gap: 2px;
-      color: var(--dim);
-      font-size: 12px;
+      color: rgba(255,255,255,.18);
+      font-size: 11px;
       letter-spacing: .08em;
       text-transform: uppercase;
       pointer-events: none;
@@ -358,13 +408,27 @@ layout: false
       justify-items: end;
     }
 
+    .force-map-caption strong {
+      font-size: 12px;
+      color: rgba(255,255,255,.22);
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
     .force-decorator {
       position: absolute;
       pointer-events: none;
     }
 
     .force-decorator.line-h {
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+    }
+
+    .force-decorator.link-h,
+    .force-decorator.link-v {
+      background: var(--link-bg, rgba(75,79,90,.72));
+      box-shadow: inset 0 0 0 1px var(--link-border, rgba(255,255,255,.04));
+      opacity: .7;
     }
 
     .force-decorator.spark {
@@ -388,6 +452,13 @@ layout: false
 
     .force-node {
       --node-accent: var(--green);
+      --node-bg: rgb(50, 51, 59);
+      --node-border: rgba(255,255,255,.08);
+      --node-frame-color: rgba(255,255,255,.08);
+      --node-text: #99a0b3;
+      --node-icon: currentColor;
+      --node-icon-active: var(--node-accent);
+      --node-icon-locked: #303542;
       --node-bar-active-bg: var(--node-accent);
       --node-bar-active-border: rgba(0,229,91,.6);
       position: absolute;
@@ -396,37 +467,39 @@ layout: false
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 18px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0)), rgba(56,60,72,.4);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03), 0 0 0 4px rgba(255,255,255,.02);
-      color: #99a0b3;
+      gap: var(--node-gap, 18px);
+      border: var(--node-border-width, 1px) solid var(--node-border);
+      background: var(--node-bg);
+      box-shadow: inset 0 0 0 1px rgba(14,16,23,.88), inset 0 0 0 2px rgba(255,255,255,.035);
+      border-radius: var(--node-radius, 12px);
+      color: var(--node-text);
       cursor: pointer;
-      padding: 10px;
+      padding: var(--node-padding, 10px);
+      overflow: visible;
     }
 
-    .force-node::before,
-    .force-node::after {
+    .force-node::before {
       content: "";
       position: absolute;
-      inset: -8px;
-      border: 1px solid rgba(255,255,255,.06);
+      inset: 1px;
+      border-radius: calc(var(--node-radius, 12px) - 1px);
+      background:
+        repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.016) 0 1px, transparent 1px 4px),
+        repeating-linear-gradient(135deg, rgba(255,255,255,.012) 0 1px, transparent 1px 5px),
+        repeating-linear-gradient(45deg, rgba(0,0,0,.05) 0 1px, transparent 1px 6px);
+      opacity: .4;
       pointer-events: none;
-    }
-
-    .force-node::after {
-      inset: -14px;
-      opacity: .8;
     }
 
     .force-node.active-node {
       border-color: rgba(255,255,255,.16);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 0 0 4px rgba(255,255,255,.025), 0 0 22px rgba(0,0,0,.18);
+      box-shadow: inset 0 0 0 1px rgba(14,16,23,.88), inset 0 0 0 2px rgba(255,255,255,.055);
     }
 
     .force-node.is-active .force-node-icon,
     .force-node.active-node .force-node-icon {
-      color: var(--node-accent);
+      color: var(--node-icon-active);
     }
 
     .force-node.is-muted {
@@ -434,57 +507,86 @@ layout: false
     }
 
     .force-node.is-locked .force-node-icon {
-      color: #303542;
+      color: var(--node-icon-locked);
+    }
+
+    .force-node-frame {
+      position: absolute;
+      border: var(--node-frame-border-width, 1.5px) solid var(--node-frame-color);
+      border-radius: calc(var(--node-radius, 12px) + 1px);
+      box-shadow: inset 0 0 0 1px rgba(14,16,23,.9);
+      pointer-events: none;
+    }
+
+    .force-node.active-node .force-node-frame {
+      border-color: rgba(255,255,255,.16);
     }
 
     .force-node-badge {
       position: absolute;
-      left: 10px;
-      top: 10px;
+      left: var(--node-badge-left, 10px);
+      top: var(--node-badge-top, 10px);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 22px;
-      height: 22px;
-      padding: 0 6px;
+      min-width: var(--node-badge-min-width, 22px);
+      height: var(--node-badge-height, 22px);
+      padding: 0 var(--node-badge-padding-x, 6px);
       border: 1px solid currentColor;
-      font-size: 12px;
+      font-size: var(--node-badge-font-size, 12px);
       line-height: 1;
       color: #d8dae3;
+      z-index: 2;
     }
 
     .force-node-icon,
     .force-node-icon img,
     .force-node-icon svg {
-      width: 34px;
-      height: 34px;
+      width: var(--node-icon-size, 34px);
+      height: var(--node-icon-size, 34px);
     }
 
     .force-node-icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: inherit;
+      color: var(--node-icon);
+      flex: 0 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .force-node-icon img {
+      width: 100%;
+      height: 100%;
       object-fit: contain;
+    }
+
+    .force-node-icon-text {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--node-icon-font-size, 30px);
+      line-height: 1;
+      font-weight: 700;
     }
 
     .force-node-bars {
       position: absolute;
       left: 50%;
-      bottom: 12px;
+      bottom: var(--node-bars-bottom, 12px);
       transform: translateX(-50%);
       display: flex;
-      gap: 4px;
+      gap: var(--node-bar-gap, 4px);
+      z-index: 2;
     }
 
     .force-node-bar {
-      width: 18px;
-      height: 6px;
-      border: 1px solid rgba(255,255,255,.22);
-      background: rgba(11,13,19,.9);
+      width: var(--node-bar-width, 18px);
+      height: var(--node-bar-height, 6px);
+      border: 1px solid var(--node-bar-active-border);
+      background: var(--node-bar-active-bg);
+      border-radius: 999px;
     }
 
     .force-node-bar.is-active {
@@ -495,21 +597,22 @@ layout: false
     .force-map-footer {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      padding-top: 8px;
+      gap: 12px;
+      padding-top: 18px;
     }
 
     .force-peak-switch {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 8px;
+      gap: 0;
+      padding: 0 240px 0 220px;
     }
 
     .force-peak-pill {
-      min-height: 50px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)), rgba(18,21,29,.96);
-      color: var(--soft);
+      min-height: 54px;
+      border: 1px solid rgba(255,255,255,.06);
+      background: rgba(255,255,255,.05);
+      color: rgba(255,255,255,.72);
       font: inherit;
       font-weight: 700;
       cursor: pointer;
@@ -541,31 +644,63 @@ layout: false
     }
 
     .force-peak-pill.active {
-      background: #aeb4c3;
+      background: #f1f2f5;
       color: #10131a;
     }
 
     .force-progress-copy {
       margin: 0;
-      color: var(--soft);
+      color: rgba(255,255,255,.7);
       text-align: center;
+      font-size: 15px;
+      letter-spacing: .08em;
+    }
+
+    .factions-esc-back {
+      position: fixed;
+      left: 20px;
+      bottom: 18px;
+      z-index: 30;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(226,232,244,.78);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .factions-esc-back::before {
+      content: "Esc";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 18px;
+      padding: 0 6px;
+      color: rgba(226,232,244,.82);
       font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .force-detail-panel {
-      padding: 14px 14px 12px;
-      justify-content: space-between;
-      gap: 12px;
+      padding: 22px 24px 18px;
+      justify-content: flex-start;
+      gap: 16px;
+      background: rgba(10,12,18,.7);
     }
 
     .force-detail-copy {
       display: grid;
-      gap: 12px;
+      gap: 10px;
     }
 
     .force-detail-kicker {
       margin: 0;
-      color: var(--dim);
+      color: rgba(255,255,255,.18);
       font-size: 12px;
       letter-spacing: .08em;
       text-transform: uppercase;
@@ -573,7 +708,8 @@ layout: false
 
     .force-detail-copy h2 {
       margin: 0;
-      font-size: 22px;
+      font-size: 28px;
+      letter-spacing: .04em;
     }
 
     .force-detail-meta,
@@ -586,15 +722,15 @@ layout: false
 
     .force-level-switch {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(52px, 1fr));
-      gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
+      gap: 6px;
     }
 
     .force-level-pill {
-      min-height: 40px;
-      border: 1px solid rgba(255,255,255,.1);
-      background: rgba(255,255,255,.04);
-      color: var(--soft);
+      min-height: 36px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.72);
       font: inherit;
       font-weight: 700;
       cursor: pointer;
@@ -648,18 +784,21 @@ layout: false
     .hud-bottom {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 0 12px;
-      color: var(--dim);
-      font-size: 11px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      justify-content: flex-start;
+      gap: 18px;
+      padding: 0 0 0 8px;
+      color: rgba(255,255,255,.82);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: none;
     }
 
     .status-text {
       color: var(--green);
       font-weight: 700;
+      margin-left: auto;
+      font-size: 14px;
     }
 
     .empty-state {
@@ -668,7 +807,7 @@ layout: false
       color: var(--soft);
     }
 
-    @media (max-width: 1280px) {
+    @media (max-width: 1080px) {
       body {
         overflow: auto;
       }
@@ -679,8 +818,42 @@ layout: false
         grid-template-rows: auto auto auto;
       }
 
+      .force-screen {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .force-sidebar {
+        display: grid;
+        grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
+        align-items: stretch;
+        gap: 14px;
+        padding: 0;
+      }
+
+      .force-sidebar-card {
+        grid-template-rows: 44px minmax(140px, 1fr);
+      }
+
+      .force-sidebar-logo {
+        min-height: 180px;
+      }
+
+      .force-workspace {
+        gap: 14px;
+      }
+
+      .force-head {
+        grid-template-columns: 1fr;
+      }
+
+      .force-faction-rail {
+        justify-content: flex-start;
+      }
+
       .force-shell {
         grid-template-columns: 1fr;
+        gap: 16px;
       }
 
       .viewport {
@@ -709,6 +882,11 @@ layout: false
         padding: 10px;
       }
 
+      .force-sidebar {
+        grid-template-columns: minmax(110px, 130px) minmax(0, 1fr);
+        gap: 10px;
+      }
+
       .force-map-panel {
         min-height: 380px;
       }
@@ -716,6 +894,46 @@ layout: false
       .force-faction-rail,
       .force-peak-switch {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .force-faction-button {
+        min-height: 34px;
+        padding: 0 10px;
+        font-size: 13px;
+      }
+
+      .force-sidebar-logo {
+        min-height: 132px;
+      }
+
+      .force-sidebar-card {
+        grid-template-rows: 36px minmax(96px, 1fr);
+      }
+
+      .force-sidebar-card-head {
+        padding: 0 12px;
+        font-size: 14px;
+      }
+
+      .force-sidebar-card-media {
+        inset: 10px;
+        font-size: 11px;
+      }
+
+      .force-workspace {
+        gap: 12px;
+      }
+
+      .force-head {
+        gap: 10px;
+      }
+
+      .force-detail-copy h2 {
+        font-size: 24px;
+      }
+
+      .force-detail-panel {
+        padding: 14px;
       }
     }
 
@@ -730,8 +948,61 @@ layout: false
         padding: 10px 12px;
       }
 
+      .force-screen {
+        gap: 12px;
+      }
+
+      .force-sidebar {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .force-sidebar-logo {
+        min-height: 96px;
+      }
+
+      .force-sidebar-card {
+        grid-template-rows: 28px minmax(84px, 1fr);
+      }
+
+      .force-sidebar-card-head {
+        padding: 0 10px;
+        font-size: 12px;
+      }
+
+      .force-sidebar-card-media {
+        inset: 8px;
+        font-size: 10px;
+      }
+
+      .force-workspace {
+        gap: 10px;
+      }
+
+      .force-head {
+        gap: 8px;
+      }
+
+      .force-head-copy strong {
+        font-size: 11px;
+      }
+
+      .force-head-copy span {
+        font-size: 10px;
+      }
+
+      .force-faction-rail {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .force-faction-button {
+        min-height: 30px;
+        padding: 0 8px;
+        font-size: 11px;
+      }
+
       .force-head h1 {
-        font-size: 28px;
+        font-size: 24px;
       }
 
       .force-map-panel,
@@ -743,41 +1014,33 @@ layout: false
         min-height: 320px;
       }
 
-      .force-faction-rail {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .force-map-footer {
+        gap: 10px;
+        padding-top: 10px;
       }
 
-      .force-faction-button {
-        min-height: 58px;
-        grid-template-columns: 34px minmax(0, 1fr);
-        gap: 8px;
-        padding: 8px;
-      }
-
-      .force-faction-button-visual {
-        width: 34px;
-        height: 34px;
-      }
-
-      .force-faction-button-copy strong {
-        font-size: 12px;
-      }
-
-      .force-faction-button-copy span,
-      .force-peak-pill span {
-        font-size: 16px;
-      }
-
-      .force-peak-pill {
-        min-height: 44px;
+      .force-peak-switch {
+        gap: 0;
       }
 
       .force-progress-copy {
         font-size: 11px;
       }
 
-      .force-peak-pill span {
-        font-size: 18px;
+      .force-detail-panel {
+        padding: 14px 12px 12px;
+      }
+
+      .force-detail-copy h2 {
+        font-size: 22px;
+      }
+
+      .force-level-switch {
+        grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+      }
+
+      .force-level-pill {
+        min-height: 32px;
       }
     }
   </style>
@@ -799,16 +1062,28 @@ layout: false
     <section class="viewport">
       <div id="app" class="force-view"></div>
     </section>
-
-    <footer class="hud-bottom">
-      <span>固定画布 · 绝对坐标维护</span>
-      <span class="status-text">JSON Driven</span>
-    </footer>
   </main>
+
+  <a class="factions-esc-back" href="javascript:void(0)" data-factions-esc-back><span>返回</span></a>
 
   <script>
     const app = document.getElementById('app');
     const DEFAULT_PEAK_LABELS = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+    const GRID_ROWS = 4;
+    const GRID_COLS = 6;
+    const GRID_LAYOUT_DEFAULTS = {
+      canvasWidth: 1360,
+      canvasHeight: 920,
+      paddingX: 24,
+      paddingY: 24,
+      connectorThickness: 0.15,
+      fitToPanel: true,
+      baseNodeScale: 0.9,
+      slots: {
+        small: { width: 0.6, height: 0.6 },
+        large: { width: 0.76, height: 0.76 }
+      }
+    };
     const state = {
       data: null,
       factionId: null,
@@ -838,6 +1113,19 @@ layout: false
       return JSON.parse(JSON.stringify(value));
     }
 
+    function mergeDeep(base, override) {
+      const output = Array.isArray(base) ? [...base] : { ...(base || {}) };
+      if (!override || typeof override !== 'object') return output;
+      for (const [key, value] of Object.entries(override)) {
+        if (value && typeof value === 'object' && !Array.isArray(value) && output[key] && typeof output[key] === 'object' && !Array.isArray(output[key])) {
+          output[key] = mergeDeep(output[key], value);
+        } else {
+          output[key] = cloneValue(value);
+        }
+      }
+      return output;
+    }
+
     function createDefaultPeakButtons() {
       return DEFAULT_PEAK_LABELS.map((label, index) => ({
         id: 'peak-' + (index + 1),
@@ -847,12 +1135,246 @@ layout: false
       }));
     }
 
+    function getGridNodeSize(node, grid) {
+      if (Number.isFinite(Number(node?.width)) && Number.isFinite(Number(node?.height))) {
+        return {
+          width: Number(node.width),
+          height: Number(node.height)
+        };
+      }
+
+      const rawSizeKey = typeof node?.size === 'string' && node.size.trim() ? node.size.trim() : 'large';
+      const sizeAliasMap = {
+        sm: 'small',
+        md: 'small',
+        lg: 'large',
+        xl: 'large',
+        small: 'small',
+        large: 'large'
+      };
+      const normalizedSizeKey = sizeAliasMap[rawSizeKey] || 'large';
+      const preset = grid.slots?.[normalizedSizeKey] || GRID_LAYOUT_DEFAULTS.slots.large;
+      return {
+        widthRatio: Number(preset.width) || GRID_LAYOUT_DEFAULTS.slots.large.width,
+        heightRatio: Number(preset.height) || GRID_LAYOUT_DEFAULTS.slots.large.height,
+        normalizedSizeKey
+      };
+    }
+
+    function normalizeGridNode(node, index, grid) {
+      if (!node || typeof node !== 'object') return null;
+      if (node.empty || node.exists === false) return null;
+
+      const row = Number.parseInt(node.row, 10);
+      const col = Number.parseInt(node.col, 10);
+      if (!Number.isFinite(row) || !Number.isFinite(col)) return null;
+      if (row < 0 || row >= GRID_ROWS || col < 0 || col >= GRID_COLS) return null;
+
+      const size = getGridNodeSize(node, grid);
+      const usableWidth = grid.canvasWidth - (grid.paddingX * 2);
+      const usableHeight = grid.canvasHeight - (grid.paddingY * 2);
+      const cellWidth = usableWidth / GRID_COLS;
+      const cellHeight = usableHeight / GRID_ROWS;
+      const nodeWidth = Number.isFinite(Number(node?.width))
+        ? Number(node.width)
+        : cellWidth * clampValue(size.widthRatio * (Number(node?.scaleX) || Number(node?.scale) || Number(grid.baseNodeScale) || 1), 0.1, 1.4);
+      const nodeHeight = Number.isFinite(Number(node?.height))
+        ? Number(node.height)
+        : cellHeight * clampValue(size.heightRatio * (Number(node?.scaleY) || Number(node?.scale) || Number(grid.baseNodeScale) || 1), 0.1, 1.4);
+      const centerX = grid.paddingX + (cellWidth * col) + (cellWidth / 2);
+      const centerY = grid.paddingY + (cellHeight * row) + (cellHeight / 2);
+      const offsetX = Number(node.offsetX) || 0;
+      const offsetY = Number(node.offsetY) || 0;
+
+      return {
+        ...cloneValue(node),
+        id: node.id || ('grid-node-' + index),
+        row,
+        col,
+        width: nodeWidth,
+        height: nodeHeight,
+        cellWidth,
+        cellHeight,
+        centerX,
+        centerY,
+        x: centerX - (nodeWidth / 2) + offsetX,
+        y: centerY - (nodeHeight / 2) + offsetY,
+        size: size.normalizedSizeKey
+      };
+    }
+
+    function getGridConnectorColors(faction, link) {
+      const accent = link?.color || faction?.grid?.linkColor || 'rgba(75,79,90,.92)';
+      const border = link?.borderColor || faction?.grid?.linkBorderColor || 'rgba(255,255,255,.05)';
+      return { accent, border };
+    }
+
+    function createConnector(fromNode, toNode, direction, faction, linkId, linkMeta) {
+      const baseThickness = Number(linkMeta?.thickness) || Number(faction?.grid?.connectorThickness) || GRID_LAYOUT_DEFAULTS.connectorThickness;
+      const thickness = baseThickness <= 1
+        ? Math.max(6, Math.min(fromNode.cellHeight || 0, fromNode.cellWidth || 0) * baseThickness)
+        : baseThickness;
+      const colors = getGridConnectorColors(faction, linkMeta);
+
+      if (direction === 'right') {
+        const startX = fromNode.x + fromNode.width;
+        const endX = toNode.x;
+        if (endX <= startX) return null;
+        const y = fromNode.y + (fromNode.height / 2) - (thickness / 2) + (Number(linkMeta?.offsetY) || 0);
+        return {
+          id: linkId,
+          type: 'link-h',
+          x: startX,
+          y,
+          width: endX - startX,
+          height: thickness,
+          color: colors.accent,
+          borderColor: colors.border
+        };
+      }
+
+      if (direction === 'left') {
+        const startX = toNode.x + toNode.width;
+        const endX = fromNode.x;
+        if (endX <= startX) return null;
+        const y = fromNode.y + (fromNode.height / 2) - (thickness / 2) + (Number(linkMeta?.offsetY) || 0);
+        return {
+          id: linkId,
+          type: 'link-h',
+          x: startX,
+          y,
+          width: endX - startX,
+          height: thickness,
+          color: colors.accent,
+          borderColor: colors.border
+        };
+      }
+
+      if (direction === 'down') {
+        const startY = fromNode.y + fromNode.height;
+        const endY = toNode.y;
+        if (endY <= startY) return null;
+        const x = fromNode.x + (fromNode.width / 2) - (thickness / 2) + (Number(linkMeta?.offsetX) || 0);
+        return {
+          id: linkId,
+          type: 'link-v',
+          x,
+          y: startY,
+          width: thickness,
+          height: endY - startY,
+          color: colors.accent,
+          borderColor: colors.border
+        };
+      }
+
+      if (direction === 'up') {
+        const startY = toNode.y + toNode.height;
+        const endY = fromNode.y;
+        if (endY <= startY) return null;
+        const x = fromNode.x + (fromNode.width / 2) - (thickness / 2) + (Number(linkMeta?.offsetX) || 0);
+        return {
+          id: linkId,
+          type: 'link-v',
+          x,
+          y: startY,
+          width: thickness,
+          height: endY - startY,
+          color: colors.accent,
+          borderColor: colors.border
+        };
+      }
+
+      return null;
+    }
+
+    function createGridDecorators(faction, nodes) {
+      const nodeMap = new Map(nodes.map(node => [node.id, node]));
+      const connectors = [];
+      const seen = new Set();
+      const directionMap = {
+        right: [0, 1],
+        left: [0, -1],
+        down: [1, 0],
+        up: [-1, 0]
+      };
+
+      nodes.forEach(node => {
+        const links = node?.links;
+        if (!links || typeof links !== 'object') return;
+
+        Object.entries(directionMap).forEach(([direction, [rowDelta, colDelta]]) => {
+          const linkMeta = links[direction];
+          if (!linkMeta) return;
+
+          let targetId = null;
+          if (typeof linkMeta === 'string') {
+            targetId = linkMeta;
+          } else if (linkMeta === true) {
+            const neighbor = nodes.find(item => item.row === node.row + rowDelta && item.col === node.col + colDelta);
+            targetId = neighbor?.id || null;
+          } else if (typeof linkMeta === 'object') {
+            targetId = linkMeta.to || null;
+          }
+
+          if (!targetId) return;
+          const targetNode = nodeMap.get(targetId);
+          if (!targetNode) return;
+
+          const pairKey = [node.id, targetNode.id].sort().join('::');
+          const directionKey = pairKey + '::' + (direction === 'left' || direction === 'up' ? 'reverse' : 'forward');
+          if (seen.has(directionKey) || seen.has(pairKey)) return;
+
+          const connector = createConnector(node, targetNode, direction, faction, 'link-' + node.id + '-' + targetNode.id, typeof linkMeta === 'object' ? linkMeta : null);
+          if (!connector) return;
+          connectors.push(connector);
+          seen.add(pairKey);
+        });
+      });
+
+      return connectors;
+    }
+
+    function buildGridLayout(faction) {
+      const grid = mergeDeep(GRID_LAYOUT_DEFAULTS, faction?.grid || {});
+      const sourceNodes = Array.isArray(grid?.nodes) ? grid.nodes : [];
+      const nodes = sourceNodes
+        .map((node, index) => normalizeGridNode(node, index, grid))
+        .filter(Boolean);
+
+      const decorators = [
+        ...(Array.isArray(faction?.decorators) ? cloneValue(faction.decorators) : []),
+        ...createGridDecorators({ ...faction, grid }, nodes)
+      ];
+
+      return {
+        canvasWidth: Number(grid.canvasWidth) || GRID_LAYOUT_DEFAULTS.canvasWidth,
+        canvasHeight: Number(grid.canvasHeight) || GRID_LAYOUT_DEFAULTS.canvasHeight,
+        nodes,
+        decorators,
+        captions: grid.captions || null
+      };
+    }
+
+    function getFactionLayout(faction) {
+      if (Array.isArray(faction?.grid?.nodes) && faction.grid.nodes.length) {
+        return buildGridLayout(faction);
+      }
+
+      return {
+        canvasWidth: faction?.canvasWidth || GRID_LAYOUT_DEFAULTS.canvasWidth,
+        canvasHeight: faction?.canvasHeight || GRID_LAYOUT_DEFAULTS.canvasHeight,
+        nodes: Array.isArray(faction?.nodes) ? faction.nodes : [],
+        decorators: Array.isArray(faction?.decorators) ? faction.decorators : [],
+        captions: null
+      };
+    }
+
     function normalizeFactionData(data) {
       if (!data || !Array.isArray(data.factions) || !data.factions.length) {
         return data;
       }
 
-      const template = data.factions.find(item => Array.isArray(item?.nodes) && item.nodes.length) || data.factions[0];
+      const template = data.factions.find(item => (Array.isArray(item?.nodes) && item.nodes.length) || (Array.isArray(item?.grid?.nodes) && item.grid.nodes.length)) || data.factions[0];
       if (!template) return data;
       const templatePeakButtons = Array.isArray(template.peakButtons) && template.peakButtons.length === 6
         ? template.peakButtons
@@ -861,6 +1383,18 @@ layout: false
       for (const faction of data.factions) {
         if (!Array.isArray(faction.nodes) || !faction.nodes.length) {
           faction.nodes = cloneValue(template.nodes || []);
+        }
+
+        if ((!faction.grid || !Array.isArray(faction.grid.nodes) || !faction.grid.nodes.length) && template.grid && Array.isArray(template.grid.nodes) && template.grid.nodes.length) {
+          faction.grid = mergeDeep(template.grid, faction.grid || {});
+        }
+
+        if (faction.grid && !faction.canvasWidth) {
+          faction.canvasWidth = faction.grid.canvasWidth || template.canvasWidth || GRID_LAYOUT_DEFAULTS.canvasWidth;
+        }
+
+        if (faction.grid && !faction.canvasHeight) {
+          faction.canvasHeight = faction.grid.canvasHeight || template.canvasHeight || GRID_LAYOUT_DEFAULTS.canvasHeight;
         }
 
         if (!Array.isArray(faction.decorators) || !faction.decorators.length) {
@@ -884,7 +1418,7 @@ layout: false
     }
 
     function getPrototypeFaction() {
-      return getFactions().find(item => Array.isArray(item?.nodes) && item.nodes.length) || null;
+      return getFactions().find(item => (Array.isArray(item?.nodes) && item.nodes.length) || (Array.isArray(item?.grid?.nodes) && item.grid.nodes.length)) || null;
     }
 
     function getFaction() {
@@ -893,13 +1427,19 @@ layout: false
     }
 
     function getFactionNodes(faction) {
-      if (Array.isArray(faction?.nodes) && faction.nodes.length) return faction.nodes;
-      return getPrototypeFaction()?.nodes || [];
+      const prototypeFaction = getPrototypeFaction();
+      const targetFaction = faction || prototypeFaction;
+      const layout = getFactionLayout(targetFaction);
+      if (Array.isArray(layout?.nodes) && layout.nodes.length) return layout.nodes;
+      return getFactionLayout(prototypeFaction).nodes || [];
     }
 
     function getFactionDecorators(faction) {
-      if (Array.isArray(faction?.decorators) && faction.decorators.length) return faction.decorators;
-      return getPrototypeFaction()?.decorators || [];
+      const prototypeFaction = getPrototypeFaction();
+      const targetFaction = faction || prototypeFaction;
+      const layout = getFactionLayout(targetFaction);
+      if (Array.isArray(layout?.decorators) && layout.decorators.length) return layout.decorators;
+      return getFactionLayout(prototypeFaction).decorators || [];
     }
 
     function getPeakButtons(faction) {
@@ -941,17 +1481,40 @@ layout: false
       return { ...node.levels[level - 1], level };
     }
 
+    function getNodeLevelCount(node) {
+      return clampValue(Array.isArray(node?.levels) && node.levels.length ? node.levels.length : 1, 1, 5);
+    }
+
+    function getNodeFrameCount(node) {
+      return Math.max(0, getNodeLevelCount(node) - 1);
+    }
+
+    function renderNodeFrames(node) {
+      const frameCount = getNodeFrameCount(node);
+      return Array.from({ length: frameCount }, (_, index) => {
+        const layer = index + 1;
+        return '<span class="force-node-frame" style="inset:calc(-1 * var(--node-frame-step, 7px) * ' + layer + ');opacity:' + Math.max(0.5, 0.82 - (layer * 0.06)) + ';"></span>';
+      }).join('');
+    }
+
     function renderBars(node) {
-      const total = Math.max(1, Number.parseInt(node?.barTotal, 10) || 4);
-      const active = Math.max(0, Math.min(total, Number.parseInt(node?.barActive, 10) || 0));
-      return '<div class="force-node-bars">' + Array.from({ length: total }, (_, index) => (
-        '<span class="force-node-bar' + (index < active ? ' is-active' : '') + '"></span>'
+      const total = getNodeLevelCount(node);
+      return '<div class="force-node-bars">' + Array.from({ length: total }, () => (
+        '<span class="force-node-bar is-active"></span>'
       )).join('') + '</div>';
     }
 
     function renderDecorator(item) {
-      const cls = item.type === 'spark' ? 'spark' : 'line-h';
-      return '<div class="force-decorator ' + cls + '" data-layout-kind="decorator" data-base-x="' + item.x + '" data-base-width="' + item.width + '" style="left:' + item.x + 'px;top:' + item.y + 'px;width:' + item.width + 'px;height:' + item.height + 'px;"></div>';
+      const cls = item.type || 'line-h';
+      const styleParts = [
+        'left:' + item.x + 'px',
+        'top:' + item.y + 'px',
+        'width:' + item.width + 'px',
+        'height:' + item.height + 'px'
+      ];
+      if (item.color) styleParts.push('--link-bg:' + item.color);
+      if (item.borderColor) styleParts.push('--link-border:' + item.borderColor);
+      return '<div class="force-decorator ' + cls + '" data-layout-kind="decorator" data-base-x="' + item.x + '" data-base-width="' + item.width + '" style="' + styleParts.join(';') + ';"></div>';
     }
 
     function clampValue(value, min, max) {
@@ -987,6 +1550,9 @@ layout: false
     }
 
     function renderNodeIcon(node) {
+      if (typeof node?.iconText === 'string' && node.iconText.trim()) {
+        return '<span class="force-node-icon-text">' + node.iconText + '</span>';
+      }
       if (isAssetPath(node.icon)) {
         return '<img src="' + node.icon + '" alt="' + (node.title || 'node') + '">';
       }
@@ -1000,6 +1566,13 @@ layout: false
       };
       const styleMap = {
         '--node-accent': colors.accent,
+        '--node-bg': colors.background,
+        '--node-border': colors.border,
+        '--node-frame-color': colors.frameBorder || colors.border,
+        '--node-text': colors.text,
+        '--node-icon': colors.icon,
+        '--node-icon-active': colors.iconActive,
+        '--node-icon-locked': colors.iconLocked,
         '--node-bar-active-bg': colors.barActiveBg,
         '--node-bar-active-border': colors.barActiveBorder
       };
@@ -1013,7 +1586,50 @@ layout: false
     function getNodeInlineStyle(faction, node) {
       const layout = 'left:' + node.x + 'px;top:' + node.y + 'px;width:' + node.width + 'px;height:' + node.height + 'px;';
       const colorVars = getNodeStyleVars(faction, node);
-      return colorVars ? layout + colorVars + ';' : layout;
+      const minSide = Math.max(1, Math.min(node.width || 0, node.height || 0));
+      const levelCount = getNodeLevelCount(node);
+      const nodeRadius = clampValue(minSide * 0.14, 12, 20);
+      const nodeBorderWidth = clampValue(minSide * 0.0085, 1, 2);
+      const frameBorderWidth = clampValue(minSide * 0.008, 1, 1.6);
+      const frameStep = clampValue(minSide * 0.022, 3, 5);
+      const frameReserve = frameStep * Math.max(0, levelCount - 1);
+      const contentMinSide = Math.max(1, minSide - (frameReserve * 2));
+      const contentWidth = Math.max(1, (node.width || 0) - (frameReserve * 2));
+      const iconSize = clampValue(contentMinSide * 0.2, 20, 50);
+      const iconFontSize = clampValue(contentMinSide * 0.2, 20, 42);
+      const barWidth = clampValue(contentWidth * 0.14, 11, 22);
+      const barHeight = clampValue(minSide * 0.038, 4, 8);
+      const badgeFontSize = clampValue(contentMinSide * 0.068, 10, 13);
+      const badgeHeight = clampValue(contentMinSide * 0.13, 18, 24);
+      const badgeMinWidth = clampValue(contentMinSide * 0.14, 18, 26);
+      const badgePad = clampValue(contentMinSide * 0.028, 4, 7);
+      const edgeInset = clampValue(contentMinSide * 0.08, 8, 14);
+      const gap = clampValue(contentMinSide * 0.12, 10, 20);
+      const padding = clampValue(contentMinSide * 0.08, 8, 14);
+      const barsBottom = clampValue(contentMinSide * 0.08, 8, 14);
+      const barGap = clampValue(minSide * 0.03, 3, 6);
+      const styleVars = [
+        '--node-radius:' + nodeRadius + 'px',
+        '--node-border-width:' + nodeBorderWidth + 'px',
+        '--node-frame-border-width:' + frameBorderWidth + 'px',
+        '--node-frame-step:' + frameStep + 'px',
+        '--node-icon-size:' + iconSize + 'px',
+        '--node-icon-font-size:' + iconFontSize + 'px',
+        '--node-bar-width:' + barWidth + 'px',
+        '--node-bar-height:' + barHeight + 'px',
+        '--node-badge-font-size:' + badgeFontSize + 'px',
+        '--node-badge-height:' + badgeHeight + 'px',
+        '--node-badge-min-width:' + badgeMinWidth + 'px',
+        '--node-badge-padding-x:' + badgePad + 'px',
+        '--node-badge-left:' + edgeInset + 'px',
+        '--node-badge-top:' + edgeInset + 'px',
+        '--node-gap:' + gap + 'px',
+        '--node-padding:' + padding + 'px',
+        '--node-bars-bottom:' + barsBottom + 'px',
+        '--node-bar-gap:' + barGap + 'px'
+      ].join(';');
+      const fullStyle = layout + styleVars + ';' + (colorVars ? colorVars + ';' : '');
+      return fullStyle;
     }
 
     function renderFactionButtonVisual(faction) {
@@ -1060,11 +1676,13 @@ layout: false
     function render() {
       const faction = getFaction();
       if (!faction) {
-        app.innerHTML = '<div class="empty-state"><h1>加载失败</h1><p>未找到阵营数据。</p></div>';
+        app.innerHTML = '<div class="empty-state"><h1>??????</h1><p>?????????????/p></div>';
         return;
       }
 
-      const nodes = getFactionNodes(faction);
+      const layout = getFactionLayout(faction);
+      const nodes = Array.isArray(layout?.nodes) && layout.nodes.length ? layout.nodes : getFactionNodes(faction);
+      const decorators = Array.isArray(layout?.decorators) ? layout.decorators : getFactionDecorators(faction);
       const node = getNode(faction);
       if (node && state.nodeId !== node.id) state.nodeId = node.id;
       const levelData = getLevelData(node);
@@ -1077,68 +1695,65 @@ layout: false
       state.peakIndex = clampPeakIndex(faction, state.peakIndex);
 
       app.innerHTML = [
-        '<div class="force-head">',
-        '<small>平级模块</small>',
-        '<h1>' + (state.data?.title || '阵营升级图谱') + '</h1>',
-        '<p>' + (state.data?.summary || '') + '</p>',
-        '<div class="force-faction-rail">',
-        getFactions().map(item => renderFactionButton(item, item.id === faction.id)).join(''),
+        '<div class="force-screen">',
+        '<aside class="force-sidebar">',
+        '<div class="force-sidebar-block force-sidebar-logo"><div class="force-sidebar-logo-mark">LOGO</div></div>',
+        '<div class="force-sidebar-block force-sidebar-card">',
+        '<div class="force-sidebar-card-head">ONI</div>',
+        '<div class="force-sidebar-card-body"><div class="force-sidebar-card-media">IMAGE PLACEHOLDER</div></div>',
         '</div>',
+        '</aside>',
+        '<section class="force-workspace">',
+        '<div class="force-head">',
+        '<div class="force-head-copy">',
+        '<strong>' + (state.data?.title || 'Faction Upgrade Atlas') + '</strong>',
+        '<span>' + (state.data?.summary || '') + '</span>',
+        '</div>',
+        '<div class="force-faction-rail">' + getFactions().map(item => renderFactionButton(item, item.id === faction.id)).join('') + '</div>',
         '</div>',
         '<div class="force-shell">',
         '<section class="force-map-panel">',
         '<div class="force-map-scroller">',
         '<div class="force-map-fit">',
         '<div class="force-map-scale" data-map-scale>',
-        '<div class="force-map-canvas" data-map-canvas data-base-width="' + (faction.canvasWidth || 1360) + '" data-base-height="' + (faction.canvasHeight || 920) + '" style="--canvas-width:' + (faction.canvasWidth || 1360) + 'px;--canvas-height:' + (faction.canvasHeight || 920) + 'px;">',
-        getFactionDecorators(faction).map(renderDecorator).join(''),
+        '<div class="force-map-canvas" data-map-canvas data-base-width="' + (layout.canvasWidth || faction.canvasWidth || 1360) + '" data-base-height="' + (layout.canvasHeight || faction.canvasHeight || 920) + '" style="--canvas-width:' + (layout.canvasWidth || faction.canvasWidth || 1360) + 'px;--canvas-height:' + (layout.canvasHeight || faction.canvasHeight || 920) + 'px;">',
+        decorators.map(renderDecorator).join(''),
         nodes.map(item => {
           const classes = ['force-node'];
           if (item.status) classes.push('is-' + item.status);
           if (item.id === node?.id) classes.push('active-node');
           return [
-            '<button class="' + classes.join(' ') + '" type="button" data-layout-kind="node" data-base-x="' + item.x + '" data-base-width="' + item.width + '" data-node-id="' + item.id + '"',
-            ' style="' + getNodeInlineStyle(faction, item) + '">',
+            '<button class="' + classes.join(' ') + '" type="button" data-layout-kind="node" data-base-x="' + item.x + '" data-base-width="' + item.width + '" data-node-id="' + item.id + '" style="' + getNodeInlineStyle(faction, item) + '">',
+            renderNodeFrames(item),
             item.badge ? '<span class="force-node-badge">' + item.badge + '</span>' : '',
             '<span class="force-node-icon">' + renderNodeIcon(item) + '</span>',
             renderBars(item),
             '</button>'
           ].join('');
         }).join(''),
-        '</div>',
-        '</div>',
-        '</div>',
-        '</div>',
+        '</div></div></div></div>',
         '<div class="force-map-footer">',
-        '<div class="force-peak-switch">',
-        peakButtons.map((item, index) => renderPeakButton(item, index, index === state.peakIndex)).join(''),
-        '</div>',
+        '<div class="force-peak-switch">' + peakButtons.map((item, index) => renderPeakButton(item, index, index === state.peakIndex)).join('') + '</div>',
         '<p class="force-progress-copy">' + (faction.progressText || '') + '</p>',
         '</div>',
         '</section>',
         '<aside class="force-detail-panel">',
         '<div class="force-detail-copy">',
         '<p class="force-detail-kicker">' + (node?.kicker || faction.title) + '</p>',
-        '<h2>' + (node?.title || '未选择节点') + '</h2>',
-        '<p class="force-detail-meta">' + (node?.groupLabel || '升级节点') + ' · ' + (faction.detailLevelLabel || faction.title) + '</p>',
-        '<div class="force-level-switch">',
-        (node?.levels || []).map((_, index) => {
+        '<h2>' + (node?.title || '????????') + '</h2>',
+        '<p class="force-detail-meta">' + (node?.groupLabel || '??????') + ' ? ' + (faction.detailLevelLabel || faction.title) + '</p>',
+        '<div class="force-level-switch">' + (node?.levels || []).map((_, index) => {
           const level = index + 1;
           return '<button class="force-level-pill' + (level === state.level ? ' active' : '') + '" type="button" data-level="' + level + '">' + level + '</button>';
-        }).join(''),
-        '</div>',
+        }).join('') + '</div>',
         node?.description ? '<p class="force-detail-description">' + node.description + '</p>' : '',
-        '<div class="force-detail-block"><h3>材料</h3><div class="force-stat-list">' +
-        materials.map(item => '<div class="force-stat-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') +
-        '</div></div>',
-        '<div class="force-detail-block"><h3>效果</h3><div class="force-stat-list">' +
-        effects.map(item => '<div class="force-stat-row highlight"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') +
-        '</div></div>',
+        '<div class="force-detail-block"><h3>???</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-stat-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div></div>',
+        '<div class="force-detail-block"><h3>???</h3><div class="force-stat-list">' + effects.map(item => '<div class="force-stat-row highlight"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div></div>',
         '</div>',
-        '<div class="force-detail-footer">' +
-        resources.map(item => '<div class="force-resource-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') +
-        '</div>',
+        '<div class="force-detail-footer">' + resources.map(item => '<div class="force-resource-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div>',
         '</aside>',
+        '</div>',
+        '</section>',
         '</div>'
       ].join('');
 
@@ -1188,72 +1803,23 @@ layout: false
       const baseCanvasHeight = Number.parseFloat(canvas.dataset.baseHeight) || canvas.offsetHeight;
       if (!baseCanvasWidth || !baseCanvasHeight) return;
 
+      const widthScale = fit.clientWidth / baseCanvasWidth;
       const heightScale = fit.clientHeight / baseCanvasHeight;
       const isNarrow = window.innerWidth <= 1280;
-      const baseScale = isNarrow
-        ? Math.min(heightScale, 1) * 0.96
-        : Math.min(heightScale, 1) * 0.9;
       const scale = isNarrow
-        ? Math.max(baseScale, 0.58)
-        : baseScale;
-      const targetCanvasWidth = Math.min(baseCanvasWidth, fit.clientWidth / Math.max(scale, 0.001));
-      const horizontalPadding = 18;
-      const layoutRects = [];
+        ? Math.min(widthScale, heightScale) * 0.98
+        : Math.min(widthScale, heightScale) * 0.995;
 
-      canvas.style.setProperty('--canvas-width', targetCanvasWidth + 'px');
+      canvas.style.setProperty('--canvas-width', baseCanvasWidth + 'px');
       canvas.style.setProperty('--canvas-height', baseCanvasHeight + 'px');
-
-      canvas.querySelectorAll('[data-layout-kind="node"]').forEach(node => {
-        const baseX = Number.parseFloat(node.dataset.baseX) || 0;
-        const nodeWidth = Number.parseFloat(node.dataset.baseWidth) || node.offsetWidth || 0;
-        const left = remapHorizontalPosition(baseX, nodeWidth, baseCanvasWidth, targetCanvasWidth, horizontalPadding);
-        node.style.left = left + 'px';
-        layoutRects.push({ element: node, left, width: nodeWidth });
-      });
-
-      canvas.querySelectorAll('[data-layout-kind="decorator"]').forEach(item => {
-        const baseX = Number.parseFloat(item.dataset.baseX) || 0;
-        const itemWidth = Number.parseFloat(item.dataset.baseWidth) || item.offsetWidth || 0;
-        const left = remapHorizontalEdge(baseX, baseCanvasWidth, targetCanvasWidth, horizontalPadding);
-        const right = remapHorizontalEdge(baseX + itemWidth, baseCanvasWidth, targetCanvasWidth, horizontalPadding);
-        const width = Math.max(1, right - left);
-        item.style.left = left + 'px';
-        item.style.width = width + 'px';
-        layoutRects.push({ element: item, left, width });
-      });
-
-      if (layoutRects.length) {
-        const minLeft = Math.min(...layoutRects.map(item => item.left));
-        const maxRight = Math.max(...layoutRects.map(item => item.left + item.width));
-        const contentWidth = maxRight - minLeft;
-        const idealLeft = (targetCanvasWidth - contentWidth) / 2;
-        const minOffset = horizontalPadding - minLeft;
-        const maxOffset = (targetCanvasWidth - horizontalPadding) - maxRight;
-        const offset = clampValue(idealLeft - minLeft, minOffset, maxOffset);
-
-        layoutRects.forEach(item => {
-          item.element.style.left = (item.left + offset) + 'px';
-        });
-      }
-
-      let cropStart = 0;
-      let visibleWidth = targetCanvasWidth;
-      if (!isNarrow && layoutRects.length) {
-        const shiftedMinLeft = Math.min(...layoutRects.map(item => Number.parseFloat(item.element.style.left) || 0));
-        const shiftedMaxRight = Math.max(...layoutRects.map(item => (Number.parseFloat(item.element.style.left) || 0) + item.width));
-        cropStart = Math.max(0, shiftedMinLeft - horizontalPadding);
-        const cropEnd = Math.min(targetCanvasWidth, shiftedMaxRight + horizontalPadding);
-        visibleWidth = Math.max(1, cropEnd - cropStart);
-      }
-
-      canvas.style.marginLeft = (-cropStart) + 'px';
-      scaleWrap.style.width = (visibleWidth * scale) + 'px';
+      canvas.style.marginLeft = '0px';
+      scaleWrap.style.width = (baseCanvasWidth * scale) + 'px';
       scaleWrap.style.height = (baseCanvasHeight * scale) + 'px';
       canvas.style.transform = 'scale(' + scale + ')';
 
       scroller.style.overflow = isNarrow ? 'auto' : 'hidden';
       fit.style.overflow = isNarrow ? 'auto' : 'hidden';
-      fit.style.justifyContent = isNarrow ? 'flex-start' : 'center';
+      fit.style.justifyContent = 'center';
     }
 
     async function bootstrap() {
@@ -1270,6 +1836,29 @@ layout: false
     });
     window.addEventListener('resize', () => {
       requestAnimationFrame(applyMapFit);
+    });
+
+    function goBack() {
+      if (window.history.length > 1 && document.referrer) {
+        window.history.back();
+        return;
+      }
+      window.location.href = '/marathon-lore/';
+    }
+
+    document.addEventListener('click', event => {
+      const trigger = event.target.closest('[data-factions-esc-back]');
+      if (!trigger) return;
+      event.preventDefault();
+      goBack();
+    });
+
+    window.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const active = document.activeElement;
+      const tagName = active && active.tagName ? active.tagName.toLowerCase() : '';
+      if (tagName === 'input' || tagName === 'textarea' || active?.isContentEditable) return;
+      goBack();
     });
   </script>
 </body>

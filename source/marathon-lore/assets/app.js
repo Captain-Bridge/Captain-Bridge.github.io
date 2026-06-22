@@ -180,17 +180,19 @@ function tagResultVisual(item) {
 
 function getDisplayIconImage(item) {
   if (!item) return null;
-  return item.variantB?.iconImage || item.iconImage || getEntryFallbackIconImage(item) || null;
+  return item.variantB?.iconImage || item.iconImage || getEntryDisplayIconImage(item) || null;
 }
 
-function getEntryFallbackIconImage(entry) {
+function getEntryDisplayIconImage(entry) {
   if (!entry) return null;
-
-  const iconValue = String(entry.icon || '').trim().toLowerCase();
-  if (iconValue !== 'none') return null;
+  if (entry.iconImage) return entry.iconImage;
 
   const logs = getLogs(entry);
-  return logs[0]?.image || null;
+  if (logs.length > 0 && logs[0]?.image) {
+    return logs[0].image;
+  }
+
+  return '/marathon-lore/assets/images/default_icon.png';
 }
 
 function getPreviewBodyFile(item) {
@@ -511,7 +513,7 @@ function normalizeEntryRecord(entry) {
     ...entry,
     hasVariantA,
     hasVariantB,
-    iconImage: entry.iconImage || null,
+    iconImage: getEntryDisplayIconImage(entry),
     bodyFile: hasVariantB ? (entry.bodyFile || null) : null,
     image: hasVariantB ? (entry.image || null) : null,
     logs,
