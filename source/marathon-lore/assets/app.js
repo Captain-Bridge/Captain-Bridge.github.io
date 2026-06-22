@@ -3,6 +3,9 @@ const categoryModuleCache = new Map();
 
 const appView = document.getElementById('app-view');
 const viewport = document.querySelector('.viewport');
+const frameHeader = document.querySelector('.frame-header');
+const frameLabel = frameHeader?.querySelector('.frame-label') || null;
+const frameId = frameHeader?.querySelector('.frame-id') || null;
 const state = {
   view: 'root',
   categoryId: null,
@@ -41,6 +44,64 @@ function restoreTagRailScroll() {
   if (tagRail) {
     tagRail.scrollTop = tagRailScrollTop;
   }
+}
+
+function ensureFrameHeaderStack() {
+  if (!frameHeader || !frameLabel) return null;
+  let stack = frameHeader.querySelector('[data-frame-header-stack]');
+  if (!stack) {
+    stack = document.createElement('div');
+    stack.dataset.frameHeaderStack = 'true';
+    stack.className = 'frame-header-stack';
+    frameHeader.insertBefore(stack, frameLabel);
+    stack.appendChild(frameLabel);
+  }
+  return stack;
+}
+
+function ensureFrameHeaderSearchSlot() {
+  if (!frameHeader) return null;
+  let slot = frameHeader.querySelector('[data-frame-header-search-slot]');
+  if (!slot) {
+    slot = document.createElement('div');
+    slot.dataset.frameHeaderSearchSlot = 'true';
+    slot.className = 'frame-header-search-slot';
+    if (frameId) {
+      frameHeader.insertBefore(slot, frameId);
+    } else {
+      frameHeader.appendChild(slot);
+    }
+  }
+  return slot;
+}
+
+function syncFrameViewMeta(content = '') {
+  if (!frameHeader) return;
+  const stack = ensureFrameHeaderStack();
+  let meta = frameHeader.querySelector('[data-frame-view-meta]');
+  if (!meta) {
+    meta = document.createElement('div');
+    meta.dataset.frameViewMeta = 'true';
+    meta.className = 'frame-view-meta';
+    if (stack) {
+      stack.appendChild(meta);
+    } else {
+      frameHeader.prepend(meta);
+    }
+  } else if (stack && meta.parentElement !== stack) {
+    stack.appendChild(meta);
+  }
+
+  meta.innerHTML = content;
+  meta.hidden = !content;
+}
+
+function syncFrameViewSearch(content = '') {
+  if (!frameHeader) return;
+  const slot = ensureFrameHeaderSearchSlot();
+  if (!slot) return;
+  slot.innerHTML = content;
+  slot.hidden = !content;
 }
 
 function iconMarkup(name) {
@@ -1604,31 +1665,36 @@ function tagsView() {
   const headerTitle = activeTag || '全部标签';
   const headerSummary = items.length ? `${items.length} 个命中条目` : '暂无命中结果。';
 
+  syncFrameViewMeta(`
+    <div class="frame-view-meta-copy">
+      <div class="frame-view-meta-row">
+        ${buildBreadcrumbs(['百科', '标签', headerTitle])}
+        <span class="frame-view-meta-summary">${headerSummary}</span>
+      </div>
+    </div>
+  `);
+
+  syncFrameViewSearch(`
+    <form class="frame-view-search" data-tag-search-form>
+      <input
+        class="tag-search-input frame-view-search-input"
+        type="search"
+        placeholder="搜索标签、日志或条目"
+        value="${escapeAttr(tagSearchQuery)}"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button class="tag-search-button frame-view-search-button" type="submit" aria-label="搜索">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="M16 16l5 5"></path>
+        </svg>
+      </button>
+    </form>
+  `);
+
   appView.innerHTML = `
     <div class="view view-tags">
-      <div class="section-header">
-        <div class="section-header-copy">
-          ${buildBreadcrumbs(['百科', '标签', headerTitle])}
-          <h2>${headerTitle}</h2>
-          <p>${headerSummary}</p>
-        </div>
-      </div>
-      <form class="tag-searchbar" data-tag-search-form>
-        <input
-          class="tag-search-input"
-          type="search"
-          placeholder="搜索标签、日志或条目"
-          value="${escapeAttr(tagSearchQuery)}"
-          autocomplete="off"
-          spellcheck="false"
-        >
-        <button class="tag-search-button" type="submit" aria-label="搜索">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <circle cx="11" cy="11" r="6.5"></circle>
-            <path d="M16 16l5 5"></path>
-          </svg>
-        </button>
-      </form>
       <div class="tag-layout">
         <aside class="tag-rail scrollbar">
           ${visibleTags.map(item => `
@@ -2073,6 +2139,8 @@ function bind() {
 
 async function render() {
   hidePreviewTooltip();
+  syncFrameViewMeta('');
+  syncFrameViewSearch('');
 
   if (state.categoryId) {
     await ensureCategoryLoaded(state.categoryId);
