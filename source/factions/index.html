@@ -751,9 +751,59 @@ layout: false
       font-size: 16px;
     }
 
+    .force-detail-block h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .force-detail-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .force-detail-icon img,
+    .force-detail-icon svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     .force-stat-list {
       display: grid;
       gap: 8px;
+    }
+
+    .force-material-row {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .force-material-visual {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      color: var(--soft);
+    }
+
+    .force-material-visual img,
+    .force-material-visual svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .force-material-name {
+      min-width: 0;
+      color: var(--soft);
     }
 
     .force-stat-row,
@@ -891,9 +941,14 @@ layout: false
         min-height: 380px;
       }
 
-      .force-faction-rail,
+      .force-faction-rail {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
       .force-peak-switch {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 0;
+        gap: 8px;
       }
 
       .force-faction-button {
@@ -1020,7 +1075,13 @@ layout: false
       }
 
       .force-peak-switch {
-        gap: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        padding: 0;
+      }
+
+      .force-peak-pill {
+        min-height: 46px;
       }
 
       .force-progress-copy {
@@ -1086,10 +1147,13 @@ layout: false
     };
     const state = {
       data: null,
+      factionCache: Object.create(null),
+      activeFaction: null,
       factionId: null,
       nodeId: null,
       level: null,
-      peakIndex: 0
+      peakIndex: 0,
+      loadSeq: 0
     };
 
     function iconMarkup(name) {
@@ -1107,6 +1171,14 @@ layout: false
 
     function getFactions() {
       return Array.isArray(state.data?.factions) ? state.data.factions : [];
+    }
+
+    function getDefaultFactionId() {
+      return state.data?.defaultFactionId || getFactions()[0]?.id || null;
+    }
+
+    function getFactionCatalogItem(factionId) {
+      return getFactions().find(item => item.id === factionId) || null;
     }
 
     function cloneValue(value) {
@@ -1355,9 +1427,40 @@ layout: false
       };
     }
 
+    function buildTemplateLayout(faction) {
+      const grid = mergeDeep(GRID_LAYOUT_DEFAULTS, {
+        canvasWidth: faction?.canvasWidth || GRID_LAYOUT_DEFAULTS.canvasWidth,
+        canvasHeight: faction?.canvasHeight || GRID_LAYOUT_DEFAULTS.canvasHeight,
+        paddingX: Number.isFinite(Number(faction?.paddingX)) ? Number(faction.paddingX) : GRID_LAYOUT_DEFAULTS.paddingX,
+        paddingY: Number.isFinite(Number(faction?.paddingY)) ? Number(faction.paddingY) : GRID_LAYOUT_DEFAULTS.paddingY,
+        baseNodeScale: Number.isFinite(Number(faction?.baseNodeScale)) ? Number(faction.baseNodeScale) : GRID_LAYOUT_DEFAULTS.baseNodeScale
+      });
+      const sourceNodes = Array.isArray(faction?.nodes) ? faction.nodes : [];
+      const nodes = sourceNodes
+        .map((node, index) => normalizeGridNode(node, index, grid))
+        .filter(Boolean);
+
+      const decorators = [
+        ...(Array.isArray(faction?.decorators) ? cloneValue(faction.decorators) : []),
+        ...createGridDecorators({ ...faction, grid }, nodes)
+      ];
+
+      return {
+        canvasWidth: Number(grid.canvasWidth) || GRID_LAYOUT_DEFAULTS.canvasWidth,
+        canvasHeight: Number(grid.canvasHeight) || GRID_LAYOUT_DEFAULTS.canvasHeight,
+        nodes,
+        decorators,
+        captions: null
+      };
+    }
+
     function getFactionLayout(faction) {
       if (Array.isArray(faction?.grid?.nodes) && faction.grid.nodes.length) {
         return buildGridLayout(faction);
+      }
+
+      if (Array.isArray(faction?.nodes) && faction.nodes.some(node => Number.isFinite(Number(node?.row)) && Number.isFinite(Number(node?.col)))) {
+        return buildTemplateLayout(faction);
       }
 
       return {
@@ -1369,61 +1472,116 @@ layout: false
       };
     }
 
-    function normalizeFactionData(data) {
+    function normalizeFactionCatalogData(data) {
       if (!data || !Array.isArray(data.factions) || !data.factions.length) {
         return data;
       }
 
-      const template = data.factions.find(item => (Array.isArray(item?.nodes) && item.nodes.length) || (Array.isArray(item?.grid?.nodes) && item.grid.nodes.length)) || data.factions[0];
-      if (!template) return data;
-      const templatePeakButtons = Array.isArray(template.peakButtons) && template.peakButtons.length === 6
-        ? template.peakButtons
-        : createDefaultPeakButtons();
+      return {
+        ...data,
+        defaultFactionId: data.defaultFactionId || data.factions[0]?.id || null,
+        factions: data.factions.map(item => ({
+          ...item,
+          id: item.id || null,
+          iconImage: item.iconImage || item.icon || null,
+          themecolor: item.themecolor || null,
+          switchIcon: item.switchIcon || item.iconImage || item.icon || null,
+          dataPath: item.dataPath || (item.id ? '/factions/factions/' + item.id + '.json' : null)
+        }))
+      };
+    }
 
-      for (const faction of data.factions) {
-        if (!Array.isArray(faction.nodes) || !faction.nodes.length) {
-          faction.nodes = cloneValue(template.nodes || []);
-        }
+    function normalizeFactionDetailData(data, catalogItem, fallbackFaction) {
+      const normalized = mergeDeep(fallbackFaction || {}, data || {});
+      if (catalogItem) {
+        normalized.id = catalogItem.id || normalized.id;
+        if (!normalized.title) normalized.title = catalogItem.title;
+        if (!normalized.shortLabel) normalized.shortLabel = catalogItem.shortLabel;
+        if (!normalized.icon) normalized.icon = catalogItem.icon;
+        if (!normalized.iconImage) normalized.iconImage = normalized.icon || catalogItem.icon;
+        if (!normalized.switchIcon) normalized.switchIcon = catalogItem.switchIcon;
+        if (!normalized.themecolor) normalized.themecolor = catalogItem.themecolor || normalized.nodeTheme?.accent || null;
+        if (!normalized.dataPath) normalized.dataPath = catalogItem.dataPath;
+      }
 
-        if ((!faction.grid || !Array.isArray(faction.grid.nodes) || !faction.grid.nodes.length) && template.grid && Array.isArray(template.grid.nodes) && template.grid.nodes.length) {
-          faction.grid = mergeDeep(template.grid, faction.grid || {});
-        }
+      if (!normalized.iconImage && normalized.icon) {
+        normalized.iconImage = normalized.icon;
+      }
 
-        if (faction.grid && !faction.canvasWidth) {
-          faction.canvasWidth = faction.grid.canvasWidth || template.canvasWidth || GRID_LAYOUT_DEFAULTS.canvasWidth;
-        }
+      if (!normalized.icon && normalized.iconImage) {
+        normalized.icon = normalized.iconImage;
+      }
 
-        if (faction.grid && !faction.canvasHeight) {
-          faction.canvasHeight = faction.grid.canvasHeight || template.canvasHeight || GRID_LAYOUT_DEFAULTS.canvasHeight;
-        }
+      if (!normalized.agentIcon) {
+        normalized.agentIcon = normalized.iconImage || normalized.icon || null;
+      }
 
-        if (!Array.isArray(faction.decorators) || !faction.decorators.length) {
-          faction.decorators = cloneValue(template.decorators || []);
-        }
+      if (normalized.themecolor) {
+        normalized.nodeTheme = mergeDeep({
+          accent: normalized.themecolor,
+          barActiveBg: normalized.themecolor,
+          barActiveBorder: normalized.themecolor
+        }, normalized.nodeTheme || {});
+      }
 
-        if (!faction.canvasWidth) {
-          faction.canvasWidth = template.canvasWidth || 1360;
-        }
-
-        if (!faction.canvasHeight) {
-          faction.canvasHeight = template.canvasHeight || 920;
-        }
-
-        if (!Array.isArray(faction.peakButtons) || faction.peakButtons.length !== 6) {
-          faction.peakButtons = cloneValue(templatePeakButtons);
+      if (!Array.isArray(normalized.nodes) || !normalized.nodes.length) {
+        if (Array.isArray(fallbackFaction?.nodes) && fallbackFaction.nodes.length) {
+          normalized.nodes = cloneValue(fallbackFaction.nodes);
         }
       }
 
-      return data;
+      if ((!normalized.grid || !Array.isArray(normalized.grid.nodes) || !normalized.grid.nodes.length) && fallbackFaction?.grid && Array.isArray(fallbackFaction.grid.nodes) && fallbackFaction.grid.nodes.length) {
+        normalized.grid = mergeDeep(fallbackFaction.grid, normalized.grid || {});
+      }
+
+      if (!Array.isArray(normalized.decorators) || !normalized.decorators.length) {
+        if (Array.isArray(fallbackFaction?.decorators) && fallbackFaction.decorators.length) {
+          normalized.decorators = cloneValue(fallbackFaction.decorators);
+        }
+      }
+
+      if (!Array.isArray(normalized.peakButtons) || normalized.peakButtons.length !== 6) {
+        if (Array.isArray(fallbackFaction?.peakButtons) && fallbackFaction.peakButtons.length === 6) {
+          normalized.peakButtons = cloneValue(fallbackFaction.peakButtons);
+        } else {
+          normalized.peakButtons = createDefaultPeakButtons();
+        }
+      }
+
+      if (!normalized.canvasWidth) {
+        normalized.canvasWidth = fallbackFaction?.canvasWidth || GRID_LAYOUT_DEFAULTS.canvasWidth;
+      }
+
+      if (!normalized.canvasHeight) {
+        normalized.canvasHeight = fallbackFaction?.canvasHeight || GRID_LAYOUT_DEFAULTS.canvasHeight;
+      }
+
+      delete normalized.dataPath;
+      return normalized;
     }
 
     function getPrototypeFaction() {
-      return getFactions().find(item => (Array.isArray(item?.nodes) && item.nodes.length) || (Array.isArray(item?.grid?.nodes) && item.grid.nodes.length)) || null;
+      const faction = getFaction();
+      if (faction && ((Array.isArray(faction.nodes) && faction.nodes.length) || (Array.isArray(faction.grid?.nodes) && faction.grid.nodes.length))) {
+        return faction;
+      }
+      const defaultFactionId = getDefaultFactionId();
+      return (defaultFactionId && state.factionCache[defaultFactionId]) || faction || null;
     }
 
     function getFaction() {
-      const factions = getFactions();
-      return factions.find(item => item.id === state.factionId) || factions[0] || null;
+      if (state.activeFaction && state.activeFaction.id === state.factionId) {
+        return state.activeFaction;
+      }
+      if (state.factionId && state.factionCache[state.factionId]) {
+        return state.factionCache[state.factionId];
+      }
+      const defaultFactionId = getDefaultFactionId();
+      if (defaultFactionId && state.factionCache[defaultFactionId]) {
+        return state.factionCache[defaultFactionId];
+      }
+      const fallbackId = getFactions()[0]?.id || null;
+      return fallbackId && state.factionCache[fallbackId] ? state.factionCache[fallbackId] : null;
     }
 
     function getFactionNodes(faction) {
@@ -1475,7 +1633,7 @@ layout: false
     function getLevelData(node) {
       if (!node) return null;
       if (!Array.isArray(node.levels) || !node.levels.length) {
-        return { level: 1, materials: [], effects: [] };
+        return { level: 1, describe: '', summary: '', unlockName: '', unlockNums: '', unlockIcon: '', materials: [], effects: [] };
       }
       const level = clampLevel(node, state.level);
       return { ...node.levels[level - 1], level };
@@ -1549,14 +1707,23 @@ layout: false
       return typeof value === 'string' && /^([/.]|[A-Za-z]:\\)/.test(value);
     }
 
+    function renderAssetIcon(src, alt, fallbackName) {
+      if (isAssetPath(src)) {
+        return '<img src="' + src + '" alt="' + (alt || fallbackName || 'asset') + '">';
+      }
+      return iconMarkup(src || fallbackName);
+    }
+
+    function renderMaterialIcon(icon) {
+      return renderAssetIcon(icon, 'material', 'cache');
+    }
+
     function renderNodeIcon(node) {
       if (typeof node?.iconText === 'string' && node.iconText.trim()) {
         return '<span class="force-node-icon-text">' + node.iconText + '</span>';
       }
-      if (isAssetPath(node.icon)) {
-        return '<img src="' + node.icon + '" alt="' + (node.title || 'node') + '">';
-      }
-      return iconMarkup(node.icon);
+      const icon = node?.iconImage || node?.icon;
+      return renderAssetIcon(icon, node?.title, icon);
     }
 
     function getNodeStyleVars(faction, node) {
@@ -1564,17 +1731,18 @@ layout: false
         ...(faction?.nodeTheme || {}),
         ...(node?.colors || {})
       };
+      const accent = colors.accent || faction?.themecolor;
       const styleMap = {
-        '--node-accent': colors.accent,
+        '--node-accent': accent,
         '--node-bg': colors.background,
         '--node-border': colors.border,
         '--node-frame-color': colors.frameBorder || colors.border,
         '--node-text': colors.text,
         '--node-icon': colors.icon,
-        '--node-icon-active': colors.iconActive,
+        '--node-icon-active': colors.iconActive || accent,
         '--node-icon-locked': colors.iconLocked,
-        '--node-bar-active-bg': colors.barActiveBg,
-        '--node-bar-active-border': colors.barActiveBorder
+        '--node-bar-active-bg': colors.barActiveBg || accent,
+        '--node-bar-active-border': colors.barActiveBorder || accent
       };
 
       return Object.entries(styleMap)
@@ -1633,11 +1801,8 @@ layout: false
     }
 
     function renderFactionButtonVisual(faction) {
-      const icon = faction?.switchIcon || faction?.icon;
-      if (isAssetPath(icon)) {
-        return '<img src="' + icon + '" alt="' + (faction?.title || 'faction') + '">';
-      }
-      return iconMarkup('faction');
+      const icon = faction?.switchIcon || faction?.iconImage || faction?.icon;
+      return renderAssetIcon(icon, faction?.title, 'faction');
     }
 
     function renderFactionButton(faction, isActive) {
@@ -1673,6 +1838,44 @@ layout: false
       state.level = clampLevel(node, state.level);
     }
 
+    async function fetchJson(path) {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error('Failed to load ' + path);
+      return response.json();
+    }
+
+    async function loadFactionDetail(factionId) {
+      if (!factionId) return null;
+      if (state.factionCache[factionId]) return state.factionCache[factionId];
+
+      const catalogItem = getFactionCatalogItem(factionId);
+      if (!catalogItem) return null;
+
+      const fallbackId = getDefaultFactionId();
+      const fallbackFaction = fallbackId && fallbackId !== factionId
+        ? await loadFactionDetail(fallbackId)
+        : null;
+
+      const raw = await fetchJson(catalogItem.dataPath || ('/factions/factions/' + factionId + '.json'));
+      const normalized = normalizeFactionDetailData(raw, catalogItem, fallbackFaction);
+      state.factionCache[factionId] = normalized;
+      return normalized;
+    }
+
+    async function activateFaction(factionId, options = {}) {
+      const targetId = factionId || getDefaultFactionId();
+      if (!targetId) return null;
+
+      state.factionId = targetId;
+      const loadSeq = ++state.loadSeq;
+      const faction = await loadFactionDetail(targetId);
+      if (loadSeq !== state.loadSeq) return faction;
+      state.activeFaction = faction;
+      setStateForFaction(faction);
+      if (options.render !== false) render();
+      return faction;
+    }
+
     function render() {
       const faction = getFaction();
       if (!faction) {
@@ -1692,6 +1895,7 @@ layout: false
       const effects = Array.isArray(levelData?.effects) ? levelData.effects : [];
       const resources = Array.isArray(faction.resources) ? faction.resources : [];
       const peakButtons = getPeakButtons(faction);
+      const unlockIcon = levelData?.unlockIcon || '';
       state.peakIndex = clampPeakIndex(faction, state.peakIndex);
 
       app.innerHTML = [
@@ -1740,15 +1944,15 @@ layout: false
         '<aside class="force-detail-panel">',
         '<div class="force-detail-copy">',
         '<p class="force-detail-kicker">' + (node?.kicker || faction.title) + '</p>',
-        '<h2>' + (node?.title || '????????') + '</h2>',
-        '<p class="force-detail-meta">' + (node?.groupLabel || '??????') + ' ? ' + (faction.detailLevelLabel || faction.title) + '</p>',
+        '<h2>' + (node?.title || 'NODE') + '</h2>',
+        '<p class="force-detail-meta">' + (levelData?.describe || node?.groupLabel || '') + '</p>',
         '<div class="force-level-switch">' + (node?.levels || []).map((_, index) => {
           const level = index + 1;
           return '<button class="force-level-pill' + (level === state.level ? ' active' : '') + '" type="button" data-level="' + level + '">' + level + '</button>';
         }).join('') + '</div>',
-        node?.description ? '<p class="force-detail-description">' + node.description + '</p>' : '',
-        '<div class="force-detail-block"><h3>???</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-stat-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div></div>',
-        '<div class="force-detail-block"><h3>???</h3><div class="force-stat-list">' + effects.map(item => '<div class="force-stat-row highlight"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div></div>',
+        levelData?.summary ? '<p class="force-detail-description">' + levelData.summary + '</p>' : '',
+        '<div class="force-detail-block"><h3>' + (unlockIcon ? '<span class="force-detail-icon">' + renderAssetIcon(unlockIcon, 'unlock', 'unlock') + '</span>' : '') + (levelData?.unlockName || 'UNLOCK') + '</h3><div class="force-stat-list">' + (levelData?.unlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + levelData.unlockNums + '</strong></div>' : '') + '</div></div>',
+        '<div class="force-detail-block"><h3>材料</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-material-row"><span class="force-material-visual">' + renderMaterialIcon(item.materialIcon) + '</span><span class="force-material-name">' + (item.materialName || item.label || '') + '</span><strong>' + (item.materialNums || item.value || '') + '</strong></div>').join('') + '</div></div>',
         '</div>',
         '<div class="force-detail-footer">' + resources.map(item => '<div class="force-resource-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div>',
         '</aside>',
@@ -1758,12 +1962,10 @@ layout: false
       ].join('');
 
       app.querySelectorAll('[data-faction-id]').forEach(button => {
-        button.addEventListener('click', () => {
-          state.factionId = button.dataset.factionId;
+        button.addEventListener('click', async () => {
           state.nodeId = null;
           state.level = null;
-          setStateForFaction(getFaction());
-          render();
+          await activateFaction(button.dataset.factionId);
         });
       });
 
@@ -1823,10 +2025,9 @@ layout: false
     }
 
     async function bootstrap() {
-      const response = await fetch('/factions/data.json');
-      if (!response.ok) throw new Error('Failed to load factions data.json');
-      state.data = normalizeFactionData(await response.json());
-      setStateForFaction(getFaction());
+      state.data = normalizeFactionCatalogData(await fetchJson('/factions/data.json'));
+      const initialFactionId = state.factionId || getDefaultFactionId();
+      await activateFaction(initialFactionId, { render: false });
       render();
     }
 

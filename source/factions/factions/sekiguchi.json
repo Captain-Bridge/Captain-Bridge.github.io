@@ -1,0 +1,99 @@
+{
+  "id": "sekiguchi",
+  "shortLabel": "VI",
+  "title": "??",
+  "iconImage": "/marathon-lore/assets/images/icons/sekiguchi.png",
+  "agent": "SEKIGUCHI",
+  "agentIcon": "/marathon-lore/assets/images/icons/sekiguchi.png",
+  "themecolor": "rgb(85, 229, 157)",
+  "nodes": [
+    {
+      "id": "r0c0",
+      "row": 0,
+      "col": 0,
+      "size": "large",
+      "title": "扩容",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "peakNodes": [
+    {
+      "id": "peak_1",
+      "title": "巅峰节点I",
+      "describe": "提升物品栏容量。",
+      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+      "unlockName": "保险库容量",
+      "unlockNums": "+4行",
+      "unlockIcon": "",
+      "unlockConditions": "1/1"
+    },
+    {
+      "id": "peak_2",
+      "title": "巅峰节点II",
+      "describe": "提升物品栏容量。",
+      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+      "unlockName": "保险库容量",
+      "unlockNums": "+4行",
+      "unlockIcon": "",
+      "unlockConditions": "1/1"
+    },
+    {
+      "id": "peak_3",
+      "title": "巅峰节点III",
+      "describe": "提升物品栏容量。",
+      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+      "unlockName": "保险库容量",
+      "unlockNums": "+4行",
+      "unlockIcon": "",
+      "unlockConditions": "1/1"
+    },
+    {
+      "id": "peak_4",
+      "title": "巅峰节点IV",
+      "describe": "提升物品栏容量。",
+      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+      "unlockName": "保险库容量",
+      "unlockNums": "+4行",
+      "unlockIcon": "",
+      "unlockConditions": "1/1"
+    },
+    {
+      "id": "peak_5",
+      "title": "巅峰节点V",
+      "describe": "提升物品栏容量。",
+      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+      "unlockName": "保险库容量",
+      "unlockNums": "+4行",
+      "unlockIcon": "",
+      "unlockConditions": "1/1"
+    },
+    {
+      "id": "peak_6",
+      "title": "巅峰节点VI",
+      "describe": "提升物品栏容量。",
+      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+      "unlockName": "保险库容量",
+      "unlockNums": "+4行",
+      "unlockIcon": "",
+      "unlockConditions": "1/1"
+    }
+  ]
+}

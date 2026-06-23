@@ -1,0 +1,37 @@
+{
+  "id": "cyac",
+  "shortLabel": "I",
+  "title": "赛博艾克米",
+  "iconImage": "/marathon-lore/assets/images/icons/cyac.png",
+  "agent": "ONI",
+  "agentIcon": "/marathon-lore/assets/images/icons/cyac.png",
+  "themecolor": "rgb(1, 224, 98)",
+  "nodes": [
+    {
+      "id": "r0c0",
+      "row": 0,
+      "col": 0,
+      "size": "large",
+      "title": "扩容",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

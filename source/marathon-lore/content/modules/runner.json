@@ -114,7 +114,7 @@
             },
             {
               "id": "safe_on_the_barrier",
-              "title": "安全上垒",
+              "title": "安全上垒！",
               "count": "已完成",
               "summary": "使用动力滑行进入一个已激活的撤离点。",
               "meta": [
@@ -1104,13 +1104,13 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
-              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_1_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_1.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_1.png"
             },
             {
               "id": "rook_mastery_2",
-              "title": "羊如狼群",
+              "title": "羊入狼群",
               "count": "已完成",
               "summary": "在信号遮蔽激活时是用匕首击败或击倒一名敌对疾行者。",
               "meta": [
@@ -1119,9 +1119,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
-              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_2_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_2.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_2.png"
             },
             {
               "id": "rook_mastery_3",
@@ -1134,9 +1134,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
-              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_3_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_3.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_3.png"
             },
             {
               "id": "rook_mastery_4",
@@ -1149,9 +1149,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
-              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_4_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_4.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_4.png"
             }
           ]
         }
