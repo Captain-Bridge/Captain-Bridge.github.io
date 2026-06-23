@@ -170,6 +170,1158 @@
           ]
         }
       ]
+    },
+    {
+      "id": "triage",
+      "title": "救援",
+      "count": "9 / 9",
+      "icon": "/marathon-lore/assets/images/icons/triage.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "triage_extraction",
+              "title": "救援撤离",
+              "count": "已完成",
+              "summary": "使用救援外壳撤离。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/triage/triage_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/triage/triage_extraction.png",
+              "logs": [
+                {
+                  "id": "triage_shell",
+                  "title": "救援外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/triage/triage_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_triage",
+              "title": "战术救援",
+              "count": "已完成",
+              "summary": "使用救援外壳的战术技能：医疗无人机。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "triage_tatical",
+                  "title": "救援：医疗无人机",
+                  "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/triage/triage_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_triage",
+              "title": "主要救援",
+              "count": "已完成",
+              "summary": "使用救援外壳的主要技能：重启+。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/triage/mainly_triage_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/triage/mainly_triage.md",
+              "image": "/marathon-lore/content/docs/runner/triage/mainly_triage.png",
+              "logs": [
+                {
+                  "id": "triage_mainly",
+                  "title": "救援：重启+",
+                  "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/triage/triage_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "triage_mastery",
+              "title": "战地医生",
+              "count": "已完成",
+              "summary": "完成所有救援精通挑战。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/triage/triage_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/triage/triage_mastery.png"
+            },
+            {
+              "id": "triage_mastery_1",
+              "title": "救死扶伤",
+              "count": "已完成",
+              "summary": "通过一次重启+激活同时击中一个敌对目标和一名队员。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "精通"
+              ]
+            },
+            {
+              "id": "triage_mastery_2",
+              "title": "连锁[友方]",
+              "count": "已完成",
+              "summary": "使用重启+一次性复活两名队员。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "精通"
+              ]
+            },
+            {
+              "id": "triage_mastery_3",
+              "title": "最佳防御···",
+              "count": "已完成",
+              "summary": "⚡︎使用电池过充时对一名UESC指挥官释放电磁脉冲。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "精通"
+              ]
+            },
+            {
+              "id": "triage_mastery_4",
+              "title": "危难中的伙伴",
+              "count": "已完成",
+              "summary": "再一次疾行中，将医疗无人机附着到任意队员身上5次。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "精通"
+              ]
+            },
+            {
+              "id": "triage_mastery_5",
+              "title": "有益毒性",
+              "count": "已完成",
+              "summary": "使用共享.exe分享心肺复苏、能量增幅和信号干扰器效果。",
+              "meta": [
+                "疾行者",
+                "救援",
+                "精通"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "destroyer",
+      "title": "毁灭者",
+      "count": "9 / 9",
+      "icon": "/marathon-lore/assets/images/icons/destroyer.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "destroyer_extraction",
+              "title": "毁灭者撤离",
+              "count": "已完成",
+              "summary": "使用毁灭者外壳撤离。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction.png",
+              "logs": [
+                {
+                  "id": "destroyer_shell",
+                  "title": "毁灭者外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_destroyer",
+              "title": "战术毁灭者",
+              "count": "已完成",
+              "summary": "使用毁灭者外壳的战术技能：防暴路障。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "destroyer_tatical",
+                  "title": "毁灭者：防暴路障",
+                  "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_destroyer",
+              "title": "主要毁灭者",
+              "count": "已完成",
+              "summary": "使用毁灭者外壳的主要技能：搜索摧毁。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer.md",
+              "image": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer.png",
+              "logs": [
+                {
+                  "id": "destroyer_mainly",
+                  "title": "毁灭者：搜索摧毁",
+                  "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "destroyer_mastery",
+              "title": "超级士兵",
+              "count": "已完成",
+              "summary": "完成所有毁灭者精通挑战。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery.png"
+            },
+            {
+              "id": "destroyer_mastery_1",
+              "title": "在搜索摧毁期间击败一名躲在烟雾中的疾行者。",
+              "count": "已完成",
+              "summary": "通过一次重启+激活同时击中一个敌对目标和一名队员。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "精通"
+              ]
+            },
+            {
+              "id": "destroyer_mastery_2",
+              "title": "追击歼灭",
+              "count": "已完成",
+              "summary": "在使用战术冲刺后短时间内击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "精通"
+              ]
+            },
+            {
+              "id": "destroyer_mastery_3",
+              "title": "拉近距离",
+              "count": "已完成",
+              "summary": "在使用推进器后短时间内使用霰弹枪击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "精通"
+              ]
+            },
+            {
+              "id": "destroyer_mastery_4",
+              "title": "掩护逃跑",
+              "count": "已完成",
+              "summary": "在撤离成功前一刻使用防暴路障格挡伤害。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "精通"
+              ]
+            },
+            {
+              "id": "destroyer_mastery_5",
+              "title": "干得漂亮",
+              "count": "已完成",
+              "summary": "使用战术冲刺突破玻璃窗后击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "毁灭者",
+                "精通"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assassin",
+      "title": "刺客",
+      "count": "9 / 9",
+      "icon": "/marathon-lore/assets/images/icons/assassin.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "assassin_extraction",
+              "title": "刺客撤离",
+              "count": "已完成",
+              "summary": "使用刺客外壳撤离。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/assassin/assassin_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/assassin/assassin_extraction.png",
+              "logs": [
+                {
+                  "id": "assassin_shell",
+                  "title": "刺客外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_assassin",
+              "title": "战术刺客",
+              "count": "已完成",
+              "summary": "使用刺客外壳的战术技能：主动迷彩。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "assassin_tatical",
+                  "title": "刺客：主动迷彩",
+                  "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_assassin",
+              "title": "主要刺客",
+              "count": "已完成",
+              "summary": "使用刺客外壳的主要技能：烟雾屏障。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/assassin/mainly_assassin_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/assassin/mainly_assassin.md",
+              "image": "/marathon-lore/content/docs/runner/assassin/mainly_assassin.png",
+              "logs": [
+                {
+                  "id": "assassin_mainly",
+                  "title": "刺客：烟雾屏障",
+                  "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "assassin_mastery",
+              "title": "隐身",
+              "count": "已完成",
+              "summary": "完成所有刺客精通挑战。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/assassin/assassin_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/assassin/assassin_mastery.png"
+            },
+            {
+              "id": "assassin_mastery_1",
+              "title": "隐藏打击",
+              "count": "已完成",
+              "summary": "在解除隐身后3秒内用匕首击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "精通"
+              ]
+            },
+            {
+              "id": "assassin_mastery_2",
+              "title": "高空俯冲",
+              "count": "已完成",
+              "summary": "从高处进行烟雾俯冲。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "精通"
+              ]
+            },
+            {
+              "id": "assassin_mastery_3",
+              "title": "命悬一线",
+              "count": "已完成",
+              "summary": "在差点被消灭的情况下重启两名队员。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "精通"
+              ]
+            },
+            {
+              "id": "assassin_mastery_4",
+              "title": "主场优势",
+              "count": "已完成",
+              "summary": "在烟雾中迅速击倒3名疾行者。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "精通"
+              ]
+            },
+            {
+              "id": "assassin_mastery_5",
+              "title": "机会主义",
+              "count": "已完成",
+              "summary": "利用敌方的烟雾隐身后击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "刺客",
+                "精通"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thief",
+      "title": "盗贼",
+      "count": "9 / 9",
+      "icon": "/marathon-lore/assets/images/icons/thief.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "thief_extraction",
+              "title": "盗贼撤离",
+              "count": "已完成",
+              "summary": "使用盗贼外壳撤离。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/thief/thief_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/thief/thief_extraction.png",
+              "logs": [
+                {
+                  "id": "thief_shell",
+                  "title": "盗贼外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/thief/thief_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_thief",
+              "title": "战术盗贼",
+              "count": "已完成",
+              "summary": "使用盗贼外壳的战术技能：抓钩装置。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "thief_tatical",
+                  "title": "盗贼：抓钩装置",
+                  "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/thief/thief_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_thief",
+              "title": "主要盗贼",
+              "count": "已完成",
+              "summary": "使用盗贼外壳的主要技能：窃贼无人机。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/thief/mainly_thief_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/thief/mainly_thief.md",
+              "image": "/marathon-lore/content/docs/runner/thief/mainly_thief.png",
+              "logs": [
+                {
+                  "id": "thief_mainly",
+                  "title": "盗贼：窃贼无人机",
+                  "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/thief/thief_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "thief_mastery",
+              "title": "盗贼大师",
+              "count": "已完成",
+              "summary": "完成所有盗贼精通挑战。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/thief/thief_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/thief/thief_mastery.png"
+            },
+            {
+              "id": "thief_mastery_1",
+              "title": "破碎希望",
+              "count": "已完成",
+              "summary": "在利用抓钩破入玻璃窗后击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "精通"
+              ]
+            },
+            {
+              "id": "thief_mastery_2",
+              "title": "最后关头",
+              "count": "已完成",
+              "summary": "在生命值极低的情况下使用抓钩装置逃跑并治疗。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "精通"
+              ]
+            },
+            {
+              "id": "thief_mastery_3",
+              "title": "资深窃贼",
+              "count": "已完成",
+              "summary": "使用窃贼无人机一次性窃取3名不同的敌对目标。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "精通"
+              ]
+            },
+            {
+              "id": "thief_mastery_4",
+              "title": "夺命大师",
+              "count": "已完成",
+              "summary": "使用窃贼无人机，在倒地疾行者使用自我复活时窃取一件物品。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "精通"
+              ]
+            },
+            {
+              "id": "thief_mastery_5",
+              "title": "无孔不入",
+              "count": "已完成",
+              "summary": "骇入一个优先敌对目标。",
+              "meta": [
+                "疾行者",
+                "盗贼",
+                "精通"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recon",
+      "title": "侦察",
+      "count": "9 / 9",
+      "icon": "/marathon-lore/assets/images/icons/recon.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "recon_extraction",
+              "title": "侦察撤离",
+              "count": "已完成",
+              "summary": "使用侦察外壳撤离。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/recon/recon_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/recon/recon_extraction.png",
+              "logs": [
+                {
+                  "id": "recon_shell",
+                  "title": "侦察外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/recon/recon_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_recon",
+              "title": "战术侦察",
+              "count": "已完成",
+              "summary": "使用侦察外壳的战术技能：追踪无人机。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "recon_tatical",
+                  "title": "侦察：追踪无人机",
+                  "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/recon/recon_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_recon",
+              "title": "主要侦察",
+              "count": "已完成",
+              "summary": "使用侦察外壳的主要技能：回声脉冲。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/recon/mainly_recon_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/recon/mainly_recon.md",
+              "image": "/marathon-lore/content/docs/runner/recon/mainly_recon.png",
+              "logs": [
+                {
+                  "id": "recon_mainly",
+                  "title": "侦察：回声脉冲",
+                  "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/recon/recon_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "recon_mastery",
+              "title": "顶级掠食者",
+              "count": "已完成",
+              "summary": "完成所有侦察精通挑战。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/recon/recon_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/recon/recon_mastery.png"
+            },
+            {
+              "id": "recon_mastery_1",
+              "title": "全面出击",
+              "count": "已完成",
+              "summary": "使用一次回声脉冲标记10个或更多敌对目标。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "精通"
+              ]
+            },
+            {
+              "id": "recon_mastery_2",
+              "title": "逆转乾坤",
+              "count": "已完成",
+              "summary": "在检测到标记后的30秒内击败一名疾行者。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "精通"
+              ]
+            },
+            {
+              "id": "recon_mastery_3",
+              "title": "溅射攻击",
+              "count": "已完成",
+              "summary": "使用同一架追踪无人机击中3个敌对目标。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "精通"
+              ]
+            },
+            {
+              "id": "recon_mastery_4",
+              "title": "三连胜",
+              "count": "已完成",
+              "summary": "再一次回声脉冲激活期间击败3名疾行者。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "精通"
+              ]
+            },
+            {
+              "id": "recon_mastery_5",
+              "title": "无处可藏",
+              "count": "已完成",
+              "summary": "在目标锁定装置激活时使用追踪无人机集中一个敌对目标。",
+              "meta": [
+                "疾行者",
+                "侦察",
+                "精通"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rook",
+      "title": "鲁克",
+      "count": "7 / 7",
+      "icon": "/marathon-lore/assets/images/icons/rook.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "rook_extraction",
+              "title": "鲁克撤离",
+              "count": "已完成",
+              "summary": "使用鲁克外壳撤离。",
+              "meta": [
+                "疾行者",
+                "鲁克",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_extraction.png",
+              "logs": [
+                {
+                  "id": "rook_shell",
+                  "title": "鲁克外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/rook/rook_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_rook",
+              "title": "战术鲁克",
+              "count": "已完成",
+              "summary": "使用鲁克外壳的战术技能：信号遮蔽。",
+              "meta": [
+                "疾行者",
+                "鲁克",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "rook_tatical",
+                  "title": "鲁克：信号遮蔽",
+                  "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/rook/rook_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_rook",
+              "title": "主要鲁克",
+              "count": "已完成",
+              "summary": "使用鲁克外壳的主要技能：复原。",
+              "meta": [
+                "疾行者",
+                "鲁克",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/mainly_rook_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/mainly_rook.md",
+              "image": "/marathon-lore/content/docs/runner/rook/mainly_rook.png",
+              "logs": [
+                {
+                  "id": "rook_mainly",
+                  "title": "鲁克：复原",
+                  "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/rook/rook_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "4 / 4",
+          "children": [
+            {
+              "id": "rook_mastery_1",
+              "title": "已报废",
+              "count": "已完成",
+              "summary": "使用鲁克框架，在消灭一名敌对疾行者后成功撤离。",
+              "meta": [
+                "疾行者",
+                "鲁克",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+            },
+            {
+              "id": "rook_mastery_2",
+              "title": "羊如狼群",
+              "count": "已完成",
+              "summary": "在信号遮蔽激活时是用匕首击败或击倒一名敌对疾行者。",
+              "meta": [
+                "疾行者",
+                "鲁克",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+            },
+            {
+              "id": "rook_mastery_3",
+              "title": "拾荒者",
+              "count": "已完成",
+              "summary": "使用卢克框架，在配装价值至少3000的情况下撤离。",
+              "meta": [
+                "疾行者",
+                "鲁克",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+            },
+            {
+              "id": "rook_mastery_4",
+              "title": "旅途中结交的伙伴",
+              "count": "已完成",
+              "summary": "使用鲁克框架，在未消灭过敌对疾行者的情况下成功撤离。",
+              "meta": [
+                "疾行者",
+                "鲁克",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sentinel",
+      "title": "哨兵",
+      "count": "9 / 9",
+      "icon": "/marathon-lore/assets/images/icons/sentinel.svg",
+      "nodes": [
+        {
+          "id": "welcome_center",
+          "title": "迎宾中心",
+          "count": "3 / 3",
+          "children": [
+            {
+              "id": "sentinel_extraction",
+              "title": "哨兵撤离",
+              "count": "已完成",
+              "summary": "使用哨兵外壳撤离。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "迎宾中心"
+              ],
+              "iconImage": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction.md",
+              "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction.png",
+              "logs": [
+                {
+                  "id": "sentinel_shell",
+                  "title": "哨兵外壳",
+                  "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_shell.md",
+                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_shell.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tatical_sentinel",
+              "title": "战术哨兵",
+              "count": "已完成",
+              "summary": "使用哨兵外壳的战术技能：陷阱地雷。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "迎宾中心"
+              ],
+              "icon": "None",
+              "logs": [
+                {
+                  "id": "sentinel_tatical",
+                  "title": "哨兵：陷阱地雷",
+                  "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_tatical.md",
+                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_tatical.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mainly_sentinel",
+              "title": "主要哨兵",
+              "count": "已完成",
+              "summary": "使用哨兵外壳的主要技能：防御系统。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "迎宾中心"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel.md",
+              "image": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel.png",
+              "logs": [
+                {
+                  "id": "sentinel_mainly",
+                  "title": "哨兵：防御系统",
+                  "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_mainly.md",
+                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_mainly.png",
+                  "meta": [
+                    "疾行者指南"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mastery",
+          "title": "精通",
+          "count": "6 / 6",
+          "children": [
+            {
+              "id": "sentinel_mastery",
+              "title": "哨兵大师",
+              "count": "已完成",
+              "summary": "完成所有哨兵精通挑战。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "精通"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery_icon.png",
+              "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery.md",
+              "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery.png"
+            },
+            {
+              "id": "sentinel_mastery_1",
+              "title": "慢一些",
+              "count": "已完成",
+              "summary": "在使用哨兵外壳固化敌对疾行者后的短时间内将其消灭。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "精通"
+              ]
+            },
+            {
+              "id": "sentinel_mastery_2",
+              "title": "坚不可破",
+              "count": "已完成",
+              "summary": "使用哨兵外壳的1个防御系统摧毁6枚射弹。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "精通"
+              ]
+            },
+            {
+              "id": "sentinel_mastery_3",
+              "title": "一弹还一弹",
+              "count": "已完成",
+              "summary": "使用哨兵外壳的防御系统拦截一名敌对疾行者的射弹后将其击倒。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "精通"
+              ]
+            },
+            {
+              "id": "sentinel_mastery_4",
+              "title": "占位",
+              "count": "已完成",
+              "summary": "在城堡原则生效期间，使用哨兵外壳通过冲锋枪、霰弹枪或手枪消灭敌对目标。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "精通"
+              ]
+            },
+            {
+              "id": "sentinel_mastery_5",
+              "title": "信息经济",
+              "count": "已完成",
+              "summary": "使用哨兵外壳在1次猎物追踪器效果期间消灭5名敌对目标。",
+              "meta": [
+                "疾行者",
+                "哨兵",
+                "精通"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
