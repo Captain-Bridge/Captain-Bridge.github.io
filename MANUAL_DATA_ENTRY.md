@@ -2,7 +2,7 @@
 
 ```
 启动命令
-npm.cmd run clean; npm.cmd run build; python -m http.server 4000 --directory public
+npm.cmd run preview
 ```
 
 这份文档对应的是**当前项目的真实结构**。
@@ -408,7 +408,7 @@ Lore 结构清单文件是：
 
 ```powershell
 npm.cmd run build
-python -m http.server 4010 --directory public
+npm.cmd run serve:public
 ```
 
 访问：

@@ -1143,6 +1143,18 @@ body {
   line-height:1.7;
 }
 
+.detail-copy.terminal .manifest-inline-row {
+  display:inline-flex;
+  width:100%;
+  justify-content:space-between;
+  align-items:baseline;
+  white-space:nowrap;
+}
+
+.detail-copy.terminal .manifest-inline-row > .manifest-inline-right {
+  white-space:nowrap;
+}
+
 .detail-copy.terminal .manifest-line.gap-top {
   margin-top:20px;
 }

@@ -6,6 +6,8 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "npm run build",
+    "preview": "npm run clean && npm run build && python tools/serve-public.py",
+    "serve:public": "python tools/serve-public.py",
     "server": "hexo server"
   },
   "hexo": {
