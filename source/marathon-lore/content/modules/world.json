@@ -5674,7 +5674,7 @@
             },
             {
               "id": "frost_warden",
-              "title": "解毒",
+              "title": "霜冻",
               "count": "已完成",
               "icon": "None",
               "summary": "击败恐怖沼泽（夜间）的看守者。",
@@ -5747,29 +5747,6 @@
               "count": "已完成",
               "icon": "None",
               "summary": "击落一架UESC运输无人机的货物并掠夺",
-              "meta": [
-                "世界",
-                "活动",
-                "UESC"
-              ],
-              "logs": [
-                {
-                  "id": "UESC_trans_drone",
-                  "title": "UESC运输无人机",
-                  "bodyFile": "/marathon-lore/content/docs/world/activity/UESC_trans_drone.md",
-                  "image": "/marathon-lore/content/docs/world/activity/UESC_trans_drone.png",
-                  "meta": [
-                    "疾行者指南"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "UESC_trans_drone",
-              "title": "UESC运输无人机",
-              "count": "已完成",
-              "icon": "None",
-              "summary": "击落一架UESC运输无人机的货物并掠夺。",
               "meta": [
                 "世界",
                 "活动",
