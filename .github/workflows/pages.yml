@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Setup GitHub Pages
@@ -36,6 +36,9 @@ jobs:
 
       - name: Build site
         run: npm run build
+
+      - name: Check Pages artifact size
+        run: npm run check:pages-size
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

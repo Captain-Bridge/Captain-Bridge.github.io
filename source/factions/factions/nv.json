@@ -2,9 +2,9 @@
   "id": "nv",
   "shortLabel": "II",
   "title": "????",
-  "iconImage": "/marathon-lore/assets/images/icons/nv.png",
+  "iconImage": "/marathon-lore/assets/images/icons/nv.webp",
   "agent": "NV",
-  "agentIcon": "/marathon-lore/assets/images/icons/nv.png",
+  "agentIcon": "/marathon-lore/assets/images/icons/nv.webp",
   "themecolor": "rgb(159, 125, 255)",
   "nodes": [
     {

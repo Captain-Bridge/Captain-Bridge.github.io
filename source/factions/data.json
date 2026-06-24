@@ -7,42 +7,42 @@
       "id": "cyac",
       "title": "赛博艾克米",
       "shortLabel": "I",
-      "icon": "/marathon-lore/assets/images/icons/cyac.png",
+      "icon": "/marathon-lore/assets/images/icons/cyac.webp",
       "dataPath": "/factions/factions/cyac.json"
     },
     {
       "id": "nv",
       "title": "纽卡洛里",
       "shortLabel": "II",
-      "icon": "/marathon-lore/assets/images/icons/nv.png",
+      "icon": "/marathon-lore/assets/images/icons/nv.webp",
       "dataPath": "/factions/factions/nv.json"
     },
     {
       "id": "telrax",
       "title": "特莱克斯",
       "shortLabel": "III",
-      "icon": "/marathon-lore/assets/images/icons/telrax.png",
+      "icon": "/marathon-lore/assets/images/icons/telrax.webp",
       "dataPath": "/factions/factions/telrax.json"
     },
     {
       "id": "mida",
       "title": "米达",
       "shortLabel": "IV",
-      "icon": "/marathon-lore/assets/images/icons/mida.png",
+      "icon": "/marathon-lore/assets/images/icons/mida.webp",
       "dataPath": "/factions/factions/mida.json"
     },
     {
       "id": "arachne",
       "title": "阿拉克尼",
       "shortLabel": "V",
-      "icon": "/marathon-lore/assets/images/icons/arachne.png",
+      "icon": "/marathon-lore/assets/images/icons/arachne.webp",
       "dataPath": "/factions/factions/arachne.json"
     },
     {
       "id": "sekiguchi",
       "title": "关口",
       "shortLabel": "VI",
-      "icon": "/marathon-lore/assets/images/icons/sekiguchi.png",
+      "icon": "/marathon-lore/assets/images/icons/sekiguchi.webp",
       "dataPath": "/factions/factions/sekiguchi.json"
     }
   ]

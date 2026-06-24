@@ -2,9 +2,9 @@
   "id": "mida",
   "shortLabel": "IV",
   "title": "??",
-  "iconImage": "/marathon-lore/assets/images/icons/mida.png",
+  "iconImage": "/marathon-lore/assets/images/icons/mida.webp",
   "agent": "MIDA",
-  "agentIcon": "/marathon-lore/assets/images/icons/mida.png",
+  "agentIcon": "/marathon-lore/assets/images/icons/mida.webp",
   "themecolor": "rgb(255, 201, 77)",
   "nodes": [
     {

@@ -26,15 +26,15 @@
                 "暴徒",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/vandal/vandal_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/vandal/vandal_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/vandal/vandal_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/vandal/vandal_extraction.webp",
               "logs": [
                 {
                   "id": "vandal_shell",
                   "title": "暴徒外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -57,7 +57,7 @@
                   "id": "vandal_tatical",
                   "title": "暴徒：破坏炮",
                   "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -75,15 +75,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/vandal/mainly_vandal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/vandal/mainly_vandal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/vandal/mainly_vandal.md",
-              "image": "/marathon-lore/content/docs/runner/vandal/mainly_vandal.png",
+              "image": "/marathon-lore/content/docs/runner/vandal/mainly_vandal.webp",
               "logs": [
                 {
                   "id": "vandal_mainly",
                   "title": "暴徒：增幅",
                   "bodyFile": "/marathon-lore/content/docs/runner/vandal/vandal_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/vandal/vandal_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -108,9 +108,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/vandal/watch_it_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/vandal/watch_it_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/vandal/watch_it.md",
-              "image": "/marathon-lore/content/docs/runner/vandal/watch_it.png"
+              "image": "/marathon-lore/content/docs/runner/vandal/watch_it.webp"
             },
             {
               "id": "safe_on_the_barrier",
@@ -192,15 +192,15 @@
                 "救援",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/triage/triage_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/triage/triage_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/triage/triage_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/triage/triage_extraction.webp",
               "logs": [
                 {
                   "id": "triage_shell",
                   "title": "救援外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/triage/triage_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/triage/triage_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -223,7 +223,7 @@
                   "id": "triage_tatical",
                   "title": "救援：医疗无人机",
                   "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/triage/triage_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/triage/triage_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -241,15 +241,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/triage/mainly_triage_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/triage/mainly_triage_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/triage/mainly_triage.md",
-              "image": "/marathon-lore/content/docs/runner/triage/mainly_triage.png",
+              "image": "/marathon-lore/content/docs/runner/triage/mainly_triage.webp",
               "logs": [
                 {
                   "id": "triage_mainly",
                   "title": "救援：重启+",
                   "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/triage/triage_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/triage/triage_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -274,9 +274,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/triage/triage_mastery_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/triage/triage_mastery_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/triage/triage_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/triage/triage_mastery.png"
+              "image": "/marathon-lore/content/docs/runner/triage/triage_mastery.webp"
             },
             {
               "id": "triage_mastery_1",
@@ -358,15 +358,15 @@
                 "毁灭者",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_extraction.webp",
               "logs": [
                 {
                   "id": "destroyer_shell",
                   "title": "毁灭者外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -389,7 +389,7 @@
                   "id": "destroyer_tatical",
                   "title": "毁灭者：防暴路障",
                   "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -407,15 +407,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer.md",
-              "image": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer.png",
+              "image": "/marathon-lore/content/docs/runner/destroyer/mainly_destroyer.webp",
               "logs": [
                 {
                   "id": "destroyer_mainly",
                   "title": "毁灭者：搜索摧毁",
                   "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -440,9 +440,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery.png"
+              "image": "/marathon-lore/content/docs/runner/destroyer/destroyer_mastery.webp"
             },
             {
               "id": "destroyer_mastery_1",
@@ -524,15 +524,15 @@
                 "刺客",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/assassin/assassin_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/assassin/assassin_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/assassin/assassin_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/assassin/assassin_extraction.webp",
               "logs": [
                 {
                   "id": "assassin_shell",
                   "title": "刺客外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -555,7 +555,7 @@
                   "id": "assassin_tatical",
                   "title": "刺客：主动迷彩",
                   "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -573,15 +573,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/assassin/mainly_assassin_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/assassin/mainly_assassin_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/assassin/mainly_assassin.md",
-              "image": "/marathon-lore/content/docs/runner/assassin/mainly_assassin.png",
+              "image": "/marathon-lore/content/docs/runner/assassin/mainly_assassin.webp",
               "logs": [
                 {
                   "id": "assassin_mainly",
                   "title": "刺客：烟雾屏障",
                   "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/assassin/assassin_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -606,9 +606,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/assassin/assassin_mastery_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/assassin/assassin_mastery_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/assassin/assassin_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/assassin/assassin_mastery.png"
+              "image": "/marathon-lore/content/docs/runner/assassin/assassin_mastery.webp"
             },
             {
               "id": "assassin_mastery_1",
@@ -690,15 +690,15 @@
                 "盗贼",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/thief/thief_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/thief/thief_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/thief/thief_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/thief/thief_extraction.webp",
               "logs": [
                 {
                   "id": "thief_shell",
                   "title": "盗贼外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/thief/thief_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/thief/thief_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -721,7 +721,7 @@
                   "id": "thief_tatical",
                   "title": "盗贼：抓钩装置",
                   "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/thief/thief_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/thief/thief_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -739,15 +739,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/thief/mainly_thief_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/thief/mainly_thief_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/thief/mainly_thief.md",
-              "image": "/marathon-lore/content/docs/runner/thief/mainly_thief.png",
+              "image": "/marathon-lore/content/docs/runner/thief/mainly_thief.webp",
               "logs": [
                 {
                   "id": "thief_mainly",
                   "title": "盗贼：窃贼无人机",
                   "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/thief/thief_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/thief/thief_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -772,9 +772,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/thief/thief_mastery_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/thief/thief_mastery_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/thief/thief_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/thief/thief_mastery.png"
+              "image": "/marathon-lore/content/docs/runner/thief/thief_mastery.webp"
             },
             {
               "id": "thief_mastery_1",
@@ -856,15 +856,15 @@
                 "侦察",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/recon/recon_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/recon/recon_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/recon/recon_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/recon/recon_extraction.webp",
               "logs": [
                 {
                   "id": "recon_shell",
                   "title": "侦察外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/recon/recon_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/recon/recon_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -887,7 +887,7 @@
                   "id": "recon_tatical",
                   "title": "侦察：追踪无人机",
                   "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/recon/recon_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/recon/recon_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -905,15 +905,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/recon/mainly_recon_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/recon/mainly_recon_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/recon/mainly_recon.md",
-              "image": "/marathon-lore/content/docs/runner/recon/mainly_recon.png",
+              "image": "/marathon-lore/content/docs/runner/recon/mainly_recon.webp",
               "logs": [
                 {
                   "id": "recon_mainly",
                   "title": "侦察：回声脉冲",
                   "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/recon/recon_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/recon/recon_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -938,9 +938,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/recon/recon_mastery_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/recon/recon_mastery_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/recon/recon_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/recon/recon_mastery.png"
+              "image": "/marathon-lore/content/docs/runner/recon/recon_mastery.webp"
             },
             {
               "id": "recon_mastery_1",
@@ -1022,15 +1022,15 @@
                 "鲁克",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/rook/rook_extraction.webp",
               "logs": [
                 {
                   "id": "rook_shell",
                   "title": "鲁克外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/rook/rook_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/rook/rook_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1053,7 +1053,7 @@
                   "id": "rook_tatical",
                   "title": "鲁克：信号遮蔽",
                   "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/rook/rook_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/rook/rook_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1071,15 +1071,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/mainly_rook_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/mainly_rook_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/rook/mainly_rook.md",
-              "image": "/marathon-lore/content/docs/runner/rook/mainly_rook.png",
+              "image": "/marathon-lore/content/docs/runner/rook/mainly_rook.webp",
               "logs": [
                 {
                   "id": "rook_mainly",
                   "title": "鲁克：复原",
                   "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/rook/rook_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/rook/rook_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1104,9 +1104,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_1_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_1_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_1.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_1.png"
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_1.webp"
             },
             {
               "id": "rook_mastery_2",
@@ -1119,9 +1119,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_2_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_2_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_2.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_2.png"
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_2.webp"
             },
             {
               "id": "rook_mastery_3",
@@ -1134,9 +1134,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_3_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_3_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_3.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_3.png"
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_3.webp"
             },
             {
               "id": "rook_mastery_4",
@@ -1149,9 +1149,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_4_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/rook/rook_mastery_4_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/rook/rook_mastery_4.md",
-              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_4.png"
+              "image": "/marathon-lore/content/docs/runner/rook/rook_mastery_4.webp"
             }
           ]
         }
@@ -1178,15 +1178,15 @@
                 "哨兵",
                 "迎宾中心"
               ],
-              "iconImage": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction.md",
-              "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction.png",
+              "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_extraction.webp",
               "logs": [
                 {
                   "id": "sentinel_shell",
                   "title": "哨兵外壳",
                   "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_shell.md",
-                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_shell.png",
+                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_shell.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1209,7 +1209,7 @@
                   "id": "sentinel_tatical",
                   "title": "哨兵：陷阱地雷",
                   "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_tatical.md",
-                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_tatical.png",
+                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_tatical.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1227,15 +1227,15 @@
                 "迎宾中心"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel.md",
-              "image": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel.png",
+              "image": "/marathon-lore/content/docs/runner/sentinel/mainly_sentinel.webp",
               "logs": [
                 {
                   "id": "sentinel_mainly",
                   "title": "哨兵：防御系统",
                   "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_mainly.md",
-                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_mainly.png",
+                  "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_mainly.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1260,9 +1260,9 @@
                 "精通"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery_icon.png",
+              "iconImage": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery.md",
-              "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery.png"
+              "image": "/marathon-lore/content/docs/runner/sentinel/sentinel_mastery.webp"
             },
             {
               "id": "sentinel_mastery_1",

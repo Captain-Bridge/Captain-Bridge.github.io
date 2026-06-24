@@ -192,7 +192,7 @@ function getEntryDisplayIconImage(entry) {
     return logs[0].image;
   }
 
-  return '/marathon-lore/assets/images/default_icon.png';
+  return '/marathon-lore/assets/images/default_icon.webp';
 }
 
 function getPreviewBodyFile(item) {

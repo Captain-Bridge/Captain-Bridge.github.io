@@ -32,7 +32,7 @@
                   "id": "cyac_log",
                   "title": "赛博艾克米",
                   "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_log.md",
-                  "image": "/marathon-lore/content/docs/forces/cyac/cyac_log.png",
+                  "image": "/marathon-lore/content/docs/forces/cyac/cyac_log.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -57,9 +57,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_II_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_II_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_II.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_II.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_II.webp"
             },
             {
               "id": "cyac_X",
@@ -72,9 +72,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_X_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_X_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_X.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_X.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_X.webp"
             },
             {
               "id": "cyac_XX",
@@ -87,9 +87,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_XX_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_XX_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_XX.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_XX.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_XX.webp"
             },
             {
               "id": "cyac_VIP",
@@ -102,9 +102,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_VIP.webp"
             },
             {
               "id": "cyac_early_VIP",
@@ -117,9 +117,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_early_VIP.webp"
             }
           ]
         },
@@ -139,9 +139,9 @@
                 "升级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_level_up_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_level_up_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_level_up.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_level_up.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_level_up.webp"
             }
           ]
         },
@@ -161,9 +161,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_randal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_randal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_randal.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_randal.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_randal.webp"
             },
             {
               "id": "cyac_triage",
@@ -176,9 +176,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_triage_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_triage_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_triage.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_triage.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_triage.webp"
             },
             {
               "id": "cyac_destroyer",
@@ -191,9 +191,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_destroyer.webp"
             },
             {
               "id": "cyac_assassin",
@@ -206,9 +206,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_assassin_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_assassin_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_assassin.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_assassin.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_assassin.webp"
             },
             {
               "id": "cyac_thief",
@@ -221,9 +221,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_thief_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_thief_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_thief.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_thief.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_thief.webp"
             },
             {
               "id": "cyac_recon",
@@ -236,9 +236,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_recon_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_recon_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_recon.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_recon.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_recon.webp"
             },
             {
               "id": "cyac_sentinel",
@@ -251,9 +251,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel.md",
-              "image": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel.png"
+              "image": "/marathon-lore/content/docs/forces/cyac/cyac_sentinel.webp"
             }
           ]
         }
@@ -286,7 +286,7 @@
                   "id": "nv_log",
                   "title": "纽卡洛里",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_log.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/nv_log.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/nv_log.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -316,7 +316,7 @@
                   "id": "agricultural_inspection",
                   "title": "农业检查",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/agricultural_inspection.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "传染病",
                     "德莱厄斯",
@@ -343,7 +343,7 @@
                   "id": "seed_bank",
                   "title": "安全录音：种子库",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/seed_bank.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "人工智能",
                     "传染病",
@@ -371,7 +371,7 @@
                   "id": "maintaince_log_druis",
                   "title": "维护部日志：德莱厄斯",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/maintaince_log_druis.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "人工智能",
                     "传染病",
@@ -383,7 +383,7 @@
                   "id": "diagnostic_analysis_druis",
                   "title": "诊断分析：德莱厄斯",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/diagnostic_analysis_druis.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "人工智能",
                     "德莱厄斯",
@@ -410,7 +410,7 @@
                   "id": "code_snippet_cerberus",
                   "title": "代码片段：刻耳柏洛斯",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/code_snippet_cerberus.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "刻耳柏洛斯",
                     "oni",
@@ -435,7 +435,7 @@
                   "id": "laboratory_report_new_infectious_diseases",
                   "title": "实验室报告：新型传染病",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/laboratory_report_new_infectious_diseases.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "传染病",
                     "新卡斯卡迪亚",
@@ -461,7 +461,7 @@
                   "id": "field_application_C_Song",
                   "title": "外勤申请：C · 宋",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/field_application_C_Song.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "传染病",
                     "新卡斯卡迪亚",
@@ -472,7 +472,7 @@
                   "id": "quality_analysis_new_infectious_diseases",
                   "title": "质量分析：新型传染病",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/quality_analysis_new_infectious_diseases.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "传染病",
                     "盖乌斯",
@@ -497,7 +497,7 @@
                   "id": "field_application_C_Song_1",
                   "title": "外勤申请：C · 宋",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/field_application_C_Song_1.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "传染病",
                     "德莱厄斯",
@@ -524,7 +524,7 @@
                   "id": "UESC_isolation_standards",
                   "title": "UESC隔离标准",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/UESC_isolation_standards.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "传染病",
                     "D · 里德",
@@ -549,7 +549,7 @@
                   "id": "broadcast_caruso",
                   "title": "广播：卡鲁索",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/broadcast_caruso.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "L · 卡鲁索",
                     "传染病",
@@ -575,7 +575,7 @@
                   "id": "medical_artificial_intelligence_residue",
                   "title": "医疗人工智能残留物",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/medical_artificial_intelligence_residue.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "异常点",
                     "传染病",
@@ -600,7 +600,7 @@
                   "id": "soundscape",
                   "title": "音景",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/soundscape.md",
-                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
                   "meta": [
                     "异常",
                     "认知风险",
@@ -627,9 +627,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_II_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_II_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_II.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_II.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_II.webp"
             },
             {
               "id": "nv_X",
@@ -642,9 +642,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_X_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_X_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_X.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_X.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_X.webp"
             },
             {
               "id": "nv_XX",
@@ -657,9 +657,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_XX_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_XX_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_XX.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_XX.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_XX.webp"
             },
             {
               "id": "nv_VIP",
@@ -672,9 +672,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_VIP.webp"
             },
             {
               "id": "nv_early_VIP",
@@ -687,9 +687,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_early_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_early_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_early_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_early_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_early_VIP.webp"
             }
           ]
         },
@@ -709,9 +709,9 @@
                 "升级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_level_up_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_level_up_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_level_up.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_level_up.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_level_up.webp"
             }
           ]
         },
@@ -731,9 +731,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_randal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_randal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_randal.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_randal.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_randal.webp"
             },
             {
               "id": "nv_triage",
@@ -746,9 +746,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_triage_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_triage_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_triage.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_triage.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_triage.webp"
             },
             {
               "id": "nv_destroyer",
@@ -761,9 +761,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_destroyer_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_destroyer_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_destroyer.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_destroyer.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_destroyer.webp"
             },
             {
               "id": "nv_assassin",
@@ -776,9 +776,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_assassin_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_assassin_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_assassin.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_assassin.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_assassin.webp"
             },
             {
               "id": "nv_thief",
@@ -791,9 +791,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_thief_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_thief_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_thief.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_thief.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_thief.webp"
             },
             {
               "id": "nv_recon",
@@ -806,9 +806,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_recon_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_recon_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_recon.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_recon.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_recon.webp"
             },
             {
               "id": "nv_sentinel",
@@ -821,9 +821,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_sentinel_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/nv/nv_sentinel_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/nv/nv_sentinel.md",
-              "image": "/marathon-lore/content/docs/forces/nv/nv_sentinel.png"
+              "image": "/marathon-lore/content/docs/forces/nv/nv_sentinel.webp"
             }
           ]
         }
@@ -856,7 +856,7 @@
                   "id": "terex_log",
                   "title": "特莱克斯",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_log.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/terex_log.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/terex_log.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -886,7 +886,7 @@
                   "id": "tau_ceti_status_report",
                   "title": "天仓五状态报告",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/tau_ceti_status_report.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "奥瑞恩",
                     "疾行者",
@@ -913,7 +913,7 @@
                   "id": "list_of_UESC_drones",
                   "title": "UESC无人机清单",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/list_of_UESC_drones.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "奥瑞恩",
@@ -924,7 +924,7 @@
                   "id": "UESC_communication_anomaly",
                   "title": "UESC通讯：异常点",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_communication_anomaly.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "奥瑞恩",
@@ -951,7 +951,7 @@
                   "id": "recording_of_council_meeting",
                   "title": "理事会会议录音",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/recording_of_council_meeting.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "L · 卡鲁索",
@@ -965,7 +965,7 @@
                   "id": "anomaly_accident_report",
                   "title": "异常点事故报告",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/anomaly_accident_report.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "巴斯申",
@@ -991,7 +991,7 @@
                   "id": "colonial_proclamation",
                   "title": "殖民地公告",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/colonial_proclamation.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "L · 卡鲁索"
@@ -1001,7 +1001,7 @@
                   "id": "oral_email",
                   "title": "邮件口述",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/oral_email.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "L · 卡鲁索",
@@ -1030,7 +1030,7 @@
                   "id": "UESC_communication_interference_from_runner",
                   "title": "UESC通讯：疾行者干扰",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_communication_interference_from_runner.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "奥瑞恩",
                     "疾行者",
@@ -1057,7 +1057,7 @@
                   "id": "application_for_extension_of_anomaly_task_force",
                   "title": "异常点特遣部队延期申请",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/application_for_extension_of_anomaly_task_force.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "L · 卡鲁索",
@@ -1084,7 +1084,7 @@
                   "id": "UESC_report_anomaly",
                   "title": "UESC报告：异常点",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_report_anomaly.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "uesc"
@@ -1108,7 +1108,7 @@
                   "id": "anomaly_record",
                   "title": "异常点录音",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/anomaly_record.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "L · 卡鲁索",
@@ -1134,7 +1134,7 @@
                   "id": "UESC_report_combat_protocal",
                   "title": "UESC报告：战斗协议",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_report_combat_protocal.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "刻耳柏洛斯",
@@ -1159,7 +1159,7 @@
                   "id": "terex_UESC_communication",
                   "title": "特莱克斯-UESC通讯",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/terex_UESC_communication.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "疾行者",
@@ -1185,9 +1185,9 @@
               "count": "已完成",
               "summary": "完成概念验证。",
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept.md",
-              "image": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept.png",
+              "image": "/marathon-lore/content/docs/forces/terex/contract/proof_of_concept.webp",
               "meta": [
                 "阵营",
                 "特莱克斯",
@@ -1198,7 +1198,7 @@
                   "id": "scan_results",
                   "title": "扫描结果",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/scan_results.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "异常点",
                     "特莱克斯",
@@ -1213,9 +1213,9 @@
               "count": "已完成",
               "summary": "完成市场干扰。",
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/contract/market_interference_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/contract/market_interference_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/market_interference.md",
-              "image": "/marathon-lore/content/docs/forces/terex/contract/market_interference.png",
+              "image": "/marathon-lore/content/docs/forces/terex/contract/market_interference.webp",
               "meta": [
                 "阵营",
                 "特莱克斯",
@@ -1226,7 +1226,7 @@
                   "id": "performance_report",
                   "title": "表现报告",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/performance_report.md",
-                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
                   "meta": [
                     "疾行者",
                     "特莱克斯",
@@ -1253,9 +1253,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_II_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_II_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_II.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_II.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_II.webp"
             },
             {
               "id": "terex_X",
@@ -1268,9 +1268,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_X_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_X_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_X.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_X.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_X.webp"
             },
             {
               "id": "terex_XX",
@@ -1283,9 +1283,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_XX_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_XX_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_XX.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_XX.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_XX.webp"
             },
             {
               "id": "terex_VIP",
@@ -1298,9 +1298,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_VIP.webp"
             },
             {
               "id": "terex_early_VIP",
@@ -1313,9 +1313,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_early_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_early_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_early_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_early_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_early_VIP.webp"
             }
           ]
         },
@@ -1335,9 +1335,9 @@
                 "升级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_level_up_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_level_up_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_level_up.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_level_up.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_level_up.webp"
             }
           ]
         },
@@ -1357,9 +1357,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_randal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_randal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_randal.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_randal.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_randal.webp"
             },
             {
               "id": "terex_triage",
@@ -1372,9 +1372,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_triage_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_triage_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_triage.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_triage.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_triage.webp"
             },
             {
               "id": "terex_destroyer",
@@ -1387,9 +1387,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_destroyer_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_destroyer_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_destroyer.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_destroyer.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_destroyer.webp"
             },
             {
               "id": "terex_assassin",
@@ -1402,9 +1402,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_assassin_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_assassin_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_assassin.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_assassin.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_assassin.webp"
             },
             {
               "id": "terex_thief",
@@ -1417,9 +1417,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_thief_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_thief_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_thief.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_thief.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_thief.webp"
             },
             {
               "id": "terex_recon",
@@ -1432,9 +1432,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_recon_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_recon_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_recon.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_recon.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_recon.webp"
             },
             {
               "id": "terex_sentinel",
@@ -1447,9 +1447,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_sentinel_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/terex/terex_sentinel_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/terex/terex_sentinel.md",
-              "image": "/marathon-lore/content/docs/forces/terex/terex_sentinel.png"
+              "image": "/marathon-lore/content/docs/forces/terex/terex_sentinel.webp"
             }
           ]
         }
@@ -1482,7 +1482,7 @@
                   "id": "mida_log",
                   "title": "米达",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_log.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/mida_log.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/mida_log.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1512,7 +1512,7 @@
                   "id": "work_instruction_135239",
                   "title": "工作指令#135239",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/work_instruction.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "生物制剂",
                     "奥瑞恩",
@@ -1538,7 +1538,7 @@
                   "id": "personnel_file_oren",
                   "title": "人事档案：“奥瑞恩”",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/personnel_file_oren.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "刻耳柏洛斯",
                     "月球",
@@ -1567,7 +1567,7 @@
                   "id": "message_oren_1",
                   "title": "消息：奥瑞恩[1]",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/message_oren_1.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "奥瑞恩",
                     "米达",
@@ -1593,7 +1593,7 @@
                   "id": "message_oren_2",
                   "title": "消息：奥瑞恩[2]",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/message_oren_2.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "奥瑞恩",
                     "米达",
@@ -1619,7 +1619,7 @@
                   "id": "kerberos_code_fragment",
                   "title": "刻耳柏洛斯代码碎片",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/kerberos_code_fragment.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "刻耳柏洛斯",
                     "uesc"
@@ -1643,7 +1643,7 @@
                   "id": "monitoring_records",
                   "title": "监控记录",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/monitoring_records.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "凯莱蒂",
                     "奥瑞恩",
@@ -1670,7 +1670,7 @@
                   "id": "personal_diary_orien",
                   "title": "个人日志：奥瑞恩",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/personal_diary_orien.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "接触事件",
                     "奥瑞恩",
@@ -1683,7 +1683,7 @@
                   "id": "post_analysis",
                   "title": "【隐藏】事后剖析，1",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/post_analysis_1.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "接触事件",
                     "D · 里德",
@@ -1709,7 +1709,7 @@
                   "id": "post_analysis",
                   "title": "【隐藏】事后剖析，2",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/post_analysis_2.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "接触事件",
                     "D · 里德",
@@ -1735,7 +1735,7 @@
                   "id": "unknown_sample_file",
                   "title": "未知样本文件",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/unknown_sample_file.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -1758,7 +1758,7 @@
                   "id": "UESC_communication_combat_report",
                   "title": "UESC通讯：战斗报告",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/UESC_communication_combat_report.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "T · 凯莱蒂",
                     "奥瑞恩",
@@ -1785,7 +1785,7 @@
                   "id": "UESC_communication_unstable_sample",
                   "title": "UESC通讯：不稳定样本",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/UESC_communication_unstable_sample.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "冲突",
                     "奥瑞恩",
@@ -1812,7 +1812,7 @@
                   "id": "mida_annoucement",
                   "title": "米达宣言",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/mida_annoucement.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "米达",
                     "uesc",
@@ -1834,9 +1834,9 @@
               "count": "已完成",
               "summary": "完成燃烧/揭露。",
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal.md",
-              "image": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal.png",
+              "image": "/marathon-lore/content/docs/forces/mida/contract/burn_reveal.webp",
               "meta": [
                 "阵营",
                 "米达",
@@ -1847,7 +1847,7 @@
                   "id": "experimental_log",
                   "title": "实验日志",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/experimental_log.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "异常点",
                     "刻耳柏洛斯",
@@ -1862,9 +1862,9 @@
               "count": "已完成",
               "summary": "完成安逸/牢笼。",
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze.md",
-              "image": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze.png",
+              "image": "/marathon-lore/content/docs/forces/mida/contract/comfortable_maze.webp",
               "meta": [
                 "阵营",
                 "米达",
@@ -1875,7 +1875,7 @@
                   "id": "arrchne_proposal",
                   "title": "阿拉克尼提案",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/arrchne_proposal.md",
-                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
                   "meta": [
                     "阿拉克尼",
                     "米达"
@@ -1901,9 +1901,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_II_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_II_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_II.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_II.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_II.webp"
             },
             {
               "id": "mida_X",
@@ -1916,9 +1916,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_X_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_X_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_X.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_X.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_X.webp"
             },
             {
               "id": "mida_XX",
@@ -1931,9 +1931,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_XX_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_XX_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_XX.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_XX.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_XX.webp"
             },
             {
               "id": "mida_VIP",
@@ -1946,9 +1946,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_VIP.webp"
             },
             {
               "id": "mida_early_VIP",
@@ -1961,9 +1961,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_early_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_early_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_early_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_early_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_early_VIP.webp"
             }
           ]
         },
@@ -1983,9 +1983,9 @@
                 "升级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_level_up_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_level_up_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_level_up.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_level_up.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_level_up.webp"
             }
           ]
         },
@@ -2005,9 +2005,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_randal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_randal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_randal.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_randal.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_randal.webp"
             },
             {
               "id": "mida_triage",
@@ -2020,9 +2020,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_triage_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_triage_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_triage.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_triage.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_triage.webp"
             },
             {
               "id": "mida_destroyer",
@@ -2035,9 +2035,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_destroyer_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_destroyer_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_destroyer.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_destroyer.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_destroyer.webp"
             },
             {
               "id": "mida_assassin",
@@ -2050,9 +2050,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_assassin_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_assassin_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_assassin.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_assassin.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_assassin.webp"
             },
             {
               "id": "mida_thief",
@@ -2065,9 +2065,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_thief_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_thief_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_thief.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_thief.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_thief.webp"
             },
             {
               "id": "mida_recon",
@@ -2080,9 +2080,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_recon_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_recon_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_recon.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_recon.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_recon.webp"
             },
             {
               "id": "mida_sentinel",
@@ -2095,9 +2095,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_sentinel_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/mida/mida_sentinel_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/mida/mida_sentinel.md",
-              "image": "/marathon-lore/content/docs/forces/mida/mida_sentinel.png"
+              "image": "/marathon-lore/content/docs/forces/mida/mida_sentinel.webp"
             }
           ]
         }
@@ -2130,7 +2130,7 @@
                   "id": "arrchne_log",
                   "title": "阿拉克尼",
                   "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_log.md",
-                  "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_log.png",
+                  "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_log.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -2155,9 +2155,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_II_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_II_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_II.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_II.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_II.webp"
             },
             {
               "id": "arrchne_X",
@@ -2170,9 +2170,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_X_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_X_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_X.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_X.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_X.webp"
             },
             {
               "id": "arrchne_XX",
@@ -2185,9 +2185,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_XX.webp"
             },
             {
               "id": "arrchne_VIP",
@@ -2200,9 +2200,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_VIP.webp"
             },
             {
               "id": "arrchne_early_VIP",
@@ -2215,9 +2215,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_early_VIP.webp"
             }
           ]
         },
@@ -2237,9 +2237,9 @@
                 "升级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_level_up.webp"
             }
           ]
         },
@@ -2259,9 +2259,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_randal.webp"
             },
             {
               "id": "arrchne_triage",
@@ -2274,9 +2274,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_triage.webp"
             },
             {
               "id": "arrchne_destroyer",
@@ -2289,9 +2289,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_destroyer.webp"
             },
             {
               "id": "arrchne_assassin",
@@ -2304,9 +2304,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_assassin.webp"
             },
             {
               "id": "arrchne_thief",
@@ -2319,9 +2319,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_thief.webp"
             },
             {
               "id": "arrchne_recon",
@@ -2334,9 +2334,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_recon.webp"
             },
             {
               "id": "arrchne_sentinel",
@@ -2349,9 +2349,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel.md",
-              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel.png"
+              "image": "/marathon-lore/content/docs/forces/arrchne/arrchne_sentinel.webp"
             }
           ]
         }
@@ -2384,7 +2384,7 @@
                   "id": "sekiguchi_log",
                   "title": "关口",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_log.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_log.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_log.webp",
                   "meta": [
                     "疾行者指南"
                   ]
@@ -2414,7 +2414,7 @@
                   "id": "code_snippet_optimization",
                   "title": "代码片段：优化",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/code_snippet_optimization.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "刻耳柏洛斯",
                     "认知危害",
@@ -2440,7 +2440,7 @@
                   "id": "death_and_strange_women",
                   "title": "代码片段：优化",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/death_and_strange_women.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "诺娜",
                     "关口基因"
@@ -2464,7 +2464,7 @@
                   "id": "special_research",
                   "title": "特别研究",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/special_research.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "L · 卡鲁索",
                     "真菌",
@@ -2490,7 +2490,7 @@
                   "id": "code_snippet_pseudo_organism",
                   "title": "代码片段：拟生体",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/code_snippet_pseudo_organism.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "认知危害",
                     "oni",
@@ -2516,7 +2516,7 @@
                   "id": "war_and_weaver",
                   "title": "战争与织者",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/war_and_weaver.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "诺娜",
                     "关口基因"
@@ -2526,7 +2526,7 @@
                   "id": "laboratory_transcription",
                   "title": "实验室转录",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/laboratory_transcription.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "生物基因",
                     "神经机械",
@@ -2551,7 +2551,7 @@
                   "id": "metabolic_reading",
                   "title": "新陈代谢读数",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/metabolic_reading.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "诺娜",
                     "oni",
@@ -2577,7 +2577,7 @@
                   "id": "inter_enterprise_transmission",
                   "title": "企业间传输",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/inter_enterprise_transmission.md",
-                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.png",
+                  "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
                   "meta": [
                     "诺娜",
                     "关口基因",
@@ -2604,9 +2604,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_II.webp"
             },
             {
               "id": "sekiguchi_X",
@@ -2619,9 +2619,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_X.webp"
             },
             {
               "id": "sekiguchi_XX",
@@ -2634,9 +2634,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_XX.webp"
             },
             {
               "id": "sekiguchi_VIP",
@@ -2649,9 +2649,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_VIP.webp"
             },
             {
               "id": "sekiguchi_early_VIP",
@@ -2664,9 +2664,9 @@
                 "等级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_early_VIP.webp"
             }
           ]
         },
@@ -2686,9 +2686,9 @@
                 "升级"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_level_up.webp"
             }
           ]
         },
@@ -2708,9 +2708,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_randal.webp"
             },
             {
               "id": "sekiguchi_triage",
@@ -2723,9 +2723,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_triage.webp"
             },
             {
               "id": "sekiguchi_destroyer",
@@ -2738,9 +2738,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_destroyer.webp"
             },
             {
               "id": "sekiguchi_assassin",
@@ -2753,9 +2753,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_assassin.webp"
             },
             {
               "id": "sekiguchi_thief",
@@ -2768,9 +2768,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_thief.webp"
             },
             {
               "id": "sekiguchi_recon",
@@ -2783,9 +2783,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_recon.webp"
             },
             {
               "id": "sekiguchi_sentinel",
@@ -2798,9 +2798,9 @@
                 "赞助包"
               ],
               "icon": "badge",
-              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel_icon.png",
+              "iconImage": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel_icon.webp",
               "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel.md",
-              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel.png"
+              "image": "/marathon-lore/content/docs/forces/sekiguchi/sekiguchi_sentinel.webp"
             }
           ]
         }

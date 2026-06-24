@@ -2,9 +2,9 @@
   "id": "cyac",
   "shortLabel": "I",
   "title": "赛博艾克米",
-  "iconImage": "/marathon-lore/assets/images/icons/cyac.png",
+  "iconImage": "/marathon-lore/assets/images/icons/cyac.webp",
   "agent": "ONI",
-  "agentIcon": "/marathon-lore/assets/images/icons/cyac.png",
+  "agentIcon": "/marathon-lore/assets/images/icons/cyac.webp",
   "themecolor": "rgb(1, 224, 98)",
   "nodes": [
     {

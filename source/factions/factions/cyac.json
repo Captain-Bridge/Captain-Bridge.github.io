@@ -1,10 +1,10 @@
 {
   "id": "cyac",
-  "background":"factions/data/background/cyac_bg.png",
+  "background":"factions/data/background/cyac_bg.webp",
   "shortLabel": "I",
-  "iconImage": "/marathon-lore/assets/images/icons/cyac.png",
+  "iconImage": "/marathon-lore/assets/images/icons/cyac.webp",
   "agent": "ONI",
-  "agentIcon": "/marathon-lore/assets/images/icons/cyac.png",
+  "agentIcon": "/marathon-lore/assets/images/icons/cyac.webp",
   "themecolor": "rgb(9, 164, 46)",
   "nodes": [
     {
@@ -25,7 +25,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "750"
             }
           ],
@@ -42,7 +42,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "1,500"
             }
           ],
@@ -59,7 +59,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "2,000"
             }
           ],
@@ -76,7 +76,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "4,000"
             }
           ],
@@ -93,7 +93,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "7,000"
             }
           ],
@@ -122,7 +122,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "750"
             }
           ],
@@ -139,7 +139,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "1,500"
             }
           ],
@@ -165,7 +165,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "750"
             }
           ],
@@ -182,7 +182,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "1,500"
             }
           ],
@@ -199,7 +199,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "4,000"
             }
           ],
@@ -216,7 +216,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "10,000"
             }
           ],
@@ -233,7 +233,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "50,000"
             }
           ],
@@ -255,12 +255,12 @@
           "summary": "解锁可在军械库中使用信用点购买的赛博艾克米高级赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_green.png",
+          "unlockIcon": "/factions/data/cyac_sponser_green.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "250"
             }
           ]
@@ -272,12 +272,12 @@
           "summary": "解锁可在军械库中使用信用点购买的赛博艾克米豪华赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_blue.png",
+          "unlockIcon": "/factions/data/cyac_sponser_blue.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "500"
             }
           ]
@@ -289,12 +289,12 @@
           "summary": "解锁可在军械库中使用信用点购买的赛博艾克米卓越赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_blue.png",
+          "unlockIcon": "/factions/data/cyac_sponser_blue.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "3,000"
             }
           ]
@@ -318,12 +318,12 @@
           "summary": "解锁可在军械库中使用回收资源交换的强化背包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/green_pack.png",
+          "unlockIcon": "/factions/data/green_pack.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "750"
             }
           ]
@@ -347,12 +347,12 @@
           "summary": "解锁可在军械库中使用回收资源交换的豪华背包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/blue_pack.png",
+          "unlockIcon": "/factions/data/blue_pack.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "750"
             }
           ]
@@ -373,24 +373,24 @@
           "summary": "解锁可在军械库中使用回收资源交换的卓越背包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/purple_pack.png",
+          "unlockIcon": "/factions/data/purple_pack.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "3,500"
             },
             {
               "materialId": "material_2",
               "materialName": "不稳定铅",
-              "materialIcon": "/factions/data/unstable_lead.png",
+              "materialIcon": "/factions/data/unstable_lead.webp",
               "materialNums": "56"
             },
             {
               "materialId": "material_2",
               "materialName": "不稳定炮铜",
-              "materialIcon": "/factions/data/unstable_gunmetal.png",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
               "materialNums": "24"
             }
           ]
@@ -411,24 +411,24 @@
           "summary": "解锁可在军械库中使用回收资源交换的尊享背包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/purple_pack.png",
+          "unlockIcon": "/factions/data/purple_pack.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "7,000"
             },
             {
               "materialId": "material_2",
               "materialName": "不稳定铅",
-              "materialIcon": "/factions/data/unstable_lead.png",
+              "materialIcon": "/factions/data/unstable_lead.webp",
               "materialNums": "56"
             },
             {
               "materialId": "material_2",
               "materialName": "不稳定炮铜",
-              "materialIcon": "/factions/data/unstable_gunmetal.png",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
               "materialNums": "24"
             }
           ]
@@ -449,12 +449,12 @@
           "summary": "解锁可在军械库中使用信用点购买的强化背包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/green_pack.png",
+          "unlockIcon": "/factions/data/green_pack.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "750"
             }
           ]
@@ -475,24 +475,24 @@
           "summary": "解锁可在军械库中使用信用点购买的豪华背包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/blue_pack.png",
+          "unlockIcon": "/factions/data/blue_pack.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "3,500"
             },
             {
               "materialId": "material_2",
               "materialName": "不稳定二极管",
-              "materialIcon": "/factions/data/unstable_diode.png",
+              "materialIcon": "/factions/data/unstable_diode.webp",
               "materialNums": "21"
             },
             {
               "materialId": "material_3",
               "materialName": "不稳定生物质",
-              "materialIcon": "/factions/data/unstable_biomass.png",
+              "materialIcon": "/factions/data/unstable_biomass.webp",
               "materialNums": "9"
             }
           ]
@@ -518,7 +518,7 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "???"
             }
           ]
@@ -539,12 +539,12 @@
           "summary": "解锁可在军械库中购买的锁箱钥匙和危害覆写卡。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_green.png",
+          "unlockIcon": "/factions/data/cyac_sponser_green.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "250"
             }
           ]
@@ -557,14 +557,14 @@
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
           "unlockIcon": [
-            "/factions/data/green_key.png",
-            "/factions/data/green_key_1.png"              
+            "/factions/data/green_key.webp",
+            "/factions/data/green_key_1.webp"              
           ],
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "500"
             }
           ]
@@ -576,12 +576,12 @@
           "summary": "解锁可在军械库中使用信用点购买的赛博艾克米卓越赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_blue.png",
+          "unlockIcon": "/factions/data/cyac_sponser_blue.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.png",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "3,000"
             }
           ]

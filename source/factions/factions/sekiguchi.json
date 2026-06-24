@@ -2,9 +2,9 @@
   "id": "sekiguchi",
   "shortLabel": "VI",
   "title": "??",
-  "iconImage": "/marathon-lore/assets/images/icons/sekiguchi.png",
+  "iconImage": "/marathon-lore/assets/images/icons/sekiguchi.webp",
   "agent": "SEKIGUCHI",
-  "agentIcon": "/marathon-lore/assets/images/icons/sekiguchi.png",
+  "agentIcon": "/marathon-lore/assets/images/icons/sekiguchi.webp",
   "themecolor": "rgb(85, 229, 157)",
   "nodes": [
     {

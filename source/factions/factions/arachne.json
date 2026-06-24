@@ -2,9 +2,9 @@
   "id": "arachne",
   "shortLabel": "V",
   "title": "????",
-  "iconImage": "/marathon-lore/assets/images/icons/arachne.png",
+  "iconImage": "/marathon-lore/assets/images/icons/arachne.webp",
   "agent": "ARACHNE",
-  "agentIcon": "/marathon-lore/assets/images/icons/arachne.png",
+  "agentIcon": "/marathon-lore/assets/images/icons/arachne.webp",
   "themecolor": "rgb(255, 106, 168)",
   "nodes": [
     {

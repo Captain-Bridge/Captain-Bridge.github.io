@@ -2,9 +2,9 @@
   "id": "telrax",
   "shortLabel": "III",
   "title": "????",
-  "iconImage": "/marathon-lore/assets/images/icons/telrax.png",
+  "iconImage": "/marathon-lore/assets/images/icons/telrax.webp",
   "agent": "TELRAX",
-  "agentIcon": "/marathon-lore/assets/images/icons/telrax.png",
+  "agentIcon": "/marathon-lore/assets/images/icons/telrax.webp",
   "themecolor": "rgb(255, 156, 84)",
   "nodes": [
     {
