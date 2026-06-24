@@ -19,6 +19,8 @@ layout: false
       --soft: rgba(214,223,236,0.72);
       --dim: rgba(214,223,236,0.42);
       --green: #00e55b;
+      --node-surface-fill: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.06)), rgb(50, 51, 59);
+      --node-surface-noise: repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(255,255,255,.016) 0 1px, transparent 1px 4px), repeating-linear-gradient(135deg, rgba(255,255,255,.012) 0 1px, transparent 1px 5px), repeating-linear-gradient(45deg, rgba(0,0,0,.05) 0 1px, transparent 1px 6px);
       --shadow: 0 24px 80px rgba(0,0,0,0.45);
     }
 
@@ -418,6 +420,7 @@ layout: false
     .force-decorator {
       position: absolute;
       pointer-events: none;
+      z-index: 1;
     }
 
     .force-decorator.line-h {
@@ -426,9 +429,41 @@ layout: false
 
     .force-decorator.link-h,
     .force-decorator.link-v {
-      background: var(--link-bg, rgba(75,79,90,.72));
-      box-shadow: inset 0 0 0 1px var(--link-border, rgba(255,255,255,.04));
-      opacity: .7;
+      border-radius: 18px;
+      background: var(--node-bg, rgb(50, 51, 59));
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        inset 0 -1px 0 rgba(0,0,0,.38),
+        0 12px 22px rgba(0,0,0,.22);
+      opacity: .98;
+      z-index: 2;
+      overflow: visible;
+      filter: saturate(1.05);
+    }
+
+    .force-decorator.link-h {
+      min-height: 64px;
+    }
+
+    .force-decorator.link-v {
+      min-width: 64px;
+    }
+
+    .force-decorator.link-h::before,
+    .force-decorator.link-v::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      background: var(--node-surface-fill), var(--node-surface-noise);
+      opacity: .4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .force-decorator.link-h::after,
+    .force-decorator.link-v::after {
+      content: none;
     }
 
     .force-decorator.spark {
@@ -462,7 +497,7 @@ layout: false
       --node-bar-active-bg: var(--node-accent);
       --node-bar-active-border: rgba(0,229,91,.6);
       position: absolute;
-      z-index: 2;
+      z-index: 3;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -483,18 +518,18 @@ layout: false
       position: absolute;
       inset: 1px;
       border-radius: calc(var(--node-radius, 12px) - 1px);
-      background:
-        repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.016) 0 1px, transparent 1px 4px),
-        repeating-linear-gradient(135deg, rgba(255,255,255,.012) 0 1px, transparent 1px 5px),
-        repeating-linear-gradient(45deg, rgba(0,0,0,.05) 0 1px, transparent 1px 6px);
+      background: var(--node-surface-fill), var(--node-surface-noise);
       opacity: .4;
       pointer-events: none;
+      z-index: 0;
+    }
+
+    .force-node.active-node::before {
+      opacity: .22;
     }
 
     .force-node.active-node {
-      border-color: rgba(255,255,255,.16);
-      box-shadow: inset 0 0 0 1px rgba(14,16,23,.88), inset 0 0 0 2px rgba(255,255,255,.055);
+      background: var(--node-accent, var(--node-bg));
     }
 
     .force-node.is-active .force-node-icon,
@@ -514,12 +549,9 @@ layout: false
       position: absolute;
       border: var(--node-frame-border-width, 1.5px) solid var(--node-frame-color);
       border-radius: calc(var(--node-radius, 12px) + 1px);
-      box-shadow: inset 0 0 0 1px rgba(14,16,23,.9);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
       pointer-events: none;
-    }
-
-    .force-node.active-node .force-node-frame {
-      border-color: rgba(255,255,255,.16);
+      z-index: 1;
     }
 
     .force-node-badge {
@@ -536,7 +568,7 @@ layout: false
       font-size: var(--node-badge-font-size, 12px);
       line-height: 1;
       color: #d8dae3;
-      z-index: 2;
+      z-index: 4;
     }
 
     .force-node-icon,
@@ -553,7 +585,7 @@ layout: false
       color: var(--node-icon);
       flex: 0 0 auto;
       position: relative;
-      z-index: 2;
+      z-index: 4;
     }
 
     .force-node-icon img {
@@ -578,7 +610,7 @@ layout: false
       transform: translateX(-50%);
       display: flex;
       gap: var(--node-bar-gap, 4px);
-      z-index: 2;
+      z-index: 4;
     }
 
     .force-node-bar {
@@ -592,6 +624,14 @@ layout: false
     .force-node-bar.is-active {
       background: var(--node-bar-active-bg);
       border-color: var(--node-bar-active-border);
+    }
+
+    .force-node.active-node .force-node-bar {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.08)),
+        var(--node-surface-noise),
+        rgb(210, 212, 213);
+      border-color: rgb(210, 212, 213);
     }
 
     .force-map-footer {
@@ -753,44 +793,49 @@ layout: false
 
     .force-detail-block h3 {
       display: flex;
-      align-items: center;
-      gap: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
     }
 
     .force-detail-icon {
-      display: inline-flex;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
-      width: 18px;
-      height: 18px;
-      flex: 0 0 auto;
+      justify-content: flex-start;
+      gap: 8px;
+      width: 100%;
     }
 
     .force-detail-icon img,
     .force-detail-icon svg {
-      width: 100%;
-      height: 100%;
+      width: 80px;
+      height: 80px;
       object-fit: contain;
+    }
+
+    .force-detail-unlock-name {
+      display: block;
     }
 
     .force-stat-list {
       display: grid;
-      gap: 8px;
+      gap: 20px;
     }
 
     .force-material-row {
       display: grid;
-      grid-template-columns: 18px minmax(0, 1fr) auto;
+      grid-template-columns: max-content minmax(0, 1fr) auto;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
     }
 
     .force-material-visual {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 18px;
-      height: 18px;
+      width: 30px;
+      height: 30px;
       color: var(--soft);
     }
 
@@ -1141,7 +1186,7 @@ layout: false
       fitToPanel: true,
       baseNodeScale: 0.9,
       slots: {
-        small: { width: 0.6, height: 0.6 },
+        small: { width: 0.45, height: 0.45 },
         large: { width: 0.76, height: 0.76 }
       }
     };
@@ -1276,81 +1321,116 @@ layout: false
     }
 
     function getGridConnectorColors(faction, link) {
-      const accent = link?.color || faction?.grid?.linkColor || 'rgba(75,79,90,.92)';
-      const border = link?.borderColor || faction?.grid?.linkBorderColor || 'rgba(255,255,255,.05)';
+      const accent = link?.color || faction?.grid?.linkColor || faction?.themecolor || 'rgba(107, 227, 255, .95)';
+      const border = link?.borderColor || faction?.grid?.linkBorderColor || 'rgba(255,255,255,.24)';
       return { accent, border };
     }
 
-    function createConnector(fromNode, toNode, direction, faction, linkId, linkMeta) {
-      const baseThickness = Number(linkMeta?.thickness) || Number(faction?.grid?.connectorThickness) || GRID_LAYOUT_DEFAULTS.connectorThickness;
-      const thickness = baseThickness <= 1
-        ? Math.max(6, Math.min(fromNode.cellHeight || 0, fromNode.cellWidth || 0) * baseThickness)
-        : baseThickness;
+    function resolveConnectorBasis(nodes, faction) {
+      const connectorScale = 0.75;
+      const smallNode = (Array.isArray(nodes) ? nodes : []).find(node => node?.size === 'small' && Number.isFinite(Number(node.width)) && Number.isFinite(Number(node.height))) || null;
+      if (smallNode) {
+        return {
+          width: (Number(smallNode.width) || 0) * connectorScale,
+          height: (Number(smallNode.height) || 0) * connectorScale
+        };
+      }
+
+      const referenceNode = (Array.isArray(nodes) ? nodes : []).find(node => Number.isFinite(Number(node?.cellWidth)) && Number.isFinite(Number(node?.cellHeight))) || nodes?.[0] || null;
+      const baseScale = Number(faction?.grid?.baseNodeScale || faction?.baseNodeScale || GRID_LAYOUT_DEFAULTS.baseNodeScale) || 1;
+      const slotSmall = mergeDeep(GRID_LAYOUT_DEFAULTS.slots.small, faction?.grid?.slots?.small || {});
+      const cellWidth = Number(referenceNode?.cellWidth) || 0;
+      const cellHeight = Number(referenceNode?.cellHeight) || 0;
+
+      return {
+        width: Math.max(1, cellWidth * (Number(slotSmall.width) || GRID_LAYOUT_DEFAULTS.slots.small.width) * baseScale * connectorScale),
+        height: Math.max(1, cellHeight * (Number(slotSmall.height) || GRID_LAYOUT_DEFAULTS.slots.small.height) * baseScale * connectorScale)
+      };
+    }
+
+    function createConnector(fromNode, toNode, direction, faction, linkId, linkMeta, connectorBasis) {
+      const bridgeWidth = Math.max(1, Number(connectorBasis?.width) || 0);
+      const bridgeHeight = Math.max(1, Number(connectorBasis?.height) || 0);
+      const thickness = direction === 'right' || direction === 'left' ? bridgeHeight : bridgeWidth;
       const colors = getGridConnectorColors(faction, linkMeta);
+      const overlap = Math.max(6, thickness * 0.5);
+      const background = null;
 
       if (direction === 'right') {
-        const startX = fromNode.x + fromNode.width;
-        const endX = toNode.x;
+        const startX = fromNode.x + fromNode.width - overlap;
+        const endX = toNode.x + overlap;
         if (endX <= startX) return null;
-        const y = fromNode.y + (fromNode.height / 2) - (thickness / 2) + (Number(linkMeta?.offsetY) || 0);
+        const centerY = ((fromNode.y + (fromNode.height / 2)) + (toNode.y + (toNode.height / 2))) / 2;
+        const y = centerY - (bridgeHeight / 2) + (Number(linkMeta?.offsetY) || 0);
         return {
           id: linkId,
           type: 'link-h',
           x: startX,
           y,
           width: endX - startX,
-          height: thickness,
+          height: bridgeHeight,
+          background,
+          accent: colors.accent,
           color: colors.accent,
           borderColor: colors.border
         };
       }
 
       if (direction === 'left') {
-        const startX = toNode.x + toNode.width;
-        const endX = fromNode.x;
+        const startX = toNode.x + toNode.width - overlap;
+        const endX = fromNode.x + overlap;
         if (endX <= startX) return null;
-        const y = fromNode.y + (fromNode.height / 2) - (thickness / 2) + (Number(linkMeta?.offsetY) || 0);
+        const centerY = ((fromNode.y + (fromNode.height / 2)) + (toNode.y + (toNode.height / 2))) / 2;
+        const y = centerY - (bridgeHeight / 2) + (Number(linkMeta?.offsetY) || 0);
         return {
           id: linkId,
           type: 'link-h',
           x: startX,
           y,
           width: endX - startX,
-          height: thickness,
+          height: bridgeHeight,
+          background,
+          accent: colors.accent,
           color: colors.accent,
           borderColor: colors.border
         };
       }
 
       if (direction === 'down') {
-        const startY = fromNode.y + fromNode.height;
-        const endY = toNode.y;
+        const startY = fromNode.y + fromNode.height - overlap;
+        const endY = toNode.y + overlap;
         if (endY <= startY) return null;
-        const x = fromNode.x + (fromNode.width / 2) - (thickness / 2) + (Number(linkMeta?.offsetX) || 0);
+        const centerX = ((fromNode.x + (fromNode.width / 2)) + (toNode.x + (toNode.width / 2))) / 2;
+        const x = centerX - (bridgeWidth / 2) + (Number(linkMeta?.offsetX) || 0);
         return {
           id: linkId,
           type: 'link-v',
           x,
           y: startY,
-          width: thickness,
+          width: bridgeWidth,
           height: endY - startY,
+          background,
+          accent: colors.accent,
           color: colors.accent,
           borderColor: colors.border
         };
       }
 
       if (direction === 'up') {
-        const startY = toNode.y + toNode.height;
-        const endY = fromNode.y;
+        const startY = toNode.y + toNode.height - overlap;
+        const endY = fromNode.y + overlap;
         if (endY <= startY) return null;
-        const x = fromNode.x + (fromNode.width / 2) - (thickness / 2) + (Number(linkMeta?.offsetX) || 0);
+        const centerX = ((fromNode.x + (fromNode.width / 2)) + (toNode.x + (toNode.width / 2))) / 2;
+        const x = centerX - (bridgeWidth / 2) + (Number(linkMeta?.offsetX) || 0);
         return {
           id: linkId,
           type: 'link-v',
           x,
           y: startY,
-          width: thickness,
+          width: bridgeWidth,
           height: endY - startY,
+          background,
+          accent: colors.accent,
           color: colors.accent,
           borderColor: colors.border
         };
@@ -1363,6 +1443,7 @@ layout: false
       const nodeMap = new Map(nodes.map(node => [node.id, node]));
       const connectors = [];
       const seen = new Set();
+      const connectorBasis = resolveConnectorBasis(nodes, faction);
       const directionMap = {
         right: [0, 1],
         left: [0, -1],
@@ -1396,7 +1477,7 @@ layout: false
           const directionKey = pairKey + '::' + (direction === 'left' || direction === 'up' ? 'reverse' : 'forward');
           if (seen.has(directionKey) || seen.has(pairKey)) return;
 
-          const connector = createConnector(node, targetNode, direction, faction, 'link-' + node.id + '-' + targetNode.id, typeof linkMeta === 'object' ? linkMeta : null);
+          const connector = createConnector(node, targetNode, direction, faction, 'link-' + node.id + '-' + targetNode.id, typeof linkMeta === 'object' ? linkMeta : null, connectorBasis);
           if (!connector) return;
           connectors.push(connector);
           seen.add(pairKey);
@@ -1636,7 +1717,13 @@ layout: false
         return { level: 1, describe: '', summary: '', unlockName: '', unlockNums: '', unlockIcon: '', materials: [], effects: [] };
       }
       const level = clampLevel(node, state.level);
-      return { ...node.levels[level - 1], level };
+      const levelData = { ...node.levels[level - 1], level };
+      if (typeof levelData.unlockIcon === 'string' && levelData.unlockIcon.trim()) {
+        levelData.unlockIcon = [levelData.unlockIcon.trim()];
+      } else if (!Array.isArray(levelData.unlockIcon)) {
+        levelData.unlockIcon = [];
+      }
+      return levelData;
     }
 
     function getNodeLevelCount(node) {
@@ -1647,11 +1734,28 @@ layout: false
       return Math.max(0, getNodeLevelCount(node) - 1);
     }
 
+    function getNodeConnectionSides(node) {
+      const links = node?.links;
+      if (!links || typeof links !== 'object') return {};
+      return {
+        left: Boolean(links.left),
+        right: Boolean(links.right),
+        up: Boolean(links.up),
+        down: Boolean(links.down)
+      };
+    }
+
     function renderNodeFrames(node) {
       const frameCount = getNodeFrameCount(node);
+      const connectedSides = getNodeConnectionSides(node);
       return Array.from({ length: frameCount }, (_, index) => {
         const layer = index + 1;
-        return '<span class="force-node-frame" style="inset:calc(-1 * var(--node-frame-step, 7px) * ' + layer + ');opacity:' + Math.max(0.5, 0.82 - (layer * 0.06)) + ';"></span>';
+        const step = 'calc(var(--node-frame-step, 7px) * ' + layer + ')';
+        const top = connectedSides.up ? '0px' : 'calc(-1 * ' + step + ')';
+        const right = connectedSides.right ? '0px' : 'calc(-1 * ' + step + ')';
+        const bottom = connectedSides.down ? '0px' : 'calc(-1 * ' + step + ')';
+        const left = connectedSides.left ? '0px' : 'calc(-1 * ' + step + ')';
+        return '<span class="force-node-frame" style="top:' + top + ';right:' + right + ';bottom:' + bottom + ';left:' + left + ';opacity:' + Math.max(0.5, 0.82 - (layer * 0.06)) + ';"></span>';
       }).join('');
     }
 
@@ -1670,8 +1774,23 @@ layout: false
         'width:' + item.width + 'px',
         'height:' + item.height + 'px'
       ];
-      if (item.color) styleParts.push('--link-bg:' + item.color);
+      if (item.background) {
+        if (cls === 'link-h' || cls === 'link-v') {
+          styleParts.push('--node-bg:' + item.background);
+        } else {
+          styleParts.push('--node-surface-fill:' + item.background);
+        }
+      }
+      if (item.accent) styleParts.push('--link-accent:' + item.accent);
       if (item.borderColor) styleParts.push('--link-border:' + item.borderColor);
+      if (cls === 'link-h' || cls === 'link-v') {
+        const baseBg = getComputedStyle(document.documentElement).getPropertyValue('--node-bg').trim();
+        const baseNoise = getComputedStyle(document.documentElement).getPropertyValue('--node-surface-noise').trim();
+        const baseFill = getComputedStyle(document.documentElement).getPropertyValue('--node-surface-fill').trim();
+        if (baseBg) styleParts.push('--node-bg:' + baseBg);
+        if (baseNoise) styleParts.push('--node-surface-noise:' + baseNoise);
+        if (baseFill) styleParts.push('--node-surface-fill:' + baseFill);
+      }
       return '<div class="force-decorator ' + cls + '" data-layout-kind="decorator" data-base-x="' + item.x + '" data-base-width="' + item.width + '" style="' + styleParts.join(';') + ';"></div>';
     }
 
@@ -1716,6 +1835,12 @@ layout: false
 
     function renderMaterialIcon(icon) {
       return renderAssetIcon(icon, 'material', 'cache');
+    }
+
+    function renderUnlockIcons(iconValue) {
+      const icons = Array.isArray(iconValue) ? iconValue : (iconValue ? [iconValue] : []);
+      if (!icons.length) return '';
+      return '<span class="force-detail-icon">' + icons.map(icon => renderAssetIcon(icon, 'unlock', 'unlock')).join('') + '</span>';
     }
 
     function renderNodeIcon(node) {
@@ -1895,7 +2020,7 @@ layout: false
       const effects = Array.isArray(levelData?.effects) ? levelData.effects : [];
       const resources = Array.isArray(faction.resources) ? faction.resources : [];
       const peakButtons = getPeakButtons(faction);
-      const unlockIcon = levelData?.unlockIcon || '';
+      const unlockIcons = levelData?.unlockIcon || [];
       state.peakIndex = clampPeakIndex(faction, state.peakIndex);
 
       app.innerHTML = [
@@ -1944,14 +2069,14 @@ layout: false
         '<aside class="force-detail-panel">',
         '<div class="force-detail-copy">',
         '<p class="force-detail-kicker">' + (node?.kicker || faction.title) + '</p>',
-        '<h2>' + (node?.title || 'NODE') + '</h2>',
+        '<h2>' + (levelData?.title || node?.title || 'NODE') + '</h2>',
         '<p class="force-detail-meta">' + (levelData?.describe || node?.groupLabel || '') + '</p>',
         '<div class="force-level-switch">' + (node?.levels || []).map((_, index) => {
           const level = index + 1;
           return '<button class="force-level-pill' + (level === state.level ? ' active' : '') + '" type="button" data-level="' + level + '">' + level + '</button>';
         }).join('') + '</div>',
         levelData?.summary ? '<p class="force-detail-description">' + levelData.summary + '</p>' : '',
-        '<div class="force-detail-block"><h3>' + (unlockIcon ? '<span class="force-detail-icon">' + renderAssetIcon(unlockIcon, 'unlock', 'unlock') + '</span>' : '') + (levelData?.unlockName || 'UNLOCK') + '</h3><div class="force-stat-list">' + (levelData?.unlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + levelData.unlockNums + '</strong></div>' : '') + '</div></div>',
+        '<div class="force-detail-block"><h3><span class="force-detail-unlock-name">' + (levelData?.unlockName || 'UNLOCK') + '</span>' + renderUnlockIcons(unlockIcons) + '</h3><div class="force-stat-list">' + (levelData?.unlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + levelData.unlockNums + '</strong></div>' : '') + '</div></div>',
         '<div class="force-detail-block"><h3>材料</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-material-row"><span class="force-material-visual">' + renderMaterialIcon(item.materialIcon) + '</span><span class="force-material-name">' + (item.materialName || item.label || '') + '</span><strong>' + (item.materialNums || item.value || '') + '</strong></div>').join('') + '</div></div>',
         '</div>',
         '<div class="force-detail-footer">' + resources.map(item => '<div class="force-resource-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div>',

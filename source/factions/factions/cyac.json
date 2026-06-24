@@ -1,71 +1,73 @@
 {
   "id": "cyac",
+  "background":"factions/data/background/cyac_bg.png",
   "shortLabel": "I",
-  "title": "?????",
   "iconImage": "/marathon-lore/assets/images/icons/cyac.png",
   "agent": "ONI",
   "agentIcon": "/marathon-lore/assets/images/icons/cyac.png",
-  "themecolor": "rgb(1, 224, 98)",
+  "themecolor": "rgb(9, 164, 46)",
   "nodes": [
     {
       "id": "r0c0",
       "row": 0,
       "col": 0,
       "size": "large",
-      "title": "扩容",
       "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
+          "describe": "物品栏 | 赛博艾克米1级",
           "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
           "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "unlockNums": "+8行",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "750"
             }
-          ]
+          ],
+          "title": "扩容"
         },
         {
           "levelId": "level_2",
-          "describe": "提升物品栏容量。",
+          "describe": "物品栏 | 赛博艾克米6级",
           "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
           "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "unlockNums": "+8行",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "1,500"
             }
-          ]
+          ],
+          "title": "扩容"
         },
         {
           "levelId": "level_3",
-          "describe": "提升物品栏容量。",
+          "describe": "物品栏 | 赛博艾克米11级",
           "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
           "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "unlockNums": "+8行",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "2,000"
             }
-          ]
+          ],
+          "title": "扩容"
         },
         {
           "levelId": "level_4",
-          "describe": "提升物品栏容量。",
+          "describe": "物品栏 | 赛博艾克米17级",
           "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
           "unlockName": "保险库容量",
           "unlockNums": "+4行",
@@ -74,14 +76,15 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "4,000"
             }
-          ]
+          ],
+          "title": "扩容"
         },
         {
           "levelId": "level_5",
-          "describe": "提升物品栏容量。",
+          "describe": "物品栏 | 赛博艾克米26级",
           "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
           "unlockName": "保险库容量",
           "unlockNums": "+4行",
@@ -90,10 +93,11 @@
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialIcon": "/factions/data/credits.png",
               "materialNums": "7,000"
             }
-          ]
+          ],
+          "title": "扩容"
         }
       ]
     },
@@ -101,41 +105,45 @@
       "id": "r0c1",
       "row": 0,
       "col": 1,
-      "size": "large",
-      "title": "线人",
+      "size": "small",
       "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "links":{
+        "right": true
+      },
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "describe": "功能 | 赛博艾克米1级",
+          "summary": "数据卡信用点奖励提高50%。此加成可与其它线人升级效果叠加。",
+          "unlockName": "数据卡信用值",
+          "unlockNums": "+50%",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "750"
             }
-          ]
+          ],
+          "title": "线人.EXE"
         },
         {
           "levelId": "level_2",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "describe": "功能 | 赛博艾克米9级",
+          "summary": "数据卡信用点奖励提高50%。此加成可与其它线人升级效果叠加。",
+          "unlockName": "数据卡信用值",
+          "unlockNums": "+50%",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "1,500"
             }
-          ]
+          ],
+          "title": "线人.EXE"
         }
       ]
     },
@@ -143,89 +151,93 @@
       "id": "r0c2",
       "row": 0,
       "col": 2,
-      "size": "large",
-      "title": "信用额度",
+      "size": "small",
       "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "describe": "物品栏 | 赛博艾克米3级",
+          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
+          "unlockName": "信用点钱包容量",
+          "unlockNums": "+2万",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "750"
             }
-          ]
+          ],
+          "title": "信用点上限"
         },
         {
           "levelId": "level_2",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "describe": "物品栏 | 赛博艾克米7级",
+          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
+          "unlockName": "信用点钱包容量",
+          "unlockNums": "+5万",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "1,500"
             }
-          ]
+          ],
+          "title": "信用点上限"
         },
         {
           "levelId": "level_3",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "describe": "物品栏 | 赛博艾克米14级",
+          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
+          "unlockName": "信用点钱包容量",
+          "unlockNums": "+20万",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "4,000"
             }
-          ]
+          ],
+          "title": "信用点上限"
         },
         {
           "levelId": "level_4",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "describe": "物品栏 | 赛博艾克米19级",
+          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
+          "unlockName": "信用点钱包容量",
+          "unlockNums": "+70万",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "10,000"
             }
-          ]
+          ],
+          "title": "信用点上限"
         },
         {
           "levelId": "level_5",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "describe": "物品栏 | 赛博艾克米28级",
+          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
+          "unlockName": "信用点钱包容量",
+          "unlockNums": "+900万",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "50,000"
             }
-          ]
+          ],
+          "title": "信用点上限"
         }
       ]
     },
@@ -234,61 +246,350 @@
       "row": 0,
       "col": 5,
       "size": "large",
-      "title": "赞助",
       "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
-          "unlockIcon": "",
+          "title": "赞助[赛博艾克米]",
+          "describe": "军械库 | 赛博艾克米10级",
+          "summary": "解锁可在军械库中使用信用点购买的赛博艾克米高级赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/cyac_sponser_green.png",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "250"
             }
           ]
         },
         {
           "levelId": "level_2",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
-          "unlockIcon": "",
+          "title": "赞助+[赛博艾克米]",
+          "describe": "军械库 | 赛博艾克米20级",
+          "summary": "解锁可在军械库中使用信用点购买的赛博艾克米豪华赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/cyac_sponser_blue.png",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "500"
             }
           ]
         },
         {
           "levelId": "level_3",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "title": "赞助++[赛博艾克米]",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中使用信用点购买的赛博艾克米卓越赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/cyac_sponser_blue.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "3,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c0",
+      "row": 1,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "载体易物",
+          "describe": "军械库 | 赛博艾克米4级",
+          "summary": "解锁可在军械库中使用回收资源交换的强化背包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/green_pack.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "750"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c1",
+      "row": 1,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "载体+易物",
+          "describe": "军械库 | 赛博艾克米15级",
+          "summary": "解锁可在军械库中使用回收资源交换的豪华背包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/blue_pack.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "750"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c2",
+      "row": 1,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "顶级掠夺者易物",
+          "describe": "军械库 | 赛博艾克米30级",
+          "summary": "解锁可在军械库中使用回收资源交换的卓越背包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/purple_pack.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.png",
+              "materialNums": "56"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.png",
+              "materialNums": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c3",
+      "row": 1,
+      "col": 3,
+      "size": "large",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "顶级掠夺者易物",
+          "describe": "军械库 | VIP15级",
+          "summary": "解锁可在军械库中使用回收资源交换的尊享背包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/purple_pack.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.png",
+              "materialNums": "56"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.png",
+              "materialNums": "24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c0",
+      "row": 2,
+      "col": 0,
+      "size": "large",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "载体",
+          "describe": "军械库 | 赛博艾克米8级",
+          "summary": "解锁可在军械库中使用信用点购买的强化背包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/green_pack.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "750"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c1",
+      "row": 2,
+      "col": 1,
+      "size": "large",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "载体+",
+          "describe": "军械库 | 赛博艾克米22级",
+          "summary": "解锁可在军械库中使用信用点购买的豪华背包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/blue_pack.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.png",
+              "materialNums": "21"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "不稳定生物质",
+              "materialIcon": "/factions/data/unstable_biomass.png",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c4",
+      "row": 2,
+      "col": 4,
+      "size": "large",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "??",
+          "describe": "军械库 | VIP?级",
+          "summary": "??????",
+          "unlockName": "???????",
+          "unlockNums": "",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "???"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c0",
+      "row": 3,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "锁匠",
+          "describe": "军械库 | 赛博艾克米3级",
+          "summary": "解锁可在军械库中购买的锁箱钥匙和危害覆写卡。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/cyac_sponser_green.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "250"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "制钥器",
+          "describe": "军械库 | 赛博艾克米12级",
+          "summary": "解锁可在军械库中购买的豪华钥匙模板。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_key.png",
+            "/factions/data/green_key_1.png"              
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "500"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中使用信用点购买的赛博艾克米卓越赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/cyac_sponser_blue.png",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.png",
+              "materialNums": "3,000"
             }
           ]
         }
       ]
     }
   ],
-  "peakNodes":[
+  "peakNodes": [
     {
       "id": "peak_1",
       "title": "巅峰节点I",
@@ -297,7 +598,7 @@
       "unlockName": "保险库容量",
       "unlockNums": "+4行",
       "unlockIcon": "",
-      "unlockConditions":"1/1"
+      "unlockConditions": "1/1"
     },
     {
       "id": "peak_2",
@@ -307,7 +608,7 @@
       "unlockName": "保险库容量",
       "unlockNums": "+4行",
       "unlockIcon": "",
-      "unlockConditions":"1/1"
+      "unlockConditions": "1/1"
     },
     {
       "id": "peak_3",
@@ -317,7 +618,7 @@
       "unlockName": "保险库容量",
       "unlockNums": "+4行",
       "unlockIcon": "",
-      "unlockConditions":"1/1"
+      "unlockConditions": "1/1"
     },
     {
       "id": "peak_4",
@@ -327,7 +628,7 @@
       "unlockName": "保险库容量",
       "unlockNums": "+4行",
       "unlockIcon": "",
-      "unlockConditions":"1/1"
+      "unlockConditions": "1/1"
     },
     {
       "id": "peak_5",
@@ -337,7 +638,7 @@
       "unlockName": "保险库容量",
       "unlockNums": "+4行",
       "unlockIcon": "",
-      "unlockConditions":"1/1"
+      "unlockConditions": "1/1"
     },
     {
       "id": "peak_6",
@@ -347,7 +648,7 @@
       "unlockName": "保险库容量",
       "unlockNums": "+4行",
       "unlockIcon": "",
-      "unlockConditions":"1/1"
+      "unlockConditions": "1/1"
     }
   ]
 }
