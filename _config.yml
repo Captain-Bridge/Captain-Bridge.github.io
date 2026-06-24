@@ -12,7 +12,7 @@ language:
 timezone: Asia/Shanghai
 
 # URL
-url: https://cnmarathon.cn
+url: https://marathon.uesc.top
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

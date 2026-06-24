@@ -30,6 +30,260 @@
               "materialNums": "7,000"
             }
           ]
+        },
+        {
+          "levelId": "level_2",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_5",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c1",
+      "row": 0,
+      "col": 1,
+      "size": "large",
+      "title": "线人",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c2",
+      "row": 0,
+      "col": 2,
+      "size": "large",
+      "title": "信用额度",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_5",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c5",
+      "row": 0,
+      "col": 5,
+      "size": "large",
+      "title": "赞助",
+      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "describe": "提升物品栏容量。",
+          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
+          "unlockName": "保险库容量",
+          "unlockNums": "+4行",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialNums": "7,000"
+            }
+          ]
         }
       ]
     }
