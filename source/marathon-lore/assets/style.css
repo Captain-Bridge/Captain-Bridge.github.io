@@ -1151,7 +1151,8 @@ body {
   white-space:nowrap;
 }
 
-.detail-copy.terminal .manifest-inline-row > .manifest-inline-right {
+.detail-copy.terminal .manifest-inline-right {
+  margin-left:auto;
   white-space:nowrap;
 }
 
