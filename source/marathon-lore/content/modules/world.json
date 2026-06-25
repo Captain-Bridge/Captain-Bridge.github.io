@@ -3920,7 +3920,7 @@
                   "id": "cryo_archive_preservation",
                   "title": "低温档案室：保存区",
                   "bodyFile": "/marathon-lore/content/docs/world/cryo_archive/explore/cryo_archive_preservation.md",
-                  "image": null,
+                  "image": "/marathon-lore/content/docs/world/cryo_archive/explore/cryo_archive_preservation.webp",
                   "meta": [
                     "疾行者指南"
                   ]

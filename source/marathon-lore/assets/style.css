@@ -1015,6 +1015,28 @@ body {
   color:var(--soft)
 }
 
+.detail-audio {
+  margin:0 0 20px;
+  padding:16px 16px 14px;
+  border:1px solid rgba(0,229,91,.22);
+  background:rgba(0,0,0,.18);
+  box-shadow:0 0 0 1px rgba(0,229,91,.06) inset
+}
+
+.detail-audio-label {
+  margin:0 0 10px;
+  color:var(--green);
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.04em;
+  text-transform:uppercase
+}
+
+.detail-audio audio {
+  width:100%;
+  display:block
+}
+
 .markdown-body > :first-child {
   margin-top:0
 }

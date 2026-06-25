@@ -778,6 +778,57 @@ function visual(item) {
   `;
 }
 
+function normalizeAudioSource(audio) {
+  if (!audio) return null;
+
+  if (typeof audio === 'string') {
+    return { src: audio };
+  }
+
+  if (typeof audio !== 'object') {
+    return null;
+  }
+
+  const src = typeof audio.src === 'string'
+    ? audio.src
+    : (typeof audio.url === 'string' ? audio.url : '');
+
+  if (!src) return null;
+
+  return {
+    src,
+    type: typeof audio.type === 'string' ? audio.type : '',
+    label: typeof audio.label === 'string' ? audio.label : ''
+  };
+}
+
+function normalizeAudioSources(audio) {
+  if (!audio) return [];
+
+  const items = Array.isArray(audio) ? audio : [audio];
+  return items.map(normalizeAudioSource).filter(Boolean);
+}
+
+function audioMarkup(audio, title = '音频') {
+  const sources = normalizeAudioSources(audio);
+  if (!sources.length) return '';
+
+  const label = sources[0].label || title;
+  const sourceMarkup = sources.map(source => `
+    <source src="${escapeHtml(source.src)}"${source.type ? ` type="${escapeHtml(source.type)}"` : ''}>
+  `).join('');
+
+  return `
+    <div class="detail-audio">
+      <div class="detail-audio-label">${escapeHtml(label)}</div>
+      <audio controls preload="none">
+        ${sourceMarkup}
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  `;
+}
+
 function escapeHtml(text) {
   return text
     .replaceAll('&', '&amp;')
@@ -1898,6 +1949,10 @@ async function detailView() {
     ? (entry.variantB?.bodyFile || entry.bodyFile)
     : (activeLog?.bodyFile || null);
   const isVariantB = activeVariant === 'b';
+  const audioSource = isVariantB
+    ? (entry.variantB?.audio || entry.audio)
+    : (activeLog?.audio || entry.variantA?.audio || entry.audio);
+  const audioBlock = audioMarkup(audioSource, isVariantB ? entry.title : (activeLog?.title || entry.title));
   const bodyContent = isVariantB
     ? await loadMarkdownDoc(bodyFile)
     : (await loadDocLines(bodyFile)).join('');
@@ -1907,12 +1962,14 @@ async function detailView() {
   const content = isVariantB
     ? `
         ${metaList(entry.variantB?.meta || entry.meta || [])}
+        ${audioBlock}
         ${summaryText ? `<blockquote>${summaryText}</blockquote>` : ''}
         <div class="markdown-body">${bodyContent}</div>
       `
     : `
         ${metaList(activeLog?.meta || [])}
         <h2>${activeLog?.title || entry.title}</h2>
+        ${audioBlock}
         ${summaryText ? `<blockquote>${summaryText}</blockquote>` : ''}
         ${bodyContent}
       `;

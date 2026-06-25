@@ -7,5 +7,5 @@ public/
 .deploy*/
 _multiconfig.yml
 .npm-cache/
-artifacts/marathon-lore/
+artifacts/
 scripts/__pycache__/
