@@ -25,11 +25,31 @@ let tagRailScrollTop = 0;
 let previewTooltip = null;
 let activePreviewAnchor = null;
 let activePreviewToken = 0;
+let audioControlCleanup = null;
 
 function syncLayoutState() {
   const isTagsView = state.view === 'tags';
   appView.classList.toggle('is-tags', isTagsView);
   viewport?.classList.toggle('is-tags', isTagsView);
+}
+
+function detachAudioControls() {
+  if (typeof audioControlCleanup === 'function') {
+    audioControlCleanup();
+    audioControlCleanup = null;
+  }
+}
+
+function formatAudioTime(seconds) {
+  if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
+  const whole = Math.floor(seconds);
+  const minutes = Math.floor(whole / 60);
+  const remainder = String(whole % 60).padStart(2, '0');
+  return `${minutes}:${remainder}`;
+}
+
+function clamp01(value) {
+  return Math.min(1, Math.max(0, value));
 }
 
 function rememberTagRailScroll() {
@@ -756,14 +776,18 @@ function metaList(items = []) {
   `;
 }
 
-function visual(item) {
+function visual(item, footerMarkup = '') {
   const accentClass = item.accent === 'blue' ? 'blue' : 'green';
   const imageModeClass = 'fit-image';
+  const footer = footerMarkup ? `<div class="visual-footer">${footerMarkup}</div>` : '';
 
   if (item.image) {
     return `
       <div class="visual-pane scrollbar ${accentClass} ${imageModeClass}">
-        <img src="${item.image}" alt="${item.title}">
+        <div class="visual-media">
+          <img src="${item.image}" alt="${item.title}">
+        </div>
+        ${footer}
       </div>
     `;
   }
@@ -774,6 +798,7 @@ function visual(item) {
         ${iconVisual(item)}
         <strong>${item.title}</strong>
       </div>
+      ${footer}
     </div>
   `;
 }
@@ -782,7 +807,12 @@ function normalizeAudioSource(audio) {
   if (!audio) return null;
 
   if (typeof audio === 'string') {
-    return { src: audio };
+    const resolvedSrc = resolveMediaSrc(audio);
+    return {
+      src: resolvedSrc,
+      type: inferAudioMimeType(resolvedSrc),
+      label: ''
+    };
   }
 
   if (typeof audio !== 'object') {
@@ -796,10 +826,39 @@ function normalizeAudioSource(audio) {
   if (!src) return null;
 
   return {
-    src,
-    type: typeof audio.type === 'string' ? audio.type : '',
+    src: resolveMediaSrc(src),
+    type: typeof audio.type === 'string' && audio.type.trim()
+      ? audio.type.trim()
+      : inferAudioMimeType(src),
     label: typeof audio.label === 'string' ? audio.label : ''
   };
+}
+
+function resolveMediaSrc(src) {
+  const value = String(src || '').trim();
+  if (!value) return '';
+  if (/^(?:[a-z]+:)?\/\//i.test(value) || value.startsWith('data:') || value.startsWith('/')) {
+    return value;
+  }
+  return `/${value.replace(/^\/+/, '')}`;
+}
+
+function inferAudioMimeType(src) {
+  const value = String(src || '').trim().toLowerCase();
+  if (!value) return '';
+
+  const cleanValue = value.split('#')[0].split('?')[0];
+
+  if (cleanValue.endsWith('.mp3')) return 'audio/mpeg';
+  if (cleanValue.endsWith('.opus')) return 'audio/ogg; codecs=opus';
+  if (cleanValue.endsWith('.ogg')) return 'audio/ogg';
+  if (cleanValue.endsWith('.m4a')) return 'audio/mp4';
+  if (cleanValue.endsWith('.mp4')) return 'audio/mp4';
+  if (cleanValue.endsWith('.aac')) return 'audio/aac';
+  if (cleanValue.endsWith('.wav')) return 'audio/wav';
+  if (cleanValue.endsWith('.webm')) return 'audio/webm';
+
+  return '';
 }
 
 function normalizeAudioSources(audio) {
@@ -813,20 +872,233 @@ function audioMarkup(audio, title = '音频') {
   const sources = normalizeAudioSources(audio);
   if (!sources.length) return '';
 
-  const label = sources[0].label || title;
   const sourceMarkup = sources.map(source => `
     <source src="${escapeHtml(source.src)}"${source.type ? ` type="${escapeHtml(source.type)}"` : ''}>
   `).join('');
 
   return `
-    <div class="detail-audio">
-      <div class="detail-audio-label">${escapeHtml(label)}</div>
-      <audio controls preload="none">
+    <div class="detail-audio" data-audio-control="true">
+      <div class="detail-audio-track" role="slider" tabindex="0" aria-label="${escapeHtml(title)}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-audio-track="true">
+        <span class="detail-audio-track-layer detail-audio-track-base" aria-hidden="true"></span>
+        <div class="detail-audio-track-fill" data-audio-fill="true">
+          <span class="detail-audio-track-layer detail-audio-track-fill-image" aria-hidden="true"></span>
+        </div>
+      </div>
+      <audio preload="metadata" hidden data-audio-element="true">
         ${sourceMarkup}
         Your browser does not support the audio element.
       </audio>
     </div>
   `;
+}
+
+function setupAudioControls(root) {
+  detachAudioControls();
+
+  const host = root.querySelector('.detail-audio[data-audio-control="true"]');
+  const audio = host?.querySelector('[data-audio-element="true"]');
+  const track = host?.querySelector('[data-audio-track="true"]');
+  const fill = host?.querySelector('[data-audio-fill="true"]');
+  if (!host || !audio || !track || !fill) return;
+
+  let isDragging = false;
+  let pointerDown = false;
+  let startX = 0;
+  let startY = 0;
+  let rafId = 0;
+  let suppressClick = false;
+  const footer = host.parentElement;
+  let resizeObserver = null;
+
+  const updateTrackHeight = () => {
+    const fallbackHeight = 24;
+    const containerHeight = footer instanceof HTMLElement ? footer.clientHeight : 0;
+    const nextHeight = containerHeight > 0
+      ? Math.max(20, Math.min(42, Math.round(containerHeight * 0.55)))
+      : fallbackHeight;
+    host.style.setProperty('--audio-track-height', `${nextHeight}px`);
+  };
+
+  const updateTrack = () => {
+    const duration = Number(audio.duration);
+    const hasDuration = Number.isFinite(duration) && duration > 0;
+    const progress = hasDuration ? clamp01(audio.currentTime / duration) : 0;
+
+    host.dataset.playing = audio.paused ? 'false' : 'true';
+    host.dataset.seeking = isDragging ? 'true' : 'false';
+    track.setAttribute('aria-valuenow', String(Math.round(progress * 100)));
+    track.setAttribute('aria-valuetext', `${Math.round(progress * 100)}%`);
+    fill.style.width = '100%';
+    fill.style.clipPath = `inset(0 ${Math.max(0, 100 - progress * 100)}% 0 0)`;
+    fill.style.webkitClipPath = `inset(0 ${Math.max(0, 100 - progress * 100)}% 0 0)`;
+    host.style.setProperty('--audio-progress', `${progress * 100}%`);
+    host.dataset.time = `${formatAudioTime(audio.currentTime)} / ${hasDuration ? formatAudioTime(duration) : '0:00'}`;
+  };
+
+  const seekFromClientX = clientX => {
+    const rect = track.getBoundingClientRect();
+    const ratio = clamp01((clientX - rect.left) / rect.width);
+    if (Number.isFinite(audio.duration) && audio.duration > 0) {
+      audio.currentTime = audio.duration * ratio;
+    }
+    updateTrack();
+  };
+
+  const startDrag = (clientX, clientY) => {
+    pointerDown = true;
+    isDragging = false;
+    suppressClick = false;
+    startX = clientX;
+    startY = clientY;
+    seekFromClientX(clientX);
+  };
+
+  const moveDrag = (clientX, clientY) => {
+    if (!pointerDown) return;
+    if (!isDragging) {
+      const moved = Math.abs(clientX - startX) > 4 || Math.abs(clientY - startY) > 4;
+      if (!moved) return;
+      isDragging = true;
+    }
+    seekFromClientX(clientX);
+  };
+
+  const finishDrag = () => {
+    if (!pointerDown) return;
+    const wasDragging = isDragging;
+    pointerDown = false;
+    isDragging = false;
+    updateTrack();
+    suppressClick = wasDragging;
+  };
+
+  const onClick = event => {
+    if (suppressClick) {
+      suppressClick = false;
+      return;
+    }
+    seekFromClientX(event.clientX);
+    void togglePlay();
+  };
+
+  const onMouseDown = event => {
+    if (event.button !== 0) return;
+    startDrag(event.clientX, event.clientY);
+  };
+
+  const onMouseMove = event => {
+    moveDrag(event.clientX, event.clientY);
+  };
+
+  const onTouchStart = event => {
+    const touch = event.touches[0];
+    if (!touch) return;
+    startDrag(touch.clientX, touch.clientY);
+  };
+
+  const onTouchMove = event => {
+    const touch = event.touches[0];
+    if (!touch) return;
+    moveDrag(touch.clientX, touch.clientY);
+    if (pointerDown) {
+      event.preventDefault();
+    }
+  };
+
+  const togglePlay = async () => {
+    if (audio.paused) {
+      try {
+        await audio.play();
+      } catch {
+        updateTrack();
+      }
+    } else {
+      audio.pause();
+    }
+  };
+
+  const onKeyDown = event => {
+    if (event.key === ' ' || event.key === 'Enter') {
+      event.preventDefault();
+      void togglePlay();
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') {
+      event.preventDefault();
+      if (Number.isFinite(audio.duration) && audio.duration > 0) {
+        audio.currentTime = Math.max(0, audio.currentTime - Math.max(1, audio.duration * 0.02));
+        updateTrack();
+      }
+    } else if (event.key === 'ArrowRight' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (Number.isFinite(audio.duration) && audio.duration > 0) {
+        audio.currentTime = Math.min(audio.duration, audio.currentTime + Math.max(1, audio.duration * 0.02));
+        updateTrack();
+      }
+    }
+  };
+
+  const onTimeUpdate = () => {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      rafId = 0;
+      updateTrack();
+    });
+  };
+
+  audio.addEventListener('loadedmetadata', updateTrack);
+  audio.addEventListener('timeupdate', onTimeUpdate);
+  audio.addEventListener('play', updateTrack);
+  audio.addEventListener('pause', updateTrack);
+  audio.addEventListener('ended', updateTrack);
+  audio.addEventListener('seeking', updateTrack);
+  audio.addEventListener('seeked', updateTrack);
+
+  track.addEventListener('mousedown', onMouseDown);
+  track.addEventListener('touchstart', onTouchStart, { passive: true });
+  track.addEventListener('touchmove', onTouchMove, { passive: false });
+  track.addEventListener('touchend', finishDrag);
+  track.addEventListener('touchcancel', finishDrag);
+  track.addEventListener('click', onClick);
+  track.addEventListener('keydown', onKeyDown);
+  window.addEventListener('mousemove', onMouseMove);
+  window.addEventListener('mouseup', finishDrag);
+
+  updateTrackHeight();
+  if (typeof ResizeObserver === 'function' && footer instanceof HTMLElement) {
+    resizeObserver = new ResizeObserver(() => {
+      updateTrackHeight();
+    });
+    resizeObserver.observe(footer);
+  } else {
+    window.addEventListener('resize', updateTrackHeight);
+  }
+
+  updateTrack();
+
+  audioControlCleanup = () => {
+    if (rafId) cancelAnimationFrame(rafId);
+    audio.pause();
+    audio.removeEventListener('loadedmetadata', updateTrack);
+    audio.removeEventListener('timeupdate', onTimeUpdate);
+    audio.removeEventListener('play', updateTrack);
+    audio.removeEventListener('pause', updateTrack);
+    audio.removeEventListener('ended', updateTrack);
+    audio.removeEventListener('seeking', updateTrack);
+    audio.removeEventListener('seeked', updateTrack);
+    track.removeEventListener('mousedown', onMouseDown);
+    track.removeEventListener('touchstart', onTouchStart);
+    track.removeEventListener('touchmove', onTouchMove);
+    track.removeEventListener('touchend', finishDrag);
+    track.removeEventListener('touchcancel', finishDrag);
+    track.removeEventListener('click', onClick);
+    track.removeEventListener('keydown', onKeyDown);
+    window.removeEventListener('mousemove', onMouseMove);
+    window.removeEventListener('mouseup', finishDrag);
+    if (resizeObserver) {
+      resizeObserver.disconnect();
+    } else {
+      window.removeEventListener('resize', updateTrackHeight);
+    }
+  };
 }
 
 function escapeHtml(text) {
@@ -1923,6 +2195,7 @@ function entriesView() {
 }
 
 async function detailView() {
+  detachAudioControls();
   const category = getCategory(state.categoryId) || categoryData[0];
   const section = getSection(category, state.sectionId) || category.sections[0];
   const entry = getEntryRecord(section, state.nodePath);
@@ -1962,14 +2235,12 @@ async function detailView() {
   const content = isVariantB
     ? `
         ${metaList(entry.variantB?.meta || entry.meta || [])}
-        ${audioBlock}
         ${summaryText ? `<blockquote>${summaryText}</blockquote>` : ''}
         <div class="markdown-body">${bodyContent}</div>
       `
     : `
         ${metaList(activeLog?.meta || [])}
         <h2>${activeLog?.title || entry.title}</h2>
-        ${audioBlock}
         ${summaryText ? `<blockquote>${summaryText}</blockquote>` : ''}
         ${bodyContent}
       `;
@@ -1994,8 +2265,8 @@ async function detailView() {
     ? 'detail-copy scrollbar terminal'
     : 'detail-copy scrollbar';
   const pair = isVariantB
-    ? `<div class="${copyClass}">${content}</div>${visual(visualSource)}`
-    : `${visual(visualSource)}<div class="${copyClass}">${content}</div>`;
+    ? `<div class="${copyClass}">${content}</div>${visual(visualSource, audioBlock)}`
+    : `${visual(visualSource, audioBlock)}<div class="${copyClass}">${content}</div>`;
   const hasLogRail = activeVariant === 'a' && logs.length > 1;
   const layoutClass = hasLogRail ? 'detail-layout detail-layout-a' : 'detail-layout detail-layout-b';
   const railMarkup = hasLogRail
@@ -2057,6 +2328,8 @@ async function detailView() {
       </div>
     </div>
   `;
+
+  setupAudioControls(appView);
 }
 
 function bind() {

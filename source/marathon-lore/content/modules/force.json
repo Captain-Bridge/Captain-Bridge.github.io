@@ -317,6 +317,10 @@
                   "title": "农业检查",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/agricultural_inspection.md",
                   "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/agricultural_inspection.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "传染病",
                     "德莱厄斯",
@@ -344,6 +348,10 @@
                   "title": "安全录音：种子库",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/seed_bank.md",
                   "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/seed_bank.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "人工智能",
                     "传染病",
@@ -436,6 +444,10 @@
                   "title": "实验室报告：新型传染病",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/laboratory_report_new_infectious_diseases.md",
                   "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/laboratory_report_new_infectious_diseases.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "传染病",
                     "新卡斯卡迪亚",

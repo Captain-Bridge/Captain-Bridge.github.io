@@ -944,40 +944,90 @@ body {
 .visual-pane {
   position:relative;
   overflow:auto;
-  display:grid;
-  place-items:center;
-  padding:var(--detail-pane-padding);
-  background:linear-gradient(180deg,rgba(0,229,91,.08),rgba(0,0,0,0)),rgba(10,12,18,.94)
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:stretch;
+  padding:0;
+  --visual-panel-bg:rgb(14,15,19);
+  --visual-panel-noise:
+    radial-gradient(rgba(255,255,255,.03) .45px,transparent .55px),
+    radial-gradient(rgba(116,128,148,.024) .45px,transparent .55px),
+    radial-gradient(rgba(0,0,0,.14) .6px,transparent .72px);
+  background-color:var(--visual-panel-bg);
+  background-image:var(--visual-panel-noise);
+  background-size:14px 14px,19px 19px,17px 17px;
+  background-position:0 0,7px 9px,4px 5px
 }
 
-.visual-pane img {
+.visual-media {
   width:100%;
-  height:100%;
+  flex:0 0 80%;
+  min-height:0;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  overflow:visible;
+  align-self:stretch;
+  margin-bottom:0;
+  padding:8px 8px 0;
+  background-color:var(--visual-panel-bg);
+  background-image:var(--visual-panel-noise);
+  background-size:14px 14px,19px 19px,17px 17px;
+  background-position:0 0,7px 9px,4px 5px
+}
+
+.visual-media img {
+  display:block;
+  width:auto;
+  height:auto;
   max-width:100%;
   max-height:100%;
-  object-fit:contain;
   border-radius:0;
   filter:saturate(.92) contrast(1.04)
 }
 
-.visual-pane.fit-image img {
-  width:100%;
-  height:100%;
+.visual-pane.fit-image .visual-media img {
+  display:block;
+  width:auto;
+  height:auto;
   max-width:100%;
   max-height:100%;
   object-fit:contain
 }
 
-.visual-pane.cover-image img {
+.visual-footer {
+  width:100%;
+  align-self:stretch;
+  flex:0 0 20%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  margin-top:0;
+  padding:0 8px 8px;
+  border-top:0;
+  background-color:var(--visual-panel-bg);
+  background-image:var(--visual-panel-noise);
+  background-size:14px 14px,19px 19px,17px 17px;
+  background-position:0 0,7px 9px,4px 5px
+}
+
+.visual-pane.cover-image .visual-media img {
   object-fit:cover
 }
 
 .visual-pane.blue {
-  background:radial-gradient(circle at top right,rgba(48,90,255,.22),transparent 38%),linear-gradient(180deg,rgba(35,75,208,.24),rgba(15,16,24,.96)),rgba(10,12,18,.94)
+  background-color:var(--visual-panel-bg);
+  background-image:var(--visual-panel-noise);
+  background-size:14px 14px,19px 19px,17px 17px;
+  background-position:0 0,7px 9px,4px 5px
 }
 
 .visual-pane.green {
-  background:radial-gradient(circle at top right,rgba(0,229,91,.16),transparent 38%),linear-gradient(180deg,rgba(0,229,91,.14),rgba(15,16,24,.96)),rgba(10,12,18,.94)
+  background-color:var(--visual-panel-bg);
+  background-image:var(--visual-panel-noise);
+  background-size:14px 14px,19px 19px,17px 17px;
+  background-position:0 0,7px 9px,4px 5px
 }
 
 .visual-fallback {
@@ -1016,20 +1066,64 @@ body {
 }
 
 .detail-audio {
-  margin:0 0 20px;
-  padding:16px 16px 14px;
-  border:1px solid rgba(0,229,91,.22);
-  background:rgba(0,0,0,.18);
-  box-shadow:0 0 0 1px rgba(0,229,91,.06) inset
+  width:100%;
+  margin-top:2px;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  --audio-track-height:24px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end
 }
 
-.detail-audio-label {
-  margin:0 0 10px;
-  color:var(--green);
-  font-size:14px;
-  font-weight:700;
-  letter-spacing:.04em;
-  text-transform:uppercase
+.detail-audio-track {
+  position:relative;
+  width:70%;
+  height:var(--audio-track-height);
+  overflow:hidden;
+  cursor:pointer;
+  background:transparent;
+  border:0;
+  user-select:none;
+  touch-action:none;
+  margin:0 auto
+}
+
+.detail-audio-track::before {
+  content:none
+}
+
+.detail-audio-track-layer {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:100% 100%
+}
+
+.detail-audio-track-base {
+  background-image:url('/marathon-lore/assets/images/audio-progress.svg');
+  opacity:1
+}
+
+.detail-audio-track-fill {
+  position:absolute;
+  inset:0;
+  width:100%;
+  overflow:hidden;
+  background:transparent;
+  pointer-events:none
+}
+
+.detail-audio-track-fill-image {
+  background-image:url('/marathon-lore/assets/images/audio-progress-played.svg');
+  opacity:1
 }
 
 .detail-audio audio {
@@ -1820,8 +1914,8 @@ body {
     padding:18px
   }
 
-  .visual-pane img,
-  .visual-pane.fit-image img {
+  .visual-media img,
+  .visual-pane.fit-image .visual-media img {
     max-height:none
   }
 
@@ -1941,4 +2035,3 @@ body {
     padding-bottom:8px;
   }
 }
-
