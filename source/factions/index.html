@@ -7,8 +7,8 @@ layout: false
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>阵营升级图谱</title>
-  <meta name="description" content="Marathon 阵营升级图谱展示页">
+  <title>阵营升级</title>
+  <meta name="description" content="陣營">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
   <style>
     :root {
@@ -19,6 +19,7 @@ layout: false
       --soft: rgba(214,223,236,0.72);
       --dim: rgba(214,223,236,0.42);
       --green: #00e55b;
+      --ui-scale: 1;
       --node-surface-fill: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.06)), rgb(50, 51, 59);
       --node-surface-noise: repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(255,255,255,.016) 0 1px, transparent 1px 4px), repeating-linear-gradient(135deg, rgba(255,255,255,.012) 0 1px, transparent 1px 5px), repeating-linear-gradient(45deg, rgba(0,0,0,.05) 0 1px, transparent 1px 6px);
       --shadow: 0 24px 80px rgba(0,0,0,0.45);
@@ -76,6 +77,13 @@ layout: false
       grid-template-rows: minmax(0, 1fr) 58px;
       gap: 0;
       padding: 0 24px;
+      zoom: var(--ui-scale);
+    }
+
+    @media (min-width: 2200px) and (min-height: 1300px) {
+      :root {
+        --ui-scale: 1.12;
+      }
     }
 
     .hud-top {
@@ -121,57 +129,32 @@ layout: false
       overflow: hidden;
     }
 
-    .force-sidebar-block::before,
-    .force-sidebar-block::after {
-      content: "";
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      border-top: 1px solid rgba(255,255,255,.35);
-      border-left: 1px solid rgba(255,255,255,.35);
-      opacity: .8;
-    }
-
-    .force-sidebar-block::before {
-      top: 14px;
-      left: 14px;
-    }
-
-    .force-sidebar-block::after {
-      right: 14px;
-      bottom: 14px;
-      transform: rotate(180deg);
-    }
-
     .force-sidebar-logo {
-      aspect-ratio: 1 / 1;
-      display: grid;
-      place-items: center;
+      display: block;
       background: rgba(10,12,18,.58);
-      color: rgba(255,255,255,.28);
+      position: relative;
+      margin-top: -18%;
+      margin-bottom: 18%;
     }
 
     .force-sidebar-logo-mark {
-      width: 56%;
-      aspect-ratio: 1;
-      border: 1px dashed rgba(255,255,255,.2);
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      font-size: 12px;
-      letter-spacing: .16em;
-      text-indent: .16em;
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 0;
     }
 
-    .force-sidebar-logo-mark::after {
-      content: "";
-      display: none;
+    .force-sidebar-logo-mark img,
+    .force-sidebar-logo-mark svg {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .force-sidebar-card {
       min-height: 0;
       display: grid;
-      grid-template-rows: 48px minmax(180px, 1fr);
+      grid-template-rows: 48px auto;
       background: rgba(6,8,12,.62);
     }
 
@@ -189,6 +172,7 @@ layout: false
     .force-sidebar-card-body {
       position: relative;
       overflow: hidden;
+      aspect-ratio: 310 / 250;
       background: rgba(8,10,18,.92);
     }
 
@@ -204,20 +188,17 @@ layout: false
 
     .force-sidebar-card-media {
       position: absolute;
-      inset: 18px;
-      display: grid;
-      place-items: center;
-      border: 1px dashed rgba(255,255,255,.14);
-      border-radius: 8px;
-      color: rgba(255,255,255,.28);
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-indent: .12em;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .force-sidebar-card-media img,
     .force-sidebar-card-media svg {
-      display: none;
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .force-workspace {
@@ -495,7 +476,7 @@ layout: false
       --node-icon-active: var(--node-accent);
       --node-icon-locked: #303542;
       --node-bar-active-bg: var(--node-accent);
-      --node-bar-active-border: rgba(0,229,91,.6);
+      --node-bar-active-border: #000;
       position: absolute;
       z-index: 3;
       display: flex;
@@ -532,9 +513,33 @@ layout: false
       background: var(--node-accent, var(--node-bg));
     }
 
+    .force-node.has-vip-surface:not(.active-node) {
+      --node-bg: #dfe5e8;
+      --node-border: rgba(18,22,30,.34);
+      --node-frame-color: rgba(18,22,30,.34);
+      --node-text: #1a1f29;
+      --node-icon: #11151b;
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.72),
+        inset 0 0 0 2px rgba(0,0,0,.08);
+    }
+
+    .force-node.has-vip-surface:not(.active-node)::before {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.04)),
+        url("/factions/data/VIP_node.png");
+      background-size: 100% 100%, cover;
+      background-position: center;
+      opacity: .96;
+    }
+
     .force-node.is-active .force-node-icon,
     .force-node.active-node .force-node-icon {
       color: var(--node-icon-active);
+    }
+
+    .force-node.active-node .force-node-icon .is-svg {
+      color: #000;
     }
 
     .force-node.is-muted {
@@ -594,6 +599,19 @@ layout: false
       object-fit: contain;
     }
 
+    .force-node-icon .is-svg {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-color: currentColor;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+    }
+
     .force-node-icon-text {
       display: inline-flex;
       align-items: center;
@@ -616,9 +634,10 @@ layout: false
     .force-node-bar {
       width: var(--node-bar-width, 18px);
       height: var(--node-bar-height, 6px);
-      border: 1px solid var(--node-bar-active-border);
+      border: 1.5px solid var(--node-bar-active-border);
       background: var(--node-bar-active-bg);
       border-radius: 999px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.85);
     }
 
     .force-node-bar.is-active {
@@ -642,17 +661,21 @@ layout: false
     }
 
     .force-peak-switch {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 0;
-      padding: 0 240px 0 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      padding: 0;
+      flex-wrap: wrap;
     }
 
     .force-peak-pill {
+      width: 54px;
+      height: 54px;
       min-height: 54px;
-      border: 1px solid rgba(255,255,255,.06);
-      background: rgba(255,255,255,.05);
-      color: rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgb(50, 51, 59);
+      color: #99a0b3;
       font: inherit;
       font-weight: 700;
       cursor: pointer;
@@ -660,12 +683,15 @@ layout: false
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 999px;
+      flex: 0 0 54px;
+      box-shadow: inset 0 0 0 1px rgba(14,16,23,.88), inset 0 0 0 2px rgba(255,255,255,.035);
     }
 
     .force-peak-pill-media {
       width: 100%;
       height: 100%;
-      padding: 6px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -684,7 +710,7 @@ layout: false
     }
 
     .force-peak-pill.active {
-      background: #f1f2f5;
+      background: var(--peak-accent, var(--green));
       color: #10131a;
     }
 
@@ -763,7 +789,7 @@ layout: false
     .force-level-switch {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
-      gap: 6px;
+      gap: 0;
     }
 
     .force-level-pill {
@@ -774,6 +800,21 @@ layout: false
       font: inherit;
       font-weight: 700;
       cursor: pointer;
+      border-radius: 0;
+    }
+
+    .force-level-pill + .force-level-pill {
+      margin-left: -1px;
+    }
+
+    .force-level-pill:first-child {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    .force-level-pill:last-child {
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
     }
 
     .force-level-pill.active {
@@ -991,7 +1032,6 @@ layout: false
       }
 
       .force-peak-switch {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
         padding: 0;
         gap: 8px;
       }
@@ -1007,7 +1047,7 @@ layout: false
       }
 
       .force-sidebar-card {
-        grid-template-rows: 36px minmax(96px, 1fr);
+        grid-template-rows: 36px auto;
       }
 
       .force-sidebar-card-head {
@@ -1016,8 +1056,7 @@ layout: false
       }
 
       .force-sidebar-card-media {
-        inset: 10px;
-        font-size: 11px;
+        inset: 0;
       }
 
       .force-workspace {
@@ -1062,7 +1101,7 @@ layout: false
       }
 
       .force-sidebar-card {
-        grid-template-rows: 28px minmax(84px, 1fr);
+        grid-template-rows: 28px auto;
       }
 
       .force-sidebar-card-head {
@@ -1071,8 +1110,7 @@ layout: false
       }
 
       .force-sidebar-card-media {
-        inset: 8px;
-        font-size: 10px;
+        inset: 0;
       }
 
       .force-workspace {
@@ -1120,13 +1158,15 @@ layout: false
       }
 
       .force-peak-switch {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 6px;
         padding: 0;
       }
 
       .force-peak-pill {
+        width: 46px;
+        height: 46px;
         min-height: 46px;
+        flex-basis: 46px;
       }
 
       .force-progress-copy {
@@ -1197,6 +1237,7 @@ layout: false
       factionId: null,
       nodeId: null,
       level: null,
+      detailMode: 'node',
       peakIndex: 0,
       loadSeq: 0
     };
@@ -1250,6 +1291,13 @@ layout: false
         title: '巅峰升级 ' + label,
         icon: ''
       }));
+    }
+
+    function getNodeSurfacePreset(node) {
+      if (typeof node?.surfacePreset === 'string' && node.surfacePreset.trim()) {
+        return node.surfacePreset.trim().toLowerCase();
+      }
+      return null;
     }
 
     function getGridNodeSize(node, grid) {
@@ -1597,6 +1645,10 @@ layout: false
         normalized.agentIcon = normalized.iconImage || normalized.icon || null;
       }
 
+      if (!normalized.panelImage) {
+        normalized.panelImage = normalized.image || normalized.iconImage || normalized.icon || null;
+      }
+
       if (normalized.themecolor) {
         normalized.nodeTheme = mergeDeep({
           accent: normalized.themecolor,
@@ -1688,6 +1740,21 @@ layout: false
         return prototypeFaction.peakButtons;
       }
       return createDefaultPeakButtons();
+    }
+
+    function getPeakNodes(faction) {
+      if (Array.isArray(faction?.peakNodes) && faction.peakNodes.length) return faction.peakNodes;
+      const prototypeFaction = getPrototypeFaction();
+      if (Array.isArray(prototypeFaction?.peakNodes) && prototypeFaction.peakNodes.length) {
+        return prototypeFaction.peakNodes;
+      }
+      return [];
+    }
+
+    function getPeakNode(faction) {
+      const peakNodes = getPeakNodes(faction);
+      if (!peakNodes.length) return null;
+      return peakNodes[clampPeakIndex(faction, state.peakIndex)] || peakNodes[0] || null;
     }
 
     function getNode(faction) {
@@ -1848,6 +1915,13 @@ layout: false
         return '<span class="force-node-icon-text">' + node.iconText + '</span>';
       }
       const icon = node?.iconImage || node?.icon;
+      if (isAssetPath(icon)) {
+        if (/\.svg(?:[?#]|$)/i.test(icon)) {
+          const safeLabel = node?.title || icon || 'asset';
+          return '<span class="is-svg" role="img" aria-label="' + safeLabel + '" style="-webkit-mask-image:url(' + icon + ');mask-image:url(' + icon + ');"></span>';
+        }
+        return '<img src="' + icon + '" alt="' + (node?.title || icon || 'asset') + '">';
+      }
       return renderAssetIcon(icon, node?.title, icon);
     }
 
@@ -1863,11 +1937,11 @@ layout: false
         '--node-border': colors.border,
         '--node-frame-color': colors.frameBorder || colors.border,
         '--node-text': colors.text,
-        '--node-icon': colors.icon,
+        '--node-icon': colors.icon || faction?.themecolor,
         '--node-icon-active': colors.iconActive || accent,
         '--node-icon-locked': colors.iconLocked,
         '--node-bar-active-bg': colors.barActiveBg || accent,
-        '--node-bar-active-border': colors.barActiveBorder || accent
+        '--node-bar-active-border': colors.barActiveBorder || '#000'
       };
 
       return Object.entries(styleMap)
@@ -1888,8 +1962,8 @@ layout: false
       const frameReserve = frameStep * Math.max(0, levelCount - 1);
       const contentMinSide = Math.max(1, minSide - (frameReserve * 2));
       const contentWidth = Math.max(1, (node.width || 0) - (frameReserve * 2));
-      const iconSize = clampValue(contentMinSide * 0.2, 20, 50);
-      const iconFontSize = clampValue(contentMinSide * 0.2, 20, 42);
+      const iconSize = clampValue(minSide * 0.4, 20, 50);
+      const iconFontSize = clampValue(minSide * 0.2, 20, 42);
       const barWidth = clampValue(contentWidth * 0.14, 11, 22);
       const barHeight = clampValue(minSide * 0.038, 4, 8);
       const badgeFontSize = clampValue(contentMinSide * 0.068, 10, 13);
@@ -1939,17 +2013,15 @@ layout: false
       ].join('');
     }
 
-    function renderPeakButtonVisual(button) {
-      if (isAssetPath(button?.icon)) {
-        return '<img src="' + button.icon + '" alt="' + (button.title || button.label || 'peak') + '">';
-      }
-      return '<span>' + (button?.label || '') + '</span>';
+    function renderPeakButtonVisual(button, index) {
+      const romanLabels = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+      return '<span>' + (romanLabels[index] || String(index + 1)) + '</span>';
     }
 
     function renderPeakButton(button, index, isActive) {
       return [
         '<button class="force-peak-pill' + (isActive ? ' active' : '') + '" type="button" data-peak-index="' + index + '" title="' + (button?.title || button?.label || '') + '">',
-        '<span class="force-peak-pill-media">' + renderPeakButtonVisual(button) + '</span>',
+        '<span class="force-peak-pill-media">' + renderPeakButtonVisual(button, index) + '</span>',
         '</button>'
       ].join('');
     }
@@ -1957,6 +2029,7 @@ layout: false
     function setStateForFaction(faction) {
       if (!faction) return;
       state.factionId = faction.id;
+      state.detailMode = 'node';
       state.peakIndex = clampPeakIndex(faction, state.peakIndex);
       const node = getNode(faction);
       state.nodeId = node?.id || null;
@@ -2013,23 +2086,43 @@ layout: false
       const decorators = Array.isArray(layout?.decorators) ? layout.decorators : getFactionDecorators(faction);
       const node = getNode(faction);
       if (node && state.nodeId !== node.id) state.nodeId = node.id;
+      state.peakIndex = clampPeakIndex(faction, state.peakIndex);
+      const peakNodes = getPeakNodes(faction);
+      const peakButtons = peakNodes.length ? peakNodes : getPeakButtons(faction);
+      const peakNode = getPeakNode(faction);
       const levelData = getLevelData(node);
       state.level = levelData?.level || 1;
 
-      const materials = Array.isArray(levelData?.materials) ? levelData.materials : [];
-      const effects = Array.isArray(levelData?.effects) ? levelData.effects : [];
+      const isPeakDetail = state.detailMode === 'peak' && Boolean(peakNode);
+      const detailTitle = isPeakDetail ? (peakNode?.title || 'PEAK') : (levelData?.title || node?.title || 'NODE');
+      const detailMeta = isPeakDetail ? (peakNode?.describe || '') : (levelData?.describe || node?.groupLabel || '');
+      const detailSummary = isPeakDetail ? (peakNode?.summary || '') : (levelData?.summary || '');
+      const detailUnlockName = isPeakDetail ? (peakNode?.unlockName || '') : (levelData?.unlockName || '');
+      const detailUnlockNums = isPeakDetail ? (peakNode?.unlockNums || '') : (levelData?.unlockNums || '');
+      const unlockIcons = isPeakDetail
+        ? (Array.isArray(peakNode?.unlockIcon) ? peakNode.unlockIcon : (peakNode?.unlockIcon ? [peakNode.unlockIcon] : []))
+        : (levelData?.unlockIcon || []);
+      const materials = isPeakDetail
+        ? (Array.isArray(peakNode?.materials) ? peakNode.materials : [])
+        : (Array.isArray(levelData?.materials) ? levelData.materials : []);
+      const effects = isPeakDetail
+        ? (Array.isArray(peakNode?.effects) ? peakNode.effects : [])
+        : (Array.isArray(levelData?.effects) ? levelData.effects : []);
       const resources = Array.isArray(faction.resources) ? faction.resources : [];
-      const peakButtons = getPeakButtons(faction);
-      const unlockIcons = levelData?.unlockIcon || [];
-      state.peakIndex = clampPeakIndex(faction, state.peakIndex);
+      const unlockConditionsLabel = '解锁条件';
+      const unlockHeadingMarkup = (detailUnlockName ? ('<span class="force-detail-unlock-name">' + detailUnlockName + '</span>') : '') + renderUnlockIcons(unlockIcons);
+      const unlockStatsMarkup = (detailUnlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + detailUnlockNums + '</strong></div>' : '') + (isPeakDetail && peakNode?.unlockConditions ? '<div class="force-stat-row"><span>' + unlockConditionsLabel + '</span><strong>' + peakNode.unlockConditions + '</strong></div>' : '');
+      const unlockBlockMarkup = (unlockHeadingMarkup || unlockStatsMarkup) ? ('<div class="force-detail-block"><h3>' + unlockHeadingMarkup + '</h3><div class="force-stat-list">' + unlockStatsMarkup + '</div></div>') : '';
+      const materialsTitle = '材料';
+      const materialsBlockMarkup = materials.length ? ('<div class="force-detail-block"><h3>' + materialsTitle + '</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-material-row"><span class="force-material-visual">' + renderMaterialIcon(item.materialIcon) + '</span><span class="force-material-name">' + (item.materialName || item.label || '') + '</span><strong>' + (item.materialNums || item.value || '') + '</strong></div>').join('') + '</div></div>') : '';
 
       app.innerHTML = [
         '<div class="force-screen">',
         '<aside class="force-sidebar">',
-        '<div class="force-sidebar-block force-sidebar-logo"><div class="force-sidebar-logo-mark">LOGO</div></div>',
+        '<div class="force-sidebar-block force-sidebar-logo"><div class="force-sidebar-logo-mark">' + (faction?.panelImage ? renderAssetIcon(faction.panelImage, faction.title || faction.id, faction.title || faction.id) : '') + '</div></div>',
         '<div class="force-sidebar-block force-sidebar-card">',
-        '<div class="force-sidebar-card-head">ONI</div>',
-        '<div class="force-sidebar-card-body"><div class="force-sidebar-card-media">IMAGE PLACEHOLDER</div></div>',
+        '<div class="force-sidebar-card-head">' + (faction?.agent || '') + '</div>',
+        '<div class="force-sidebar-card-body"><div class="force-sidebar-card-media">' + (faction?.agentIcon ? renderAssetIcon(faction.agentIcon, faction.agent || faction.title || faction.id, faction.agent || faction.title || faction.id) : '') + '</div></div>',
         '</div>',
         '</aside>',
         '<section class="force-workspace">',
@@ -2050,7 +2143,8 @@ layout: false
         nodes.map(item => {
           const classes = ['force-node'];
           if (item.status) classes.push('is-' + item.status);
-          if (item.id === node?.id) classes.push('active-node');
+          if (getNodeSurfacePreset(item) === 'vip') classes.push('has-vip-surface');
+          if (state.detailMode === 'node' && item.id === node?.id) classes.push('active-node');
           return [
             '<button class="' + classes.join(' ') + '" type="button" data-layout-kind="node" data-base-x="' + item.x + '" data-base-width="' + item.width + '" data-node-id="' + item.id + '" style="' + getNodeInlineStyle(faction, item) + '">',
             renderNodeFrames(item),
@@ -2061,22 +2155,27 @@ layout: false
           ].join('');
         }).join(''),
         '</div></div></div></div>',
-        '<div class="force-map-footer">',
-        '<div class="force-peak-switch">' + peakButtons.map((item, index) => renderPeakButton(item, index, index === state.peakIndex)).join('') + '</div>',
+        '<div class="force-map-footer" style="--peak-accent:' + (faction?.themecolor || 'var(--green)') + ';">',
+        '<div class="force-peak-switch">' + peakButtons.map((item, index) => renderPeakButton(item, index, state.detailMode === 'peak' && index === state.peakIndex)).join('') + '</div>',
         '<p class="force-progress-copy">' + (faction.progressText || '') + '</p>',
         '</div>',
         '</section>',
         '<aside class="force-detail-panel">',
         '<div class="force-detail-copy">',
-        '<p class="force-detail-kicker">' + (node?.kicker || faction.title) + '</p>',
-        '<h2>' + (levelData?.title || node?.title || 'NODE') + '</h2>',
-        '<p class="force-detail-meta">' + (levelData?.describe || node?.groupLabel || '') + '</p>',
-        '<div class="force-level-switch">' + (node?.levels || []).map((_, index) => {
+        '<p class="force-detail-kicker">' + (isPeakDetail ? ('巅峰节点 | ' + (peakNode?.id || ('peak_' + (state.peakIndex + 1)))) : (node?.kicker || faction.title)) + '</p>',
+        '<h2>' + detailTitle + '</h2>',
+        '<p class="force-detail-meta">' + detailMeta + '</p>',
+        '<div class="force-level-switch">' + (isPeakDetail
+          ? peakButtons.map((_, index) => {
+              const level = index + 1;
+              return '<button class="force-level-pill' + (index === state.peakIndex ? ' active' : '') + '" type="button" data-peak-index="' + index + '">' + level + '</button>';
+            }).join('')
+          : (node?.levels || []).map((_, index) => {
           const level = index + 1;
           return '<button class="force-level-pill' + (level === state.level ? ' active' : '') + '" type="button" data-level="' + level + '">' + level + '</button>';
-        }).join('') + '</div>',
-        levelData?.summary ? '<p class="force-detail-description">' + levelData.summary + '</p>' : '',
-        '<div class="force-detail-block"><h3><span class="force-detail-unlock-name">' + (levelData?.unlockName || 'UNLOCK') + '</span>' + renderUnlockIcons(unlockIcons) + '</h3><div class="force-stat-list">' + (levelData?.unlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + levelData.unlockNums + '</strong></div>' : '') + '</div></div>',
+        }).join('')) + '</div>',
+        detailSummary ? '<p class="force-detail-description">' + detailSummary + '</p>' : '',
+        '<div class="force-detail-block"><h3><span class="force-detail-unlock-name">' + detailUnlockName + '</span>' + renderUnlockIcons(unlockIcons) + '</h3><div class="force-stat-list">' + (detailUnlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + detailUnlockNums + '</strong></div>' : '') + (isPeakDetail && peakNode?.unlockConditions ? '<div class="force-stat-row"><span>解锁条件</span><strong>' + peakNode.unlockConditions + '</strong></div>' : '') + '</div></div>',
         '<div class="force-detail-block"><h3>材料</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-material-row"><span class="force-material-visual">' + renderMaterialIcon(item.materialIcon) + '</span><span class="force-material-name">' + (item.materialName || item.label || '') + '</span><strong>' + (item.materialNums || item.value || '') + '</strong></div>').join('') + '</div></div>',
         '</div>',
         '<div class="force-detail-footer">' + resources.map(item => '<div class="force-resource-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div>',
@@ -2096,6 +2195,7 @@ layout: false
 
       app.querySelectorAll('[data-peak-index]').forEach(button => {
         button.addEventListener('click', () => {
+          state.detailMode = 'peak';
           state.peakIndex = Number.parseInt(button.dataset.peakIndex, 10) || 0;
           render();
         });
@@ -2103,6 +2203,7 @@ layout: false
 
       app.querySelectorAll('[data-node-id]').forEach(button => {
         button.addEventListener('click', () => {
+          state.detailMode = 'node';
           state.nodeId = button.dataset.nodeId;
           state.level = null;
           render();
@@ -2115,6 +2216,23 @@ layout: false
           render();
         });
       });
+
+      const detailBlocks = Array.from(app.querySelectorAll('.force-detail-panel .force-detail-block'));
+      if (detailBlocks.length) {
+        const unlockBlock = detailBlocks[0] || null;
+        const materialsBlock = detailBlocks[1] || null;
+
+        if (unlockBlock) {
+          const unlockName = unlockBlock.querySelector('.force-detail-unlock-name');
+          if (unlockName && !unlockName.textContent.trim()) {
+            unlockName.remove();
+          }
+        }
+
+        if (isPeakDetail && materialsBlock && !materials.length) {
+          materialsBlock.remove();
+        }
+      }
 
       requestAnimationFrame(applyMapFit);
     }
