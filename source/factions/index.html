@@ -166,7 +166,7 @@ layout: false
       font-weight: 700;
       letter-spacing: .04em;
       color: #04120a;
-      background: linear-gradient(180deg, rgba(0,255,110,.96), rgba(0,230,101,.9));
+      background: linear-gradient(180deg, var(--agent-accent, rgba(0,255,110,.96)), var(--agent-accent, rgba(0,230,101,.9)));
     }
 
     .force-sidebar-card-body {
@@ -1650,11 +1650,11 @@ layout: false
       }
 
       if (normalized.themecolor) {
-        normalized.nodeTheme = mergeDeep({
+        normalized.nodeTheme = mergeDeep(normalized.nodeTheme || {}, {
           accent: normalized.themecolor,
           barActiveBg: normalized.themecolor,
           barActiveBorder: normalized.themecolor
-        }, normalized.nodeTheme || {});
+        });
       }
 
       if (!Array.isArray(normalized.nodes) || !normalized.nodes.length) {
@@ -2121,7 +2121,7 @@ layout: false
         '<aside class="force-sidebar">',
         '<div class="force-sidebar-block force-sidebar-logo"><div class="force-sidebar-logo-mark">' + (faction?.panelImage ? renderAssetIcon(faction.panelImage, faction.title || faction.id, faction.title || faction.id) : '') + '</div></div>',
         '<div class="force-sidebar-block force-sidebar-card">',
-        '<div class="force-sidebar-card-head">' + (faction?.agent || '') + '</div>',
+        '<div class="force-sidebar-card-head" style="--agent-accent:' + (faction?.themecolor || 'rgba(0,255,110,.96)') + ';">' + (faction?.agent || '') + '</div>',
         '<div class="force-sidebar-card-body"><div class="force-sidebar-card-media">' + (faction?.agentIcon ? renderAssetIcon(faction.agentIcon, faction.agent || faction.title || faction.id, faction.agent || faction.title || faction.id) : '') + '</div></div>',
         '</div>',
         '</aside>',

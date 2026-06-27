@@ -609,7 +609,7 @@
       "col": 1,
       "size": "small",
       "surfacePreset":"vip",
-      "iconImage": "/factions/data/svgs/credit_vault.svg",
+      "iconImage": "/factions/data/svgs/cyac.svg",
       "levels": [
         {
           "levelId": "level_1",

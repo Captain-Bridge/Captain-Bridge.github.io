@@ -474,6 +474,10 @@
                   "title": "外勤申请：C · 宋",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/field_application_C_Song.md",
                   "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/field_application_C_Song.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "传染病",
                     "新卡斯卡迪亚",
@@ -507,9 +511,13 @@
               "logs": [
                 {
                   "id": "field_application_C_Song_1",
-                  "title": "外勤申请：C · 宋",
+                  "title": "外勤记录：C · 宋",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/field_application_C_Song_1.md",
                   "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/field_application_C_Song_1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "传染病",
                     "德莱厄斯",
