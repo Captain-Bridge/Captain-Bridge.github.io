@@ -2140,6 +2140,7 @@ function entriesView() {
                     const defaultVariant = folder ? '' : (item.hasVariantA ? 'a' : 'b');
                     const previewBodyFile = !folder ? getPreviewBodyFile(item) : null;
                     const logCount = !folder && item.hasVariantA ? getLogs(item).length : 0;
+                    const hasAudioLog = !folder && item.hasVariantA ? getLogs(item).some(log => Boolean(log.audio)) : false;
 		                return `
 		                  <div
 		                    class="entry-card"
@@ -2153,10 +2154,13 @@ function entriesView() {
 		                  >
                         ${logCount > 0 ? `
                           <span class="entry-log-badge" aria-label="日志数量 ${logCount}/${logCount}">
-                            <span class="entry-log-badge-icon">
-                              <span class="lore-mask-icon green" aria-hidden="true"></span>
-                            </span>
+                            <span class="entry-log-badge-icon" aria-hidden="true"></span>
                             <span class="entry-log-badge-count">${logCount}/${logCount}</span>
+                            ${hasAudioLog ? `
+                              <span class="entry-log-badge-audio" aria-label="存在音频">
+                                <span class="entry-log-badge-audio-icon" aria-hidden="true"></span>
+                              </span>
+                            ` : ''}
                           </span>
                         ` : ''}
 		                    <div class="card-head">
@@ -2290,7 +2294,14 @@ async function detailView() {
                 data-path="${pathToString(state.nodePath)}"
                 data-log-id="${item.id}"
               >
-                <span>${item.title}</span>
+                <span class="detail-rail-log-title">
+                  <span>${item.title}</span>
+                  ${item.audio ? `
+                    <span class="detail-rail-log-audio" aria-label="存在音频">
+                      <span class="detail-rail-log-audio-icon" aria-hidden="true"></span>
+                    </span>
+                  ` : ''}
+                </span>
                 <span>${item.count || item.status || ''}</span>
               </button>
             `).join('')}
