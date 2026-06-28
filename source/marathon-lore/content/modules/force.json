@@ -570,6 +570,10 @@
                   "title": "广播：卡鲁索",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/broadcast_caruso.md",
                   "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/broadcast_caruso.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "L · 卡鲁索",
                     "传染病",
@@ -621,6 +625,10 @@
                   "title": "音景",
                   "bodyFile": "/marathon-lore/content/docs/forces/nv/contract/soundscape.md",
                   "image": "/marathon-lore/content/docs/forces/nv/contract/nv_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/broadcast_caruso.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常",
                     "认知风险",

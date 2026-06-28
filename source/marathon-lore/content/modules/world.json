@@ -280,6 +280,10 @@
                   "title": "市民大会录像",
                   "bodyFile": "/marathon-lore/content/docs/world/perimeter/collection/vacuum_tree/log1.md",
                   "image": "/marathon-lore/content/docs/world/perimeter/collection/vacuum_tree/vacuum_tree_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/vacuum_tree_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "植物",
                     "新卡斯卡迪亚",
@@ -316,6 +320,10 @@
                   "title": "录音：悲伤干预",
                   "bodyFile": "/marathon-lore/content/docs/world/perimeter/collection/vacuum_tree/log4.md",
                   "image": "/marathon-lore/content/docs/world/perimeter/collection/vacuum_tree/vacuum_tree_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/vacuum_tree_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "植物",
                     "乔伊",
@@ -454,6 +462,10 @@
                   "title": "前期勘测工作",
                   "bodyFile": "/marathon-lore/content/docs/world/perimeter/collection/UAV_carrier/log5.md",
                   "image": "/marathon-lore/content/docs/world/perimeter/collection/UAV_carrier/UAV_carrier_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UAV_carrier_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "动物",
                     "T · 卢特罗",
@@ -572,6 +584,10 @@
                   "title": "殖民者欢迎包",
                   "bodyFile": "/marathon-lore/content/docs/world/perimeter/collection/cheese_burger/log1.md",
                   "image": "/marathon-lore/content/docs/world/perimeter/collection/cheese_burger/cheese_burger_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/cheese_burger_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "G · 莫瑞恩",
                     "纽卡洛里",
@@ -602,6 +618,10 @@
                   "title": "食品生产",
                   "bodyFile": "/marathon-lore/content/docs/world/perimeter/collection/cheese_burger/log4.md",
                   "image": "/marathon-lore/content/docs/world/perimeter/collection/cheese_burger/cheese_burger_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/cheese_burger_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "新卡斯卡迪亚",
                     "纽卡洛里",
@@ -640,6 +660,10 @@
                   "title": "赛博艾克米面试",
                   "bodyFile": "/marathon-lore/content/docs/world/perimeter/collection/evidence_files/log1.md",
                   "image": "/marathon-lore/content/docs/world/perimeter/collection/evidence_files/evidence_files_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/evidence_files_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "赛博艾克米",
                     "米达",
@@ -699,6 +723,10 @@
                   "title": "董事会会议录音",
                   "bodyFile": "/marathon-lore/content/docs/world/perimeter/collection/evidence_files/log6.md",
                   "image": "/marathon-lore/content/docs/world/perimeter/collection/evidence_files/evidence_files_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/evidence_files_log6.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "纽卡洛里"
                   ]
@@ -1053,6 +1081,10 @@
                   "title": "外围区域巡查通讯",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/B_Anomaly/log2.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/B_Anomaly/B_Anomaly_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/B_Anomaly_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点"
                   ]
@@ -1062,6 +1094,10 @@
                   "title": "UESC讯问：阿尔瓦 · T",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/B_Anomaly/log3.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/B_Anomaly/B_Anomaly_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/B_Anomaly_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "传染病",
@@ -1127,6 +1163,10 @@
                   "title": "虱虫相关事故",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/louse_milk/log3.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/louse_milk/louse_milk_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/louse_milk_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "动物",
                     "T · 卢特罗",
@@ -1139,6 +1179,10 @@
                   "title": "虱虫奶教育",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/louse_milk/log4.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/louse_milk/louse_milk_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/louse_milk_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "动物",
                     "M · 哈桑",
@@ -1284,6 +1328,10 @@
                   "title": "录音：幽灵猫",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/bio_pet_prototype/log5.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/bio_pet_prototype/bio_pet_prototype_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/bio_pet_prototype_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "门",
                     "费利尼",
@@ -1313,6 +1361,10 @@
                   "title": "末日后日志",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/hermit_rations/log1.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/hermit_rations/hermit_rations_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/hermit_rations_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "L · 卡鲁索",
                     "贾斯珀",
@@ -1497,6 +1549,10 @@
                   "title": "情感支持：问候",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/log1.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/emo_support_toy_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/emo_support_toy_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "乔伊",
                     "新卡斯卡迪亚"
@@ -1507,6 +1563,10 @@
                   "title": "情感支持：鼓励",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/log2.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/emo_support_toy_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/emo_support_toy_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "乔伊",
                     "天仓五IV"
@@ -1517,6 +1577,10 @@
                   "title": "情感支持：庆祝",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/log3.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/emo_support_toy_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/emo_support_toy_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "乔伊"
                   ]
@@ -1526,6 +1590,10 @@
                   "title": "情感支持：安慰",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/log4.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/emo_support_toy_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/emo_support_toy_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "乔伊"
                   ]
@@ -1535,6 +1603,10 @@
                   "title": "情感支持：反思",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/log5.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/emo_support_toy/emo_support_toy_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/emo_support_toy_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "乔伊"
                   ]
@@ -1976,6 +2048,10 @@
                   "title": "行为分析",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/sklk_research/log2.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/sklk_research/sklk_research_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/sklk_research_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "乔伊",
                     "T·卢特罗",
@@ -1999,6 +2075,10 @@
                   "title": "斯科拉克鸟模仿",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/sklk_research/log4.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/sklk_research/sklk_research_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/sklk_research_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "M · 哈桑",
                     "T · 卢特罗",
@@ -2011,6 +2091,10 @@
                   "title": "未授权访问请求",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/sklk_research/log5.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/sklk_research/sklk_research_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/sklk_research_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "德莱厄斯",
                     "T · 卢特罗",
@@ -2076,6 +2160,10 @@
                   "title": "消息审查",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/event_refactoring_guide/log4.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/event_refactoring_guide/event_refactoring_guide_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/event_refactoring_guide_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "M · 哈桑",
                     "乔伊",
@@ -2197,6 +2285,10 @@
                   "title": "录音1",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/log1.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/V_record_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/V_record_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "V · 科尔"
@@ -2207,6 +2299,10 @@
                   "title": "录音2",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/log2.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/V_record_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/V_record_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "V · 科尔"
@@ -2217,6 +2313,10 @@
                   "title": "录音3",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/log3.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/V_record_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/V_record_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "V · 科尔"
@@ -2227,6 +2327,10 @@
                   "title": "录音4",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/log4.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/V_record_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/V_record_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "V · 科尔"
@@ -2237,6 +2341,10 @@
                   "title": "录音5",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/log5.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/V_record/V_record_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/V_record_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "V · 科尔"
@@ -2347,6 +2455,10 @@
                   "title": "广告",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/cyac_runner_service/log1.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/cyac_runner_service/cyac_runner_service_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/cyac_runner_service_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "赛博艾克米",
                     "oni",
@@ -2359,6 +2471,10 @@
                   "title": "接受通知",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/cyac_runner_service/log2.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/cyac_runner_service/cyac_runner_service_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/cyac_runner_service_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "赛博艾克米",
                     "oni",
@@ -2442,6 +2558,10 @@
                   "title": "消息，第1部分",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/UESC_service/log2.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/UESC_service/UESC_service_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UESC_service_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "T · 凯莱蒂",
                     "奥瑞恩",
@@ -2474,6 +2594,10 @@
                   "title": "消息，第2部分",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/UESC_service/log4.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/UESC_service/UESC_service_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UESC_service_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "T · 凯莱蒂",
                     "奥瑞恩",
@@ -2487,6 +2611,10 @@
                   "title": "公开状态报告",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh_night/collection/UESC_service/log5.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh_night/collection/UESC_service/UESC_service_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UESC_service_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "T · 凯莱蒂",
                     "奥瑞恩",
@@ -2968,6 +3096,10 @@
                   "title": "个人日志：里德将军",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/log1.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/record_general_reed_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/record_general_reed_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "新卡斯卡迪亚",
                     "D · 里德",
@@ -2980,6 +3112,10 @@
                   "title": "个人日志：里德将军",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/log2.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/record_general_reed_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/record_general_reed_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "低温休眠",
                     "新卡斯卡迪亚",
@@ -2994,6 +3130,10 @@
                   "title": "个人日志：里德将军",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/log3.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/record_general_reed_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/record_general_reed_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "地球",
                     "M · 哈桑",
@@ -3008,6 +3148,10 @@
                   "title": "个人日志：里德将军",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/log4.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/record_general_reed_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/record_general_reed_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "传染病",
                     "加布里埃尔",
@@ -3022,6 +3166,10 @@
                   "title": "个人日志：里德将军",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/log5.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/record_general_reed/record_general_reed_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/record_general_reed_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "新卡斯卡迪亚",
                     "D · 里德",
@@ -3125,6 +3273,10 @@
                   "title": "奇异布道",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/folk_stories/log1.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/folk_stories/folk_stories_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/folk_stories_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "邪教",
                     "灵性"
@@ -3200,6 +3352,10 @@
                   "title": "欢迎信息：施特劳斯",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/welcome_pack/log2.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/welcome_pack/welcome_pack_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/welcome_pack_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "低温休眠",
                     "新卡斯卡迪亚",
@@ -3226,6 +3382,10 @@
                   "title": "欢迎信息：里德",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/welcome_pack/log4.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/welcome_pack/welcome_pack_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/welcome_pack_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "低温休眠",
                     "新卡斯卡迪亚",
@@ -3318,6 +3478,10 @@
                   "title": "安全报告：矢原中尉",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/col_security_report/log5.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/col_security_report/col_security_report_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/col_security_report_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "人工智能",
                     "亚瑟",
@@ -3469,6 +3633,10 @@
                   "title": "叛乱",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/truth_worm/log2.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/truth_worm/truth_worm_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/truth_worm_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "地球",
                     "反叛",
@@ -3494,6 +3662,10 @@
                   "title": "宣言",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/truth_worm/log4.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/truth_worm/truth_worm_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/truth_worm_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "地球",
                     "反叛",
@@ -3552,6 +3724,10 @@
                   "title": "未授权民用监控",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/monitor_device/log2.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/monitor_device/monitor_device_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/monitor_device_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "违禁品",
                     "新卡斯卡迪亚",
@@ -3565,6 +3741,10 @@
                   "title": "激活错误：乔伊",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/monitor_device/log3.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/monitor_device/monitor_device_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/monitor_device_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "M · 哈桑",
                     "乔伊",
@@ -3576,6 +3756,10 @@
                   "title": "净化协议",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/monitor_device/log4.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/monitor_device/monitor_device_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/monitor_device_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "加布里埃尔",
                     "隔离",
@@ -3616,6 +3800,10 @@
                   "title": "个人日志：哈桑",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/log1.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/share_nightmare_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/share_nightmare_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "L · 卡鲁索",
                     "M · 哈桑",
@@ -3631,6 +3819,10 @@
                   "title": "健康疗程：里德",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/log2.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/share_nightmare_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/share_nightmare_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "M · 哈桑",
                     "噩梦",
@@ -3642,6 +3834,10 @@
                   "title": "噩梦记录",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/log3.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/share_nightmare_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/share_nightmare_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "M · 哈桑",
                     "乔伊",
@@ -3653,6 +3849,10 @@
                   "title": "评估：乔伊",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/log4.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/share_nightmare/share_nightmare_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/share_nightmare_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "人工智能",
                     "M · 哈桑",
@@ -3695,6 +3895,10 @@
                   "title": "公告：安全事故",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/log1.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/archive_announcement_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/archive_announcement_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "低温休眠",
                     "新卡斯卡迪亚",
@@ -3706,6 +3910,10 @@
                   "title": "公告：公共卫生",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/log2.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/archive_announcement_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/archive_announcement_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "传染病",
                     "加布里埃尔",
@@ -3717,6 +3925,10 @@
                   "title": "公告：殖民地节日",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/log3.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/archive_announcement_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/archive_announcement_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "新卡斯卡迪亚"
                   ]
@@ -3726,6 +3938,10 @@
                   "title": "公告：未授权",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/log4.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/archive_announcement/archive_announcement_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/archive_announcement_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "噩梦",
                     "prd",
