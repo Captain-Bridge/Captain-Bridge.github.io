@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marathon.uesc.top/sitemap.xml

@@ -30,6 +30,9 @@ i18n_dir: :lang
 skip_render:
   - index.html
   - about/index.html
+  - factions/**/*.json
+  - factions/README.md
+  - marathon-lore/assets/**/*.json
   - marathon-lore/content/**
 
 # Writing
@@ -87,3 +90,6 @@ ignore:
 
 # Theme
 theme: next
+
+sitemap:
+  path: sitemap.xml
