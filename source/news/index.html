@@ -1,0 +1,116 @@
+---
+title: 最新消息
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>最新消息</title>
+  <meta name="description" content="按分页展示 Bungie Marathon 新闻归档。站内界面保持中文，详情页支持仅切换正文内容的中英文阅读。">
+  <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <link rel="stylesheet" href="/news/news.css">
+</head>
+<body>
+  <video class="page-bg-video" autoplay muted loop playsinline preload="metadata" poster="/images/marathon-home-full-poster.jpg" aria-hidden="true">
+    <source src="/images/marathon-home-full-bg.mp4" type="video/mp4">
+  </video>
+
+  <main class="news-shell">
+    <aside class="news-sidebar">
+      <section class="brand">
+        <div class="brand-mark">
+          <img src="/marathon-lore/assets/images/icons/marathon-brand-mark.webp" alt="Marathon">
+        </div>
+        <p class="brand-title">NEWS</p>
+        <div class="brand-copy">
+          <strong>信号接收</strong>
+        </div>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="站内导航">
+        <a class="nav-link" href="/">首页</a>
+        <a class="nav-link active" href="/news/">最新消息</a>
+        <a class="nav-link" href="/marathon-lore/">Lore</a>
+        <a class="nav-link" href="/factions/">Factions</a>
+        <a class="nav-link" href="/about/">关于</a>
+      </nav>
+
+      <section class="diag-box" aria-label="归档状态">
+        <p>[NEWS-NODE]</p>
+        <p>来源: Bungie Marathon News</p>
+        <p data-page-state>第 1 页</p>
+      </section>
+
+      <section class="meta-box">
+        <span class="meta-label">&#26465;&#30446;&#25968;&#37327;</span>
+        <span class="meta-value" data-total-count>Loading...</span>
+        <span class="meta-label">&#26368;&#36817;&#19968;&#27425;&#26356;&#26032;</span>
+        <span class="meta-value" data-last-updated>Loading...</span>
+        <a class="meta-link" href="/images/qq.png" target="_blank" rel="noreferrer">&#28857;&#25105;&#20652;&#26356;</a>
+      </section>
+    </aside>
+
+    <section class="news-main">
+      <header class="topbar">
+        <div class="topbar-group">
+          <span class="chip primary">THIS WEEK AT MARATHON</span>
+        </div>
+        <div class="topbar-group">
+          <a class="chip" href="https://www.bungie.net/7/en/News/Marathon" target="_blank" rel="noreferrer">bungie.net</a>
+        </div>
+      </header>
+
+      <section class="hero-panel">
+        <span class="hero-kicker">归档中继</span>
+        <div class="hero-copy">
+          <h1 data-hero-title>正在载入新闻归档...</h1>
+          <p data-hero-description>本页将按分页展示全部 Marathon 新闻。第一时间以DeepSeek翻译为主，当bungie发出官方中文稿后会同步更新。</p>
+        </div>
+      </section>
+
+      <section class="feature-panel">
+        <div class="section-head">
+          <div>
+            <h2>最新信号</h2>
+          </div>
+        </div>
+        <div class="feature-strip feature-live" data-feature>
+          <div class="feature-copy">
+            <span class="article-kicker">载入中</span>
+            <h2>正在准备最新新闻...</h2>
+            <p>归档内容加载中。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-panel">
+        <div class="section-head">
+          <div>
+            <h2>新闻列表</h2>
+          </div>
+        </div>
+
+        <div class="news-grid" data-news-grid aria-label="Marathon 新闻归档"></div>
+
+        <div class="empty-state" data-empty-state hidden>
+          <strong>当前没有可显示的新闻条目。</strong>
+          <p>请先运行同步步骤生成本页所需的数据。</p>
+        </div>
+
+        <nav class="pagination" data-pagination hidden aria-label="分页导航">
+          <button class="pagination-nav" data-pagination-prev type="button">上一页</button>
+          <div class="pagination-center">
+            <span class="pagination-info" data-pagination-info>第 1 页 / 共 1 页</span>
+            <div class="pagination-pages" data-pagination-pages></div>
+          </div>
+          <button class="pagination-nav" data-pagination-next type="button">下一页</button>
+        </nav>
+      </section>
+    </section>
+  </main>
+
+  <script src="/news/news-list.js" defer></script>
+</body>
+</html>

@@ -953,6 +953,10 @@
                   "title": "UESC通讯：异常点",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_communication_anomaly.md",
                   "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UESC_communication_anomaly.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "奥瑞恩",
@@ -980,6 +984,10 @@
                   "title": "理事会会议录音",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/recording_of_council_meeting.md",
                   "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/recording_of_council_meeting.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "L · 卡鲁索",
@@ -1030,6 +1038,10 @@
                   "title": "邮件口述",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/oral_email.md",
                   "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/oral_email.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "L · 卡鲁索",
@@ -1059,6 +1071,10 @@
                   "title": "UESC通讯：疾行者干扰",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/UESC_communication_interference_from_runner.md",
                   "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UESC_communication_interference_from_runner.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "奥瑞恩",
                     "疾行者",
@@ -1137,6 +1153,10 @@
                   "title": "异常点录音",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/anomaly_record.md",
                   "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/anomaly_record.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "L · 卡鲁索",
@@ -1188,6 +1208,10 @@
                   "title": "特莱克斯-UESC通讯",
                   "bodyFile": "/marathon-lore/content/docs/forces/terex/contract/terex_UESC_communication.md",
                   "image": "/marathon-lore/content/docs/forces/terex/contract/terex_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/terex_UESC_communication.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "疾行者",
@@ -1596,6 +1620,10 @@
                   "title": "消息：奥瑞恩[1]",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/message_oren_1.md",
                   "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/message_oren_1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "奥瑞恩",
                     "米达",
@@ -1622,6 +1650,10 @@
                   "title": "消息：奥瑞恩[2]",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/message_oren_2.md",
                   "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/message_oren_2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "奥瑞恩",
                     "米达",
@@ -1672,6 +1704,10 @@
                   "title": "监控记录",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/monitoring_records.md",
                   "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/monitoring_records.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "凯莱蒂",
                     "奥瑞恩",
@@ -1699,6 +1735,10 @@
                   "title": "个人日志：奥瑞恩",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/personal_diary_orien.md",
                   "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/personal_diary_orien.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "接触事件",
                     "奥瑞恩",
@@ -1787,6 +1827,10 @@
                   "title": "UESC通讯：战斗报告",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/UESC_communication_combat_report.md",
                   "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UESC_communication_combat_report.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "T · 凯莱蒂",
                     "奥瑞恩",
@@ -1814,6 +1858,10 @@
                   "title": "UESC通讯：不稳定样本",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/UESC_communication_unstable_sample.md",
                   "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/UESC_communication_unstable_sample.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "冲突",
                     "奥瑞恩",
@@ -1841,6 +1889,10 @@
                   "title": "米达宣言",
                   "bodyFile": "/marathon-lore/content/docs/forces/mida/contract/mida_annoucement.md",
                   "image": "/marathon-lore/content/docs/forces/mida/contract/mida_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/mida_annoucement.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "米达",
                     "uesc",
@@ -2466,9 +2518,13 @@
               "logs": [
                 {
                   "id": "death_and_strange_women",
-                  "title": "代码片段：优化",
+                  "title": "死亡和陌生女人",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/death_and_strange_women.md",
                   "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/death_and_strange_women.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "诺娜",
                     "关口基因"
@@ -2545,6 +2601,10 @@
                   "title": "战争与织者",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/war_and_weaver.md",
                   "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/war_and_weaver.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "诺娜",
                     "关口基因"

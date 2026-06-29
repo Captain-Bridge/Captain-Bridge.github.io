@@ -1714,6 +1714,10 @@
                   "title": "数据日志：束缚",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/log1.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/broken_ai_log_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/broken_ai_log_log1.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "德莱厄斯",
                     "系统安全"
@@ -1724,6 +1728,10 @@
                   "title": "数据日志：审慎",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/log2.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/broken_ai_log_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/broken_ai_log_log2.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "传染病",
                     "德莱厄斯",
@@ -1737,6 +1745,10 @@
                   "title": "数据日志：进化",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/log3.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/broken_ai_log_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/broken_ai_log_log3.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "异常点",
                     "传染病",
@@ -1751,6 +1763,10 @@
                   "title": "数据日志：疯狂",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/log4.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/broken_ai_log_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/broken_ai_log_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "德莱厄斯",
                     "数据自杀",
@@ -1764,6 +1780,10 @@
                   "title": "数据日志：永恒",
                   "bodyFile": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/log5.md",
                   "image": "/marathon-lore/content/docs/world/dire_marsh/collection/broken_ai_log/broken_ai_log_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/broken_ai_log_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "德莱厄斯",
                     "狂暴",
@@ -3244,6 +3264,10 @@
                   "title": "日志：平民讯问",
                   "bodyFile": "/marathon-lore/content/docs/world/out_post/collection/cut_off_twins/log5.md",
                   "image": "/marathon-lore/content/docs/world/out_post/collection/cut_off_twins/cut_off_twins_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/cut_off_twins_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "违禁品",
                     "新卡斯卡迪亚",
@@ -4260,6 +4284,10 @@
                   "title": "卢卡 · 卡鲁索",
                   "bodyFile": "/marathon-lore/content/docs/world/cryo_archive/collection/expedition_list/log4.md",
                   "image": "/marathon-lore/content/docs/world/cryo_archive/collection/expedition_list/expedition_list_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/expedition_list_log4.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "L · 卡鲁索",
                     "uesc马拉松号"
@@ -4270,6 +4298,10 @@
                   "title": "尤莉亚娜 · 辛德里",
                   "bodyFile": "/marathon-lore/content/docs/world/cryo_archive/collection/expedition_list/log5.md",
                   "image": "/marathon-lore/content/docs/world/cryo_archive/collection/expedition_list/expedition_list_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/expedition_list_log5.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "地球",
                     "uesc马拉松号"
@@ -4280,6 +4312,10 @@
                   "title": "达维克 · 里德",
                   "bodyFile": "/marathon-lore/content/docs/world/cryo_archive/collection/expedition_list/log6.md",
                   "image": "/marathon-lore/content/docs/world/cryo_archive/collection/expedition_list/expedition_list_log.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/expedition_list_log6.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "M · 哈桑",
                     "D · 里德",

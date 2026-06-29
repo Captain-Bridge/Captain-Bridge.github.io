@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-06-29T16:55:14.198Z",
+  "source": "bungie-contentstack",
+  "totalFetched": 50,
+  "itemsPerPage": 8,
+  "bilingual": {
+    "officialBilingualCount": 40,
+    "englishOnlyCount": 10,
+    "generatedChineseCount": 10,
+    "translationAttempted": false,
+    "translationAvailable": false
+  },
+  "changes": {
+    "addedCount": 0,
+    "updatedCount": 0,
+    "removedCount": 0,
+    "added": [],
+    "updated": [],
+    "removed": []
+  }
+}

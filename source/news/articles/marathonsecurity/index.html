@@ -1,0 +1,186 @@
+---
+title: "Marathon: Networking and Security"
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marathon: Networking and Security / 最新消息</title>
+  <meta name="description" content="The forever war against cheaters.">
+  <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <link rel="stylesheet" href="/news/news.css">
+</head>
+<body>
+  <video class="page-bg-video" autoplay muted loop playsinline preload="metadata" poster="/images/marathon-home-full-poster.jpg" aria-hidden="true">
+    <source src="/images/marathon-home-full-bg.mp4" type="video/mp4">
+  </video>
+
+  <main class="news-shell">
+    <aside class="news-sidebar">
+      <section class="brand">
+        <div class="brand-mark">
+          <img src="/marathon-lore/assets/images/icons/marathon-brand-mark.webp" alt="Marathon">
+        </div>
+        <p class="brand-title">ARTICLE</p>
+      </section>
+
+      <nav class="sidebar-nav" aria-label="站内导航">
+        <a class="nav-link" href="/">返回首页</a>
+        <a class="nav-link active" href="/news/">返回新闻列表</a>
+        <a class="nav-link" href="/marathon-lore/">百科</a>
+        <a class="nav-link" href="/about/">关于</a>
+      </nav>
+
+      <section class="meta-box">
+        <span class="meta-label">原始标题</span>
+        <span class="meta-value">Marathon: Networking and Security</span>
+        <span class="meta-label">来源</span>
+        <span class="meta-value">Bungie Marathon News</span>
+        <span class="meta-label">发布时间</span>
+        <span class="meta-value">February 23, 2026 UTC</span>
+      </section>
+
+      <section class="diag-box">
+        <p>[ENTRY] marathonsecurity</p>
+        <p>分类: community</p>
+        <p>作者: Marathon Dev Team</p>
+      </section>
+    </aside>
+
+    <section class="news-main">
+      <header class="topbar">
+        <div class="topbar-group">
+          <a class="chip" href="/news/">&#36820;&#22238;&#21015;&#34920;</a>
+        </div>
+        <div class="topbar-group topbar-actions">
+
+        <div class="story-language-switch" data-language-switch>
+          <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button class="language-button" type="button" data-lang="zh" aria-pressed="true">&#20013;&#25991;</button>
+        </div>
+  
+          <a class="chip" href="https://www.bungie.net/7/en-us/News/Article/marathonsecurity" target="_blank" rel="noreferrer">&#26597;&#30475; Bungie &#21407;&#25991;</a>
+        </div>
+      </header>
+
+      <section class="story-header">
+        <span class="hero-kicker">community</span>
+        <h1 class="story-title" data-lang-title-en="Marathon: Networking and Security" data-lang-title-zh="《失落星船：马拉松》：网络与安全">Marathon: Networking and Security</h1>
+        <p class="story-subtitle" data-lang-subtitle-en="The forever war against cheaters." data-lang-subtitle-zh="与作弊者之间的永恒斗争。">The forever war against cheaters.</p>
+        <div class="story-meta">
+          <span>Marathon Dev Team</span>
+          <span>February 23, 2026</span>
+        </div>
+        <div class="story-tags">
+          <span>community</span><span>1067 words</span><span>5 min read</span>
+        </div>
+      </section>
+
+      <div class="story-grid">
+        <section class="story-primary">
+          <figure class="story-figure">
+            <img src="https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltbb2b76b437afa301/699c8d77370b580008b4215b/bnet_blog_font_page_mobile.jpg" alt="Marathon: Networking and Security">
+          </figure>
+
+          <article class="story-content">
+
+            <div class="story-rendered" hidden data-lang-panel="en">
+<p>&nbsp;</p><iframe src="https://www.youtube.com/embed/7ScRKFm56Vk" allowfullscreen="" frameborder="0"></iframe><p>Tau Ceti IV is a dangerous world where death is certain. That said, we want you to know your deaths are due to your own mistakes or enemy outplays – not because your run was compromised by network issues, cheaters, or the hardware hosting your connection to the world.</p><p>No network or security model can guarantee perfection, but we are committed to protecting the Marathon competitive experience and ensuring everyone has their fair chance at exfiltrating with a backpack full of sweet loot.</p><h3 style="color: #C0FE04;">Overview</h3><p>Before we get too deep into the weeds, here’s an overview of how we’re protecting your experience:</p><ul><li>Marathon dedicated servers are fully authoritative on key combat and looting actions, providing a layer of protection against cheating.</li><li>New networking systems allow your movement and actions to feel responsive while the server carefully tracks each bullet to its target even with high packet loss.</li><li>Fog of War limits the regions of a map that individual player clients have knowledge of, limiting the effectiveness of “wall hacks,” “ESP cheats,” and “loot revealers.”</li><li>We’ve rebuilt our game security stack from the ground up for Marathon, in addition to our extra layer of security provided by BattlEye.</li><li>If you lose connection mid-run, you can reconnect and continue playing the run.</li><li>If connection recovery fails due to an issue with Bungie’s server or network infrastructure, we will attempt to return the starting gear to all impacted players.</li><li>Anyone found to be cheating will be permabanned from playing Marathon forever, no second chances.</li><li>Product security is never fully solved and we’ll continue to invest in our game security systems.</li></ul><p>Would you like to know more? Keep reading for more details.</p><h3 style="color: #C0FE04;">Dedicated Server Networking</h3><p>In Marathon, the dedicated server is fully authoritative over movement, shooting, actions, and inventory.</p><p>This new server authority model means that invalid client actions will be rejected without impacting other players’ experiences. This protects the gameplay experience against exploits such as teleporting, unlimited ammo, or damage manipulation.</p><p>We paired this model with new systems for client-side prediction and rewind. This allows your movements and actions to feel immediate and responsive in the moment, but the server can correct your view of the world to match what actually happened if it needs to.</p><p>Our new high-performance networking model includes server-side adjudication of every hit with per-shot tracking and redundant transmission to reduce the effect of packet loss and ensure that every bullet lands. The dedicated server performs aim compensation with rewind on every shot individually. This allows you to hit shots reliably on enemy players, even when they are moving rapidly in and out of cover, while you are compensating for bullet travel time. It also means that players with a good Internet connection can’t be shot behind cover.</p><p>Lastly, we’ve invested in a global network of datacenters to strive to provide players a network experience that is low-latency and responsive for most players worldwide.</p><h3 style="color: #C0FE04;">Fog of War</h3><p>The Marathon Fog of War system runs on the game server to limit the regions of a map that players have knowledge of, based on what they should be able to sense in their surroundings.</p><p>This helps keep gameplay secure from exploits that reveal the location of items or the contents of containers. It also helps keep your position hidden from other players’ clients, reducing the effectiveness of “wall hacks” or “ESP cheats.”</p><h3 style="color: #C0FE04;">Client Security</h3><p>In addition to the server-side security measures listed above, we’ve invested in several client-side security upgrades. We use a combination of third-party game security software plus additional proprietary security layers, many of which are new for Marathon. Our security includes both user-mode and kernel-mode components.</p><p>Game security is a never-ending arms war with bad actors. This means sharing details about methodologies for protecting our games can inform those bad actors how to defeat them. With that in mind, we hope this high-level snapshot gives you an idea of how we are addressing client security.</p><h3 style="color: #C0FE04;">Analytics &amp; Detections</h3><p>Our servers are constantly collecting data on everything a player is doing. This telemetry is then run through our backend analysis system to look for unusual gameplay patterns and anomalies. Our security analysts are working hard to ensure a level playing field across all supported client platforms and input devices. So even if you see something suspect slip through in the moment, we may catch them later after a deeper dive in the data and issue a ban accordingly.</p><h3 style="color: #C0FE04;">Connection Recovery</h3><p>When you are in the middle of a high-stakes run, losing your network connection can lead to a life-or-death situation. If you crash or get disconnected, your shell will remain in the game world and can be protected by your crew. Restart your network connection if needed and launch back into the game to reconnect to your shell and complete your run.</p><p>In the event that an error occurs with Bungie’s server or network infrastructure, connection recovery may not be possible. We will attempt to ensure that any players affected by a server error will have their starting gear returned to them. Note: Gear refund only applies to a subset of server error conditions and will not cover gameplay losses due to Internet connectivity or client-side problems.</p><h3 style="color: #C0FE04;">Economic Security</h3><p>Over time you may fill your vault with weapons, gear, and anything else of value you acquire on Tau Ceti IV. We take your investment of time seriously. We will strive to keep your progress safe and protected from item duplication or other economic cheats.</p><h3 style="color: #C0FE04;">Our Commitment to Ongoing Service</h3><p>Networking and security will be an ongoing conversation with the Marathon community. We are committed to making your experiences on Tau Ceti IV fun, engaging, and fair. We will be continuously monitoring the live game and will make frequent updates and investments to our network technologies and security measures.</p><p><strong>We are taking a strong stance against cheating and anyone found to be cheating or developing cheats will be permanently banned from playing Marathon forever, no second chances.</strong> That said, no system is perfect so we will have an appeals system to monitor for any issues in detection.</p><p>Your first chance to play a slice of the final game is coming up soon with our Server Slam starting up on February 26. All of our security tools will be online then, but if you do suspect foul play, please report in game or through our <a href="https://safety.bungie.net/hc/en-us/articles/42347863077268-Report-Suspected-Cheating-and-Poor-Behavior">online report form</a>.</p>
+            </div>
+
+            <div class="story-rendered" data-lang-panel="zh">
+<p> </p><iframe src="https://www.youtube.com/embed/7ScRKFm56Vk" allowfullscreen="" frameborder="0"></iframe><p>天仓五IV是个危险的地方，死亡如影随形。话虽如此，我们希望大家明白，你的死亡是由于自身的失误或敌人更胜一筹造成的——而不是因为网络问题、作弊者或连接硬件故障影响了你的疾行。</p><p>没有任何网络或安全模型能够万无一失，但我们努力保护《失落星船：马拉松》的竞技体验，确保每个人都有公平的机会满载而归。</p><h3 style="color: #C0FE04;">概览</h3><p>在深入细节之前，以下是如何保护玩家游戏体验的概览：</p><ul><li>《失落星船：马拉松》专用服务器对关键战斗和掠夺操作有绝对权威，可为防止作弊提供一层保护。</li><li>全新网络系统即使在高数据包丢失率的情况下也能确保你的移动和操作流畅响应，同时服务器会仔细追踪每一颗子弹的落点。</li><li>战争迷雾可限制单个玩家客户端能够感知到的地图区域，从而限制“透视”、“ESP作弊”和“物资显示”的有效性。</li><li>除了BattlEye提供的额外安全保护之外，我们还为《失落星船：马拉松》重建了游戏安全机制。</li><li>如果在游戏过程中断开连接，你可以重新连接并继续游戏。</li><li>如果由于Bungie服务器或网络基础设施问题导致连接恢复失败，我们将尝试为所有受影响的玩家恢复初始装备。</li><li>任何被发现作弊的《失落星船：马拉松》玩家都将永久封禁，没有第二次机会。</li><li>产品安全问题永远无法彻底解决，我们将继续致力于维护游戏安全系统。</li></ul><p>想了解更多吗？请继续阅读以了解更多详情。</p><h3 style="color: #C0FE04;">专用服务器网络</h3><p>在《失落星船：马拉松》中，专用服务器对移动、射击、动作和物品栏拥有绝对权威。</p><p>这种新的服务器权威模型意味着无效的客户端操作将被拒绝，同时不会影响其他玩家的游戏体验。这能防止玩家利用传送、无限弹药或伤害操控等方式破坏游戏体验。</p><p>我们结合了客户端预测和回转新系统来实现该机制。这可使你的移动和操作响应即时且迅速，但服务器可在必要时修正你的所见，使其与实际发生的情况相符。</p><p>我们全新的高性能网络模型包含服务器端对每次命中的判定机制，并采用单发追踪和冗余传输方法来减少丢包的影响，确保每颗子弹命中目标。专用服务器会对每次射击进行单独的瞄准补偿和回转。这样即使在敌方玩家快速穿梭于掩体之间时，你也能可靠地击中目标，同时还能补偿子弹的飞行时间。这也意味着，网络连接良好的玩家不会在掩体后被击中。</p><p>最后，我们致力于建设全球数据中心网络，努力为全球众多玩家提供低延迟、快响应的网络体验。</p><h3 style="color: #C0FE04;">战争迷雾</h3><p>《失落星船：马拉松》游戏服务器将运行战争迷雾系统，根据玩家在周围环境中应能感知到的信息，限制玩家可知晓的地图区域。</p><p>这有助于防止玩家利用手段泄露物品位置或容器内容，从而保障游戏安全。它还有助于隐藏你的位置，而不被其他玩家客户端看到，从而降低“透视”或“ESP作弊”的有效性。</p><h3 style="color: #C0FE04;">客户端安全</h3><p>除了上述服务器端安全措施外，我们还致力于进行多项客户端安全升级。我们将第三方游戏安全软件与额外专有安全保护相结合，其中许多对《失落星船：马拉松》来说是全新的体验。安全包括用户模式和内核模式组件。</p><p>游戏安全是与不良分子之间一场永恒的斗争。也就是说，分享保护游戏的方法细节可能会让不良分子知道如何进行破解。考虑到这一点，我们希望这份概要能帮你了解我们如何应对客户端安全问题。</p><h3 style="color: #C0FE04;">分析与检测</h3><p>服务器会持续收集玩家所有操作的数据。这些遥测数据随后会通过后端分析系统进行处理，以查找异常游戏模式和情况。安全分析师正在努力确保所有受支持的客户端平台和输入设备都能获得公平的竞争环境。因此，即使你当时发现可疑情况，我们稍后在深入分析数据后也可能发现并予以相应的封禁。</p><h3 style="color: #C0FE04;">连接恢复</h3><p>当你进行一场高风险疾行时，网络连接中断可能会导致生死攸关的情况。如果你遇到崩溃或断开连接的情形，你的角色将留在游戏世界中，队友可对其进行保护。如有需要，请重启网络连接，回到游戏，然后重新连接你的外壳并完成疾行。</p><p>如果Bungie服务器或网络基础设施出现错误，则可能无法恢复连接。我们将尽力确保所有受服务器错误影响的玩家都能拿回初始装备。注意：装备返还仅适用于部分服务器错误情况，不包括因网络连接或客户端问题造成的游戏损失。</p><h3 style="color: #C0FE04;">经济安全</h3><p>随着时间的推移，你可以在天仓五IV上收集武器、装备以及其他有价值的物品，并填满你的保险库。我们非常重视你所投入的时间。我们将努力保障你的游戏进度，防止物品复制或其他经济作弊行为。</p><h3 style="color: #C0FE04;">我们对持续服务的承诺</h3><p>网络和安全将是我们与《失落星船：马拉松》社区持续沟通的话题。我们会努力保障你在天仓五IV游戏体验的趣味性、沉浸感和公平性。我们将持续监控游戏，并不断更新和改进网络技术和安全措施。</p><p><strong>我们对作弊行为采取强硬立场，任何被发现作弊或开发作弊程序的人都将被永久禁止进入《失落星船：马拉松》游戏，没有第二次机会。</strong>不过，任何系统都不可能万无一失，所以我们会设立申诉机制来监控所发现的问题。</p><p>服务器压力测试将于2月27日开始，届时你将能抢先体验最终游戏的部分精彩内容。同时，所有安全工具都将上线，但如果你怀疑存在作弊行为，请在游戏内或通过<a href="https://safety.bungie.net/hc/en-us/articles/42347863077268-Report-Suspected-Cheating-and-Poor-Behavior">在线举报表格</a>进行举报。</p>
+            </div>
+          </article>
+        </section>
+
+        <aside class="story-secondary">
+          <section class="story-panel">
+            <h3>文章信息</h3>
+            <ul>
+              <li>分类: community</li>
+              <li>作者: Marathon Dev Team</li>
+              <li>字数: 1067</li>
+              <li>预计阅读: 5 分钟</li>
+            </ul>
+          </section>
+
+          <section class="story-panel">
+            <h3>正文来源</h3>
+            <ul>
+              <li>英文正文: Bungie 官方原文</li>
+              <li>中文正文: Bungie 官方简中</li>
+            </ul>
+          </section>
+
+          <section class="story-disclaimer">
+            <strong>来源说明</strong>
+            <p>本页内容来自 Bungie 官方 Marathon News。若存在中文正文，则优先使用 Bungie 官方简中；若 Bungie 未提供中文，则可由站内补强翻译生成。</p>
+          </section>
+        </aside>
+      </div>
+
+      <nav class="story-nav" aria-label="文章导航">
+        <a href="/news/">返回新闻列表</a>
+        <a href="/news/articles/marathon-server-slam-almost-here/">上一篇: Marathon&#39;s Server Slam Is Almost Here</a>
+        <a href="/news/articles/musicofmarathondevinsight/">下一篇: Music of Marathon — Dev Insights Video</a>
+      </nav>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const buttons = Array.from(document.querySelectorAll("[data-lang]"));
+      const panels = {
+        en: document.querySelector('[data-lang-panel="en"]'),
+        zh: document.querySelector('[data-lang-panel="zh"]'),
+      };
+      const titleNode = document.querySelector("[data-lang-title-en]");
+      const subtitleNode = document.querySelector("[data-lang-subtitle-en]");
+      const pageTitleSuffix = " / 鏈€鏂版秷鎭?";
+
+      function setLanguage(lang) {
+        if (!panels[lang]) return;
+        if (lang === "zh" && !buttons.find((button) => button.dataset.lang === "zh" && !button.disabled)) {
+          return;
+        }
+
+        panels.en.hidden = lang !== "en";
+        if (panels.zh) {
+          panels.zh.hidden = lang !== "zh";
+        }
+
+        if (titleNode) {
+          const nextTitle = lang === "zh" ? titleNode.dataset.langTitleZh : titleNode.dataset.langTitleEn;
+          if (nextTitle) {
+            titleNode.textContent = nextTitle;
+            document.title = nextTitle + pageTitleSuffix;
+          }
+        }
+
+        if (subtitleNode) {
+          const nextSubtitle = lang === "zh" ? subtitleNode.dataset.langSubtitleZh : subtitleNode.dataset.langSubtitleEn;
+          subtitleNode.textContent = nextSubtitle || "";
+        }
+
+        for (const button of buttons) {
+          const active = button.dataset.lang === lang;
+          button.classList.toggle("is-active", active);
+          button.setAttribute("aria-pressed", active ? "true" : "false");
+        }
+      }
+
+      for (const button of buttons) {
+        button.addEventListener("click", () => {
+          if (button.disabled) return;
+          setLanguage(button.dataset.lang);
+        });
+      }
+
+      setLanguage("zh");
+    })();
+  </script>
+</body>
+</html>
