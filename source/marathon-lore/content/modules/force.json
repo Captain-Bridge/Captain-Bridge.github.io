@@ -2666,6 +2666,10 @@
                   "title": "企业间传输",
                   "bodyFile": "/marathon-lore/content/docs/forces/sekiguchi/contract/inter_enterprise_transmission.md",
                   "image": "/marathon-lore/content/docs/forces/sekiguchi/contract/sekiguchi_contract.webp",
+                  "audio": {
+                    "src":"/marathon-lore/assets/audio/inter_enterprise_transmission.opus",
+                    "type": "audio/ogg; codecs=opus"
+                  },
                   "meta": [
                     "诺娜",
                     "关口基因",
