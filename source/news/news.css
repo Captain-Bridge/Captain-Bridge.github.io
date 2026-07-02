@@ -772,7 +772,7 @@ body::after {
 .story-title {
   margin: 0;
   font-size: clamp(36px, 4vw, 58px);
-  line-height: 1.02;
+  line-height: 1.1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-family: "Maratype Local", "Bahnschrift SemiCondensed", "DIN Condensed", "Arial Narrow", "Segoe UI", sans-serif;
