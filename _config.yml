@@ -32,6 +32,7 @@ skip_render:
   - about/index.html
   - factions/**/*.json
   - factions/README.md
+  - map/**/*.json
   - marathon-lore/assets/**/*.json
   - marathon-lore/content/**
 

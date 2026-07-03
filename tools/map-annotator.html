@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Map Annotator</title>
+  <style>
+    :root {
+      --bg: #07090d;
+      --panel: rgba(12, 14, 20, 0.92);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: rgba(245, 247, 250, 0.95);
+      --soft: rgba(214, 223, 236, 0.72);
+      --green: #00e55b;
+      --yellow: #f2de54;
+      --blue: #6fb8ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: linear-gradient(180deg, rgba(8, 10, 16, 0.94), rgba(6, 8, 12, 1));
+      color: var(--text);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 18px;
+      min-height: calc(100vh - 40px);
+    }
+
+    .panel,
+    .workspace {
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .panel {
+      padding: 16px;
+      display: grid;
+      align-content: start;
+      gap: 12px;
+    }
+
+    label,
+    .hint,
+    .point-meta {
+      font-size: 13px;
+      color: var(--soft);
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+      width: 100%;
+      min-height: 40px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      padding: 8px 10px;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 84px;
+      resize: vertical;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .workspace {
+      position: relative;
+      overflow: auto;
+      padding: 16px;
+    }
+
+    .canvas {
+      position: relative;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        rgba(0, 0, 0, 0.2);
+      background-size: 40px 40px;
+    }
+
+    .canvas img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .marker-layer {
+      position: absolute;
+      inset: 0;
+    }
+
+    .marker {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      margin-left: -8px;
+      margin-top: -8px;
+      border-radius: 999px;
+      border: 2px solid #07090d;
+      background: var(--marker-color, var(--green));
+      box-shadow: 0 0 18px rgba(0, 229, 91, 0.4);
+      cursor: pointer;
+    }
+
+    .marker span {
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 8px);
+      transform: translateX(-50%);
+      white-space: nowrap;
+      padding: 4px 6px;
+      background: rgba(7, 9, 13, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    .point-list {
+      display: grid;
+      gap: 10px;
+      max-height: 34vh;
+      overflow: auto;
+    }
+
+    .point-item {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .actions button {
+      flex: 1;
+    }
+
+    @media (max-width: 960px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <section class="panel">
+      <h1>本地标点工具</h1>
+      <p class="hint">先载入底图，再在图上点击落点。工具会记录原始像素坐标，适合直接导出为 `source/map/data/maps/*.json` 里的 POI。</p>
+
+      <label>
+        选择底图
+        <input id="file-input" type="file" accept="image/*">
+      </label>
+
+      <label>
+        mapId
+        <input id="map-id" type="text" value="first-map">
+      </label>
+
+      <label>
+        点位标题
+        <input id="poi-title" type="text" value="新点位">
+      </label>
+
+      <label>
+        点位类型
+        <select id="poi-type">
+          <option value="extract">撤离点</option>
+          <option value="loot">物资点</option>
+          <option value="terminal">终端</option>
+          <option value="boss">高危目标</option>
+        </select>
+      </label>
+
+      <label>
+        备注
+        <textarea id="poi-description">点击底图后，这里的内容会作为 description 写入导出的 JSON。</textarea>
+      </label>
+
+      <div class="actions">
+        <button id="export-button" type="button">导出 JSON</button>
+        <button id="clear-button" type="button">清空点位</button>
+      </div>
+
+      <label>
+        导出结果
+        <textarea id="export-output" spellcheck="false"></textarea>
+      </label>
+
+      <div class="point-list" id="point-list"></div>
+    </section>
+
+    <section class="workspace">
+      <div class="canvas" id="canvas">
+        <img id="map-image" alt="等待载入底图">
+        <div class="marker-layer" id="marker-layer"></div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("file-input");
+    const mapIdInput = document.getElementById("map-id");
+    const poiTitleInput = document.getElementById("poi-title");
+    const poiTypeInput = document.getElementById("poi-type");
+    const poiDescriptionInput = document.getElementById("poi-description");
+    const exportButton = document.getElementById("export-button");
+    const clearButton = document.getElementById("clear-button");
+    const exportOutput = document.getElementById("export-output");
+    const canvas = document.getElementById("canvas");
+    const mapImage = document.getElementById("map-image");
+    const markerLayer = document.getElementById("marker-layer");
+    const pointList = document.getElementById("point-list");
+
+    const points = [];
+    const colorByType = {
+      extract: "#f2de54",
+      loot: "#6fb8ff",
+      terminal: "#00e55b",
+      boss: "#ff5b6e",
+    };
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files?.[0];
+
+      if (!file) {
+        return;
+      }
+
+      const url = URL.createObjectURL(file);
+      mapImage.src = url;
+      mapImage.onload = () => {
+        canvas.style.width = `${mapImage.naturalWidth}px`;
+        markerLayer.style.width = `${mapImage.naturalWidth}px`;
+        markerLayer.style.height = `${mapImage.naturalHeight}px`;
+        render();
+      };
+    });
+
+    markerLayer.addEventListener("click", (event) => {
+      if (!mapImage.naturalWidth || !mapImage.naturalHeight) {
+        return;
+      }
+
+      const rect = markerLayer.getBoundingClientRect();
+      const x = Math.round(((event.clientX - rect.left) / rect.width) * mapImage.naturalWidth);
+      const y = Math.round(((event.clientY - rect.top) / rect.height) * mapImage.naturalHeight);
+      const idBase = poiTitleInput.value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-") || "poi";
+      const item = {
+        id: `${mapIdInput.value.trim() || "map"}-${idBase}-${String(points.length + 1).padStart(2, "0")}`,
+        title: poiTitleInput.value.trim() || "新点位",
+        type: poiTypeInput.value,
+        x,
+        y,
+        description: poiDescriptionInput.value.trim(),
+        source: "manual-annotator",
+        confidence: "pending"
+      };
+
+      points.push(item);
+      render();
+    });
+
+    exportButton.addEventListener("click", () => {
+      exportOutput.value = JSON.stringify({
+        mapId: mapIdInput.value.trim() || "first-map",
+        version: "0.1.0",
+        pois: points
+      }, null, 2);
+    });
+
+    clearButton.addEventListener("click", () => {
+      points.length = 0;
+      exportOutput.value = "";
+      render();
+    });
+
+    function render() {
+      markerLayer.innerHTML = "";
+      pointList.innerHTML = "";
+
+      for (const point of points) {
+        const marker = document.createElement("button");
+        marker.type = "button";
+        marker.className = "marker";
+        marker.style.left = `${(point.x / mapImage.naturalWidth) * 100}%`;
+        marker.style.top = `${(point.y / mapImage.naturalHeight) * 100}%`;
+        marker.style.setProperty("--marker-color", colorByType[point.type] || "#00e55b");
+        marker.innerHTML = `<span>${point.title}</span>`;
+        marker.addEventListener("click", (event) => {
+          event.stopPropagation();
+        });
+        markerLayer.appendChild(marker);
+
+        const row = document.createElement("article");
+        row.className = "point-item";
+        row.innerHTML = `
+          <strong>${point.title}</strong>
+          <div class="point-meta">${point.type} · x:${point.x} · y:${point.y}</div>
+          <div class="point-meta">${point.id}</div>
+        `;
+        pointList.appendChild(row);
+      }
+    }
+  </script>
+</body>
+</html>

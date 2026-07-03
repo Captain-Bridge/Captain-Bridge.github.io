@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Starter tactical map low">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0d1118"/>
+      <stop offset="100%" stop-color="#06080c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <g stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none">
+    <path d="M60 360 L210 250 L360 280 L520 120 L720 160"/>
+    <path d="M120 110 L250 170 L460 120 L690 270"/>
+    <path d="M120 390 L290 330 L410 380 L560 300 L710 340"/>
+  </g>
+  <g stroke="rgba(0,229,91,0.18)" stroke-width="1">
+    <path d="M0 90 H800"/>
+    <path d="M0 180 H800"/>
+    <path d="M0 270 H800"/>
+    <path d="M0 360 H800"/>
+    <path d="M160 0 V450"/>
+    <path d="M320 0 V450"/>
+    <path d="M480 0 V450"/>
+    <path d="M640 0 V450"/>
+  </g>
+  <text x="40" y="60" fill="#c6f500" font-family="Segoe UI, sans-serif" font-size="26" letter-spacing="4">STARTER MAP</text>
+</svg>

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "poiTypes": [
+    {
+      "id": "extract",
+      "label": "撤离点",
+      "color": "#f2de54"
+    },
+    {
+      "id": "loot",
+      "label": "物资点",
+      "color": "#6fb8ff"
+    },
+    {
+      "id": "terminal",
+      "label": "终端",
+      "color": "#00e55b"
+    },
+    {
+      "id": "boss",
+      "label": "高危目标",
+      "color": "#ff5b6e"
+    }
+  ],
+  "maps": [
+    {
+      "id": "cryo-archive-preview",
+      "title": "低温档案库预览",
+      "subtitle": "Cryo Archive Preview",
+      "summary": "当前仅接入底图预览，尚未添加真实 POI、区域边界和百科跳转。",
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "tileSources": {
+        "low": "/map/tiles/cryo-archive/low.webp",
+        "medium": "/map/tiles/cryo-archive/medium.webp",
+        "full": "/map/tiles/cryo-archive/full.webp"
+      },
+      "dataPath": "/map/data/maps/cryo-archive.json",
+      "minZoom": 0.4,
+      "maxZoom": 3.6
+    }
+  ]
+}
