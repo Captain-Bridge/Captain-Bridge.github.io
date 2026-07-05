@@ -1,0 +1,81 @@
+{
+  "icons": [
+    {
+      "id": "runner-respawn",
+      "label": "疾行者复活点",
+      "path": "/map/assets/icons/runner-respawn.svg",
+      "accentColor": "#d6f51f",
+      "order": 10
+    },
+    {
+      "id": "extract-possible",
+      "label": "撤离站",
+      "path": "/map/assets/icons/extract-possible.svg",
+      "accentColor": "#c7d700",
+      "order": 20
+    },
+    {
+      "id": "extract-active",
+      "label": "秘密撤离点",
+      "path": "/map/assets/icons/extract-active.svg",
+      "accentColor": "#57f04f",
+      "order": 30
+    },
+    {
+      "id": "extract-final",
+      "label": "最终撤离点",
+      "path": "/map/assets/icons/extract-final.svg",
+      "accentColor": "#ffbf25",
+      "order": 40
+    },
+    {
+      "id": "coolant-full",
+      "label": "充满的低温冷却剂",
+      "path": "/map/assets/icons/coolant-full.svg",
+      "accentColor": "#f68432",
+      "order": 50
+    },
+    {
+      "id": "vault",
+      "label": "保险库",
+      "path": "/map/assets/icons/vault.svg",
+      "accentColor": "#5da5ff",
+      "order": 60
+    },
+    {
+      "id": "credential-orange",
+      "label": "可能的泵站凭证刷新点",
+      "path": "/map/assets/icons/credential-orange.svg",
+      "accentColor": "#ffb126",
+      "order": 70
+    },
+    {
+      "id": "credential-red",
+      "label": "可能的休眠凭证刷新点",
+      "path": "/map/assets/icons/credential-red.svg",
+      "accentColor": "#ff5555",
+      "order": 80
+    },
+    {
+      "id": "credential-blue-drone",
+      "label": "殖民者的DNA样本",
+      "path": "/map/assets/icons/credential-blue-drone.svg",
+      "accentColor": "#58a9ff",
+      "order": 90
+    },
+    {
+      "id": "secret-lab",
+      "label": "秘密实验室",
+      "path": "/map/assets/icons/secret-lab.svg",
+      "accentColor": "#ff2e73",
+      "order": 100
+    },
+    {
+      "id": "extract-guarded",
+      "label": "受到把守的撤离点",
+      "path": "/map/assets/icons/extract-guarded.svg",
+      "accentColor": "#ff2e73",
+      "order": 110
+    }
+  ]
+}

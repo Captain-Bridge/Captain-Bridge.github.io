@@ -3,14 +3,8 @@
   "$id": "https://marathon.uesc.top/map/data/interactive-map.schema.json",
   "title": "Interactive Map Data",
   "type": "object",
-  "required": ["mapId", "version", "pois"],
+  "required": ["pois"],
   "properties": {
-    "mapId": {
-      "type": "string"
-    },
-    "version": {
-      "type": "string"
-    },
     "regions": {
       "type": "array",
       "items": {
@@ -65,7 +59,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "title", "type", "x", "y"],
+        "required": ["id", "title", "iconKey", "x", "y"],
         "properties": {
           "id": {
             "type": "string"
@@ -73,8 +67,11 @@
           "title": {
             "type": "string"
           },
-          "type": {
+          "iconKey": {
             "type": "string"
+          },
+          "iconSize": {
+            "type": "number"
           },
           "x": {
             "type": "number"
@@ -94,9 +91,6 @@
           "source": {
             "type": "string"
           },
-          "confidence": {
-            "type": "string"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -114,9 +108,9 @@
             }
           }
         },
-        "additionalProperties": true
+        "additionalProperties": false
       }
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

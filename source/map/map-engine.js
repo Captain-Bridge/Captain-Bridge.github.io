@@ -2,8 +2,7 @@ const state = {
   manifest: null,
   activeMap: null,
   activeMapData: null,
-  poiTypes: new Map(),
-  activeTypeFilters: new Set(),
+  activeFilterKeys: new Set(),
   zoom: 1,
   minZoom: 0.5,
   maxZoom: 4,
@@ -16,24 +15,21 @@ const state = {
   dragOriginY: 0,
   selectedPoiId: null,
   currentResolution: "low",
+  resolutionMode: "low",
+  fullResolutionTimer: null,
   isDragging: false,
+  iconCatalog: new Map(),
 };
 
 const elements = {
-  mapName: document.getElementById("map-name"),
-  mapSummary: document.getElementById("map-summary"),
   mapTabs: document.getElementById("map-tabs"),
   mapFilterBar: document.getElementById("map-filter-bar"),
-  mapLegend: document.getElementById("map-legend"),
   mapViewport: document.getElementById("map-viewport"),
   mapTransform: document.getElementById("map-transform"),
   mapBase: document.getElementById("map-base"),
   mapOverlaySvg: document.getElementById("map-overlay-svg"),
   mapPoiLayer: document.getElementById("map-poi-layer"),
-  mapStatusBar: document.getElementById("map-status-bar"),
   mapLoading: document.getElementById("map-loading"),
-  mapCountPill: document.getElementById("map-count-pill"),
-  mapResolutionPill: document.getElementById("map-resolution-pill"),
   mapPopup: document.getElementById("map-popup"),
   mapPopupType: document.getElementById("map-popup-type"),
   mapPopupTitle: document.getElementById("map-popup-title"),
@@ -47,27 +43,25 @@ const elements = {
 document.addEventListener("DOMContentLoaded", () => {
   initialize().catch((error) => {
     console.error(error);
-    elements.mapLoading.textContent = "地图加载失败，请检查 JSON 配置。";
-    elements.mapStatusBar.textContent = "加载失败";
+    elements.mapLoading.textContent = "地图加载失败，请检查地图 JSON 配置。";
   });
 });
 
 async function initialize() {
   const manifest = await fetchJson("/map/data/manifest.json");
-  state.manifest = manifest;
-  state.poiTypes = new Map(manifest.poiTypes.map((entry) => [entry.id, entry]));
-  state.activeTypeFilters = new Set(manifest.poiTypes.map((entry) => entry.id));
+  const iconCatalog = await fetchJson("/map/assets/icons/poi-icons.json");
 
-  renderLegend();
-  renderFilterButtons();
+  state.manifest = manifest;
+  state.iconCatalog = new Map((iconCatalog.icons ?? []).map((entry) => [entry.id, entry]));
+
   renderTabs();
+  renderFilterButtons();
   bindEvents();
 
-  if (!manifest.maps.length) {
+  if (!manifest.maps?.length) {
     throw new Error("Manifest does not contain any maps.");
   }
 
-  elements.mapCountPill.textContent = `${manifest.maps.length} 张`;
   await activateMap(manifest.maps[0].id);
 }
 
@@ -81,12 +75,11 @@ async function activateMap(mapId) {
   elements.mapLoading.hidden = false;
   state.activeMap = nextMap;
   state.activeMapData = await fetchJson(nextMap.dataPath);
+  state.activeFilterKeys = new Set(getPoiEntries().map((entry) => entry.key));
   state.selectedPoiId = null;
   state.minZoom = nextMap.minZoom ?? 0.45;
   state.maxZoom = nextMap.maxZoom ?? 4.5;
 
-  elements.mapName.textContent = nextMap.title;
-  elements.mapSummary.textContent = nextMap.summary ?? "暂无简介。";
   elements.mapTransform.style.width = `${nextMap.size.width}px`;
   elements.mapTransform.style.height = `${nextMap.size.height}px`;
   elements.mapOverlaySvg.setAttribute("viewBox", `0 0 ${nextMap.size.width} ${nextMap.size.height}`);
@@ -96,13 +89,15 @@ async function activateMap(mapId) {
   elements.mapPoiLayer.style.height = `${nextMap.size.height}px`;
 
   renderTabs();
+  renderFilterButtons();
   renderRegions();
   renderPois();
   closePopup();
+  resetResolutionMode();
   fitMapToViewport();
   syncBaseImage();
-  updateStatus();
   elements.mapLoading.hidden = true;
+  scheduleFullResolutionPromotion();
 }
 
 function bindEvents() {
@@ -126,7 +121,6 @@ function bindEvents() {
   elements.mapResetButton.addEventListener("click", () => {
     fitMapToViewport();
     syncBaseImage();
-    updateStatus();
   });
 
   window.addEventListener("resize", () => {
@@ -136,12 +130,30 @@ function bindEvents() {
 
     fitMapToViewport();
     syncBaseImage();
-    updateStatus();
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") {
+      return;
+    }
+
+    const active = document.activeElement;
+    const tagName = active && active.tagName ? active.tagName.toLowerCase() : "";
+
+    if (tagName === "input" || tagName === "textarea" || (active && active.isContentEditable)) {
+      return;
+    }
+
+    window.location.href = "/";
   });
 }
 
 function renderTabs() {
   elements.mapTabs.innerHTML = "";
+
+  if (!state.manifest) {
+    return;
+  }
 
   for (const map of state.manifest.maps) {
     const button = document.createElement("button");
@@ -159,45 +171,77 @@ function renderTabs() {
 
 function renderFilterButtons() {
   elements.mapFilterBar.innerHTML = "";
+  const filterEntries = getPoiEntries();
 
-  for (const poiType of state.manifest.poiTypes) {
+  for (const entry of filterEntries) {
+    const isActive = state.activeFilterKeys.has(entry.key);
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `map-filter-button${state.activeTypeFilters.has(poiType.id) ? " is-active" : ""}`;
-    button.textContent = poiType.label;
+    button.className = `map-filter-button${isActive ? " is-active" : ""}`;
+    button.style.setProperty("--filter-accent", entry.accentColor ?? "var(--green)");
+    button.setAttribute("aria-pressed", String(isActive));
+    button.title = `${entry.label} (${entry.count} 个点位)`;
+    button.innerHTML = `
+      <span class="map-filter-icon-wrap"><img class="map-filter-icon" src="${escapeHtml(entry.path)}" alt=""></span>
+      <span class="map-filter-copy">
+        <span class="map-filter-title">${escapeHtml(entry.label)}</span>
+        <span class="map-filter-meta">${entry.count} 个点位</span>
+      </span>
+    `;
     button.addEventListener("click", () => {
-      if (state.activeTypeFilters.has(poiType.id)) {
-        state.activeTypeFilters.delete(poiType.id);
+      if (state.activeFilterKeys.has(entry.key)) {
+        state.activeFilterKeys.delete(entry.key);
       } else {
-        state.activeTypeFilters.add(poiType.id);
+        state.activeFilterKeys.add(entry.key);
       }
 
       renderFilterButtons();
       renderPois();
-      updateStatus();
     });
     elements.mapFilterBar.appendChild(button);
   }
 }
 
-function renderLegend() {
-  elements.mapLegend.innerHTML = "";
+function getPoiEntries() {
+  const pois = state.activeMapData?.pois ?? [];
 
-  for (const poiType of state.manifest.poiTypes) {
-    const item = document.createElement("div");
-    item.className = "map-legend-item";
-    item.innerHTML = `
-      <span class="map-legend-chip" style="color:${poiType.color}; background:${poiType.color};"></span>
-      <span>${poiType.label}</span>
-    `;
-    elements.mapLegend.appendChild(item);
+  if (!pois.length) {
+    return [];
   }
+
+  const iconEntries = new Map();
+
+  for (const poi of pois) {
+    if (!poi.iconKey) {
+      continue;
+    }
+
+    const iconEntry = state.iconCatalog.get(poi.iconKey);
+    const current = iconEntries.get(poi.iconKey) ?? {
+      key: getPoiFilterKey(poi),
+      label: iconEntry?.label ?? poi.title,
+      path: iconEntry?.path ?? "",
+      accentColor: iconEntry?.accentColor ?? "var(--green)",
+      order: iconEntry?.order ?? 999,
+      count: 0,
+    };
+    current.count += 1;
+    iconEntries.set(poi.iconKey, current);
+  }
+
+  return [...iconEntries.values()].sort((a, b) => {
+    if ((a.order ?? 999) !== (b.order ?? 999)) {
+      return (a.order ?? 999) - (b.order ?? 999);
+    }
+
+    return String(a.label).localeCompare(String(b.label), "zh-CN");
+  });
 }
 
 function renderRegions() {
   const fragments = [];
 
-  for (const region of state.activeMapData.regions ?? []) {
+  for (const region of state.activeMapData?.regions ?? []) {
     const points = (region.polygon ?? []).map(([x, y]) => `${x},${y}`).join(" ");
     const label = region.labelPosition ?? region.polygon?.[0];
     fragments.push(`
@@ -217,40 +261,47 @@ function renderPois() {
 
   for (const poi of visiblePois) {
     const button = document.createElement("button");
-    const poiType = state.poiTypes.get(poi.type);
+    const iconEntry = poi.iconKey ? state.iconCatalog.get(poi.iconKey) : null;
+    const iconSize = poi.iconSize ?? 28;
     button.type = "button";
     button.className = `map-poi${state.selectedPoiId === poi.id ? " is-selected" : ""}`;
     button.style.left = `${poi.x}px`;
     button.style.top = `${poi.y}px`;
-    button.style.setProperty("--poi-color", poiType?.color ?? "var(--green)");
-    button.setAttribute("aria-label", `${poi.title} ${poiType?.label ?? poi.type}`);
-    button.innerHTML = `<span class="map-poi-label">${escapeHtml(poi.title)}</span>`;
+    button.style.setProperty("--poi-color", iconEntry?.accentColor ?? "var(--green)");
+    button.style.width = `${iconSize}px`;
+    button.style.height = `${iconSize}px`;
+    button.style.marginLeft = `${-(iconSize / 2)}px`;
+    button.style.marginTop = `${-(iconSize / 2)}px`;
+    button.dataset.iconSize = String(iconSize);
+    button.setAttribute("aria-label", `${poi.title} ${iconEntry?.label ?? "POI"}`);
+    button.innerHTML = `
+      ${iconEntry ? `<img class="map-poi-icon" src="${escapeHtml(iconEntry.path)}" alt="">` : ""}
+    `;
     button.addEventListener("click", (event) => {
       event.stopPropagation();
       openPopup(poi);
     });
     elements.mapPoiLayer.appendChild(button);
   }
+
+  refreshPoiVisualScale();
 }
 
 function openPopup(poi) {
-  const poiType = state.poiTypes.get(poi.type);
+  const iconEntry = poi.iconKey ? state.iconCatalog.get(poi.iconKey) : null;
   state.selectedPoiId = poi.id;
   renderPois();
   elements.mapPopup.classList.remove("is-hidden");
-  elements.mapPopupType.textContent = poiType?.label ?? poi.type;
+  elements.mapPopupType.textContent = iconEntry?.label ?? "POI";
   elements.mapPopupTitle.textContent = poi.title;
-  elements.mapPopupBody.textContent = poi.description ?? poi.summary ?? "暂无说明。";
+  elements.mapPopupBody.textContent = poi.description ?? "暂无说明。";
 
   const meta = [];
   if (poi.floor) {
     meta.push(["楼层", poi.floor]);
   }
-  if (poi.confidence) {
-    meta.push(["置信度", poi.confidence]);
-  }
   if (poi.source) {
-    meta.push(["依据", poi.source]);
+    meta.push(["来源", poi.source]);
   }
   if (poi.factionId) {
     meta.push(["阵营", poi.factionId]);
@@ -286,6 +337,7 @@ function handleWheel(event) {
   }
 
   event.preventDefault();
+  promoteToFullResolution();
 
   const zoomFactor = event.deltaY < 0 ? 1.12 : 0.9;
   const nextZoom = clamp(state.zoom * zoomFactor, state.minZoom, state.maxZoom);
@@ -300,8 +352,8 @@ function handleWheel(event) {
   state.zoom = nextZoom;
 
   applyTransform();
+  refreshPoiVisualScale();
   syncBaseImage();
-  updateStatus();
 }
 
 function handlePointerDown(event) {
@@ -314,6 +366,7 @@ function handlePointerDown(event) {
   }
 
   event.preventDefault();
+  promoteToFullResolution();
   state.pointerId = event.pointerId;
   state.isDragging = false;
   state.dragStartX = event.clientX;
@@ -334,7 +387,6 @@ function handlePointerMove(event) {
   state.panX = state.dragOriginX + (event.clientX - state.dragStartX);
   state.panY = state.dragOriginY + (event.clientY - state.dragStartY);
   applyTransform();
-  updateStatus();
 }
 
 function handlePointerUp(event) {
@@ -352,16 +404,30 @@ function handlePointerUp(event) {
 }
 
 function fitMapToViewport() {
+  if (!state.activeMap) {
+    return;
+  }
+
   const viewportRect = elements.mapViewport.getBoundingClientRect();
+
+  if (viewportRect.width <= 0 || viewportRect.height <= 0) {
+    window.requestAnimationFrame(() => {
+      fitMapToViewport();
+    });
+    return;
+  }
+
   const widthRatio = viewportRect.width / state.activeMap.size.width;
   const heightRatio = viewportRect.height / state.activeMap.size.height;
   const fitZoom = Math.min(widthRatio, heightRatio) * 0.92;
+  const initialZoom = state.activeMap.defaultZoom ?? fitZoom;
 
-  state.zoom = clamp(state.activeMap.defaultZoom ?? fitZoom, state.minZoom, state.maxZoom);
+  state.zoom = clamp(initialZoom, Math.min(state.minZoom, fitZoom), state.maxZoom);
   state.panX = (viewportRect.width - (state.activeMap.size.width * state.zoom)) / 2;
   state.panY = (viewportRect.height - (state.activeMap.size.height * state.zoom)) / 2;
 
   applyTransform();
+  refreshPoiVisualScale();
 }
 
 function applyTransform() {
@@ -373,41 +439,102 @@ function syncBaseImage() {
     return;
   }
 
-  const resolution = getResolutionForZoom(state.zoom);
+  const resolution = getResolutionForCurrentMode();
+  const sourcePath = state.activeMap.tileSources[resolution];
+
+  if (!sourcePath) {
+    return;
+  }
 
   if (resolution !== state.currentResolution || elements.mapBase.dataset.mapId !== state.activeMap.id) {
     state.currentResolution = resolution;
-    elements.mapBase.src = state.activeMap.tileSources[resolution];
+    elements.mapBase.src = sourcePath;
     elements.mapBase.dataset.mapId = state.activeMap.id;
-    elements.mapResolutionPill.textContent = resolution.toUpperCase();
   }
-}
-
-function updateStatus() {
-  const visiblePois = getVisiblePois().length;
-  const totalPois = state.activeMapData?.pois?.length ?? 0;
-  elements.mapStatusBar.innerHTML = `
-    <span>${escapeHtml(state.activeMap?.title ?? "未选择地图")}</span>
-    <span>缩放 ${(state.zoom * 100).toFixed(0)}%</span>
-    <span>显示 ${visiblePois} / ${totalPois} 个 POI</span>
-    <span>分辨率 ${state.currentResolution.toUpperCase()}</span>
-  `;
 }
 
 function getVisiblePois() {
-  return (state.activeMapData?.pois ?? []).filter((poi) => state.activeTypeFilters.has(poi.type));
+  return (state.activeMapData?.pois ?? []).filter((poi) => {
+    if (!poi.iconKey) {
+      return false;
+    }
+
+    return state.activeFilterKeys.has(getPoiFilterKey(poi));
+  });
 }
 
-function getResolutionForZoom(zoom) {
-  if (zoom < 0.85) {
-    return "low";
+function getPoiFilterKey(poi) {
+  return `icon:${poi.iconKey}`;
+}
+
+function refreshPoiVisualScale() {
+  const poiButtons = elements.mapPoiLayer.querySelectorAll(".map-poi");
+
+  for (const button of poiButtons) {
+    const iconSize = Number(button.dataset.iconSize ?? "28");
+    const scale = getPoiVisualScale(iconSize);
+    button.style.transform = `scale(${scale})`;
+  }
+}
+
+function getPoiVisualScale(iconSize) {
+  const minimumPixels = 14;
+  const currentPixels = iconSize * state.zoom;
+
+  if (currentPixels <= 0) {
+    return 1;
   }
 
-  if (zoom < 1.7) {
-    return "medium";
+  return clamp(minimumPixels / currentPixels, 1, 4);
+}
+
+function getResolutionForCurrentMode() {
+  if (state.resolutionMode === "full" && state.activeMap?.tileSources.full) {
+    return "full";
   }
 
-  return "full";
+  return "low";
+}
+
+function resetResolutionMode() {
+  if (state.fullResolutionTimer) {
+    window.clearTimeout(state.fullResolutionTimer);
+    state.fullResolutionTimer = null;
+  }
+
+  state.resolutionMode = "low";
+}
+
+function scheduleFullResolutionPromotion() {
+  if (!state.activeMap?.tileSources.full) {
+    return;
+  }
+
+  if (state.fullResolutionTimer) {
+    window.clearTimeout(state.fullResolutionTimer);
+  }
+
+  state.fullResolutionTimer = window.setTimeout(() => {
+    promoteToFullResolution();
+  }, 180);
+}
+
+function promoteToFullResolution() {
+  if (!state.activeMap?.tileSources.full) {
+    return;
+  }
+
+  if (state.fullResolutionTimer) {
+    window.clearTimeout(state.fullResolutionTimer);
+    state.fullResolutionTimer = null;
+  }
+
+  if (state.resolutionMode === "full") {
+    return;
+  }
+
+  state.resolutionMode = "full";
+  syncBaseImage();
 }
 
 async function fetchJson(path) {

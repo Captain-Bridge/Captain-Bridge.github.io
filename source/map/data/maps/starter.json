@@ -1,78 +1,60 @@
 {
-  "mapId": "starter",
-  "version": "0.1.0",
   "regions": [
     {
-      "id": "landing-basin",
-      "title": "着陆盆地",
+      "id": "central-yard",
+      "title": "Central Yard",
+      "labelPosition": [720, 260],
       "polygon": [
-        [170, 570],
-        [540, 470],
-        [690, 720],
-        [320, 810]
-      ],
-      "labelPosition": [300, 650]
-    },
-    {
-      "id": "relay-corridor",
-      "title": "中继走廊",
-      "polygon": [
-        [640, 230],
-        [1210, 190],
-        [1330, 420],
-        [760, 470]
-      ],
-      "labelPosition": [820, 340],
-      "fill": "rgba(111, 184, 255, 0.10)",
-      "stroke": "rgba(111, 184, 255, 0.55)"
+        [420, 120],
+        [1040, 120],
+        [1120, 540],
+        [620, 760],
+        [360, 420]
+      ]
     }
   ],
   "pois": [
     {
       "id": "starter-extract-north",
-      "title": "北侧撤离点",
-      "type": "extract",
+      "title": "North Extract",
+      "iconKey": "extract-active",
       "x": 1260,
       "y": 182,
-      "description": "用于验证撤离点样式、弹窗和缩放时的可读性。",
-      "source": "手工样例",
-      "confidence": "demo",
+      "description": "Sample extract point for popup and zoom testing.",
+      "source": "Manual sample",
       "links": [
         {
-          "label": "查看百科占位页",
+          "label": "Open lore page",
           "href": "/marathon-lore/"
         }
       ]
     },
     {
       "id": "starter-cache-west",
-      "title": "西侧物资箱",
-      "type": "loot",
+      "title": "West Cache",
+      "iconKey": "vault",
       "x": 440,
       "y": 655,
-      "description": "示例物资点。真实项目里建议补上刷新条件、钥匙需求和附近威胁。",
-      "source": "手工样例",
-      "confidence": "demo"
+      "description": "Sample loot point for layout and marker checks.",
+      "source": "Manual sample"
     },
     {
       "id": "starter-terminal-alpha",
-      "title": "Alpha 终端",
-      "type": "terminal",
+      "title": "Alpha Terminal",
+      "iconKey": "credential-orange",
       "x": 840,
       "y": 356,
-      "description": "终端类点位建议补充用途、解锁条件和关联任务。",
-      "source": "手工样例",
-      "confidence": "demo"
+      "description": "Sample utility point for interaction testing.",
+      "source": "Manual sample"
     },
     {
       "id": "starter-threat-core",
-      "title": "异常核心",
-      "type": "boss",
+      "title": "Core Threat",
+      "iconKey": "secret-lab",
       "x": 1010,
       "y": 590,
-      "description": "高危目标示例。后续可以追加掉落、刷新窗口和推荐交战方式。",
-      "source": "手工样例",
-      "confidence": "demo",
+      "description": "Sample high-risk point with floor metadata.",
+      "source": "Manual sample",
       "floor": "B1"
     }
   ]

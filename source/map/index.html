@@ -8,55 +8,30 @@ layout: false
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>互动地图 - 《失落星船：马拉松》中文站</title>
-  <meta name="description" content="Marathon 互动地图原型，可用于第一张地图的底图、标点、筛选和信息验证流程。">
+  <meta name="description" content="Marathon 互动地图原型，可用于底图预览、POI 放置、筛选与信息验证。">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
-  <link rel="stylesheet" href="/map/map.css?v=20260703-map-starter">
+  <link rel="stylesheet" href="/map/map.css?v=20260705-slim-data">
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
   <div class="map-page">
     <header class="map-top-bar">
       <a class="map-home-link" href="/">返回首页</a>
-      <div class="map-title-group">
-        <p class="map-kicker">TACTICAL ATLAS</p>
-        <h1>互动地图</h1>
-      </div>
+      <nav class="map-tabs" id="map-tabs" aria-label="地图列表"></nav>
       <button class="map-reset-button" id="map-reset-button" type="button">重置视图</button>
     </header>
 
     <div class="map-layout">
       <aside class="map-sidebar">
         <section class="map-panel">
-          <p class="map-panel-label">当前地图</p>
-          <h2 id="map-name">加载中…</h2>
-          <p class="map-summary" id="map-summary">正在读取地图配置。</p>
-        </section>
-
-        <section class="map-panel">
-          <div class="map-panel-head">
-            <p class="map-panel-label">地图切换</p>
-            <span class="map-pill" id="map-count-pill">0 张</span>
-          </div>
-          <nav class="map-tabs" id="map-tabs" aria-label="地图列表"></nav>
-        </section>
-
-        <section class="map-panel">
           <p class="map-panel-label">POI 筛选</p>
           <div class="map-filter-bar" id="map-filter-bar"></div>
-        </section>
-
-        <section class="map-panel">
-          <div class="map-panel-head">
-            <p class="map-panel-label">图例</p>
-            <span class="map-pill" id="map-resolution-pill">LOW</span>
-          </div>
-          <div class="map-legend" id="map-legend"></div>
         </section>
       </aside>
 
       <main class="map-stage">
         <div class="map-viewport-shell">
-          <div class="map-loading" id="map-loading">正在同步地图数据…</div>
+          <div class="map-loading" id="map-loading">正在同步地图数据...</div>
           <div class="map-viewport" id="map-viewport">
             <div class="map-transform" id="map-transform">
               <img class="map-base" id="map-base" alt="地图底图">
@@ -70,10 +45,6 @@ layout: false
             <span>点击点位查看详情</span>
           </div>
         </div>
-
-        <footer class="map-status-bar" id="map-status-bar">
-          <span>准备中</span>
-        </footer>
       </main>
     </div>
   </div>
@@ -90,6 +61,6 @@ layout: false
     </article>
   </div>
 
-  <script src="/map/map-engine.js?v=20260703-map-starter" defer></script>
+  <script src="/map/map-engine.js?v=20260705-slim-data" defer></script>
 </body>
 </html>
