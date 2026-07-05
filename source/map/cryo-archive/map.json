@@ -1,0 +1,556 @@
+{
+  "id": "cryo-archive",
+  "title": "低温档案室",
+  "size": {
+    "width": 6720,
+    "height": 4800
+  },
+  "tileSources": {
+    "low": "/map/tiles/cryo-archive/low.webp",
+    "full": "/map/tiles/cryo-archive/full.webp"
+  },
+  "minZoom": 0.05,
+  "maxZoom": 3.6,
+  "pois": [
+    {
+      "id": "runner-respawn-01",
+      "title": "货舱复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 150,
+      "y": 952,
+      "description": "货舱复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-02",
+      "title": "货舱复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 497,
+      "y": 812,
+      "description": "货舱复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-03",
+      "title": "索引区复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 150,
+      "y": 3653,
+      "description": "索引区复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-04",
+      "title": "索引区复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 501,
+      "y": 3833,
+      "description": "索引区复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-05",
+      "title": "苏醒区复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4511,
+      "y": 3693,
+      "description": "苏醒区复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-06",
+      "title": "苏醒区复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4755,
+      "y": 3996,
+      "description": "苏醒区复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-07",
+      "title": "统舱复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4501,
+      "y": 491,
+      "description": "统舱复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-08",
+      "title": "保存区复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 6079,
+      "y": 3298,
+      "description": "保存区复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-09",
+      "title": "生物储存区复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4884,
+      "y": 1398,
+      "description": "生物储存区复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "runner-respawn-10",
+      "title": "生物储存区复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 6020,
+      "y": 1291,
+      "description": "生物储存区复活点",
+      "source": "待提供"
+    },
+    {
+      "id": "extract-possible-01",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 2866,
+      "y": 1612,
+      "description": "需要安全权限3",
+      "source": "待提供"
+    },
+    {
+      "id": "extract-possible-02",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 2434,
+      "y": 2126,
+      "description": "需要安全权限3",
+      "source": "待提供"
+    },
+    {
+      "id": "extract-possible-03",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 2913,
+      "y": 2120,
+      "description": "需要安全权限3",
+      "source": "待提供"
+    },
+    {
+      "id": "extract-possible-04",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 3430,
+      "y": 2108,
+      "description": "需要安全权限3",
+      "source": "待提供"
+    },
+    {
+      "id": "extract-possible-05",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 4065,
+      "y": 1909,
+      "description": "需要安全权限3",
+      "source": "待提供"
+    },
+    {
+      "id": "extract-possible-06",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 3002,
+      "y": 2295,
+      "description": "需要安全权限3",
+      "source": "待提供"
+    },
+    {
+      "id": "extract-possible-001",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 3334,
+      "y": 2317,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-002",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 2884,
+      "y": 2549,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-003",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 3434,
+      "y": 2572,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "crosshair-002",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 4120,
+      "y": 2215,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-004",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 4120,
+      "y": 2454,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-005",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 3984,
+      "y": 2772,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-006",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 2884,
+      "y": 2995,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-007",
+      "title": "撤离站",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 2427,
+      "y": 2546,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-008",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 4165,
+      "y": 807,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-009",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 2231,
+      "y": 817,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-010",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 1068,
+      "y": 1608,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-011",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 584,
+      "y": 2991,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-012",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 2238,
+      "y": 3802,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-013",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 4069,
+      "y": 3775,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-014",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 5654,
+      "y": 3107,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-active-018",
+      "title": "秘密撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 5659,
+      "y": 1877,
+      "description": "需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-019",
+      "title": "受到把守的撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 3775,
+      "y": 2333,
+      "description": "最终撤离倒计时开始时，4个最终撤离点会随机开放一个\n有紫甲把守",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-020",
+      "title": "受到把守的撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 2613,
+      "y": 2344,
+      "description": "最终撤离倒计时开始时，4个最终撤离点会随机开放一个\n有紫甲把守",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-021",
+      "title": "受到把守的撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 3130,
+      "y": 1664,
+      "description": "最终撤离倒计时开始时，4个最终撤离点会随机开放一个\n有紫甲把守",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-022",
+      "title": "受到把守的撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 3128,
+      "y": 2962,
+      "description": "最终撤离倒计时开始时，4个最终撤离点会随机开放一个\n有紫甲把守",
+      "source": ""
+    },
+    {
+      "id": "coolant-full-027",
+      "title": "充满的低温冷却剂",
+      "iconKey": "coolant-full",
+      "iconSize": 120,
+      "x": 2301,
+      "y": 1138,
+      "description": "需要安全权限3,除充满的低温冷却剂外会刷新\n1个保险(与豪华钥匙等级相同)\n电池",
+      "source": ""
+    },
+    {
+      "id": "coolant-full-001",
+      "title": "保险库02\n发电机室",
+      "iconKey": "vault",
+      "iconSize": 120,
+      "x": 3873,
+      "y": 1693,
+      "description": "6 电池\n1 充满的低温冷却剂\n\n固定刷新：金色独特V99\n人工智能子程序02",
+      "source": ""
+    },
+    {
+      "id": "vault-003",
+      "title": "保险库03\n泵站",
+      "iconKey": "vault",
+      "iconSize": 120,
+      "x": 3880,
+      "y": 3000,
+      "description": "4 电池\n泵站凭证\n\n固定刷新：金色独特征服轻机枪\n人工智能子程序03",
+      "source": ""
+    },
+    {
+      "id": "vault-004",
+      "title": "保险库01\n低温维护室",
+      "iconKey": "vault",
+      "iconSize": 120,
+      "x": 2714,
+      "y": 2907,
+      "description": "5 电池\n\n固定刷新：金色独特BRRT\n人工智能子程序01",
+      "source": ""
+    },
+    {
+      "id": "vault-005",
+      "title": "保险库04\n低温监控",
+      "iconKey": "vault",
+      "iconSize": 120,
+      "x": 2714,
+      "y": 1749,
+      "description": "8 电池\n殖民凭证\n(需要安全权限3级以进入圆形监狱将殖民者的DNA样本转换为殖民凭证)\n\n固定刷新：金色独特V85断路器\n人工智能子程序04",
+      "source": ""
+    },
+    {
+      "id": "vault-007",
+      "title": "保险库05\n秘密货舱",
+      "iconKey": "vault",
+      "iconSize": 120,
+      "x": 1497,
+      "y": 2354,
+      "description": "5 电池\n1 充满的低温冷却剂\n休眠凭证\n\n固定刷新：金色独特M77突击步枪\n人工智能子程序05",
+      "source": ""
+    },
+    {
+      "id": "vault-008",
+      "title": "保险库6\n低温实验室\n保险库7\n!!!编译者!!!",
+      "iconKey": "vault",
+      "iconSize": 120,
+      "x": 3648,
+      "y": 1494,
+      "description": "保险库07(编译者遭遇战):\n10 电池(总计)\n1 DNA权限卡\n至少一人曾带出过全部AI子程序1-6\n在你的出生点找到DNA网络并获取DNA序列\n前往地图蓝色标记处\n插入DNA序列并按顺序激活四个面板获得激活的DNA序列\n使用电梯(安全权限3级)前往实验室\n关闭数据损坏区(3电池)\n插入激活的DNA序列以获取指挥官凭证\n使用指挥官凭证和7 电池打开保险库07",
+      "source": ""
+    },
+    {
+      "id": "vault-009",
+      "title": "保险库6\n低温实验室\n保险库7\n!!!编译者!!!",
+      "iconKey": "vault",
+      "iconSize": 120,
+      "x": 3655,
+      "y": 3214,
+      "description": "保险库06:\n9 电池\n1 充满的低温冷却剂\n前往秘密实验室(需要杀毒包+安全权限等级4)并记住图案从左至右的顺序\n使用电梯进入实验室并启动保险库06\n按照顺序互动实验室中的图案\n若有重复图案，实验室中的面板可重复互动\n\n固定刷新：金色独特风行者M1T\n!!!人工智能子程序06!!!",
+      "source": ""
+    },
+    {
+      "id": "vault-012",
+      "title": "秘密实验室",
+      "iconKey": "secret-lab",
+      "iconSize": 120,
+      "x": 5153,
+      "y": 2347,
+      "description": "固定刷新多个安全监视器(安全标签+3)\n需要杀毒包+安全权限4",
+      "source": ""
+    },
+    {
+      "id": "secret-lab-013",
+      "title": "可能的休眠凭证刷新点",
+      "iconKey": "credential-red",
+      "iconSize": 120,
+      "x": 3268,
+      "y": 1527,
+      "description": "射击墙上的绿色开关可关闭冰霜地面",
+      "source": ""
+    },
+    {
+      "id": "credential-red-014",
+      "title": "可能的休眠凭证刷新点",
+      "iconKey": "credential-red",
+      "iconSize": 120,
+      "x": 3268,
+      "y": 3188,
+      "description": "射击墙上的绿色开关可关闭冰霜地面",
+      "source": ""
+    },
+    {
+      "id": "credential-orange-015",
+      "title": "可能的泵站凭证刷新点",
+      "iconKey": "credential-orange",
+      "iconSize": 120,
+      "x": 4245,
+      "y": 930,
+      "description": "射击墙上的绿色开关可关闭冰霜地面",
+      "source": ""
+    },
+    {
+      "id": "credential-orange-016",
+      "title": "可能的泵站凭证刷新点",
+      "iconKey": "credential-orange",
+      "iconSize": 120,
+      "x": 5647,
+      "y": 1638,
+      "description": "六个区域中有一个不会有玩家出生\n而是刷新泵站凭证\n拾取后刷新一只灼烧看守者(金盾)",
+      "source": ""
+    },
+    {
+      "id": "credential-orange-017",
+      "title": "可能的泵站凭证刷新点",
+      "iconKey": "credential-orange",
+      "iconSize": 120,
+      "x": 5636,
+      "y": 2841,
+      "description": "六个区域中有一个不会有玩家出生\n而是刷新泵站凭证\n拾取后刷新一只灼烧看守者(金盾)",
+      "source": ""
+    },
+    {
+      "id": "credential-orange-018",
+      "title": "可能的泵站凭证刷新点",
+      "iconKey": "credential-orange",
+      "iconSize": 120,
+      "x": 4249,
+      "y": 3793,
+      "description": "六个区域中有一个不会有玩家出生\n而是刷新泵站凭证\n拾取后刷新一只灼烧看守者(金盾)",
+      "source": ""
+    },
+    {
+      "id": "credential-orange-019",
+      "title": "可能的泵站凭证刷新点",
+      "iconKey": "credential-orange",
+      "iconSize": 120,
+      "x": 999,
+      "y": 2992,
+      "description": "六个区域中有一个不会有玩家出生\n而是刷新泵站凭证\n拾取后刷新一只灼烧看守者(金盾)",
+      "source": ""
+    },
+    {
+      "id": "credential-orange-020",
+      "title": "可能的泵站凭证刷新点",
+      "iconKey": "credential-orange",
+      "iconSize": 120,
+      "x": 977,
+      "y": 1590,
+      "description": "六个区域中有一个不会有玩家出生\n而是刷新泵站凭证\n拾取后刷新一只灼烧看守者(金盾)",
+      "source": ""
+    },
+    {
+      "id": "credential-blue-drone-021",
+      "title": "殖民者的DNA样本",
+      "iconKey": "credential-blue-drone",
+      "iconSize": 120,
+      "x": 2032,
+      "y": 2339,
+      "description": "射击并从其掉落物中获取殖民者的DNA样本\n将其带入圆形监狱(安全权限等级3)并插入机器，使用1 电池将其转换为殖民凭证",
+      "source": ""
+    }
+  ]
+}

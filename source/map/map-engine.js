@@ -1,7 +1,5 @@
 const state = {
-  manifest: null,
   activeMap: null,
-  activeMapData: null,
   activeFilterKeys: new Set(),
   zoom: 1,
   minZoom: 0.5,
@@ -48,50 +46,36 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function initialize() {
-  const manifest = await fetchJson("/map/data/manifest.json");
-  const iconCatalog = await fetchJson("/map/assets/icons/poi-icons.json");
+  const pageConfig = window.MAP_PAGE_CONFIG;
 
-  state.manifest = manifest;
+  if (!pageConfig?.dataPath) {
+    throw new Error("Missing MAP_PAGE_CONFIG.dataPath");
+  }
+
+  const [iconCatalog, mapData] = await Promise.all([
+    fetchJson(pageConfig.iconCatalogPath ?? "/map/assets/icons/poi-icons.json"),
+    fetchJson(pageConfig.dataPath),
+  ]);
+
   state.iconCatalog = new Map((iconCatalog.icons ?? []).map((entry) => [entry.id, entry]));
-
-  renderTabs();
-  renderFilterButtons();
-  bindEvents();
-
-  if (!manifest.maps?.length) {
-    throw new Error("Manifest does not contain any maps.");
-  }
-
-  await activateMap(manifest.maps[0].id);
-}
-
-async function activateMap(mapId) {
-  const nextMap = state.manifest.maps.find((entry) => entry.id === mapId);
-
-  if (!nextMap) {
-    throw new Error(`Unknown map id: ${mapId}`);
-  }
-
-  elements.mapLoading.hidden = false;
-  state.activeMap = nextMap;
-  state.activeMapData = await fetchJson(nextMap.dataPath);
+  state.activeMap = mapData;
   state.activeFilterKeys = new Set(getPoiEntries().map((entry) => entry.key));
-  state.selectedPoiId = null;
-  state.minZoom = nextMap.minZoom ?? 0.45;
-  state.maxZoom = nextMap.maxZoom ?? 4.5;
+  state.minZoom = mapData.minZoom ?? 0.45;
+  state.maxZoom = mapData.maxZoom ?? 4.5;
 
-  elements.mapTransform.style.width = `${nextMap.size.width}px`;
-  elements.mapTransform.style.height = `${nextMap.size.height}px`;
-  elements.mapOverlaySvg.setAttribute("viewBox", `0 0 ${nextMap.size.width} ${nextMap.size.height}`);
-  elements.mapOverlaySvg.setAttribute("width", String(nextMap.size.width));
-  elements.mapOverlaySvg.setAttribute("height", String(nextMap.size.height));
-  elements.mapPoiLayer.style.width = `${nextMap.size.width}px`;
-  elements.mapPoiLayer.style.height = `${nextMap.size.height}px`;
+  elements.mapTransform.style.width = `${mapData.size.width}px`;
+  elements.mapTransform.style.height = `${mapData.size.height}px`;
+  elements.mapOverlaySvg.setAttribute("viewBox", `0 0 ${mapData.size.width} ${mapData.size.height}`);
+  elements.mapOverlaySvg.setAttribute("width", String(mapData.size.width));
+  elements.mapOverlaySvg.setAttribute("height", String(mapData.size.height));
+  elements.mapPoiLayer.style.width = `${mapData.size.width}px`;
+  elements.mapPoiLayer.style.height = `${mapData.size.height}px`;
 
   renderTabs();
   renderFilterButtons();
   renderRegions();
   renderPois();
+  bindEvents();
   closePopup();
   resetResolutionMode();
   fitMapToViewport();
@@ -151,22 +135,16 @@ function bindEvents() {
 function renderTabs() {
   elements.mapTabs.innerHTML = "";
 
-  if (!state.manifest) {
+  if (!state.activeMap) {
     return;
   }
 
-  for (const map of state.manifest.maps) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `map-tab${state.activeMap?.id === map.id ? " is-active" : ""}`;
-    button.textContent = map.title;
-    button.addEventListener("click", () => {
-      activateMap(map.id).catch((error) => {
-        console.error(error);
-      });
-    });
-    elements.mapTabs.appendChild(button);
-  }
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "map-tab is-active";
+  button.textContent = state.activeMap.title ?? "当前地图";
+  button.setAttribute("aria-current", "page");
+  elements.mapTabs.appendChild(button);
 }
 
 function renderFilterButtons() {
@@ -203,7 +181,7 @@ function renderFilterButtons() {
 }
 
 function getPoiEntries() {
-  const pois = state.activeMapData?.pois ?? [];
+  const pois = state.activeMap?.pois ?? [];
 
   if (!pois.length) {
     return [];
@@ -241,7 +219,7 @@ function getPoiEntries() {
 function renderRegions() {
   const fragments = [];
 
-  for (const region of state.activeMapData?.regions ?? []) {
+  for (const region of state.activeMap?.regions ?? []) {
     const points = (region.polygon ?? []).map(([x, y]) => `${x},${y}`).join(" ");
     const label = region.labelPosition ?? region.polygon?.[0];
     fragments.push(`
@@ -274,9 +252,7 @@ function renderPois() {
     button.style.marginTop = `${-(iconSize / 2)}px`;
     button.dataset.iconSize = String(iconSize);
     button.setAttribute("aria-label", `${poi.title} ${iconEntry?.label ?? "POI"}`);
-    button.innerHTML = `
-      ${iconEntry ? `<img class="map-poi-icon" src="${escapeHtml(iconEntry.path)}" alt="">` : ""}
-    `;
+    button.innerHTML = `${iconEntry ? `<img class="map-poi-icon" src="${escapeHtml(iconEntry.path)}" alt="">` : ""}`;
     button.addEventListener("click", (event) => {
       event.stopPropagation();
       openPopup(poi);
@@ -440,7 +416,7 @@ function syncBaseImage() {
   }
 
   const resolution = getResolutionForCurrentMode();
-  const sourcePath = state.activeMap.tileSources[resolution];
+  const sourcePath = state.activeMap.tileSources?.[resolution];
 
   if (!sourcePath) {
     return;
@@ -449,12 +425,12 @@ function syncBaseImage() {
   if (resolution !== state.currentResolution || elements.mapBase.dataset.mapId !== state.activeMap.id) {
     state.currentResolution = resolution;
     elements.mapBase.src = sourcePath;
-    elements.mapBase.dataset.mapId = state.activeMap.id;
+    elements.mapBase.dataset.mapId = state.activeMap.id ?? "single-map";
   }
 }
 
 function getVisiblePois() {
-  return (state.activeMapData?.pois ?? []).filter((poi) => {
+  return (state.activeMap?.pois ?? []).filter((poi) => {
     if (!poi.iconKey) {
       return false;
     }
@@ -489,7 +465,7 @@ function getPoiVisualScale(iconSize) {
 }
 
 function getResolutionForCurrentMode() {
-  if (state.resolutionMode === "full" && state.activeMap?.tileSources.full) {
+  if (state.resolutionMode === "full" && state.activeMap?.tileSources?.full) {
     return "full";
   }
 
@@ -506,7 +482,7 @@ function resetResolutionMode() {
 }
 
 function scheduleFullResolutionPromotion() {
-  if (!state.activeMap?.tileSources.full) {
+  if (!state.activeMap?.tileSources?.full) {
     return;
   }
 
@@ -520,7 +496,7 @@ function scheduleFullResolutionPromotion() {
 }
 
 function promoteToFullResolution() {
-  if (!state.activeMap?.tileSources.full) {
+  if (!state.activeMap?.tileSources?.full) {
     return;
   }
 

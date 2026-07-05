@@ -6,61 +6,14 @@ layout: false
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=/map/cryo-archive/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>互动地图 - 《失落星船：马拉松》中文站</title>
-  <meta name="description" content="Marathon 互动地图原型，可用于底图预览、POI 放置、筛选与信息验证。">
-  <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
-  <link rel="stylesheet" href="/map/map.css?v=20260705-slim-data">
+  <title>跳转中 - 《失落星船：马拉松》中文站</title>
+  <script>
+    window.location.replace("/map/cryo-archive/");
+  </script>
 </head>
 <body>
-  <div class="scanlines" aria-hidden="true"></div>
-  <div class="map-page">
-    <header class="map-top-bar">
-      <a class="map-home-link" href="/">返回首页</a>
-      <nav class="map-tabs" id="map-tabs" aria-label="地图列表"></nav>
-      <button class="map-reset-button" id="map-reset-button" type="button">重置视图</button>
-    </header>
-
-    <div class="map-layout">
-      <aside class="map-sidebar">
-        <section class="map-panel">
-          <p class="map-panel-label">POI 筛选</p>
-          <div class="map-filter-bar" id="map-filter-bar"></div>
-        </section>
-      </aside>
-
-      <main class="map-stage">
-        <div class="map-viewport-shell">
-          <div class="map-loading" id="map-loading">正在同步地图数据...</div>
-          <div class="map-viewport" id="map-viewport">
-            <div class="map-transform" id="map-transform">
-              <img class="map-base" id="map-base" alt="地图底图">
-              <svg class="map-overlay-svg" id="map-overlay-svg" aria-hidden="true"></svg>
-              <div class="map-poi-layer" id="map-poi-layer"></div>
-            </div>
-          </div>
-          <div class="map-hint">
-            <span>滚轮缩放</span>
-            <span>拖拽平移</span>
-            <span>点击点位查看详情</span>
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-
-  <div class="map-popup is-hidden" id="map-popup" role="dialog" aria-modal="false" aria-labelledby="map-popup-title">
-    <div class="map-popup-backdrop" data-close-popup="true"></div>
-    <article class="map-popup-card">
-      <button class="map-popup-close" id="map-popup-close" type="button" aria-label="关闭">×</button>
-      <p class="map-panel-label" id="map-popup-type">POI</p>
-      <h2 id="map-popup-title">点位标题</h2>
-      <p class="map-popup-copy" id="map-popup-body">点位详情</p>
-      <dl class="map-popup-meta" id="map-popup-meta"></dl>
-      <div class="map-popup-links" id="map-popup-links"></div>
-    </article>
-  </div>
-
-  <script src="/map/map-engine.js?v=20260705-slim-data" defer></script>
+  <p>正在跳转到低温档案室地图：<a href="/map/cryo-archive/">/map/cryo-archive/</a></p>
 </body>
 </html>
