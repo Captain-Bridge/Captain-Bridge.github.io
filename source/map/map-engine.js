@@ -165,6 +165,53 @@ function renderTabs() {
 function renderFilterButtons() {
   elements.mapFilterBar.innerHTML = "";
   const filterEntries = getPoiEntries();
+  const allKeys = filterEntries.map((entry) => entry.key);
+
+  if (filterEntries.length) {
+    const hasAnyHidden = filterEntries.some((entry) => !state.activeFilterKeys.has(entry.key));
+    const hasAnyVisible = filterEntries.some((entry) => state.activeFilterKeys.has(entry.key));
+    const utilityRow = document.createElement("div");
+    utilityRow.className = "map-filter-utility-row";
+
+    const showAllButton = document.createElement("button");
+    showAllButton.type = "button";
+    showAllButton.className = `map-filter-button map-filter-button--utility${hasAnyHidden ? "" : " is-active"}`;
+    showAllButton.style.setProperty("--filter-accent", "var(--blue)");
+    showAllButton.setAttribute("aria-pressed", String(!hasAnyHidden));
+    showAllButton.title = "显示全部";
+    showAllButton.innerHTML = `
+      <span class="map-filter-copy">
+        <span class="map-filter-title">显示全部</span>
+        <span class="map-filter-meta">启用所有筛选</span>
+      </span>
+    `;
+    showAllButton.addEventListener("click", () => {
+      state.activeFilterKeys = new Set(allKeys);
+      renderFilterButtons();
+      renderPois();
+    });
+    utilityRow.appendChild(showAllButton);
+
+    const hideAllButton = document.createElement("button");
+    hideAllButton.type = "button";
+    hideAllButton.className = `map-filter-button map-filter-button--utility${hasAnyVisible ? "" : " is-active"}`;
+    hideAllButton.style.setProperty("--filter-accent", "var(--red)");
+    hideAllButton.setAttribute("aria-pressed", String(!hasAnyVisible));
+    hideAllButton.title = "隐藏全部";
+    hideAllButton.innerHTML = `
+      <span class="map-filter-copy">
+        <span class="map-filter-title">隐藏全部</span>
+        <span class="map-filter-meta">关闭所有筛选</span>
+      </span>
+    `;
+    hideAllButton.addEventListener("click", () => {
+      state.activeFilterKeys = new Set();
+      renderFilterButtons();
+      renderPois();
+    });
+    utilityRow.appendChild(hideAllButton);
+    elements.mapFilterBar.appendChild(utilityRow);
+  }
 
   for (const entry of filterEntries) {
     const isActive = state.activeFilterKeys.has(entry.key);

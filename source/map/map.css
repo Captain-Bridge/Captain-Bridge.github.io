@@ -210,6 +210,12 @@ body {
   gap: 10px;
 }
 
+.map-filter-utility-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
 .map-tab,
 .map-filter-button {
   padding: 10px 12px;
@@ -238,6 +244,17 @@ body {
   gap: 10px;
   padding: 12px 14px;
   border-left: 3px solid var(--filter-accent, transparent);
+}
+
+.map-filter-button--utility {
+  width: 100%;
+  min-width: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.map-filter-button--utility .map-filter-copy {
+  align-items: center;
 }
 
 .map-filter-copy {
