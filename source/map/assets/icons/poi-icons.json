@@ -44,14 +44,14 @@
     },
     {
       "id": "credential-orange",
-      "label": "可能的泵站凭证刷新点",
+      "label": "泵站凭证刷新点",
       "path": "/map/assets/icons/credential-orange.svg",
       "accentColor": "#ffb126",
       "order": 70
     },
     {
       "id": "credential-red",
-      "label": "可能的休眠凭证刷新点",
+      "label": "休眠凭证刷新点",
       "path": "/map/assets/icons/credential-red.svg",
       "accentColor": "#ff5555",
       "order": 80
