@@ -1,5 +1,5 @@
 {
-  "id": "cryo-archive",
+   "id": "cryo-archive",
   "title": "低温档案室",
   "size": {
     "width": 6720,
@@ -379,7 +379,7 @@
       "iconSize": 120,
       "x": 2301,
       "y": 1138,
-      "description": "需要安全权限3,除充满的低温冷却剂外会刷新\n1个保险(与豪华钥匙等级相同)\n电池",
+      "description": "需要安全权限3",
       "source": ""
     },
     {
@@ -389,7 +389,7 @@
       "iconSize": 120,
       "x": 3873,
       "y": 1693,
-      "description": "6 电池\n1 充满的低温冷却剂\n\n固定刷新：金色独特V99\n人工智能子程序02",
+      "description": "4 电池\n1 充满的低温冷却剂\n\n固定刷新：金色独特V99\n人工智能子程序02",
       "source": ""
     },
     {
@@ -399,7 +399,7 @@
       "iconSize": 120,
       "x": 3880,
       "y": 3000,
-      "description": "4 电池\n泵站凭证\n\n固定刷新：金色独特征服轻机枪\n人工智能子程序03",
+      "description": "5 电池\n泵站凭证\n\n固定刷新：金色独特征服轻机枪\n人工智能子程序03",
       "source": ""
     },
     {
@@ -419,7 +419,7 @@
       "iconSize": 120,
       "x": 2714,
       "y": 1749,
-      "description": "8 电池\n殖民凭证\n(需要安全权限3级以进入圆形监狱将殖民者的DNA样本转换为殖民凭证)\n\n固定刷新：金色独特V85断路器\n人工智能子程序04",
+      "description": "6 电池\n殖民凭证\n(需要安全权限3级以进入圆形监狱使用1 电池将殖民者的DNA样本转换为殖民凭证)\n\n固定刷新：金色独特V85断路器\n人工智能子程序04",
       "source": ""
     },
     {
@@ -429,7 +429,7 @@
       "iconSize": 120,
       "x": 1497,
       "y": 2354,
-      "description": "5 电池\n1 充满的低温冷却剂\n休眠凭证\n\n固定刷新：金色独特M77突击步枪\n人工智能子程序05",
+      "description": "4 电池\n1 充满的低温冷却剂\n休眠凭证\n\n固定刷新：金色独特M77突击步枪\n人工智能子程序05",
       "source": ""
     },
     {
@@ -449,7 +449,7 @@
       "iconSize": 120,
       "x": 3655,
       "y": 3214,
-      "description": "保险库06:\n9 电池\n1 充满的低温冷却剂\n前往秘密实验室(需要杀毒包+安全权限等级4)并记住图案从左至右的顺序\n使用电梯进入实验室并启动保险库06\n按照顺序互动实验室中的图案\n若有重复图案，实验室中的面板可重复互动\n\n固定刷新：金色独特风行者M1T\n!!!人工智能子程序06!!!",
+      "description": "保险库06:\n8 电池\n1 充满的低温冷却剂\n前往秘密实验室(需要杀毒包+安全权限等级4)并记住图案从左至右的顺序\n使用电梯进入实验室并启动保险库06\n按照顺序互动实验室中的图案\n若有重复图案，实验室中的面板可重复互动\n\n固定刷新：金色独特风行者M1T\n!!!人工智能子程序06!!!",
       "source": ""
     },
     {
@@ -550,6 +550,186 @@
       "x": 2032,
       "y": 2339,
       "description": "射击并从其掉落物中获取殖民者的DNA样本\n将其带入圆形监狱(安全权限等级3)并插入机器，使用1 电池将其转换为殖民凭证",
+      "source": ""
+    },
+    {
+      "id": "vault-exit-001",
+      "title": "保险库05出口",
+      "iconKey": "vault-exit",
+      "iconSize": 120,
+      "x": 1103,
+      "y": 1867,
+      "description": "此处通常会刷新一个安全监视器(安全权限+3)\n以及一个可以从外部通过打碎玻璃获取的安全标签\n此处的门只可通过保险库05离开后从内部打开\n所以05蹲撤离点比较困难",
+      "source": ""
+    },
+    {
+      "id": "vault-exit-002",
+      "title": "保险库04出口",
+      "iconKey": "vault-exit",
+      "iconSize": 120,
+      "x": 2407,
+      "y": 1980,
+      "description": "保险库04出口",
+      "source": ""
+    },
+    {
+      "id": "vault-exit-003",
+      "title": "保险库01出口",
+      "iconKey": "vault-exit",
+      "iconSize": 120,
+      "x": 2245,
+      "y": 2698,
+      "description": "保险库01出口",
+      "source": ""
+    },
+    {
+      "id": "vault-exit-004",
+      "title": "保险库06出口",
+      "iconKey": "vault-exit",
+      "iconSize": 120,
+      "x": 3885,
+      "y": 2339,
+      "description": "保险库06出口\n从上部斜坡滑下来",
+      "source": ""
+    },
+    {
+      "id": "vault-exit-005",
+      "title": "保险库03出口",
+      "iconKey": "vault-exit",
+      "iconSize": 120,
+      "x": 3787,
+      "y": 3755,
+      "description": "保险库03出口",
+      "source": ""
+    },
+    {
+      "id": "vault-exit-006",
+      "title": "保险库02出口",
+      "iconKey": "vault-exit",
+      "iconSize": 120,
+      "x": 3817,
+      "y": 1102,
+      "description": "保险库02出口",
+      "source": ""
+    },
+    {
+      "id": "elevator-001",
+      "title": "电梯",
+      "iconKey": "elevator",
+      "iconSize": 120,
+      "x": 3536,
+      "y": 1484,
+      "description": "通向实验室(保险库06/07)的电梯\n需要安全权限3级打开电梯门",
+      "source": ""
+    },
+    {
+      "id": "elevator-002",
+      "title": "电梯",
+      "iconKey": "elevator",
+      "iconSize": 120,
+      "x": 3567,
+      "y": 3219,
+      "description": "通向实验室(保险库06/07)的电梯\n需要安全权限3级打开电梯门",
+      "source": ""
+    },
+    {
+      "id": "treasure-001",
+      "title": "冷却剂房间",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 2307,
+      "y": 1138,
+      "description": "需要安全权限3级",
+      "source": ""
+    },
+    {
+      "id": "treasure-002",
+      "title": "背包房间",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 2329,
+      "y": 3556,
+      "description": "需要安全权限2级\n房间内除保险外还会刷新背包",
+      "source": ""
+    },
+    {
+      "id": "treasure-003",
+      "title": "芯片房间",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 2424,
+      "y": 1845,
+      "description": "需要安全权限2级\n房间内除保险外还会刷新特殊武器芯片\n惩戒：对斯菲特人伤害增加",
+      "source": ""
+    },
+    {
+      "id": "treasure-004",
+      "title": "军械库",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 3723,
+      "y": 2339,
+      "description": "需要安全权限4级\n内有1至臻保险+2普通保险\n货架上大量投掷物、货物",
+      "source": ""
+    },
+    {
+      "id": "treasure-005",
+      "title": "护甲房间",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 4021,
+      "y": 2756,
+      "description": "需要安全权限2级\n房间内除保险外还会刷新护甲",
+      "source": ""
+    },
+    {
+      "id": "treasure-006",
+      "title": "编译者踪迹",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 3186,
+      "y": 2342,
+      "description": "需要安全权限5级\n打掉周围全部绿色开关解除冰霜地板才可互动\n可完成任务“打开我最喜欢的舱门”\n内有且只有一个4格秘藏物品“编译者踪迹”\n带出后小队中每人获得4W信用点\n百科成就仅有带出玩家解锁",
+      "source": ""
+    },
+    {
+      "id": "coolant-full-001",
+      "title": "冷却剂填充站",
+      "iconKey": "coolant-full",
+      "iconSize": 120,
+      "x": 3314,
+      "y": 2415,
+      "description": "消耗1 电池将“空的低温冷却剂”转换为充满的低温冷却剂",
+      "source": ""
+    },
+    {
+      "id": "coolant-full-002",
+      "title": "低温冷却剂",
+      "iconKey": "coolant-full",
+      "iconSize": 120,
+      "x": 5691,
+      "y": 1480,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "coolant-full-003",
+      "title": "低温冷却剂",
+      "iconKey": "coolant-full",
+      "iconSize": 120,
+      "x": 4399,
+      "y": 2811,
+      "description": "保存区中有大量空的低温冷却剂散落在各地",
+      "source": ""
+    },
+    {
+      "id": "credential-blue-drone-004",
+      "title": "殖民凭证",
+      "iconKey": "credential-blue-drone",
+      "iconSize": 120,
+      "x": 3108,
+      "y": 2285,
+      "description": "在此处使用1 电池将殖民者的DNA样本转换为殖民凭证以开启保险库04",
       "source": ""
     }
   ]

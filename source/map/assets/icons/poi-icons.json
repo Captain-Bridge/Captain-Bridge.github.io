@@ -30,7 +30,7 @@
     },
     {
       "id": "coolant-full",
-      "label": "充满的低温冷却剂",
+      "label": "低温冷却剂",
       "path": "/map/assets/icons/coolant-full.svg",
       "accentColor": "#f68432",
       "order": 50
@@ -72,10 +72,31 @@
     },
     {
       "id": "extract-guarded",
-      "label": "受到把守的撤离点",
+      "label": "最终撤离点",
       "path": "/map/assets/icons/extract-guarded.svg",
       "accentColor": "#ff2e73",
       "order": 110
+    },
+    {
+      "id": "vault-exit",
+      "label": "保险库出口",
+      "path": "/map/assets/icons/vault-exit.svg",
+      "accentColor": "#5da5ff",
+      "order": 120
+    },
+    {
+      "id": "elevator",
+      "label": "电梯",
+      "path": "/map/assets/icons/elevator.svg",
+      "accentColor": "#5da5ff",
+      "order": 130
+    },
+    {
+      "id": "treasure",
+      "label": "宝藏",
+      "path": "/map/assets/icons/treasure.svg",
+      "accentColor": "#ffd700",
+      "order": 140
     }
   ]
 }
