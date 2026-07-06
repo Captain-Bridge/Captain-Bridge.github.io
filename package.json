@@ -6,7 +6,7 @@
     "build": "hexo generate",
     "check:pages-size": "node tools/check-pages-size.mjs public",
     "clean": "hexo clean",
-    "convert:png-webp": "node tools/convert-png-to-webp.mjs",
+    "convert:png-webp": "python tools/convert-png-to-webp.py",
     "deploy": "npm run build",
     "preview": "npm run clean && npm run build && python tools/serve-public.py",
     "serve:public": "python tools/serve-public.py",

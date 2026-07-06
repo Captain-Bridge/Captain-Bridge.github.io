@@ -9,7 +9,7 @@ import numpy as np
 
 ROOT = Path(r"C:\codes\myblog")
 REF_PATH = ROOT / "source" / "map" / "参考图.png"
-BASE_PATH = ROOT / "source" / "map" / "assets" / "cyro_archive_basemap_4x.png"
+BASE_PATH = ROOT / "source" / "map" / "assets" / "cyro_archive_basemap_4x.webp"
 OUT_PATH = ROOT / "artifacts" / "cryo-icon-detections.json"
 
 
