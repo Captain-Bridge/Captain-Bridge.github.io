@@ -70,9 +70,6 @@
           "iconKey": {
             "type": "string"
           },
-          "iconSize": {
-            "type": "number"
-          },
           "x": {
             "type": "number"
           },

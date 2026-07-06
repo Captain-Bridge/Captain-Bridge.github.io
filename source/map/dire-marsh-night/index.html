@@ -1,0 +1,78 @@
+---
+title: 恐怖沼泽（夜间）
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>恐怖沼泽（夜间） - 《失落星船：马拉松》中文站</title>
+  <meta name="description" content="恐怖沼泽夜间互动地图底图。">
+  <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <link rel="stylesheet" href="/map/map.css?v=20260706-dire-marsh-night">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="map-page">
+    <header class="map-top-bar">
+      <a class="map-home-link" href="/">返回首页</a>
+      <nav class="map-tabs" id="map-tabs" aria-label="当前地图"></nav>
+      <button class="map-reset-button" id="map-reset-button" type="button">重置视图</button>
+    </header>
+
+    <div class="map-layout">
+      <aside class="map-sidebar">
+        <section class="map-panel">
+          <p class="map-panel-label">POI 筛选</p>
+          <div class="map-filter-bar" id="map-filter-bar"></div>
+        </section>
+      </aside>
+
+      <main class="map-stage">
+        <div class="map-viewport-shell">
+          <div class="map-loading" id="map-loading">正在同步地图数据...</div>
+          <div class="map-viewport" id="map-viewport">
+            <div class="map-transform" id="map-transform">
+              <img class="map-base" id="map-base" alt="恐怖沼泽夜间地图底图">
+              <svg class="map-overlay-svg" id="map-overlay-svg" aria-hidden="true"></svg>
+              <div class="map-poi-layer" id="map-poi-layer"></div>
+            </div>
+          </div>
+          <div class="map-hint">
+            <span>滚轮缩放</span>
+            <span>拖拽平移</span>
+            <span>点击点位查看详情</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="map-popup is-hidden" id="map-popup" role="dialog" aria-modal="false" aria-labelledby="map-popup-title">
+    <div class="map-popup-backdrop" data-close-popup="true"></div>
+    <article class="map-popup-card">
+      <button class="map-popup-close" id="map-popup-close" type="button" aria-label="关闭">×</button>
+      <p class="map-panel-label" id="map-popup-type">POI</p>
+      <h2 id="map-popup-title">点位标题</h2>
+      <p class="map-popup-copy" id="map-popup-body">点位详情</p>
+      <dl class="map-popup-meta" id="map-popup-meta"></dl>
+      <div class="map-popup-links" id="map-popup-links"></div>
+    </article>
+  </div>
+
+  <script>
+    window.MAP_PAGE_CONFIG = {
+      activeTabId: "dire-marsh-night",
+      tabs: [
+        { id: "cryo-archive", title: "低温档案室", href: "/map/cryo-archive/" },
+        { id: "dire-marsh", title: "恐怖沼泽", href: "/map/dire-marsh/" },
+        { id: "dire-marsh-night", title: "恐怖沼泽（夜间）", href: "/map/dire-marsh-night/" }
+      ],
+      dataPath: "/map/dire-marsh-night/dire-marsh-night.json",
+      iconCatalogPath: "/map/assets/icons/poi-icons.json",
+    };
+  </script>
+  <script src="/map/map-engine.js?v=20260706-dire-marsh-night" defer></script>
+</body>
+</html>

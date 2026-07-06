@@ -1,0 +1,657 @@
+{
+  "id": "dire-marsh-night",
+  "title": "恐怖沼泽（夜间）",
+  "size": {
+    "width": 11752,
+    "height": 8568
+  },
+  "iconScale": 1.78,
+  "tileSources": {
+    "low": "/map/tiles/dire-marsh/low.webp",
+    "full": "/map/tiles/dire-marsh/full.webp"
+  },
+  "minZoom": 0.03,
+  "maxZoom": 3.6,
+  "pois": [
+    {
+      "id": "extract-possible-002",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 1790,
+      "y": 3425,
+      "description": "内有秘密撤离站\n需要5 UESC凭证恢复电力以激活\n激活后前往地图标记的撤离点互动开始撤离倒数\n0.5min左右，撤离光柱与声音传播距离较近\n地堡内也有完成合约使用的焚烧炉",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-004",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 1144,
+      "y": 5690,
+      "description": "内有秘密撤离站\n需要5 UESC凭证恢复电力以激活\n激活后前往地图标记的撤离点互动开始撤离倒数\n0.5min左右，撤离光柱与声音传播距离较近\n地堡内也有完成合约使用的焚烧炉",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-005",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 5036,
+      "y": 1916,
+      "description": "内有秘密撤离站\n需要5 UESC凭证恢复电力以激活\n激活后前往地图标记的撤离点互动开始撤离倒数\n0.5min左右，撤离光柱与声音传播距离较近\n地堡内也有完成合约使用的焚烧炉",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-006",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 8856,
+      "y": 6000,
+      "description": "内有秘密撤离站\n需要5 UESC凭证恢复电力以激活\n激活后前往地图标记的撤离点互动开始撤离倒数\n0.5min左右，撤离光柱与声音传播距离较近\n地堡内也有完成合约使用的焚烧炉",
+      "source": ""
+    },
+    {
+      "id": "extract-possible-007",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-possible",
+      "iconSize": 120,
+      "x": 10575,
+      "y": 3036,
+      "description": "内有秘密撤离站\n需要5 UESC凭证恢复电力以激活\n激活后前往地图标记的撤离点互动开始撤离倒数\n0.5min左右，撤离光柱与声音传播距离较近\n地堡内也有完成合约使用的焚烧炉",
+      "source": ""
+    },
+    {
+      "id": "extract-active-008",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 2448,
+      "y": 4373,
+      "description": "由地堡[待确定]激活的秘密撤离点",
+      "source": ""
+    },
+    {
+      "id": "extract-active-009",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 1770,
+      "y": 4926,
+      "description": "由地堡[待确定]激活的秘密撤离点",
+      "source": ""
+    },
+    {
+      "id": "extract-active-010",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 8296,
+      "y": 5367,
+      "description": "由地堡[待确定]激活的秘密撤离点",
+      "source": ""
+    },
+    {
+      "id": "extract-active-011",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 9482,
+      "y": 3609,
+      "description": "由地堡[待确定]激活的秘密撤离点",
+      "source": ""
+    },
+    {
+      "id": "extract-active-012",
+      "title": "地堡[待确定]",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 5405,
+      "y": 2990,
+      "description": "由地堡[待确定]激活的秘密撤离点",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-013",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 5840,
+      "y": 5664,
+      "description": "追击撤离点",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-014",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 8204,
+      "y": 2977,
+      "description": "追击撤离点",
+      "source": ""
+    },
+    {
+      "id": "guard-015",
+      "title": "护航队刷新点",
+      "iconKey": "guard",
+      "iconSize": 120,
+      "x": 6367,
+      "y": 3556,
+      "description": "护航队刷新点\n在到达下一个护航队路径点之前击杀两个蓝甲UESC突击部队就不会受到干扰\n蓝甲UESC突击部队在每个路径点过后才会刷新",
+      "source": ""
+    },
+    {
+      "id": "net-tower-016",
+      "title": "网络信号塔",
+      "iconKey": "net-tower",
+      "iconSize": 120,
+      "x": 2257,
+      "y": 3965,
+      "description": "使用3 UESC凭证激活\n激活后在地图上随机储藏箱刷新点标记一个\n装备/补给/武器储藏箱\n只有激活后对应地点才会刷新储藏箱\n激活后若有其它队伍玩家进入也会刷出储藏箱",
+      "source": ""
+    },
+    {
+      "id": "net-tower-017",
+      "title": "网络信号塔",
+      "iconKey": "net-tower",
+      "iconSize": 120,
+      "x": 3285,
+      "y": 6125,
+      "description": "使用3 UESC凭证激活\n在地图内标记装备/补给/武器储藏箱之一\n只有启动后对应地点才会刷新储藏箱",
+      "source": ""
+    },
+    {
+      "id": "net-tower-019",
+      "title": "网络信号塔",
+      "iconKey": "net-tower",
+      "iconSize": 120,
+      "x": 6505,
+      "y": 5855,
+      "description": "使用3 UESC凭证激活\n在地图内标记装备/补给/武器储藏箱之一\n只有启动后对应地点才会刷新储藏箱",
+      "source": ""
+    },
+    {
+      "id": "net-tower-020",
+      "title": "网络信号塔",
+      "iconKey": "net-tower",
+      "iconSize": 120,
+      "x": 8915,
+      "y": 4452,
+      "description": "使用3 UESC凭证激活\n在地图内标记装备/补给/武器储藏箱之一\n只有启动后对应地点才会刷新储藏箱",
+      "source": ""
+    },
+    {
+      "id": "net-tower-021",
+      "title": "网络信号塔",
+      "iconKey": "net-tower",
+      "iconSize": 120,
+      "x": 5155,
+      "y": 4241,
+      "description": "使用3 UESC凭证激活\n在地图内标记装备/补给/武器储藏箱之一\n只有启动后对应地点才会刷新储藏箱",
+      "source": ""
+    },
+    {
+      "id": "net-tower-022",
+      "title": "网络信号塔",
+      "iconKey": "net-tower",
+      "iconSize": 120,
+      "x": 5688,
+      "y": 1600,
+      "description": "使用3 UESC凭证激活\n在地图内标记装备/补给/武器储藏箱之一\n只有启动后对应地点才会刷新储藏箱",
+      "source": ""
+    },
+    {
+      "id": "net-tower-023",
+      "title": "网络信号塔",
+      "iconKey": "net-tower",
+      "iconSize": 120,
+      "x": 7295,
+      "y": 1857,
+      "description": "使用3 UESC凭证激活\n在地图内标记装备/补给/武器储藏箱之一\n只有启动后对应地点才会刷新储藏箱",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-024",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 4812,
+      "y": 2792,
+      "description": "追击撤离点",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-026",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 2297,
+      "y": 4136,
+      "description": "追击撤离点",
+      "source": ""
+    },
+    {
+      "id": "anomaly-027",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 2817,
+      "y": 5400,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-028",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 4681,
+      "y": 4959,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-029",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 3818,
+      "y": 7119,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-030",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 9725,
+      "y": 3787,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-031",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 8533,
+      "y": 1884,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-033",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 5603,
+      "y": 2048,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-034",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 6024,
+      "y": 5025,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-035",
+      "title": "异常物质",
+      "iconKey": "anomaly",
+      "iconSize": 120,
+      "x": 8632,
+      "y": 5691,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-036",
+      "title": "异常物质聚合装置",
+      "iconKey": "anomaly-vault",
+      "iconSize": 120,
+      "x": 1932,
+      "y": 4754,
+      "description": "异常物质刷新点",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-037",
+      "title": "异常物质聚合装置",
+      "iconKey": "anomaly-vault",
+      "iconSize": 120,
+      "x": 3908,
+      "y": 6401,
+      "description": "异常物质刷新点",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-038",
+      "title": "异常物质聚合装置",
+      "iconKey": "anomaly-vault",
+      "iconSize": 120,
+      "x": 5265,
+      "y": 4590,
+      "description": "异常物质刷新点",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-039",
+      "title": "异常物质聚合装置",
+      "iconKey": "anomaly-vault",
+      "iconSize": 120,
+      "x": 5745,
+      "y": 1870,
+      "description": "异常物质刷新点",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-040",
+      "title": "异常物质聚合装置",
+      "iconKey": "anomaly-vault",
+      "iconSize": 120,
+      "x": 7807,
+      "y": 1666,
+      "description": "异常物质刷新点",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-041",
+      "title": "异常物质聚合装置",
+      "iconKey": "anomaly-vault",
+      "iconSize": 120,
+      "x": 9302,
+      "y": 3121,
+      "description": "异常物质刷新点",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-042",
+      "title": "异常物质聚合装置",
+      "iconKey": "anomaly-vault",
+      "iconSize": 120,
+      "x": 7214,
+      "y": 5802,
+      "description": "异常物质刷新点",
+      "source": ""
+    },
+    {
+      "id": "HVT-043",
+      "title": "高价值目标",
+      "iconKey": "HVT",
+      "iconSize": 120,
+      "x": 1254,
+      "y": 5420,
+      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "source": ""
+    },
+    {
+      "id": "HVT-044",
+      "title": "高价值目标",
+      "iconKey": "HVT",
+      "iconSize": 120,
+      "x": 7142,
+      "y": 4978,
+      "description": "由两个UESC炮塔+一个紫甲UESC突击部队看守\n击杀后骇入容器会刷两波3只紫甲+若干蓝白甲",
+      "source": ""
+    },
+    {
+      "id": "HVT-046",
+      "title": "高价值目标",
+      "iconKey": "HVT",
+      "iconSize": 120,
+      "x": 7076,
+      "y": 2568,
+      "description": "由两个UESC炮塔+一个紫甲UESC突击部队看守\n击杀后骇入容器会刷两波3只紫甲+若干蓝白甲",
+      "source": ""
+    },
+    {
+      "id": "DCON-047",
+      "title": "DCON",
+      "iconKey": "DCON",
+      "iconSize": 120,
+      "x": 8538,
+      "y": 3312,
+      "description": "DCON",
+      "source": ""
+    },
+    {
+      "id": "DCON-048",
+      "title": "DCON",
+      "iconKey": "DCON",
+      "iconSize": 120,
+      "x": 6055,
+      "y": 6039,
+      "description": "DCON",
+      "source": ""
+    },
+    {
+      "id": "DCON-049",
+      "title": "DCON",
+      "iconKey": "DCON",
+      "iconSize": 120,
+      "x": 2795,
+      "y": 4030,
+      "description": "DCON",
+      "source": ""
+    },
+    {
+      "id": "extract-final-050",
+      "title": "最终撤离点",
+      "iconKey": "extract-final",
+      "iconSize": 120,
+      "x": 3612,
+      "y": 4781,
+      "description": "最终撤离点\npvp lite模式下最终撤离时间为2min\n其它模式下该地图最终撤离时间为1min",
+      "source": ""
+    },
+    {
+      "id": "extract-final-051",
+      "title": "最终撤离点",
+      "iconKey": "extract-final",
+      "iconSize": 120,
+      "x": 7339,
+      "y": 2983,
+      "description": "最终撤离点\npvp lite模式下最终撤离时间为2min\n其它模式下该地图最终撤离时间为1min",
+      "source": ""
+    },
+    {
+      "id": "extract-final-052",
+      "title": "最终撤离点",
+      "iconKey": "extract-final",
+      "iconSize": 120,
+      "x": 5074,
+      "y": 5459,
+      "description": "最终撤离点\npvp lite模式下最终撤离时间为2min\n其它模式下该地图最终撤离时间为1min",
+      "source": ""
+    },
+    {
+      "id": "extract-final-054",
+      "title": "最终撤离点",
+      "iconKey": "extract-final",
+      "iconSize": 120,
+      "x": 7293,
+      "y": 5209,
+      "description": "最终撤离点\npvp lite模式下最终撤离时间为2min\n其它模式下该地图最终撤离时间为1min",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-055",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 1893,
+      "y": 4623,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-056",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 5403,
+      "y": 6546,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-057",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 3816,
+      "y": 4339,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-058",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 4514,
+      "y": 3635,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-059",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 6918,
+      "y": 3062,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-060",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 6826,
+      "y": 3694,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-061",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 8446,
+      "y": 3134,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "dmn-chest-062",
+      "title": "装备储藏箱",
+      "iconKey": "dmn-chest",
+      "iconSize": 120,
+      "x": 5857,
+      "y": 3115,
+      "description": "网络信号塔激活的储藏箱分为\n装备/补给/武器三种\n装备储藏箱：刷新若干核心、植入物\n武器储藏箱：刷新若干武器(D54)、配件、子弹\n补给储藏箱：刷新若干药品",
+      "source": ""
+    },
+    {
+      "id": "locked-room-063",
+      "title": "隔离区太平间",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 1913,
+      "y": 4899,
+      "description": "卓越上锁房间\n隔离区地下\n必出至少一个生物透镜种子",
+      "source": ""
+    },
+    {
+      "id": "locked-room-064",
+      "title": "维护部灌溉渠",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3987,
+      "y": 6631,
+      "description": "卓越上锁房间\n维护部地下\n必出至少一个弹道涡轮",
+      "source": ""
+    },
+    {
+      "id": "locked-room-065",
+      "title": "维护部抽水机",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3789,
+      "y": 6756,
+      "description": "豪华上锁房间\n维护部1楼\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-066",
+      "title": "藻池办公室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 5161,
+      "y": 4729,
+      "description": "豪华上锁房间\n藻池2楼\n有一个可以打开的百叶窗\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-067",
+      "title": "温室实验室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 5965,
+      "y": 3089,
+      "description": "豪华上锁房间\n点位建筑内1楼\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-068",
+      "title": "综合设施小屋",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 8395,
+      "y": 4439,
+      "description": "豪华上锁房间\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-070",
+      "title": "温室操作室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 5958,
+      "y": 2351,
+      "description": "尊享上锁房间\n温室标记处建筑楼顶\n必出至少一个危害胶囊",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-071",
+      "title": "生物研究所储罐",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 7605,
+      "y": 1548,
+      "description": "卓越上锁房间\n生物研究所2楼\n必出至少一个生物透镜种子",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-072",
+      "title": "AI上行系统服务器",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 7394,
+      "y": 5802,
+      "description": "尊享上锁房间\nAI上行系统地下\n必出至少一个危害胶囊",
+      "source": ""
+    }
+  ]
+}

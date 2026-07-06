@@ -1,0 +1,16 @@
+{
+  "id": "dire-marsh",
+  "title": "恐怖沼泽",
+  "size": {
+    "width": 11752,
+    "height": 8568
+  },
+  "iconScale": 1.78,
+  "tileSources": {
+    "low": "/map/tiles/dire-marsh/low.webp",
+    "full": "/map/tiles/dire-marsh/full.webp"
+  },
+  "minZoom": 0.03,
+  "maxZoom": 3.6,
+  "pois": []
+}

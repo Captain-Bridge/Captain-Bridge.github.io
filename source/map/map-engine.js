@@ -1,4 +1,5 @@
 const state = {
+  pageConfig: null,
   activeMap: null,
   activeFilterKeys: new Set(),
   zoom: 1,
@@ -57,6 +58,7 @@ async function initialize() {
     fetchJson(pageConfig.dataPath),
   ]);
 
+  state.pageConfig = pageConfig;
   state.iconCatalog = new Map((iconCatalog.icons ?? []).map((entry) => [entry.id, entry]));
   state.activeMap = mapData;
   state.activeFilterKeys = new Set(getPoiEntries().map((entry) => entry.key));
@@ -139,12 +141,25 @@ function renderTabs() {
     return;
   }
 
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "map-tab is-active";
-  button.textContent = state.activeMap.title ?? "当前地图";
-  button.setAttribute("aria-current", "page");
-  elements.mapTabs.appendChild(button);
+  const tabs = state.pageConfig?.tabs ?? [
+    {
+      id: state.activeMap.id ?? "current-map",
+      title: state.activeMap.title ?? "当前地图",
+      href: window.location.pathname,
+    },
+  ];
+  const activeTabId = state.pageConfig?.activeTabId ?? state.activeMap.id;
+
+  for (const tab of tabs) {
+    const link = document.createElement("a");
+    link.className = `map-tab${tab.id === activeTabId ? " is-active" : ""}`;
+    link.href = tab.href;
+    link.textContent = tab.title;
+    if (tab.id === activeTabId) {
+      link.setAttribute("aria-current", "page");
+    }
+    elements.mapTabs.appendChild(link);
+  }
 }
 
 function renderFilterButtons() {
@@ -240,7 +255,8 @@ function renderPois() {
   for (const poi of visiblePois) {
     const button = document.createElement("button");
     const iconEntry = poi.iconKey ? state.iconCatalog.get(poi.iconKey) : null;
-    const iconSize = poi.iconSize ?? 28;
+    const iconScale = state.activeMap.iconScale ?? 1;
+    const iconSize = (iconEntry?.iconSize ?? 28) * iconScale;
     button.type = "button";
     button.className = `map-poi${state.selectedPoiId === poi.id ? " is-selected" : ""}`;
     button.style.left = `${poi.x}px`;

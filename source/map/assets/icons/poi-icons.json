@@ -1,102 +1,204 @@
 {
   "icons": [
     {
-      "id": "runner-respawn",
-      "label": "疾行者复活点",
-      "path": "/map/assets/icons/runner-respawn.svg",
-      "accentColor": "#d6f51f",
-      "order": 10
+      "id": "DCON",
+      "label": "DCON",
+      "path": "/map/assets/icons/DCON.svg",
+      "accentColor": "#7c8092",
+      "order": 10,
+      "iconSize": 120
     },
     {
-      "id": "extract-possible",
-      "label": "撤离站",
-      "path": "/map/assets/icons/extract-possible.svg",
-      "accentColor": "#c7d700",
-      "order": 20
+      "id": "anomaly",
+      "label": "异常物质",
+      "path": "/map/assets/icons/anomaly.svg",
+      "accentColor": "#8176f7",
+      "order": 20,
+      "iconSize": 120
     },
     {
-      "id": "extract-active",
-      "label": "秘密撤离点",
-      "path": "/map/assets/icons/extract-active.svg",
-      "accentColor": "#57f04f",
-      "order": 30
-    },
-    {
-      "id": "extract-final",
-      "label": "最终撤离点",
-      "path": "/map/assets/icons/extract-final.svg",
-      "accentColor": "#ffbf25",
-      "order": 40
+      "id": "anomaly-vault",
+      "label": "异常物质聚合装置",
+      "path": "/map/assets/icons/anomaly-vault.svg",
+      "accentColor": "#1500ff",
+      "order": 30,
+      "iconSize": 120
     },
     {
       "id": "coolant-full",
       "label": "低温冷却剂",
       "path": "/map/assets/icons/coolant-full.svg",
-      "accentColor": "#f68432",
-      "order": 50
-    },
-    {
-      "id": "vault",
-      "label": "保险库",
-      "path": "/map/assets/icons/vault.svg",
-      "accentColor": "#5da5ff",
-      "order": 60
-    },
-    {
-      "id": "credential-orange",
-      "label": "泵站凭证刷新点",
-      "path": "/map/assets/icons/credential-orange.svg",
-      "accentColor": "#ffb126",
-      "order": 70
-    },
-    {
-      "id": "credential-red",
-      "label": "休眠凭证刷新点",
-      "path": "/map/assets/icons/credential-red.svg",
-      "accentColor": "#ff5555",
-      "order": 80
+      "accentColor": "#ff7f2a",
+      "order": 40,
+      "iconSize": 120
     },
     {
       "id": "credential-blue-drone",
       "label": "殖民者的DNA样本",
       "path": "/map/assets/icons/credential-blue-drone.svg",
-      "accentColor": "#58a9ff",
-      "order": 90
+      "accentColor": "#4fa2ff",
+      "order": 50,
+      "iconSize": 120
     },
     {
-      "id": "secret-lab",
-      "label": "秘密实验室",
-      "path": "/map/assets/icons/secret-lab.svg",
-      "accentColor": "#ff2e73",
-      "order": 100
+      "id": "credential-orange",
+      "label": "泵站凭证刷新点",
+      "path": "/map/assets/icons/credential-orange.svg",
+      "accentColor": "#ffb325",
+      "order": 60,
+      "iconSize": 120
     },
     {
-      "id": "extract-guarded",
-      "label": "最终撤离点",
-      "path": "/map/assets/icons/extract-guarded.svg",
-      "accentColor": "#ff2e73",
-      "order": 110
+      "id": "credential-red",
+      "label": "休眠凭证刷新点",
+      "path": "/map/assets/icons/credential-red.svg",
+      "accentColor": "#ff4a4a",
+      "order": 70,
+      "iconSize": 120
     },
     {
-      "id": "vault-exit",
-      "label": "保险库出口",
-      "path": "/map/assets/icons/vault-exit.svg",
-      "accentColor": "#5da5ff",
-      "order": 120
+      "id": "dmn-chest",
+      "label": "装备储藏箱",
+      "path": "/map/assets/icons/dmn-chest.svg",
+      "accentColor": "#1505c5",
+      "order": 80,
+      "iconSize": 120
+    },
+    {
+      "id": "dmn-drone",
+      "label": "危害物运输无人机",
+      "path": "/map/assets/icons/dmn-drone.svg",
+      "accentColor": "#9096a2",
+      "order": 90,
+      "iconSize": 120
     },
     {
       "id": "elevator",
       "label": "电梯",
       "path": "/map/assets/icons/elevator.svg",
-      "accentColor": "#5da5ff",
-      "order": 130
+      "accentColor": "#5c66ff",
+      "order": 100,
+      "iconSize": 120
+    },
+    {
+      "id": "extract-active",
+      "label": "秘密撤离点",
+      "path": "/map/assets/icons/extract-active.svg",
+      "accentColor": "#b4ff00",
+      "order": 110,
+      "iconSize": 120
+    },
+    {
+      "id": "extract-final",
+      "label": "最终撤离点",
+      "path": "/map/assets/icons/extract-final.svg",
+      "accentColor": "#e69d00",
+      "order": 120,
+      "iconSize": 120
+    },
+    {
+      "id": "extract-guarded",
+      "label": "守卫撤离点",
+      "path": "/map/assets/icons/extract-guarded.svg",
+      "accentColor": "#9ee600",
+      "order": 130,
+      "iconSize": 120
+    },
+    {
+      "id": "extract-possible",
+      "label": "撤离站",
+      "path": "/map/assets/icons/extract-possible.svg",
+      "accentColor": "#ccff33",
+      "order": 140,
+      "iconSize": 120
+    },
+    {
+      "id": "guard",
+      "label": "护航队",
+      "path": "/map/assets/icons/guard.svg",
+      "accentColor": "#2a1aff",
+      "order": 150,
+      "iconSize": 120
+    },
+    {
+      "id": "guard-path",
+      "label": "护航队路径",
+      "path": "/map/assets/icons/guard.svg",
+      "accentColor": "#3b2cff",
+      "order": 150,
+      "iconSize": 80
+    },
+    {
+      "id": "locked-room",
+      "label": "锁住的房间",
+      "path": "/map/assets/icons/locked-room.svg",
+      "accentColor": "#0015e0",
+      "order": 160,
+      "iconSize": 120
+    },
+    {
+      "id": "net-tower",
+      "label": "网络信号塔",
+      "path": "/map/assets/icons/net-tower.svg",
+      "accentColor": "#6e7585",
+      "order": 170,
+      "iconSize": 120
+    },
+    {
+      "id": "restricted-resource",
+      "label": "管控资源",
+      "path": "/map/assets/icons/restricted-resource.svg",
+      "accentColor": "#969ca8",
+      "order": 180,
+      "iconSize": 120
+    },
+    {
+      "id": "runner-respawn",
+      "label": "疾行者复活点",
+      "path": "/map/assets/icons/runner-respawn.svg",
+      "accentColor": "#88cc00",
+      "order": 190,
+      "iconSize": 120
+    },
+    {
+      "id": "secret-lab",
+      "label": "秘密实验室",
+      "path": "/map/assets/icons/secret-lab.svg",
+      "accentColor": "#0a00ff",
+      "order": 200,
+      "iconSize": 120
     },
     {
       "id": "treasure",
       "label": "宝藏",
       "path": "/map/assets/icons/treasure.svg",
-      "accentColor": "#ffd700",
-      "order": 140
+      "accentColor": "#7b82ff",
+      "order": 210,
+      "iconSize": 120
+    },
+    {
+      "id": "vault",
+      "label": "保险库",
+      "path": "/map/assets/icons/vault.svg",
+      "accentColor": "#2e7bff",
+      "order": 220,
+      "iconSize": 120
+    },
+    {
+      "id": "vault-exit",
+      "label": "保险库出口",
+      "path": "/map/assets/icons/vault-exit.svg",
+      "accentColor": "#1a5fd4",
+      "order": 230,
+      "iconSize": 120
+    },
+    {
+      "id": "HVT",
+      "label": "高价值目标",
+      "path": "/map/assets/icons/HVT.svg",
+      "accentColor": "#ff0062",
+      "order": 240,
+      "iconSize": 120
     }
   ]
 }
