@@ -55,7 +55,7 @@
     },
     {
       "id": "extract-possible-007",
-      "title": "地堡[待确定]",
+      "title": "地堡7",
       "iconKey": "extract-possible",
       "iconSize": 120,
       "x": 10575,
@@ -95,12 +95,12 @@
     },
     {
       "id": "extract-active-011",
-      "title": "地堡[待确定]",
+      "title": "地堡7激活的撤离点",
       "iconKey": "extract-active",
       "iconSize": 120,
       "x": 9482,
       "y": 3609,
-      "description": "由地堡[待确定]激活的秘密撤离点",
+      "description": "由地堡7激活的秘密撤离点",
       "source": ""
     },
     {
