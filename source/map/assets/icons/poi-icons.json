@@ -98,7 +98,7 @@
     },
     {
       "id": "extract-guarded",
-      "label": "守卫撤离点",
+      "label": "追击撤离点",
       "path": "/map/assets/icons/extract-guarded.svg",
       "accentColor": "#caf547",
       "order": 130,
@@ -202,7 +202,7 @@
     },
     {
       "id": "warden",
-      "label": "典狱长",
+      "label": "看守者",
       "path": "/map/assets/icons/warden.svg",
       "accentColor": "#ff3d6e",
       "order": 250,

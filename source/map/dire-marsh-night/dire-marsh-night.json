@@ -15,7 +15,7 @@
   "pois": [
     {
       "id": "extract-possible-002",
-      "title": "地堡[待确定]",
+      "title": "地堡[4]",
       "iconKey": "extract-possible",
       "iconSize": 120,
       "x": 1790,
@@ -25,7 +25,7 @@
     },
     {
       "id": "extract-possible-004",
-      "title": "地堡[待确定]",
+      "title": "地堡[3]",
       "iconKey": "extract-possible",
       "iconSize": 120,
       "x": 1144,
@@ -35,7 +35,7 @@
     },
     {
       "id": "extract-possible-005",
-      "title": "地堡[待确定]",
+      "title": "地堡[5]",
       "iconKey": "extract-possible",
       "iconSize": 120,
       "x": 5036,
@@ -45,7 +45,7 @@
     },
     {
       "id": "extract-possible-006",
-      "title": "地堡[待确定]",
+      "title": "地堡[1]",
       "iconKey": "extract-possible",
       "iconSize": 120,
       "x": 8856,
@@ -55,7 +55,7 @@
     },
     {
       "id": "extract-possible-007",
-      "title": "地堡7",
+      "title": "地堡[7]",
       "iconKey": "extract-possible",
       "iconSize": 120,
       "x": 10575,
@@ -65,52 +65,52 @@
     },
     {
       "id": "extract-active-008",
-      "title": "地堡[待确定]",
+      "title": "秘密撤离点（地堡[4]）",
       "iconKey": "extract-active",
       "iconSize": 120,
       "x": 2448,
       "y": 4373,
-      "description": "由地堡[待确定]激活的秘密撤离点",
+      "description": "由地堡[4]激活的秘密撤离点",
       "source": ""
     },
     {
       "id": "extract-active-009",
-      "title": "地堡[待确定]",
+      "title": "秘密撤离点（地堡[3]）",
       "iconKey": "extract-active",
       "iconSize": 120,
       "x": 1770,
       "y": 4926,
-      "description": "由地堡[待确定]激活的秘密撤离点",
+      "description": "由地堡[4]激活的秘密撤离点",
       "source": ""
     },
     {
       "id": "extract-active-010",
-      "title": "地堡[待确定]",
+      "title": "秘密撤离点（地堡[1]）",
       "iconKey": "extract-active",
       "iconSize": 120,
       "x": 8296,
       "y": 5367,
-      "description": "由地堡[待确定]激活的秘密撤离点",
+      "description": "由地堡[1]激活的秘密撤离点",
       "source": ""
     },
     {
       "id": "extract-active-011",
-      "title": "地堡7激活的撤离点",
+      "title": "秘密撤离点（地堡[7]）",
       "iconKey": "extract-active",
       "iconSize": 120,
       "x": 9482,
       "y": 3609,
-      "description": "由地堡7激活的秘密撤离点",
+      "description": "由地堡[7]激活的秘密撤离点",
       "source": ""
     },
     {
       "id": "extract-active-012",
-      "title": "地堡[待确定]",
+      "title": "秘密撤离点（地堡[5]）",
       "iconKey": "extract-active",
       "iconSize": 120,
       "x": 5405,
       "y": 2990,
-      "description": "由地堡[待确定]激活的秘密撤离点",
+      "description": "由地堡[5]激活的秘密撤离点",
       "source": ""
     },
     {
