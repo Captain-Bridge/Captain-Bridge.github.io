@@ -17,12 +17,16 @@ const state = {
   resolutionMode: "low",
   fullResolutionTimer: null,
   isDragging: false,
+  dragMoved: false,
   iconCatalog: new Map(),
+  feedbackOpen: false,
+  feedbackPoint: null,
 };
 
 const elements = {
   mapTabs: document.getElementById("map-tabs"),
   mapFilterBar: document.getElementById("map-filter-bar"),
+  mapViewportShell: document.querySelector(".map-viewport-shell"),
   mapViewport: document.getElementById("map-viewport"),
   mapTransform: document.getElementById("map-transform"),
   mapBase: document.getElementById("map-base"),
@@ -37,6 +41,14 @@ const elements = {
   mapPopupLinks: document.getElementById("map-popup-links"),
   mapPopupClose: document.getElementById("map-popup-close"),
   mapResetButton: document.getElementById("map-reset-button"),
+  mapFeedbackTrigger: null,
+  mapFeedbackPanel: null,
+  mapFeedbackClose: null,
+  mapFeedbackCopy: null,
+  mapFeedbackContact: null,
+  mapFeedbackSummary: null,
+  mapContactModal: null,
+  mapContactClose: null,
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -77,6 +89,7 @@ async function initialize() {
   renderFilterButtons();
   renderRegions();
   renderPois();
+  ensureFeedbackUi();
   bindEvents();
   closePopup();
   resetResolutionMode();
@@ -94,6 +107,12 @@ function bindEvents() {
   elements.mapViewport.addEventListener("pointerleave", handlePointerUp);
   elements.mapViewport.addEventListener("pointercancel", handlePointerUp);
   elements.mapViewport.addEventListener("click", (event) => {
+    if (state.feedbackOpen && !state.dragMoved && !event.target.closest(".map-poi")) {
+      state.feedbackPoint = getWorldPointFromClient(event.clientX, event.clientY);
+      updateFeedbackPanel();
+      renderPois();
+    }
+
     if (!event.target.closest(".map-poi")) {
       closePopup();
     }
@@ -107,6 +126,45 @@ function bindEvents() {
   elements.mapResetButton.addEventListener("click", () => {
     fitMapToViewport();
     syncBaseImage();
+    updateFeedbackPanel();
+  });
+  elements.mapFeedbackTrigger?.addEventListener("click", () => {
+    state.feedbackOpen = !state.feedbackOpen;
+    updateFeedbackPanel();
+    syncFeedbackPanelVisibility();
+  });
+  elements.mapFeedbackClose?.addEventListener("click", () => {
+    state.feedbackOpen = false;
+    syncFeedbackPanelVisibility();
+  });
+  elements.mapFeedbackContact?.addEventListener("click", () => {
+    elements.mapContactModal?.classList.remove("is-hidden");
+  });
+  elements.mapFeedbackCopy?.addEventListener("click", async () => {
+    const payload = buildFeedbackPayload();
+
+    try {
+      await navigator.clipboard.writeText(payload);
+      if (elements.mapFeedbackCopy) {
+        elements.mapFeedbackCopy.textContent = "已复制";
+      }
+      window.setTimeout(() => {
+        if (elements.mapFeedbackCopy) {
+          elements.mapFeedbackCopy.textContent = "复制信息";
+        }
+      }, 1200);
+    } catch (error) {
+      console.error(error);
+      if (elements.mapFeedbackCopy) {
+        elements.mapFeedbackCopy.textContent = "复制失败";
+      }
+    }
+  });
+  elements.mapContactClose?.addEventListener("click", closeContactModal);
+  elements.mapContactModal?.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLElement && event.target.dataset.closeContact === "true") {
+      closeContactModal();
+    }
   });
 
   window.addEventListener("resize", () => {
@@ -116,10 +174,16 @@ function bindEvents() {
 
     fitMapToViewport();
     syncBaseImage();
+    updateFeedbackPanel();
   });
 
   window.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") {
+      return;
+    }
+
+    if (elements.mapContactModal && !elements.mapContactModal.classList.contains("is-hidden")) {
+      closeContactModal();
       return;
     }
 
@@ -314,6 +378,7 @@ function renderPois() {
     button.style.marginLeft = `${-(iconSize / 2)}px`;
     button.style.marginTop = `${-(iconSize / 2)}px`;
     button.dataset.iconSize = String(iconSize);
+    button.dataset.visualSize = String(iconSize);
     button.setAttribute("aria-label", `${poi.title} ${iconEntry?.label ?? "POI"}`);
     button.innerHTML = `${iconEntry ? `<img class="map-poi-icon" src="${escapeHtml(iconEntry.path)}" alt="">` : ""}`;
     button.addEventListener("click", (event) => {
@@ -321,6 +386,15 @@ function renderPois() {
       openPopup(poi);
     });
     elements.mapPoiLayer.appendChild(button);
+  }
+
+  if (state.feedbackPoint) {
+    const marker = document.createElement("div");
+    marker.className = "map-feedback-marker";
+    marker.style.left = `${state.feedbackPoint.x}px`;
+    marker.style.top = `${state.feedbackPoint.y}px`;
+    marker.dataset.visualSize = "24";
+    elements.mapPoiLayer.appendChild(marker);
   }
 
   refreshPoiVisualScale();
@@ -408,6 +482,7 @@ function handlePointerDown(event) {
   promoteToFullResolution();
   state.pointerId = event.pointerId;
   state.isDragging = false;
+  state.dragMoved = false;
   state.dragStartX = event.clientX;
   state.dragStartY = event.clientY;
   state.dragOriginX = state.panX;
@@ -422,10 +497,14 @@ function handlePointerMove(event) {
   }
 
   event.preventDefault();
+  if (!state.dragMoved && (Math.abs(event.clientX - state.dragStartX) > 3 || Math.abs(event.clientY - state.dragStartY) > 3)) {
+    state.dragMoved = true;
+  }
   state.isDragging = true;
   state.panX = state.dragOriginX + (event.clientX - state.dragStartX);
   state.panY = state.dragOriginY + (event.clientY - state.dragStartY);
   applyTransform();
+  updateFeedbackPanel();
 }
 
 function handlePointerUp(event) {
@@ -436,6 +515,7 @@ function handlePointerUp(event) {
   event.preventDefault();
   state.pointerId = null;
   state.isDragging = false;
+  state.dragMoved = false;
   elements.mapViewport.classList.remove("is-dragging");
   if (elements.mapViewport.hasPointerCapture(event.pointerId)) {
     elements.mapViewport.releasePointerCapture(event.pointerId);
@@ -467,6 +547,7 @@ function fitMapToViewport() {
 
   applyTransform();
   refreshPoiVisualScale();
+  updateFeedbackPanel();
 }
 
 function applyTransform() {
@@ -507,10 +588,10 @@ function getPoiFilterKey(poi) {
 }
 
 function refreshPoiVisualScale() {
-  const poiButtons = elements.mapPoiLayer.querySelectorAll(".map-poi");
+  const poiButtons = elements.mapPoiLayer.querySelectorAll(".map-poi, .map-feedback-marker");
 
   for (const button of poiButtons) {
-    const iconSize = Number(button.dataset.iconSize ?? "28");
+    const iconSize = Number(button.dataset.visualSize ?? button.dataset.iconSize ?? "28");
     const scale = getPoiVisualScale(iconSize);
     button.style.transform = `scale(${scale})`;
   }
@@ -574,6 +655,110 @@ function promoteToFullResolution() {
 
   state.resolutionMode = "full";
   syncBaseImage();
+}
+
+function ensureFeedbackUi() {
+  if (!elements.mapViewportShell || elements.mapFeedbackTrigger) {
+    return;
+  }
+
+  const trigger = document.createElement("button");
+  trigger.type = "button";
+  trigger.className = "map-feedback-trigger";
+  trigger.textContent = "反馈点位";
+
+  const panel = document.createElement("section");
+  panel.className = "map-feedback-panel is-hidden";
+  panel.setAttribute("aria-label", "反馈点位");
+  panel.innerHTML = `
+    <div class="map-feedback-head">
+      <p class="map-panel-label">反馈点位</p>
+      <button class="map-feedback-close" type="button" aria-label="关闭">×</button>
+    </div>
+    <p class="map-feedback-hint">点击地图可获取点位坐标</p>
+    <p class="map-feedback-hint">如需反馈请点击反馈点位按钮联系我。</p>
+    <pre class="map-feedback-summary"></pre>
+    <div class="map-feedback-actions">
+      <button class="map-feedback-action" type="button" data-action="contact">反馈点位</button>
+      <button class="map-feedback-action" type="button" data-action="copy">复制信息</button>
+    </div>
+  `;
+
+  const contactModal = document.createElement("div");
+  contactModal.className = "map-contact-modal is-hidden";
+  contactModal.innerHTML = `
+    <div class="map-contact-backdrop" data-close-contact="true"></div>
+    <article class="map-contact-card">
+      <button class="map-contact-close" type="button" aria-label="关闭">×</button>
+      <p class="map-panel-label">反馈点位</p>
+      <img class="map-contact-image" src="/images/qq.webp" alt="QQ 二维码">
+    </article>
+  `;
+
+  elements.mapViewportShell.appendChild(trigger);
+  elements.mapViewportShell.appendChild(panel);
+  document.body.appendChild(contactModal);
+
+  elements.mapFeedbackTrigger = trigger;
+  elements.mapFeedbackPanel = panel;
+  elements.mapFeedbackClose = panel.querySelector(".map-feedback-close");
+  elements.mapFeedbackCopy = panel.querySelector('[data-action="copy"]');
+  elements.mapFeedbackContact = panel.querySelector('[data-action="contact"]');
+  elements.mapFeedbackSummary = panel.querySelector(".map-feedback-summary");
+  elements.mapContactModal = contactModal;
+  elements.mapContactClose = contactModal.querySelector(".map-contact-close");
+
+  updateFeedbackPanel();
+  syncFeedbackPanelVisibility();
+}
+
+function syncFeedbackPanelVisibility() {
+  if (!elements.mapFeedbackPanel || !elements.mapFeedbackTrigger) {
+    return;
+  }
+
+  elements.mapFeedbackPanel.classList.toggle("is-hidden", !state.feedbackOpen);
+  elements.mapFeedbackTrigger.classList.toggle("is-active", state.feedbackOpen);
+  elements.mapFeedbackTrigger.setAttribute("aria-pressed", String(state.feedbackOpen));
+}
+
+function updateFeedbackPanel() {
+  if (!elements.mapFeedbackSummary || !state.activeMap) {
+    return;
+  }
+
+  elements.mapFeedbackSummary.textContent = buildFeedbackPayload();
+}
+
+function buildFeedbackPayload() {
+  const targetPoint = state.feedbackPoint ?? getViewportCenterPoint();
+
+  return [
+    `地图：${state.activeMap?.title ?? document.title}`,
+    `坐标：x=${Math.round(targetPoint.x)}, y=${Math.round(targetPoint.y)}`,
+  ].join("\n");
+}
+
+function closeContactModal() {
+  elements.mapContactModal?.classList.add("is-hidden");
+}
+
+function getViewportCenterPoint() {
+  const rect = elements.mapViewport.getBoundingClientRect();
+  return getWorldPointFromClient(rect.left + (rect.width / 2), rect.top + (rect.height / 2));
+}
+
+function getWorldPointFromClient(clientX, clientY) {
+  const rect = elements.mapViewport.getBoundingClientRect();
+  const localX = clientX - rect.left;
+  const localY = clientY - rect.top;
+  const worldX = (localX - state.panX) / state.zoom;
+  const worldY = (localY - state.panY) / state.zoom;
+
+  return {
+    x: clamp(worldX, 0, state.activeMap?.size?.width ?? worldX),
+    y: clamp(worldY, 0, state.activeMap?.size?.height ?? worldY),
+  };
 }
 
 async function fetchJson(path) {
