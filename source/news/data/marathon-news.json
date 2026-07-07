@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T16:55:14.198Z",
+  "generatedAt": "2026-07-07T16:09:50.586Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,11 +7,11 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 50,
-  "count": 50,
+  "total": 51,
+  "count": 51,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 40,
+    "bilingualCount": 41,
     "englishOnlyCount": 10,
     "chineseOnlyCount": 0,
     "englishOnly": [
@@ -84,6 +84,109 @@
     "generatedCount": 10
   },
   "items": [
+    {
+      "id": "bltb8fab972f4cff83a",
+      "slug": "marathon_update_1_1_0_4",
+      "pathSlug": "marathon-update-1-1-0-4",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-07-07T16:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_0_4",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_0_4",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_0_4"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-0-4/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 196,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.0.4",
+          "subtitle": "The one about Cryo lasers.",
+          "bodyHtml": "<h2>General</h2><ul><li>Sponsored Mode: Zone updated to Dire Marsh (Night).</li><li>The C.A.R.R.I. Armory has been updated with the following changes.<ul><li>Wares Added:<ul><li>Deluxe Key Template</li><li>Blue Backpack</li><li>Self Revive</li></ul></li><li>Wares Changed:<ul><li>Lockbox Key Commendations Cost: 10 → 7</li><li>Reputation Pack Weekly Stock: 1 → 2</li><li>Rotating Grey Weapon Commendations Cost: 10 → 5</li></ul></li><li>Updated the Dire Marsh (Night) Sponsored activity description to clarify the Sponsored Kit loadout requirement.</li><li>Fixed an issue where players could be matchmade into Trios when the UI displayed Solos.</li><li>Fixed an issue that could prevent some mailbox messages from being delivered.</li></ul></li></ul><h2>Combat</h2><ul><li>Fixed an issue where the Sniper boss targeted audio could play for nearby Runners who weren’t targeted.</li></ul><h2>Runners</h2><p><strong>Triage</strong></p><ul><li>Fixed an issue where the Astrophage style’s face would brightly glow when in the Dire Marsh (Night) Zone.</li></ul><h2>Zones</h2><p><strong>Dire Marsh (Day)</strong></p><ul><li>Fixed an issue where Lockdown activities were failing to spawn in some regions.</li></ul><p><strong>Cryo Archive</strong></p><ul><li>Fixed an issue where Runner models could still hit tripwires (green lasers) when sliding under or jumping over them.</li></ul><h2>Stability</h2><ul><li>Fixed an issue where a small number of players could get stuck in a Weasel disconnect loop that would prevent the ability to consistently login.</li></ul>",
+          "bodyText": "General Sponsored Mode: Zone updated to Dire Marsh (Night). The C.A.R.R.I. Armory has been updated with the following changes. Wares Added: Deluxe Key Template Blue Backpack Self Revive Wares Changed: Lockbox Key Commendations Cost: 10 → 7 Reputation Pack Weekly Stock: 1 → 2 Rotating Grey Weapon Commendations Cost: 10 → 5 Updated the Dire Marsh (Night) Sponsored activity description to clarify the Sponsored Kit loadout requirement. Fixed an issue where players could be matchmade into Trios when the UI displayed Solos. Fixed an issue that could prevent some mailbox messages from being delivered. Combat Fixed an issue where the Sniper boss targeted audio could play for nearby Runners who weren’t targeted. Runners Triage Fixed an issue where the Astrophage style’s face would brightly glow when in the Dire Marsh (Night) Zone. Zones Dire Marsh (Day) Fixed an issue where Lockdown activities were failing to spawn in some regions. Cryo Archive Fixed an issue where Runner models could still hit tripwires (green lasers) when sliding under or jumping over them. Stability Fixed an issue where a small number of players could get stuck in a Weasel disconnect loop that would prevent the ability to consistently login.",
+          "excerpt": "The one about Cryo lasers."
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.0.4",
+          "subtitle": "关于低温激光。",
+          "bodyHtml": "<h2>综合</h2><ul><li>赞助模式：区域已更新为恐怖沼泽（夜间）。</li><li>C.A.R.R.I.军械库已更新，具体更改如下。<ul><li>新增商品：<ul><li>豪华钥匙模板</li><li>豪华背包</li><li>自我复活</li></ul></li><li>变更商品：<ul><li>锁箱钥匙嘉奖消耗：10 → 7</li><li>声望包每周库存：1 → 2</li><li>轮换灰色武器嘉奖消耗：10 → 5</li></ul></li><li>更新了恐怖沼泽（夜间）赞助活动描述，以明确赞助包配装要求。</li><li>修复了UI界面显示单人模式时，玩家可能会被匹配到三人组的问题。</li><li>修复了部分邮件无法送达的问题。</li></ul></li></ul><h2>战斗</h2><ul><li>修复了狙击首领的目标音效可能会对附近非目标疾行者播放的问题。</li></ul><h2>疾行者</h2><p><strong>救援</strong></p><ul><li>修复了在恐怖沼泽（夜间）区域时，噬星体风格的面部会发光的问题。</li></ul><h2>区域</h2><p><strong>恐怖沼泽（白天）</strong></p><ul><li>修复了部分区域封锁活动无法生成的问题。</li></ul><p><strong>低温档案室</strong></p><ul><li>修复了疾行者模型在滑行或跃过绊索（绿色激光）时仍会碰到绊索的问题。</li></ul>",
+          "bodyText": "综合 赞助模式：区域已更新为恐怖沼泽（夜间）。 C.A.R.R.I.军械库已更新，具体更改如下。 新增商品： 豪华钥匙模板 豪华背包 自我复活 变更商品： 锁箱钥匙嘉奖消耗：10 → 7 声望包每周库存：1 → 2 轮换灰色武器嘉奖消耗：10 → 5 更新了恐怖沼泽（夜间）赞助活动描述，以明确赞助包配装要求。 修复了UI界面显示单人模式时，玩家可能会被匹配到三人组的问题。 修复了部分邮件无法送达的问题。 战斗 修复了狙击首领的目标音效可能会对附近非目标疾行者播放的问题。 疾行者 救援 修复了在恐怖沼泽（夜间）区域时，噬星体风格的面部会发光的问题。 区域 恐怖沼泽（白天） 修复了部分区域封锁活动无法生成的问题。 低温档案室 修复了疾行者模型在滑行或跃过绊索（绿色激光）时仍会碰到绊索的问题。",
+          "excerpt": "关于低温激光。",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt6805562b6449d7a9",
       "slug": "season_2_key_dates",
