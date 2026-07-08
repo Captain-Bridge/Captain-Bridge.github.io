@@ -7,17 +7,26 @@ const state = {
   maxZoom: 4,
   panX: 0,
   panY: 0,
-  pointerId: null,
-  dragStartX: 0,
-  dragStartY: 0,
-  dragOriginX: 0,
-  dragOriginY: 0,
   selectedPoiId: null,
   currentResolution: "low",
   resolutionMode: "low",
   fullResolutionTimer: null,
   isDragging: false,
   dragMoved: false,
+  activePointers: new Map(),
+  gestureMode: null,
+  panPointerId: null,
+  panStartX: 0,
+  panStartY: 0,
+  panOriginX: 0,
+  panOriginY: 0,
+  pinchStartDistance: 0,
+  pinchStartZoom: 1,
+  pinchStartPanX: 0,
+  pinchStartPanY: 0,
+  pinchAnchorWorldX: 0,
+  pinchAnchorWorldY: 0,
+  suppressViewportClick: false,
   iconCatalog: new Map(),
   feedbackOpen: false,
   feedbackPoint: null,
@@ -107,6 +116,11 @@ function bindEvents() {
   elements.mapViewport.addEventListener("pointerleave", handlePointerUp);
   elements.mapViewport.addEventListener("pointercancel", handlePointerUp);
   elements.mapViewport.addEventListener("click", (event) => {
+    if (state.suppressViewportClick) {
+      state.suppressViewportClick = false;
+      return;
+    }
+
     if (state.feedbackOpen && !state.dragMoved && !event.target.closest(".map-poi")) {
       state.feedbackPoint = getWorldPointFromClient(event.clientX, event.clientY);
       updateFeedbackPanel();
@@ -480,46 +494,88 @@ function handlePointerDown(event) {
 
   event.preventDefault();
   promoteToFullResolution();
-  state.pointerId = event.pointerId;
-  state.isDragging = false;
-  state.dragMoved = false;
-  state.dragStartX = event.clientX;
-  state.dragStartY = event.clientY;
-  state.dragOriginX = state.panX;
-  state.dragOriginY = state.panY;
-  elements.mapViewport.classList.add("is-dragging");
+  const point = getViewportLocalPointFromClient(event.clientX, event.clientY);
+  state.activePointers.set(event.pointerId, {
+    x: point.x,
+    y: point.y,
+    startX: point.x,
+    startY: point.y,
+  });
   elements.mapViewport.setPointerCapture(event.pointerId);
+
+  if (state.activePointers.size === 1) {
+    state.suppressViewportClick = false;
+    startPanGesture(event.pointerId, point);
+  } else if (state.activePointers.size >= 2) {
+    startPinchGesture();
+  }
 }
 
 function handlePointerMove(event) {
-  if (state.pointerId !== event.pointerId) {
+  const pointer = state.activePointers.get(event.pointerId);
+
+  if (!pointer) {
     return;
   }
 
   event.preventDefault();
-  if (!state.dragMoved && (Math.abs(event.clientX - state.dragStartX) > 3 || Math.abs(event.clientY - state.dragStartY) > 3)) {
+  const point = getViewportLocalPointFromClient(event.clientX, event.clientY);
+  pointer.x = point.x;
+  pointer.y = point.y;
+
+  if (state.gestureMode === "pinch" && state.activePointers.size >= 2) {
+    updatePinchGesture();
+    return;
+  }
+
+  if (state.gestureMode !== "pan" || state.panPointerId !== event.pointerId) {
+    return;
+  }
+
+  if (!state.dragMoved && (Math.abs(point.x - state.panStartX) > 3 || Math.abs(point.y - state.panStartY) > 3)) {
     state.dragMoved = true;
+    state.suppressViewportClick = true;
   }
   state.isDragging = true;
-  state.panX = state.dragOriginX + (event.clientX - state.dragStartX);
-  state.panY = state.dragOriginY + (event.clientY - state.dragStartY);
+  state.panX = state.panOriginX + (point.x - state.panStartX);
+  state.panY = state.panOriginY + (point.y - state.panStartY);
   applyTransform();
+  refreshPoiVisualScale();
+  syncBaseImage();
   updateFeedbackPanel();
 }
 
 function handlePointerUp(event) {
-  if (state.pointerId !== event.pointerId) {
+  const pointer = state.activePointers.get(event.pointerId);
+
+  if (!pointer) {
     return;
   }
 
   event.preventDefault();
-  state.pointerId = null;
-  state.isDragging = false;
-  state.dragMoved = false;
-  elements.mapViewport.classList.remove("is-dragging");
+  state.activePointers.delete(event.pointerId);
+
   if (elements.mapViewport.hasPointerCapture(event.pointerId)) {
     elements.mapViewport.releasePointerCapture(event.pointerId);
   }
+
+  if (state.activePointers.size >= 2) {
+    startPinchGesture();
+    return;
+  }
+
+  if (state.activePointers.size === 1) {
+    const [remainingId, remainingPointer] = state.activePointers.entries().next().value;
+    startPanGesture(remainingId, remainingPointer);
+    state.suppressViewportClick = true;
+    return;
+  }
+
+  state.gestureMode = null;
+  state.panPointerId = null;
+  state.isDragging = false;
+  state.dragMoved = false;
+  elements.mapViewport.classList.remove("is-dragging");
 }
 
 function fitMapToViewport() {
@@ -552,6 +608,66 @@ function fitMapToViewport() {
 
 function applyTransform() {
   elements.mapTransform.style.transform = `translate(${state.panX}px, ${state.panY}px) scale(${state.zoom})`;
+}
+
+function startPanGesture(pointerId, point) {
+  state.gestureMode = "pan";
+  state.panPointerId = pointerId;
+  state.panStartX = point.x;
+  state.panStartY = point.y;
+  state.panOriginX = state.panX;
+  state.panOriginY = state.panY;
+  state.isDragging = false;
+  elements.mapViewport.classList.add("is-dragging");
+}
+
+function startPinchGesture() {
+  const points = getActivePointerPoints();
+
+  if (points.length < 2) {
+    return;
+  }
+
+  const [first, second] = points;
+  const centerX = (first.x + second.x) / 2;
+  const centerY = (first.y + second.y) / 2;
+  const distance = Math.max(Math.hypot(second.x - first.x, second.y - first.y), 1);
+
+  state.gestureMode = "pinch";
+  state.panPointerId = null;
+  state.pinchStartDistance = distance;
+  state.pinchStartZoom = state.zoom;
+  state.pinchStartPanX = state.panX;
+  state.pinchStartPanY = state.panY;
+  state.pinchAnchorWorldX = (centerX - state.panX) / state.zoom;
+  state.pinchAnchorWorldY = (centerY - state.panY) / state.zoom;
+  state.dragMoved = true;
+  state.suppressViewportClick = true;
+  state.isDragging = true;
+  elements.mapViewport.classList.add("is-dragging");
+}
+
+function updatePinchGesture() {
+  const points = getActivePointerPoints();
+
+  if (points.length < 2 || state.pinchStartDistance <= 0) {
+    return;
+  }
+
+  const [first, second] = points;
+  const centerX = (first.x + second.x) / 2;
+  const centerY = (first.y + second.y) / 2;
+  const distance = Math.max(Math.hypot(second.x - first.x, second.y - first.y), 1);
+  const nextZoom = clamp(state.pinchStartZoom * (distance / state.pinchStartDistance), state.minZoom, state.maxZoom);
+
+  state.zoom = nextZoom;
+  state.panX = centerX - (state.pinchAnchorWorldX * nextZoom);
+  state.panY = centerY - (state.pinchAnchorWorldY * nextZoom);
+
+  applyTransform();
+  refreshPoiVisualScale();
+  syncBaseImage();
+  updateFeedbackPanel();
 }
 
 function syncBaseImage() {
@@ -749,9 +865,9 @@ function getViewportCenterPoint() {
 }
 
 function getWorldPointFromClient(clientX, clientY) {
-  const rect = elements.mapViewport.getBoundingClientRect();
-  const localX = clientX - rect.left;
-  const localY = clientY - rect.top;
+  const point = getViewportLocalPointFromClient(clientX, clientY);
+  const localX = point.x;
+  const localY = point.y;
   const worldX = (localX - state.panX) / state.zoom;
   const worldY = (localY - state.panY) / state.zoom;
 
@@ -759,6 +875,19 @@ function getWorldPointFromClient(clientX, clientY) {
     x: clamp(worldX, 0, state.activeMap?.size?.width ?? worldX),
     y: clamp(worldY, 0, state.activeMap?.size?.height ?? worldY),
   };
+}
+
+function getViewportLocalPointFromClient(clientX, clientY) {
+  const rect = elements.mapViewport.getBoundingClientRect();
+
+  return {
+    x: clientX - rect.left,
+    y: clientY - rect.top,
+  };
+}
+
+function getActivePointerPoints() {
+  return [...state.activePointers.values()].slice(0, 2);
 }
 
 async function fetchJson(path) {
