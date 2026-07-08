@@ -1,0 +1,751 @@
+{
+  "meta": {
+    "description": "Marathon M1 scenario — terminal files mapped to images",
+    "logon_logoff_image": "01600.bmp",
+    "total_picts": 41,
+    "total_images": 42
+  },
+  "levels": [
+    {
+      "id": "00",
+      "name": "Arrival",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_005_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01601.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01602.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01603.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01604.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "name": "Bigger Guns Nearby",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_005_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01605.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01606.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01607.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01608.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Never Burn Money",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_005_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01609.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01610.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01611.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_005_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01612.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01613.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01614.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_4",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_5",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "name": "Defend THIS!",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_007_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01615.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01616.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01617.bmp"
+            },
+            {
+              "file": "UNFINISHED_005_PICT.txt",
+              "image": "01618.bmp"
+            },
+            {
+              "file": "UNFINISHED_006_PICT.txt",
+              "image": "01619.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_4",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "name": "Couch Fishing",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_006_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01620.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01621.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01622.bmp"
+            },
+            {
+              "file": "UNFINISHED_005_PICT.txt",
+              "image": "01623.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name": "The Rose",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_005_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01624.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01625.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01626.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_006_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "name": "Smells Like Napalm, Tastes Like Chicken!",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_005_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01627.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01628.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01629.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "name": "Cool Fusion",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01630.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "name": "G4 Sunbathing",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_005_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01631.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01632.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01633.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "name": "Blaspheme Quarantine",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Bob-B-Q",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Shake Before Using…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01634.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_007_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01635.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01636.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "01637.bmp"
+            },
+            {
+              "file": "UNFINISHED_005_PICT.txt",
+              "image": "01638.bmp"
+            },
+            {
+              "file": "UNFINISHED_006_PICT.txt",
+              "image": "01639.bmp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Fire! Fire! Fire! Fire! Fire!",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Colony Ship For Sale, Cheap",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Habe Quiddam",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01640.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "picts": [
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01641.bmp"
+            }
+          ]
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Neither High nor Low",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "No Artificial Colors",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Beware of Low-Flying Defense Drones…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Welcome to the Revolution…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Ingue Ferroque",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        },
+        {
+          "name": "Terminal_3",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,8 @@
+---
+title: Marathon News Artifacts
+layout: false
+---
+
 # Marathon News Artifacts
 
 `myblog` 目录下的 `source/news/` 现在只存放前端页面和生成产物，不再承担抓取、对齐、翻译或同步脚本。

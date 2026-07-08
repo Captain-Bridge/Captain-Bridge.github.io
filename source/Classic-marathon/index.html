@@ -1,0 +1,756 @@
+---
+title: 经典马拉松终端文本
+layout: false
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>经典马拉松终端文本</title>
+  <meta name="description" content="Classic Marathon terminal shell">
+  <style>
+    :root {
+      --bg: #000;
+      --fg: rgb(0, 255, 0);
+      --muted: rgba(244, 244, 244, 0.72);
+      --soft: rgba(244, 244, 244, 0.42);
+      --line: rgba(244, 244, 244, 0.12);
+      --red: rgb(100, 0, 0);
+      --focus: rgba(244, 244, 244, 0.12);
+      --term-line: 19px;
+      --term-lines: 20;
+      --term-pad-y: 16px;
+      --term-pad-x: 22px;
+      --term-topbar: 14px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+    }
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .app {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 14px;
+      padding: 16px 18px 18px;
+    }
+    .topline {
+      min-height: 26px;
+      display: flex;
+      align-items: center;
+      color: var(--fg);
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+      gap: 36px;
+      min-height: 0;
+      align-items: start;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-content: start;
+    }
+    .rail {
+      display: grid;
+      align-content: start;
+      gap: 10px;
+      padding-top: 4px;
+    }
+    .rail-label {
+      color: var(--soft);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .rail-list {
+      display: grid;
+      gap: 4px;
+    }
+    .rail-item {
+      width: fit-content;
+      max-width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 13px;
+      line-height: 1.35;
+      text-align: left;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .rail-item[aria-selected="true"] {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .rail-item[disabled] {
+      opacity: 0.28;
+      cursor: not-allowed;
+    }
+    .rail-item.indent {
+      margin-left: 12px;
+    }
+    .rail-item.terminal {
+      font-size: 12px;
+      letter-spacing: 0.02em;
+    }
+    .viewport {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 0;
+      padding: 0;
+    }
+    .terminal-shell {
+      display: grid;
+      justify-items: center;
+      gap: 0;
+      width: min(100%, 640px);
+    }
+    .terminal-frame {
+      position: relative;
+      width: 100%;
+      display: grid;
+      gap: 0;
+    }
+    .terminal-screen {
+      position: relative;
+      width: 100%;
+      height: calc((var(--term-line) * var(--term-lines)) + (var(--term-pad-y) * 2) + (var(--term-topbar) * 2));
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .terminal-strip {
+      flex: 0 0 14px;
+      background: var(--red);
+      pointer-events: none;
+    }
+    .terminal-content {
+      position: relative;
+      z-index: 1;
+      flex: 1 1 auto;
+      min-height: 0;
+      padding: calc(var(--term-pad-y) + 4px) var(--term-pad-x) calc(var(--term-pad-y) + 4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .terminal-body {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1.35;
+      overflow-x: auto;
+      overflow-y: hidden;
+      text-align: center;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,.22) transparent;
+    }
+    .terminal-body::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .terminal-body::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,.22);
+      border-radius: 0;
+    }
+    .terminal-row {
+      font-size: 13px;
+      line-height: 1.35;
+      text-align: center;
+    }
+    .terminal-row.dim { color: var(--soft); }
+    .terminal-row.muted { color: var(--muted); }
+    .terminal-block {
+      display: grid;
+      gap: 6px;
+      margin-top: 2px;
+      justify-items: center;
+    }
+    .terminal-block .line {
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--muted);
+      text-align: center;
+    }
+    .doc-section {
+      display: grid;
+      gap: 8px;
+      width: max-content;
+      min-width: 100%;
+      max-width: none;
+      justify-items: center;
+      padding: 0;
+    }
+    .doc-section.centered {
+      margin: auto 0;
+    }
+    .doc-section.information {
+      justify-items: start;
+    }
+    .doc-image {
+      display: block;
+      max-width: min(100%, 300px);
+      height: auto;
+      object-fit: contain;
+    }
+    .doc-text {
+      width: max-content;
+      max-width: none;
+      margin: 0;
+      color: var(--fg);
+      white-space: pre;
+      text-align: left;
+      overflow-wrap: normal;
+      word-break: normal;
+      font: inherit;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .doc-section.centered .doc-text {
+      text-align: center;
+    }
+    .doc-section.information .doc-text {
+      width: max-content;
+      margin-left: 10%;
+      text-align: left;
+    }
+    .doc-pict {
+      display: grid;
+      grid-template-columns: minmax(120px, 200px) minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      width: max-content;
+      min-width: min(100%, 620px);
+    }
+    .doc-pict .doc-text {
+      width: auto;
+    }
+    .doc-section.centered .doc-image,
+    .doc-section.centered .doc-text {
+      justify-self: center;
+    }
+    .loading-state {
+      color: var(--soft);
+      font-size: 12px;
+      text-align: center;
+    }
+    .pager {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      margin: 0;
+      color: var(--soft);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pager-host {
+      flex: 0 0 auto;
+      padding-top: 0;
+    }
+    .pager button {
+      border: 0;
+      background: transparent;
+      color: var(--fg);
+      font: inherit;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0;
+    }
+    .pager button:disabled {
+      opacity: 0.22;
+      cursor: not-allowed;
+    }
+    @media (max-width: 1180px) {
+      html, body {
+        height: 100%;
+        min-height: 100%;
+      }
+      body {
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255,255,255,.22) transparent;
+      }
+      body::-webkit-scrollbar,
+      .rail-list::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      body::-webkit-scrollbar-thumb,
+      .rail-list::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,.22);
+        border-radius: 0;
+      }
+      .app {
+        min-height: 100%;
+        grid-template-rows: auto auto;
+        gap: 12px;
+        padding: 14px 14px 20px;
+      }
+      .workspace {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .menu-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+        max-height: min(31vh, 250px);
+      }
+      .rail {
+        gap: 6px;
+        min-width: 0;
+      }
+      .rail-list {
+        display: grid;
+        gap: 4px;
+        max-height: calc(min(31vh, 250px) - 24px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 4px;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255,255,255,.22) transparent;
+      }
+      .rail-item {
+        width: 100%;
+        white-space: normal;
+      }
+      .rail-item.indent {
+        margin-left: 0;
+      }
+      .viewport {
+        grid-column: 1 / -1;
+        min-height: auto;
+        align-items: start;
+        padding-top: 2px;
+      }
+      .terminal-shell {
+        width: 100%;
+      }
+      .terminal-frame {
+        width: 100%;
+        height: auto;
+      }
+      .terminal-content {
+        height: auto;
+        min-height: 0;
+        padding: 22px 16px 16px;
+      }
+    }
+    @media (max-width: 720px) {
+      .app {
+        padding: 14px 12px 20px;
+      }
+      .topline {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+      }
+      .menu-grid {
+        max-height: 34vh;
+      }
+      .rail-list {
+        max-height: calc(34vh - 24px);
+      }
+      .rail-item {
+        font-size: 12px;
+      }
+      .rail-item.terminal {
+        font-size: 11px;
+      }
+      .terminal-shell,
+      .terminal-frame,
+      .terminal-screen {
+        width: 100%;
+      }
+      .terminal-screen {
+        height: min(52vh, 420px);
+      }
+      .terminal-content {
+        padding: 14px 12px 12px;
+      }
+      .terminal-body {
+        font-size: 12px;
+      }
+      .doc-section {
+        max-width: 100%;
+      }
+      .doc-image {
+        max-width: 100%;
+      }
+      .doc-text {
+        width: max-content;
+        font-size: 12px;
+      }
+      .doc-section.information .doc-text {
+        width: max-content;
+        margin-left: 10%;
+      }
+      .doc-pict {
+        width: max-content;
+        grid-template-columns: 1fr;
+      }
+      .doc-pict .doc-text {
+        width: max-content;
+      }
+      #classic-pager-host {
+        width: 100%;
+      }
+      .pager {
+        font-size: 10px;
+      }
+    }
+    @media (max-width: 520px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-height: 40vh;
+      }
+      .rail-list {
+        max-height: calc(20vh - 8px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <div class="topline">Classic Marathon</div>
+    <section class="workspace" aria-label="navigation and terminal">
+      <section class="menu-grid" aria-label="navigation">
+        <section class="rail" aria-label="level selection">
+          <div class="rail-label">Chapter Select</div>
+          <div class="rail-list" id="chapter-list"></div>
+        </section>
+
+        <section class="rail" aria-label="terminal selection">
+          <div class="rail-label">Terminal</div>
+          <div class="rail-list" id="terminal-list"></div>
+        </section>
+      </section>
+      <section class="viewport">
+        <div class="terminal-shell">
+          <div class="terminal-frame">
+            <div class="terminal-screen">
+              <div class="terminal-strip"></div>
+              <div class="terminal-content" id="terminal-view">
+                <div class="terminal-body" id="terminal-body"></div>
+              </div>
+              <div class="terminal-strip"></div>
+            </div>
+            <div id="classic-pager-host"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const catalog = [];
+
+    const state = {
+      classicIndex: 0,
+      chapterIndex: 0,
+      terminalIndex: 0,
+      pageIndex: 0
+    };
+
+    const el = {
+      chapter: document.getElementById('chapter-list'),
+      terminal: document.getElementById('terminal-list'),
+      body: document.getElementById('terminal-body'),
+      pagerHost: document.getElementById('classic-pager-host')
+    };
+
+    const fallbackSeries = {
+      id: 'm1',
+      label: '1',
+      title: 'Classic Marathon 1',
+      chapters: []
+    };
+
+    function currentClassic() {
+      return catalog[state.classicIndex] || fallbackSeries;
+    }
+
+    function currentChapter() {
+      const chapters = currentClassic().chapters || [];
+      return chapters[state.chapterIndex] || null;
+    }
+
+    function currentTerminal() {
+      const chapter = currentChapter();
+      return chapter && Array.isArray(chapter.terminals) ? chapter.terminals[state.terminalIndex] || null : null;
+    }
+
+    function renderRail(container, items, selectedIndex, onSelect, extraClass = '', disabled = false) {
+      container.innerHTML = '';
+      (items || []).forEach((item, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'rail-item' + (extraClass ? ' ' + extraClass : '') + (index === 0 && extraClass === 'indent' ? '' : '');
+        button.textContent = item.label || item;
+        button.setAttribute('aria-selected', index === selectedIndex ? 'true' : 'false');
+        if (disabled) button.disabled = true;
+        if (extraClass === 'indent' && index > 0) button.classList.add('indent');
+        if (extraClass === 'terminal') button.classList.add('terminal');
+        button.addEventListener('click', () => onSelect(index));
+        container.appendChild(button);
+      });
+    }
+
+    const textCache = new Map();
+    let renderSeq = 0;
+
+    function joinPath(...parts) {
+      return parts
+        .filter(Boolean)
+        .map(part => String(part).replace(/^\/+|\/+$/g, ''))
+        .join('/');
+    }
+
+    function terminalBase(level, terminal) {
+      return '/' + joinPath('Classic-marathon', 'M1', 'text', level.dirName || level.label || level.name || level.id || '', terminal.name || '');
+    }
+
+    function resolveImagePath(fileName) {
+      return '/' + joinPath('Classic-marathon', 'M1', 'picts', fileName);
+    }
+
+    async function fetchTextFile(url) {
+      if (textCache.has(url)) return textCache.get(url);
+      const pending = fetch(url, { cache: 'no-store' }).then(response => {
+        if (!response.ok) throw new Error('Failed to fetch ' + url);
+        return response.text();
+      });
+      textCache.set(url, pending);
+      return pending;
+    }
+
+    function loadM1Catalog() {
+      return fetch('/Classic-marathon/M1/terminals.json', { cache: 'no-store' })
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load terminals.json');
+          return response.json();
+        })
+        .then(data => {
+          const levels = Array.isArray(data?.levels) ? data.levels : [];
+          return [{
+            id: 'm1',
+            label: '1',
+            title: 'Classic Marathon 1',
+            chapters: levels.map(level => ({
+              id: level.id || level.name,
+              label: (level.id ? level.id + ' ' : '') + (level.name || level.id || ''),
+              dirName: (level.id ? level.id + ' ' : '') + (level.name || level.id || ''),
+              terminals: (Array.isArray(level.terminals) ? level.terminals : []).map(term => ({
+                ...term,
+                label: term.name || 'Terminal'
+              })),
+              meta: level
+            }))
+          }];
+        })
+        .catch(() => [{
+          id: 'm1',
+          label: '1',
+          title: 'Classic Marathon 1',
+          chapters: []
+        }]);
+    }
+
+    function setLoadingState() {
+      el.body.innerHTML = '';
+      const loading = document.createElement('div');
+      loading.className = 'loading-state';
+      loading.textContent = 'Loading terminal...';
+      el.body.appendChild(loading);
+    }
+
+    function buildDocSection(kind, text, imageSrc) {
+      const section = document.createElement('section');
+      section.className = 'doc-section';
+
+      if (kind === 'pict') {
+        const row = document.createElement('div');
+        row.className = 'doc-pict';
+
+        if (imageSrc) {
+          const img = document.createElement('img');
+          img.className = 'doc-image';
+          img.src = imageSrc;
+          img.alt = 'Marathon pict';
+          row.appendChild(img);
+        }
+
+        const textNode = document.createElement('pre');
+        textNode.className = 'doc-text';
+        textNode.textContent = text || '';
+        row.appendChild(textNode);
+        section.appendChild(row);
+      } else {
+        if (kind === 'logon' || kind === 'logoff') {
+          section.classList.add('centered');
+        } else if (kind === 'information') {
+          section.classList.add('information');
+        }
+        if (imageSrc) {
+          const img = document.createElement('img');
+          img.className = 'doc-image';
+          img.src = imageSrc;
+          img.alt = 'Marathon terminal image';
+          section.appendChild(img);
+        }
+
+        const textNode = document.createElement('pre');
+        textNode.className = 'doc-text';
+        textNode.textContent = text || '';
+        section.appendChild(textNode);
+      }
+      return section;
+    }
+
+    async function renderDocument(level, terminal) {
+      const items = [
+        { kind: 'logon', file: terminal.logon, image: '01600.bmp' },
+        { kind: 'information', file: terminal.information, image: null },
+        ...((terminal.picts || []).map(item => ({ kind: 'pict', file: item.file, image: item.image }))),
+        { kind: 'logoff', file: terminal.logoff, image: '01600.bmp' }
+      ];
+
+      const results = await Promise.all(items.map(async item => {
+        if (!item.file) return null;
+        const text = await fetchTextFile(terminalBase(level, terminal) + '/' + item.file).catch(() => '');
+        return {
+          kind: item.kind,
+          text,
+          image: item.image ? resolveImagePath(item.image) : null
+        };
+      }));
+
+      return results.filter(Boolean);
+    }
+
+    function renderPager(totalPages, currentPage) {
+      const pager = document.createElement('div');
+      pager.className = 'pager';
+
+      const prev = document.createElement('button');
+      prev.type = 'button';
+      prev.textContent = 'Prev';
+      prev.disabled = currentPage <= 0;
+
+      const label = document.createElement('span');
+      label.textContent = (currentPage + 1) + ' / ' + totalPages;
+
+      const next = document.createElement('button');
+      next.type = 'button';
+      next.textContent = 'Next';
+      next.disabled = currentPage >= totalPages - 1;
+
+      pager.appendChild(prev);
+      pager.appendChild(label);
+      pager.appendChild(next);
+      return { pager, prev, next };
+    }
+
+    async function updateView() {
+      const seq = ++renderSeq;
+      const classic = currentClassic();
+      const chapter = currentChapter();
+      const terminal = currentTerminal();
+
+      renderRail(
+        el.chapter,
+        classic.chapters || [],
+        state.chapterIndex,
+        index => {
+          state.chapterIndex = index;
+          state.terminalIndex = 0;
+          updateView();
+        },
+        'indent',
+        !classic.chapters || classic.chapters.length === 0
+      );
+
+      renderRail(
+        el.terminal,
+        (chapter?.terminals || []).map(text => (typeof text === 'string' ? { label: text } : text)),
+        state.terminalIndex,
+        index => {
+          state.terminalIndex = index;
+          state.pageIndex = 0;
+          updateView();
+        },
+        'terminal',
+        !chapter || !chapter.terminals || chapter.terminals.length === 0
+      );
+
+      if (!chapter || !terminal) {
+        setLoadingState();
+        return;
+      }
+
+      setLoadingState();
+
+      const doc = await renderDocument(chapter, terminal);
+      if (seq !== renderSeq) return;
+
+      el.body.innerHTML = '';
+      const pages = doc.length ? doc : [{ kind: 'information', text: '', image: null }];
+      state.pageIndex = Math.max(0, Math.min(state.pageIndex, pages.length - 1));
+      const page = pages[state.pageIndex];
+      el.body.appendChild(buildDocSection(page.kind, page.text, page.image));
+
+      const pager = renderPager(pages.length, state.pageIndex);
+      pager.prev.addEventListener('click', () => {
+        state.pageIndex = Math.max(0, state.pageIndex - 1);
+        updateView();
+      });
+      pager.next.addEventListener('click', () => {
+        state.pageIndex = Math.min(pages.length - 1, state.pageIndex + 1);
+        updateView();
+      });
+      el.pagerHost.innerHTML = '';
+      el.pagerHost.appendChild(pager.pager);
+    }
+
+    loadM1Catalog().then(data => {
+      catalog.splice(0, catalog.length, ...data);
+      state.classicIndex = 0;
+      state.chapterIndex = 0;
+      state.terminalIndex = 0;
+      state.pageIndex = 0;
+      updateView();
+    });
+  </script>
+</body>
+</html>
