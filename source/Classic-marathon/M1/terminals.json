@@ -12,6 +12,9 @@
       "terminals": [
         {
           "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_005_LOGOFF.txt",
@@ -32,6 +35,9 @@
         },
         {
           "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
@@ -39,6 +45,9 @@
         },
         {
           "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED"
+          ],
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_003_LOGOFF.txt",
@@ -51,6 +60,9 @@
         },
         {
           "name": "Terminal_3",
+          "variants": [
+            "UNFINISHED"
+          ],
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
@@ -80,6 +92,9 @@
               "file": "UNFINISHED_004_PICT.txt",
               "image": "01607.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -92,6 +107,9 @@
               "file": "UNFINISHED_002_PICT.txt",
               "image": "01608.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -99,7 +117,10 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     },
@@ -125,6 +146,9 @@
               "file": "UNFINISHED_004_PICT.txt",
               "image": "01611.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -145,6 +169,9 @@
               "file": "UNFINISHED_004_PICT.txt",
               "image": "01614.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -152,28 +179,42 @@
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         },
         {
           "name": "Terminal_3",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_4",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_5",
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -207,6 +248,9 @@
               "file": "UNFINISHED_006_PICT.txt",
               "image": "01619.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -214,28 +258,41 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_3",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_4",
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -265,6 +322,9 @@
               "file": "UNFINISHED_005_PICT.txt",
               "image": "01623.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -272,14 +332,21 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -305,6 +372,9 @@
               "file": "UNFINISHED_004_PICT.txt",
               "image": "01626.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -312,21 +382,31 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         },
         {
           "name": "Terminal_3",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_006_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     },
@@ -352,6 +432,9 @@
               "file": "UNFINISHED_004_PICT.txt",
               "image": "01629.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -359,21 +442,31 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_3",
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -391,6 +484,9 @@
               "file": "UNFINISHED_002_PICT.txt",
               "image": "01630.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -398,7 +494,11 @@
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -424,6 +524,9 @@
               "file": "UNFINISHED_004_PICT.txt",
               "image": "01633.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -431,7 +534,11 @@
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -444,28 +551,42 @@
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         },
         {
           "name": "Terminal_1",
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_3",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     },
@@ -478,7 +599,11 @@
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -496,6 +621,9 @@
               "file": "UNFINISHED_002_PICT.txt",
               "image": "01634.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -503,7 +631,10 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
@@ -531,6 +662,9 @@
               "file": "UNFINISHED_006_PICT.txt",
               "image": "01639.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         }
       ]
@@ -544,14 +678,20 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_1",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     },
@@ -564,28 +704,40 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_1",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_3",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     },
@@ -603,6 +755,9 @@
               "file": "UNFINISHED_002_PICT.txt",
               "image": "01640.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -615,6 +770,9 @@
               "file": "UNFINISHED_002_PICT.txt",
               "image": "01641.bmp"
             }
+          ],
+          "variants": [
+            "UNFINISHED"
           ]
         },
         {
@@ -622,7 +780,11 @@
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -635,14 +797,20 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_1",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     },
@@ -655,7 +823,11 @@
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
         }
       ]
     },
@@ -668,21 +840,30 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_1",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     },
@@ -695,21 +876,30 @@
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_1",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         },
         {
           "name": "Terminal_2",
           "logon": "UNFINISHED_000_LOGON.txt",
           "information": "UNFINISHED_001_INFORMATION.txt",
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
         }
       ]
     }

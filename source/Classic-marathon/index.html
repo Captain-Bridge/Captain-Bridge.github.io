@@ -143,7 +143,20 @@ layout: false
     .terminal-strip {
       flex: 0 0 14px;
       background: var(--red);
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
       pointer-events: none;
+    }
+    .terminal-strip-text {
+      color: rgb(255, 0, 0);
+      font: inherit;
+      font-size: 11px;
+      line-height: 1;
+    }
+    .terminal-strip-meta {
+      justify-content: space-between;
+      gap: 12px;
     }
     .terminal-content {
       position: relative;
@@ -498,11 +511,17 @@ layout: false
         <div class="terminal-shell">
           <div class="terminal-frame">
             <div class="terminal-screen">
-              <div class="terminal-strip"></div>
+              <div class="terminal-strip terminal-strip-meta">
+                <span class="terminal-strip-text" id="terminal-top-strip-text">Opening Connection to β.4.5-23</span>
+                <span class="terminal-strip-text" id="terminal-top-strip-time"></span>
+              </div>
               <div class="terminal-content" id="terminal-view">
                 <div class="terminal-body" id="terminal-body"></div>
               </div>
-              <div class="terminal-strip"></div>
+              <div class="terminal-strip terminal-strip-meta">
+                <span class="terminal-strip-text">CAS.qterm//CyberAcme Systems Inc.</span>
+                <span class="terminal-strip-text">&lt;931.461.60231.14.vt920&gt;</span>
+              </div>
             </div>
             <div id="classic-variant-host"></div>
             <div id="classic-pager-host"></div>
@@ -527,6 +546,8 @@ layout: false
       chapter: document.getElementById('chapter-list'),
       terminal: document.getElementById('terminal-list'),
       body: document.getElementById('terminal-body'),
+      topStripText: document.getElementById('terminal-top-strip-text'),
+      topStripTime: document.getElementById('terminal-top-strip-time'),
       variantHost: document.getElementById('classic-variant-host'),
       pagerHost: document.getElementById('classic-pager-host')
     };
@@ -620,8 +641,6 @@ layout: false
     }
 
     const textCache = new Map();
-    const fileExistsCache = new Map();
-    const variantCache = new Map();
     let renderSeq = 0;
     const WRAP_LIMIT = 35;
     const PICT_WRAP_LIMIT = 21;
@@ -652,19 +671,6 @@ layout: false
       return pending;
     }
 
-    async function fileExists(url) {
-      if (fileExistsCache.has(url)) return fileExistsCache.get(url);
-      const pending = fetch(url, { method: 'HEAD', cache: 'no-store' })
-        .then(response => {
-          if (response.ok) return true;
-          if (response.status !== 405) return false;
-          return fetch(url, { cache: 'no-store' }).then(fallback => fallback.ok);
-        })
-        .catch(() => false);
-      fileExistsCache.set(url, pending);
-      return pending;
-    }
-
     function terminalVariantFromFile(fileName) {
       const match = String(fileName || '').match(/^(FINISHED|UNFINISHED)_/);
       return match ? match[1] : null;
@@ -687,35 +693,28 @@ layout: false
       ].filter(item => item.file);
     }
 
-    async function resolveTerminalVariants(level, terminal) {
-      const base = terminalBase(level, terminal);
-      if (variantCache.has(base)) return variantCache.get(base);
+    function resolveTerminalVariants(terminal) {
+      const declaredVariants = Array.isArray(terminal.variants) && terminal.variants.length
+        ? terminal.variants.filter(variant => TERMINAL_VARIANTS.includes(variant))
+        : [terminalVariantFromFile(terminal.logon) || 'UNFINISHED'];
+      const defaultVariant =
+        terminalVariantFromFile(terminal.logon) ||
+        terminalVariantFromFile(terminal.information) ||
+        terminalVariantFromFile(terminal.logoff) ||
+        terminalVariantFromFile(terminal.picts?.[0]?.file) ||
+        declaredVariants[0] ||
+        'UNFINISHED';
 
-      const pending = (async () => {
-        const defaultVariant =
-          terminalVariantFromFile(terminal.logon) ||
-          terminalVariantFromFile(terminal.information) ||
-          terminalVariantFromFile(terminal.logoff) ||
-          terminalVariantFromFile(terminal.picts?.[0]?.file) ||
-          'UNFINISHED';
+      const available = declaredVariants.map(variant => ({
+        key: variant,
+        items: buildVariantItems(terminal, variant)
+      }));
 
-        const variantEntries = await Promise.all(TERMINAL_VARIANTS.map(async variant => {
-          const items = buildVariantItems(terminal, variant);
-          if (!items.length) return null;
-          const checks = await Promise.all(items.map(item => fileExists(base + '/' + item.file)));
-          return checks.every(Boolean) ? { key: variant, items } : null;
-        }));
-
-        const available = variantEntries.filter(Boolean);
-        return {
-          defaultVariant,
-          available,
-          hasToggle: available.length > 1
-        };
-      })();
-
-      variantCache.set(base, pending);
-      return pending;
+      return {
+        defaultVariant,
+        available,
+        hasToggle: available.length > 1
+      };
     }
 
     function charWidthUnits(char) {
@@ -920,6 +919,29 @@ layout: false
       return wrap;
     }
 
+    function topStripTextForKind(kind) {
+      if (kind === 'information' || kind === 'pict') {
+        return 'UESCTerm 802.11 (remote override)';
+      }
+      if (kind === 'logoff') {
+        return 'Disconnecting...';
+      }
+      return 'Opening Connection to β.4.5-23';
+    }
+
+    function formatTerminalTimestamp(date = new Date()) {
+      const pad = value => String(value).padStart(2, '0');
+      return [
+        pad(date.getHours()) + pad(date.getMinutes()),
+        pad(date.getMonth() + 1) + '.' + pad(date.getDate()) + '.' + date.getFullYear()
+      ].join(' ');
+    }
+
+    function updateTopStripTimestamp() {
+      if (!el.topStripTime) return;
+      el.topStripTime.textContent = formatTerminalTimestamp();
+    }
+
     function renderPager(totalPages, currentPage, canMovePrev, canMoveNext) {
       const pager = document.createElement('div');
       pager.className = 'pager';
@@ -985,8 +1007,7 @@ layout: false
       setLoadingState();
       el.variantHost.innerHTML = '';
 
-      const variantState = await resolveTerminalVariants(chapter, terminal);
-      if (seq !== renderSeq) return;
+      const variantState = resolveTerminalVariants(terminal);
 
       const activeVariant =
         variantState.available.find(entry => entry.key === state.variantPreference)?.key ||
@@ -1008,6 +1029,7 @@ layout: false
       const pages = doc.length ? doc : [{ kind: 'information', text: '', image: null }];
       state.pageIndex = Math.max(0, Math.min(state.pageIndex, pages.length - 1));
       const page = pages[state.pageIndex];
+      el.topStripText.textContent = topStripTextForKind(page.kind);
       el.body.appendChild(buildDocSection(page.kind, page.text, page.image));
 
       const canMovePrev = state.pageIndex > 0 || hasAdjacentTerminal(-1);
@@ -1039,8 +1061,12 @@ layout: false
       state.chapterIndex = 0;
       state.terminalIndex = 0;
       state.pageIndex = 0;
+      updateTopStripTimestamp();
       updateView();
     });
+
+    updateTopStripTimestamp();
+    window.setInterval(updateTopStripTimestamp, 1000);
 
     document.addEventListener('keydown', event => {
       if (event.key !== 'Escape') return;
