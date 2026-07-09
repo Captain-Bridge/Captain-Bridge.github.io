@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="18 18 86 92"
+   fill="currentColor"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="about.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.0703125"
+     inkscape:cx="64"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <!-- Outer dossier panel -->
+  <path
+     fill-rule="evenodd"
+     d="         M24 18H94L104 28V110H24Z          M32 26V102H96V34H88V26Z          M94 18V28H104Z"
+     id="path1"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- Classification header -->
+  <path
+     d="M38 36H62V44H38Z"
+     id="path2"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M70 36H90V44H70Z"
+     id="path3"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- Archive summary -->
+  <path
+     d="M38 54H90V60H38Z"
+     id="path4"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M38 68H82V74H38Z"
+     id="path5"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M38 82H74V88H38Z"
+     id="path6"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- Central system profile module -->
+  <path
+     fill-rule="evenodd"
+     d="         M76 60H92V92H76Z          M82 66H86V82H82Z         M80 86H88V90H80Z"
+     id="path7"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- Registration tabs -->
+  <path
+     d="M18 34H24V46H18Z"
+     id="path8"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M18 54H24V66H18Z"
+     id="path9"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- Bottom access block -->
+  <path
+     d="M74 98H94V104H74Z"
+     id="path10"
+     style="fill:#00ff00;fill-opacity:1" />
+</svg>

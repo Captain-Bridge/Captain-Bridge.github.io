@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="24 24 80 80"
+   width="128"
+   height="128"
+   version="1.1"
+   id="svg41"
+   sodipodi:docname="maps.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs41" />
+  <sodipodi:namedview
+     id="namedview41"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.0703125"
+     inkscape:cx="60.375804"
+     inkscape:cy="89.698842"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg41" />
+  <!-- 外部地图控制台（切角面板） -->
+  <path
+     d="M44,24 L84,24 L104,44 L104,84 L84,104 L44,104 L24,84 L24,44 Z"
+     fill="#E8ECF1"
+     id="path1"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- 顶部界面标签 -->
+  <!-- 内部屏幕边缘括号（角） -->
+  <path
+     d="M36,36 L40,36 L40,40 L36,40 Z"
+     fill="#E8ECF1"
+     id="path3"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M88,36 L92,36 L92,40 L88,40 Z"
+     fill="#E8ECF1"
+     id="path4"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M36,88 L40,88 L40,92 L36,92 Z"
+     fill="#E8ECF1"
+     id="path5"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M88,88 L92,88 L92,92 L88,92 Z"
+     fill="#E8ECF1"
+     id="path6"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- 内部地图窗口边框 -->
+  <rect
+     x="40"
+     y="40"
+     width="48"
+     height="48"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="rect6"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 地图区块 1：左上方块（已探索的设施区） -->
+  <rect
+     x="44"
+     y="44"
+     width="12"
+     height="12"
+     fill="#E8ECF1"
+     id="rect7"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- 地图区块 2：右上方块（撤离点 / 危险出口） -->
+  <rect
+     x="72"
+     y="44"
+     width="12"
+     height="8"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="rect8"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 地图区块 3：左下方块（封锁区 / 危险区域） -->
+  <rect
+     x="44"
+     y="72"
+     width="8"
+     height="12"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="rect9"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 地图区块 4：右下方块（异常现象 / 扫描区域） -->
+  <rect
+     x="72"
+     y="72"
+     width="12"
+     height="12"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="rect10"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 内部扫描路径与标记 -->
+  <path
+     d="M74,74 L82,74 L82,82"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path10"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <rect
+     x="76"
+     y="76"
+     width="4"
+     height="4"
+     fill="#E8ECF1"
+     id="rect11"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- 战术路径 / 行军路线（2px 硬边折线） -->
+  <path
+     d="M78,52 L78,72"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="path12"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M72,78 L52,78"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="path13"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 战术扫描叠加层（45 度折线扫描） -->
+  <!-- 中心战术定位标记（十字准星 / 目标锁定） -->
+  <!-- 横轴与纵轴 -->
+  <path
+     d="M56,64 L72,64"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="path16"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M64,56 L64,72"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="path17"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 四角锚点 -->
+  <path
+     d="M56,56 L58,56 L58,58 L56,58 Z"
+     fill="#E8ECF1"
+     id="path18"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M70,56 L72,56 L72,58 L70,58 Z"
+     fill="#E8ECF1"
+     id="path19"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M56,70 L58,70 L58,72 L56,72 Z"
+     fill="#E8ECF1"
+     id="path20"
+     style="fill:#00ff00;fill-opacity:1" />
+  <path
+     d="M70,70 L72,70 L72,72 L70,72 Z"
+     fill="#E8ECF1"
+     id="path21"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- 中心锁定位点 -->
+  <rect
+     x="62"
+     y="62"
+     width="4"
+     height="4"
+     fill="#E8ECF1"
+     id="rect21"
+     style="fill:#00ff00;fill-opacity:1" />
+  <!-- 外部框架坐标分区 / 刻度线（战术 HUD） -->
+  <!-- 顶部刻度 -->
+  <path
+     d="M48,24 L48,26"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path22"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M56,24 L56,26"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path23"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M64,24 L64,26"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path24"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M72,24 L72,26"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path25"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M80,24 L80,26"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path26"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 底部刻度 -->
+  <path
+     d="M48,104 L48,102"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path27"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M56,104 L56,102"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path28"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M64,104 L64,102"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path29"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M72,104 L72,102"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path30"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M80,104 L80,102"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path31"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 左侧刻度 -->
+  <path
+     d="M24,48 L26,48"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path32"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M24,56 L26,56"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path33"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M24,64 L26,64"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path34"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M24,72 L26,72"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path35"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M24,80 L26,80"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path36"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <!-- 右侧刻度 -->
+  <path
+     d="M104,48 L102,48"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path37"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M104,56 L102,56"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path38"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M104,64 L102,64"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path39"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M104,72 L102,72"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path40"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M104,80 L102,80"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="1"
+     id="path41"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="m 39.806502,63.943693 8,-8 h 8 v -8 l 8,-8 h 8"
+     fill="none"
+     stroke="#e8ecf1"
+     stroke-width="1"
+     id="path15"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M48,72 L48,56"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="path14"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+  <path
+     d="M56,52 L72,52"
+     fill="none"
+     stroke="#E8ECF1"
+     stroke-width="2"
+     id="path11"
+     style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+</svg>

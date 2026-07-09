@@ -282,13 +282,13 @@
       display: grid;
       place-items: center;
       border-radius: 0;
-      background: rgba(255,255,255,0.03);
-      overflow: hidden; /* 很重要 */
+      background: transparent;
+      overflow: visible;
     }
     .card-icon img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
     .card:nth-child(2) .card-icon { color: var(--blue); }
@@ -455,7 +455,7 @@
       <section class="grid">
         <a class="card" href="/marathon-lore/">
           <div class="card-icon">
-            <img src="/marathon-lore/assets/images/icons/cyac.webp" alt="Marathon">
+            <img src="/marathon-lore/assets/images/icons/lores.svg" alt="百科">
           </div>
           <strong>百科</strong>
           <p>知识不是得来的，而是捕获的，并且它会不懈地试图逃离。</p>
@@ -463,7 +463,7 @@
 
         <a class="card" href="/factions/">
           <div class="card-icon">
-            <img src="/marathon-lore/assets/images/icons/nv.webp" alt="Marathon">
+            <img src="/marathon-lore/assets/images/icons/factions.svg" alt="阵营">
           </div>
           <strong>阵营</strong>
           <p>终有一天我们将宣布 /  “他们的梦并非虚妄”</p>
@@ -472,27 +472,28 @@
 
         <article class="card link-card" role="link" tabindex="0" onclick="location.href='/map/'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='/map/';}">
           <div class="card-icon">
-            <img src="/marathon-lore/assets/images/icons/arachne.webp" alt="Marathon">
+            <img src="/marathon-lore/assets/images/icons/maps.svg" alt="互动地图">
           </div>
           <strong>互动地图</strong>
           <p>现在,把这座建筑放置在一颗卫星内,送往群星深处...</p>
           <span class="status pending">低温和夜沼第一版完成</span>
         </article>
 
+        <!-- <article class="card link-card" role="link" tabindex="0" onclick="location.href='/Classic-marathon/'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='/Classic-marathon/';}"> -->
         <article class="card">
           <div class="card-icon">
-            <img src="/marathon-lore/assets/images/icons/mida.webp" alt="Marathon">
+            <img src="/marathon-lore/assets/images/icons/classic-marathon.svg" alt="Marathon">
           </div>
-          <strong>经典马拉松终端文本</strong>
+          <strong>经典马拉松终端</strong>
           <!-- <p>感谢群友PASTA ANCHOVY#8906汉化</p> -->
           <p>天际的某处，他们在等待。</p>
           <!-- <small>结构位已留出</small> -->
-          <span class="status pending"></span>
+          <span class="status pending">校对进行中</span>
         </article>
         
         <article class="card link-card" role="link" tabindex="0" onclick="location.href='/news/'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='/news/';}">
           <div class="card-icon">
-            <img src="/marathon-lore/assets/images/icons/telrax.webp" alt="Marathon">
+            <img src="/marathon-lore/assets/images/icons/news.svg" alt="最近消息">
           </div>
           <strong>最近消息</strong>
           <p>我们看见群星，生平第一次。</p>
@@ -503,7 +504,7 @@
 
         <article class="card link-card" role="link" tabindex="0" onclick="location.href='/about/'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();location.href='/about/';}">
           <div class="card-icon">
-            <img src="/marathon-lore/assets/images/icons/sekiguchi.webp" alt="Marathon">
+            <img src="/marathon-lore/assets/images/icons/about.svg" alt="关于">
           </div>
           <strong>关于</strong>
           <p>时间存在之前，他们通过无言的讲述创造了宇宙。</p>
