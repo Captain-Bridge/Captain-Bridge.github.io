@@ -712,40 +712,6 @@
           "picts": []
         }
       ]
-    },
-    {
-      "id": "26",
-      "name": "Ingue Ferroque",
-      "terminals": [
-        {
-          "name": "Terminal_0",
-          "logon": "UNFINISHED_000_LOGON.txt",
-          "information": "UNFINISHED_001_INFORMATION.txt",
-          "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
-        },
-        {
-          "name": "Terminal_1",
-          "logon": "UNFINISHED_000_LOGON.txt",
-          "information": "UNFINISHED_001_INFORMATION.txt",
-          "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
-        },
-        {
-          "name": "Terminal_2",
-          "logon": "UNFINISHED_000_LOGON.txt",
-          "information": "UNFINISHED_001_INFORMATION.txt",
-          "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
-        },
-        {
-          "name": "Terminal_3",
-          "logon": "UNFINISHED_000_LOGON.txt",
-          "information": "UNFINISHED_001_INFORMATION.txt",
-          "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": []
-        }
-      ]
     }
   ]
 }
