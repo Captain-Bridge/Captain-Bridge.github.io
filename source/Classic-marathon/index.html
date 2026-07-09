@@ -160,12 +160,11 @@ layout: false
       width: 100%;
       height: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       font-size: 13px;
       line-height: 1.35;
-      overflow-x: auto;
-      overflow-y: hidden;
+      overflow: auto;
       text-align: center;
       scrollbar-width: thin;
       scrollbar-color: rgba(255,255,255,.22) transparent;
@@ -287,6 +286,39 @@ layout: false
       padding: 0;
     }
     .pager button:disabled {
+      opacity: 0.22;
+      cursor: not-allowed;
+    }
+    .variant-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      margin: 0;
+      color: var(--soft);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .variant-switch button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0;
+    }
+    .variant-switch button[aria-pressed="true"] {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .variant-switch button:disabled {
       opacity: 0.22;
       cursor: not-allowed;
     }
@@ -428,6 +460,12 @@ layout: false
       .pager {
         font-size: 10px;
       }
+      .variant-switch {
+        font-size: 10px;
+      }
+      .variant-switch button {
+        font-size: 11px;
+      }
     }
     @media (max-width: 520px) {
       .menu-grid {
@@ -466,6 +504,7 @@ layout: false
               </div>
               <div class="terminal-strip"></div>
             </div>
+            <div id="classic-variant-host"></div>
             <div id="classic-pager-host"></div>
           </div>
         </div>
@@ -480,13 +519,15 @@ layout: false
       classicIndex: 0,
       chapterIndex: 0,
       terminalIndex: 0,
-      pageIndex: 0
+      pageIndex: 0,
+      variantPreference: null
     };
 
     const el = {
       chapter: document.getElementById('chapter-list'),
       terminal: document.getElementById('terminal-list'),
       body: document.getElementById('terminal-body'),
+      variantHost: document.getElementById('classic-variant-host'),
       pagerHost: document.getElementById('classic-pager-host')
     };
 
@@ -511,6 +552,57 @@ layout: false
       return chapter && Array.isArray(chapter.terminals) ? chapter.terminals[state.terminalIndex] || null : null;
     }
 
+    function findAdjacentTerminal(step) {
+      const classic = currentClassic();
+      const chapters = Array.isArray(classic.chapters) ? classic.chapters : [];
+      if (!chapters.length) return null;
+
+      if (step > 0) {
+        let chapterIndex = state.chapterIndex;
+        let terminalIndex = state.terminalIndex + 1;
+
+        while (chapterIndex < chapters.length) {
+          const terminals = Array.isArray(chapters[chapterIndex]?.terminals) ? chapters[chapterIndex].terminals : [];
+          if (terminalIndex < terminals.length) {
+            return { chapterIndex, terminalIndex };
+          }
+          chapterIndex += 1;
+          terminalIndex = 0;
+        }
+        return null;
+      }
+
+      let chapterIndex = state.chapterIndex;
+      let terminalIndex = state.terminalIndex - 1;
+
+      while (chapterIndex >= 0) {
+        const terminals = Array.isArray(chapters[chapterIndex]?.terminals) ? chapters[chapterIndex].terminals : [];
+        if (terminalIndex >= 0 && terminalIndex < terminals.length) {
+          return { chapterIndex, terminalIndex };
+        }
+        chapterIndex -= 1;
+        if (chapterIndex >= 0) {
+          const prevTerminals = Array.isArray(chapters[chapterIndex]?.terminals) ? chapters[chapterIndex].terminals : [];
+          terminalIndex = prevTerminals.length - 1;
+        }
+      }
+      return null;
+    }
+
+    function moveTerminal(step) {
+      const target = findAdjacentTerminal(step);
+      if (!target) return false;
+
+      state.chapterIndex = target.chapterIndex;
+      state.terminalIndex = target.terminalIndex;
+      state.pageIndex = step > 0 ? 0 : Number.MAX_SAFE_INTEGER;
+      return true;
+    }
+
+    function hasAdjacentTerminal(step) {
+      return Boolean(findAdjacentTerminal(step));
+    }
+
     function renderRail(container, items, selectedIndex, onSelect, extraClass = '', disabled = false) {
       container.innerHTML = '';
       (items || []).forEach((item, index) => {
@@ -528,7 +620,12 @@ layout: false
     }
 
     const textCache = new Map();
+    const fileExistsCache = new Map();
+    const variantCache = new Map();
     let renderSeq = 0;
+    const WRAP_LIMIT = 35;
+    const PICT_WRAP_LIMIT = 21;
+    const TERMINAL_VARIANTS = ['UNFINISHED', 'FINISHED'];
 
     function joinPath(...parts) {
       return parts
@@ -553,6 +650,144 @@ layout: false
       });
       textCache.set(url, pending);
       return pending;
+    }
+
+    async function fileExists(url) {
+      if (fileExistsCache.has(url)) return fileExistsCache.get(url);
+      const pending = fetch(url, { method: 'HEAD', cache: 'no-store' })
+        .then(response => {
+          if (response.ok) return true;
+          if (response.status !== 405) return false;
+          return fetch(url, { cache: 'no-store' }).then(fallback => fallback.ok);
+        })
+        .catch(() => false);
+      fileExistsCache.set(url, pending);
+      return pending;
+    }
+
+    function terminalVariantFromFile(fileName) {
+      const match = String(fileName || '').match(/^(FINISHED|UNFINISHED)_/);
+      return match ? match[1] : null;
+    }
+
+    function replaceTerminalVariant(fileName, variant) {
+      return String(fileName || '').replace(/^(FINISHED|UNFINISHED)_/, variant + '_');
+    }
+
+    function buildVariantItems(terminal, variant) {
+      return [
+        { kind: 'logon', file: replaceTerminalVariant(terminal.logon, variant), image: '01600.bmp' },
+        { kind: 'information', file: replaceTerminalVariant(terminal.information, variant), image: null },
+        ...((terminal.picts || []).map(item => ({
+          kind: 'pict',
+          file: replaceTerminalVariant(item.file, variant),
+          image: item.image
+        }))),
+        { kind: 'logoff', file: replaceTerminalVariant(terminal.logoff, variant), image: '01600.bmp' }
+      ].filter(item => item.file);
+    }
+
+    async function resolveTerminalVariants(level, terminal) {
+      const base = terminalBase(level, terminal);
+      if (variantCache.has(base)) return variantCache.get(base);
+
+      const pending = (async () => {
+        const defaultVariant =
+          terminalVariantFromFile(terminal.logon) ||
+          terminalVariantFromFile(terminal.information) ||
+          terminalVariantFromFile(terminal.logoff) ||
+          terminalVariantFromFile(terminal.picts?.[0]?.file) ||
+          'UNFINISHED';
+
+        const variantEntries = await Promise.all(TERMINAL_VARIANTS.map(async variant => {
+          const items = buildVariantItems(terminal, variant);
+          if (!items.length) return null;
+          const checks = await Promise.all(items.map(item => fileExists(base + '/' + item.file)));
+          return checks.every(Boolean) ? { key: variant, items } : null;
+        }));
+
+        const available = variantEntries.filter(Boolean);
+        return {
+          defaultVariant,
+          available,
+          hasToggle: available.length > 1
+        };
+      })();
+
+      variantCache.set(base, pending);
+      return pending;
+    }
+
+    function charWidthUnits(char) {
+      if (!char) return 0;
+      if (char === '\t') return 2;
+      return /[^\u0000-\u00ff]/.test(char) ? 1 : 0.5;
+    }
+
+    function tokenWidthUnits(token) {
+      let width = 0;
+      for (const char of token) width += charWidthUnits(char);
+      return width;
+    }
+
+    function tokenizeTerminalLine(line) {
+      const tokens = [];
+      let current = '';
+      let mode = '';
+
+      for (const char of line) {
+        const isWhitespace = char === ' ' || char === '\t';
+        const isHalfWidth = !/[^\u0000-\u00ff]/.test(char);
+        const nextMode = isWhitespace ? 'space' : (isHalfWidth ? 'word' : 'full');
+
+        if (nextMode === 'full') {
+          if (current) tokens.push(current);
+          current = '';
+          mode = '';
+          tokens.push(char);
+          continue;
+        }
+
+        if (mode && mode !== nextMode) {
+          tokens.push(current);
+          current = '';
+        }
+
+        current += char;
+        mode = nextMode;
+      }
+
+      if (current) tokens.push(current);
+      return tokens;
+    }
+
+    function wrapTerminalText(text, limit = WRAP_LIMIT) {
+      return String(text || '')
+        .replace(/\r\n?/g, '\n')
+        .split('\n')
+        .map(line => {
+          if (!line) return '';
+
+          const chunks = [];
+          let current = '';
+          let width = 0;
+
+          for (const token of tokenizeTerminalLine(line)) {
+            const tokenWidth = tokenWidthUnits(token);
+            if (current && width + tokenWidth > limit) {
+              chunks.push(current);
+              current = token;
+              width = tokenWidth;
+            } else {
+              current += token;
+              width += tokenWidth;
+            }
+          }
+
+          if (current) chunks.push(current);
+          return chunks.join('\n');
+        })
+        .join('\n');
     }
 
     function loadM1Catalog() {
@@ -598,6 +833,12 @@ layout: false
     function buildDocSection(kind, text, imageSrc) {
       const section = document.createElement('section');
       section.className = 'doc-section';
+      const wrappedText =
+        kind === 'pict'
+          ? wrapTerminalText(text, PICT_WRAP_LIMIT)
+          : kind === 'information'
+            ? wrapTerminalText(text, WRAP_LIMIT)
+            : String(text || '').replace(/\r\n?/g, '\n');
 
       if (kind === 'pict') {
         const row = document.createElement('div');
@@ -613,7 +854,7 @@ layout: false
 
         const textNode = document.createElement('pre');
         textNode.className = 'doc-text';
-        textNode.textContent = text || '';
+        textNode.textContent = wrappedText;
         row.appendChild(textNode);
         section.appendChild(row);
       } else {
@@ -632,21 +873,16 @@ layout: false
 
         const textNode = document.createElement('pre');
         textNode.className = 'doc-text';
-        textNode.textContent = text || '';
+        textNode.textContent = wrappedText;
         section.appendChild(textNode);
       }
       return section;
     }
 
-    async function renderDocument(level, terminal) {
-      const items = [
-        { kind: 'logon', file: terminal.logon, image: '01600.bmp' },
-        { kind: 'information', file: terminal.information, image: null },
-        ...((terminal.picts || []).map(item => ({ kind: 'pict', file: item.file, image: item.image }))),
-        { kind: 'logoff', file: terminal.logoff, image: '01600.bmp' }
-      ];
+    async function renderDocument(level, terminal, items) {
+      const renderItems = items || buildVariantItems(terminal, terminalVariantFromFile(terminal.logon) || 'UNFINISHED');
 
-      const results = await Promise.all(items.map(async item => {
+      const results = await Promise.all(renderItems.map(async item => {
         if (!item.file) return null;
         const text = await fetchTextFile(terminalBase(level, terminal) + '/' + item.file).catch(() => '');
         return {
@@ -659,14 +895,39 @@ layout: false
       return results.filter(Boolean);
     }
 
-    function renderPager(totalPages, currentPage) {
+    function renderVariantSwitch(variants, activeVariant) {
+      const wrap = document.createElement('div');
+      wrap.className = 'variant-switch';
+
+      const label = document.createElement('span');
+      label.textContent = 'Mode';
+      wrap.appendChild(label);
+
+      variants.forEach(variant => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = variant.key;
+        button.setAttribute('aria-pressed', variant.key === activeVariant ? 'true' : 'false');
+        button.addEventListener('click', () => {
+          if (state.variantPreference === variant.key) return;
+          state.variantPreference = variant.key;
+          state.pageIndex = 0;
+          updateView();
+        });
+        wrap.appendChild(button);
+      });
+
+      return wrap;
+    }
+
+    function renderPager(totalPages, currentPage, canMovePrev, canMoveNext) {
       const pager = document.createElement('div');
       pager.className = 'pager';
 
       const prev = document.createElement('button');
       prev.type = 'button';
       prev.textContent = 'Prev';
-      prev.disabled = currentPage <= 0;
+      prev.disabled = !canMovePrev;
 
       const label = document.createElement('span');
       label.textContent = (currentPage + 1) + ' / ' + totalPages;
@@ -674,7 +935,7 @@ layout: false
       const next = document.createElement('button');
       next.type = 'button';
       next.textContent = 'Next';
-      next.disabled = currentPage >= totalPages - 1;
+      next.disabled = !canMoveNext;
 
       pager.appendChild(prev);
       pager.appendChild(label);
@@ -695,6 +956,7 @@ layout: false
         index => {
           state.chapterIndex = index;
           state.terminalIndex = 0;
+          state.pageIndex = 0;
           updateView();
         },
         'indent',
@@ -716,27 +978,55 @@ layout: false
 
       if (!chapter || !terminal) {
         setLoadingState();
+        el.variantHost.innerHTML = '';
         return;
       }
 
       setLoadingState();
+      el.variantHost.innerHTML = '';
 
-      const doc = await renderDocument(chapter, terminal);
+      const variantState = await resolveTerminalVariants(chapter, terminal);
+      if (seq !== renderSeq) return;
+
+      const activeVariant =
+        variantState.available.find(entry => entry.key === state.variantPreference)?.key ||
+        variantState.available.find(entry => entry.key === variantState.defaultVariant)?.key ||
+        variantState.available[0]?.key ||
+        variantState.defaultVariant;
+
+      const activeItems =
+        variantState.available.find(entry => entry.key === activeVariant)?.items ||
+        buildVariantItems(terminal, activeVariant);
+
+      const doc = await renderDocument(chapter, terminal, activeItems);
       if (seq !== renderSeq) return;
 
       el.body.innerHTML = '';
+      if (variantState.hasToggle) {
+        el.variantHost.appendChild(renderVariantSwitch(variantState.available, activeVariant));
+      }
       const pages = doc.length ? doc : [{ kind: 'information', text: '', image: null }];
       state.pageIndex = Math.max(0, Math.min(state.pageIndex, pages.length - 1));
       const page = pages[state.pageIndex];
       el.body.appendChild(buildDocSection(page.kind, page.text, page.image));
 
-      const pager = renderPager(pages.length, state.pageIndex);
+      const canMovePrev = state.pageIndex > 0 || hasAdjacentTerminal(-1);
+      const canMoveNext = state.pageIndex < pages.length - 1 || hasAdjacentTerminal(1);
+      const pager = renderPager(pages.length, state.pageIndex, canMovePrev, canMoveNext);
       pager.prev.addEventListener('click', () => {
-        state.pageIndex = Math.max(0, state.pageIndex - 1);
+        if (state.pageIndex > 0) {
+          state.pageIndex -= 1;
+        } else if (!moveTerminal(-1)) {
+          state.pageIndex = 0;
+        }
         updateView();
       });
       pager.next.addEventListener('click', () => {
-        state.pageIndex = Math.min(pages.length - 1, state.pageIndex + 1);
+        if (state.pageIndex < pages.length - 1) {
+          state.pageIndex += 1;
+        } else if (!moveTerminal(1)) {
+          state.pageIndex = pages.length - 1;
+        }
         updateView();
       });
       el.pagerHost.innerHTML = '';
@@ -750,6 +1040,11 @@ layout: false
       state.terminalIndex = 0;
       state.pageIndex = 0;
       updateView();
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      window.location.href = '/';
     });
   </script>
 </body>
