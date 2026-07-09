@@ -131,9 +131,9 @@
           ]
         },
         {
-          "id": "precision_rifle ",
+          "id": "precision_rifle",
           "title": "精密步枪",
-          "count": "6 / 6",
+          "count": "7 / 7",
           "children": [
             {
               "id": "hardline_PR",
@@ -221,9 +221,9 @@
                 "精密步枪"
               ],
               "icon": "badge",
-              "iconImage": null,
-              "bodyFile": "/marathon-lore/content/docs/loot/weapon/BR33_volley_rifle.md",
-              "image": null
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/BR33_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/BR33.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/BR33.webp"
             }
           ]
         },
@@ -429,14 +429,14 @@
                 "狙击步枪"
               ],
               "icon": "badge",
-              "iconImage": null,
-              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V99_channel_rifle.md",
-              "image": null
+              "iconImage": "/marathon-lore/content/docs/loot/weapon/V99_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/weapon/V99.md",
+              "image": "/marathon-lore/content/docs/loot/weapon/V99.webp"
             }
           ]
         },
         {
-          "id": "submachine_guns ",
+          "id": "submachine_guns",
           "title": "冲锋枪",
           "count": "5 / 5",
           "children": [
