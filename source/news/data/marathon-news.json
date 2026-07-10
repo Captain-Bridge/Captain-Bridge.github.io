@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T16:09:50.586Z",
+  "generatedAt": "2026-07-10T13:18:44.857Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,11 +7,11 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 51,
-  "count": 51,
+  "total": 52,
+  "count": 52,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 41,
+    "bilingualCount": 42,
     "englishOnlyCount": 10,
     "chineseOnlyCount": 0,
     "englishOnly": [
@@ -84,6 +84,109 @@
     "generatedCount": 10
   },
   "items": [
+    {
+      "id": "blte24bb64e45424338",
+      "slug": "marathon_update_1_1_0_5",
+      "pathSlug": "marathon-update-1-1-0-5",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-07-09T20:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_0_5",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_0_5",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_0_5"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-0-5/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 29,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.0.5",
+          "subtitle": "The solo note about Solos.",
+          "bodyHtml": "<h2>General</h2><ul><li><p>Fixed an issue where selecting Solo Queue could fail to update your matchmaking state, which could leave you locked into another queue or in a crew-based queue unexpectedly.</p></li></ul>",
+          "bodyText": "General Fixed an issue where selecting Solo Queue could fail to update your matchmaking state, which could leave you locked into another queue or in a crew-based queue unexpectedly.",
+          "excerpt": "The solo note about Solos."
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.0.5",
+          "subtitle": "关于单排的一条提示。",
+          "bodyHtml": "<h2>综合</h2><ul><li><p>修复了选择单排可能无法更新匹配状态，导致你被意外锁定在另一个队列或团队队列的问题。</p></li></ul>",
+          "bodyText": "综合 修复了选择单排可能无法更新匹配状态，导致你被意外锁定在另一个队列或团队队列的问题。",
+          "excerpt": "关于单排的一条提示。",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "bltb8fab972f4cff83a",
       "slug": "marathon_update_1_1_0_4",

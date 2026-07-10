@@ -220,8 +220,23 @@ function getPreviewBodyFile(item) {
   return item.variantB?.bodyFile || item.bodyFile || null;
 }
 
+function decodeHashPart(value) {
+  const text = String(value || '');
+  if (!text) return '';
+  try {
+    return decodeURIComponent(text);
+  } catch {
+    return text;
+  }
+}
+
+function normalizeId(value) {
+  return decodeHashPart(value).trim();
+}
+
 function getCategory(id) {
-  return categoryData.find(item => item.id === id) || null;
+  const normalizedId = normalizeId(id);
+  return categoryData.find(item => normalizeId(item.id) === normalizedId) || null;
 }
 
 function mergeCategoryData(baseCategory, loadedCategory) {
@@ -269,7 +284,8 @@ async function ensureCategoryLoaded(categoryId) {
 }
 
 function getSection(category, id) {
-  return category?.sections?.find(item => item.id === id) || null;
+  const normalizedId = normalizeId(id);
+  return category?.sections?.find(item => normalizeId(item.id) === normalizedId) || null;
 }
 
 function normalizeTagList(meta = []) {
@@ -622,9 +638,9 @@ function setHash() {
     return;
   }
 
-  if (state.categoryId) parts.push(state.categoryId);
-  if (state.sectionId) parts.push(state.sectionId);
-  if (state.nodePath.length) parts.push(...state.nodePath);
+  if (state.categoryId) parts.push(encodeURIComponent(state.categoryId));
+  if (state.sectionId) parts.push(encodeURIComponent(state.sectionId));
+  if (state.nodePath.length) parts.push(...state.nodePath.map(item => encodeURIComponent(item)));
   if (state.view === 'detail') {
     const section = getSection(getCategory(state.categoryId), state.sectionId);
     const entry = getEntryRecord(section, state.nodePath);
@@ -636,7 +652,7 @@ function setHash() {
       if (activeVariant) {
         parts.push(`__variant_${activeVariant}`);
       }
-      parts.push(state.logId);
+      parts.push(encodeURIComponent(state.logId));
     } else if (activeVariant) {
       parts.push(`__variant_${activeVariant}`);
     }
@@ -649,7 +665,7 @@ function setHash() {
 }
 
 function parseHash() {
-  const parts = location.hash.replace(/^#/, '').split('/').filter(Boolean);
+  const parts = location.hash.replace(/^#/, '').split('/').filter(Boolean).map(decodeHashPart);
 
   if (!parts.length || parts[0] !== 'marathon-lore') {
     return;

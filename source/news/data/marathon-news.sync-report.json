@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-07T16:09:50.586Z",
+  "generatedAt": "2026-07-10T13:18:44.857Z",
   "source": "bungie-contentstack",
-  "totalFetched": 51,
+  "totalFetched": 52,
   "itemsPerPage": 8,
   "bilingual": {
-    "officialBilingualCount": 41,
+    "officialBilingualCount": 42,
     "englishOnlyCount": 10,
     "generatedChineseCount": 10,
     "translationAttempted": false,
@@ -16,11 +16,11 @@
     "removedCount": 0,
     "added": [
       {
-        "id": "bltb8fab972f4cff83a",
-        "title": "Marathon Update 1.1.0.4",
-        "localPath": "/news/articles/marathon-update-1-1-0-4/",
-        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_0_4",
-        "publishedAt": "2026-07-07T16:00:00.000Z",
+        "id": "blte24bb64e45424338",
+        "title": "Marathon Update 1.1.0.5",
+        "localPath": "/news/articles/marathon-update-1-1-0-5/",
+        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_0_5",
+        "publishedAt": "2026-07-09T20:00:00.000Z",
         "hasChinese": true
       }
     ],
