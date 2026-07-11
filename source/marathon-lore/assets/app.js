@@ -966,7 +966,6 @@ function setupAudioControls(root) {
     suppressClick = false;
     startX = clientX;
     startY = clientY;
-    seekFromClientX(clientX);
   };
 
   const moveDrag = (clientX, clientY) => {
@@ -993,7 +992,6 @@ function setupAudioControls(root) {
       suppressClick = false;
       return;
     }
-    seekFromClientX(event.clientX);
     void togglePlay();
   };
 
