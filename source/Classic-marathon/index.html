@@ -729,6 +729,30 @@ layout: false
       return width;
     }
 
+    function splitOversizeToken(token, limit) {
+      if (!token || tokenWidthUnits(token) <= limit) return [token];
+
+      const segments = [];
+      let current = '';
+      let width = 0;
+
+      for (const char of token) {
+        const charWidth = charWidthUnits(char);
+        if (current && width + charWidth > limit) {
+          segments.push(current);
+          current = char;
+          width = charWidth;
+          continue;
+        }
+
+        current += char;
+        width += charWidth;
+      }
+
+      if (current) segments.push(current);
+      return segments;
+    }
+
     function tokenizeTerminalLine(line) {
       const tokens = [];
       let current = '';
@@ -772,14 +796,16 @@ layout: false
           let width = 0;
 
           for (const token of tokenizeTerminalLine(line)) {
-            const tokenWidth = tokenWidthUnits(token);
-            if (current && width + tokenWidth > limit) {
-              chunks.push(current);
-              current = token;
-              width = tokenWidth;
-            } else {
-              current += token;
-              width += tokenWidth;
+            for (const segment of splitOversizeToken(token, limit)) {
+              const segmentWidth = tokenWidthUnits(segment);
+              if (current && width + segmentWidth > limit) {
+                chunks.push(current);
+                current = segment;
+                width = segmentWidth;
+              } else {
+                current += segment;
+                width += segmentWidth;
+              }
             }
           }
 
