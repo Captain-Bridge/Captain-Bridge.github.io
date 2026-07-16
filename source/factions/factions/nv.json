@@ -1078,7 +1078,7 @@
             {
               "materialId": "material_2",
               "materialName": "无菌生物剥离体",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Aseptic_biological_peeler.webp",
               "materialNums": "9"
             },
             {
@@ -1175,7 +1175,7 @@
             {
               "materialId": "material_2",
               "materialName": "无菌生物剥离体",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Aseptic_biological_peeler.webp",
               "materialNums": "10"
             },
             {
@@ -1266,7 +1266,7 @@
             {
               "materialId": "material_3",
               "materialName": "无菌生物剥离体",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Aseptic_biological_peeler.webp",
               "materialNums": "18"
             }
           ]
