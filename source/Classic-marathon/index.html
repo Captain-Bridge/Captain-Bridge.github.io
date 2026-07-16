@@ -243,6 +243,17 @@ layout: false
       font-size: 13px;
       line-height: 1.45;
     }
+    .ao-bold {
+      font-weight: 700;
+    }
+    .ao-italic {
+      font-style: italic;
+    }
+    .ao-underline {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
     .doc-section.centered .doc-text {
       text-align: center;
     }
@@ -645,6 +656,14 @@ layout: false
     const WRAP_LIMIT = 35;
     const PICT_WRAP_LIMIT = 21;
     const TERMINAL_VARIANTS = ['UNFINISHED', 'FINISHED'];
+    const AO_MARKERS = {
+      '$B': { style: 'bold', open: true },
+      '$b': { style: 'bold', open: false },
+      '$I': { style: 'italic', open: true },
+      '$i': { style: 'italic', open: false },
+      '$U': { style: 'underline', open: true },
+      '$u': { style: 'underline', open: false }
+    };
 
     function joinPath(...parts) {
       return parts
@@ -678,6 +697,192 @@ layout: false
 
     function replaceTerminalVariant(fileName, variant) {
       return String(fileName || '').replace(/^(FINISHED|UNFINISHED)_/, variant + '_');
+    }
+
+    function tokenizeAOText(text) {
+      const normalized = String(text || '').replace(/\r\n?/g, '\n');
+      const tokens = [];
+      let buffer = '';
+
+      function pushBuffer() {
+        if (!buffer) return;
+        tokens.push({ type: 'text', value: buffer });
+        buffer = '';
+      }
+
+      for (let index = 0; index < normalized.length; index += 1) {
+        const pair = normalized.slice(index, index + 2);
+
+        if (normalized[index] === '\n') {
+          pushBuffer();
+          tokens.push({ type: 'newline', value: '\n' });
+          continue;
+        }
+
+        if (AO_MARKERS[pair]) {
+          pushBuffer();
+          tokens.push({
+            type: 'marker',
+            value: pair,
+            style: AO_MARKERS[pair].style,
+            open: AO_MARKERS[pair].open,
+            paired: false
+          });
+          index += 1;
+          continue;
+        }
+
+        buffer += normalized[index];
+      }
+
+      pushBuffer();
+
+      const stacks = {
+        bold: [],
+        italic: [],
+        underline: []
+      };
+
+      tokens.forEach((token, tokenIndex) => {
+        if (token.type !== 'marker') return;
+
+        if (token.open) {
+          stacks[token.style].push(tokenIndex);
+          return;
+        }
+
+        const openIndex = stacks[token.style].pop();
+        if (openIndex === undefined) return;
+        tokens[openIndex].paired = true;
+        token.paired = true;
+      });
+
+      return tokens.map(token => {
+        if (token.type === 'marker' && !token.paired) {
+          return { type: 'text', value: token.value };
+        }
+        return token;
+      });
+    }
+
+    function splitAOTokensByLine(tokens) {
+      const lines = [[]];
+
+      tokens.forEach(token => {
+        if (token.type === 'newline') {
+          lines.push([]);
+          return;
+        }
+        lines[lines.length - 1].push(token);
+      });
+
+      return lines;
+    }
+
+    function wrapAOLineTokens(tokens, limit) {
+      if (!tokens.length) return [];
+
+      const wrapped = [];
+      let width = 0;
+
+      function pushWrappedLine() {
+        wrapped.push({ type: 'newline', value: '\n' });
+        width = 0;
+      }
+
+      tokens.forEach(token => {
+        if (token.type === 'marker') {
+          wrapped.push(token);
+          return;
+        }
+
+        for (const visibleToken of tokenizeTerminalLine(token.value)) {
+          for (const segment of splitOversizeToken(visibleToken, limit)) {
+            const segmentWidth = tokenWidthUnits(segment);
+            if (width > 0 && width + segmentWidth > limit) {
+              pushWrappedLine();
+            }
+
+            wrapped.push({ type: 'text', value: segment });
+            width += segmentWidth;
+          }
+        }
+      });
+
+      return wrapped;
+    }
+
+    function buildAOTokens(text, limit = null) {
+      const tokens = tokenizeAOText(text);
+      if (limit === null) return tokens;
+
+      const lines = splitAOTokensByLine(tokens);
+      const wrapped = [];
+
+      lines.forEach((lineTokens, index) => {
+        wrapped.push(...wrapAOLineTokens(lineTokens, limit));
+        if (index < lines.length - 1) {
+          wrapped.push({ type: 'newline', value: '\n' });
+        }
+      });
+
+      return wrapped;
+    }
+
+    function appendAORender(target, text, limit = null) {
+      const tokens = buildAOTokens(text, limit);
+      const state = {
+        bold: false,
+        italic: false,
+        underline: false
+      };
+      let activeSpan = null;
+      let activeClassName = '';
+
+      function currentClassName() {
+        return [
+          state.bold ? 'ao-bold' : '',
+          state.italic ? 'ao-italic' : '',
+          state.underline ? 'ao-underline' : ''
+        ].filter(Boolean).join(' ');
+      }
+
+      function appendStyledText(value) {
+        const className = currentClassName();
+        if (!className) {
+          target.appendChild(document.createTextNode(value));
+          activeSpan = null;
+          activeClassName = '';
+          return;
+        }
+
+        if (!activeSpan || activeClassName !== className) {
+          activeSpan = document.createElement('span');
+          activeSpan.className = className;
+          activeClassName = className;
+          target.appendChild(activeSpan);
+        }
+
+        activeSpan.appendChild(document.createTextNode(value));
+      }
+
+      tokens.forEach(token => {
+        if (token.type === 'marker') {
+          state[token.style] = token.open;
+          activeSpan = null;
+          activeClassName = '';
+          return;
+        }
+
+        if (token.type === 'newline') {
+          target.appendChild(document.createTextNode('\n'));
+          activeSpan = null;
+          activeClassName = '';
+          return;
+        }
+
+        appendStyledText(token.value);
+      });
     }
 
     function buildVariantItems(terminal, variant) {
@@ -785,34 +990,9 @@ layout: false
     }
 
     function wrapTerminalText(text, limit = WRAP_LIMIT) {
-      return String(text || '')
-        .replace(/\r\n?/g, '\n')
-        .split('\n')
-        .map(line => {
-          if (!line) return '';
-
-          const chunks = [];
-          let current = '';
-          let width = 0;
-
-          for (const token of tokenizeTerminalLine(line)) {
-            for (const segment of splitOversizeToken(token, limit)) {
-              const segmentWidth = tokenWidthUnits(segment);
-              if (current && width + segmentWidth > limit) {
-                chunks.push(current);
-                current = segment;
-                width = segmentWidth;
-              } else {
-                current += segment;
-                width += segmentWidth;
-              }
-            }
-          }
-
-          if (current) chunks.push(current);
-          return chunks.join('\n');
-        })
-        .join('\n');
+      return buildAOTokens(text, limit)
+        .map(token => token.value)
+        .join('');
     }
 
     function loadM1Catalog() {
@@ -858,12 +1038,12 @@ layout: false
     function buildDocSection(kind, text, imageSrc) {
       const section = document.createElement('section');
       section.className = 'doc-section';
-      const wrappedText =
+      const textLimit =
         kind === 'pict'
-          ? wrapTerminalText(text, PICT_WRAP_LIMIT)
+          ? PICT_WRAP_LIMIT
           : kind === 'information'
-            ? wrapTerminalText(text, WRAP_LIMIT)
-            : String(text || '').replace(/\r\n?/g, '\n');
+            ? WRAP_LIMIT
+            : null;
 
       if (kind === 'pict') {
         const row = document.createElement('div');
@@ -879,7 +1059,7 @@ layout: false
 
         const textNode = document.createElement('pre');
         textNode.className = 'doc-text';
-        textNode.textContent = wrappedText;
+        appendAORender(textNode, text, textLimit);
         row.appendChild(textNode);
         section.appendChild(row);
       } else {
@@ -898,7 +1078,7 @@ layout: false
 
         const textNode = document.createElement('pre');
         textNode.className = 'doc-text';
-        textNode.textContent = wrappedText;
+        appendAORender(textNode, text, textLimit);
         section.appendChild(textNode);
       }
       return section;
