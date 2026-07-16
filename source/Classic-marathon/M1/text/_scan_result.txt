@@ -1,0 +1,10 @@
+Total issues: 7
+
+=== 25 Try again\Terminal_0\UNFINISHED_001_INFORMATION.txt ===
+  [B] L1:C1 - unclosed $B: $Bwarning (#157) symbol 'enterITask' is not marked as weak, \nbut its library 'io
+  [B] L3:C1 - unclosed $B: $Bwarning (#157) symbol 'killITask' is not marked as weak, \nbut its library 'ioT
+  [B] L5:C1 - unclosed $B: $Bwarning (#157) symbol 'newITask' is not marked as weak, \nbut its library 'ioTa
+  [B] L7:C1 - unclosed $B: $Bwarning (#157) symbol 'statusITask' is not marked as weak, \nbut its library 'i
+  [B] L9:C1 - unclosed $B: $Bwarning (#157) symbol 'idleITask' is not marked as weak, \nbut its library 'ioT
+  [B] L11:C1 - unclosed $B: $Berror (#81) symbol 'exitITask' undefined\n$Bexecution of interface.cout.term.pu
+  [B] L12:C1 - unclosed $B: $Bexecution of interface.cout.term.pub terminated\n\n(*&)&\n~~~~~~&>%*{殖民地被扫荡. Phhh
