@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-07-10T13:18:44.857Z",
+  "generatedAt": "2026-07-16T17:12:29.912Z",
   "source": "bungie-contentstack",
-  "totalFetched": 52,
+  "totalFetched": 53,
   "itemsPerPage": 8,
   "bilingual": {
-    "officialBilingualCount": 42,
+    "officialBilingualCount": 43,
     "englishOnlyCount": 10,
     "generatedChineseCount": 10,
     "translationAttempted": false,
     "translationAvailable": false
   },
   "changes": {
-    "addedCount": 1,
-    "updatedCount": 0,
+    "addedCount": 0,
+    "updatedCount": 1,
     "removedCount": 0,
-    "added": [
+    "added": [],
+    "updated": [
       {
-        "id": "blte24bb64e45424338",
-        "title": "Marathon Update 1.1.0.5",
-        "localPath": "/news/articles/marathon-update-1-1-0-5/",
-        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_0_5",
-        "publishedAt": "2026-07-09T20:00:00.000Z",
+        "id": "blt89a2eb0098e987cc",
+        "title": "Marathon Mid-Season 2 Update Preview",
+        "localPath": "/news/articles/mid-season-2-preview/",
+        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/mid_season_2_preview",
+        "publishedAt": "2026-07-16T16:00:00.000Z",
         "hasChinese": true
       }
     ],
-    "updated": [],
     "removed": []
   }
 }
