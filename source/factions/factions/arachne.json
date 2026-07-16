@@ -1,11 +1,10 @@
 {
   "id": "arachne",
   "shortLabel": "V",
-  "title": "????",
-  "iconImage": "/marathon-lore/assets/images/icons/arachne.webp",
-  "agent": "ARACHNE",
-  "agentIcon": "/marathon-lore/assets/images/icons/arachne.webp",
-  "themecolor": "rgb(255, 106, 168)",
+  "agent": "chate",
+  "panelImage": "/factions/data/logo&agent/arachne.webp",
+  "agentIcon": "/factions/data/logo&agent/arachne_agent.webp",
+  "themecolor": "rgb(234, 20, 25)",
   "nodes": [
     {
       "id": "r0c0",

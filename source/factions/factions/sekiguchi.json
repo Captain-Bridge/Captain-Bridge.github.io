@@ -1,11 +1,10 @@
 {
   "id": "sekiguchi",
   "shortLabel": "VI",
-  "title": "??",
-  "iconImage": "/marathon-lore/assets/images/icons/sekiguchi.webp",
-  "agent": "SEKIGUCHI",
-  "agentIcon": "/marathon-lore/assets/images/icons/sekiguchi.webp",
-  "themecolor": "rgb(85, 229, 157)",
+  "agent": "诺娜",
+  "panelImage": "/factions/data/logo&agent/sekiguchi.webp",
+  "agentIcon": "/factions/data/logo&agent/sekiguchi_agent.webp",
+  "themecolor": "rgb(149, 238, 192)",
   "nodes": [
     {
       "id": "r0c0",
