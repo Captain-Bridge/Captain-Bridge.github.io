@@ -1,36 +1,908 @@
 {
   "id": "telrax",
   "shortLabel": "III",
-  "title": "????",
-  "iconImage": "/marathon-lore/assets/images/icons/telrax.webp",
-  "agent": "TELRAX",
-  "agentIcon": "/marathon-lore/assets/images/icons/telrax.webp",
-  "themecolor": "rgb(255, 156, 84)",
+  "agent": "伏尔甘",
+  "panelImage": "/factions/data/logo&agent/terex.webp",
+  "agentIcon": "/factions/data/logo&agent/terex_agent.webp",
+  "themecolor": "rgb(237, 136, 21)",
   "nodes": [
     {
       "id": "r0c0",
       "row": 0,
       "col": 0,
-      "size": "large",
-      "title": "扩容",
-      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sword.svg",
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "title": "奔袭",
+          "describe": "军械库 | 特莱克斯1级",
+          "summary": "解锁军械库中的奔袭突击步枪。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/overrun.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
+              "materialNums": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c1",
+      "row": 0,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "复仇者",
+          "describe": "军械库 | 特莱克斯5级",
+          "summary": "解锁军械库中的复仇者轻机枪。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/fuchouzhe.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
+              "materialNums": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c2",
+      "row": 0,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "V75 SCAR",
+          "describe": "军械库 | 特莱克斯10级",
+          "summary": "解锁军械库中的V75 SCAR。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/V75.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "等离子纤维",
+              "materialIcon": "/factions/data/Plasma_Fiber.webp",
+              "materialNums": "12"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火卫二金属棒",
+              "materialIcon": "/factions/data/Deimos_metal_rod.webp",
+              "materialNums": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c3",
+      "row": 0,
+      "col": 3,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "KKV-9SD",
+          "describe": "军械库 | 特莱克斯15级",
+          "summary": "解锁军械库中的KKV-9SD。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/kkv-9SD.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "等离子纤维",
+              "materialIcon": "/factions/data/Plasma_Fiber.webp",
+              "materialNums": "23"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火卫二金属棒",
+              "materialIcon": "/factions/data/Deimos_metal_rod.webp",
+              "materialNums": "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c4",
+      "row": 0,
+      "col": 4,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "BRRT",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁军械库中的BRRT冲锋枪。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/BRRT.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "反射线圈",
+              "materialIcon": "/factions/data/reflection_coil.webp",
+              "materialNums": "8"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c5",
+      "row": 0,
+      "col": 5,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "M77",
+          "describe": "军械库 | VIP10级",
+          "summary": "解锁军械库中的M77突击步枪。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/M77.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "1"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c0",
+      "row": 1,
+      "col": 0,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "尊享模组",
+          "describe": "军械库 | VIP15级",
+          "summary": "解锁军械库中的一个轮换尊享模组。",
+          "unlockName": "",
+          "unlockNums": "",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
+              "materialIcon": "/factions/data/credits.webp",
               "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "2"
             }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c1",
+      "row": 1,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "豪华芯片",
+          "describe": "军械库 | 特莱克斯19级",
+          "summary": "解锁军械库中的一套豪华芯片模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/blue_mods_a.webp",
+            "/factions/data/blue_mods_b.webp",
+            "/factions/data/blue_mods_c.webp",
+            "/factions/data/blue_mods_d.webp"
           ],
-          "title": "扩容"
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "异常线缆",
+              "materialIcon": "/factions/data/Abnormal_cable.webp",
+              "materialNums": "5"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火卫二金属棒",
+              "materialIcon": "/factions/data/Deimos_metal_rod.webp",
+              "materialNums": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c2",
+      "row": 1,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "强化芯片",
+          "describe": "军械库 | 特莱克斯3级",
+          "summary": "解锁军械库中的一套强化芯片模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_mods_a.webp",
+            "/factions/data/green_mods_b.webp",
+            "/factions/data/green_mods_c.webp",
+            "/factions/data/green_mods_d.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
+              "materialNums": "13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c5",
+      "row": 1,
+      "col": 5,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/chest.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "赞助[特莱克斯]",
+          "describe": "军械库 | 特莱克斯10级",
+          "summary": "解锁可在军械库中使用信用点购买的特莱克斯高级赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/terex_sponser_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "250"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "赞助+[特莱克斯]",
+          "describe": "军械库 | 特莱克斯20级",
+          "summary": "解锁可在军械库中使用信用点购买的特莱克斯豪华赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/terex_sponser_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "500"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "赞助++[特莱克斯]",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中使用信用点购买的特莱克斯卓越赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/terex_sponser_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c0",
+      "row": 2,
+      "col": 0,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/magzine.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "卓越弹匣",
+          "describe": "军械库 | VIP3级",
+          "summary": "解锁军械库中的一个轮换卓越弹匣模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "反射线圈",
+              "materialIcon": "/factions/data/reflection_coil.webp",
+              "materialNums": "6"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c1",
+      "row": 2,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/magzine.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "豪华弹匣",
+          "describe": "军械库 | 特莱克斯16级",
+          "summary": "解锁军械库中的一套豪华弹匣模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/blue_magzine_a.webp",
+            "/factions/data/blue_magzine_b.webp",
+            "/factions/data/blue_magzine_c.webp",
+            "/factions/data/blue_magzine_d.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "速子纤维",
+              "materialIcon": "/factions/data/Tachyon_fiber.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火卫二金属棒",
+              "materialIcon": "/factions/data/Deimos_metal_rod.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c2",
+      "row": 2,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/magzine.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "强化弹匣",
+          "describe": "军械库 | 特莱克斯1级",
+          "summary": "解锁军械库中的一套强化弹匣模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_magzine_a.webp",
+            "/factions/data/green_magzine_b.webp",
+            "/factions/data/green_magzine_c.webp",
+            "/factions/data/green_magzine_d.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
+              "materialNums": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c3",
+      "row": 2,
+      "col": 3,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/muzzle.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "强化枪口",
+          "describe": "军械库 | 特莱克斯6级",
+          "summary": "解锁军械库中的一套强化枪口模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_muzzle_a.webp",
+            "/factions/data/green_muzzle_b.webp",
+            "/factions/data/green_muzzle_c.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
+              "materialNums": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c4",
+      "row": 2,
+      "col": 4,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/muzzle.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "豪华枪口",
+          "describe": "军械库 | 特莱克斯22级",
+          "summary": "解锁军械库中的一套豪华枪口模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/blue_muzzle_a.webp",
+            "/factions/data/blue_muzzle_b.webp",
+            "/factions/data/blue_muzzle_c.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
+              "materialNums": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c5",
+      "row": 2,
+      "col": 5,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/magzine.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "卓越枪口",
+          "describe": "军械库 | VIP6级",
+          "summary": "解锁军械库中的一个轮换卓越枪口模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "反射线圈",
+              "materialIcon": "/factions/data/reflection_coil.webp",
+              "materialNums": "9"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c0",
+      "row": 3,
+      "col": 0,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/sight.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "卓越瞄准镜",
+          "describe": "军械库 | VIP9级",
+          "summary": "解锁军械库中的一个轮换卓越瞄准镜模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c1",
+      "row": 3,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sight.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "豪华瞄准镜",
+          "describe": "军械库 | 特莱克斯25级",
+          "summary": "解锁军械库中的一套豪华瞄准镜模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/blue_sight_a.webp",
+            "/factions/data/blue_sight_b.webp",
+            "/factions/data/blue_sight_c.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "异常线缆",
+              "materialIcon": "/factions/data/Abnormal_cable.webp",
+              "materialNums": "10"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "天仓金属棒",
+              "materialIcon": "/factions/data/Tiancang_Metal_Rod.webp",
+              "materialNums": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c2",
+      "row": 3,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sight.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "强化瞄准镜",
+          "describe": "军械库 | 特莱克斯9级",
+          "summary": "解锁军械库中的一套强化瞄准镜模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_sight_a.webp",
+            "/factions/data/green_sight_b.webp",
+            "/factions/data/green_sight_c.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定炮铜",
+              "materialIcon": "/factions/data/unstable_gunmetal.webp",
+              "materialNums": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c3",
+      "row": 3,
+      "col": 3,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "强化专用模组",
+          "describe": "军械库 | 特莱克斯12级",
+          "summary": "解锁军械库中的一套强化专用模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_butt_a.webp",
+            "/factions/data/green_butt_b.webp",
+            "/factions/data/green_butt_c.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "改造线缆",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "16"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火卫二金属棒",
+              "materialIcon": "/factions/data/Deimos_metal_rod.webp",
+              "materialNums": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c4",
+      "row": 3,
+      "col": 4,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "豪华专用模组",
+          "describe": "军械库 | 特莱克斯30级",
+          "summary": "解锁军械库中的一套豪华专用模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/blue_butt_a.webp",
+            "/factions/data/blue_butt_b.webp",
+            "/factions/data/blue_butt_c.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "1"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c5",
+      "row": 3,
+      "col": 5,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "卓越专用模组",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁军械库中的一个轮换卓越专用模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "2"
+            }
+          ]
         }
       ]
     }
@@ -38,63 +910,63 @@
   "peakNodes": [
     {
       "id": "peak_1",
-      "title": "巅峰节点I",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "特莱克斯优待",
+      "describe": "军械库",
+      "summary": "特莱克斯供应每日免费物品。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "3/16"
     },
     {
       "id": "peak_2",
-      "title": "巅峰节点II",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "奖励模组",
+      "describe": "功能",
+      "summary": "特莱克斯标准合约现在还将额外提供一个奖励武器模组。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "6/16"
     },
     {
       "id": "peak_3",
-      "title": "巅峰节点III",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "特莱克斯豪赌者",
+      "describe": "军械库",
+      "summary": "可获得额外的高价值每日特惠，且携带特莱克斯货品撤离时获得的声望增加。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "9/16"
     },
     {
       "id": "peak_4",
-      "title": "巅峰节点IV",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "精通",
+      "describe": "功能",
+      "summary": "鲁克现在开始疾行时，会携带一件强化武器。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "12/16"
     },
     {
       "id": "peak_5",
-      "title": "巅峰节点V",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "机械杀手武器",
+      "describe": "军械库",
+      "summary": "特莱克斯每日提供一件带有机械杀手状态效果的免费武器。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "14/16"
     },
     {
       "id": "peak_6",
-      "title": "巅峰节点VI",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "卓越芯片",
+      "describe": "解锁军械库中的一套卓越芯片模组。解锁特莱克斯VIP升级。",
+      "summary": "",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "16/16"
     }
   ]
 }
