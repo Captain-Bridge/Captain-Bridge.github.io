@@ -1,0 +1,31 @@
+$Bwarning (#157) symbol 'enterITask' is not marked as weak, 
+but its library 'ioTask' is
+$Bwarning (#157) symbol 'killITask' is not marked as weak, 
+but its library 'ioTask' is
+$Bwarning (#157) symbol 'newITask' is not marked as weak, 
+but its library 'ioTask' is
+$Bwarning (#157) symbol 'statusITask' is not marked as weak, 
+but its library 'ioTask' is
+$Bwarning (#157) symbol 'idleITask' is not marked as weak, 
+but its library 'ioTask' is
+$Berror (#81) symbol 'exitITask' undefined
+$Bexecution of interface.cout.term.pub terminated
+
+(*&)&
+~~~~~~&>%*{殖民地被扫荡. Phhht! Just like
+that.hpe~~jy658[69l[il[70l
+-0oli77765~~uI%OI&%
+UHL^U_3kg
+福尔人是奴隶主。他们的贸易帝国在我们离开地球三百多年后迅速崛起。  
+
+福尔人大量使用附属的从属种族在本土从事体力劳动，在外作为士兵服役。  他们的大多数奴隶来低技术文明的世界，往往以百计U*^*ILJEHJ~~~~~~~asfgk]86 他们是无毛的、浅肤色的双足生物，身高近两米，三只红眼呈三角形排列。  ;POP""
+];R+IP+2441`4`
+千记被转售给高技术文明。  
+
+^(`~~~~~~尽管某些从属种族常被用作士兵\6f~fxf`~~fx!~，但福尔人自己在战斗中也毫不退缩。  
+
+---
+
+<leela.wirehead.870229//b7>  
+
+结束这场战斗
