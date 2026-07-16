@@ -1,100 +1,1477 @@
 {
   "id": "mida",
   "shortLabel": "IV",
-  "title": "??",
-  "iconImage": "/marathon-lore/assets/images/icons/mida.webp",
-  "agent": "MIDA",
-  "agentIcon": "/marathon-lore/assets/images/icons/mida.webp",
-  "themecolor": "rgb(255, 201, 77)",
+  "agent": "_甘特里",
+  "panelImage": "/factions/data/logo&agent/mida.webp",
+  "agentIcon": "/factions/data/logo&agent/mida_agent.webp",
+  "themecolor": "rgb(204, 135, 236)",
   "nodes": [
     {
       "id": "r0c0",
       "row": 0,
       "col": 0,
-      "size": "large",
-      "title": "扩容",
-      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{
+        "right":true,
+        "down":true
+      },
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "title": "烫手山芋",
+          "describe": "军械库 | 米达1级",
+          "summary": "解锁可在军械库中交换的热量手雷。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/heat_grenade.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c1",
+      "row": 0,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "爆炸物",
+          "describe": "军械库 | 米达10级",
+          "summary": "解锁可在军械库中交换的破片手雷。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/Fractal_grenade.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "10"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c2",
+      "row": 0,
+      "col": 2,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "熄灯",
+          "describe": "军械库 | 米达18级",
+          "summary": "解锁可在军械库中交换的电磁脉冲手雷。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/Fractal_grenade.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "思维波透镜",
+              "materialIcon": "/factions/data/Thought_Wave_Lens.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c3",
+      "row": 0,
+      "col": 3,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "装备",
+          "describe": "军械库 | 米达13级",
+          "summary": "可使用信用店购买的强化装备",
+          "unlockName": "",
+          "unlockNums": "",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "6"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "17"
             }
-          ],
-          "title": "扩容"
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "装备+",
+          "describe": "军械库 | 米达20级",
+          "summary": "可使用信用店购买的豪华装备",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "思维波透镜",
+              "materialIcon": "/factions/data/Thought_Wave_Lens.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c5",
+      "row": 0,
+      "col": 5,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/chest.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "赞助[米达]",
+          "describe": "军械库 | 米达10级",
+          "summary": "解锁可在军械库中使用信用点购买的米达高级赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/mida_sponser_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "250"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "赞助+[米达]",
+          "describe": "军械库 | 米达20级",
+          "summary": "解锁可在军械库中使用信用点购买的米达豪华赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/mida_sponser_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "500"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "赞助++[米达]",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中使用信用点购买的米达卓越赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/mida_sponser_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c0",
+      "row": 1,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "正中靶心",
+          "describe": "军械库 | 米达9级",
+          "summary": "解锁可在军械库中交换的飞镖手雷。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/axion_grenade.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c2",
+      "row": 1,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/implant.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "植入物库存",
+          "describe": "军械库 | 米达6级",
+          "summary": "米达现已为每种类型的植入物增加一个额外可出售库存，可使用回收资源或信用点购买。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "20"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "植入物库存+",
+          "describe": "军械库 | 米达20级",
+          "summary": "米达现已为每种类型的植入物增加两个额外可出售库存，可使用回收资源或信用点购买。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "易爆化合物",
+              "materialIcon": "/factions/data/Explosive_compound.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c3",
+      "row": 1,
+      "col": 3,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/leg.svg",
+      "links":{
+        "right":true,
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "爆炸抗性",
+          "describe": "军械库 | 米达2级",
+          "summary": "解锁可在军械库中购买和交换的爆炸抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "12"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "爆炸抗性+",
+          "describe": "军械库 | 米达15级",
+          "summary": "解锁可在军械库中购买和交换的爆炸抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "8"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "22"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "爆炸抗性++",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中购买和交换的爆炸抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "5,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "2"
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "爆炸抗性+++",
+          "describe": "军械库 | VIP8级",
+          "summary": "解锁可在军械库中购买和交换的爆炸抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "10"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c4",
+      "row": 1,
+      "col": 4,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/body.svg",
+      "links":{
+        "right":true,
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "弹道抗性",
+          "describe": "军械库 | 米达3级",
+          "summary": "解锁可在军械库中购买和交换的弹道抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "13"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "弹道抗性+",
+          "describe": "军械库 | 米达17级",
+          "summary": "解锁可在军械库中购买和交换的弹道抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "23"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "12"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "弹道抗性++",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中购买和交换的弹道抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "5,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "弹道抗性+++",
+          "describe": "军械库 | VIP8级",
+          "summary": "解锁可在军械库中购买和交换的弹道抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "5"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c5",
+      "row": 1,
+      "col": 5,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "links":{
+        "right":true,
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "伏特抗性",
+          "describe": "军械库 | 米达4级",
+          "summary": "解锁可在军械库中购买和交换的伏特抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "15"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "伏特抗性+",
+          "describe": "军械库 | 米达19级",
+          "summary": "解锁可在军械库中购买和交换的伏特抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "23"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "12"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "伏特抗性++",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中购买和交换的伏特抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "5,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "伏特抗性+++",
+          "describe": "军械库 | VIP8级",
+          "summary": "解锁可在军械库中购买和交换的伏特抗性植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "5"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c0",
+      "row": 2,
+      "col": 0,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "化学师",
+          "describe": "军械库 | 米达23级",
+          "summary": "解锁可在军械库中交换的化学手雷。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/chemical_grenade.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "易爆化合物",
+              "materialIcon": "/factions/data/Explosive_compound.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c1",
+      "row": 2,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "睁大眼睛",
+          "describe": "军械库 | 米达5级",
+          "summary": "解锁可在军械库中交换的近接传感器。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/close_range_senser.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c3",
+      "row": 2,
+      "col": 3,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/leg.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "俯冲轰炸",
+          "describe": "军械库 | 米达28级",
+          "summary": "解锁可在军械库中购买和交换的俯冲轰炸植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "思维波透镜",
+              "materialIcon": "/factions/data/Thought_Wave_Lens.webp",
+              "materialNums": "12"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "易爆化合物",
+              "materialIcon": "/factions/data/Explosive_compound.webp",
+              "materialNums": "5"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "俯冲轰炸+",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁可在军械库中购买和交换的俯冲轰炸植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "7"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "3"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "俯冲轰炸++",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁可在军械库中购买和交换的俯冲轰炸植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c4",
+      "row": 2,
+      "col": 4,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/body.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "冲击标记",
+          "describe": "军械库 | 米达28级",
+          "summary": "解锁可在军械库中购买和交换的冲击标记植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "思维波透镜",
+              "materialIcon": "/factions/data/Thought_Wave_Lens.webp",
+              "materialNums": "8"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "易爆化合物",
+              "materialIcon": "/factions/data/Explosive_compound.webp",
+              "materialNums": "10"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "冲击标记+",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁可在军械库中购买和交换的冲击标记植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "7"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "冲击标记++",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁可在军械库中购买和交换的冲击标记植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "危害胶囊",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c5",
+      "row": 2,
+      "col": 5,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "隐秘恢复",
+          "describe": "军械库 | 米达28级",
+          "summary": "解锁可在军械库中购买和交换的隐秘恢复植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "1"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "易爆化合物",
+              "materialIcon": "/factions/data/Explosive_compound.webp",
+              "materialNums": "15"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "隐秘恢复+",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁可在军械库中购买和交换的隐秘恢复植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "7"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "3"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "隐秘恢复++",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁可在军械库中购买和交换的隐秘恢复植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c0",
+      "row": 3,
+      "col": 0,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "装备库存",
+          "describe": "军械库 | 米达25级",
+          "summary": "解锁后将增加米达可售装备库存",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "易爆化合物",
+              "materialIcon": "/factions/data/Explosive_compound.webp",
+              "materialNums": "6"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "思维波透镜",
+              "materialIcon": "/factions/data/Thought_Wave_Lens.webp",
+              "materialNums": "5"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "装备库存+",
+          "describe": "军械库 | VIP10级",
+          "summary": "解锁后将进一步增加米达可售装备库存",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "危害胶囊",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "1"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c1",
+      "row": 3,
+      "col": 1,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "穹顶护域",
+          "describe": "军械库 | VIP15级",
+          "summary": "解锁可在军械库中购买的气泡护盾。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/bubble.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "危害胶囊",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c2",
+      "row": 3,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "备用子弹",
+          "describe": "军械库 | 米达1级",
+          "summary": "解锁可在军械库中交换的强化弹药箱。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/green_ammunition_box.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "10"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "备用子弹+",
+          "describe": "军械库 | 米达15级",
+          "summary": "解锁可在军械库中交换的豪华弹药箱。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/blue_ammunition_box.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "8"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c3",
+      "row": 3,
+      "col": 3,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "传感器箱",
+          "describe": "军械库 | 米达8级",
+          "summary": "你的标准弹药箱中将包含一个近接传感器。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "26"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "手雷箱",
+          "describe": "军械库 | 米达30级",
+          "summary": "你的强化弹药箱中将包含一个标准或强化手雷，而非近接传感器。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "1"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "思维波透镜",
+              "materialIcon": "/factions/data/Thought_Wave_Lens.webp",
+              "materialNums": "18"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "手雷箱+",
+          "describe": "军械库 | VIP3级",
+          "summary": "你的豪华弹药箱中将包含一个强化或豪华手雷，而非近接传感器。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "?????"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c4",
+      "row": 3,
+      "col": 4,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "心肺易物",
+          "describe": "军械库 | 米达7级",
+          "summary": "解锁可在军械库中交换的心肺复苏",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/Energy_Potion.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定铅",
+              "materialIcon": "/factions/data/unstable_lead.webp",
+              "materialNums": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c5",
+      "row": 3,
+      "col": 5,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "心肺复苏",
+          "describe": "军械库 | 米达11级",
+          "summary": "解锁可在军械库中购买的心肺复苏",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/Energy_Potion.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "活性化合物",
+              "materialIcon": "/factions/data/active_compound.webp",
+              "materialNums": "11"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "监控透镜",
+              "materialIcon": "/factions/data/Monitoring_lens.webp",
+              "materialNums": "5"
+            }
+          ]
         }
       ]
     }
+
   ],
   "peakNodes": [
     {
       "id": "peak_1",
-      "title": "巅峰节点I",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "米达优待",
+      "describe": "军械库",
+      "summary": "米达供应每日免费物品",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "5/28"
     },
     {
       "id": "peak_2",
-      "title": "巅峰节点II",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "手雷奖励",
+      "describe": "功能",
+      "summary": "米达标准合约现在必定提供一枚手雷作为奖励。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "10/28"
     },
     {
       "id": "peak_3",
-      "title": "巅峰节点III",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "米达豪赌者",
+      "describe": "军械库",
+      "summary": "可获得额外的高价值每日特惠，且携带米达货品撤离时获得的声望增加。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "15/28"
     },
     {
       "id": "peak_4",
-      "title": "巅峰节点IV",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "火热手感",
+      "describe": "功能",
+      "summary": "鲁克现在开始疾行时，会携带一枚热量手雷。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "20/28"
     },
     {
       "id": "peak_5",
-      "title": "巅峰节点V",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "升级植入物",
+      "describe": "军械库",
+      "summary": "米达每日提供一个带有升级状态效果的免费植入物。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "24/28"
     },
     {
       "id": "peak_6",
-      "title": "巅峰节点VI",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "杀_毒.EXE",
+      "describe": "功能",
+      "summary": "每次疾行开始时，获得小部分主动杀毒防护。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "28/28"
     }
   ]
 }

@@ -455,6 +455,9 @@
       "col": 5,
       "size": "large",
       "iconImage": "/factions/data/svgs/shield.svg",
+      "links":{
+        "down":true
+      },
       "levels": [
         {
           "levelId": "level_1",
@@ -588,7 +591,8 @@
       "surfacePreset": "vip",
       "iconImage": "/factions/data/svgs/leg.svg",
       "links":{
-        "right":true
+        "right":true,
+        "down":true
       },
       "levels": [
         {
@@ -699,7 +703,8 @@
       "surfacePreset": "vip",
       "iconImage": "/factions/data/svgs/body.svg",
       "links":{
-        "right":true
+        "right":true,
+        "down":true
       },
       "levels": [
         {
@@ -809,6 +814,9 @@
       "size": "small",
       "surfacePreset": "vip",
       "iconImage": "/factions/data/svgs/head.svg",
+      "links":{
+        "down":true
+      },
       "levels": [
         {
           "levelId": "level_1",
@@ -986,7 +994,7 @@
       "levels": [
         {
           "levelId": "level_1",
-          "title": "装甲",
+          "title": "护盾",
           "describe": "军械库 | 纽卡洛里8级",
           "summary": "解锁可在军械库中购买的强化护盾植入物。",
           "unlockName": "已解锁可购买物品",
@@ -1014,7 +1022,7 @@
           ]
         },
         {
-          "levelId": "level_1",
+          "levelId": "level_2",
           "title": "装甲",
           "describe": "军械库 | 纽卡洛里25级",
           "summary": "解锁可在军械库中购买的豪华护盾植入物。",

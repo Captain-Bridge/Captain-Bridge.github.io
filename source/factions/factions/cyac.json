@@ -245,6 +245,7 @@
       "row": 0,
       "col": 5,
       "size": "large",
+      "surfacePreset":"vip",
       "iconImage": "/factions/data/svgs/chest.svg",
       "levels": [
         {
