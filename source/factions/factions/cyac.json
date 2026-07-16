@@ -288,13 +288,13 @@
           "summary": "解锁可在军械库中使用信用点购买的赛博艾克米卓越赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_blue.webp",
+          "unlockIcon": "/factions/data/cyac_sponser_purple.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "3,000"
+              "materialNums": "1,000"
             }
           ]
         }
@@ -387,7 +387,7 @@
               "materialNums": "56"
             },
             {
-              "materialId": "material_2",
+              "materialId": "material_3",
               "materialName": "不稳定炮铜",
               "materialIcon": "/factions/data/unstable_gunmetal.webp",
               "materialNums": "24"
@@ -511,8 +511,8 @@
           "levelId": "level_1",
           "title": "富饶.EXE",
           "describe": "军械库 | VIP3级",
-          "summary": "??????",
-          "unlockName": "???????",
+          "summary": "打开一个上锁容器奖励250信用点",
+          "unlockName": "",
           "unlockNums": "",
           "unlockIcon": "",
           "materials": [
@@ -520,7 +520,19 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "???"
+              "materialNums": "6000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "1"
             }
           ]
         }
@@ -609,14 +621,14 @@
       "col": 1,
       "size": "small",
       "surfacePreset":"vip",
-      "iconImage": "/factions/data/svgs/cyac.svg",
+      "iconImage": "/factions/data/svgs/key.svg",
       "levels": [
         {
           "levelId": "level_1",
           "title": "折扣模板",
           "describe": "军械库 | VIP12级",
-          "summary": "",
-          "unlockName": "",
+          "summary": "降低军械库中赛博艾克米豪华和卓越钥匙模板的回收资源消耗。",
+          "unlockName": "每日特惠中有小概率出现卓越饰品。",
           "unlockNums": "",
           "unlockIcon": "",
           "materials": [

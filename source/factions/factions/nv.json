@@ -10,7 +10,6 @@
       "id": "r0c0",
       "row": 0,
       "col": 0,
-      "title": "安保",
       "size": "small",
       "iconImage": "/factions/data/svgs/medic.svg",
       "links":{
@@ -19,6 +18,7 @@
       "levels": [
         {
           "levelId": "level_1",
+          "title": "安保",
           "describe": "军械库 | 纽卡洛里1级",
           "summary": "解锁军械库中的每日免费电池",
           "unlockName": "军械库中的每日免费护盾电池",
@@ -38,74 +38,6 @@
               "materialNums": "10"
             }
           ]
-        },
-        {
-          "levelId": "level_2",
-          "describe": "物品栏 | 赛博艾克米6级",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+8行",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "1,500"
-            }
-          ],
-          "title": "扩容"
-        },
-        {
-          "levelId": "level_3",
-          "describe": "物品栏 | 赛博艾克米11级",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+8行",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "2,000"
-            }
-          ],
-          "title": "扩容"
-        },
-        {
-          "levelId": "level_4",
-          "describe": "物品栏 | 赛博艾克米17级",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "4,000"
-            }
-          ],
-          "title": "扩容"
-        },
-        {
-          "levelId": "level_5",
-          "describe": "物品栏 | 赛博艾克米26级",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "7,000"
-            }
-          ],
-          "title": "扩容"
         }
       ]
     },
@@ -121,11 +53,12 @@
       "levels": [
         {
           "levelId": "level_1",
+          "title": "高级护盾",
           "describe": "军械库 | 纽卡洛里6级",
           "summary": "解锁可在军械库中购买的高级护盾电池",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/blue_shield.webp",
+          "unlockIcon": "/factions/data/blue_battery.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -136,35 +69,17 @@
             {
               "materialId": "material_2",
               "materialName": "火花叶",
-              "materialIcon": "/factions/data/Spark blade.webp",
+              "materialIcon": "/factions/data/Spark_blade.webp",
               "materialNums": "12"
             },
             {
-              "materialId": "material_2",
-              "materialName": "火花叶",
-              "materialIcon": "/factions/data/Spark blade.webp",
-              "materialNums": "12"
+              "materialId": "material_3",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "4"
             }
 
-          ],
-          "title": "线人.EXE"
-        },
-        {
-          "levelId": "level_2",
-          "describe": "功能 | 赛博艾克米9级",
-          "summary": "数据卡信用点奖励提高50%。此加成可与其它线人升级效果叠加。",
-          "unlockName": "数据卡信用值",
-          "unlockNums": "+50%",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "1,500"
-            }
-          ],
-          "title": "线人.EXE"
+          ]
         }
       ]
     },
@@ -173,92 +88,116 @@
       "row": 0,
       "col": 2,
       "size": "small",
-      "iconImage": "/factions/data/svgs/credit_vault.svg",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "links":{
+        "right": true
+      },
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "物品栏 | 赛博艾克米3级",
-          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
-          "unlockName": "信用点钱包容量",
-          "unlockNums": "+2万",
+          "title": "护盾库存",
+          "describe": "军械库 | 纽卡洛里14级",
+          "summary": "军械库中的高级护盾电池库存提高5。",
+          "unlockName": "",
+          "unlockNums": "",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "750"
+              "materialNums": "1500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "蒲公英种子",
+              "materialIcon": "/factions/data/Dandelion_seeds.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "19"
             }
-          ],
-          "title": "信用点上限"
-        },
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c3",
+      "row": 0,
+      "col": 3,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
         {
-          "levelId": "level_2",
-          "describe": "物品栏 | 赛博艾克米7级",
-          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
-          "unlockName": "信用点钱包容量",
-          "unlockNums": "+5万",
-          "unlockIcon": "",
+          "levelId": "level_1",
+          "title": "万能药工具包",
+          "describe": "军械库 | 纽卡洛里22级",
+          "summary": "解锁可在军械库中购买的万能药工具包。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/phoniex.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "1,500"
+              "materialNums": "3500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "蒲公英种子",
+              "materialIcon": "/factions/data/Dandelion_seeds.webp",
+              "materialNums": "9"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "4"
             }
-          ],
-          "title": "信用点上限"
-        },
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c4",
+      "row": 0,
+      "col": 4,
+      "size": "large",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/shield.svg",
+      "levels": [
         {
-          "levelId": "level_3",
-          "describe": "物品栏 | 赛博艾克米14级",
-          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
-          "unlockName": "信用点钱包容量",
-          "unlockNums": "+20万",
-          "unlockIcon": "",
+          "levelId": "level_1",
+          "title": "壁垒",
+          "describe": "军械库 | VIP15级",
+          "summary": "解锁可在军械库中购买的尊享护盾植入物。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/golden_shield.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "4,000"
-            }
-          ],
-          "title": "信用点上限"
-        },
-        {
-          "levelId": "level_4",
-          "describe": "物品栏 | 赛博艾克米19级",
-          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
-          "unlockName": "信用点钱包容量",
-          "unlockNums": "+70万",
-          "unlockIcon": "",
-          "materials": [
+              "materialNums": "7000"
+            },
             {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "10,000"
-            }
-          ],
-          "title": "信用点上限"
-        },
-        {
-          "levelId": "level_5",
-          "describe": "物品栏 | 赛博艾克米28级",
-          "summary": "在当前赛季剩余期间内增加你的信用点钱包容量。",
-          "unlockName": "信用点钱包容量",
-          "unlockNums": "+900万",
-          "unlockIcon": "",
-          "materials": [
+              "materialId": "material_2",
+              "materialName": "危害胶囊",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "3"
+            },
             {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "50,000"
+              "materialId": "material_3",
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
+              "materialNums": "3"
             }
-          ],
-          "title": "信用点上限"
+          ]
         }
       ]
     },
@@ -267,16 +206,17 @@
       "row": 0,
       "col": 5,
       "size": "large",
+      "surfacePreset": "vip",
       "iconImage": "/factions/data/svgs/chest.svg",
       "levels": [
         {
           "levelId": "level_1",
-          "title": "赞助[赛博艾克米]",
-          "describe": "军械库 | 赛博艾克米10级",
-          "summary": "解锁可在军械库中使用信用点购买的赛博艾克米高级赞助包。",
+          "title": "赞助[纽卡洛里]",
+          "describe": "军械库 | 纽卡洛里10级",
+          "summary": "解锁可在军械库中使用信用点购买的纽卡洛里高级赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_green.webp",
+          "unlockIcon": "/factions/data/nv_sponser_green.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -288,12 +228,12 @@
         },
         {
           "levelId": "level_2",
-          "title": "赞助+[赛博艾克米]",
-          "describe": "军械库 | 赛博艾克米20级",
-          "summary": "解锁可在军械库中使用信用点购买的赛博艾克米豪华赞助包。",
+          "title": "赞助+[纽卡洛里]",
+          "describe": "军械库 | 纽卡洛里20级",
+          "summary": "解锁可在军械库中使用信用点购买的纽卡洛里豪华赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_blue.webp",
+          "unlockIcon": "/factions/data/nv_sponser_blue.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -305,18 +245,18 @@
         },
         {
           "levelId": "level_3",
-          "title": "赞助++[赛博艾克米]",
+          "title": "赞助++[纽卡洛里]",
           "describe": "军械库 | VIP1级",
-          "summary": "解锁可在军械库中使用信用点购买的赛博艾克米卓越赞助包。",
+          "summary": "解锁可在军械库中使用信用点购买的纽卡洛里卓越赞助包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/cyac_sponser_blue.webp",
+          "unlockIcon": "/factions/data/nv_sponser_purple.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "3,000"
+              "materialNums": "1,000"
             }
           ]
         }
@@ -327,404 +267,19 @@
       "row": 1,
       "col": 0,
       "size": "small",
-      "iconImage": "/factions/data/svgs/backpack.svg",
+      "iconImage": "/factions/data/svgs/medic.svg",
       "links":{
-        "down":true
+        "right":true
       },
       "levels": [
         {
           "levelId": "level_1",
-          "title": "载体易物",
-          "describe": "军械库 | 赛博艾克米4级",
-          "summary": "解锁可在军械库中使用回收资源交换的强化背包。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/green_pack.webp",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "750"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r1c1",
-      "row": 1,
-      "col": 1,
-      "size": "small",
-      "iconImage": "/factions/data/svgs/backpack.svg",
-      "links":{
-        "down":true
-      },
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "载体+易物",
-          "describe": "军械库 | 赛博艾克米15级",
-          "summary": "解锁可在军械库中使用回收资源交换的豪华背包。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/blue_pack.webp",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "750"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r1c2",
-      "row": 1,
-      "col": 2,
-      "size": "small",
-      "iconImage": "/factions/data/svgs/backpack.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "顶级掠夺者易物",
-          "describe": "军械库 | 赛博艾克米30级",
-          "summary": "解锁可在军械库中使用回收资源交换的卓越背包。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/purple_pack.webp",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "3,500"
-            },
-            {
-              "materialId": "material_2",
-              "materialName": "不稳定铅",
-              "materialIcon": "/factions/data/unstable_lead.webp",
-              "materialNums": "56"
-            },
-            {
-              "materialId": "material_2",
-              "materialName": "不稳定炮铜",
-              "materialIcon": "/factions/data/unstable_gunmetal.webp",
-              "materialNums": "24"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r1c3",
-      "row": 1,
-      "col": 3,
-      "size": "large",
-      "surfacePreset": "vip",
-      "iconImage": "/factions/data/svgs/backpack.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "屯居者易物",
-          "describe": "军械库 | VIP15级",
-          "summary": "解锁可在军械库中使用回收资源交换的尊享背包。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/purple_pack.webp",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "7,000"
-            },
-            {
-              "materialId": "material_2",
-              "materialName": "神经绝缘体",
-              "materialIcon": "/factions/data/neuroinsulator.webp",
-              "materialNums": "18"
-            },
-            {
-              "materialId": "material_2",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
-              "materialNums": "7"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r2c0",
-      "row": 2,
-      "col": 0,
-      "size": "large",
-      "iconImage": "/factions/data/svgs/backpack.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "载体",
-          "describe": "军械库 | 赛博艾克米8级",
-          "summary": "解锁可在军械库中使用信用点购买的强化背包。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/green_pack.webp",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "750"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r2c1",
-      "row": 2,
-      "col": 1,
-      "size": "large",
-      "iconImage": "/factions/data/svgs/backpack.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "载体+",
-          "describe": "军械库 | 赛博艾克米22级",
-          "summary": "解锁可在军械库中使用信用点购买的豪华背包。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/blue_pack.webp",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "3,500"
-            },
-            {
-              "materialId": "material_2",
-              "materialName": "不稳定二极管",
-              "materialIcon": "/factions/data/unstable_diode.webp",
-              "materialNums": "21"
-            },
-            {
-              "materialId": "material_3",
-              "materialName": "不稳定生物质",
-              "materialIcon": "/factions/data/unstable_biomass.webp",
-              "materialNums": "9"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r2c4",
-      "row": 2,
-      "col": 4,
-      "size": "large",
-      "surfacePreset":"vip",
-      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "富饶.EXE",
-          "describe": "军械库 | VIP3级",
-          "summary": "??????",
-          "unlockName": "???????",
-          "unlockNums": "",
+          "title": "恢复",
+          "describe": "军械库 | 纽卡洛里1级",
+          "summary": "解锁军械库中的每日免费修补包。",
+          "unlockName": "军械库中的每日免费修补包",
+          "unlockNums": "+",
           "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "???"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r3c0",
-      "row": 3,
-      "col": 0,
-      "size": "small",
-      "iconImage": "/factions/data/svgs/key.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "锁匠",
-          "describe": "军械库 | 赛博艾克米3级",
-          "summary": "解锁可在军械库中购买的锁箱钥匙和危害覆写卡。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": [
-            "/factions/data/green_key.webp",
-            "/factions/data/green_key_1.webp"              
-          ],
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "250"
-            }
-          ]
-        },
-        {
-          "levelId": "level_2",
-          "title": "制钥器",
-          "describe": "军械库 | 赛博艾克米12级",
-          "summary": "解锁可在军械库中购买的豪华钥匙模板。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": [
-            "/factions/data/blue_key.webp"              
-          ],
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "500"
-            }
-          ]
-        },
-        {
-          "levelId": "level_3",
-          "title": "制钥器+",
-          "describe": "军械库 | 赛博艾克米30级",
-          "summary": "解锁可在军械库中购买的卓越钥匙模板。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/purple_key.webp",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "3,500"
-            },
-            {
-              "materialId": "material_2",
-              "materialName": "不稳定凝胶",
-              "materialIcon": "/factions/data/unstable_gel.webp",
-              "materialNums": "56"
-            },
-            {
-              "materialId": "material_3",
-              "materialName": "不稳定二极管",
-              "materialIcon": "/factions/data/unstable_diode.webp",
-              "materialNums": "24"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r3c1",
-      "row": 3,
-      "col": 1,
-      "size": "small",
-      "surfacePreset":"vip",
-      "iconImage": "/factions/data/svgs/credit_vault.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "折扣模板",
-          "describe": "军械库 | VIP12级",
-          "summary": "",
-          "unlockName": "",
-          "unlockNums": "",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "7,000"
-            },
-            {
-              "materialId": "material_2",
-              "materialName": "神经绝缘体",
-              "materialIcon": "/factions/data/neuroinsulator.webp",
-              "materialNums": "12"
-            },
-            {
-              "materialId": "material_3",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
-              "materialNums": "5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r3c2",
-      "row": 3,
-      "col": 2,
-      "size": "small",
-      "iconImage": "/factions/data/svgs/implant.svg",
-      "links":{"right":true},
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "植入物库存",
-          "describe": "军械库 | 赛博艾克米5级",
-          "summary": "赛博艾克米现已为每种类型的植入物增加一个额外可出售库存，可使用回收资源或信用点购买。",
-          "unlockName": "",
-          "unlockNums": "",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "1,500"
-            }
-          ]
-        },
-        {
-          "levelId": "level_2",
-          "title": "植入物库存+",
-          "describe": "军械库 | 赛博艾克米26级",
-          "summary": "赛博艾克米现已为每种类型的植入物增加一个额外可出售库存，可使用回收资源或信用点购买。",
-          "unlockName": "",
-          "unlockNums": "",
-          "unlockIcon": "",
-          "materials": [
-            {
-              "materialId": "material_1",
-              "materialName": "信用点",
-              "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "1,500"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "r3c3",
-      "row": 3,
-      "col": 3,
-      "size": "small",
-      "surfacePreset":"vip",
-      "links":{"right":true},
-      "iconImage": "/factions/data/svgs/head.svg",
-      "levels": [
-        {
-          "levelId": "level_1",
-          "title": "皮纳塔",
-          "describe": "军械库 | 赛博艾克米2级",
-          "summary": "解锁可在军械库中购买和交换的皮纳塔植入物。",
-          "unlockName": "已解锁可购买物品",
-          "unlockNums": "",
-          "unlockIcon": "/factions/data/head_green.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -739,15 +294,68 @@
               "materialNums": "10"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "r1c1",
+      "row": 1,
+      "col": 1,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
         {
-          "levelId": "level_2",
-          "title": "皮纳塔+",
-          "describe": "军械库 | 赛博艾克米24级",
-          "summary": "解锁可在军械库中购买和交换的皮纳塔植入物。",
+          "levelId": "level_1",
+          "title": "高级修补",
+          "describe": "军械库 | 纽卡洛里6级",
+          "summary": "解锁可在军械库中购买的高级修补包。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/head_blue.webp",
+          "unlockIcon": "/factions/data/blue_medic.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "11"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火花叶",
+              "materialIcon": "/factions/data/Spark_blade.webp",
+              "materialNums": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c2",
+      "row": 1,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "修补库存",
+          "describe": "军械库 | 纽卡洛里14级",
+          "summary": "军械库中的高级修补包库存提高5。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
@@ -757,55 +365,309 @@
             },
             {
               "materialId": "material_2",
-              "materialName": "不稳定凝胶",
-              "materialIcon": "/factions/data/unstable_gel.webp",
-              "materialNums": "21"
+              "materialName": "蒲公英种子",
+              "materialIcon": "/factions/data/Dandelion_seeds.webp",
+              "materialNums": "4"
             },
             {
               "materialId": "material_3",
-              "materialName": "不稳定二极管",
-              "materialIcon": "/factions/data/unstable_diode.webp",
-              "materialNums": "9"
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "17"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "r1c3",
+      "row": 1,
+      "col": 3,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
         {
-          "levelId": "level_3",
-          "title": "皮纳塔++",
-          "describe": "军械库 | VIP5级",
-          "summary": "解锁可在军械库中购买和交换的皮纳塔植入物。",
+          "levelId": "level_1",
+          "title": "自我复活",
+          "describe": "军械库 | 纽卡洛里28级",
+          "summary": "解锁可在军械库中购买的自我复活。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/head_purple.webp",
+          "unlockIcon": "/factions/data/self_revive.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "6,000"
+              "materialNums": "3,500"
             },
             {
               "materialId": "material_2",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
-              "materialNums": "6"
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "1"
             },
             {
               "materialId": "material_3",
-              "materialName": "神经绝缘体",
-              "materialIcon": "/factions/data/neuroinsulator.webp",
-              "materialNums": "2"
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c4",
+      "row": 1,
+      "col": 4,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "仁心包",
+          "describe": "军械库 | 纽卡洛里5级",
+          "summary": "解锁可在军械库中购买的仁心包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/renxinbao.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定生物质",
+              "materialIcon": "/factions/data/unstable_biomass.webp",
+              "materialNums": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c5",
+      "row": 1,
+      "col": 5,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/shield.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "护盾收割者",
+          "describe": "军械库 | 纽卡洛里5级",
+          "summary": "解锁可在军械库中交换的强化护盾植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/green_shield.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "10"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火花叶",
+              "materialIcon": "/factions/data/Spark_blade.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "护盾易物",
+          "describe": "军械库 | 纽卡洛里20级",
+          "summary": "解锁可在军械库中交换的豪华护盾植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/blue_shield.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "5"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "蒲公英种子",
+              "materialIcon": "/factions/data/Dandelion_seeds.webp",
+              "materialNums": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c0",
+      "row": 2,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/implant.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "植入物库存",
+          "describe": "军械库 | 纽卡洛里7级",
+          "summary": "纽卡洛里现已为每种类型的非护盾植入物增加一个额外可出售库存，可使用回收资源或信用点购买。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定生物质",
+              "materialIcon": "/factions/data/unstable_biomass.webp",
+              "materialNums": "22"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "植入物库存+",
+          "describe": "军械库 | 纽卡洛里15级",
+          "summary": "纽卡洛里现已为每种类型的非护盾植入物增加两个额外可出售库存，可使用回收资源或信用点购买。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "18"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火花叶",
+              "materialIcon": "/factions/data/Spark_blade.webp",
+              "materialNums": "18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c1",
+      "row": 2,
+      "col": 1,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/leg.svg",
+      "links":{
+        "right":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "重振风范",
+          "describe": "军械库 | 纽卡洛里2级",
+          "summary": "解锁可在军械库中购买和交换的重振风范植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定生物质",
+              "materialIcon": "/factions/data/unstable_biomass.webp",
+              "materialNums": "12"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "重振风范+",
+          "describe": "军械库 | 纽卡洛里15级",
+          "summary": "解锁可在军械库中购买和交换的重振风范植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "18"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火花叶",
+              "materialIcon": "/factions/data/Spark_blade.webp",
+              "materialNums": "29"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "重振风范++",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中购买和交换的重振风范植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "????"
             }
           ]
         },
         {
           "levelId": "level_4",
-          "title": "皮纳塔+++",
-          "describe": "军械库 | VIP10级",
-          "summary": "解锁可在军械库中购买和交换的皮纳塔植入物。",
+          "title": "重振风范+++",
+          "describe": "军械库 | VIP8级",
+          "summary": "解锁可在军械库中购买和交换的重振风范植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/head_gold.webp",
+          "unlockIcon": "/factions/data/leg_gold.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -815,34 +677,36 @@
             },
             {
               "materialId": "material_2",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neural_insulator.webp",
               "materialNums": "9"
             },
             {
               "materialId": "material_3",
-              "materialName": "神经绝缘体",
-              "materialIcon": "/factions/data/neuroinsulator.webp",
-              "materialNums": "3"
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/enzyme_replicator.webp",
+              "materialNums": "5"
             }
           ]
         }
       ]
     },
     {
-      "id": "r3c4",
-      "row": 3,
-      "col": 4,
+      "id": "r2c2",
+      "row": 2,
+      "col": 2,
       "size": "small",
-      "surfacePreset":"vip",
-      "links":{"right":true},
+      "surfacePreset": "vip",
       "iconImage": "/factions/data/svgs/body.svg",
+      "links":{
+        "right":true
+      },
       "levels": [
         {
           "levelId": "level_1",
-          "title": "顺手牵羊",
-          "describe": "军械库 | 赛博艾克米2级",
-          "summary": "解锁可在军械库中购买和交换的顺手牵羊植入物。",
+          "title": "再入杀阵",
+          "describe": "军械库 | 纽卡洛里3级",
+          "summary": "解锁可在军械库中购买和交换的再入杀阵植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
           "unlockIcon": "/factions/data/body_green.webp",
@@ -857,18 +721,126 @@
               "materialId": "material_2",
               "materialName": "不稳定生物质",
               "materialIcon": "/factions/data/unstable_biomass.webp",
-              "materialNums": "10"
+              "materialNums": "13"
             }
           ]
         },
         {
           "levelId": "level_2",
-          "title": "顺手牵羊+",
-          "describe": "军械库 | 赛博艾克米24级",
-          "summary": "解锁可在军械库中购买和交换的顺手牵羊植入物。",
+          "title": "再入杀阵+",
+          "describe": "军械库 | 纽卡洛里17级",
+          "summary": "解锁可在军械库中购买和交换的再入杀阵植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
           "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "14"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "蒲公英种子",
+              "materialIcon": "/factions/data/Dandelion_seed.webp",
+              "materialNums": "3"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "再入杀阵++",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中购买和交换的再入杀阵植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "????"
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "再入杀阵+++",
+          "describe": "军械库 | VIP8级",
+          "summary": "解锁可在军械库中购买和交换的再入杀阵植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "10"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/enzyme_replicator.webp",
+              "materialNums": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c3",
+      "row": 2,
+      "col": 3,
+      "size": "small",
+      "surfacePreset": "vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "神经稳定剂",
+          "describe": "军械库 | 纽卡洛里4级",
+          "summary": "解锁可在军械库中购买和交换的神经稳定剂植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定生物质",
+              "materialIcon": "/factions/data/unstable_biomass.webp",
+              "materialNums": "15"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "神经稳定剂+",
+          "describe": "军械库 | 纽卡洛里19级",
+          "summary": "解锁可在军械库中购买和交换的神经稳定剂植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -878,55 +850,55 @@
             },
             {
               "materialId": "material_2",
-              "materialName": "不稳定凝胶",
-              "materialIcon": "/factions/data/unstable_gel.webp",
-              "materialNums": "21"
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "5"
             },
             {
               "materialId": "material_3",
-              "materialName": "不稳定二极管",
-              "materialIcon": "/factions/data/unstable_diode.webp",
-              "materialNums": "9"
+              "materialName": "蒲公英种子",
+              "materialIcon": "/factions/data/Dandelion_seed.webp",
+              "materialNums": "10"
             }
           ]
         },
         {
           "levelId": "level_3",
-          "title": "顺手牵羊++",
-          "describe": "军械库 | VIP5级",
-          "summary": "解锁可在军械库中购买和交换的顺手牵羊植入物。",
+          "title": "神经稳定剂++",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中购买和交换的神经稳定剂植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/body_purple.webp",
+          "unlockIcon": "/factions/data/head_purple.webp",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "6,000"
+              "materialNums": "5,000"
             },
             {
               "materialId": "material_2",
-              "materialName": "神经绝缘体",
-              "materialIcon": "/factions/data/neuroinsulator.webp",
-              "materialNums": "6"
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "4"
             },
             {
               "materialId": "material_3",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
               "materialNums": "2"
             }
           ]
         },
         {
           "levelId": "level_4",
-          "title": "顺手牵羊+++",
-          "describe": "军械库 | VIP10级",
-          "summary": "解锁可在军械库中购买和交换的顺手牵羊植入物。",
+          "title": "神经稳定剂+++",
+          "describe": "军械库 | VIP8级",
+          "summary": "解锁可在军械库中购买和交换的神经稳定剂植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/body_gold.webp",
+          "unlockIcon": "/factions/data/head_gold.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -942,27 +914,149 @@
             },
             {
               "materialId": "material_3",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
-              "materialNums": "3"
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/enzyme_replicator.webp",
+              "materialNums": "5"
             }
           ]
         }
       ]
     },
     {
-      "id": "r3c5",
-      "row": 3,
+      "id": "r2c4",
+      "row": 2,
+      "col": 4,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "高级机械",
+          "describe": "军械库 | 纽卡洛里3级",
+          "summary": "解锁可在军械库中购买的高级机械工具包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/advanced_machinery.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定生物质",
+              "materialIcon": "/factions/data/unstable_biomass.webp",
+              "materialNums": "13"
+            }
+          ]
+        },
+        {
+          "levelId": "level_1",
+          "title": "高级机械",
+          "describe": "军械库 | 纽卡洛里4级",
+          "summary": "解锁可在军械库中购买的高级操作系统调试。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/advanced_os.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定生物质",
+              "materialIcon": "/factions/data/unstable_biomass.webp",
+              "materialNums": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c5",
+      "row": 2,
       "col": 5,
       "size": "small",
+      "iconImage": "/factions/data/svgs/shield.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "装甲",
+          "describe": "军械库 | 纽卡洛里8级",
+          "summary": "解锁可在军械库中购买的强化护盾植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/green_shield.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "火花叶",
+              "materialIcon": "/factions/data/Spark_blade.webp",
+              "materialNums": "17"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "6"
+            }
+          ]
+        },
+        {
+          "levelId": "level_1",
+          "title": "装甲",
+          "describe": "军械库 | 纽卡洛里25级",
+          "summary": "解锁可在军械库中购买的豪华护盾植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/blue_shield.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "15"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialNums": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c1",
+      "row": 3,
+      "col": 1,
+      "size": "large",
       "surfacePreset":"vip",
       "iconImage": "/factions/data/svgs/leg.svg",
       "levels": [
         {
           "levelId": "level_1",
-          "title": "幸运掠夺者",
-          "describe": "军械库 | 赛博艾克米24级",
-          "summary": "解锁可在军械库中购买和交换的幸运掠夺者植入物。",
+          "title": "机动规避",
+          "describe": "军械库 | 纽卡洛里28级",
+          "summary": "解锁可在军械库中购买和交换的机动规避植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
           "unlockIcon": "/factions/data/leg_blue.webp",
@@ -975,23 +1069,23 @@
             },
             {
               "materialId": "material_2",
-              "materialName": "不稳定凝胶",
-              "materialIcon": "/factions/data/unstable_gel.webp",
-              "materialNums": "21"
+              "materialName": "无菌生物剥离体",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "9"
             },
             {
               "materialId": "material_3",
-              "materialName": "不稳定二极管",
-              "materialIcon": "/factions/data/unstable_diode.webp",
-              "materialNums": "9"
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "6"
             }
           ]
         },
         {
           "levelId": "level_2",
-          "title": "幸运掠夺者+",
+          "title": "机动规避+",
           "describe": "军械库 | VIP5级",
-          "summary": "解锁可在军械库中购买和交换的幸运掠夺者植入物。",
+          "summary": "解锁可在军械库中购买和交换的机动规避植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
           "unlockIcon": "/factions/data/leg_purple.webp",
@@ -1004,26 +1098,179 @@
             },
             {
               "materialId": "material_2",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
-              "materialNums": "6"
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialNums": "7"
             },
             {
               "materialId": "material_3",
               "materialName": "神经绝缘体",
               "materialIcon": "/factions/data/neuroinsulator.webp",
-              "materialNums": "2"
+              "materialNums": "3"
             }
           ]
         },
         {
           "levelId": "level_3",
-          "title": "幸运掠夺者++",
-          "describe": "军械库 | VIP10级",
-          "summary": "解锁可在军械库中购买和交换的幸运掠夺者植入物。",
+          "title": "机动规避++",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁可在军械库中购买和交换的机动规避植入物。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
           "unlockIcon": "/factions/data/leg_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "危害胶囊",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c2",
+      "row": 3,
+      "col": 2,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/body.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "逃跑艺术家",
+          "describe": "军械库 | 纽卡洛里29级",
+          "summary": "解锁可在军械库中购买和交换的逃跑艺术家植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "无菌生物剥离体",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "10"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经药剂包",
+              "materialIcon": "/factions/data/Neuropharmaceutical_Package.webp",
+              "materialNums": "8"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "逃跑艺术家+",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁可在军械库中购买和交换的逃跑艺术家植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "????"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "逃跑艺术家++",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁可在军械库中购买和交换的逃跑艺术家植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c3",
+      "row": 3,
+      "col": 3,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "反侦察",
+          "describe": "军械库 | 纽卡洛里30级",
+          "summary": "解锁可在军械库中购买和交换的反侦察植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "1"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "无菌生物剥离体",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "18"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "反侦察+",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁可在军械库中购买和交换的反侦察植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_purple.webp",
           "materials": [
             {
               "materialId": "material_1",
@@ -1033,15 +1280,120 @@
             },
             {
               "materialId": "material_2",
-              "materialName": "神经绝缘体",
-              "materialIcon": "/factions/data/neuroinsulator.webp",
-              "materialNums": "9"
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialNums": "7"
             },
             {
               "materialId": "material_3",
-              "materialName": "预测框架",
-              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
               "materialNums": "3"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "反侦察++",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁可在军械库中购买和交换的反侦察植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "危害胶囊",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c4",
+      "row": 3,
+      "col": 4,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "杀毒包",
+          "describe": "军械库 | 纽卡洛里10级",
+          "summary": "解锁可在军械库中购买的杀毒包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/anti_virus.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "火花叶",
+              "materialIcon": "/factions/data/Spark_blade.webp",
+              "materialNums": "12"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c5",
+      "row": 3,
+      "col": 5,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "信号干扰器",
+          "describe": "军械库 | 纽卡洛里12级",
+          "summary": "解锁可在军械库中购买的信号干扰器。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/signal_jammer.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "回收生物剥离体",
+              "materialIcon": "/factions/data/Recycle_biological_exfoliated_material.webp",
+              "materialNums": "12"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "火花叶",
+              "materialIcon": "/factions/data/Spark_blade.webp",
+              "materialNums": "7"
             }
           ]
         }
@@ -1051,63 +1403,63 @@
   "peakNodes": [
     {
       "id": "peak_1",
-      "title": "赛博艾克米优待",
+      "title": "纽卡洛里优待",
       "describe": "军械库",
-      "summary": "赛博艾克米每日提供一个免费强化背包和信用点。信用点数量将在达到赛博艾克米等级15和VIP1时各提升一档。",
+      "summary": "纽卡洛里供应每日免费物品。",
       "unlockName": "",
       "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "5/29"
+      "unlockConditions": "5/30"
     },
     {
       "id": "peak_2",
-      "title": "奖励酬劳",
+      "title": "更新和保护",
       "describe": "功能",
-      "summary": "完成赛博艾克米标准合约时现将提供信用点奖励。",
+      "summary": "纽卡洛里标准合约现在还将额外奖励护盾电池和修补包。",
       "unlockName": "",
       "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "10/29"
+      "unlockConditions": "10/30"
     },
     {
       "id": "peak_3",
-      "title": "赛博艾克米豪赌者",
-      "describe": "可获得额外的高价值每日特惠，且携带赛博艾克米货品撤离时获得的声望增加。",
+      "title": "纽卡洛里豪赌者",
+      "describe": "可获得额外的高价值每日特惠，且携带纽卡洛里货品撤离时获得的声望增加。",
       "summary": "",
       "unlockName": "",
       "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "15/29"
+      "unlockConditions": "15/30"
     },
     {
       "id": "peak_4",
-      "title": "囤货",
+      "title": "复原",
       "describe": "功能",
-      "summary": "鲁克现在开始疾行时，除了基础装备，还会携带一个豪华背包。",
+      "summary": "鲁克现在开始疾行时，会携带一个修补包和护盾电池。",
       "unlockName": "",
       "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "20/29"
+      "unlockConditions": "20/30"
     },
     {
       "id": "peak_5",
-      "title": "优待背包",
+      "title": "优待护盾",
       "describe": "军械库",
-      "summary": "赛博艾克米的免费背包带有“优待”状态效果。",
+      "summary": "纽卡洛里每日提供一个带有优待状态效果的免费护盾植入物。",
       "unlockName": "",
       "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "25/29"
+      "unlockConditions": "25/30"
     },
     {
       "id": "peak_6",
-      "title": "顶级掠夺者",
+      "title": "护盾++",
       "describe": "军械库",
-      "summary": "解锁可在军械库中购买的卓越背包。解锁赛博艾克米VIP升级。",
+      "summary": "解锁可在军械库中交换的卓越护盾植入物。解锁纽卡洛里VIP升级。",
       "unlockName": "已解锁可购买物品",
       "unlockNums": "",
-      "unlockIcon": "/factions/data/purple_pack.webp",
-      "unlockConditions": "29/29"
+      "unlockIcon": "/factions/data/purple_shield.webp",
+      "unlockConditions": "30/30"
     }
   ]
 }
