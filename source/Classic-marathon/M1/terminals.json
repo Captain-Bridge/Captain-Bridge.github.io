@@ -401,7 +401,13 @@
         {
           "name": "Terminal_3",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "information": "UNFINISHED_001_INFORMATION.txt",
+          "information": [
+            "UNFINISHED_001_INFORMATION.txt",
+            "UNFINISHED_002_INFORMATION.txt",
+            "UNFINISHED_003_INFORMATION.txt",
+            "UNFINISHED_004_INFORMATION.txt",
+            "UNFINISHED_005_INFORMATION.txt"
+          ],
           "logoff": "UNFINISHED_006_LOGOFF.txt",
           "picts": [],
           "variants": [
@@ -728,16 +734,6 @@
           "variants": [
             "UNFINISHED"
           ]
-        },
-        {
-          "name": "Terminal_3",
-          "logon": "UNFINISHED_000_LOGON.txt",
-          "information": "UNFINISHED_001_INFORMATION.txt",
-          "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "picts": [],
-          "variants": [
-            "UNFINISHED"
-          ]
         }
       ]
     },
@@ -870,6 +866,79 @@
     {
       "id": "24",
       "name": "Welcome to the Revolution…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Try again",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
+        },
+        {
+          "name": "Terminal_1",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "information": "UNFINISHED_001_INFORMATION.txt",
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "picts": [],
+          "variants": [
+            "UNFINISHED"
+          ]
+        },
+        {
+          "name": "Terminal_2",
+          "logon": "FINISHED_000_LOGON.txt",
+          "information": "FINISHED_001_INFORMATION.txt",
+          "logoff": "FINISHED_002_LOGOFF.txt",
+          "picts": [],
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Ingue Ferroque",
       "terminals": [
         {
           "name": "Terminal_0",
