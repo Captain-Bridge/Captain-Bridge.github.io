@@ -1,0 +1,16 @@
+{
+  "id": "outpost",
+  "title": "前哨",
+  "size": {
+    "width": 6252,
+    "height": 4688
+  },
+  "iconScale": 1,
+  "tileSources": {
+    "low": "/map/tiles/outpost/low.webp",
+    "full": "/map/tiles/outpost/full.webp"
+  },
+  "minZoom": 0.05,
+  "maxZoom": 3.6,
+  "pois": []
+}

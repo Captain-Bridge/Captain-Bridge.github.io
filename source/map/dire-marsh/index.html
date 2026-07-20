@@ -10,7 +10,7 @@ layout: false
   <title>恐怖沼泽 - 《失落星船：马拉松》中文站</title>
   <meta name="description" content="恐怖沼泽互动地图底图。">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
-  <link rel="stylesheet" href="/map/map.css?v=20260707-contact">
+  <link rel="stylesheet" href="/map/map.css?v=20260720-map-links">
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
@@ -65,14 +65,16 @@ layout: false
     window.MAP_PAGE_CONFIG = {
       activeTabId: "dire-marsh",
       tabs: [
-        { id: "cryo-archive", title: "低温档案室", href: "/map/cryo-archive/" },
+        { id: "perimeter", title: "外围区域", href: "/map/perimeter/" },
         { id: "dire-marsh", title: "恐怖沼泽", href: "/map/dire-marsh/" },
-        { id: "dire-marsh-night", title: "恐怖沼泽（夜间）", href: "/map/dire-marsh-night/" }
+        { id: "dire-marsh-night", title: "恐怖沼泽（黑夜）", href: "/map/dire-marsh-night/" },
+        { id: "outpost", title: "前哨", href: "/map/outpost/" },
+        { id: "cryo-archive", title: "低温档案室", href: "/map/cryo-archive/" }
       ],
       dataPath: "/map/dire-marsh/dire-marsh.json",
       iconCatalogPath: "/map/assets/icons/poi-icons.json",
     };
   </script>
-  <script src="/map/map-engine.js?v=20260707-contact" defer></script>
+  <script src="/map/map-engine.js?v=20260720-map-links" defer></script>
 </body>
 </html>

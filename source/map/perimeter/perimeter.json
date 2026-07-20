@@ -1,0 +1,16 @@
+{
+  "id": "perimeter",
+  "title": "外围区域",
+  "size": {
+    "width": 6252,
+    "height": 4688
+  },
+  "iconScale": 1,
+  "tileSources": {
+    "low": "/map/tiles/perimeter/low.webp",
+    "full": "/map/tiles/perimeter/full.webp"
+  },
+  "minZoom": 0.05,
+  "maxZoom": 3.6,
+  "pois": []
+}
