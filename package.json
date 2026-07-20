@@ -16,7 +16,7 @@
     "version": "7.3.0"
   },
   "dependencies": {
-    "@fontsource/noto-sans-sc": "5.2.9",
+    "@fontsource/noto-sans-sc": "5.3.0",
     "hexo": "^7.3.0",
     "hexo-blog-encrypt": "^3.1.9",
     "hexo-deployer-git": "^4.0.0",
