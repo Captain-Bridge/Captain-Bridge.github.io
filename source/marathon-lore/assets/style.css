@@ -567,8 +567,7 @@ body {
 .tab-btn:hover,.tab-btn:focus-visible,.tab-btn.is-active {
   color:var(--text);
   background:rgba(91,94,112,.96);
-  border-color:rgba(0,229,91,.22);
-  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 10px 24px rgba(0,0,0,.18)
+  box-shadow:0 10px 24px rgba(0,0,0,.18)
 }
 
 .tab-btn:hover {
@@ -879,8 +878,7 @@ body {
 .entry-rail-list button:hover,.entry-rail-list button:focus-visible,.detail-rail-list button:hover,.detail-rail-list button:focus-visible,.entry-rail-list button.is-active,.detail-rail-list button.is-active {
   background:rgba(91,94,112,.96);
   color:var(--text);
-  border-color:rgba(0,229,91,.2);
-  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 10px 24px rgba(0,0,0,.16)
+  box-shadow:0 10px 24px rgba(0,0,0,.16)
 }
 
 .entry-rail-list button:hover,.detail-rail-list button:hover {
@@ -1459,8 +1457,7 @@ body {
 }
 
 .tag-search-button:hover,.tag-search-button:focus-visible {
-  border-color:rgba(0,229,91,.45);
-  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 10px 24px rgba(0,0,0,.14)
+  box-shadow:0 10px 24px rgba(0,0,0,.14)
 }
 
 .tag-search-button:hover {
@@ -1498,8 +1495,7 @@ body {
 }
 
 .tag-item.is-active {
-  border-color:rgba(0,229,91,.55);
-  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 12px 26px rgba(0,0,0,.18);
+  box-shadow:0 12px 26px rgba(0,0,0,.18);
 }
 
 .tag-stage {
@@ -1533,8 +1529,7 @@ body {
 }
 
 .tag-item:hover,.tag-item:focus-visible,.tag-result:hover,.tag-result:focus-visible {
-  border-color:rgba(0,229,91,.28);
-  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 12px 24px rgba(0,0,0,.18);
+  box-shadow:0 12px 24px rgba(0,0,0,.18);
   transform:translate3d(0,-1px,0)
 }
 
@@ -1576,8 +1571,7 @@ body {
 
 .card:hover,.card:focus-visible,.entry-card:hover,.entry-card:focus-visible {
   transform:translate3d(0,-2px,0);
-  border-color:rgba(0,229,91,.22);
-  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 18px 36px rgba(0,0,0,.24);
+  box-shadow:0 18px 36px rgba(0,0,0,.24);
   filter:brightness(1.03)
 }
 
