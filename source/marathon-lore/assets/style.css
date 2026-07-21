@@ -493,7 +493,16 @@ body {
   display:flex;
   flex-direction:column;
   gap:10px;
-  overflow:visible
+  overflow:visible;
+  opacity:1;
+  transform:translate3d(0,0,0);
+  transition:opacity .18s ease, transform .18s ease;
+  will-change:opacity, transform
+}
+
+.view.is-transitioning {
+  opacity:.92;
+  transform:translate3d(0,6px,0)
 }
 
 .section-tabs {
@@ -551,12 +560,23 @@ body {
   line-height:1.25;
   text-align:center;
   white-space:nowrap;
-  cursor:pointer
+  cursor:pointer;
+  transition:transform .16s ease, border-color .16s ease, background-color .16s ease, color .16s ease, box-shadow .16s ease
 }
 
-.tab-btn:hover,.tab-btn.is-active {
+.tab-btn:hover,.tab-btn:focus-visible,.tab-btn.is-active {
   color:var(--text);
-  background:rgba(91,94,112,.96)
+  background:rgba(91,94,112,.96);
+  border-color:rgba(0,229,91,.22);
+  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 10px 24px rgba(0,0,0,.18)
+}
+
+.tab-btn:hover {
+  transform:translate3d(0,-1px,0)
+}
+
+.tab-btn:active {
+  transform:translate3d(0,1px,0) scale(.985)
 }
 
 .top-grid,.section-grid,.entry-grid {
@@ -623,7 +643,8 @@ body {
   padding:12px;
   display:flex;
   flex-direction:column;
-  gap:12px
+  gap:12px;
+  transition:border-color .18s ease, box-shadow .18s ease, background-color .18s ease
 }
 
 .entry-rail,
@@ -654,7 +675,9 @@ body {
   font-size:15px;
   font-weight:700;
   letter-spacing:.04em;
-  white-space:nowrap
+  white-space:nowrap;
+  opacity:.96;
+  transition:opacity .18s ease, border-color .18s ease, background-color .18s ease
 }
 
 .detail-ticker-top {
@@ -765,7 +788,13 @@ body {
 .entry-hero {
   display:grid;
   gap:8px;
-  margin-bottom:8px
+  margin-bottom:8px;
+  transition:transform .18s ease, opacity .18s ease
+}
+
+.entry-stage:hover .entry-hero,
+.detail-stage:hover .entry-hero {
+  transform:translate3d(0,-1px,0)
 }
 
 .hero-badge {
@@ -834,7 +863,8 @@ body {
   font:inherit;
   cursor:pointer;
   display:grid;
-  gap:2px
+  gap:2px;
+  transition:transform .16s ease, border-color .16s ease, background-color .16s ease, box-shadow .16s ease, color .16s ease
 }
 
 .entry-rail-list button span:first-child,.detail-rail-list button span:first-child {
@@ -846,9 +876,19 @@ body {
   font-size:12px
 }
 
-.entry-rail-list button.is-active,.detail-rail-list button.is-active {
+.entry-rail-list button:hover,.entry-rail-list button:focus-visible,.detail-rail-list button:hover,.detail-rail-list button:focus-visible,.entry-rail-list button.is-active,.detail-rail-list button.is-active {
   background:rgba(91,94,112,.96);
-  color:var(--text)
+  color:var(--text);
+  border-color:rgba(0,229,91,.2);
+  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 10px 24px rgba(0,0,0,.16)
+}
+
+.entry-rail-list button:hover,.detail-rail-list button:hover {
+  transform:translate3d(0,-1px,0)
+}
+
+.entry-rail-list button:active,.detail-rail-list button:active {
+  transform:translate3d(0,1px,0) scale(.99)
 }
 
 .detail-stage-head,.section-header,.entry-header {
@@ -887,7 +927,8 @@ body {
   color:var(--dim);
   font-size:13px;
   letter-spacing:.08em;
-  text-transform:uppercase
+  text-transform:uppercase;
+  transition:color .18s ease, opacity .18s ease
 }
 
 .entry-breadcrumbs span {
@@ -923,7 +964,8 @@ body {
   display:grid;
   gap:18px;
   overflow:hidden;
-  align-items:stretch
+  align-items:stretch;
+  animation:detail-stage-enter .24s ease both
 }
 
 .detail-stage-body.variant-a {
@@ -938,7 +980,8 @@ body {
   min-height:0;
   border-radius:0;
   border:1px solid rgba(255,255,255,.08);
-  background:rgba(10,12,18,.88)
+  background:rgba(10,12,18,.88);
+  transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease, background-color .18s ease
 }
 
 .visual-pane {
@@ -984,7 +1027,8 @@ body {
   max-width:100%;
   max-height:100%;
   border-radius:0;
-  filter:saturate(.92) contrast(1.04)
+  filter:saturate(.92) contrast(1.04);
+  transition:transform .2s ease, filter .2s ease, opacity .2s ease
 }
 
 .visual-pane.fit-image .visual-media img {
@@ -994,6 +1038,12 @@ body {
   max-width:100%;
   max-height:100%;
   object-fit:contain
+}
+
+.visual-pane:hover .visual-media img,
+.visual-pane:focus-within .visual-media img {
+  transform:scale(1.01);
+  filter:saturate(1) contrast(1.06)
 }
 
 .visual-footer {
@@ -1050,7 +1100,8 @@ body {
 .detail-copy {
   overflow:auto;
   padding:28px 28px 36px;
-  overscroll-behavior:contain
+  overscroll-behavior:contain;
+  transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease, background-color .18s ease
 }
 
 .detail-copy h2 {
@@ -1214,7 +1265,8 @@ body {
   color:var(--green);
   font-family:"Noto Sans SC Local","Noto Sans SC","Source Han Sans SC","Source Han Sans CN","Microsoft YaHei",sans-serif;
   font-size:20px;
-  line-height: 1.8;
+  line-height:1.8;
+  transition:opacity .18s ease, transform .18s ease
 }
 
 .detail-copy.terminal p,
@@ -1365,6 +1417,7 @@ body {
   color:var(--text);
   font:inherit;
   outline:none;
+  transition:border-color .16s ease, box-shadow .16s ease, background-color .16s ease
 }
 
 .tag-search-input::placeholder {
@@ -1374,6 +1427,11 @@ body {
 .tag-search-input:focus {
   border-color:rgba(0,229,91,.45);
   box-shadow:0 0 0 3px rgba(0,229,91,.12);
+}
+
+.tag-search-input:focus-visible {
+  border-color:rgba(0,229,91,.58);
+  box-shadow:0 0 0 3px rgba(0,229,91,.14);
 }
 
 .tag-search-button {
@@ -1387,6 +1445,7 @@ body {
   background:rgba(255,255,255,.05);
   color:var(--text);
   cursor:pointer;
+  transition:transform .16s ease, border-color .16s ease, background-color .16s ease, box-shadow .16s ease
 }
 
 .tag-search-button svg {
@@ -1399,8 +1458,17 @@ body {
   stroke-linejoin:round;
 }
 
-.tag-search-button:hover {
+.tag-search-button:hover,.tag-search-button:focus-visible {
   border-color:rgba(0,229,91,.45);
+  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 10px 24px rgba(0,0,0,.14)
+}
+
+.tag-search-button:hover {
+  transform:translate3d(0,-1px,0)
+}
+
+.tag-search-button:active {
+  transform:translate3d(0,1px,0) scale(.98)
 }
 
 .tag-rail {
@@ -1426,11 +1494,12 @@ body {
   color:var(--text);
   text-align:left;
   cursor:pointer;
+  transition:transform .16s ease, border-color .16s ease, background-color .16s ease, box-shadow .16s ease, filter .16s ease
 }
 
 .tag-item.is-active {
   border-color:rgba(0,229,91,.55);
-  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset;
+  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 12px 26px rgba(0,0,0,.18);
 }
 
 .tag-stage {
@@ -1463,6 +1532,16 @@ body {
   flex-direction:column;
 }
 
+.tag-item:hover,.tag-item:focus-visible,.tag-result:hover,.tag-result:focus-visible {
+  border-color:rgba(0,229,91,.28);
+  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 12px 24px rgba(0,0,0,.18);
+  transform:translate3d(0,-1px,0)
+}
+
+.tag-item:active,.tag-result:active {
+  transform:translate3d(0,1px,0) scale(.99)
+}
+
 .card,.entry-card {
   position:relative;
   overflow:hidden;
@@ -1472,7 +1551,8 @@ body {
   padding:22px;
   color:var(--text);
   text-align:left;
-  cursor:pointer
+  cursor:pointer;
+  transition:transform .18s ease, border-color .18s ease, background-color .18s ease, box-shadow .18s ease, filter .18s ease
 }
 
 .entry-card[role="button"] {
@@ -1492,6 +1572,17 @@ body {
   flex-direction:column;
   justify-content:flex-start;
   gap:18px
+}
+
+.card:hover,.card:focus-visible,.entry-card:hover,.entry-card:focus-visible {
+  transform:translate3d(0,-2px,0);
+  border-color:rgba(0,229,91,.22);
+  box-shadow:0 0 0 1px rgba(0,229,91,.12) inset, 0 18px 36px rgba(0,0,0,.24);
+  filter:brightness(1.03)
+}
+
+.card:active,.entry-card:active {
+  transform:translate3d(0,1px,0) scale(.995)
 }
 
 .entry-card {
@@ -1672,7 +1763,27 @@ body {
   border:1px solid color-mix(in srgb,var(--preview-accent, rgb(67, 160, 232)) 55%, rgba(255,255,255,.2));
   background:rgba(15,17,24,.96);
   box-shadow:0 24px 80px rgba(0,0,0,.5);
-  pointer-events:none
+  pointer-events:none;
+  opacity:0;
+  transform:translate3d(0,6px,0) scale(.985);
+  transition:opacity .16s ease, transform .16s ease
+}
+
+.icon-preview-tooltip.is-open {
+  opacity:1;
+  transform:translate3d(0,0,0) scale(1)
+}
+
+@keyframes detail-stage-enter {
+  from {
+    opacity:0;
+    transform:translate3d(0,8px,0)
+  }
+
+  to {
+    opacity:1;
+    transform:translate3d(0,0,0)
+  }
 }
 
 .icon-preview-tooltip-shell {
@@ -2103,5 +2214,26 @@ body {
   .top-grid,
   .section-grid {
     padding-bottom:8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after {
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important
+  }
+
+  .view.is-transitioning,
+  .detail-stage-body,
+  .tag-layout,
+  .icon-preview-tooltip {
+    animation:none !important;
+    transform:none !important
+  }
+
+  .icon-preview-tooltip {
+    opacity:1;
   }
 }

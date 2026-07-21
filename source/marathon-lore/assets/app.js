@@ -25,7 +25,9 @@ let tagRailScrollTop = 0;
 let previewTooltip = null;
 let activePreviewAnchor = null;
 let activePreviewToken = 0;
+let previewTooltipHideTimer = null;
 let audioControlCleanup = null;
+let appViewTransitionRaf = null;
 
 function syncLayoutState() {
   const isTagsView = state.view === 'tags';
@@ -50,6 +52,30 @@ function formatAudioTime(seconds) {
 
 function clamp01(value) {
   return Math.min(1, Math.max(0, value));
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches || false;
+}
+
+function scheduleAppViewTransition() {
+  if (!appView) return;
+
+  if (appViewTransitionRaf !== null) {
+    cancelAnimationFrame(appViewTransitionRaf);
+    appViewTransitionRaf = null;
+  }
+
+  if (prefersReducedMotion()) {
+    appView.classList.remove('is-transitioning');
+    return;
+  }
+
+  appView.classList.add('is-transitioning');
+  appViewTransitionRaf = requestAnimationFrame(() => {
+    appView.classList.remove('is-transitioning');
+    appViewTransitionRaf = null;
+  });
 }
 
 function rememberTagRailScroll() {
@@ -1765,29 +1791,61 @@ function hidePreviewTooltip() {
   activePreviewAnchor = null;
   activePreviewToken += 1;
 
+  if (previewTooltipHideTimer !== null) {
+    clearTimeout(previewTooltipHideTimer);
+    previewTooltipHideTimer = null;
+  }
+
   if (!previewTooltip) return;
-  previewTooltip.hidden = true;
   previewTooltip.classList.remove('is-loading');
-  previewTooltip.innerHTML = '';
+  previewTooltip.classList.remove('is-open');
+
+  if (prefersReducedMotion()) {
+    previewTooltip.hidden = true;
+    previewTooltip.innerHTML = '';
+    return;
+  }
+
+  previewTooltipHideTimer = window.setTimeout(() => {
+    if (!previewTooltip) return;
+    previewTooltip.hidden = true;
+    previewTooltip.innerHTML = '';
+    previewTooltipHideTimer = null;
+  }, 180);
 }
 
 async function showPreviewTooltip(anchor, bodyFile) {
   if (!bodyFile) return;
 
   const tooltip = ensurePreviewTooltip();
+  if (previewTooltipHideTimer !== null) {
+    clearTimeout(previewTooltipHideTimer);
+    previewTooltipHideTimer = null;
+  }
+
   const token = ++activePreviewToken;
   activePreviewAnchor = anchor;
 
   tooltip.style.setProperty('--preview-accent', 'rgb(67, 160, 232)');
   tooltip.hidden = false;
+  tooltip.classList.remove('is-open');
   tooltip.classList.add('is-loading');
   tooltip.innerHTML = `
     <div class="icon-preview-header">加载中…</div>
     <div class="icon-preview-body">
       <div class="icon-preview-title">加载中…</div>
-    </div>
+      </div>
   `;
   positionPreviewTooltip(anchor);
+
+  if (!prefersReducedMotion()) {
+    requestAnimationFrame(() => {
+      if (activePreviewAnchor !== anchor || activePreviewToken !== token) return;
+      tooltip.classList.add('is-open');
+    });
+  } else {
+    tooltip.classList.add('is-open');
+  }
 
   try {
     const preview = await loadMarkdownPreview(bodyFile);
@@ -2500,6 +2558,7 @@ async function render() {
     rootView();
   }
 
+  scheduleAppViewTransition();
   syncLayoutState();
   bind();
   if (state.view === 'tags') {
