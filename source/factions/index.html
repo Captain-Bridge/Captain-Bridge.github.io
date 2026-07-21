@@ -492,6 +492,8 @@ layout: false
       cursor: pointer;
       padding: var(--node-padding, 10px);
       overflow: visible;
+      transform: scale(1.1);
+      transform-origin: center center;
     }
 
     .force-node::before {
@@ -539,6 +541,10 @@ layout: false
     }
 
     .force-node.active-node .force-node-icon .is-svg {
+      color: #000;
+    }
+
+    .force-node.has-vip-surface .force-node-icon .is-svg {
       color: #000;
     }
 
@@ -606,10 +612,10 @@ layout: false
       background-color: currentColor;
       -webkit-mask-repeat: no-repeat;
       -webkit-mask-position: center;
-      -webkit-mask-size: contain;
+      -webkit-mask-size: 130%;
       mask-repeat: no-repeat;
       mask-position: center;
-      mask-size: contain;
+      mask-size: 130%;
     }
 
     .force-node-icon-text {
@@ -1813,17 +1819,7 @@ layout: false
     }
 
     function renderNodeFrames(node) {
-      const frameCount = getNodeFrameCount(node);
-      const connectedSides = getNodeConnectionSides(node);
-      return Array.from({ length: frameCount }, (_, index) => {
-        const layer = index + 1;
-        const step = 'calc(var(--node-frame-step, 7px) * ' + layer + ')';
-        const top = connectedSides.up ? '0px' : 'calc(-1 * ' + step + ')';
-        const right = connectedSides.right ? '0px' : 'calc(-1 * ' + step + ')';
-        const bottom = connectedSides.down ? '0px' : 'calc(-1 * ' + step + ')';
-        const left = connectedSides.left ? '0px' : 'calc(-1 * ' + step + ')';
-        return '<span class="force-node-frame" style="top:' + top + ';right:' + right + ';bottom:' + bottom + ';left:' + left + ';opacity:' + Math.max(0.5, 0.82 - (layer * 0.06)) + ';"></span>';
-      }).join('');
+      return '';
     }
 
     function renderBars(node) {
@@ -1959,7 +1955,7 @@ layout: false
       const nodeBorderWidth = clampValue(minSide * 0.0085, 1, 2);
       const frameBorderWidth = clampValue(minSide * 0.008, 1, 1.6);
       const frameStep = clampValue(minSide * 0.022, 3, 5);
-      const frameReserve = frameStep * Math.max(0, levelCount - 1);
+      const frameReserve = 0;
       const contentMinSide = Math.max(1, minSide - (frameReserve * 2));
       const contentWidth = Math.max(1, (node.width || 0) - (frameReserve * 2));
       const iconSize = clampValue(minSide * 0.4, 20, 50);
