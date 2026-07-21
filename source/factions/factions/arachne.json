@@ -11,25 +11,1390 @@
       "row": 0,
       "col": 0,
       "size": "large",
-      "title": "扩容",
-      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "links":{
+        "right":true,
+        "down":true
+      },
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "title": "双击交换",
+          "describe": "军械库 | 阿拉克尼1级",
+          "summary": "解锁可在军械库中交换的双击重型战斗步枪。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/double_tap.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定凝胶",
+              "materialIcon": "/factions/data/unstable_gel.webp",
+              "materialNums": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c1",
+      "row": 0,
+      "col": 1,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "links":{
+        "right":true,
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "MIPS电磁炮",
+          "describe": "军械库 | 阿拉克尼6级",
+          "summary": "解锁可在军械库中交换的ARES电磁炮。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/ARES.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定凝胶",
+              "materialIcon": "/factions/data/unstable_gel.webp",
+              "materialNums": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c2",
+      "row": 0,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "links":{
+        "right":true,
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "武器",
+          "describe": "军械库 | 阿拉克尼6级",
+          "summary": "解锁可在军械库中使用信用点购买的武器。",
+          "unlockName": "",
+          "unlockNums": "",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定凝胶",
+              "materialIcon": "/factions/data/unstable_gel.webp",
+              "materialNums": "20"
             }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c3",
+      "row": 0,
+      "col": 3,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "升级军备",
+          "describe": "军械库 | 阿拉克尼12级",
+          "summary": "从阿拉克尼购买双击或ARES电磁炮时，可免费获得一个标准或强化武器模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "无人机节点",
+              "materialIcon": "/factions/data/Drone_Node.webp",
+              "materialNums": "20"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "无人机树脂",
+              "materialIcon": "/factions/data/Drone_Resin.webp",
+              "materialNums": "6"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "升级军备+",
+          "describe": "军械库 | 阿拉克尼20级",
+          "summary": "从阿拉克尼购买双击或ARES电磁炮时，可免费获得一个标准模组。有机会额外获得一个豪华稀有度模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物质节点",
+              "materialIcon": "/factions/data/Biomass_node.webp",
+              "materialNums": "6"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "无人机树脂",
+              "materialIcon": "/factions/data/Drone_Resin.webp",
+              "materialNums": "24"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "升级军备++",
+          "describe": "军械库 | 阿拉克尼30级",
+          "summary": "从阿拉克尼购买双击或ARES电磁炮时，可免费获得一个标准模组。有机会额外获得一个卓越稀有度模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "酶复制器",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
+              "materialNums": "1"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物质树脂",
+              "materialIcon": "/factions/data/Biomass_resin.webp",
+              "materialNums": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c4",
+      "row": 0,
+      "col": 4,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{"down":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "部署装备",
+          "describe": "军械库 | 阿拉克尼12级",
+          "summary": "解锁可在军械库中向阿拉克尼购买的可部署装备。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物质树脂",
+              "materialIcon": "/factions/data/Biomass_resin.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "无人机节点",
+              "materialIcon": "/factions/data/Drone_Node.webp",
+              "materialNums": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c5",
+      "row": 0,
+      "col": 5,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/chest.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "赞助[阿拉克尼]",
+          "describe": "军械库 | 阿拉克尼10级",
+          "summary": "解锁可在军械库中使用信用点购买的阿拉克尼高级赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/arachne_sponser_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "250"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "赞助+[阿拉克尼]",
+          "describe": "军械库 | 阿拉克尼20级",
+          "summary": "解锁可在军械库中使用信用点购买的阿拉克尼豪华赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/arachne_sponser_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "500"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "赞助++[阿拉克尼]",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中使用信用点购买的阿拉克尼卓越赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/arachne_sponser_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c0",
+      "row": 1,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "links":{"down":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "精准模组",
+          "describe": "军械库 | 阿拉克尼1级",
+          "summary": "解锁可在军械库中交换的一套强化精准模组。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_mods_b.webp",
+            "/factions/data/green_barrel_a.webp"
           ],
-          "title": "扩容"
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定凝胶",
+              "materialIcon": "/factions/data/unstable_gel.webp",
+              "materialNums": "10"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "精准模组+",
+          "describe": "军械库 | 阿拉克尼10级",
+          "summary": "解锁可在军械库中交换的一个轮换豪华精密武器模组。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/blue_magzine_e.webp",
+            "/factions/data/blue_sight_d.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物质树脂",
+              "materialIcon": "/factions/data/Biomass_resin.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "无人机节点",
+              "materialIcon": "/factions/data/Drone_Node.webp",
+              "materialNums": "29"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "精准模组++",
+          "describe": "军械库 | 阿拉克尼21级",
+          "summary": "解锁可在军械库中交换的一套卓越精准模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/purple_mods_a.webp",
+            "/factions/data/purple_barrel_a.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物质树脂",
+              "materialIcon": "/factions/data/Biomass_node.webp",
+              "materialNums": "8"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物质节点",
+              "materialIcon": "/factions/data/Biomass_node.webp",
+              "materialNums": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c1",
+      "row": 1,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "电磁炮模组",
+          "describe": "军械库 | 阿拉克尼5级",
+          "summary": "解锁可在军械库中交换的一套强化电磁炮模组。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/green_magzine_e.webp",
+            "/factions/data/green_muzzle_d.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定凝胶",
+              "materialIcon": "/factions/data/unstable_gel.webp",
+              "materialNums": "17"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "电磁炮模组+",
+          "describe": "军械库 | 阿拉克尼13级",
+          "summary": "解锁可在军械库中交换的一套豪华电磁炮模组。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/blue_mods_e.webp",
+            "/factions/data/blue_muzzle_d.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物质节点",
+              "materialIcon": "/factions/data/Biomass_node.webp",
+              "materialNums": "6"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "无人机树脂",
+              "materialIcon": "/factions/data/Drone_Resin.webp",
+              "materialNums": "24"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "电磁炮模组++",
+          "describe": "军械库 | 阿拉克尼23级",
+          "summary": "解锁可在军械库中交换的一套卓越精准模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": [
+            "/factions/data/purple_mods_b.webp",
+            "/factions/data/purple_generator_a.webp"
+          ],
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物质节点",
+              "materialIcon": "/factions/data/Biomass_node.webp",
+              "materialNums": "10"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物质树脂",
+              "materialIcon": "/factions/data/Biomass_resin.webp",
+              "materialNums": "5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c2",
+      "row": 1,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "扩充军备",
+          "describe": "军械库 | 阿拉克尼9级",
+          "summary": "解锁后将增加阿拉克尼可售武器库存。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定凝胶",
+              "materialIcon": "/factions/data/unstable_gel.webp",
+              "materialNums": "29"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "扩充军备+",
+          "describe": "军械库 | 阿拉克尼25级",
+          "summary": "解锁后将进一步增加阿拉克尼可售武器库存。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物质节点",
+              "materialIcon": "/factions/data/Biomass_node.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "无人机树脂",
+              "materialIcon": "/factions/data/Drone_Resin.webp",
+              "materialNums": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c3",
+      "row": 1,
+      "col": 3,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/sword.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "VIP节点占位",
+          "describe": "VIP",
+          "summary": "",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "?????"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c4",
+      "row": 1,
+      "col": 4,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "links":{"right":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "冰霜地雷",
+          "describe": "军械库 | 阿拉克尼7级",
+          "summary": "解锁可在军械库中交换的冰霜地雷。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/frost_mine.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"不稳定凝胶",
+              "materialIcon":"/factions/data/unstable_gel.webp",
+              "materialNums":"22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c5",
+      "row": 1,
+      "col": 5,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/mail.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "通通拿下",
+          "describe": "军械库 | 阿拉克尼10级",
+          "summary": "解锁可在军械库中交换的陷阱包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/trap_pack.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"无人机节点",
+              "materialIcon":"/factions/data/Drone_Node.webp",
+              "materialNums":"12"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"无人机树脂",
+              "materialIcon":"/factions/data/Drone_Resin.webp",
+              "materialNums":"4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c0",
+      "row": 2,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "links":{"down":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "模组存量",
+          "describe": "军械库 | 阿拉克尼8级",
+          "summary": "增加军械库中阿拉克尼出售的所有武器模组的供应库存。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"不稳定凝胶",
+              "materialIcon":"/factions/data/unstable_gel.webp",
+              "materialNums":"26"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "模组存量",
+          "describe": "军械库 | 阿拉克尼15级",
+          "summary": "进一步增加军械库中阿拉克尼出售的所有武器模组的供应库存。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"无人机树脂",
+              "materialIcon":"/factions/data/Drone_Resin.webp",
+              "materialNums":"18"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"无人机节点",
+              "materialIcon":"/factions/data/Drone_Node.webp",
+              "materialNums":"9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c2",
+      "row": 2,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/implant.svg",
+      "links":{"right":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "植入物库存",
+          "describe": "军械库 | 阿拉克尼8级",
+          "summary": "阿拉克尼现已为每种类型的非护盾植入物增加一个额外可出售库存，可使用回收资源或信用点购买。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"不稳定凝胶",
+              "materialIcon":"/factions/data/unstable_gel.webp",
+              "materialNums":"26"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "植入物库存+",
+          "describe": "军械库 | 阿拉克尼20级",
+          "summary": "阿拉克尼现已为每种类型的非护盾植入物增加两个额外可出售库存，可使用回收资源或信用点购买。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"生物质树脂",
+              "materialIcon":"/factions/data/Biomass_resin.webp",
+              "materialNums":"3"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"无人机节点",
+              "materialIcon":"/factions/data/Drone_Node.webp",
+              "materialNums":"23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c3",
+      "row": 2,
+      "col": 3,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/body.svg",
+      "links":{"right":true,"down":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "锋利//疾行者",
+          "describe": "军械库 | 阿拉克尼2级",
+          "summary": "解锁可在军械库中购买和交换的锋利//疾行者植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"不稳定凝胶",
+              "materialIcon":"/factions/data/unstable_gel.webp",
+              "materialNums":"12"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "锋利//疾行者+",
+          "describe": "军械库 | 阿拉克尼15级",
+          "summary": "解锁可在军械库中购买和交换的锋利//疾行者植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"无人机节点",
+              "materialIcon":"/factions/data/Drone_Node.webp",
+              "materialNums":"29"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"无人机树脂",
+              "materialIcon":"/factions/data/Drone_Resin.webp",
+              "materialNums":"10"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "锋利//疾行者++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的锋利//疾行者植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "锋利//疾行者+++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的锋利//疾行者植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c4",
+      "row": 2,
+      "col": 4,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/leg.svg",
+      "links":{"right":true,"down":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "离别赠礼",
+          "describe": "军械库 | 阿拉克尼3级",
+          "summary": "解锁可在军械库中购买和交换的离别赠礼植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"不稳定凝胶",
+              "materialIcon":"/factions/data/unstable_gel.webp",
+              "materialNums":"13"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "离别赠礼+",
+          "describe": "军械库 | 阿拉克尼17级",
+          "summary": "解锁可在军械库中购买和交换的离别赠礼植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"生物质节点",
+              "materialIcon":"/factions/data/Biomass_node.webp",
+              "materialNums":"3"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"无人机树脂",
+              "materialIcon":"/factions/data/Drone_Resin.webp",
+              "materialNums":"14"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "离别赠礼++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的离别赠礼植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "离别赠礼+++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的离别赠礼植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c5",
+      "row": 2,
+      "col": 5,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "links":{"down":true},
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "毒素注射",
+          "describe": "军械库 | 阿拉克尼4级",
+          "summary": "解锁可在军械库中购买和交换的毒素注射植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"不稳定凝胶",
+              "materialIcon":"/factions/data/unstable_gel.webp",
+              "materialNums":"15"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "毒素注射+",
+          "describe": "军械库 | 阿拉克尼19级",
+          "summary": "解锁可在军械库中购买和交换的毒素注射植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"生物质节点",
+              "materialIcon":"/factions/data/Biomass_node.webp",
+              "materialNums":"3"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"无人机树脂",
+              "materialIcon":"/factions/data/Drone_Resin.webp",
+              "materialNums":"19"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "毒素注射++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的毒素注射植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "毒素注射+++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的毒素注射植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c0",
+      "row": 3,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/mods.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "武器模组",
+          "describe": "军械库 | 阿拉克尼7级",
+          "summary": "解锁可在军械库中向阿拉克尼购买的强化武器模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"无人机树脂",
+              "materialIcon":"/factions/data/Drone_Resin.webp",
+              "materialNums":"11"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"无人机节点",
+              "materialIcon":"/factions/data/Drone_Node.webp",
+              "materialNums":"5"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "武器模组+",
+          "describe": "军械库 | 阿拉克尼13级",
+          "summary": "解锁可在军械库中向阿拉克尼购买的豪华武器模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"生物质树脂",
+              "materialIcon":"/factions/data/Biomass_resin.webp",
+              "materialNums":"3"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"无人机节点",
+              "materialIcon":"/factions/data/Drone_Node.webp",
+              "materialNums":"32"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "武器模组++",
+          "describe": "军械库 | 阿拉克尼26级",
+          "summary": "解锁可在军械库中向阿拉克尼购买的卓越武器模组。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"反射线圈",
+              "materialIcon":"/factions/data/reflection_coil.webp",
+              "materialNums":"1"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"生物质节点",
+              "materialIcon":"/factions/data/Biomass_node.webp",
+              "materialNums":"18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c3",
+      "row": 3,
+      "col": 3,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/body.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "搏击俱乐部",
+          "describe": "军械库 | 阿拉克尼28级",
+          "summary": "解锁可在军械库中购买和交换的搏击俱乐部植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"生物质树脂",
+              "materialIcon":"/factions/data/Biomass_resin.webp",
+              "materialNums":"9"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"生物质节点",
+              "materialIcon":"/factions/data/Biomass_node.webp",
+              "materialNums":"6"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "搏击俱乐部+",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的搏击俱乐部植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "搏击俱乐部++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的搏击俱乐部植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c4",
+      "row": 3,
+      "col": 4,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/leg.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "狂乱",
+          "describe": "军械库 | 阿拉克尼29级",
+          "summary": "解锁可在军械库中购买和交换的狂乱植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"生物质树脂",
+              "materialIcon":"/factions/data/Biomass_resin.webp",
+              "materialNums":"10"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"生物质节点",
+              "materialIcon":"/factions/data/Biomass_node.webp",
+              "materialNums":"8"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "狂乱+",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的狂乱植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "狂乱++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的狂乱植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c5",
+      "row": 3,
+      "col": 5,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "免疫反应",
+          "describe": "军械库 | 阿拉克尼30级",
+          "summary": "解锁可在军械库中购买和交换的免疫反应植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId":"material_2",
+              "materialName":"反射线圈",
+              "materialIcon":"/factions/data/reflection_coil.webp",
+              "materialNums":"1"
+            },
+            {
+              "materialId":"material_3",
+              "materialName":"生物质节点",
+              "materialIcon":"/factions/data/Biomass_node.webp",
+              "materialNums":"18"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "免疫反应+",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的免疫反应植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "免疫反应++",
+          "describe": "军械库 | VIP",
+          "summary": "解锁可在军械库中购买和交换的免疫反应植入物。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "占位",
+              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialNums": ""
+            }
+          ]
         }
       ]
     }
@@ -37,63 +1402,63 @@
   "peakNodes": [
     {
       "id": "peak_1",
-      "title": "巅峰节点I",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "阿拉克尼优待",
+      "describe": "军械库",
+      "summary": "阿拉克尼供应每日免费物品",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "6/35"
     },
     {
       "id": "peak_2",
-      "title": "巅峰节点II",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "战术奖励",
+      "describe": "功能",
+      "summary": "完成阿拉克尼标准合约时现将提供一个道具或武器模组奖励。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "12/35"
     },
     {
       "id": "peak_3",
-      "title": "巅峰节点III",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "阿拉克尼豪赌者",
+      "describe": "军械库",
+      "summary": "可获得额外的高价值每日特惠，且携带阿拉克尼货品撤离时获得的声望增加。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "18/24"
     },
     {
       "id": "peak_4",
-      "title": "巅峰节点IV",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "进阶",
+      "describe": "功能",
+      "summary": "鲁克现在开始疾行时，会携带植入物。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "24/35"
     },
     {
       "id": "peak_5",
-      "title": "巅峰节点V",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "竞争者武器",
+      "describe": "军械库",
+      "summary": "阿拉克尼每日提供一件带有“竞争者”状态效果的免费武器。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "30/35"
     },
     {
       "id": "peak_6",
-      "title": "巅峰节点VI",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "稳健_之手.EXE",
+      "describe": "功能",
+      "summary": "你将能拆除阔刀地雷。",
+      "unlockName": "解锁阿拉克尼VIP升级。",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "35/35"
     }
   ]
 }

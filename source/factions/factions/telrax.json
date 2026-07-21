@@ -962,9 +962,9 @@
     {
       "id": "peak_6",
       "title": "卓越芯片",
-      "describe": "解锁军械库中的一套卓越芯片模组。解锁特莱克斯VIP升级。",
-      "summary": "",
-      "unlockName": "",
+      "describe": "军械库",
+      "summary": "解锁军械库中的一套卓越芯片模组。",
+      "unlockName": "解锁特莱克斯VIP升级。",
       "unlockNums": "",
       "unlockIcon": "",
       "unlockConditions": "16/16"
