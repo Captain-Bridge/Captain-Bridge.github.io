@@ -1,13 +1,162 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.9663 118.36611" width="105.9663" height="118.36611">
-  <polygon points="0.294348,50.29365 53.130323,0 105.966298,50.29365" fill="#b4ff00"/>
-  <rect x="0.294348" y="49.19365" width="105.67195" height="69.172447" fill="#b4ff00"/>
-  <polygon points="10.944258,58.08268 53.130323,17.929936 95.316389,58.08268" fill="#000000"/>
-  <rect x="10.944258" y="57.28268" width="84.372131" height="54.233418" fill="#000000"/>
-  <polygon points="20.181078,63.29851 53.130323,31.918244 86.079569,63.29851" fill="#b4ff00"/>
-  <rect x="20.181078" y="62.69851" width="65.898491" height="43.136894" fill="#b4ff00"/>
-  <rect x="19.968439" y="90.030625" width="18.459839" height="6.4913783" ry="0.507142" fill="#000000"/>
-  <rect x="67.832369" y="90.030625" width="18.459839" height="6.4913783" ry="0.507142" fill="#000000"/>
-  <rect x="49.884634" y="55.83893" width="6.4913783" height="44.425323" rx="3.245689" ry="3.245689" fill="#000000"/>
-  <rect x="27.390262" y="64.206476" width="33.065426" height="6.4913783" rx="3.245689" ry="3.245689" fill="#000000" transform="rotate(132.12422 43.922975 67.452165)"/>
-  <rect x="45.804958" y="64.206476" width="33.065426" height="6.4913783" rx="3.245689" ry="3.245689" fill="#000000" transform="rotate(47.87578 62.337671 67.452165)"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 105.9663 118.36611"
+   width="105.9663"
+   height="118.36611"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="extract-possible.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.8178298"
+     inkscape:cx="53.022738"
+     inkscape:cy="59.183056"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <polygon
+     points="0.294348,50.29365 53.130323,0 105.966298,50.29365"
+     fill="#b4ff00"
+     id="polygon1" />
+  <rect
+     x="0.294348"
+     y="49.193649"
+     width="105.67195"
+     height="58.465229"
+     fill="#b4ff00"
+     id="rect1"
+     style="stroke-width:0.919353" />
+  <rect
+     style="fill:#b4ff00;fill-opacity:1;stroke:none;stroke-width:5.65854;stroke-opacity:1"
+     id="rect6-4"
+     width="15.552093"
+     height="5.5019202"
+     x="76.145386"
+     y="70.28569"
+     ry="0"
+     rx="0"
+     transform="rotate(45)" />
+  <rect
+     style="fill:#b4ff00;fill-opacity:1;stroke:none;stroke-width:5.65854;stroke-opacity:1"
+     id="rect6-9"
+     width="15.552093"
+     height="5.5019202"
+     x="1.0636858"
+     y="145.35446"
+     ry="0"
+     rx="0"
+     transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+  <rect
+     style="fill:#b4ff00;fill-opacity:1;stroke:none;stroke-width:20.1397;stroke-opacity:1"
+     id="rect6-8"
+     width="83.666496"
+     height="12.955379"
+     x="-94.922195"
+     y="-118.4304"
+     ry="0"
+     rx="0"
+     transform="scale(-1)" />
+  <rect
+     style="fill:#b4ff00;fill-opacity:1;stroke:none;stroke-width:14.8585;stroke-opacity:1"
+     id="rect6-8-2"
+     width="91.974998"
+     height="6.4146409"
+     x="-98.873222"
+     y="-111.41127"
+     ry="0"
+     rx="0"
+     transform="scale(-1)" />
+  <polygon
+     points="10.944258,58.08268 53.130323,17.929936 95.316389,58.08268 "
+     fill="#000000"
+     id="polygon2"
+     transform="matrix(0.8644032,0,0,0.8644032,7.2043017,5.3647267)" />
+  <rect
+     x="16.664553"
+     y="54.880062"
+     width="72.931541"
+     height="46.879539"
+     fill="#000000"
+     id="rect2"
+     style="stroke-width:0.864403" />
+  <polygon
+     points="20.181078,63.29851 53.130323,31.918244 86.079569,63.29851 "
+     fill="#b4ff00"
+     id="polygon3"
+     transform="matrix(0.8644032,0,0,0.8644032,7.2043017,5.3647267)" />
+  <rect
+     x="24.64889"
+     y="59.56152"
+     width="56.962868"
+     height="37.28767"
+     fill="#b4ff00"
+     id="rect3"
+     style="stroke-width:0.864403" />
+  <rect
+     x="24.465084"
+     y="83.187485"
+     width="15.956744"
+     height="5.6111684"
+     ry="0.43837517"
+     fill="#000000"
+     id="rect4"
+     style="stroke-width:0.864403" />
+  <rect
+     x="65.838821"
+     y="83.187485"
+     width="15.956744"
+     height="5.6111684"
+     ry="0.43837517"
+     fill="#000000"
+     id="rect5"
+     style="stroke-width:0.864403" />
+  <rect
+     x="50.324738"
+     y="53.632076"
+     width="5.6111684"
+     height="38.40139"
+     rx="2.805584"
+     ry="2.805584"
+     fill="#000000"
+     id="rect6"
+     style="stroke-width:0.864403" />
+  <rect
+     x="2.6347487"
+     y="-79.015343"
+     width="28.58186"
+     height="5.6111684"
+     rx="2.805584"
+     ry="2.805584"
+     fill="#000000"
+     transform="rotate(132.12422)"
+     id="rect7"
+     style="stroke-width:0.864403" />
+  <rect
+     x="73.908035"
+     y="-5.4085398"
+     width="28.58186"
+     height="5.6111684"
+     rx="2.805584"
+     ry="2.805584"
+     fill="#000000"
+     transform="rotate(47.87578)"
+     id="rect8"
+     style="stroke-width:0.864403" />
 </svg>

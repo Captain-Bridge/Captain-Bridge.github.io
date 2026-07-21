@@ -203,9 +203,41 @@
     {
       "id": "warden",
       "label": "看守者",
-      "path": "/map/assets/icons/warden.svg",
+      "path": "/map/assets/icons/HVT.svg",
       "accentColor": "#ff3d6e",
       "order": 250,
+      "iconSize": 120
+    },
+    {
+      "id": "airdrop",
+      "label": "空投补给",
+      "path": "/map/assets/icons/airdrop.svg",
+      "accentColor": "#ff3d6e",
+      "order": 260,
+      "iconSize": 120
+    },
+    {
+      "id": "poison",
+      "label": "毒素清除",
+      "path": "/map/assets/icons/poison.svg",
+      "accentColor": "#ff3d6e",
+      "order": 270,
+      "iconSize": 120
+    },
+    {
+      "id": "collector",
+      "label": "收集者",
+      "path": "/map/assets/icons/collector.svg",
+      "accentColor": "#ff3d6e",
+      "order": 280,
+      "iconSize": 120
+    },
+    {
+      "id": "extract-restricted",
+      "label": "限制撤离",
+      "path": "/map/assets/icons/extract-restricted.svg",
+      "accentColor": "#ff3d6e",
+      "order": 290,
       "iconSize": 120
     }
   ]

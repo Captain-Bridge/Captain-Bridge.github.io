@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 48 48"
+   width="48"
+   height="48"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="collector.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3">
+    <linearGradient
+       id="swatch3"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#2e7bff;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="7.9999996"
+     inkscape:cx="1.6875001"
+     inkscape:cy="18.687501"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3"
+     showguides="true"
+     inkscape:lockguides="true" />
+  <rect
+     style="fill:#ff0062;fill-opacity:1;stroke-width:0.98"
+     id="rect1"
+     width="27.9125"
+     height="27.9125"
+     x="19.750961"
+     y="-14.366942"
+     transform="rotate(45)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:4"
+     id="rect2"
+     width="4.4375"
+     height="6.8750005"
+     x="24.177711"
+     y="-5.4646654"
+     transform="rotate(45)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:4"
+     id="rect2-8"
+     width="4.4375"
+     height="6.8750005"
+     x="-9.949645"
+     y="28.643782"
+     transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:3.83287"
+     id="rect2-8-2"
+     width="4.4375"
+     height="6.3125005"
+     x="-17.655825"
+     y="-27.292084"
+     transform="matrix(0,-1,-1,0,0,0)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:6.96862"
+     id="rect2-8-2-5"
+     width="16.016375"
+     height="5.7812505"
+     x="16.104259"
+     y="-23.90625"
+     transform="scale(1,-1)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:6.86769"
+     id="rect2-8-2-5-1"
+     width="9.4977341"
+     height="9.468751"
+     x="19.376133"
+     y="-26.600796"
+     transform="scale(1,-1)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:3.30096"
+     id="rect2-8-2-5-1-5"
+     width="9.4977341"
+     height="2.1875007"
+     x="19.376133"
+     y="-30.40625"
+     transform="scale(1,-1)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:1.70335"
+     id="rect2-8-2-5-1-5-7"
+     width="2.5289841"
+     height="2.1875007"
+     x="26.594885"
+     y="28.873867"
+     transform="matrix(0,1,1,0,0,0)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:2.18631"
+     id="rect2-8-2-5-1-5-7-1"
+     width="3.3056698"
+     height="2.7571058"
+     x="6.6826916"
+     y="42.253799"
+     transform="matrix(-0.827801,0.56102184,0.827801,0.56102184,0,0)"
+     ry="1.3785529" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:1.70071"
+     id="rect2-8-2-5-1-5-7-2"
+     width="2.5211716"
+     height="2.1875007"
+     x="26.601562"
+     y="-19.375"
+     transform="rotate(90)" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke-width:2.18631"
+     id="rect2-8-2-5-1-5-7-1-3"
+     width="3.3056698"
+     height="2.7571058"
+     x="35.824474"
+     y="13.109993"
+     transform="matrix(0.827801,0.56102184,-0.827801,0.56102184,0,0)"
+     ry="1.3785529" />
+  <rect
+     style="fill:#ff0062;fill-opacity:1;stroke-width:0.0430094"
+     id="rect1-1"
+     width="1.2249992"
+     height="1.2249992"
+     x="30.262379"
+     y="-3.8555233"
+     transform="rotate(45)" />
+</svg>
