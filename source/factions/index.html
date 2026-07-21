@@ -14,6 +14,9 @@ layout: false
     :root {
       --bg: #07090d;
       --panel: rgba(12, 14, 20, 0.92);
+      --glass: rgba(10, 12, 18, 0.26);
+      --glass-strong: rgba(10, 12, 18, 0.48);
+      --glass-soft: rgba(255,255,255,0.05);
       --line: rgba(255,255,255,0.12);
       --text: rgba(245,247,250,0.95);
       --soft: rgba(214,223,236,0.72);
@@ -34,8 +37,9 @@ layout: false
       margin: 0;
       height: 100%;
       background:
-        radial-gradient(circle at top, rgba(42,57,92,.18), transparent 34%),
-        linear-gradient(180deg, rgba(13,15,22,.92), rgba(8,9,13,.98)),
+        linear-gradient(180deg, rgba(6,8,12,.44), rgba(6,8,12,.7)),
+        radial-gradient(circle at top, rgba(42,57,92,.16), transparent 34%),
+        url("/images/lobby.webp") center / cover no-repeat,
         var(--bg);
       color: var(--text);
       font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -125,13 +129,15 @@ layout: false
     .force-sidebar-block {
       position: relative;
       border: 1px solid rgba(255,255,255,.06);
-      background: rgba(10,12,18,.58);
+      background: var(--glass);
+      backdrop-filter: blur(14px) saturate(120%);
+      -webkit-backdrop-filter: blur(14px) saturate(120%);
       overflow: hidden;
     }
 
     .force-sidebar-logo {
       display: block;
-      background: rgba(10,12,18,.58);
+      background: transparent;
       position: relative;
       margin-top: -18%;
       margin-bottom: 18%;
@@ -155,7 +161,7 @@ layout: false
       min-height: 0;
       display: grid;
       grid-template-rows: 48px auto;
-      background: rgba(6,8,12,.62);
+      background: transparent;
     }
 
     .force-sidebar-card-head {
@@ -173,7 +179,9 @@ layout: false
       position: relative;
       overflow: hidden;
       aspect-ratio: 310 / 250;
-      background: rgba(8,10,18,.92);
+      background: var(--glass-strong);
+      backdrop-filter: blur(16px) saturate(118%);
+      -webkit-backdrop-filter: blur(16px) saturate(118%);
     }
 
     .force-sidebar-card-body::before {
@@ -250,7 +258,7 @@ layout: false
       padding: 0 16px;
       border: 1px solid rgba(255,255,255,.06);
       border-radius: 4px;
-      background: rgba(255,255,255,.06);
+      background: rgba(9,11,15,.22);
       color: rgba(214,223,236,.7);
       font: inherit;
       font-weight: 700;
@@ -260,11 +268,26 @@ layout: false
       justify-content: center;
       gap: 8px;
       cursor: pointer;
+      backdrop-filter: blur(12px) saturate(118%);
+      -webkit-backdrop-filter: blur(12px) saturate(118%);
+      transition:
+        transform .14s ease,
+        background-color .18s ease,
+        color .18s ease,
+        border-color .18s ease,
+        box-shadow .18s ease;
     }
 
     .force-faction-button.active {
       background: rgba(242,242,247,.96);
       color: #10131a;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.08),
+        0 0 16px rgba(255,255,255,.08);
+    }
+
+    .force-faction-button:active {
+      transform: translateY(1px);
     }
 
     .force-faction-button-visual {
@@ -301,13 +324,23 @@ layout: false
     .force-detail-panel {
       min-height: 0;
       border: 1px solid rgba(255,255,255,.08);
-      background: rgba(9,11,15,.72);
+      background: var(--glass-strong);
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      backdrop-filter: blur(18px) saturate(122%);
+      -webkit-backdrop-filter: blur(18px) saturate(122%);
+    }
+
+    .force-screen.is-faction-switching .force-sidebar-logo-mark,
+    .force-screen.is-faction-switching .force-sidebar-card,
+    .force-screen.is-faction-switching .force-map-panel,
+    .force-screen.is-faction-switching .force-detail-panel {
+      animation: faction-panel-in .28s cubic-bezier(.2,.8,.2,1);
     }
 
     .force-map-panel {
+      position: relative;
       padding: 18px 18px 14px;
     }
 
@@ -494,6 +527,12 @@ layout: false
       overflow: visible;
       transform: scale(1.1);
       transform-origin: center center;
+      transition:
+        transform .14s ease,
+        background-color .18s ease,
+        border-color .18s ease,
+        box-shadow .2s ease,
+        color .18s ease;
     }
 
     .force-node::before {
@@ -507,12 +546,42 @@ layout: false
       z-index: 0;
     }
 
+    .force-node::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: calc(var(--node-radius, 12px) - 1px);
+      background: linear-gradient(120deg, transparent 0 30%, rgba(255,255,255,.18) 44%, rgba(255,255,255,.06) 50%, transparent 64%);
+      background-size: 220% 100%;
+      background-position: -160% 0;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
     .force-node.active-node::before {
       opacity: .22;
     }
 
     .force-node.active-node {
       background: var(--node-accent, var(--node-bg));
+      box-shadow:
+        inset 0 0 0 1px rgba(14,16,23,.88),
+        inset 0 0 0 2px rgba(255,255,255,.045),
+        0 0 0 1px rgba(255,255,255,.08),
+        0 0 18px color-mix(in srgb, var(--node-accent) 28%, transparent);
+    }
+
+    .force-node.active-node::after {
+      animation: force-node-scan .34s ease-out;
+    }
+
+    .force-node:active {
+      transform: scale(1.06);
+    }
+
+    .force-node.active-node:active {
+      transform: scale(1.08);
     }
 
     .force-node.has-vip-surface:not(.active-node) {
@@ -563,6 +632,33 @@ layout: false
       box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
       pointer-events: none;
       z-index: 1;
+    }
+
+    @keyframes force-node-scan {
+      0% {
+        opacity: 0;
+        background-position: -160% 0;
+      }
+      18% {
+        opacity: .95;
+      }
+      100% {
+        opacity: 0;
+        background-position: 160% 0;
+      }
+    }
+
+    @keyframes faction-panel-in {
+      0% {
+        opacity: 0;
+        transform: translateY(8px);
+        filter: saturate(.9);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: saturate(1);
+      }
     }
 
     .force-node-badge {
@@ -759,10 +855,11 @@ layout: false
     }
 
     .force-detail-panel {
+      position: relative;
       padding: 22px 24px 18px;
       justify-content: flex-start;
       gap: 16px;
-      background: rgba(10,12,18,.7);
+      background: rgba(8,10,16,.42);
     }
 
     .force-detail-copy {
@@ -801,12 +898,14 @@ layout: false
     .force-level-pill {
       min-height: 36px;
       border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.07);
+      background: rgba(255,255,255,.06);
       color: rgba(255,255,255,.72);
       font: inherit;
       font-weight: 700;
       cursor: pointer;
       border-radius: 0;
+      backdrop-filter: blur(10px) saturate(118%);
+      -webkit-backdrop-filter: blur(10px) saturate(118%);
     }
 
     .force-level-pill + .force-level-pill {
@@ -831,6 +930,11 @@ layout: false
     .force-detail-block {
       display: grid;
       gap: 8px;
+      padding: 12px 14px;
+      border: none;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .force-detail-block h3 {
@@ -863,6 +967,20 @@ layout: false
 
     .force-detail-unlock-name {
       display: block;
+    }
+
+    .force-detail-unlock-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .force-detail-unlock-nums {
+      margin-left: auto;
+      color: #b7ff2c;
+      white-space: nowrap;
     }
 
     .force-stat-list {
@@ -2106,9 +2224,23 @@ layout: false
         : (Array.isArray(levelData?.effects) ? levelData.effects : []);
       const resources = Array.isArray(faction.resources) ? faction.resources : [];
       const unlockConditionsLabel = '解锁条件';
-      const unlockHeadingMarkup = (detailUnlockName ? ('<span class="force-detail-unlock-name">' + detailUnlockName + '</span>') : '') + renderUnlockIcons(unlockIcons);
-      const unlockStatsMarkup = (detailUnlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + detailUnlockNums + '</strong></div>' : '') + (isPeakDetail && peakNode?.unlockConditions ? '<div class="force-stat-row"><span>' + unlockConditionsLabel + '</span><strong>' + peakNode.unlockConditions + '</strong></div>' : '');
-      const unlockBlockMarkup = (unlockHeadingMarkup || unlockStatsMarkup) ? ('<div class="force-detail-block"><h3>' + unlockHeadingMarkup + '</h3><div class="force-stat-list">' + unlockStatsMarkup + '</div></div>') : '';
+      const unlockHeadingMarkup = (detailUnlockName || detailUnlockNums || unlockIcons.length) ? (
+        '<h3>'
+        + ((detailUnlockName || detailUnlockNums)
+          ? ('<span class="force-detail-unlock-head">'
+            + (detailUnlockName ? ('<span class="force-detail-unlock-name">' + detailUnlockName + '</span>') : '')
+            + (detailUnlockNums ? ('<strong class="force-detail-unlock-nums">' + detailUnlockNums + '</strong>') : '')
+            + '</span>')
+          : '')
+        + renderUnlockIcons(unlockIcons)
+        + '</h3>'
+      ) : '';
+      const unlockStatsMarkup = isPeakDetail && peakNode?.unlockConditions
+        ? ('<div class="force-stat-row"><span>' + unlockConditionsLabel + '</span><strong>' + peakNode.unlockConditions + '</strong></div>')
+        : '';
+      const unlockBlockMarkup = (unlockHeadingMarkup || unlockStatsMarkup)
+        ? ('<div class="force-detail-block">' + unlockHeadingMarkup + (unlockStatsMarkup ? ('<div class="force-stat-list">' + unlockStatsMarkup + '</div>') : '') + '</div>')
+        : '';
       const materialsTitle = '材料';
       const materialsBlockMarkup = materials.length ? ('<div class="force-detail-block"><h3>' + materialsTitle + '</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-material-row"><span class="force-material-visual">' + renderMaterialIcon(item.materialIcon) + '</span><span class="force-material-name">' + (item.materialName || item.label || '') + '</span><strong>' + (item.materialNums || item.value || '') + '</strong></div>').join('') + '</div></div>') : '';
 
@@ -2171,8 +2303,8 @@ layout: false
           return '<button class="force-level-pill' + (level === state.level ? ' active' : '') + '" type="button" data-level="' + level + '">' + level + '</button>';
         }).join('')) + '</div>',
         detailSummary ? '<p class="force-detail-description">' + detailSummary + '</p>' : '',
-        '<div class="force-detail-block"><h3><span class="force-detail-unlock-name">' + detailUnlockName + '</span>' + renderUnlockIcons(unlockIcons) + '</h3><div class="force-stat-list">' + (detailUnlockNums ? '<div class="force-stat-row highlight"><span></span><strong>' + detailUnlockNums + '</strong></div>' : '') + (isPeakDetail && peakNode?.unlockConditions ? '<div class="force-stat-row"><span>解锁条件</span><strong>' + peakNode.unlockConditions + '</strong></div>' : '') + '</div></div>',
-        '<div class="force-detail-block"><h3>材料</h3><div class="force-stat-list">' + materials.map(item => '<div class="force-material-row"><span class="force-material-visual">' + renderMaterialIcon(item.materialIcon) + '</span><span class="force-material-name">' + (item.materialName || item.label || '') + '</span><strong>' + (item.materialNums || item.value || '') + '</strong></div>').join('') + '</div></div>',
+        unlockBlockMarkup,
+        materialsBlockMarkup,
         '</div>',
         '<div class="force-detail-footer">' + resources.map(item => '<div class="force-resource-row"><span>' + item.label + '</span><strong>' + item.value + '</strong></div>').join('') + '</div>',
         '</aside>',
@@ -2186,6 +2318,13 @@ layout: false
           state.nodeId = null;
           state.level = null;
           await activateFaction(button.dataset.factionId);
+          const screen = app.querySelector('.force-screen');
+          if (screen) {
+            screen.classList.add('is-faction-switching');
+            requestAnimationFrame(() => {
+              window.setTimeout(() => screen.classList.remove('is-faction-switching'), 360);
+            });
+          }
         });
       });
 
