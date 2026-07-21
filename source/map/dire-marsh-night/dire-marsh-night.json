@@ -390,7 +390,7 @@
       "iconSize": 120,
       "x": 1254,
       "y": 5420,
-      "description": "互动后大概10s后生成可拾取的异常物质(4格)\n异常物质会向其它玩家公布自身位置\n在地图上找到异常物质聚合装置\n聚合完成后其它玩家对异常物质的追踪会停留在聚合装置的位置不会再变化",
+      "description": "由两个UESC炮塔+一个紫甲UESC突击部队看守\n击杀后骇入容器会刷两波3只紫甲+若干蓝白甲\n也有可能会刷出一只金甲(灼烧看守者)",
       "source": ""
     },
     {
@@ -400,7 +400,7 @@
       "iconSize": 120,
       "x": 7142,
       "y": 4978,
-      "description": "由两个UESC炮塔+一个紫甲UESC突击部队看守\n击杀后骇入容器会刷两波3只紫甲+若干蓝白甲",
+      "description": "由两个UESC炮塔+一个紫甲UESC突击部队看守\n击杀后骇入容器会刷两波3只紫甲+若干蓝白甲\n也有可能会刷出一只金甲(灼烧看守者)",
       "source": ""
     },
     {
@@ -410,7 +410,7 @@
       "iconSize": 120,
       "x": 7076,
       "y": 2568,
-      "description": "由两个UESC炮塔+一个紫甲UESC突击部队看守\n击杀后骇入容器会刷两波3只紫甲+若干蓝白甲",
+      "description": "由两个UESC炮塔+一个紫甲UESC突击部队看守\n击杀后骇入容器会刷两波3只紫甲+若干蓝白甲\n也有可能会刷出一只金甲(灼烧看守者)",
       "source": ""
     },
     {
@@ -721,6 +721,146 @@
       "x": 3968,
       "y": 3970,
       "description": "需要5UESC凭证解锁\n位于交汇点二楼，从西侧进入上楼梯之后右侧。",
+      "source": ""
+    },
+    {
+      "id": "guard-path-001",
+      "title": "护航队路径",
+      "iconKey": "guard-path",
+      "iconSize": 120,
+      "x": 4879,
+      "y": 3577,
+      "description": "在该位置护航队的载具会展开\n击破四个弱点该载具会坠毁\n(可能刷新出尊享回收资源！)",
+      "source": ""
+    },
+    {
+      "id": "guard-path-002",
+      "title": "护航队路径",
+      "iconKey": "guard-path",
+      "iconSize": 120,
+      "x": 3755,
+      "y": 4170,
+      "description": "在该位置护航队的载具会展开\n击破四个弱点该载具会坠毁\n(可能刷新出尊享回收资源！)\n当护航从该节点继续前进后前方楼上会刷新两只绿甲UESC狙击",
+      "source": ""
+    },
+    {
+      "id": "guard-path-003",
+      "title": "护航队路径",
+      "iconKey": "guard-path",
+      "iconSize": 120,
+      "x": 2145,
+      "y": 4163,
+      "description": "在该位置护航队的载具会展开\n击破四个弱点该载具会坠毁\n(可能刷新出尊享回收资源！)",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-001",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 1364,
+      "y": 3314,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-002",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 691,
+      "y": 5436,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-003",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2211,
+      "y": 7366,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-004",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 1319,
+      "y": 6647,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-005",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4169,
+      "y": 7175,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-006",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 6008,
+      "y": 7157,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-007",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 7082,
+      "y": 6046,
+      "description": "该复活点位于地下",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-008",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 7957,
+      "y": 6965,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-009",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 5471,
+      "y": 4862,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-010",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 6345,
+      "y": 1047,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-011",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 10451,
+      "y": 2222,
+      "description": "",
       "source": ""
     }
   ]

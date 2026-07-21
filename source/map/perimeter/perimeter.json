@@ -12,5 +12,546 @@
   },
   "minZoom": 0.05,
   "maxZoom": 3.6,
-  "pois": []
+  "pois": [
+    {
+      "id": "runner-respawn-001",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2440,
+      "y": 901,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-002",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3489,
+      "y": 610,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-004",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3922,
+      "y": 876,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-006",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2094,
+      "y": 1957,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-007",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4750,
+      "y": 1308,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-008",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4970,
+      "y": 1737,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-010",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3127,
+      "y": 2137,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-013",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3631,
+      "y": 2194,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-014",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3795,
+      "y": 2438,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-015",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2016,
+      "y": 2745,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-016",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4619,
+      "y": 2985,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-017",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2231,
+      "y": 3615,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-019",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3099,
+      "y": 3441,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-020",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 2849,
+      "y": 1836,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-021",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 3371,
+      "y": 2349,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-022",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 3520,
+      "y": 1792,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-active-023",
+      "title": "撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 2469,
+      "y": 2507,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-active-024",
+      "title": "撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 3102,
+      "y": 2498,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-active-025",
+      "title": "撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 2624,
+      "y": 3239,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-active-026",
+      "title": "撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 4251,
+      "y": 2792,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-active-027",
+      "title": "撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 4254,
+      "y": 2042,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-active-028",
+      "title": "撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 3472,
+      "y": 1126,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-active-029",
+      "title": "撤离点",
+      "iconKey": "extract-active",
+      "iconSize": 120,
+      "x": 2960,
+      "y": 1193,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "DCON-031",
+      "title": "DCON",
+      "iconKey": "DCON",
+      "iconSize": 120,
+      "x": 2478,
+      "y": 1063,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "DCON-032",
+      "title": "DCON",
+      "iconKey": "DCON",
+      "iconSize": 120,
+      "x": 2215,
+      "y": 3453,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "DCON-033",
+      "title": "DCON",
+      "iconKey": "DCON",
+      "iconSize": 120,
+      "x": 4439,
+      "y": 1492,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-034",
+      "title": "北中继站仓库",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3013,
+      "y": 964,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-036",
+      "title": "中心站安保办公室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 4144,
+      "y": 2017,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-038",
+      "title": "数据墙上层",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3669,
+      "y": 2109,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-039",
+      "title": "托运站平台",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 2134,
+      "y": 1953,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-040",
+      "title": "托运站监控室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 2410,
+      "y": 2432,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-041",
+      "title": "南中继站监控室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 4024,
+      "y": 3173,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-042",
+      "title": "水源淡化厂实验室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 2563,
+      "y": 3542,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-043",
+      "title": "隧道办公室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3963,
+      "y": 2567,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "airdrop-044",
+      "title": "空投补给",
+      "iconKey": "airdrop",
+      "iconSize": 120,
+      "x": 3147,
+      "y": 2000,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "airdrop-046",
+      "title": "空投补给",
+      "iconKey": "airdrop",
+      "iconSize": 120,
+      "x": 4343,
+      "y": 1774,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "airdrop-047",
+      "title": "空投补给",
+      "iconKey": "airdrop",
+      "iconSize": 120,
+      "x": 3412,
+      "y": 3288,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "airdrop-048",
+      "title": "空投补给",
+      "iconKey": "airdrop",
+      "iconSize": 120,
+      "x": 2904,
+      "y": 2890,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "warden-049",
+      "title": "看守者",
+      "iconKey": "warden",
+      "iconSize": 120,
+      "x": 2595,
+      "y": 3452,
+      "description": "外围区域看守者为幽魂看守者",
+      "source": ""
+    },
+    {
+      "id": "warden-050",
+      "title": "看守者",
+      "iconKey": "warden",
+      "iconSize": 120,
+      "x": 4120,
+      "y": 3089,
+      "description": "外围区域看守者为幽魂看守者",
+      "source": ""
+    },
+    {
+      "id": "warden-051",
+      "title": "看守者",
+      "iconKey": "warden",
+      "iconSize": 120,
+      "x": 3074,
+      "y": 1081,
+      "description": "外围区域看守者为幽魂看守者",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-052",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 3062,
+      "y": 1163,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-053",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 2381,
+      "y": 2332,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-054",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 4269,
+      "y": 1823,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-055",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 4160,
+      "y": 3178,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-056",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 2787,
+      "y": 3336,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-001",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4659,
+      "y": 2752,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-002",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3908,
+      "y": 4028,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "data-pad-003",
+      "title": "坐标数据板",
+      "iconKey": "data-pad",
+      "iconSize": 120,
+      "x": 2791,
+      "y": 3299,
+      "description": "同队伍获取两个坐标数据板后在标记处获取一份奖励\n获取第一个后，会在地图上标记第二个的位置\n若其它队伍的玩家持有第二个，则标记第二个的位置(你也会被他标记！)",
+      "source": ""
+    },
+    {
+      "id": "data-pad-004",
+      "title": "坐标数据板",
+      "iconKey": "data-pad",
+      "iconSize": 120,
+      "x": 4206,
+      "y": 1984,
+      "description": "同队伍获取两个坐标数据板后在标记处获取一份奖励\n获取第一个后，会在地图上标记第二个的位置\n若其它队伍的玩家持有第二个，则标记第二个的位置(你也会被他标记！)",
+      "source": ""
+    },
+    {
+      "id": "data-pad-005",
+      "title": "坐标数据板",
+      "iconKey": "data-pad",
+      "iconSize": 120,
+      "x": 2392,
+      "y": 2139,
+      "description": "同队伍获取两个坐标数据板后在标记处获取一份奖励\n获取第一个后，会在地图上标记第二个的位置\n若其它队伍的玩家持有第二个，则标记第二个的位置(你也会被他标记！)",
+      "source": ""
+    },
+    {
+      "id": "data-pad-006",
+      "title": "坐标数据板",
+      "iconKey": "data-pad",
+      "iconSize": 120,
+      "x": 3069,
+      "y": 1264,
+      "description": "同队伍获取两个坐标数据板后在标记处获取一份奖励\n获取第一个后，会在地图上标记第二个的位置\n若其它队伍的玩家持有第二个，则标记第二个的位置(你也会被他标记！)",
+      "source": ""
+    },
+    {
+      "id": "data-pad-007",
+      "title": "坐标数据板",
+      "iconKey": "data-pad",
+      "iconSize": 120,
+      "x": 4066,
+      "y": 3131,
+      "description": "同队伍获取两个坐标数据板后在标记处获取一份奖励\n获取第一个后，会在地图上标记第二个的位置\n若其它队伍的玩家持有第二个，则标记第二个的位置(你也会被他标记！)",
+      "source": ""
+    },
+    {
+      "id": "data-pad-008",
+      "title": "坐标数据板",
+      "iconKey": "data-pad",
+      "iconSize": 120,
+      "x": 4128,
+      "y": 2088,
+      "description": "同队伍获取两个坐标数据板后在标记处获取一份奖励\n获取第一个后，会在地图上标记第二个的位置\n若其它队伍的玩家持有第二个，则标记第二个的位置(你也会被他标记！)",
+      "source": ""
+    }
+  ]
 }

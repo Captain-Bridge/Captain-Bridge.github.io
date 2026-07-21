@@ -12,5 +12,206 @@
   },
   "minZoom": 0.03,
   "maxZoom": 3.6,
-  "pois": []
+  "pois": [
+    {
+      "id": "runner-respawn-001",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 1364,
+      "y": 3314,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-002",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 691,
+      "y": 5436,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-003",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2211,
+      "y": 7366,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-004",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 1319,
+      "y": 6647,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-005",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4169,
+      "y": 7175,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-006",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 6008,
+      "y": 7157,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-007",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 7082,
+      "y": 6046,
+      "description": "该复活点位于地下",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-008",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 7957,
+      "y": 6965,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-009",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 5471,
+      "y": 4862,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-010",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 6345,
+      "y": 1047,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-011",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 10451,
+      "y": 2222,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-063",
+      "title": "隔离区太平间",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 1913,
+      "y": 4899,
+      "description": "卓越上锁房间\n隔离区地下\n必出至少一个生物透镜种子",
+      "source": ""
+    },
+    {
+      "id": "locked-room-064",
+      "title": "维护部灌溉渠",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3987,
+      "y": 6631,
+      "description": "卓越上锁房间\n维护部地下\n必出至少一个弹道涡轮",
+      "source": ""
+    },
+    {
+      "id": "locked-room-065",
+      "title": "维护部抽水机",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3789,
+      "y": 6756,
+      "description": "豪华上锁房间\n维护部1楼\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-066",
+      "title": "藻池办公室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 5161,
+      "y": 4729,
+      "description": "豪华上锁房间\n藻池2楼\n有一个可以打开的百叶窗\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-067",
+      "title": "温室实验室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 5965,
+      "y": 3089,
+      "description": "豪华上锁房间\n点位建筑内1楼\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-068",
+      "title": "综合设施小屋",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 8395,
+      "y": 4439,
+      "description": "豪华上锁房间\n大量蓝绿材料",
+      "source": ""
+    },
+    {
+      "id": "locked-room-070",
+      "title": "温室操作室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 5958,
+      "y": 2351,
+      "description": "尊享上锁房间\n温室标记处建筑楼顶\n必出至少一个危害胶囊",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-071",
+      "title": "生物研究所储罐",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 7605,
+      "y": 1548,
+      "description": "卓越上锁房间\n生物研究所2楼\n必出至少一个生物透镜种子",
+      "source": ""
+    },
+    {
+      "id": "anomaly-vault-072",
+      "title": "AI上行系统服务器",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 7394,
+      "y": 5802,
+      "description": "尊享上锁房间\nAI上行系统地下\n必出至少一个危害胶囊",
+      "source": ""
+    }
+  ]
 }
