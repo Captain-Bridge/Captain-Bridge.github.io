@@ -10,26 +10,1214 @@
       "id": "r0c0",
       "row": 0,
       "col": 0,
-      "size": "large",
-      "title": "扩容",
-      "iconImage": "/marathon-lore/assets/images/icons/cyac.svg",
+      "size": "small",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "links":{
+        "right":true
+      },
       "levels": [
         {
           "levelId": "level_1",
-          "describe": "提升物品栏容量。",
-          "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-          "unlockName": "保险库容量",
-          "unlockNums": "+4行",
+          "title": "能量增幅易物",
+          "describe": "军械库 | 关口基因7级",
+          "summary": "解锁可在军械库中交换的能量增幅。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/energy_boost.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.webp",
+              "materialNums": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c1",
+      "row": 0,
+      "col": 1,
+      "size": "large",
+      "iconImage": "/factions/data/svgs/medic.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "能量增幅",
+          "describe": "军械库 | 关口基因17级",
+          "summary": "解锁可在军械库中使用信用点购买的能量增幅。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/energy_boost.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "23"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "分形回路",
+              "materialIcon": "/factions/data/Fractal_circuit.webp",
+              "materialNums": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r0c5",
+      "row": 0,
+      "col": 5,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/chest.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "赞助[关口]",
+          "describe": "军械库 | 关口基因10级",
+          "summary": "解锁可在军械库中使用信用点购买的关口高级赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/sekiguchi_sponser_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "250"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "赞助+[关口]",
+          "describe": "军械库 | 关口基因20级",
+          "summary": "解锁可在军械库中使用信用点购买的关口豪华赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/sekiguchi_sponser_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "500"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "赞助++[关口]",
+          "describe": "军械库 | VIP1级",
+          "summary": "解锁可在军械库中使用信用点购买的关口卓越赞助包。",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/sekiguchi_sponser_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c0",
+      "row": 1,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "动量",
+          "describe": "军械库 | 关口基因5级",
+          "summary": "解锁军械库中的暴徒和毁灭者强化核心。",
+          "unlockName": "",
+          "unlockNums": "",
           "unlockIcon": "",
           "materials": [
             {
               "materialId": "material_1",
               "materialName": "信用点",
-              "materialIcon": "/marathon-lore/assets/images/icons/cyac.svg",
-              "materialNums": "7,000"
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.webp",
+              "materialNums": "17"
             }
-          ],
-          "title": "扩容"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c1",
+      "row": 1,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "监视",
+          "describe": "军械库 | 关口基因5级",
+          "summary": "解锁军械库中的侦察和盗贼强化核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.webp",
+              "materialNums": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c2",
+      "row": 1,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "角色扮演",
+          "describe": "军械库 | 关口基因5级",
+          "summary": "解锁军械库中的救援、刺客和哨兵强化核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.webp",
+              "materialNums": "17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c4",
+      "row": 1,
+      "col": 4,
+      "size": "large",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/cradle.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "摇篮效率",
+          "describe": "功能 | 关口基因10级",
+          "summary": "物质转换器提供的摇篮经验值和合约奖励增加5%。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "分形回路",
+              "materialIcon": "/factions/data/Fractal_circuit.webp",
+              "materialNums": "19"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "摇篮效率+",
+          "describe": "功能 | 关口基因20级",
+          "summary": "物质转换器提供的摇篮经验值和合约奖励增加10%。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "19"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "悖论回路",
+              "materialIcon": "/factions/data/Paradox_Circuit.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "摇篮效率++",
+          "describe": "功能 | 关口基因30级",
+          "summary": "物质转换器提供的摇篮经验值和合约奖励增加15%。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "悖论回路",
+              "materialIcon": "/factions/data/Paradox_Circuit.webp",
+              "materialNums": "18"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "1"
+            }
+          ]
+        },
+        {
+          "levelId": "level_4",
+          "title": "摇篮效率+++",
+          "describe": "功能 | VIP10级",
+          "summary": "物质转换器提供的摇篮经验值和合约奖励增加20%。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r1c5",
+      "row": 1,
+      "col": 5,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "尊享核心",
+          "describe": "军械库 | VIP15级",
+          "summary": "解锁军械库中的一个轮换尊享核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c0",
+      "row": 2,
+      "col": 0,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "动量+",
+          "describe": "军械库 | 关口基因15级",
+          "summary": "解锁军械库中的暴徒和毁灭者豪华核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "18"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "分形回路",
+              "materialIcon": "/factions/data/Fractal_circuit.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c1",
+      "row": 2,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "监视+",
+          "describe": "军械库 | 关口基因15级",
+          "summary": "解锁军械库中的侦察和盗贼豪华核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "18"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "分形回路",
+              "materialIcon": "/factions/data/Fractal_circuit.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c2",
+      "row": 2,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "角色扮演+",
+          "describe": "军械库 | 关口基因15级",
+          "summary": "解锁军械库中的救援、刺客和哨兵豪华核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "18"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "分形回路",
+              "materialIcon": "/factions/data/Fractal_circuit.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c3",
+      "row": 2,
+      "col": 3,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "能量库",
+          "describe": "军械库 | 关口基因3级",
+          "summary": "解锁军械库中的能量库植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "750"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.webp",
+              "materialNums": "16"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "能量库+",
+          "describe": "军械库 | 关口基因13级",
+          "summary": "解锁军械库中的能量库植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "分形回路",
+              "materialIcon": "/factions/data/Fractal_circuit.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "6"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "能量库++",
+          "describe": "军械库 | VIP2级",
+          "summary": "解锁军械库中的能量库植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c4",
+      "row": 2,
+      "col": 4,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/body.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "群体免疫",
+          "describe": "军械库 | 关口基因6级",
+          "summary": "解锁军械库中的群体免疫植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.webp",
+              "materialNums": "8"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "群体免疫+",
+          "describe": "军械库 | 关口基因16级",
+          "summary": "解锁军械库中的群体免疫植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "9"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "分形回路",
+              "materialIcon": "/factions/data/Fractal_circuit.webp",
+              "materialNums": "7"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "群体免疫++",
+          "describe": "军械库 | VIP3级",
+          "summary": "解锁军械库中的群体免疫植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "5"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2c5",
+      "row": 2,
+      "col": 5,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/leg.svg",
+      "links":{
+        "down":true
+      },
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "权衡之道",
+          "describe": "军械库 | 关口基因9级",
+          "summary": "解锁军械库中的权衡之道植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_green.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "1,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "不稳定二极管",
+              "materialIcon": "/factions/data/unstable_diode.webp",
+              "materialNums": "15"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "权衡之道+",
+          "describe": "军械库 | 关口基因19级",
+          "summary": "解锁军械库中的权衡之道植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "2,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "19"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "悖论回路",
+              "materialIcon": "/factions/data/Paradox_Circuit.webp",
+              "materialNums": "12"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "权衡之道++",
+          "describe": "军械库 | VIP4级",
+          "summary": "解锁军械库中的权衡之道植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c0",
+      "row": 3,
+      "col": 0,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "动量++",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁军械库中的暴徒和毁灭者卓越核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "7"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c1",
+      "row": 3,
+      "col": 1,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "监视++",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁军械库中的侦察和盗贼卓越核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "7"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c2",
+      "row": 3,
+      "col": 2,
+      "size": "small",
+      "iconImage": "/factions/data/svgs/core.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "角色扮演++",
+          "describe": "军械库 | VIP5级",
+          "summary": "解锁军械库中的救援、刺客和哨兵卓越核心。",
+          "unlockName": "",
+          "unlockNums": "",
+          "unlockIcon": "",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "7"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c3",
+      "row": 3,
+      "col": 3,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/head.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "将杀",
+          "describe": "军械库 | 关口基因23级",
+          "summary": "解锁军械库中的将杀植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "存储驱动器",
+              "materialIcon": "/factions/data/storage_drive.webp",
+              "materialNums": "24"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "悖论回路",
+              "materialIcon": "/factions/data/Paradox_Circuit.webp",
+              "materialNums": "7"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "将杀+",
+          "describe": "军械库 | VIP7级",
+          "summary": "解锁军械库中的将杀植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "8"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "将杀++",
+          "describe": "军械库 | VIP12级",
+          "summary": "解锁军械库中的将杀植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/head_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "外星合金",
+              "materialIcon": "/factions/data/Alien_alloy.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c4",
+      "row": 3,
+      "col": 4,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/body.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "能量转移",
+          "describe": "军械库 | 关口基因26级",
+          "summary": "解锁军械库中的能量转移植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "杏仁体驱动器",
+              "materialIcon": "/factions/data/Amygdala_driver.webp",
+              "materialNums": "7"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "悖论回路",
+              "materialIcon": "/factions/data/Paradox_Circuit.webp",
+              "materialNums": "5"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "能量转移+",
+          "describe": "军械库 | VIP8级",
+          "summary": "解锁军械库中的能量转移植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "3"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "能量转移++",
+          "describe": "军械库 | VIP13级",
+          "summary": "解锁军械库中的能量转移植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/body_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "突触立方",
+              "materialIcon": "/factions/data/Synaptic_Cube.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r3c5",
+      "row": 3,
+      "col": 5,
+      "size": "small",
+      "surfacePreset":"vip",
+      "iconImage": "/factions/data/svgs/leg.svg",
+      "levels": [
+        {
+          "levelId": "level_1",
+          "title": "第一定律",
+          "describe": "军械库 | 关口基因29级",
+          "summary": "解锁军械库中的第一定律植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_blue.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "3,500"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "杏仁体驱动器",
+              "materialIcon": "/factions/data/Amygdala_driver.webp",
+              "materialNums": "15"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "1"
+            }
+          ]
+        },
+        {
+          "levelId": "level_2",
+          "title": "第一定律+",
+          "describe": "军械库 | VIP9级",
+          "summary": "解锁军械库中的第一定律植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_purple.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "预测框架",
+              "materialIcon": "/factions/data/prediction_framework.webp",
+              "materialNums": "11"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "4"
+            }
+          ]
+        },
+        {
+          "levelId": "level_3",
+          "title": "第一定律++",
+          "describe": "军械库 | VIP14级",
+          "summary": "解锁军械库中的第一定律植入物",
+          "unlockName": "已解锁可购买物品",
+          "unlockNums": "",
+          "unlockIcon": "/factions/data/leg_gold.webp",
+          "materials": [
+            {
+              "materialId": "material_1",
+              "materialName": "信用点",
+              "materialIcon": "/factions/data/credits.webp",
+              "materialNums": "7,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "突触立方",
+              "materialIcon": "/factions/data/Synaptic_Cube.webp",
+              "materialNums": "2"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "9"
+            }
+          ]
         }
       ]
     }
@@ -37,63 +1225,63 @@
   "peakNodes": [
     {
       "id": "peak_1",
-      "title": "巅峰节点I",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "关口优待",
+      "describe": "军械库",
+      "summary": "关口供应每日免费物品",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "4/22"
     },
     {
       "id": "peak_2",
-      "title": "巅峰节点II",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "佣金",
+      "describe": "关口标准合约现在还将额外奖励核心。",
+      "summary": "",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "8/22"
     },
     {
       "id": "peak_3",
-      "title": "巅峰节点III",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "关口豪赌者",
+      "describe": "军械库",
+      "summary": "可获得额外的高价值每日特惠，且携带关口货品撤离时获得的声望增加。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "12/22"
     },
     {
       "id": "peak_4",
-      "title": "巅峰节点IV",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "专门",
+      "describe": "功能",
+      "summary": "鲁克现在开始疾行时，会携带疾行者核心。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "16/22"
     },
     {
       "id": "peak_5",
-      "title": "巅峰节点V",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "升级核心",
+      "describe": "军械库",
+      "summary": "关口每日提供一个带有升级状态效果的免费疾行者核心。",
+      "unlockName": "",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "19/22"
     },
     {
       "id": "peak_6",
-      "title": "巅峰节点VI",
-      "describe": "提升物品栏容量。",
-      "summary": "在当前赛季剩余期间内增加额外的保险库容量。",
-      "unlockName": "保险库容量",
-      "unlockNums": "+4行",
+      "title": "免费豪华核心",
+      "describe": "军械库",
+      "summary": "每日提供一个免费的豪华疾行者核心。",
+      "unlockName": "解锁关口VIP升级。",
+      "unlockNums": "",
       "unlockIcon": "",
-      "unlockConditions": "1/1"
+      "unlockConditions": "22/22"
     }
   ]
 }
