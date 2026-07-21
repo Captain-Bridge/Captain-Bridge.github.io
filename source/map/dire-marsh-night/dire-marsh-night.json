@@ -862,6 +862,76 @@
       "y": 2222,
       "description": "",
       "source": ""
+    },
+    {
+      "id": "restricted-resource-025",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 1620,
+      "y": 5026,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-026",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 3626,
+      "y": 6657,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-027",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 6926,
+      "y": 6118,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-028",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 4864,
+      "y": 4792,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-029",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 5918,
+      "y": 2748,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-030",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 8567,
+      "y": 1834,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "restricted-resource-031",
+      "title": "管控资源",
+      "iconKey": "restricted-resource",
+      "iconSize": 120,
+      "x": 9284,
+      "y": 3784,
+      "description": "",
+      "source": ""
     }
   ]
 }

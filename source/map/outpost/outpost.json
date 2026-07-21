@@ -12,5 +12,486 @@
   },
   "minZoom": 0.05,
   "maxZoom": 3.6,
-  "pois": []
+  "pois": [
+    {
+      "id": "red_card-036",
+      "title": "万用通行码",
+      "iconKey": "red_card",
+      "iconSize": 120,
+      "x": 3423,
+      "y": 2245,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "red_card-039",
+      "title": "万用通行码",
+      "iconKey": "red_card",
+      "iconSize": 120,
+      "x": 4101,
+      "y": 3063,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-041",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2558,
+      "y": 775,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-042",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3095,
+      "y": 915,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-043",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2245,
+      "y": 1294,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-044",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3474,
+      "y": 2169,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-045",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 1593,
+      "y": 2767,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-046",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4793,
+      "y": 2648,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-047",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3996,
+      "y": 3214,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-048",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 4757,
+      "y": 3236,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-049",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 3337,
+      "y": 4241,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-050",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2050,
+      "y": 3838,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "red_card-051",
+      "title": "万用通行码",
+      "iconKey": "red_card",
+      "iconSize": 120,
+      "x": 1642,
+      "y": 2446,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-restricted-052",
+      "title": "限制撤离",
+      "iconKey": "extract-restricted",
+      "iconSize": 120,
+      "x": 2894,
+      "y": 2083,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-restricted-053",
+      "title": "限制撤离",
+      "iconKey": "extract-restricted",
+      "iconSize": 120,
+      "x": 3776,
+      "y": 2155,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-restricted-054",
+      "title": "限制撤离",
+      "iconKey": "extract-restricted",
+      "iconSize": 120,
+      "x": 3434,
+      "y": 2771,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-restricted-055",
+      "title": "限制撤离",
+      "iconKey": "extract-restricted",
+      "iconSize": 120,
+      "x": 3290,
+      "y": 3376,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-restricted-056",
+      "title": "限制撤离",
+      "iconKey": "extract-restricted",
+      "iconSize": 120,
+      "x": 4126,
+      "y": 2930,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-final-057",
+      "title": "最终撤离点",
+      "iconKey": "extract-final",
+      "iconSize": 120,
+      "x": 3852,
+      "y": 2609,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-final-058",
+      "title": "最终撤离点",
+      "iconKey": "extract-final",
+      "iconSize": 120,
+      "x": 2688,
+      "y": 3002,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-final-059",
+      "title": "最终撤离点",
+      "iconKey": "extract-final",
+      "iconSize": 120,
+      "x": 3236,
+      "y": 2040,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-060",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 2735,
+      "y": 926,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-061",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 3485,
+      "y": 1604,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-062",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 4353,
+      "y": 2090,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-063",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 4587,
+      "y": 2994,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-064",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 3265,
+      "y": 3978,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-065",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 2295,
+      "y": 3636,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "extract-guarded-066",
+      "title": "追击撤离点",
+      "iconKey": "extract-guarded",
+      "iconSize": 120,
+      "x": 1982,
+      "y": 3149,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "red_card-067",
+      "title": "万用通行码",
+      "iconKey": "red_card",
+      "iconSize": 120,
+      "x": 3197,
+      "y": 3023,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "warden-068",
+      "title": "看守者",
+      "iconKey": "warden",
+      "iconSize": 120,
+      "x": 4097,
+      "y": 2926,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "warden-069",
+      "title": "看守者",
+      "iconKey": "warden",
+      "iconSize": 120,
+      "x": 2919,
+      "y": 1123,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "guard-070",
+      "title": "护航队",
+      "iconKey": "guard",
+      "iconSize": 120,
+      "x": 2659,
+      "y": 1013,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "guard-path-071",
+      "title": "护航队路径",
+      "iconKey": "guard-path",
+      "iconSize": 120,
+      "x": 2919,
+      "y": 1557,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "guard-path-072",
+      "title": "护航队路径",
+      "iconKey": "guard-path",
+      "iconSize": 120,
+      "x": 3340,
+      "y": 1881,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "guard-path-073",
+      "title": "护航队路径",
+      "iconKey": "guard-path",
+      "iconSize": 120,
+      "x": 3859,
+      "y": 2234,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "guard-path-074",
+      "title": "护航队路径",
+      "iconKey": "guard-path",
+      "iconSize": 120,
+      "x": 4443,
+      "y": 2014,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "treasure-075",
+      "title": "宝藏",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 2458,
+      "y": 3034,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "treasure-076",
+      "title": "宝藏",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 3052,
+      "y": 2104,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "treasure-077",
+      "title": "宝藏",
+      "iconKey": "treasure",
+      "iconSize": 120,
+      "x": 4241,
+      "y": 3012,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-078",
+      "title": "处理站地下室",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 2785,
+      "y": 2908,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-079",
+      "title": "无人机区",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 2342,
+      "y": 2706,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-080",
+      "title": "飞控设施",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3041,
+      "y": 2198,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-081",
+      "title": "机场",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3088,
+      "y": 1171,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-082",
+      "title": "迎宾中心",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3549,
+      "y": 1776,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-083",
+      "title": "损毁区",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3895,
+      "y": 2166,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-006",
+      "title": "锁住的房间",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 2990,
+      "y": 3157,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-008",
+      "title": "宿舍",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 4027,
+      "y": 3036,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "locked-room-009",
+      "title": "风轮指挥区",
+      "iconKey": "locked-room",
+      "iconSize": 120,
+      "x": 3828,
+      "y": 3425,
+      "description": "",
+      "source": ""
+    }
+  ]
 }

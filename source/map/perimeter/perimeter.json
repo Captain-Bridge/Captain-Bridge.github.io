@@ -124,16 +124,6 @@
       "source": ""
     },
     {
-      "id": "runner-respawn-017",
-      "title": "疾行者复活点",
-      "iconKey": "runner-respawn",
-      "iconSize": 120,
-      "x": 2231,
-      "y": 3615,
-      "description": "",
-      "source": ""
-    },
-    {
       "id": "runner-respawn-019",
       "title": "疾行者复活点",
       "iconKey": "runner-respawn",
@@ -551,6 +541,46 @@
       "x": 4128,
       "y": 2088,
       "description": "同队伍获取两个坐标数据板后在标记处获取一份奖励\n获取第一个后，会在地图上标记第二个的位置\n若其它队伍的玩家持有第二个，则标记第二个的位置(你也会被他标记！)",
+      "source": ""
+    },
+    {
+      "id": "HVT-001",
+      "title": "高价值目标",
+      "iconKey": "HVT",
+      "iconSize": 120,
+      "x": 2364,
+      "y": 3802,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "runner-respawn-002",
+      "title": "疾行者复活点",
+      "iconKey": "runner-respawn",
+      "iconSize": 120,
+      "x": 2018,
+      "y": 3737,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "HVT-003",
+      "title": "高价值目标",
+      "iconKey": "HVT",
+      "iconSize": 120,
+      "x": 4850,
+      "y": 1589,
+      "description": "",
+      "source": ""
+    },
+    {
+      "id": "HVT-005",
+      "title": "高价值目标",
+      "iconKey": "HVT",
+      "iconSize": 120,
+      "x": 3887,
+      "y": 3959,
+      "description": "",
       "source": ""
     }
   ]
