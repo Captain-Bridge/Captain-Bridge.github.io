@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-17T02:06:12.557Z",
+  "generatedAt": "2026-07-21T15:25:32.899Z",
   "source": "bungie-contentstack",
-  "totalFetched": 53,
+  "totalFetched": 54,
   "itemsPerPage": 8,
   "bilingual": {
     "officialBilingualCount": 43,
@@ -11,20 +11,20 @@
     "translationAvailable": false
   },
   "changes": {
-    "addedCount": 0,
-    "updatedCount": 1,
+    "addedCount": 1,
+    "updatedCount": 0,
     "removedCount": 0,
-    "added": [],
-    "updated": [
+    "added": [
       {
-        "id": "blt89a2eb0098e987cc",
-        "title": "Marathon Mid-Season 2 Update Preview",
-        "localPath": "/news/articles/mid-season-2-preview/",
-        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/mid_season_2_preview",
-        "publishedAt": "2026-07-16T16:00:00.000Z",
+        "id": "blt1a5bea4ef9ae178f",
+        "title": "《失落星船：马拉松》更新1.1.5",
+        "localPath": "/news/articles/marathon-update-1-1-5/",
+        "articleUrl": null,
+        "publishedAt": "2026-07-21T15:00:00.000Z",
         "hasChinese": true
       }
     ],
+    "updated": [],
     "removed": []
   }
 }

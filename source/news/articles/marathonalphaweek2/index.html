@@ -142,12 +142,14 @@ layout: false
       const pageTitleSuffix = " / 鏈€鏂版秷鎭?";
 
       function setLanguage(lang) {
-        if (!panels[lang]) return;
-        if (lang === "zh" && !buttons.find((button) => button.dataset.lang === "zh" && !button.disabled)) {
+        const requestedButton = buttons.find((button) => button.dataset.lang === lang);
+        if (!requestedButton || requestedButton.disabled) {
           return;
         }
 
-        panels.en.hidden = lang !== "en";
+        if (panels.en) {
+          panels.en.hidden = lang !== "en";
+        }
         if (panels.zh) {
           panels.zh.hidden = lang !== "zh";
         }

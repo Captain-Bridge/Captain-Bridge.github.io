@@ -61,7 +61,7 @@ layout: false
           <button class="language-button" type="button" data-lang="zh" aria-pressed="true">&#20013;&#25991;</button>
         </div>
   
-          <a class="chip" href="https://www.bungie.net/7/en-us/News/Article/mid_season_2_preview" target="_blank" rel="noreferrer">&#26597;&#30475; Bungie &#21407;&#25991;</a>
+          <a class="chip" href="https://www.bungie.net/7/zh-chs/News/Article/mid_season_2_preview" target="_blank" rel="noreferrer">&#26597;&#30475; Bungie &#21407;&#25991;</a>
         </div>
       </header>
 
@@ -124,6 +124,7 @@ layout: false
 
       <nav class="story-nav" aria-label="文章导航">
         <a href="/news/">返回新闻列表</a>
+        <a href="/news/articles/marathon-update-1-1-5/">上一篇: 《失落星船：马拉松》更新1.1.5</a>
         <a href="/news/articles/marathon-update-1-1-0-5/">下一篇: Marathon Update 1.1.0.5</a>
       </nav>
     </section>
@@ -141,12 +142,14 @@ layout: false
       const pageTitleSuffix = " / 鏈€鏂版秷鎭?";
 
       function setLanguage(lang) {
-        if (!panels[lang]) return;
-        if (lang === "zh" && !buttons.find((button) => button.dataset.lang === "zh" && !button.disabled)) {
+        const requestedButton = buttons.find((button) => button.dataset.lang === lang);
+        if (!requestedButton || requestedButton.disabled) {
           return;
         }
 
-        panels.en.hidden = lang !== "en";
+        if (panels.en) {
+          panels.en.hidden = lang !== "en";
+        }
         if (panels.zh) {
           panels.zh.hidden = lang !== "zh";
         }

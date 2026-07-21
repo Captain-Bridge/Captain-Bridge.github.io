@@ -61,7 +61,7 @@ layout: false
           <button class="language-button" type="button" data-lang="zh" aria-pressed="true">&#20013;&#25991;</button>
         </div>
   
-          <a class="chip" href="https://www.bungie.net/7/en-us/News/Article/marathon_ost_streaming_now" target="_blank" rel="noreferrer">&#26597;&#30475; Bungie &#21407;&#25991;</a>
+          <a class="chip" href="https://www.bungie.net/7/zh-chs/News/Article/marathon_ost_streaming_now" target="_blank" rel="noreferrer">&#26597;&#30475; Bungie &#21407;&#25991;</a>
         </div>
       </header>
 
@@ -142,12 +142,14 @@ layout: false
       const pageTitleSuffix = " / 鏈€鏂版秷鎭?";
 
       function setLanguage(lang) {
-        if (!panels[lang]) return;
-        if (lang === "zh" && !buttons.find((button) => button.dataset.lang === "zh" && !button.disabled)) {
+        const requestedButton = buttons.find((button) => button.dataset.lang === lang);
+        if (!requestedButton || requestedButton.disabled) {
           return;
         }
 
-        panels.en.hidden = lang !== "en";
+        if (panels.en) {
+          panels.en.hidden = lang !== "en";
+        }
         if (panels.zh) {
           panels.zh.hidden = lang !== "zh";
         }
