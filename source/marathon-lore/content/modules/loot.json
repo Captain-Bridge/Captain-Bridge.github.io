@@ -1,7 +1,7 @@
 {
   "id": "loot",
   "title": "掠夺",
-  "count": "78 / 78",
+  "count": "85 / 85",
   "icon": "/marathon-lore/assets/images/icons/loot.svg",
   "summary": "装备、掉落与收藏条目。",
   "sections": [
@@ -1375,7 +1375,7 @@
     {
       "id": "cradle",
       "title": "摇篮",
-      "count": "14 / 14",
+      "count": "21 / 21",
       "icon": "/marathon-lore/assets/images/icons/cradle.svg",
       "nodes": [
         {
@@ -1612,7 +1612,119 @@
               "icon": "None"
             }
           ] 
-        }        
+        },
+        {
+          "id": "cradle_reset",
+          "title": "尊享",
+          "count": "7 / 7",
+          "children": [
+            {
+              "id": "reset_1",
+              "title": "摇篮尊享1",
+              "count": "1 / 1",
+              "summary": "在任意赛季重置你的摇篮。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "尊享"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/cradle_triage_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_triage.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/cradle_triage.webp"
+            },
+            {
+              "id": "reset_2",
+              "title": "摇篮尊享2",
+              "count": "2 / 2",
+              "summary": "在任意赛季重置你的摇篮。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "尊享"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/cradle_destroyer_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_destroyer.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/cradle_destroyer.webp"
+            },
+            {
+              "id": "reset_3",
+              "title": "摇篮尊享3",
+              "count": "3 / 3",
+              "summary": "在任意赛季重置你的摇篮。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "尊享"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/cradle_recon_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_recon.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/cradle_recon.webp"
+            },
+            {
+              "id": "reset_4",
+              "title": "摇篮尊享4",
+              "count": "4 / 4",
+              "summary": "在任意赛季重置你的摇篮。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "尊享"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/cradle_riot_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_riot.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/cradle_riot.webp"
+            },
+            {
+              "id": "reset_5",
+              "title": "摇篮尊享5",
+              "count": "5 / 5",
+              "summary": "在任意赛季重置你的摇篮。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "尊享"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/cradle_assassin_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_assassin.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/cradle_assassin.webp"
+            },
+            {
+              "id": "reset_6",
+              "title": "摇篮尊享6",
+              "count": "6 / 6",
+              "summary": "在任意赛季重置你的摇篮。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "尊享"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/cradle_thief_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_thief.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/cradle_thief.webp"
+            },
+            {
+              "id": "reset_7",
+              "title": "摇篮尊享7",
+              "count": "已完成",
+              "summary": "重置摇篮7次且摇篮等级到达70。",
+              "meta": [
+                "掠夺",
+                "摇篮",
+                "尊享"
+              ],
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/loot/cradle/cradle_title_icon.webp",
+              "bodyFile": "/marathon-lore/content/docs/loot/cradle/cradle_title.md",
+              "image": "/marathon-lore/content/docs/loot/cradle/cradle_title.webp"
+            }
+          ] 
+        }         
       ]
     }
   ]

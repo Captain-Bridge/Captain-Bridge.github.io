@@ -2,7 +2,6 @@
   {
     "id": "career",
     "title": "生涯",
-    "count": "130 / 130",
     "icon": "/marathon-lore/assets/images/icons/career.svg",
     "summary": "成就、进度与赛季记录。",
     "module": "/marathon-lore/content/modules/career.json"
@@ -10,7 +9,6 @@
   {
     "id": "loot",
     "title": "掠夺",
-    "count": "0 / 0",
     "icon": "/marathon-lore/assets/images/icons/loot.svg",
     "summary": "装备、掉落与收藏条目。",
     "module": "/marathon-lore/content/modules/loot.json"
@@ -18,7 +16,6 @@
   {
     "id": "world",
     "title": "世界",
-    "count": "147 / 147",
     "icon": "/marathon-lore/assets/images/icons/world.svg",
     "summary": "世界观、档案与地点记录。",
     "module": "/marathon-lore/content/modules/world.json"
@@ -26,7 +23,6 @@
   {
     "id": "force",
     "title": "阵营升级",
-    "count": "0 / 0",
     "icon": "/marathon-lore/assets/images/icons/forces.svg",
     "summary": "组织、势力与关系脉络。",
     "module": "/marathon-lore/content/modules/force.json"
@@ -34,9 +30,15 @@
   {
     "id": "runner",
     "title": "疾行者",
-    "count": "0 / 0",
     "icon": "/marathon-lore/assets/images/icons/runners.svg",
     "summary": "角色、身份与个体档案。",
     "module": "/marathon-lore/content/modules/runner.json"
+  },
+  {
+    "id": "activities",
+    "title": "活动",
+    "icon": "/marathon-lore/assets/images/icons/activities.svg",
+    "summary": "不定期更新的活动。",
+    "module": "/marathon-lore/content/modules/activities.json"
   }
 ]

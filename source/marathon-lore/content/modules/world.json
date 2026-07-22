@@ -1,6 +1,7 @@
 {
   "id": "world",
   "title": "世界",
+  "count": "147 / 147",
   "icon": "/marathon-lore/assets/images/icons/world.svg",
   "summary": "世界观、档案与地点记录。",
   "sections": [

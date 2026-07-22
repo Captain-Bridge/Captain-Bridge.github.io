@@ -1,0 +1,84 @@
+{
+  "id": "activities",
+  "title": "活动",
+  "count": "4 / 4",
+  "icon": "/marathon-lore/assets/images/icons/activities.svg",
+  "summary": "不定期更新的活动。",
+  "sections": [
+   {
+      "id": "year_1",
+      "title": "第一年",
+      "count": "4 / 4",
+      "icon": "/marathon-lore/assets/images/icons/activities.svg",
+      "nodes": [
+        {
+          "id": "vault_breaker",
+          "title": "破库者",
+          "count": "4 / 4",
+          "children": [
+            {
+              "id": "vault_breaker",
+              "title": "破库者",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_icon.webp",
+              "summary": "游玩破库者",
+              "meta": [
+                "活动",
+                "第一年",
+                "破库者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker.md",
+              "image": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker.webp"
+            },
+            {
+              "id": "vault_breaker_learner",
+              "title": "学徒破库者",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_learner_icon.webp",
+              "summary": "在破库者活动中破解保险库01或保险库02并成功撤离。",
+              "meta": [
+                "活动",
+                "第一年",
+                "破库者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_learner.md",
+              "image": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_learner.webp"
+            },
+            {
+              "id": "vault_breaker_qualified",
+              "title": "认证破库者",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_qualified_icon.webp",
+              "summary": "在破库者活动中破解保险库03或保险库05并成功撤离。",
+              "meta": [
+                "活动",
+                "第一年",
+                "破库者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_qualified.md",
+              "image": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_qualified.webp"
+            },
+            {
+              "id": "vault_breaker_master",
+              "title": "大师破库者",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_master_icon.webp",
+              "summary": "在破库者活动中破解保险库7并成功撤离。",
+              "meta": [
+                "活动",
+                "第一年",
+                "破库者"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_master.md",
+              "image": "/marathon-lore/content/docs/activities/year_1/vault_breaker/vault_breaker_master_icon.webp"
+            }
+          ]
+        }        
+      ]
+    }
+  ]
+}
