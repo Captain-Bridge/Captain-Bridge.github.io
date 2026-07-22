@@ -188,7 +188,7 @@
             {
               "materialId": "material_2",
               "materialName": "危害胶囊",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Hazardous_Capsule.webp",
               "materialNums": "3"
             },
             {
@@ -660,7 +660,19 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "????"
+              "materialNums": "5,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "2"
             }
           ]
         },
@@ -772,7 +784,19 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "????"
+              "materialNums": "5,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "4"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialNums": "2"
             }
           ]
         },
@@ -1136,7 +1160,7 @@
             {
               "materialId": "material_2",
               "materialName": "危害胶囊",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Hazardous_Capsule.webp",
               "materialNums": "2"
             },
             {
@@ -1199,7 +1223,19 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "????"
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "神经绝缘体",
+              "materialIcon": "/factions/data/neuroinsulator.webp",
+              "materialNums": "7"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialNums": "2"
             }
           ]
         },
@@ -1318,7 +1354,7 @@
             {
               "materialId": "material_2",
               "materialName": "危害胶囊",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Hazardous_Capsule.webp",
               "materialNums": "2"
             },
             {

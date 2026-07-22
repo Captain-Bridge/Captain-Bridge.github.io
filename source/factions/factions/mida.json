@@ -977,7 +977,7 @@
             {
               "materialId": "material_2",
               "materialName": "危害胶囊",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Hazardous_Capsule.webp",
               "materialNums": "2"
             },
             {
@@ -1142,7 +1142,7 @@
             {
               "materialId": "material_2",
               "materialName": "危害胶囊",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Hazardous_Capsule.webp",
               "materialNums": "1"
             },
             {
@@ -1181,7 +1181,7 @@
             {
               "materialId": "material_2",
               "materialName": "危害胶囊",
-              "materialIcon": "/factions/data/VIP_node.webp",
+              "materialIcon": "/factions/data/Hazardous_Capsule.webp",
               "materialNums": "3"
             },
             {
@@ -1331,7 +1331,7 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "?????"
+              "materialNums": "待确认"
             }
           ]
         }
