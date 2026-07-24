@@ -802,6 +802,44 @@ body {
   line-height: 1.5;
   color: var(--soft);
   letter-spacing: 0.03em;
+  white-space: pre-line;
+}
+
+/* 一级弹窗图片左右翻页箭头 */
+.map-popup-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 56px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--text);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: border-color 140ms ease, background 140ms ease;
+  padding: 0;
+}
+
+.map-popup-gallery-arrow:hover {
+  border-color: var(--green);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.map-popup-gallery-arrow--prev {
+  left: 6px;
+}
+
+.map-popup-gallery-arrow--next {
+  right: 6px;
+}
+
+.map-popup-gallery {
+  position: relative;
 }
 
 /* 图片放大查看器（全屏居中覆盖层）
@@ -899,6 +937,20 @@ body {
   object-fit: contain;
   border: 1px solid var(--line);
   background: #000;
+  cursor: zoom-in;
+}
+
+/* 放大状态：原始尺寸，card 内滚动 */
+.map-image-viewer-card.is-zoomed {
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.map-image-viewer-card.is-zoomed .map-image-viewer-image {
+  max-width: none;
+  max-height: none;
+  object-fit: none;
   cursor: zoom-out;
 }
 
@@ -910,6 +962,7 @@ body {
   letter-spacing: 0.04em;
   text-align: center;
   max-width: 100%;
+  white-space: pre-line;
 }
 
 .map-image-viewer-nav {

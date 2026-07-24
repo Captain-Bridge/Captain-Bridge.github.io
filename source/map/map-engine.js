@@ -481,7 +481,13 @@ function renderPoiImages(poi) {
   let html = '<div class="map-popup-gallery" data-active="0">';
   const firstSrc = escapeHtml(images[0].src);
   const firstCaption = escapeHtml(images[0].caption ?? "");
+  if (images.length > 1) {
+    html += '<button class="map-popup-gallery-arrow map-popup-gallery-arrow--prev" type="button" data-dir="-1" aria-label="上一张">‹</button>';
+  }
   html += `<img class="map-popup-image" src="${firstSrc}" alt="${escapeHtml(poi.title)}" loading="lazy">`;
+  if (images.length > 1) {
+    html += '<button class="map-popup-gallery-arrow map-popup-gallery-arrow--next" type="button" data-dir="1" aria-label="下一张">›</button>';
+  }
   if (firstCaption) {
     html += `<p class="map-popup-image-caption">${firstCaption}</p>`;
   }
@@ -494,6 +500,29 @@ function renderPoiImages(poi) {
   }
   html += "</div>";
   return html;
+}
+
+function switchGalleryImage(gallery, images, index) {
+  gallery.dataset.active = String(index);
+  const img = gallery.querySelector(".map-popup-image");
+  const entry = images[index];
+  if (img && entry) {
+    img.src = entry.src;
+    gallery.querySelectorAll(".map-gallery-dot").forEach((d, i) => {
+      d.classList.toggle("is-active", i === index);
+    });
+    let captionEl = gallery.querySelector(".map-popup-image-caption");
+    if (entry.caption) {
+      if (!captionEl) {
+        captionEl = document.createElement("p");
+        captionEl.className = "map-popup-image-caption";
+        img.after(captionEl);
+      }
+      captionEl.textContent = entry.caption;
+    } else if (captionEl) {
+      captionEl.remove();
+    }
+  }
 }
 
 document.addEventListener("click", (event) => {
@@ -516,33 +545,38 @@ document.addEventListener("click", (event) => {
     return;
   }
 
+  // 一级弹窗图片左右翻页箭头
+  const galleryArrow = event.target.closest(".map-popup-gallery-arrow");
+  if (galleryArrow) {
+    const dir = Number(galleryArrow.dataset.dir);
+    const gallery = galleryArrow.closest(".map-popup-gallery");
+    if (!gallery) return;
+    const curIndex = Number(gallery.dataset.active ?? 0);
+    const poiData = state.activeMap?.pois?.find((p) => p.id === state.selectedPoiId);
+    if (!poiData) return;
+    const rawImages = poiData.images ?? [];
+    const images = rawImages.map((item) =>
+      typeof item === "string" ? { src: item, caption: "" } : item
+    );
+    if (!images.length) return;
+    const nextIndex = (curIndex + dir + images.length) % images.length;
+    switchGalleryImage(gallery, images, nextIndex);
+    return;
+  }
+
   const dot = event.target.closest(".map-gallery-dot");
   if (!dot) return;
   const index = Number(dot.dataset.index);
   const gallery = dot.closest(".map-popup-gallery");
   if (!gallery) return;
-  const img = gallery.querySelector(".map-popup-image");
   const poiData = state.activeMap?.pois?.find((p) => p.id === state.selectedPoiId);
-  const imageEntry = poiData?.images?.[index];
-  if (img && imageEntry) {
-    const entry = typeof imageEntry === "string" ? { src: imageEntry, caption: "" } : imageEntry;
-    img.src = entry.src;
-    gallery.dataset.active = String(index);
-    gallery.querySelectorAll(".map-gallery-dot").forEach((d, i) => {
-      d.classList.toggle("is-active", i === index);
-    });
-    let captionEl = gallery.querySelector(".map-popup-image-caption");
-    if (entry.caption) {
-      if (!captionEl) {
-        captionEl = document.createElement("p");
-        captionEl.className = "map-popup-image-caption";
-        img.after(captionEl);
-      }
-      captionEl.textContent = entry.caption;
-    } else if (captionEl) {
-      captionEl.remove();
-    }
-  }
+  if (!poiData) return;
+  const rawImages = poiData.images ?? [];
+  const images = rawImages.map((item) =>
+    typeof item === "string" ? { src: item, caption: "" } : item
+  );
+  if (index < 0 || index >= images.length) return;
+  switchGalleryImage(gallery, images, index);
 });
 
 function handleWheel(event) {
@@ -956,6 +990,14 @@ function ensureImageViewer() {
       navigateImageViewer(1);
       return;
     }
+    // 点击图片放大/缩小
+    if (event.target.closest(".map-image-viewer-image")) {
+      const card = elements.mapImageViewer.querySelector(".map-image-viewer-card");
+      if (card) {
+        card.classList.toggle("is-zoomed");
+      }
+      return;
+    }
   });
 }
 
@@ -991,11 +1033,17 @@ function openImageViewer(poiId, index) {
 
 function closeImageViewer() {
   elements.mapImageViewer.classList.add("is-hidden");
+  const card = elements.mapImageViewer.querySelector(".map-image-viewer-card");
+  if (card) card.classList.remove("is-zoomed");
   document.body.style.overflow = "";
 }
 
 function renderImageViewer(images, index) {
   elements.mapImageViewer.dataset.currentIndex = String(index);
+
+  // 切换图片时重置放大状态
+  const card = elements.mapImageViewer.querySelector(".map-image-viewer-card");
+  if (card) card.classList.remove("is-zoomed");
 
   // 显示/隐藏箭头
   const hasMultiple = images.length > 1;
