@@ -106,7 +106,7 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "1500"
+              "materialNums": "1,500"
             },
             {
               "materialId": "material_2",
@@ -144,7 +144,7 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "3500"
+              "materialNums": "3,500"
             },
             {
               "materialId": "material_2",
@@ -183,7 +183,7 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "7000"
+              "materialNums": "7,000"
             },
             {
               "materialId": "material_2",
@@ -320,7 +320,7 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "1500"
+              "materialNums": "1,500"
             },
             {
               "materialId": "material_2",

@@ -1507,7 +1507,7 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "6000"
+              "materialNums": "6,000"
             },
             {
               "materialId": "material_2",
