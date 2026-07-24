@@ -99,6 +99,7 @@ async function initialize() {
   renderRegions();
   renderPois();
   ensureFeedbackUi();
+  ensureImageViewer();
   bindEvents();
   closePopup();
   resetResolutionMode();
@@ -192,7 +193,20 @@ function bindEvents() {
   });
 
   window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      if (elements.mapImageViewer && !elements.mapImageViewer.classList.contains("is-hidden")) {
+        event.preventDefault();
+        navigateImageViewer(event.key === "ArrowLeft" ? -1 : 1);
+        return;
+      }
+    }
+
     if (event.key !== "Escape") {
+      return;
+    }
+
+    if (elements.mapImageViewer && !elements.mapImageViewer.classList.contains("is-hidden")) {
+      closeImageViewer();
       return;
     }
 
@@ -421,7 +435,7 @@ function openPopup(poi) {
   elements.mapPopup.classList.remove("is-hidden");
   elements.mapPopupType.textContent = iconEntry?.label ?? "POI";
   elements.mapPopupTitle.textContent = poi.title;
-  elements.mapPopupBody.textContent = poi.description ?? "暂无说明。";
+  elements.mapPopupBody.innerHTML = renderPoiImages(poi) + `<p class="map-popup-copy">${escapeHtml(poi.description ?? "暂无说明。")}</p>`;
 
   const meta = [];
   if (poi.floor) {
@@ -457,6 +471,79 @@ function closePopup() {
   renderPois();
   elements.mapPopup.classList.add("is-hidden");
 }
+
+function renderPoiImages(poi) {
+  const rawImages = poi.images ?? [];
+  if (!rawImages.length) return "";
+  const images = rawImages.map((item) =>
+    typeof item === "string" ? { src: item, caption: "" } : item
+  );
+  let html = '<div class="map-popup-gallery" data-active="0">';
+  const firstSrc = escapeHtml(images[0].src);
+  const firstCaption = escapeHtml(images[0].caption ?? "");
+  html += `<img class="map-popup-image" src="${firstSrc}" alt="${escapeHtml(poi.title)}" loading="lazy">`;
+  if (firstCaption) {
+    html += `<p class="map-popup-image-caption">${firstCaption}</p>`;
+  }
+  if (images.length > 1) {
+    html += '<div class="map-popup-gallery-nav">';
+    for (let i = 0; i < images.length; i++) {
+      html += `<button class="map-gallery-dot${i === 0 ? " is-active" : ""}" type="button" data-index="${i}"></button>`;
+    }
+    html += "</div>";
+  }
+  html += "</div>";
+  return html;
+}
+
+document.addEventListener("click", (event) => {
+  // 图片放大弹窗中的导航点切换
+  const viewerDot = event.target.closest(".map-viewer-dot");
+  if (viewerDot) {
+    const index = Number(viewerDot.dataset.viewerIndex);
+    syncImageViewerIndex(index);
+    return;
+  }
+
+  // 点击弹窗中的小图打开放大查看器
+  const galleryImg = event.target.closest(".map-popup-gallery > .map-popup-image");
+  if (galleryImg) {
+    const poiId = state.selectedPoiId;
+    if (!poiId) return;
+    const gallery = galleryImg.closest(".map-popup-gallery");
+    const activeIndex = Number(gallery?.dataset.active ?? 0);
+    openImageViewer(poiId, activeIndex);
+    return;
+  }
+
+  const dot = event.target.closest(".map-gallery-dot");
+  if (!dot) return;
+  const index = Number(dot.dataset.index);
+  const gallery = dot.closest(".map-popup-gallery");
+  if (!gallery) return;
+  const img = gallery.querySelector(".map-popup-image");
+  const poiData = state.activeMap?.pois?.find((p) => p.id === state.selectedPoiId);
+  const imageEntry = poiData?.images?.[index];
+  if (img && imageEntry) {
+    const entry = typeof imageEntry === "string" ? { src: imageEntry, caption: "" } : imageEntry;
+    img.src = entry.src;
+    gallery.dataset.active = String(index);
+    gallery.querySelectorAll(".map-gallery-dot").forEach((d, i) => {
+      d.classList.toggle("is-active", i === index);
+    });
+    let captionEl = gallery.querySelector(".map-popup-image-caption");
+    if (entry.caption) {
+      if (!captionEl) {
+        captionEl = document.createElement("p");
+        captionEl.className = "map-popup-image-caption";
+        img.after(captionEl);
+      }
+      captionEl.textContent = entry.caption;
+    } else if (captionEl) {
+      captionEl.remove();
+    }
+  }
+});
 
 function handleWheel(event) {
   if (!state.activeMap) {
@@ -826,6 +913,127 @@ function ensureFeedbackUi() {
 
   updateFeedbackPanel();
   syncFeedbackPanelVisibility();
+}
+
+function ensureImageViewer() {
+  if (elements.mapImageViewer) return;
+
+  const viewer = document.createElement("div");
+  viewer.className = "map-image-viewer is-hidden";
+  viewer.id = "map-image-viewer";
+  viewer.setAttribute("role", "dialog");
+  viewer.setAttribute("aria-modal", "true");
+  viewer.setAttribute("aria-label", "图片查看器");
+  viewer.innerHTML = `
+    <div class="map-image-viewer-backdrop" data-close-viewer="true"></div>
+    <button class="map-viewer-arrow map-viewer-arrow--prev" type="button" aria-label="上一张">&lsaquo;</button>
+    <button class="map-viewer-arrow map-viewer-arrow--next" type="button" aria-label="下一张">&rsaquo;</button>
+    <div class="map-image-viewer-card">
+      <button class="map-image-viewer-close" type="button" aria-label="关闭">&times;</button>
+      <img class="map-image-viewer-image" id="map-image-viewer-image" alt="" draggable="false">
+      <p class="map-image-viewer-caption" id="map-image-viewer-caption"></p>
+      <div class="map-image-viewer-nav" id="map-image-viewer-nav"></div>
+    </div>
+  `;
+
+  document.body.appendChild(viewer);
+  elements.mapImageViewer = viewer;
+  elements.mapImageViewerImage = viewer.querySelector("#map-image-viewer-image");
+  elements.mapImageViewerCaption = viewer.querySelector("#map-image-viewer-caption");
+  elements.mapImageViewerNav = viewer.querySelector("#map-image-viewer-nav");
+
+  // 点击箭头切换
+  viewer.addEventListener("click", (event) => {
+    if (event.target.closest(".map-image-viewer-close") || event.target.closest("[data-close-viewer]")) {
+      closeImageViewer();
+      return;
+    }
+    if (event.target.closest(".map-viewer-arrow--prev")) {
+      navigateImageViewer(-1);
+      return;
+    }
+    if (event.target.closest(".map-viewer-arrow--next")) {
+      navigateImageViewer(1);
+      return;
+    }
+  });
+}
+
+function navigateImageViewer(delta) {
+  const curIndex = Number(elements.mapImageViewer.dataset.currentIndex ?? 0);
+  const poiId = elements.mapImageViewer.dataset.poiId;
+  const poi = state.activeMap?.pois?.find((p) => p.id === poiId);
+  if (!poi) return;
+  const rawImages = poi.images ?? [];
+  const images = rawImages.map((item) =>
+    typeof item === "string" ? { src: item, caption: "" } : item
+  );
+  if (!images.length) return;
+  const nextIndex = (curIndex + delta + images.length) % images.length;
+  renderImageViewer(images, nextIndex);
+}
+
+function openImageViewer(poiId, index) {
+  const poi = state.activeMap?.pois?.find((p) => p.id === poiId);
+  if (!poi) return;
+  const rawImages = poi.images ?? [];
+  if (!rawImages.length) return;
+  const images = rawImages.map((item) =>
+    typeof item === "string" ? { src: item, caption: "" } : item
+  );
+  if (!images[index]) return;
+
+  elements.mapImageViewer.dataset.poiId = poiId;
+  renderImageViewer(images, index);
+  elements.mapImageViewer.classList.remove("is-hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeImageViewer() {
+  elements.mapImageViewer.classList.add("is-hidden");
+  document.body.style.overflow = "";
+}
+
+function renderImageViewer(images, index) {
+  elements.mapImageViewer.dataset.currentIndex = String(index);
+
+  // 显示/隐藏箭头
+  const hasMultiple = images.length > 1;
+  const prevArrow = elements.mapImageViewer.querySelector(".map-viewer-arrow--prev");
+  const nextArrow = elements.mapImageViewer.querySelector(".map-viewer-arrow--next");
+  if (prevArrow) prevArrow.style.display = hasMultiple ? "" : "none";
+  if (nextArrow) nextArrow.style.display = hasMultiple ? "" : "none";
+
+  const entry = images[index];
+  const img = elements.mapImageViewerImage;
+  img.src = entry.src;
+  img.alt = entry.caption || "";
+
+  const caption = elements.mapImageViewerCaption;
+  caption.textContent = entry.caption || "";
+  caption.style.display = entry.caption ? "" : "none";
+
+  const nav = elements.mapImageViewerNav;
+  nav.innerHTML = "";
+  for (let i = 0; i < images.length; i++) {
+    const dot = document.createElement("button");
+    dot.className = "map-viewer-dot" + (i === index ? " is-active" : "");
+    dot.setAttribute("data-viewer-index", String(i));
+    dot.setAttribute("aria-label", "第 " + (i + 1) + " 张图片");
+    nav.appendChild(dot);
+  }
+}
+
+function syncImageViewerIndex(index) {
+  const poiId = elements.mapImageViewer.dataset.poiId;
+  const poi = state.activeMap?.pois?.find((p) => p.id === poiId);
+  if (!poi) return;
+  const rawImages = poi.images ?? [];
+  const images = rawImages.map((item) =>
+    typeof item === "string" ? { src: item, caption: "" } : item
+  );
+  if (index < 0 || index >= images.length) return;
+  renderImageViewer(images, index);
 }
 
 function syncFeedbackPanelVisibility() {

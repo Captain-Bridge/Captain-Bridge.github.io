@@ -105,6 +105,19 @@
             }
           }
         },
+        "images": {
+          "type": "array",
+          "description": "POI 配图列表，每张图可带独立说明",
+          "items": {
+            "type": "object",
+            "required": ["src"],
+            "properties": {
+              "src": { "type": "string", "description": "图片路径，相对站点根目录" },
+              "caption": { "type": "string", "description": "该图片的说明文字" }
+            },
+            "additionalProperties": false
+          }
+        },
         "additionalProperties": false
       }
     }
