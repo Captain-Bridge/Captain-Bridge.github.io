@@ -33,6 +33,7 @@ skip_render:
   - factions/**/*.json
   - factions/README.md
   - map/**/*.json
+  - map/map.css
   - marathon-lore/assets/**/*.json
   - marathon-lore/content/**
 
