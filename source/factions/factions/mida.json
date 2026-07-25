@@ -1331,7 +1331,19 @@
               "materialId": "material_1",
               "materialName": "信用点",
               "materialIcon": "/factions/data/credits.webp",
-              "materialNums": "待确认"
+              "materialNums": "6,000"
+            },
+            {
+              "materialId": "material_2",
+              "materialName": "弹道涡轮",
+              "materialIcon": "/factions/data/ballistic_turbine.webp",
+              "materialNums": "6"
+            },
+            {
+              "materialId": "material_3",
+              "materialName": "生物透镜种子",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
+              "materialNums": "2"
             }
           ]
         }
