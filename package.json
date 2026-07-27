@@ -12,6 +12,6 @@
     "serve:public": "python tools/serve-public.py"
   },
   "dependencies": {
-    "@fontsource/noto-sans-sc": "5.2.9"
+    "@fontsource/noto-sans-sc": "5.3.0"
   }
 }
