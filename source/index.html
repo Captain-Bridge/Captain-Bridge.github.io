@@ -420,7 +420,8 @@
     .card { position:relative; min-height:210px; padding:20px; align-content:end; border:1px solid rgba(255,255,255,.14); background:linear-gradient(145deg,rgba(193,254,0,.06),transparent 35%),rgba(8,11,15,.94); }
     .card::before { content:"NODE"; position:absolute; top:14px; right:14px; color:rgba(193,254,0,.6); font:700 10px/1 "Consolas","Courier New",monospace; letter-spacing:.12em; }
     .card:hover { border-color:rgba(193,254,0,.54); background:linear-gradient(145deg,rgba(193,254,0,.14),transparent 38%),rgba(8,11,15,.96); transform:translateY(-4px); }
-    .card-icon { width:70px; height:70px; margin-bottom:auto; border:1px solid rgba(193,254,0,.24); background:rgba(193,254,0,.04); }
+    .card-icon { width:70px; height:70px; margin-bottom:auto; border:0; background:transparent; }
+    .card-icon img { border:0; outline:0; box-shadow:none; }
     .card strong { font-family:"Noto Sans SC Display","Microsoft YaHei",sans-serif; font-size:21px; }
     .card p { font-size:13px; line-height:1.65; }
     .status.pending { color:var(--acid); border-color:rgba(193,254,0,.34); background:rgba(193,254,0,.1); }
