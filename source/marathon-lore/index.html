@@ -11,6 +11,7 @@ layout: false
   <meta name="description" content="百科">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
   <link rel="stylesheet" href="/marathon-lore/assets/style.css?v=20260626-audio-svg-layer-fix1">
+  <link rel="stylesheet" href="/css/community-theme.css">
 </head>
 <style>
   /* 这里可以放一些 Lore 页面特有的样式 */
@@ -28,8 +29,109 @@ layout: false
     gap: 8px;
     min-width: 0;
   }
+
+  .lore-remote {
+    position: fixed;
+    top: 14px;
+    right: 18px;
+    z-index: 30;
+    color: #c1fe00;
+    font: 700 11px/1.4 "Consolas", "Courier New", monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-shadow: 0 0 14px rgba(193,254,0,.22);
+  }
+  .frame-header .frame-id { display: none; }
+
+  /* COL-NET relay shell: content rendering and protected audio/terminal rules stay untouched. */
+  body.marathon-lore-page {
+    background: #05090b;
+    color: #e8f1eb;
+  }
+  .lore-shell {
+    padding: 14px 16px 12px;
+    gap: 12px;
+    background:
+      linear-gradient(180deg, rgba(4,9,11,.82), rgba(4,8,10,.94)),
+      radial-gradient(circle at 74% 0%, rgba(193,254,0,.1), transparent 36%);
+  }
+  .hud-top, .hud-bottom, .frame-header {
+    border-color: rgba(193,254,0,.24);
+    background: rgba(4,10,12,.82);
+  }
+  .hud-title-main, .frame-id { color: #c1fe00; }
+  .hud-left { border-color: rgba(193,254,0,.2); background: rgba(5,12,14,.72); }
+  .left-brand, .left-diagnostics { border-color: rgba(193,254,0,.18); }
+  .viewport { border-color: rgba(193,254,0,.3); background: rgba(4,9,11,.84); box-shadow: 0 24px 80px rgba(0,0,0,.38); }
+  .viewport::before { opacity: .12; }
+  #app-view { padding: 12px; }
+  .entry-card, .top-card, .section-card, .entry-rail, .detail-rail, .visual-pane, .detail-copy, .tag-rail, .tag-grid {
+    border-color: rgba(193,254,0,.2);
+    background: rgba(7,15,17,.82);
+  }
+  .entry-card:hover, .top-card:hover, .section-card:hover, .entry-rail-list button:hover, .tab-btn:hover {
+    border-color: rgba(193,254,0,.58);
+    background: rgba(193,254,0,.08);
+  }
+  .entry-hero-copy h2, .entry-hero-copy h3, .detail-copy h2 { color: #c1fe00; }
+  .entry-rail-title, .detail-rail-title, .section-title { color: #dce9e1; }
+  .tab-btn.is-active, .entry-rail-list button.is-active { border-color: #c1fe00; color: #c1fe00; background: rgba(193,254,0,.12); }
+  .tab-btn { color: #b7c7be; background: rgba(7,15,17,.88); border-color: rgba(193,254,0,.22); }
+  .tab-btn:hover, .tab-btn:focus-visible, .tab-btn.is-active { color: #07100b; background: #c1fe00; border-color: #c1fe00; box-shadow: 0 0 18px rgba(193,254,0,.18); }
+  .section-header-copy h2, .entry-header-copy h2, .card-head h2, .card-head h3, .entry-card h3 { color: #e9f4ec; }
+  .section-header-copy p, .card-head p, .entry-card p, .entry-hero-copy p, .entry-breadcrumbs { color: #aebfb5; }
+  .section-header-copy h2, .entry-header-copy h2 { color: #07130b; font-weight: 800; text-shadow: 0 1px 0 rgba(193,254,0,.35); }
+  .section-header-copy p, .entry-header-copy p { color: #183b24; font-weight: 600; line-height: 1.6; }
+  .card-count, .entry-count { background: rgba(42,57,48,.94); border: 1px solid rgba(193,254,0,.24); color: #e9f4ec; }
+  .entry-rail-list button, .detail-rail-list button { background: rgba(7,15,17,.9); border-color: rgba(193,254,0,.18); color: #e5f0e8; }
+  .entry-rail-list button span:last-child, .detail-rail-list button span:last-child { color: #9fb2a7; }
+  .entry-rail-list button:hover, .entry-rail-list button:focus-visible, .detail-rail-list button:hover, .detail-rail-list button:focus-visible, .entry-rail-list button.is-active, .detail-rail-list button.is-active { background: rgba(193,254,0,.14); border-color: #c1fe00; color: #eaffef; }
+  .view.view-tags .tag-rail {
+    align-content: start;
+    grid-auto-rows: max-content;
+  }
+  .view.view-tags .tag-item {
+    min-height: 0;
+    height: auto;
+  }
+  .card:hover, .card:focus-visible, .entry-card:hover, .entry-card:focus-visible, .section-card:hover {
+    filter: none;
+    background: rgba(193,254,0,.16);
+    border-color: #c1fe00;
+  }
+  .card:hover .card-head h2, .card:hover .card-head h3, .card:hover .card-head p,
+  .card:focus-visible .card-head h2, .card:focus-visible .card-head h3, .card:focus-visible .card-head p,
+  .entry-card:hover h3, .entry-card:hover p, .section-card:hover h3, .section-card:hover p {
+    color: #07100b;
+    text-shadow: none;
+  }
+  .card:hover .card-count, .entry-card:hover .entry-count, .section-card:hover .card-count {
+    background: rgba(4,16,9,.9);
+    border-color: rgba(4,16,9,.7);
+    color: #f0fff4;
+  }
+  .section-card:hover .card-head h2, .section-card:hover .card-head h3,
+  .section-card:focus-visible .card-head h2, .section-card:focus-visible .card-head h3 {
+    color: #061008;
+    font-weight: 800;
+    letter-spacing: .02em;
+  }
+  .section-card:hover .card-head p, .section-card:focus-visible .card-head p {
+    color: #183721;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .entry-hero-copy h2, .entry-hero-copy h3 { color: #f0fff4; }
+  .entry-hero-copy p { color: #bfd0c4; }
+  @media (max-width: 900px) {
+    .lore-shell { padding: 10px; }
+    #app-view { padding: 8px; }
+  }
 </style>
 <body class="marathon-lore-page">
+  <nav class="community-nav" aria-label="站点导航">
+    <a href="/">首页</a><a href="/about/">社区内容</a><a href="/news/">新闻</a><a href="/map/perimeter/">地图</a><a class="active" href="/marathon-lore/">百科</a><a href="/factions/">阵营</a><a href="/Classic-marathon/">经典终端</a>
+  </nav>
   <div class="scanlines"></div>
   <div class="noise"></div>
   <main class="lore-shell" id="lore-app">
@@ -114,5 +216,5 @@ layout: false
   </main>
   <noscript>此页面需要 JavaScript 才能展示多级 Lore 结构。</noscript>
   <script src="/marathon-lore/assets/app.js?v=20260626-audio-click-fix1" defer></script>
-</body>
-</html>
+</body><script src="/js/community-timestamp.js"></script></html>
+

@@ -1,0 +1,15 @@
+@font-face{font-family:"Noto Sans SC Display";src:url("/marathon-lore/assets/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+:root{--community-bg:#06080c;--community-panel:rgba(9,11,16,.92);--community-line:rgba(255,255,255,.14);--community-acid:#c1fe00;--community-green:#00e55b;--community-text:#f3f6f8;--community-soft:rgba(225,230,237,.72);--community-dim:rgba(225,230,237,.46)}
+html,body{background:var(--community-bg);color:var(--community-text)}
+body:not(.classic-marathon-page){font-family:"Segoe UI","Noto Sans SC Display","Microsoft YaHei",sans-serif}
+body:not(.classic-marathon-page)::before{background:repeating-linear-gradient(to bottom,rgba(255,255,255,.025),rgba(255,255,255,.025) 1px,transparent 1px,transparent 3px);opacity:.2}
+body:not(.classic-marathon-page)::after{background:linear-gradient(180deg,rgba(5,7,10,.2),rgba(5,7,10,.82));opacity:1}
+a{transition:color .18s,border-color .18s,background .18s,transform .18s}
+.community-nav{position:relative;z-index:20;width:fit-content;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px;padding:10px 14px;border:1px solid var(--community-line);background:rgba(7,9,13,.84);backdrop-filter:blur(12px)}
+.community-nav a{min-height:36px;display:inline-flex;align-items:center;padding:0 12px;border:1px solid rgba(255,255,255,.1);color:var(--community-soft);font:700 12px/1 "Consolas","Courier New",monospace;text-decoration:none;letter-spacing:.06em}
+.community-nav a:hover,.community-nav a.active{border-color:rgba(193,254,0,.46);background:rgba(193,254,0,.09);color:var(--community-acid)}
+.community-kicker{color:var(--community-acid);font:700 11px/1.4 "Consolas","Courier New",monospace;letter-spacing:.1em;text-transform:uppercase}
+.community-panel{border:1px solid var(--community-line);background:linear-gradient(180deg,rgba(255,255,255,.025),transparent),var(--community-panel);box-shadow:0 20px 60px rgba(0,0,0,.32)}
+.community-timestamp{position:fixed;top:14px;right:18px;z-index:999;color:var(--community-acid);font:700 11px/1.4 "Consolas","Courier New",monospace;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 0 14px rgba(193,254,0,.22);pointer-events:none}
+@media(max-width:760px){.community-nav{width:100%;gap:6px}.community-nav a{flex:1;justify-content:center;min-width:110px}}
+@media(prefers-reduced-motion:reduce){video{display:none!important}}

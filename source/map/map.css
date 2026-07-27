@@ -13,6 +13,28 @@
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
 }
 
+/* 2026 navigation-board pass: map behavior remains in map-engine.js. */
+.map-page { padding:16px; gap:14px; }
+.map-top-bar { padding:10px 12px; border:1px solid rgba(193,254,0,.24); background:rgba(4,7,10,.84); }
+.map-top-bar { grid-template-columns: minmax(0, 1fr) auto; }
+.map-reset-button { width: max-content; min-width: 0; justify-self: end; white-space: nowrap; }
+.map-home-link,.map-reset-button,.map-tab,.map-filter-button { border-color:rgba(255,255,255,.14); background:rgba(8,11,15,.92); }
+.map-home-link:hover,.map-reset-button:hover,.map-tab:hover,.map-filter-button:hover,.map-popup-links a:hover { border-color:rgba(193,254,0,.54); background:rgba(193,254,0,.1); color:#c1fe00; }
+.map-title-group h1 { font-family:"Noto Sans SC Display","Microsoft YaHei",sans-serif; color:#f6f8f4; }
+.map-kicker,.map-panel-label,.map-hint { color:#c1fe00; font-family:"Consolas","Courier New",monospace; letter-spacing:.1em; }
+.map-layout { grid-template-columns:250px minmax(0,1fr); gap:14px; }
+.map-sidebar,.map-viewport-shell { border-color:rgba(193,254,0,.24); background:rgba(4,7,10,.82); box-shadow:0 20px 60px rgba(0,0,0,.38); }
+.map-sidebar { padding:14px; }
+.map-panel { border-color:rgba(193,254,0,.18); background:rgba(193,254,0,.035); }
+.map-tab.is-active,.map-filter-button.is-active { border-color:rgba(193,254,0,.62); background:rgba(193,254,0,.12); color:#c1fe00; }
+.map-viewport-shell { position:relative; overflow:hidden; }
+.map-viewport-shell::before { content:"MAP RELAY // TAU CETI IV"; position:absolute; top:14px; left:16px; z-index:4; color:rgba(193,254,0,.72); font:700 10px/1.4 "Consolas","Courier New",monospace; letter-spacing:.12em; pointer-events:none; }
+.map-hint { border-color:rgba(193,254,0,.2); background:rgba(4,7,10,.84); }
+.map-feedback-trigger { display:inline-flex; align-items:center; justify-content:center; width:max-content; min-width:120px; white-space:nowrap; border-color:rgba(193,254,0,.42); color:#c1fe00; background:rgba(4,7,10,.94); z-index:8; pointer-events:auto; }
+.map-feedback-panel { border-color:rgba(193,254,0,.42); z-index:9; pointer-events:auto; }
+.map-hint { z-index:5; }
+@media(max-width:760px){.map-page{padding:10px;gap:10px}.map-top-bar{grid-template-columns:1fr}.map-layout{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.map-sidebar{max-height:34vh}.map-tabs{order:2}.map-reset-button{order:3}}
+
 * {
   box-sizing: border-box;
 }
@@ -251,6 +273,11 @@ body {
   min-width: 0;
   justify-content: center;
   text-align: center;
+}
+
+.map-filter-button--utility .map-filter-title {
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .map-filter-button--utility .map-filter-copy {
@@ -991,3 +1018,20 @@ body {
   background: var(--green);
   border-color: var(--green);
 }
+
+/* Keep the shared terminal treatment after legacy map rules. */
+.map-page { padding:16px; gap:14px; }
+.map-top-bar { padding:10px 12px; border:1px solid rgba(193,254,0,.24); background:rgba(4,7,10,.84); }
+.map-home-link,.map-reset-button,.map-tab,.map-filter-button { border-color:rgba(255,255,255,.14); background:rgba(8,11,15,.92); }
+.map-home-link:hover,.map-reset-button:hover,.map-tab:hover,.map-filter-button:hover,.map-popup-links a:hover { border-color:rgba(193,254,0,.54); background:rgba(193,254,0,.1); color:#c1fe00; }
+.map-title-group h1 { font-family:"Noto Sans SC Display","Microsoft YaHei",sans-serif; color:#f6f8f4; }
+.map-kicker,.map-panel-label,.map-hint { color:#c1fe00; font-family:"Consolas","Courier New",monospace; letter-spacing:.1em; }
+.map-layout { grid-template-columns:250px minmax(0,1fr); gap:14px; }
+.map-sidebar,.map-viewport-shell { border-color:rgba(193,254,0,.24); background:rgba(4,7,10,.82); box-shadow:0 20px 60px rgba(0,0,0,.38); }
+.map-sidebar { padding:14px; }
+.map-panel { border-color:rgba(193,254,0,.18); background:rgba(193,254,0,.035); }
+.map-tab.is-active,.map-filter-button.is-active { border-color:rgba(193,254,0,.62); background:rgba(193,254,0,.12); color:#c1fe00; }
+.map-viewport-shell { position:relative; overflow:hidden; }
+.map-viewport-shell::before { content:"MAP RELAY // TAU CETI IV"; position:absolute; top:14px; left:16px; z-index:4; color:rgba(193,254,0,.72); font:700 10px/1.4 "Consolas","Courier New",monospace; letter-spacing:.12em; pointer-events:none; }
+.map-hint { border-color:rgba(193,254,0,.2); background:rgba(4,7,10,.84); }
+@media(max-width:760px){.map-page{padding:10px;gap:10px}.map-top-bar{grid-template-columns:1fr}.map-layout{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.map-sidebar{max-height:34vh}.map-tabs{order:2}.map-reset-button{order:3}}

@@ -11,8 +11,12 @@ layout: false
   <meta name="description" content="按分页展示 Bungie Marathon 新闻归档。站内界面保持中文，详情页支持仅切换正文内容的中英文阅读。">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
   <link rel="stylesheet" href="/news/news.css">
+  <link rel="stylesheet" href="/css/community-theme.css">
 </head>
 <body>
+  <nav class="community-nav" aria-label="站点导航">
+    <a href="/">首页</a><a href="/about/">社区内容</a><a class="active" href="/news/">新闻</a><a href="/map/perimeter/">地图</a><a href="/marathon-lore/">百科</a><a href="/factions/">阵营</a><a href="/Classic-marathon/">经典终端</a>
+  </nav>
   <video class="page-bg-video" autoplay muted loop playsinline preload="metadata" poster="/images/marathon-home-full-poster.jpg" aria-hidden="true">
     <source src="/images/marathon-home-full-bg.mp4" type="video/mp4">
   </video>
@@ -56,9 +60,6 @@ layout: false
       <header class="topbar">
         <div class="topbar-group">
           <span class="chip primary">THIS WEEK AT MARATHON</span>
-        </div>
-        <div class="topbar-group">
-          <a class="chip" href="https://www.bungie.net/7/en/News/Marathon" target="_blank" rel="noreferrer">bungie.net</a>
         </div>
       </header>
 
@@ -112,5 +113,5 @@ layout: false
   </main>
 
   <script src="/news/news-list.js" defer></script>
-</body>
-</html>
+</body><script src="/js/community-timestamp.js"></script></html>
+

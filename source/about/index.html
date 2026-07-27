@@ -6,6 +6,7 @@
   <title>社区内容 - 《失落星船：马拉松》中文站</title>
   <meta name="description" content="了解《失落星船：马拉松》中文站、官方入口、站点作者与推荐社区资源">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <link rel="stylesheet" href="/css/community-theme.css">
   <style>
     @font-face {
       font-family:"Maratype Local";
@@ -106,6 +107,9 @@
       background:rgba(7,9,13,.78);
       backdrop-filter:blur(12px);
     }
+    .community-nav { margin: 0 auto 12px; width: min(1520px, calc(100% - 40px)); }
+    .community-timestamp { top: 14px; right: 18px; }
+    .site-shell { padding-top: 4px; }
 
     .topbar-index {
       align-self:stretch;
@@ -578,6 +582,9 @@
   </style>
 </head>
 <body>
+  <nav class="community-nav" aria-label="站点导航">
+    <a href="/">首页</a><a class="active" href="/about/">社区内容</a><a href="/news/">新闻</a><a href="/map/perimeter/">地图</a><a href="/marathon-lore/">百科</a><a href="/factions/">阵营</a><a href="/Classic-marathon/">经典终端</a>
+  </nav>
   <video class="page-bg-video" autoplay muted loop playsinline aria-hidden="true">
     <source src="/images/marathon-home-full-bg.mp4" type="video/mp4">
   </video>
@@ -751,5 +758,5 @@
       window.location.href = '/';
     });
   </script>
-</body>
-</html>
+</body><script src="/js/community-timestamp.js"></script></html>
+

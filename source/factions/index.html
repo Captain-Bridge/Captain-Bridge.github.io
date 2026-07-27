@@ -10,6 +10,7 @@ layout: false
   <title>阵营 - 《失落星船：马拉松》中文站</title>
   <meta name="description" content="陣營">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
+  <link rel="stylesheet" href="/css/community-theme.css">
   <style>
     :root {
       --bg: #07090d;
@@ -60,7 +61,7 @@ layout: false
     body::before {
       background: repeating-linear-gradient(to bottom, rgba(255,255,255,.018), rgba(255,255,255,.018) 1px, transparent 1px, transparent 3px);
       opacity: .24;
-      z-index: 10;
+      z-index: 1;
     }
 
     body::after {
@@ -70,7 +71,7 @@ layout: false
       background-position: 0 0, 24px 24px;
       background-size: 32px 32px;
       opacity: .08;
-      z-index: 9;
+      z-index: 1;
     }
 
     .page {
@@ -1324,9 +1325,71 @@ layout: false
         min-height: 32px;
       }
     }
+
+    /* Faction upgrade relay: preserve the data-driven canvas, refresh only its shell. */
+    body {
+      background:
+        linear-gradient(180deg, rgba(3,7,9,.78), rgba(3,7,9,.9)),
+        radial-gradient(circle at 72% 12%, rgba(193,254,0,.1), transparent 32%),
+        url("/images/lobby.webp") center / cover no-repeat,
+        #040709;
+      font-family: "Noto Sans SC Display", "Microsoft YaHei", sans-serif;
+    }
+    .page { height: calc(100vh - 58px); padding: 0 16px 14px; grid-template-rows: minmax(0,1fr) 42px; }
+    .viewport { padding: 14px 0 8px; }
+    .force-screen { grid-template-columns: 270px minmax(0,1fr); gap: 14px; }
+    .force-sidebar { justify-content: flex-start; gap: 12px; padding: 16px 0 12px; }
+    .force-sidebar-block, .force-map-panel, .force-detail-panel { border: 1px solid rgba(193,254,0,.22); background: rgba(4,7,10,.78); box-shadow: 0 18px 50px rgba(0,0,0,.35); }
+    .force-sidebar-logo { margin: 0; padding: 14px; border-bottom: 1px solid rgba(193,254,0,.16); }
+    .force-sidebar-card-head { height: 46px; padding: 0 14px; display:flex; align-items:center; font-family:"Noto Sans SC Display","Microsoft YaHei",sans-serif; font-size:18px; font-weight:700; line-height:1; letter-spacing:.08em; text-transform:none; text-rendering:geometricPrecision; }
+    .force-sidebar-card-body { padding: 12px; }
+    .force-workspace { gap: 12px; }
+    .force-head { padding: 12px 14px; border: 1px solid rgba(193,254,0,.22); background: rgba(4,7,10,.78); align-items: center; }
+    .force-head-copy strong { color: #c1fe00; font: 700 12px/1.4 "Consolas","Courier New",monospace; letter-spacing: .12em; }
+    .force-head-copy span { color: rgba(220,230,226,.62); }
+    .force-faction-rail { justify-content: flex-end; gap: 8px; }
+    .force-faction-button { min-width: 84px; min-height: 34px; padding: 0 12px; border: 1px solid rgba(193,254,0,.2); border-radius: 0; background: rgba(193,254,0,.04); color: rgba(230,240,235,.7); font-size: 12px; }
+    .force-faction-button.active { background: rgba(193,254,0,.16); border-color: #c1fe00; color: #c1fe00; box-shadow: 0 0 18px rgba(193,254,0,.12); }
+    .force-map-panel, .force-detail-panel { padding: 12px; }
+    .force-detail-panel { border-color: rgba(193,254,0,.3); }
+    .force-level-switch, .force-detail-block { border-color: rgba(193,254,0,.18); background: rgba(193,254,0,.035); }
+    .force-level-pill.is-active, .force-level-pill.active { border-color: #c1fe00; background: rgba(193,254,0,.14); color: #c1fe00; }
+    @media (max-width: 900px) {
+      body { overflow: auto; }
+      .page { height: auto; min-height: calc(100vh - 58px); }
+      .force-screen { grid-template-columns: 1fr; }
+      .force-sidebar { order: 1; }
+      .force-workspace { order: 2; }
+      .force-shell { grid-template-columns: 1fr; overflow: visible; }
+      .force-map-panel, .force-detail-panel { min-height: 420px; }
+      .force-head { grid-template-columns: 1fr; }
+      .force-faction-rail { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; }
+    }
+
+    /* Lift the relay exposure without removing its dark terminal contrast. */
+    body {
+      background:
+        linear-gradient(180deg, rgba(5,10,13,.42), rgba(5,10,13,.68)),
+        radial-gradient(circle at 72% 12%, rgba(193,254,0,.16), transparent 34%),
+        url("/images/lobby.webp") center / cover no-repeat,
+        #0a1012;
+    }
+    body::before { opacity: .14; }
+    body::after { opacity: .045; }
+    .force-sidebar-block, .force-map-panel, .force-detail-panel, .force-head {
+      background: rgba(12,19,21,.78);
+      border-color: rgba(193,254,0,.3);
+    }
+    .force-head-copy span { color: rgba(230,240,236,.78); }
+    .force-faction-button { color: rgba(235,245,240,.82); background: rgba(193,254,0,.07); }
+    .force-detail-panel { color: rgba(245,250,247,.94); }
+    .force-node { filter: brightness(1.12); }
   </style>
 </head>
 <body>
+  <nav class="community-nav" aria-label="站点导航">
+    <a href="/">首页</a><a href="/about/">社区内容</a><a href="/news/">新闻</a><a href="/map/perimeter/">地图</a><a href="/marathon-lore/">百科</a><a class="active" href="/factions/">阵营</a><a href="/Classic-marathon/">经典终端</a>
+  </nav>
   <main class="page">
     <header class="hud-top">
       <div class="hud-chip">FACTIONS</div>
@@ -2451,5 +2514,5 @@ layout: false
       goBack();
     });
   </script>
-</body>
-</html>
+</body><script src="/js/community-timestamp.js"></script></html>
+

@@ -2524,13 +2524,17 @@ function bind() {
     });
   });
 
-  const tagSearchForm = appView.querySelector('[data-tag-search-form]');
-  if (tagSearchForm) {
-    tagSearchForm.addEventListener('submit', async event => {
+  // The tag form is mounted in the frame header and replaced on every render.
+  // Use one delegated listener so replacing the form cannot drop its submit handler.
+  if (!document.documentElement.dataset.tagSearchBound) {
+    document.documentElement.dataset.tagSearchBound = 'true';
+    document.addEventListener('submit', async event => {
+      const form = event.target.closest?.('[data-tag-search-form]');
+      if (!form) return;
       event.preventDefault();
       rememberTagRailScroll();
-      const input = tagSearchForm.querySelector('.tag-search-input');
-      tagSearchQuery = input ? input.value : '';
+      const input = form.querySelector('.tag-search-input');
+      tagSearchQuery = input?.value || '';
       state.view = 'tags';
       await render();
     });
