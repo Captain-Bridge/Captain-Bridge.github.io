@@ -1,6 +1,6 @@
 # Marathon Archive
 
-基于 `Hexo + NexT` 的静态站点仓库，主要内容包括：
+基于自定义静态构建脚本的站点仓库，主要内容包括：
 
 - **首页**：`source/index.html`（自定义深色主题，不经过 Hexo 渲染）
 - **百科**：`source/marathon-lore/`（独立 SPA 应用，含收藏品语音、模块文档）
@@ -21,7 +21,7 @@
 
 ```
 ├── .github/workflows/pages.yml     # GitHub Pages 自动发布工作流
-├── _config.yml                      # Hexo 主配置
+├── _config.yml                      # 历史配置（不参与构建）
 ├── package.json                     # 项目脚本与依赖
 │
 ├── source/                          # 站点源码与静态资源
@@ -65,7 +65,7 @@
 │   └── map-annotator.html           #   地图标注工具
 │
 ├── artifacts/                       # 辅助产物（音频索引、图标检测结果等，不入构建）
-├── public/                          # Hexo 构建产物（已提交，供本地预览）
+├── public/                          # 静态构建产物（供本地预览）
 ├── scaffolds/                       # Hexo 模板（draft / page / post）
 └── themes/                          # Hexo 主题目录
 ```
@@ -82,10 +82,10 @@ npm.cmd install
 
 | 命令 | 作用 |
 |------|------|
-| `npm.cmd run server` | 启动 Hexo 本地预览（热更新，默认 `http://localhost:4000`） |
+| `npm.cmd run serve:public` | 启动静态预览服务器 |
 | `npm.cmd run preview` | 重新构建后用静态服务器预览 |
 | `npm.cmd run build` | 生成静态文件到 `public/` |
-| `npm.cmd run clean` | 清理 Hexo 缓存和 `public/` |
+| `npm.cmd run clean` | 清理 `public/` |
 | `npm.cmd run serve:public` | 直接预览当前 `public/`（不重新构建） |
 | `npm.cmd run check:pages-size` | 检查 `public/` 产物大小 |
 | `npm.cmd run convert:png-webp` | 将 `source/images/` 中的 PNG 转为 WebP |

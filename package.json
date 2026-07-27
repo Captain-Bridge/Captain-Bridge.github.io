@@ -1,38 +1,17 @@
 {
-  "name": "hexo-site",
+  "name": "marathon-archive",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "node scripts/build-static.mjs",
     "check:pages-size": "node tools/check-pages-size.mjs public",
-    "clean": "hexo clean",
+    "clean": "node scripts/clean-static.mjs",
     "convert:png-webp": "python tools/convert-png-to-webp.py",
     "deploy": "npm run build",
-    "preview": "npm run clean && npm run build && python tools/serve-public.py",
-    "serve:public": "python tools/serve-public.py",
-    "server": "hexo server"
-  },
-  "hexo": {
-    "version": "7.3.0"
+    "preview": "npm run clean && npm run build && npm run check:pages-size && python tools/serve-public.py",
+    "serve:public": "python tools/serve-public.py"
   },
   "dependencies": {
-    "@fontsource/noto-sans-sc": "5.2.9",
-    "hexo": "^7.3.0",
-    "hexo-blog-encrypt": "^3.1.9",
-    "hexo-deployer-git": "^4.0.0",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-sitemap": "^3.0.1",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-hide-posts": "^0.4.3",
-    "hexo-math": "^5.0.0",
-    "hexo-related-posts": "^1.6.2",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^7.0.1",
-    "hexo-renderer-stylus": "^3.0.1",
-    "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0",
-    "hexo-theme-next": "^8.22.0",
-    "hexo-word-counter": "^0.2.0"
+    "@fontsource/noto-sans-sc": "5.2.9"
   }
 }
