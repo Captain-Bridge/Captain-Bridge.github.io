@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>关于本站 - 《失落星船：马拉松》中文站</title>
-  <meta name="description" content="站长档案、马拉松设定简介与官方入口占位">
+  <title>社区内容 - 《失落星船：马拉松》中文站</title>
+  <meta name="description" content="了解《失落星船：马拉松》中文站、官方入口、站点作者与推荐社区资源">
   <link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">
   <style>
     @font-face {
@@ -13,37 +13,53 @@
       font-display:swap;
     }
 
+    @font-face {
+      font-family:"Noto Sans SC Display";
+      src:url("/marathon-lore/assets/fonts/noto-sans-sc-chinese-simplified-700-normal.woff2") format("woff2");
+      font-weight:700;
+      font-style:normal;
+      font-display:swap;
+    }
+
     :root {
-      --bg:#07090d;
-      --panel:rgba(10,12,18,.92);
-      --panel-soft:rgba(255,255,255,.04);
-      --line:rgba(255,255,255,.12);
-      --line-strong:rgba(111,184,255,.38);
-      --text:rgba(245,247,250,.95);
-      --soft:rgba(214,223,236,.72);
-      --dim:rgba(214,223,236,.42);
+      --bg:#06080c;
+      --panel:rgba(9,11,16,.92);
+      --panel-solid:#0b0e14;
+      --line:rgba(255,255,255,.14);
+      --line-strong:rgba(193,254,0,.46);
+      --text:#f3f6f8;
+      --soft:rgba(225,230,237,.72);
+      --dim:rgba(225,230,237,.46);
+      --acid:#c1fe00;
       --green:#00e55b;
-      --blue:#69b4ff;
-      --amber:#f2de54;
-      --shadow:0 24px 80px rgba(0,0,0,.45);
-      --radius:0;
+      --yellow:#f2de54;
+      --red:#ff4b45;
     }
 
     * { box-sizing:border-box; }
-
+    html { scroll-behavior:smooth; }
     html,body {
       margin:0;
       min-height:100%;
-      background:
-        radial-gradient(circle at top, rgba(42,57,92,.18), transparent 34%),
-        linear-gradient(180deg, rgba(13,15,22,.92), rgba(8,9,13,.98)),
-        var(--bg);
+      background:var(--bg);
       color:var(--text);
       font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
     }
 
     body {
+      position:relative;
       overflow-x:hidden;
+    }
+
+    .page-bg-video {
+      position:fixed;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:0;
+      background:#06080c;
+      filter:saturate(.74) contrast(1.05);
     }
 
     body::before,
@@ -55,655 +71,673 @@
     }
 
     body::before {
-      background:repeating-linear-gradient(to bottom, rgba(255,255,255,.018), rgba(255,255,255,.018) 1px, transparent 1px, transparent 3px);
-      opacity:.24;
-      z-index:10;
+      z-index:1;
+      background:
+        linear-gradient(90deg, rgba(5,7,10,.97) 0%, rgba(5,7,10,.84) 35%, rgba(5,7,10,.58) 68%, rgba(5,7,10,.82) 100%),
+        linear-gradient(180deg, rgba(5,7,10,.32), rgba(5,7,10,.92));
     }
 
     body::after {
-      background-image:
-        radial-gradient(rgba(255,255,255,.06) .6px, transparent .6px),
-        radial-gradient(rgba(255,255,255,.03) .6px, transparent .6px);
-      background-position:0 0, 24px 24px;
-      background-size:32px 32px;
-      opacity:.08;
-      z-index:9;
+      z-index:3;
+      opacity:.22;
+      background:repeating-linear-gradient(to bottom, rgba(255,255,255,.025), rgba(255,255,255,.025) 1px, transparent 1px, transparent 3px);
     }
 
-    .about-shell {
+    a { color:inherit; }
+    img { max-width:100%; }
+
+    .site-shell {
       position:relative;
       z-index:2;
+      width:min(1520px, calc(100% - 40px));
       min-height:100vh;
-      display:grid;
-      grid-template-columns:280px minmax(0, 1fr);
-      grid-template-rows:74px minmax(0, 1fr) 40px;
-      gap:10px 18px;
-      padding:10px 24px;
+      margin:0 auto;
+      padding:18px 0 24px;
     }
 
-    .hud-top,
-    .hud-left,
-    .viewport,
-    .hud-bottom {
-      position:relative;
+    .topbar {
+      min-height:64px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:rgba(7,9,13,.78);
+      backdrop-filter:blur(12px);
+    }
+
+    .topbar-index {
+      align-self:stretch;
+      display:grid;
+      place-items:center;
+      min-width:66px;
+      background:var(--acid);
+      color:#0a0c0f;
+      font:700 13px/1 "Consolas","Courier New",monospace;
+    }
+
+    .topbar-title {
+      display:grid;
+      gap:3px;
       min-width:0;
     }
 
-    .hud-top,
-    .hud-left,
-    .viewport,
-    .hud-bottom,
-    .panel,
-    .info-card,
-    .profile-block,
-    .terminal-block,
-    .credit-card {
-      border:1px solid var(--line);
-      background:var(--panel);
-      box-shadow:var(--shadow);
-    }
-
-    .hud-top {
-      grid-column:1 / -1;
-      display:grid;
-      grid-template-columns:auto 1fr auto;
-      gap:14px;
-      align-items:center;
-      padding:10px 16px;
-    }
-
-    .hud-chip,
-    .nav-link {
-      min-height:44px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:0 14px;
-      border:1px solid rgba(255,255,255,.1);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      text-decoration:none;
-      font-weight:700;
-      letter-spacing:.04em;
-    }
-
-    .hud-chip.primary {
-      background:linear-gradient(180deg, rgba(106,182,255,.96), rgba(86,157,255,.86));
-      border-color:rgba(111,184,255,.55);
-      color:#111822;
-    }
-
-    .hud-copy {
-      display:grid;
-      gap:4px;
-    }
-
-    .hud-copy strong {
-      font-size:18px;
+    .topbar-title strong {
+      font-size:15px;
       letter-spacing:.08em;
       text-transform:uppercase;
     }
 
-    .hud-copy span {
-      color:var(--soft);
-      font-size:13px;
-      letter-spacing:.06em;
+    .topbar-title span {
+      color:var(--dim);
+      font:12px/1.4 "Consolas","Courier New",monospace;
     }
 
-    .hud-nav {
+    .topbar-nav {
       display:flex;
-      gap:10px;
-      flex-wrap:wrap;
+      align-items:center;
+      gap:8px;
+      padding-right:10px;
     }
 
-    .nav-link:hover {
-      border-color:rgba(255,255,255,.24);
-      background:rgba(255,255,255,.08);
+    .nav-link {
+      min-height:40px;
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:0 13px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.035);
+      text-decoration:none;
+      font-weight:700;
+      transition:border-color .18s, background .18s, color .18s;
     }
 
-    .hud-left {
-      padding:16px 14px;
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      border-color:var(--line-strong);
+      background:rgba(193,254,0,.08);
+      color:var(--acid);
+      outline:none;
+    }
+
+    .nav-link span {
+      color:var(--acid);
+      font-family:"Consolas","Courier New",monospace;
+    }
+
+    .hero {
+      min-height:clamp(510px, 70vh, 760px);
       display:grid;
-      grid-template-rows:auto auto 1fr;
-      gap:14px;
-      min-height:0;
+      grid-template-columns:minmax(0,1fr) 320px;
+      align-items:end;
+      gap:clamp(36px, 7vw, 120px);
+      padding:clamp(56px, 9vw, 132px) clamp(8px, 4vw, 64px) 54px;
+      border-bottom:1px solid var(--line);
     }
 
-    .profile-block {
-      padding:16px;
+    .hero-copy { min-width:0; }
+
+    .eyebrow {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin:0 0 20px;
+      color:var(--acid);
+      font:700 12px/1.4 "Consolas","Courier New",monospace;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow::before {
+      content:"";
+      width:42px;
+      height:2px;
+      background:var(--acid);
+      box-shadow:0 0 12px rgba(193,254,0,.5);
+    }
+
+    .hero h1 {
+      margin:0;
+      max-width:960px;
       display:grid;
       gap:12px;
+      letter-spacing:0;
     }
 
-    .avatar-frame {
-      width:96px;
-      height:96px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.1);
-      background:rgba(255,255,255,.04);
-    }
-
-    .avatar-frame img {
-      display:block;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .profile-copy {
-      display:grid;
-      gap:6px;
-    }
-
-    .profile-copy strong {
-      font-size:18px;
-      letter-spacing:.06em;
-    }
-
-    .profile-copy p {
-      margin:0;
-      color: rgb(193, 254, 0);
-      font-family:"Maratype Local","Bahnschrift SemiCondensed","DIN Condensed","Arial Narrow","Segoe UI",sans-serif;
-      font-size:20px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      text-shadow: 0 0 10px rgba(193, 254, 0, 0.18);
-    }
-
-    .profile-copy span {
-      color:var(--blue);
-      font-family:"Consolas","Courier New",monospace;
-      font-size:13px;
-      letter-spacing:.08em;
-    }
-
-    .terminal-block {
-      padding:14px 16px;
-      color:rgba(130,255,170,.84);
-      font-family:"Consolas","Cascadia Mono","Courier New",monospace;
-      font-size:13px;
-      line-height:1.72;
-      text-shadow:0 0 8px rgba(0,255,102,.12);
-    }
-
-    .terminal-block a {
-      color:inherit;
-      text-decoration:none;
-      border-bottom:1px solid rgba(130,255,170,.28);
-    }
-
-    .terminal-block a:hover {
-      border-bottom-color:rgba(130,255,170,.72);
-    }
-
-    .side-links {
-      display:grid;
-      gap:10px;
-      align-content:start;
-    }
-
-    .side-link {
-      min-height:48px;
-      display:grid;
+    .hero-title-prefix {
+      display:flex;
       align-items:center;
-      padding:0 14px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.03);
-      color:var(--text);
-      text-decoration:none;
+      gap:16px;
+      color:rgba(243,246,248,.9);
+      font-size:clamp(24px, 3vw, 42px);
       font-weight:700;
+      line-height:1.15;
     }
 
-    .side-link.with-icon {
-      grid-template-columns:18px minmax(0,1fr);
-      gap:10px;
-      justify-items:start;
+    .hero-title-prefix::after {
+      content:"";
+      width:min(180px, 22vw);
+      height:1px;
+      background:linear-gradient(90deg, var(--acid), transparent);
     }
 
-    .side-link-icon {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:18px;
-      height:18px;
+    .hero-title-main {
+      color:var(--acid);
+      font-family:"Noto Sans SC Display","Noto Sans SC","Source Han Sans SC","Microsoft YaHei",sans-serif;
+      font-size:clamp(72px, 9vw, 138px);
+      font-weight:700;
+      line-height:.9;
+      text-shadow:0 0 18px rgba(193,254,0,.07);
+    }
+
+    .hero-subtitle {
+      max-width:720px;
+      margin:28px 0 0;
       color:var(--soft);
+      font-size:clamp(15px, 1.5vw, 20px);
+      line-height:1.8;
     }
 
-    .side-link-icon svg {
-      display:block;
-      width:100%;
-      height:100%;
-      fill:currentColor;
+    .hero-quote {
+      margin:30px 0 0;
+      padding-left:18px;
+      border-left:2px solid var(--yellow);
+      color:var(--yellow);
+      font-size:14px;
+      line-height:1.75;
     }
 
-    .side-link-icon img {
-      display:block;
+    .hero-status {
+      align-self:center;
+      display:grid;
+      border:1px solid rgba(193,254,0,.26);
+      background:rgba(6,9,10,.72);
+      backdrop-filter:blur(10px);
+    }
+
+    .status-head {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 14px;
+      border-bottom:1px solid rgba(193,254,0,.2);
+      color:var(--acid);
+      font:700 11px/1.4 "Consolas","Courier New",monospace;
+      letter-spacing:.08em;
+    }
+
+    .status-head i {
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--green);
+      box-shadow:0 0 14px var(--green);
+    }
+
+    .status-mark {
+      display:grid;
+      place-items:center;
+      padding:28px;
+      border-bottom:1px solid rgba(193,254,0,.2);
+    }
+
+    .status-mark img {
+      width:116px;
+      height:116px;
+      object-fit:contain;
+      filter:drop-shadow(0 0 16px rgba(193,254,0,.2));
+    }
+
+    .status-data {
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:8px 14px;
+      padding:16px;
+      color:rgba(130,255,170,.86);
+      font:12px/1.5 "Consolas","Courier New",monospace;
+    }
+
+    .status-data dt { color:var(--dim); }
+    .status-data dd { margin:0; text-align:right; overflow-wrap:anywhere; }
+    .status-data a { text-decoration-color:rgba(130,255,170,.35); }
+
+    .content-band {
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 360px;
+      gap:42px;
+      padding:56px clamp(8px, 4vw, 64px);
+      border-bottom:1px solid var(--line);
+      background:rgba(6,8,12,.78);
+    }
+
+    .section-heading {
+      display:grid;
+      gap:8px;
+      margin-bottom:24px;
+    }
+
+    .section-heading small {
+      color:var(--acid);
+      font:700 11px/1.4 "Consolas","Courier New",monospace;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+
+    .section-heading h2 {
+      margin:0;
+      font-size:clamp(28px, 3vw, 44px);
+      letter-spacing:0;
+    }
+
+    .section-heading p {
+      max-width:720px;
+      margin:0;
+      color:var(--soft);
+      line-height:1.7;
+    }
+
+    .access-grid {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      border-top:1px solid var(--line);
+      border-left:1px solid var(--line);
+    }
+
+    .access-link {
+      min-height:116px;
+      display:grid;
+      grid-template-columns:34px 1fr auto;
+      align-items:center;
+      gap:14px;
+      padding:18px;
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.018);
+      text-decoration:none;
+      transition:background .18s, color .18s;
+    }
+
+    .access-link:hover,
+    .access-link:focus-visible {
+      background:var(--acid);
+      color:#080b0c;
+      outline:none;
+    }
+
+    .access-icon {
+      width:28px;
+      height:28px;
+      display:grid;
+      place-items:center;
+    }
+
+    .access-icon img {
       width:100%;
       height:100%;
       object-fit:contain;
     }
 
-    .side-link-icon img.qq-icon {
-      transform:scale(1.4);
-      transform-origin:center;
-    }
+    .access-link:hover .access-icon img,
+    .access-link:focus-visible .access-icon img { filter:brightness(0); }
 
-    .side-link:hover .side-link-icon {
-      color:var(--text);
-    }
-
-    .side-link:hover {
-      border-color:var(--line-strong);
-      background:rgba(105,180,255,.08);
-    }
-
-    .side-link.external {
-      min-height:52px;
-      gap:4px;
-      padding:10px 14px;
-      align-content:center;
-    }
-
-    .side-link.external small {
+    .access-copy { display:grid; gap:5px; }
+    .access-copy strong { font-size:16px; }
+    .access-copy small {
       color:var(--dim);
-      font-size:11px;
-      letter-spacing:.08em;
+      font:11px/1.4 "Consolas","Courier New",monospace;
+      letter-spacing:.06em;
       text-transform:uppercase;
     }
 
-    .side-link.pending {
-      color:var(--amber);
+    .access-link:hover small,
+    .access-link:focus-visible small { color:rgba(8,11,12,.64); }
+    .access-arrow { font:20px/1 "Consolas","Courier New",monospace; }
+
+    .contact-panel {
+      align-self:start;
+      border-top:4px solid var(--acid);
+      background:rgba(255,255,255,.035);
     }
 
-    .viewport {
-      padding:18px;
-      overflow:auto;
-    }
-
-    .view {
-      min-height:100%;
-      display:grid;
-      gap:18px;
-    }
-
-    .hero-panel {
-      padding:22px 24px;
-      border:1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(84,160,255,.08), rgba(0,0,0,0)),
-        rgba(12,14,20,.9);
-    }
-
-    .hero-panel h1 {
-      margin:0 0 10px;
-      font-size:40px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:#eef5ff;
-      font-family:"Bahnschrift SemiCondensed","DIN Condensed","Arial Narrow","Segoe UI",sans-serif;
-    }
-
-    .hero-panel p {
+    .contact-panel h3 {
       margin:0;
-      color:var(--soft);
-      line-height:1.75;
-      max-width:900px;
+      padding:18px;
+      border-bottom:1px solid var(--line);
+      font-size:17px;
+      letter-spacing:.04em;
     }
 
-    .section-grid {
+    .contact-link {
       display:grid;
-      grid-template-columns:minmax(0,1fr);
-      gap:18px;
+      grid-template-columns:1fr auto;
+      gap:12px;
+      padding:16px 18px;
+      border-bottom:1px solid var(--line);
+      text-decoration:none;
+      transition:background .18s;
     }
 
-    .panel {
-      padding:20px;
-      display:grid;
-      gap:16px;
-    }
+    .contact-link:hover,
+    .contact-link:focus-visible { background:rgba(193,254,0,.08); outline:none; }
+    .contact-link span { display:grid; gap:4px; }
+    .contact-link small { color:var(--dim); font-size:11px; }
+    .contact-link strong { color:var(--yellow); font-size:14px; }
+    .contact-link b { align-self:center; color:var(--acid); font-family:"Consolas","Courier New",monospace; }
 
-    .panel-head {
-      display:grid;
-      gap:6px;
-      padding-bottom:12px;
+    .friends-band {
+      padding:58px clamp(8px, 4vw, 64px) 68px;
+      background:rgba(7,9,13,.94);
       border-bottom:1px solid var(--line);
     }
 
-    .panel-head h2 {
-      margin:0;
-      font-size:24px;
-      letter-spacing:.06em;
-    }
-
-    .panel-head p,
-    .info-card p,
-    .credit-card p,
-    .panel-body p {
-      margin:0;
-      color:var(--soft);
-      line-height:1.72;
-    }
-
-    .panel-body {
+    .friends-grid {
       display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:12px;
-      align-items:start;
-    }
-
-    .info-card,
-    .credit-card {
-      padding:16px;
-      display:grid;
-      gap:8px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,0)),
-        rgba(15,17,24,.88);
-    }
-
-    .info-card strong,
-    .credit-card strong {
-      font-size:18px;
-    }
-
-    .disclaimer-note {
-      padding:14px 16px;
-      border:1px solid rgba(255,255,255,.08);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.018), rgba(255,255,255,0)),
-        rgba(10,12,18,.72);
-      color:var(--dim);
-      font-size:13px;
-      line-height:1.75;
-      box-shadow:var(--shadow);
-    }
-
-    .disclaimer-note strong {
-      color:var(--soft);
-      font-size:12px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .disclaimer-note p {
-      margin:8px 0 0;
-    }
-
-    .meta-label {
-      color:var(--dim);
-      font-size:12px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .meta-value {
-      color:var(--text);
-      font-family:"Consolas","Courier New",monospace;
-      font-size:14px;
-      line-height:1.7;
-      word-break:break-word;
-    }
-
-    .credit-grid {
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:12px;
-    }
-
-    .hud-bottom {
-      grid-column:1 / -1;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
+      grid-template-columns:repeat(6, minmax(0,1fr));
       gap:14px;
-      padding:0 16px;
-      color:var(--dim);
-      font-size:12px;
+    }
+
+    .friend-card {
+      display:grid;
+      grid-template-rows:auto 1fr auto;
+      grid-column:span 2;
+      min-width:0;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:var(--panel-solid);
+      text-decoration:none;
+      transition:border-color .2s, transform .2s;
+    }
+
+    .friend-card:hover,
+    .friend-card:focus-visible {
+      border-color:var(--line-strong);
+      transform:translateY(-3px);
+      outline:none;
+    }
+
+    .friend-card-media {
+      position:relative;
+      display:block;
+      aspect-ratio:16 / 9;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+      background:#05070a;
+    }
+
+    .friend-card-media img {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .3s, filter .3s;
+    }
+
+    .friend-card:hover .friend-card-media img { transform:scale(1.025); filter:brightness(1.08); }
+
+    .friend-card-source {
+      position:absolute;
+      left:12px;
+      bottom:12px;
+      padding:6px 9px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(5,7,10,.88);
+      font:11px/1.2 "Consolas","Courier New",monospace;
       letter-spacing:.08em;
       text-transform:uppercase;
     }
 
-    .hud-bottom strong {
-      color:var(--green);
-      font-weight:700;
+    .friend-card-body {
+      display:grid;
+      align-content:start;
+      gap:10px;
+      padding:20px 20px 12px;
     }
 
-    @media (max-width: 1280px) {
-      .about-shell {
-        grid-template-columns:1fr;
-        grid-template-rows:auto auto minmax(0,1fr) auto;
-      }
-
-      .section-grid,
-      .credit-grid {
-        grid-template-columns:1fr;
-      }
-
-      .panel-body {
-        grid-template-columns:1fr;
-      }
+    .friend-card-body strong { font-size:20px; }
+    .friend-card-body span { color:var(--soft); font-size:13px; line-height:1.75; }
+    .friend-card-arrow {
+      padding:4px 20px 20px;
+      color:var(--dim);
+      text-align:right;
+      font:12px/1.4 "Consolas","Courier New",monospace;
+      letter-spacing:.05em;
     }
-    @media (max-width: 900px) {
-      .about-shell {
-        padding:12px 16px;
-        gap:12px;
-        grid-template-rows:auto auto auto auto;
-      }
+    .friend-card:hover .friend-card-arrow { color:var(--acid); }
 
-      .hud-top {
+    @media (min-width:1101px) {
+      .friend-card:nth-child(4),
+      .friend-card:nth-child(5) { grid-column:span 3; }
+    }
+
+    .site-footer {
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:20px;
+      padding:24px clamp(8px, 4vw, 64px);
+      background:#07090d;
+      color:var(--dim);
+      font-size:12px;
+      line-height:1.75;
+    }
+
+    .footer-code {
+      color:var(--acid);
+      font:700 11px/1.75 "Consolas","Courier New",monospace;
+      letter-spacing:.08em;
+      white-space:nowrap;
+    }
+
+    @media (max-width:1100px) {
+      .hero { grid-template-columns:minmax(0,1fr) 280px; }
+      .content-band { grid-template-columns:1fr; }
+      .contact-panel { width:100%; }
+      .friends-grid { grid-template-columns:1fr; }
+      .friend-card { grid-column:auto; grid-template-columns:minmax(260px, 38%) 1fr auto; grid-template-rows:auto; }
+      .friend-card-media { aspect-ratio:16 / 10; border-bottom:0; border-right:1px solid var(--line); }
+      .friend-card-arrow { align-self:end; padding:18px; writing-mode:vertical-rl; }
+    }
+
+    @media (max-width:760px) {
+      .site-shell { width:min(100% - 20px, 1520px); padding-top:10px; }
+      .topbar { grid-template-columns:54px 1fr; }
+      .topbar-index { min-width:54px; }
+      .topbar-nav { grid-column:1 / -1; padding:8px 0 0; }
+      .nav-link { flex:1; justify-content:center; }
+      .hero {
+        min-height:0;
         grid-template-columns:1fr;
         align-items:start;
+        gap:38px;
+        padding:72px 8px 42px;
       }
-
-      .hud-nav {
-        width:100%;
-      }
-
-      .viewport {
-        padding:14px;
-      }
-
-      .hero-panel {
-        padding:18px 18px;
-      }
-
-      .hero-panel h1 {
-        font-size:32px;
-        letter-spacing:.1em;
-      }
-
-      .panel,
-      .info-card,
-      .profile-block,
-      .terminal-block,
-      .credit-card {
-        padding:16px;
-      }
-
-      .hud-bottom {
-        flex-direction:column;
-        align-items:flex-start;
-        padding:12px 14px;
-      }
+      .hero h1 { gap:10px; }
+      .hero-title-prefix { font-size:clamp(22px, 7vw, 30px); }
+      .hero-title-prefix::after { width:min(110px, 30vw); }
+      .hero-title-main { font-size:clamp(76px, 23vw, 100px); line-height:.92; }
+      .hero-status { width:100%; }
+      .status-mark { display:none; }
+      .content-band,
+      .friends-band { padding:44px 8px; }
+      .access-grid { grid-template-columns:1fr; }
+      .access-link { min-height:92px; }
+      .friend-card { grid-template-columns:1fr; grid-template-rows:auto 1fr auto; }
+      .friend-card-media { aspect-ratio:16 / 9; border-right:0; border-bottom:1px solid var(--line); }
+      .friend-card-arrow { writing-mode:horizontal-tb; padding:4px 20px 20px; }
+      .site-footer { grid-template-columns:1fr; padding:22px 8px; }
+      .footer-code { white-space:normal; }
     }
-    @media (max-width: 640px) {
-      .about-shell {
-        padding:10px 12px;
-        gap:10px;
-      }
 
-      .hud-top,
-      .hud-left,
-      .viewport,
-      .hud-bottom,
-      .panel,
-      .info-card,
-      .profile-block,
-      .terminal-block,
-      .credit-card {
-        border-radius:0;
-      }
-
-      .hud-chip,
-      .nav-link,
-      .side-link {
-        min-height:42px;
-      }
-
-      .hero-panel {
-        padding:16px;
-      }
-
-      .hero-panel h1 {
-        font-size:26px;
-      }
-
-      .hero-panel p,
-      .panel-head p,
-      .panel-body p,
-      .info-card p,
-      .credit-card p {
-        font-size:14px;
-        line-height:1.65;
-      }
-
-      .profile-copy strong,
-      .panel-head h2 {
-        font-size:20px;
-      }
-
-      .avatar-frame {
-        width:80px;
-        height:80px;
-      }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      .page-bg-video { display:none; }
+      *,*::before,*::after { transition-duration:.01ms !important; }
     }
   </style>
 </head>
 <body>
-  <main class="about-shell">
-    <header class="hud-top">
-      <div class="hud-chip primary">ABOUT</div>
-      <div class="hud-copy">
-        <strong>Somewhere in the heavens, they are waiting.</strong>
-        <span>关于本站</span>
+  <video class="page-bg-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="/images/marathon-home-full-bg.mp4" type="video/mp4">
+  </video>
+
+  <main class="site-shell">
+    <header class="topbar">
+      <div class="topbar-index">A-01</div>
+      <div class="topbar-title">
+        <strong>Marathon Chinese Archive</strong>
+        <span>COMMUNITY CONTENT / PUBLIC ACCESS NODE</span>
       </div>
-      <nav class="hud-nav">
-        <a class="nav-link" href="/">返回首页</a>
-        <a class="nav-link" href="/marathon-lore/">进入百科</a>
+      <nav class="topbar-nav" aria-label="站点导航">
+        <a class="nav-link" href="/"><span>←</span> 返回首页</a>
+        <a class="nav-link" href="/marathon-lore/">进入百科 <span>→</span></a>
       </nav>
     </header>
 
-    <aside class="hud-left">
-      <section class="profile-block">
-        <div class="avatar-frame">
-          <img src="/marathon-lore/assets/images/icons/marathon-brand-mark.webp" alt="Marathon">
+    <section class="hero" aria-labelledby="about-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Community content / 社区内容</p>
+        <h1 id="about-title">
+          <span class="hero-title-prefix">失落星船</span>
+          <span class="hero-title-main">马拉松</span>
+        </h1>
+        <p class="hero-subtitle">面向中文玩家建立的《Marathon》非官方资料节点，持续整理新闻、世界观、阵营、装备与游戏内档案，让分散的信息在同一处保持可检索、可阅读。</p>
+        <p class="hero-quote">“无数伟大和勇敢的人齐聚一堂，共同规划、设计并执行了这场前所未有的跨越群星的旅程。”<br>—— 达维克 · 里德</p>
+      </div>
+
+      <aside class="hero-status" aria-label="站点状态">
+        <div class="status-head"><span>ARCHIVE STATUS</span><i aria-hidden="true"></i></div>
+        <div class="status-mark"><img src="/marathon-lore/assets/images/icons/marathon-brand-mark.webp" alt="Marathon 标志"></div>
+        <dl class="status-data">
+          <dt>STATUS</dt><dd>ONLINE</dd>
+          <dt>NODE</dt><dd>COMMUNITY CONTENT</dd>
+          <dt>MODE</dt><dd>STATIC ARCHIVE</dd>
+          <dt>ROOT</dt><dd><a href="https://marathon.uesc.top" target="_blank" rel="noopener noreferrer">marathon.uesc.top</a></dd>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="content-band" aria-labelledby="access-title">
+      <div>
+        <div class="section-heading">
+          <small>01 / Official uplinks</small>
+          <h2 id="access-title">官方入口</h2>
+          <p>从官方渠道获取游戏、公告与视频内容。以下入口均跳转至对应平台。</p>
         </div>
-        <div class="profile-copy">
-          <strong style="color: rgb(193, 254, 0);">失落星船：马拉松中文站</strong>
-          <p>CN-Marathon</p>
-        </div>
-      </section>
+        <nav class="access-grid" aria-label="官方链接">
+          <a class="access-link" href="https://store.steampowered.com/app/3065800/" target="_blank" rel="noopener noreferrer">
+            <span class="access-icon"><img src="/marathon-lore/assets/images/icons/steam.svg" alt=""></span>
+            <span class="access-copy"><strong>Steam 商店</strong><small>Game / Store page</small></span>
+            <span class="access-arrow">↗</span>
+          </a>
+          <a class="access-link" href="https://www.marathonthegame.com/" target="_blank" rel="noopener noreferrer">
+            <span class="access-icon"><img src="/images/bungie-favicon.ico" alt=""></span>
+            <span class="access-copy"><strong>游戏官网</strong><small>Official / Bungie</small></span>
+            <span class="access-arrow">↗</span>
+          </a>
+          <a class="access-link" href="https://space.bilibili.com/3690991259224768" target="_blank" rel="noopener noreferrer">
+            <span class="access-icon"><img src="/marathon-lore/assets/images/icons/bilibili.svg" alt=""></span>
+            <span class="access-copy"><strong>官方 Bilibili</strong><small>Video / CN channel</small></span>
+            <span class="access-arrow">↗</span>
+          </a>
+          <a class="access-link" href="https://www.douyin.com/user/MS4wLjABAAAAT88MU3VIrwmGZrTyhkvjVxuOSgx5QmHbQtzfdsaz7WhW3Y62W_fBx7Mnbc0dujlo?from_tab_name=main&amp;is_search=1&amp;list_name=follow&amp;nt=0" target="_blank" rel="noopener noreferrer">
+            <span class="access-icon"><img src="/marathon-lore/assets/images/icons/tiktok.svg" alt=""></span>
+            <span class="access-copy"><strong>官方抖音</strong><small>Video / CN channel</small></span>
+            <span class="access-arrow">↗</span>
+          </a>
+        </nav>
+      </div>
 
-      <section class="terminal-block">
-        <div>STATUS : ONLINE</div>
-        <div>NODE   : ABOUT PAGE</div>
-        <div>MODE   : STATIC ARCHIVE</div>
-        <div>ROOT   : <a href="https://marathon.uesc.top" target="_blank" rel="noreferrer">marathon.uesc.top</a></div>
-      </section>
+      <aside class="contact-panel" aria-labelledby="contact-title">
+        <h3 id="contact-title">站点维护与联系</h3>
+        <a class="contact-link" href="https://steamcommunity.com/id/RememberM3/" target="_blank" rel="noopener noreferrer">
+          <span><small>本站作者</small><strong>Steam / 白枭</strong></span><b>↗</b>
+        </a>
+        <a class="contact-link" href="https://space.bilibili.com/273349653" target="_blank" rel="noopener noreferrer">
+          <span><small>本站作者</small><strong>Bilibili / 告知幸运的白枭</strong></span><b>↗</b>
+        </a>
+        <a class="contact-link" href="/images/qq.webp" target="_blank" rel="noopener noreferrer">
+          <span><small>问题反馈</small><strong>查看 QQ 联系方式</strong></span><b>↗</b>
+        </a>
+      </aside>
+    </section>
 
-      <nav class="side-links">
-        <a class="side-link with-icon" href="https://store.steampowered.com/app/3065800/">
-          <span class="side-link-icon" aria-hidden="true">
-            <img src="/marathon-lore/assets/images/icons/steam.svg" alt="">
+    <section class="friends-band" id="friends" aria-labelledby="friends-title">
+      <div class="section-heading">
+        <small>02 / Community relay</small>
+        <h2 id="friends-title">社区中继</h2>
+        <p>Marathon 相关社区站点、叙事档案与视觉创作资源。</p>
+      </div>
+      <div class="friends-grid">
+        <a class="friend-card" href="https://www.marathonwiki.com/" target="_blank" rel="noopener noreferrer">
+          <span class="friend-card-media">
+            <img src="/images/friends/cyberacme.png" alt="CyberAcme Wiki 的区域资料页面预览" loading="lazy">
+            <span class="friend-card-source">CyberAcme Wiki</span>
           </span>
-          <span>商店页面</span>
-        </a>
-        <a class="side-link with-icon" href="https://www.marathonthegame.com/">
-          <span class="side-link-icon" aria-hidden="true">
-            <img src="/images/bungie-favicon.ico" alt="">
+          <span class="friend-card-body">
+            <strong>Marathon Wiki</strong>
+            <span>面向 Bungie《Marathon》新作与经典三部曲的综合百科；从区域、阵营和跑者，到装备、敌人与世界观，适合按主题系统查阅设定与玩法资料。目前资料正文以英文为主，暂无完整中文版本。</span>
           </span>
-          <span>游戏官网</span>
-        </a>
-        <a class="side-link with-icon" href="https://space.bilibili.com/3690991259224768">
-          <span class="side-link-icon" aria-hidden="true">
-            <img src="/marathon-lore/assets/images/icons/bilibili.svg" alt="">
-          </span>
-          <span>官方B站</span>
-        </a>
-        <a class="side-link with-icon" href="https://www.douyin.com/user/MS4wLjABAAAAT88MU3VIrwmGZrTyhkvjVxuOSgx5QmHbQtzfdsaz7WhW3Y62W_fBx7Mnbc0dujlo?from_tab_name=main&is_search=1&list_name=follow&nt=0">
-          <span class="side-link-icon" aria-hidden="true">
-            <img src="/marathon-lore/assets/images/icons/tiktok.svg" alt="">
-          </span>
-          <span>官方抖音</span>
+          <span class="friend-card-arrow">访问百科 →</span>
         </a>
 
-        <a class="side-link external pending" href="https://steamcommunity.com/id/RememberM3/">
-          <small>本站作者</small>
-          <span>Steam / 白枭</span>
-        </a>
-        <a class="side-link external pending" href="https://space.bilibili.com/273349653">
-          <small>本站作者</small>
-          <span>Bilibili / 告知幸运的白枭</span>
-        </a>
-
-        <a class="side-link external pending" href="/images/qq.webp">
-          <span class="side-link-icon" aria-hidden="true">
-            <img class="qq-icon" src="/marathon-lore/assets/images/icons/qq.svg" alt="">
+        <a class="friend-card" href="https://waypoint.bumgie.org/" target="_blank" rel="noopener noreferrer">
+          <span class="friend-card-media">
+            <img src="/images/friends/bumgie-waypoint.jpg" alt="Bumgie Waypoint 的合约档案页面预览" loading="lazy">
+            <span class="friend-card-source">Bumgie Waypoint</span>
           </span>
-          <span>问题反馈</span>
+          <span class="friend-card-body">
+            <strong>Marathon Waypoint</strong>
+            <span>围绕游戏内叙事资料建立的专题档案，集中整理各赛季合约、目标与故事线，并延伸到过场动画、暗泽沼泽和 AI 语音，便于追踪任务脉络。站内支持切换中文，中文玩家可以直接查阅。</span>
+          </span>
+          <span class="friend-card-arrow">浏览档案 →</span>
         </a>
-      </nav>
-    </aside>
 
-    <section class="viewport">
-      <div class="view">
-        <section class="hero-panel">
-          <h1 style="color: rgb(193, 254, 0); text-shadow: 0 0 10px rgba(193, 254, 0, 0.18);">失落星船：马拉松</h1>
-          <p>《光环》和《命运》创作者推出高风险生存第一人称射击游戏，玩家将探索失落的天仓五IV殖民地并搜寻物资。</p><br>
-          <p style="color: rgb(242, 222, 84);">无数伟大和勇敢的人齐聚一堂，共同规划、设计并执行了这场前所未有的跨越群星的旅程。  ——达维克 · 里德</p>
-        </section>
+        <a class="friend-card" href="https://www.artstation.com/channels/tag/TheArtofMarathon" target="_blank" rel="noopener noreferrer">
+          <span class="friend-card-media">
+            <img src="/images/friends/artstation-marathon.jpg" alt="The Art of Marathon 专题视觉预览" loading="lazy">
+            <span class="friend-card-source">ArtStation</span>
+          </span>
+          <span class="friend-card-body">
+            <strong>The Art of Marathon</strong>
+            <span>ArtStation 汇集的《Marathon》艺术专题，可连续浏览角色、武器、场景与品牌视觉等创作成果；尤其适合观察官方美术语言和幕后设计细节。作品以视觉展示为主，没有专门的中文内容整理。</span>
+          </span>
+          <span class="friend-card-arrow">查看作品 →</span>
+        </a>
 
-        <div class="section-grid">
-          <section class="panel" id="marathon">
-            <div class="panel-head">
-              <h2>游戏简介</h2>
-              <p>在《失落星船：马拉松》中，潜入充满敌对玩家、敌对势力和变幻莫测危险的黑暗科幻世界。单人或组队搜寻地图，然后在紧张刺激的PVP和PVE战斗中杀出重围，成功撤离。</p>
-            </div>
-            <div class="panel-body">
-              <div class="info-card">
-                <strong>生存与发展</strong>
-                <p>在失落殖民地搜寻危险区域，寻找货品、战利品和情报。</p>
-                <p>从被击败的玩家和敌人身上缴获装备。成功撤离，填满你的保险库。</p>
-                <p>完成合约赢取奖励，升级配装，变得更强。</p>
-              </div>
-              <div class="info-card">
-                <strong>疾行者策略由你来定</strong>
-                <p>选择适合你游戏风格的疾行者外壳，每个外壳都拥有独特技能。</p>
-                <p>使用各类可改装武器和自定义技能升级配装。</p>
-                <p>打造无数配装，从隐蔽的渗透者到前线的硬汉，再到支援专家，应有尽有。</p>
-              </div>
-              <div class="info-card">
-                <strong>依靠团队，相信自己</strong>
-                <p>组队（两人或三人）或独自挑战天仓五。</p>
-                <p>建立危险而脆弱的临时联盟。与敌对玩家达成交易，或为了自己的利益背叛其信任。</p>
-                <p>成为单人拾荒者鲁克，除了沿途所获，没有什么可失去的。</p>
-              </div>
-              <div class="info-card">
-                <strong>勇往直前，提升力量</strong>
-                <p>在赛季中不断提升力量，拿出最强装备，赢取丰厚奖励。</p>
-                <p>攀登天梯，在排名模式中证明你是顶尖疾行者。</p>
-                <p>进入低温档案室，挑战突袭式挑战，解决层层谜题，并与敌方团队争夺顶级战利品。</p>
-              </div>
-            </div>
-          </section>
-        </div>
+        <a class="friend-card" href="https://guesscadia.bumgie.org/" target="_blank" rel="noopener noreferrer">
+          <span class="friend-card-media">
+            <img src="/images/friends/guesscadia.png" alt="GuessCADIA Marathon 地点竞猜游戏预览" loading="lazy">
+            <span class="friend-card-source">GuessCADIA</span>
+          </span>
+          <span class="friend-card-body">
+            <strong>GuessCADIA</strong>
+            <span>以《Marathon》的天仓五 IV 为舞台，将 Perimeter、Dire Marsh 与 Outpost 等区域变成地点竞猜挑战；观察场景细节、判断所在位置，适合检验地图熟悉度。游戏界面目前以英文为主，暂无中文切换。</span>
+          </span>
+          <span class="friend-card-arrow">开始竞猜 →</span>
+        </a>
+
+        <a class="friend-card" href="https://timeline.bumgie.org/" target="_blank" rel="noopener noreferrer">
+          <span class="friend-card-media">
+            <img src="/images/friends/timeline.png" alt="Marathon Timeline 三维故事时间线预览" loading="lazy">
+            <span class="friend-card-source">Bumgie Timeline</span>
+          </span>
+          <span class="friend-card-body">
+            <strong>Marathon Timeline</strong>
+            <span>通过可滚动的 3D 时间轴梳理《Marathon》故事，从约公元前 6400 万年一路延伸至 2893 年；音乐、音效与年代节点共同构成沉浸式设定导览。内容目前以英文呈现，暂无中文版本。</span>
+          </span>
+          <span class="friend-card-arrow">探索时间线 →</span>
+        </a>
       </div>
     </section>
 
-    <footer class="hud-bottom">
-      <span>本站为《失落星船：马拉松》相关的非官方粉丝资料整理页，与Bungie及《失落星船：马拉松》官方无任何隶属、授权或背书关系。本站中涉及的名称、商标、Logo、角色、图像及相关素材，其版权与商标权均归原权利人所有。本站内容仅用于中文整理、介绍与交流参考，如有疏漏或错误，请以官方发布信息为准。</span>
+    <footer class="site-footer">
+      <span class="footer-code">LEGAL / NON-OFFICIAL FAN ARCHIVE</span>
+      <span>本站为《失落星船：马拉松》相关的非官方粉丝资料整理页，与 Bungie 及《失落星船：马拉松》官方无任何隶属、授权或背书关系。本站中涉及的名称、商标、Logo、角色、图像及相关素材，其版权与商标权均归原权利人所有。本站内容仅用于中文整理、介绍与交流参考，如有疏漏或错误，请以官方发布信息为准。</span>
     </footer>
   </main>
+
   <script>
     window.addEventListener('keydown', function (event) {
       if (event.key !== 'Escape') return;
