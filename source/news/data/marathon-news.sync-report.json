@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-21T15:25:32.899Z",
+  "generatedAt": "2026-07-28T15:53:08.866Z",
   "source": "bungie-contentstack",
-  "totalFetched": 54,
+  "totalFetched": 55,
   "itemsPerPage": 8,
   "bilingual": {
-    "officialBilingualCount": 43,
+    "officialBilingualCount": 44,
     "englishOnlyCount": 10,
     "generatedChineseCount": 10,
     "translationAttempted": false,
@@ -12,19 +12,28 @@
   },
   "changes": {
     "addedCount": 1,
-    "updatedCount": 0,
+    "updatedCount": 1,
     "removedCount": 0,
     "added": [
       {
-        "id": "blt1a5bea4ef9ae178f",
-        "title": "《失落星船：马拉松》更新1.1.5",
-        "localPath": "/news/articles/marathon-update-1-1-5/",
+        "id": "blt9d6165a0a65798f9",
+        "title": "《失落星船：马拉松》更新1.1.5.1",
+        "localPath": "/news/articles/marathon-update-1-1-5-1/",
         "articleUrl": null,
+        "publishedAt": "2026-07-28T15:00:00.000Z",
+        "hasChinese": true
+      }
+    ],
+    "updated": [
+      {
+        "id": "blt1a5bea4ef9ae178f",
+        "title": "Marathon Update 1.1.5",
+        "localPath": "/news/articles/marathon-update-1-1-5/",
+        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_5",
         "publishedAt": "2026-07-21T15:00:00.000Z",
         "hasChinese": true
       }
     ],
-    "updated": [],
     "removed": []
   }
 }
