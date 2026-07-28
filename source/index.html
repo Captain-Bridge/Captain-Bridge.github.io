@@ -91,7 +91,6 @@
       display: flex;
       flex-direction: column;
       gap: 22px;
-      min-height: calc(100vh - 48px);
     }
     .brand {
       display: grid;
@@ -411,7 +410,7 @@
     .diag { margin-top:0; padding:12px; border:1px solid rgba(193,254,0,.18); background:rgba(193,254,0,.035); }
     .diag p { font-size:11px; line-height:1.45; letter-spacing:.04em; }
     .main { padding:0; gap:18px; background:transparent; border:0; box-shadow:none; }
-    .hero { position:relative; min-height:430px; display:flex; align-items:flex-end; padding:42px; overflow:hidden; border:1px solid rgba(193,254,0,.28); background:linear-gradient(110deg,rgba(193,254,0,.14),transparent 42%),linear-gradient(180deg,rgba(5,8,10,.08),rgba(5,8,10,.92)); }
+    .hero { position:relative; min-height:260px; display:flex; align-items:center; padding:32px 42px; overflow:hidden; border:1px solid rgba(193,254,0,.28); background:linear-gradient(110deg,rgba(193,254,0,.14),transparent 42%),linear-gradient(180deg,rgba(5,8,10,.08),rgba(5,8,10,.92)); }
     .hero::after { content:"MARATHON // 2026"; position:absolute; top:22px; right:24px; color:rgba(193,254,0,.72); font:700 11px/1.4 "Consolas","Courier New",monospace; letter-spacing:.13em; }
     .hero h2 { max-width:100%; margin:0; color:#f6f8f4; font-size:clamp(50px,7vw,110px); letter-spacing:.06em; line-height:1.12; text-wrap:balance; overflow-wrap:normal; word-break:normal; text-shadow:0 0 26px rgba(193,254,0,.2); }
     .hero h2::before { content:"ESCAPE WILL MAKE ME GOD"; display:block; margin-bottom:20px; color:var(--acid); font:700 11px/1.4 "Consolas","Courier New",monospace; letter-spacing:.12em; white-space:nowrap; }
@@ -426,7 +425,7 @@
     .card p { font-size:13px; line-height:1.65; }
     .status.pending { color:var(--acid); border-color:rgba(193,254,0,.34); background:rgba(193,254,0,.1); }
     @media (max-width:1100px) { .shell { grid-template-columns:210px minmax(0,1fr); } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media (max-width:760px) { .shell { display:block; padding:10px; } .sidebar { margin-bottom:12px; } .diag { max-height:220px; overflow:auto; } .hero { min-height:310px; padding:26px; } .hero::after { top:16px; right:16px; } .hero h2 { line-height:1.2; letter-spacing:.035em; } .grid { grid-template-columns:1fr; } .card { min-height:180px; } }
+    @media (max-width:760px) { .shell { display:block; padding:10px; } .sidebar { margin-bottom:12px; } .diag { max-height:220px; overflow:auto; } .hero { min-height:200px; padding:20px 26px; } .hero::after { top:16px; right:16px; } .hero h2 { line-height:1.2; letter-spacing:.035em; } .grid { grid-template-columns:1fr; } .card { min-height:180px; } }
   </style>
 </head>
 <body>
