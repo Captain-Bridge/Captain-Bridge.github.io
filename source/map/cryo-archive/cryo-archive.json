@@ -395,7 +395,7 @@
       "images": [
         { "src": "./imgs/02保险库门口.webp", "caption": "需要充满的低温冷却剂" },
         { "src": "./imgs/02电池.webp", "caption": "02保险库的电池机器在右侧，需要4 电池" },
-        { "src": "./imgs/02图案.webp", "caption": "02不需要记住图案，图中最左侧为冰霜开关，其余三个箭头指向三个需要互动的图案，最右侧需要上去之后回头，在主视角头顶" }  ,
+        { "src": "./imgs/02图案.webp", "caption": "02不需要记住图案\n源自油管 SeraphMax 的低温攻略\nhttps://www.youtube.com/watch?v=QmTICYRj2wU\nB站转载：BV1goN168EQt" }  ,
         { "src": "./imgs/02冰霜开关.webp", "caption": "需要击破该开关才可互动最下层冰霜内的图案" }              
       ],
       "description": "4 电池\n1 充满的低温冷却剂\n\n固定刷新：金色独特V99\n人工智能子程序02",
@@ -412,11 +412,7 @@
         { "src": "./imgs/泵站凭证.webp", "caption": "在某个区域的第一个房间(玩家复活后进入的第一个房间)找到泵站凭证\n注意，拾取后会刷新一只金甲看守者，同时房间会上锁，但解锁并不需要击杀看守者" },
         { "src": "./imgs/03保险库门口.webp", "caption": "前往保险库03使用5 电池" },
         { "src": "./imgs/扫描.webp", "caption": "电池放满后，保险库会扫描最近的人" },
-        { "src": "./imgs/03图案1.webp", "caption": "03有一个错误图案，需要判断图案与门口的图案相同再互动" },
-        { "src": "./imgs/03图案2.webp", "caption": "右侧门进入后脚下有一个图案，从右侧箭头处下去回头即可看到，下梯子前沿着右墙走也有一个图案\n从中间进去是保险库，左侧有梯子进入下方去找图案" }  ,
-        { "src": "./imgs/03图案3-3.webp", "caption": "从图3进入后站在如图所示位置，左侧箭头处为冰霜开关，右侧为一个图案" },
-        { "src": "./imgs/03图案3.webp", "caption": "图4指示的开关和图案" },
-        { "src": "./imgs/03图案4.webp", "caption": "从图3位置回头看，从箭头方向进入后，发现角落处有一个图案(在图5中图案的右下方)" }                            
+        { "src": "./imgs/03图案.webp", "caption": "03需要记住门口面板的图案，有一个错误面板\n源自油管 SeraphMax 的低温攻略\nhttps://www.youtube.com/watch?v=q5zWBndVQFM\nB站转载：BV1r4NE6NEtk" }                            
       ],
       "description": "5 电池\n泵站凭证\n\n固定刷新：金色独特征服轻机枪\n人工智能子程序03",
       "source": ""
@@ -430,7 +426,7 @@
       "y": 2907,
       "images": [
         { "src": "./imgs/01保险库门口.webp", "caption": "需要5 电池" },
-        { "src": "./imgs/01图案.webp", "caption": "01不需要记住图案，左右两个箭头分别指示一个图案\n中间的箭头指向保险库，同时门口有冰霜开关和一个图案" }         
+        { "src": "./imgs/01图案.webp", "caption": "01不需要记住图案\n源自油管 SeraphMax 的低温攻略\nhttps://www.youtube.com/watch?v=rm8AvOcSEM0\nB站转载：BV17FN366EJM" }         
       ],
       "description": "5 电池\n\n固定刷新：金色独特BRRT\n人工智能子程序01",
       "source": ""
@@ -449,7 +445,8 @@
         { "src": "./imgs/DNA样本搜索物.webp", "caption": "搜索冷冻人体袋" } ,
         { "src": "./imgs/04DNA试管.webp", "caption": "获取殖民者DNA试管" } ,
         { "src": "./imgs/04试管转换凭证.webp", "caption": "前往圆形监狱内部，使用1 电池将殖民者DNA试管转换为殖民凭证\n转换时会刷新一波紫甲" } ,
-        { "src": "./imgs/04保险库门口.webp", "caption": "前往04保险库，使用5 电池与殖民凭证打开保险库" }
+        { "src": "./imgs/04保险库门口.webp", "caption": "前往04保险库，使用5 电池与殖民凭证打开保险库" },
+        { "src": "./imgs/04图案.webp", "caption": "04需要记住门口面板的图案，有一个错误面板\n源自油管 SeraphMax 的低温攻略\nhttps://www.youtube.com/watch?v=sJwGgPwK8R4\nB站转载：BV1e7NS6kEgU" }
       ],
       "description": "5 电池\n殖民凭证\n(需要安全权限3级以进入圆形监狱使用1 电池将殖民者DNA试管转换为殖民凭证)\n\n固定刷新：金色独特V85断路器\n人工智能子程序04",
       "source": ""
@@ -465,7 +462,8 @@
         { "src": "./imgs/休眠凭证.webp", "caption": "南或北休眠室找到休眠凭证\n拾取时会刷新一只金甲灼烧看守者(可选击杀)" },
         { "src": "./imgs/05外部开关1.webp", "caption": "(可选)击破四个冰霜开关关闭05门口冷库的冰冻地面" },
         { "src": "./imgs/05外部开关2.webp", "caption": "(可选)击破四个冰霜开关关闭05门口冷库的冰冻地面" },
-        { "src": "./imgs/05保险库门口.webp", "caption": "使用4 电池及一个充满的低温冷却剂及休眠凭证开启" }
+        { "src": "./imgs/05保险库门口.webp", "caption": "使用4 电池及一个充满的低温冷却剂及休眠凭证开启" },
+        { "src": "./imgs/05图案.webp", "caption": "05需要记住门口面板的图案，有两个错误面板\n源自油管 SeraphMax 的低温攻略\nhttps://www.youtube.com/watch?v=w5DzyDWXg5E\nB站转载：BV1mpNo6HEeK" }
 
       ],
       "description": "4 电池\n1 充满的低温冷却剂\n休眠凭证\n\n固定刷新：金色独特M77突击步枪\n人工智能子程序05",
@@ -484,7 +482,8 @@
         { "src": "./imgs/秘密实验室图案.webp", "caption": "记住关闭数据损坏区域的机器后面的房子内的图案与顺序(从左至右)" } ,
         { "src": "./imgs/实验室关闭杀毒.webp", "caption": "乘坐电梯前往实验室(需要杀毒包)，并且击杀金甲的幽魂看守者(可选)、关闭数据损坏区域(可选)" } ,
         { "src": "./imgs/06门口.webp", "caption": "06保险库需要8块电池 1低温冷却剂" } ,
-        { "src": "./imgs/06外部图案.webp", "caption": "在实验室中寻找互动面板，按照秘密实验室内的图案顺序进行互动\n若有重复的则互动多次,每种图案仅有一个面板" }
+        { "src": "./imgs/06外部图案.webp", "caption": "在实验室中寻找互动面板，按照秘密实验室内的图案顺序进行互动\n若有重复的则互动多次,每种图案仅有一个面板" },
+        { "src": "./imgs/06图案.webp", "caption": "06需要记住门口面板的图案，有两个错误面板(图中黄色板后红框处也有一个)\n源自油管 SeraphMax 的低温攻略\nhttps://www.youtube.com/watch?v=Bn7hstSKq5Q\nB站转载：BV1PVKa6jEon" }
       ],
       "description": "保险库06:\n8 电池\n1 充满的低温冷却剂\n前往秘密实验室(需要杀毒包+安全权限等级4)，使用3电池关闭杀毒区域\n进入内部房间并记住图案(从左至右)的顺序\n使用电梯进入实验室并启动保险库06\n按照顺序互动实验室中的图案\n若有重复图案，实验室中的面板可重复互动\n\n固定刷新：金色独特风行者M1T\n!!!人工智能子程序06!!!",
       "source": ""
@@ -872,6 +871,19 @@
       "x": 1623,
       "y": 2301,
       "description": "由撤离站启动\n需要安全权限3",
+      "source": ""
+    },
+    {
+      "id": "coolant-empty-777",
+      "title": "空的低温冷却剂",
+      "iconKey": "coolant-full",
+      "iconSize": 120,
+      "x": 3617,
+      "y": 700,
+      "images": [
+        { "src": "./imgs/冷却剂(统舱).webp", "caption": "不确定是否是必刷" }
+      ],
+      "description": "需要二级权限，房内亦有其它补给",
       "source": ""
     }
   ]
