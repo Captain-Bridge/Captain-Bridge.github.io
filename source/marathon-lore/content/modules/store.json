@@ -1,0 +1,202 @@
+{
+  "id": "store",
+  "title": "商店",
+  "count": "前端暂时如此设计，所用素材全部为占位素材",
+  "icon": "/marathon-lore/assets/images/icons/store.svg",
+  "summary": "浏览藏品与组合包。",
+  "view": "store",
+  "items": [
+    {
+      "id": "crimson-v75",
+      "title": "绯红终点 V75",
+      "price": "600",
+      "category": "武器风格",
+      "summary": "为 V75 SCAR 定制的高对比度武器外观。",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/V75.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/V75_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/V75.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/crimson-v75.md"
+    },
+    {
+      "id": "signal-m77",
+      "title": "信号越界 M77",
+      "price": "600",
+      "category": "武器风格",
+      "summary": "以殖民网络警戒标记重绘的 M77 外观。",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/M77.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/M77_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/M77.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/signal-m77.md"
+    },
+    {
+      "id": "night-overrun",
+      "title": "夜间协议 奔袭",
+      "price": "800",
+      "category": "武器风格",
+      "summary": "面向低照度任务的奔袭突击步枪外观。",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/overrun.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/overrun_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/overrun.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/night-overrun.md"
+    },
+    {
+      "id": "neon-lookout-v66",
+      "title": "霓虹瞭望 V66",
+      "price": "600",
+      "category": "武器风格",
+      "summary": "为远距警戒任务配置的高可见度 V66 外观。",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/V66_Lookout.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/V66_Lookout_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/V66_Lookout.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/neon-lookout-v66.md"
+    },
+    {
+      "id": "circuit-breaker-v85",
+      "title": "断路脉冲 V85",
+      "price": "600",
+      "category": "武器风格",
+      "summary": "以过载警示和电路标记覆盖的 V85 外观。",
+      "layout": {
+        "size": 2
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/V85_circuit_breaker.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/V85_circuit_breaker_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/V85_circuit_breaker.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/circuit-breaker-v85.md"
+    },
+    {
+      "id": "void-signal-v99",
+      "title": "虚空信标 V99",
+      "price": "700",
+      "category": "武器风格",
+      "summary": "以深空导航信标为主题的 V99 外观。",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/V99.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/V99_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/V99.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/void-signal-v99.md"
+    },
+    {
+      "id": "thunder-ares",
+      "title": "雷域协议 ARES",
+      "price": "700",
+      "category": "武器风格",
+      "summary": "为高能量交战设计的 ARES 轨道武器外观。",
+      "layout": {
+        "size": 2
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/ARES_RG.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/ARES_RG_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/ARES_RG.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/thunder-ares.md"
+    },
+    {
+      "id": "breach-wstr",
+      "title": "破门指令 WSTR",
+      "price": "650",
+      "category": "武器风格",
+      "summary": "用于近距离封锁作业的 WSTR 战斗霰弹枪外观。",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/WSTR_combat_shotgun.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/WSTR_combat_shotgun_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/WSTR_combat_shotgun.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/breach-wstr.md"
+    },
+    {
+      "id": "sentinel-d54",
+      "title": "哨戒回路 D54",
+      "price": "650",
+      "category": "武器风格",
+      "summary": "以安保哨戒回路为主题的 D54 战斗手枪外观。",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/D54_battle_pistol.webp",
+      "iconImage": "/marathon-lore/content/docs/loot/weapon/D54_battle_pistol_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/loot/weapon/D54_battle_pistol.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/sentinel-d54.md"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "terminal-redline",
+      "title": "终端红线组合包",
+      "price": "1,000",
+      "summary": "两款武器风格组成的限定收藏。",
+      "featured": true,
+      "imageFit": "cover",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/V75.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/terminal-redline.md",
+      "itemIds": [
+        "crimson-v75",
+        "signal-m77"
+      ]
+    },
+    {
+      "id": "watchline-protocol",
+      "title": "瞭望线协议组合包",
+      "price": "1,000",
+      "summary": "两款警戒主题武器风格组成的组合包。",
+      "imageFit": "cover",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/V66_Lookout.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/watchline-protocol.md",
+      "itemIds": [
+        "neon-lookout-v66",
+        "circuit-breaker-v85"
+      ]
+    },
+    {
+      "id": "deep-arc",
+      "title": "深空电弧组合包",
+      "price": "1,200",
+      "summary": "深空信标与高能轨道武器风格组合。",
+      "imageFit": "cover",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/V99.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/deep-arc.md",
+      "itemIds": [
+        "void-signal-v99",
+        "thunder-ares"
+      ]
+    },
+    {
+      "id": "close-lockdown",
+      "title": "近距封锁组合包",
+      "price": "1,100",
+      "summary": "为近距离突入和哨戒任务准备的武器风格组合。",
+      "imageFit": "cover",
+      "coverImage": "/marathon-lore/content/docs/loot/weapon/WSTR_combat_shotgun.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/close-lockdown.md",
+      "itemIds": [
+        "breach-wstr",
+        "sentinel-d54"
+      ]
+    }
+  ]
+}
