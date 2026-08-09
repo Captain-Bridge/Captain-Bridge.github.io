@@ -86,6 +86,7 @@ layout: false
     .menu-grid {
       position: absolute;
       z-index: 2;
+      pointer-events: none;
       left: 0;
       top: 0;
       display: grid;
@@ -96,7 +97,12 @@ layout: false
     }
     .menu-grid .rail:last-child {
       justify-self: end;
-      width: min(180px, 16vw);
+      width: max-content;
+      max-width: min(180px, 16vw);
+    }
+    .menu-grid .rail {
+      pointer-events: auto;
+      width: max-content;
     }
     .rail {
       display: grid;
