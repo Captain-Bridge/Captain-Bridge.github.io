@@ -24,6 +24,7 @@ let tagIndex = [];
 let tagSearchQuery = '';
 let tagRailScrollTop = 0;
 let selectedStoreItemId = null;
+const storeGridScrollTopBySection = new Map();
 let storeGridLayoutRaf = null;
 let previewTooltip = null;
 let activePreviewAnchor = null;
@@ -96,6 +97,20 @@ function restoreTagRailScroll() {
   if (tagRail) {
     tagRail.scrollTop = tagRailScrollTop;
   }
+}
+
+function rememberStoreGridScroll(sectionId = state.sectionId) {
+  const storeGrid = appView.querySelector('.store-grid');
+  if (storeGrid) {
+    storeGridScrollTopBySection.set(sectionId === 'bundles' ? 'bundles' : 'catalog', storeGrid.scrollTop);
+  }
+}
+
+function restoreStoreGridScroll(sectionId = state.sectionId) {
+  const storeGrid = appView.querySelector('.store-grid');
+  if (!storeGrid) return;
+  const key = sectionId === 'bundles' ? 'bundles' : 'catalog';
+  storeGrid.scrollTop = storeGridScrollTopBySection.get(key) || 0;
 }
 
 function ensureFrameHeaderStack() {
@@ -305,6 +320,7 @@ function normalizeStoreCategory(category) {
     const normalizedItem = {
       ...item,
       id,
+      acquisition: item?.acquisition === 'bundle-only' ? 'bundle-only' : 'catalog',
       layout: { size, direction },
       imageFit: item?.imageFit === 'cover' ? 'cover' : 'contain'
     };
@@ -335,14 +351,15 @@ function normalizeStoreCategory(category) {
         console.warn(`[store] Bundle "${bundleId}" repeats item "${itemId}".`);
         continue;
       }
-      if (storeMembershipByItem.has(itemId)) {
-        console.warn(`[store] Item "${itemId}" already belongs to bundle "${storeMembershipByItem.get(itemId)}"; ignoring its membership in "${bundleId}".`);
-        continue;
-      }
-
       localIds.add(itemId);
       memberIds.push(itemId);
-      storeMembershipByItem.set(itemId, bundleId);
+      const memberships = storeMembershipByItem.get(itemId) || [];
+      if (memberships.includes(bundleId)) {
+        console.warn(`[store] Item "${itemId}" repeats membership in bundle "${bundleId}".`);
+        continue;
+      }
+      memberships.push(bundleId);
+      storeMembershipByItem.set(itemId, memberships);
     }
 
     let featured = Boolean(bundle.featured);
@@ -2501,7 +2518,6 @@ function storeCardMarkup(record, kind) {
           <small>${escapeHtml(eyebrow)}</small>
           <strong>${escapeHtml(record.title)}</strong>
         </span>
-        ${storePriceMarkup(record.price, record.title)}
       </span>
     </button>
   `;
@@ -2510,7 +2526,9 @@ function storeCardMarkup(record, kind) {
 function storeView() {
   const category = getCategory('store');
   const activeTab = state.sectionId === 'bundles' ? 'bundles' : 'catalog';
-  const records = activeTab === 'bundles' ? (category?.bundles || []) : (category?.items || []);
+  const records = activeTab === 'bundles'
+    ? (category?.bundles || [])
+    : (category?.items || []).filter(item => item.acquisition !== 'bundle-only');
   const emptyLabel = activeTab === 'bundles' ? '暂无组合包' : '暂无商店藏品';
 
   appView.innerHTML = `
@@ -2564,10 +2582,27 @@ function storeDetailVisual(item) {
   `;
 }
 
+function storeTitleRail(title) {
+  const safeTitle = escapeHtml(title || 'UNKNOWN');
+  const sequence = Array.from({ length: 6 }, () => `
+    <span class="store-title-rail-name">${safeTitle}</span>
+    <span class="store-title-rail-separator">X</span>
+  `).join('');
+
+  return `
+    <div class="store-title-rail" aria-hidden="true">
+      <div class="store-title-rail-track">
+        <div class="store-title-rail-sequence">${sequence}</div>
+        <div class="store-title-rail-sequence">${sequence}</div>
+      </div>
+    </div>
+  `;
+}
+
 async function storeItemDetailView(category, item) {
   const bodyContent = await loadStoreMarkdown(item.bodyFile);
-  const bundleId = storeMembershipByItem.get(item.id);
-  const bundle = bundleId ? getStoreBundle(category, bundleId) : null;
+  const bundleIds = storeMembershipByItem.get(item.id) || [];
+  const bundles = bundleIds.map(id => getStoreBundle(category, id)).filter(Boolean);
 
   appView.innerHTML = `
     <div class="view view-store store-detail-view">
@@ -2583,21 +2618,19 @@ async function storeItemDetailView(category, item) {
             <div class="store-markdown markdown-body">${bodyContent}</div>
           </div>
           <div class="store-detail-controls">
-            ${bundle ? `
+            ${bundles.length ? `
               <div class="store-membership">
                 <small>所属组合包</small>
-                <button type="button" data-kind="store-bundle-link" data-store-id="${escapeHtml(bundle.id)}">
-                  <span>${escapeHtml(bundle.title)}</span>
-                  <span aria-hidden="true">→</span>
-                </button>
+                ${bundles.map(bundle => `<button type="button" data-kind="store-bundle-link" data-store-id="${escapeHtml(bundle.id)}"><span>${escapeHtml(bundle.title)}</span><span aria-hidden="true">→</span></button>`).join('')}
               </div>
             ` : ''}
             <div class="store-single-icon" aria-label="商品图标">
               ${storeImageMarkup(item.iconImage, `${item.title}图标`, 'store-member-image')}
             </div>
-            ${storePriceMarkup(item.price, item.title)}
+            ${item.acquisition === 'bundle-only' ? '<small class="store-acquisition-note">仅限组合包获取</small>' : storePriceMarkup(item.price, item.title)}
           </div>
         </aside>
+        ${storeTitleRail(item.title)}
         ${storeDetailVisual(item)}
       </div>
     </div>
@@ -2644,6 +2677,7 @@ async function storeBundleDetailView(category, bundle) {
             ${storePriceMarkup(bundle.price, bundle.title)}
           </div>
         </aside>
+        ${storeTitleRail(activeItem?.title || bundle.title)}
         ${storeDetailVisual(activeItem)}
       </div>
     </div>
@@ -2699,9 +2733,11 @@ async function detailView() {
     : (activeLog?.bodyFile || null);
   const isVariantB = activeVariant === 'b';
   const audioSource = isVariantB
-    ? (entry.variantB?.audio || entry.audio)
+    ? null
     : (activeLog?.audio || entry.variantA?.audio || entry.audio);
-  const audioBlock = audioMarkup(audioSource, isVariantB ? entry.title : (activeLog?.title || entry.title));
+  const audioBlock = isVariantB
+    ? ''
+    : audioMarkup(audioSource, activeLog?.title || entry.title);
   const bodyContent = isVariantB
     ? await loadMarkdownDoc(bodyFile)
     : (await loadDocLines(bodyFile)).join('');
@@ -2822,9 +2858,10 @@ function bind() {
 	      const type = node.dataset.kind;
 	      const categoryId = node.dataset.categoryId || null;
 	      const sectionId = node.dataset.sectionId || null;
-	      const path = (node.dataset.path || '').split('/').filter(Boolean);
+      const path = (node.dataset.path || '').split('/').filter(Boolean);
       const logId = node.dataset.logId || null;
       const entryVariant = node.dataset.entryVariant || null;
+      let storeMemberScrollLeft = null;
 
       if (type === 'category') {
         const category = getCategory(categoryId);
@@ -2899,6 +2936,7 @@ function bind() {
         state.tag = null;
         selectedStoreItemId = null;
       } else if (type === 'store-item' || type === 'store-bundle' || type === 'store-bundle-link') {
+        if (type !== 'store-bundle-link') rememberStoreGridScroll(type === 'store-bundle' ? 'bundles' : 'catalog');
         const isBundle = type !== 'store-item';
         state.view = 'store-detail';
         state.categoryId = 'store';
@@ -2909,10 +2947,18 @@ function bind() {
         state.tag = null;
         selectedStoreItemId = null;
       } else if (type === 'store-member') {
+        storeMemberScrollLeft = node.closest('.store-member-strip')?.scrollLeft ?? 0;
         selectedStoreItemId = node.dataset.storeItemId || null;
       }
 
       await render();
+
+      if (storeMemberScrollLeft !== null) {
+        const memberStrip = appView.querySelector('.store-member-strip');
+        const activeMember = memberStrip?.querySelector('.store-member.is-active');
+        activeMember?.focus({ preventScroll: true });
+        if (memberStrip) memberStrip.scrollLeft = storeMemberScrollLeft;
+      }
     });
   });
 
@@ -2927,8 +2973,23 @@ function bind() {
 
   appView.querySelectorAll('.store-image').forEach(image => {
     const markFailed = () => image.closest('.store-image-frame')?.classList.add('is-error');
+    const syncDetailAspect = () => {
+      if (!image.naturalWidth || !image.naturalHeight) return;
+      image.closest('.store-detail-visual')?.style.setProperty('--store-detail-aspect', image.naturalWidth / image.naturalHeight);
+    };
     image.addEventListener('error', markFailed, { once: true });
+    image.addEventListener('load', syncDetailAspect, { once: true });
     if (image.complete && image.naturalWidth === 0) markFailed();
+    if (image.complete && image.naturalWidth > 0) syncDetailAspect();
+  });
+
+  appView.querySelectorAll('.detail-stage-body.variant-b .visual-media img').forEach(image => {
+    const syncVariantBAspect = () => {
+      if (!image.naturalWidth || !image.naturalHeight) return;
+      image.closest('.visual-pane')?.style.setProperty('--detail-image-aspect', image.naturalWidth / image.naturalHeight);
+    };
+    image.addEventListener('load', syncVariantBAspect, { once: true });
+    if (image.complete && image.naturalWidth > 0) syncVariantBAspect();
   });
 
   appView.querySelectorAll('[data-preview-body-file]').forEach(node => {
@@ -3004,6 +3065,10 @@ async function render() {
   applyManifestLayout(appView);
   refreshDetailTickers(appView);
   scheduleStoreGridLayout();
+  if (state.view === 'store') {
+    restoreStoreGridScroll();
+    requestAnimationFrame(() => restoreStoreGridScroll());
+  }
   setTimeout(() => refreshDetailTickers(appView), 120);
   setTimeout(() => refreshDetailTickers(appView), 500);
   setHash();

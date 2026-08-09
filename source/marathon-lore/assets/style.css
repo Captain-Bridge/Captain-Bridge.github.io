@@ -971,7 +971,26 @@ body {
 }
 
 .detail-stage-body.variant-b {
-  grid-template-columns:minmax(0,1fr) minmax(220px,var(--detail-visual-column))
+  grid-template-columns:minmax(0,1fr) auto
+}
+
+.detail-stage-body.variant-b .visual-pane.fit-image {
+  width:auto;
+  height:100%;
+  aspect-ratio:var(--detail-image-aspect,4/3)
+}
+
+.detail-stage-body.variant-b .visual-media {
+  flex:1 1 auto;
+  padding:0
+}
+
+.detail-stage-body.variant-b .visual-media img {
+  width:100%;
+  height:100%;
+  max-width:none;
+  max-height:none;
+  object-fit:contain
 }
 
 .visual-pane,.detail-copy {
@@ -1008,7 +1027,7 @@ body {
   display:flex;
   align-items:flex-start;
   justify-content:center;
-  overflow:visible;
+  overflow:hidden;
   align-self:stretch;
   margin-bottom:0;
   padding:8px 8px 0;
@@ -1931,6 +1950,11 @@ body {
     grid-template-columns:1fr
   }
 
+  .detail-stage-body.variant-b .visual-pane.fit-image {
+    width:100%;
+    height:auto
+  }
+
   .viewport {
     min-height:0;
     overflow:visible
@@ -2222,7 +2246,8 @@ body {
   .view.is-transitioning,
   .detail-stage-body,
   .tag-layout,
-  .icon-preview-tooltip {
+  .icon-preview-tooltip,
+  .store-title-rail-track {
     animation:none !important;
     transform:none !important
   }
@@ -2368,40 +2393,6 @@ body {
   width:100%
 }
 
-/* Narrow 7:10 bundle cards need their title and total price to share the footer. */
-.store-bundle-small .store-card-footer {
-  grid-template-columns:minmax(0,1fr);
-  min-height:104px
-}
-
-.store-bundle-small .store-card-copy {
-  padding:26px 10px 6px
-}
-
-.store-bundle-small .store-card-copy small {
-  display:none
-}
-
-.store-bundle-small .store-card-copy strong {
-  display:-webkit-box;
-  overflow:hidden;
-  white-space:normal;
-  overflow-wrap:anywhere;
-  -webkit-box-orient:vertical;
-  -webkit-line-clamp:2;
-  line-height:1.25
-}
-
-.store-bundle-small .store-price {
-  width:100%;
-  min-width:0;
-  min-height:38px;
-  justify-content:flex-end;
-  gap:6px;
-  padding:0 10px;
-  font-size:15px
-}
-
 .store-card {
   position:relative;
   min-width:0;
@@ -2520,20 +2511,21 @@ body {
   bottom:0;
   left:0;
   z-index:2;
-  min-height:68px;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) auto;
-  align-items:stretch;
-  gap:0;
-  background:linear-gradient(180deg,rgba(4,7,8,0) 0%,rgba(4,7,8,.68) 24%,rgba(4,7,8,.96) 100%)
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+  background:none
 }
 
 .store-card-copy {
   min-width:0;
+  max-width:100%;
   display:grid;
-  align-content:center;
+  align-content:end;
+  justify-items:end;
   gap:3px;
-  padding:28px 12px 11px
+  padding:12px;
+  text-align:right
 }
 
 .store-card-copy small {
@@ -2606,9 +2598,76 @@ body {
   min-height:0;
   overflow:hidden;
   display:grid;
-  grid-template-columns:minmax(340px,38%) minmax(0,1fr);
+  grid-template-columns:minmax(340px,1fr) 34px auto;
   border:1px solid rgba(193,254,0,.2);
   background:#050a0c
+}
+
+.store-title-rail {
+  position:relative;
+  min-width:0;
+  min-height:0;
+  overflow:hidden;
+  border-right:1px solid rgba(193,254,0,.18);
+  background:#05090b;
+  color:rgba(118,132,142,.42)
+}
+
+.store-title-rail::before,
+.store-title-rail::after {
+  content:"";
+  position:absolute;
+  z-index:2;
+  right:0;
+  left:0;
+  height:28px;
+  pointer-events:none
+}
+
+.store-title-rail::before {
+  top:0;
+  background:linear-gradient(to bottom,#05090b,transparent)
+}
+
+.store-title-rail::after {
+  bottom:0;
+  background:linear-gradient(to top,#05090b,transparent)
+}
+
+.store-title-rail-track {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  animation:store-title-rail-scroll 24s linear infinite;
+  will-change:transform
+}
+
+.store-title-rail-sequence {
+  flex:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:13px;
+  padding:13px 0
+}
+
+.store-title-rail-name {
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  color:inherit;
+  font:700 15px/1 "Noto Sans SC",sans-serif;
+  letter-spacing:0;
+  white-space:nowrap
+}
+
+.store-title-rail-separator {
+  color:rgba(129,145,154,.52);
+  font:400 15px/1 "Consolas","Courier New",monospace
+}
+
+@keyframes store-title-rail-scroll {
+  from { transform:translateY(0) }
+  to { transform:translateY(-50%) }
 }
 
 .store-detail-info {
@@ -2794,6 +2853,9 @@ body {
 
 .store-detail-visual {
   position:relative;
+  width:auto;
+  height:100%;
+  aspect-ratio:var(--store-detail-aspect,4/3);
   min-width:0;
   min-height:0;
   overflow:hidden;
@@ -2804,7 +2866,7 @@ body {
 .store-detail-image {
   width:100%;
   height:100%;
-  padding:clamp(20px,3vw,52px)
+  padding:0
 }
 
 .store-detail-image .store-image {
@@ -2845,7 +2907,7 @@ body {
   }
 
   .store-detail-layout {
-    grid-template-columns:minmax(320px,42%) minmax(0,1fr)
+    grid-template-columns:minmax(320px,1fr) 34px auto
   }
 }
 
@@ -2867,12 +2929,19 @@ body {
     grid-template-columns:1fr
   }
 
+  .store-title-rail {
+    display:none
+  }
+
   .store-detail-info {
     border-right:0;
     border-bottom:1px solid rgba(193,254,0,.18)
   }
 
   .store-detail-visual {
+    width:100%;
+    height:auto;
+    aspect-ratio:var(--store-detail-aspect,4/3);
     min-height:clamp(360px,72vw,620px)
   }
 }
@@ -2918,40 +2987,6 @@ body {
     min-height:0
   }
 
-  .store-card-footer {
-    min-height:76px
-  }
-
-  .store-bundle-small .store-card-footer {
-    grid-template-columns:minmax(0,1fr) auto;
-    min-height:76px
-  }
-
-  .store-bundle-small .store-card-copy {
-    padding:28px 12px 11px
-  }
-
-  .store-bundle-small .store-card-copy small {
-    display:block
-  }
-
-  .store-bundle-small .store-card-copy strong {
-    display:block;
-    overflow:hidden;
-    white-space:normal;
-    overflow-wrap:anywhere;
-    -webkit-line-clamp:unset
-  }
-
-  .store-bundle-small .store-price {
-    width:auto;
-    min-width:104px;
-    min-height:52px;
-    gap:8px;
-    padding:0 12px;
-    font-size:18px
-  }
-
   .store-card-copy strong {
     white-space:normal;
     overflow-wrap:anywhere
@@ -2975,23 +3010,11 @@ body {
   }
 
   .store-detail-image {
-    padding:18px 10px
+    padding:0
   }
 }
 
 @media (max-width:480px) {
-  .store-card-footer {
-    grid-template-columns:1fr;
-    align-items:stretch;
-    gap:0
-  }
-
-  .store-card-footer .store-price {
-    width:100%;
-    min-height:52px;
-    justify-content:flex-end
-  }
-
   .store-member {
     flex-basis:96px;
     grid-template-rows:72px auto
