@@ -1,0 +1,13 @@
+n->adjacent_polyg$Ion_ind$ie$C3xesuct line_data *line;		stru$C0ct wor
+ld_point2d *vertex;		long cross_pro$C3duct;$Iolygon$i-t, csp$C0rintf(tempo	
+$C3	switch (bias){
+
+$C0你被意外地传送到了舰船上一处废弃且无关紧要的区域，但福尔还是跟踪你到了这里。
+
+有人在追你，目标正是你。一个词，两音节，和 $C2$B“Psycho” $C0$b押韵。
+
+$C3dex!=NONE)$C0{strex];
+/* loif (*polygon_ind	or (index=0;index<polygon->vert$C3ex_count && p
+*po$C0lygon_index= polygo
+
+人类在你离开期间损失惨重，我们的防线也正在崩溃，但撤离工作尚未完成。

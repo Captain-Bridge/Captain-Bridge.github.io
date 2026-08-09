@@ -1,0 +1,3306 @@
+{
+  "meta": {
+    "description": "Marathon 2 scenario terminal files mapped to AO resources",
+    "total_levels": 27,
+    "total_terminals": 71,
+    "total_variants": 96,
+    "total_picts": 132,
+    "total_images": 65
+  },
+  "levels": [
+    {
+      "id": "00",
+      "name": "Waterloo Waterpark",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10001.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10002.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10001.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10002.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "10003.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01602.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10011.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01602.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01602.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10011.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01602.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "name": "The Slings & Arrows of Outrageous Fortune",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10101.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10101.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                },
+                {
+                  "file": "FINISHED_002_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "FINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10111.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10111.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Charon Doesn't Make Change",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10201.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10201.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10913.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10913.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10912.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10912.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_3",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10911.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10911.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_4",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10911.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10913.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10911.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10913.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_5",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01602.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10251.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10251.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01602.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01602.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10251.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10251.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01602.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_6",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01602.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01612.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01602.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01602.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01612.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01602.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_7",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01602.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01612.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01612.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "10271.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_004_LOGOFF.txt",
+          "logoffImage": "01602.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01602.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01612.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "01612.bmp"
+                },
+                {
+                  "file": "UNFINISHED_003_PICT.txt",
+                  "image": "10271.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_004_LOGOFF.txt",
+              "logoffImage": "01602.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_8",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01602.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10271.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01602.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01602.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10271.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01602.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_9",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01602.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10271.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01602.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01602.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10271.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01602.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "name": "What About Bob-",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10301.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01604.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "10302.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_004_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10301.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "01604.bmp"
+                },
+                {
+                  "file": "UNFINISHED_003_PICT.txt",
+                  "image": "10302.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_004_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "10303.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10311.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10311.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01604.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "10321.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "name": "Come and Take your Medicine",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10403.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10401.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10403.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10401.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "10402.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10913.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10912.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10913.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10912.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "name": "We’re Everywhere",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01604.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10501.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10501.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "10502.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01608.bmp",
+          "race": "jjaro",
+          "defaultColor": "$C1",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01609.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01608.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "name": "Ex Cathedra",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10602.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10601.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10602.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10601.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01604.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "name": "Nuke And Pave",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10701.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10701.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "name": "Curiouser and Curiouser…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10801.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01604.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10801.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01600.bmp"
+            }
+          ],
+          "logoff": null,
+          "logoffImage": null,
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01600.bmp"
+                }
+              ],
+              "logoff": null,
+              "logoffImage": null
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "name": "Eat It, Vid Boi!",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10901.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10901.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10911.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10911.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "10912.bmp"
+                },
+                {
+                  "file": "FINISHED_002_PICT.txt",
+                  "image": "10913.bmp"
+                }
+              ],
+              "logoff": "FINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01601.bmp"
+            }
+          ],
+          "logoff": null,
+          "logoffImage": null,
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01601.bmp"
+                }
+              ],
+              "logoff": null,
+              "logoffImage": null
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "11001.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_3",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01604.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "The Hard Stuff Rules…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11001.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11001.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "11002.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10911.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10913.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10911.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10913.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10912.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10912.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10912.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10912.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_3",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10913.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10913.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_4",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10912.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "11041.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10912.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "11041.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Bob’s Big Date",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11102.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11102.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "11101.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10912.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10911.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10912.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10911.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10912.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10912.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_3",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11131.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11131.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Six Thousand Feet Under",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11101.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11101.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11211.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11211.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10911.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10911.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_3",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10912.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10912.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_4",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10911.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10912.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10911.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10912.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_5",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01601.bmp",
+          "race": "spht",
+          "defaultColor": "$C5",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10911.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10913.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01601.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01601.bmp",
+              "race": "spht",
+              "defaultColor": "$C5",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10911.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10913.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01601.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "If I Had a Rocket Launcher, I'd Make Somebody Pay",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11301.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11301.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01605.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01611.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01605.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01605.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01611.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01605.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_2",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01610.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01610.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Sorry Don’t Make It So",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01605.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01611.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01605.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01605.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01611.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01605.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01604.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "01610.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "01610.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "For Carnage, Apply Within",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01605.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01611.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "11411.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "01611.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_004_LOGOFF.txt",
+          "logoffImage": "01605.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01605.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01611.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "11411.bmp"
+                },
+                {
+                  "file": "UNFINISHED_003_PICT.txt",
+                  "image": "01611.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_004_LOGOFF.txt",
+              "logoffImage": "01605.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01610.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01610.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01610.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Begging For Mercy Makes Me Angry!",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01610.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01610.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01605.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01611.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01605.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01605.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01611.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01605.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "This Side Toward Enemy",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01607.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11801.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "11801.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01607.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11801.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "11801.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01607.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11813.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01607.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11813.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "11901.bmp"
+                },
+                {
+                  "file": "FINISHED_002_PICT.txt",
+                  "image": "11812.bmp"
+                }
+              ],
+              "logoff": "FINISHED_003_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "God Will Sort The Dead…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01607.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11812.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01607.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11812.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "11901.bmp"
+                },
+                {
+                  "file": "FINISHED_002_PICT.txt",
+                  "image": "11902.bmp"
+                }
+              ],
+              "logoff": "FINISHED_003_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "My Own Private Thermopylae",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01607.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "12001.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01607.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "12001.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "11901.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01610.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01610.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Kill Your Television",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01607.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "11811.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01607.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "11811.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01607.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "12101.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01607.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01608.bmp",
+          "race": "jjaro",
+          "defaultColor": "$C1",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01609.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01608.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Where the Twist Flops",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01608.bmp",
+          "race": "jjaro",
+          "defaultColor": "$C1",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01609.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01608.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "12401.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "12401.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Beware of Abandoned Rental Trucks",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01608.bmp",
+          "race": "jjaro",
+          "defaultColor": "$C1",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01609.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01608.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Requiem For a Cyborg",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01603.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "12401.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01603.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01603.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "12401.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01603.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01602.bmp",
+          "race": "pfhor",
+          "defaultColor": "$C2",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01612.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01602.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01602.bmp",
+              "race": "pfhor",
+              "defaultColor": "$C2",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01612.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01602.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01608.bmp",
+              "race": "jjaro",
+              "defaultColor": "$C1",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "01609.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01608.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Fatum Iustum Stultorum",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "12501.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "12502.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "12501.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "12502.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "12511.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_002_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "12511.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Feel the Noise",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED",
+            "FINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "12601.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "12601.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_003_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "12601.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "12601.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_003_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            },
+            "FINISHED": {
+              "logon": "FINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "FINISHED_001_PICT.txt",
+                  "image": "12602.bmp"
+                }
+              ],
+              "logoff": "FINISHED_002_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "All Roads Lead To Sol…",
+      "terminals": [
+        {
+          "name": "Terminal_0",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01600.bmp",
+          "race": "human",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "01604.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "12701.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "12702.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_004_LOGOFF.txt",
+          "logoffImage": "01600.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01600.bmp",
+              "race": "human",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "01604.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "12701.bmp"
+                },
+                {
+                  "file": "UNFINISHED_003_PICT.txt",
+                  "image": "12702.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_004_LOGOFF.txt",
+              "logoffImage": "01600.bmp"
+            }
+          }
+        },
+        {
+          "name": "Terminal_1",
+          "variants": [
+            "UNFINISHED"
+          ],
+          "defaultVariant": "UNFINISHED",
+          "logon": "UNFINISHED_000_LOGON.txt",
+          "logonImage": "01613.bmp",
+          "race": "bungie",
+          "defaultColor": "$C0",
+          "picts": [
+            {
+              "file": "UNFINISHED_001_PICT.txt",
+              "image": "10701.bmp"
+            },
+            {
+              "file": "UNFINISHED_002_PICT.txt",
+              "image": "10201.bmp"
+            },
+            {
+              "file": "UNFINISHED_003_PICT.txt",
+              "image": "11041.bmp"
+            },
+            {
+              "file": "UNFINISHED_004_PICT.txt",
+              "image": "10801.bmp"
+            },
+            {
+              "file": "UNFINISHED_005_PICT.txt",
+              "image": "11102.bmp"
+            },
+            {
+              "file": "UNFINISHED_006_PICT.txt",
+              "image": "10502.bmp"
+            },
+            {
+              "file": "UNFINISHED_007_PICT.txt",
+              "image": "12601.bmp"
+            }
+          ],
+          "logoff": "UNFINISHED_008_LOGOFF.txt",
+          "logoffImage": "01613.bmp",
+          "variantData": {
+            "UNFINISHED": {
+              "logon": "UNFINISHED_000_LOGON.txt",
+              "logonImage": "01613.bmp",
+              "race": "bungie",
+              "defaultColor": "$C0",
+              "picts": [
+                {
+                  "file": "UNFINISHED_001_PICT.txt",
+                  "image": "10701.bmp"
+                },
+                {
+                  "file": "UNFINISHED_002_PICT.txt",
+                  "image": "10201.bmp"
+                },
+                {
+                  "file": "UNFINISHED_003_PICT.txt",
+                  "image": "11041.bmp"
+                },
+                {
+                  "file": "UNFINISHED_004_PICT.txt",
+                  "image": "10801.bmp"
+                },
+                {
+                  "file": "UNFINISHED_005_PICT.txt",
+                  "image": "11102.bmp"
+                },
+                {
+                  "file": "UNFINISHED_006_PICT.txt",
+                  "image": "10502.bmp"
+                },
+                {
+                  "file": "UNFINISHED_007_PICT.txt",
+                  "image": "12601.bmp"
+                }
+              ],
+              "logoff": "UNFINISHED_008_LOGOFF.txt",
+              "logoffImage": "01613.bmp"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

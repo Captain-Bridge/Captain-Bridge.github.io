@@ -40,7 +40,7 @@ layout: false
     .app {
       min-height: 100vh;
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto minmax(0, 1fr) auto;
       gap: 14px;
       padding: 16px 18px 18px;
     }
@@ -53,18 +53,50 @@ layout: false
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
+    .series-switch { display:flex; gap:12px; margin-left:24px; }
+    .series-switch button { border:0; border-bottom:1px solid transparent; padding:0; background:transparent; color:var(--muted); font:inherit; cursor:pointer; }
+    .series-switch button[aria-pressed="true"] { color:var(--fg); border-bottom-color:var(--fg); }
+    .source-thanks {
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      bottom: 8px;
+      min-height: 18px;
+      color: var(--soft);
+      font-size: 11px;
+      letter-spacing: .04em;
+      text-align: center;
+    }
+    .source-thanks a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .source-thanks a:hover,
+    .source-thanks a:focus-visible { color: var(--fg); }
     .workspace {
+      position: relative;
       display: grid;
-      grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr);
       gap: 36px;
       min-height: 0;
       align-items: start;
     }
     .menu-grid {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
       display: grid;
-      grid-template-columns: 1fr;
+      width: 100%;
+      grid-template-columns: minmax(0, 1fr) minmax(130px, 0.42fr);
       gap: 16px;
       align-content: start;
+    }
+    .menu-grid .rail:last-child {
+      justify-self: end;
+      width: min(180px, 16vw);
     }
     .rail {
       display: grid;
@@ -114,6 +146,8 @@ layout: false
       letter-spacing: 0.02em;
     }
     .viewport {
+      grid-column: 1;
+      width: 100%;
       position: relative;
       display: flex;
       justify-content: center;
@@ -223,7 +257,7 @@ layout: false
       margin: auto 0;
     }
     .doc-section.information {
-      justify-items: start;
+      justify-items: center;
     }
     .doc-image {
       display: block;
@@ -260,8 +294,8 @@ layout: false
     }
     .doc-section.information .doc-text {
       width: max-content;
-      margin-left: 10%;
-      text-align: left;
+      margin-left: 0;
+      text-align: center;
     }
     .doc-pict {
       display: grid;
@@ -320,7 +354,7 @@ layout: false
       justify-content: center;
       gap: 12px;
       width: 100%;
-      margin: 0;
+      margin: 10px 0 0;
       color: var(--soft);
       font-size: 11px;
       letter-spacing: 0.08em;
@@ -370,7 +404,7 @@ layout: false
       }
       .app {
         min-height: 100%;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto minmax(0, 1fr) auto;
         gap: 12px;
         padding: 14px 14px 20px;
       }
@@ -379,10 +413,16 @@ layout: false
         gap: 14px;
       }
       .menu-grid {
+        position: static;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        width: auto;
         gap: 12px;
         align-items: start;
         max-height: min(31vh, 250px);
+      }
+      .menu-grid .rail:last-child {
+        justify-self: stretch;
+        width: auto;
       }
       .rail {
         gap: 6px;
@@ -509,7 +549,7 @@ layout: false
     <a href="/">首页</a><a href="/about/">社区内容</a><a href="/news/">新闻</a><a href="/map/perimeter/">地图</a><a href="/marathon-lore/">百科</a><a href="/factions/">阵营</a><a class="active" href="/Classic-marathon/">经典终端</a>
   </nav>
   <main class="app">
-    <div class="topline">Classic Marathon</div>
+    <div class="topline"><span>Classic Marathon</span><div class="series-switch" id="series-switch" aria-label="作品切换"></div></div>
     <section class="workspace" aria-label="navigation and terminal">
       <section class="menu-grid" aria-label="navigation">
         <section class="rail" aria-label="level selection">
@@ -538,12 +578,18 @@ layout: false
                 <span class="terminal-strip-text">&lt;931.461.60231.14.vt920&gt;</span>
               </div>
             </div>
-            <div id="classic-variant-host"></div>
             <div id="classic-pager-host"></div>
+            <div id="classic-variant-host"></div>
           </div>
         </div>
       </section>
     </section>
+    <footer class="source-thanks" aria-label="汉化文本来源">
+      汉化文本来源：
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3464090587" target="_blank" rel="noopener noreferrer">M1 社区指南</a>
+      <span aria-hidden="true"> · </span>
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3466301767" target="_blank" rel="noopener noreferrer">M2 社区指南</a>
+    </footer>
   </main>
 
   <script>
@@ -564,7 +610,8 @@ layout: false
       topStripText: document.getElementById('terminal-top-strip-text'),
       topStripTime: document.getElementById('terminal-top-strip-time'),
       variantHost: document.getElementById('classic-variant-host'),
-      pagerHost: document.getElementById('classic-pager-host')
+      pagerHost: document.getElementById('classic-pager-host'),
+      series: document.getElementById('series-switch')
     };
 
     const fallbackSeries = {
@@ -668,6 +715,10 @@ layout: false
       '$U': { style: 'underline', open: true },
       '$u': { style: 'underline', open: false }
     };
+    const AO_COLORS = {
+      '$C0': '#00FF00', '$C1': '#FFFFFF', '$C2': '#FF0000', '$C3': '#009C00',
+      '$C4': '#00B0C9', '$C5': '#FFE700', '$C6': '#AF0000', '$C7': '#0C00FF'
+    };
 
     function joinPath(...parts) {
       return parts
@@ -677,11 +728,12 @@ layout: false
     }
 
     function terminalBase(level, terminal) {
-      return '/' + joinPath('Classic-marathon', 'M1', 'text', level.dirName || level.label || level.name || level.id || '', terminal.name || '');
+      const classic = currentClassic();
+      return '/' + joinPath('Classic-marathon', classic.path, 'text', level.dirName || level.label || level.name || level.id || '', terminal.name || '');
     }
 
     function resolveImagePath(fileName) {
-      return '/' + joinPath('Classic-marathon', 'M1', 'picts', fileName);
+      return '/' + joinPath('Classic-marathon', currentClassic().path, 'picts', fileName);
     }
 
     async function fetchTextFile(url) {
@@ -716,6 +768,7 @@ layout: false
 
       for (let index = 0; index < normalized.length; index += 1) {
         const pair = normalized.slice(index, index + 2);
+        const colorMarker = normalized.slice(index, index + 3);
 
         if (normalized[index] === '\n') {
           pushBuffer();
@@ -733,6 +786,13 @@ layout: false
             paired: false
           });
           index += 1;
+          continue;
+        }
+
+        if (AO_COLORS[colorMarker]) {
+          pushBuffer();
+          tokens.push({ type: 'color', value: colorMarker, color: AO_COLORS[colorMarker] });
+          index += 2;
           continue;
         }
 
@@ -795,7 +855,7 @@ layout: false
       }
 
       tokens.forEach(token => {
-        if (token.type === 'marker') {
+        if (token.type === 'marker' || token.type === 'color') {
           wrapped.push(token);
           return;
         }
@@ -833,9 +893,10 @@ layout: false
       return wrapped;
     }
 
-    function appendAORender(target, text, limit = null) {
+    function appendAORender(target, text, limit = null, defaultColor = AO_COLORS.$C0) {
       const tokens = buildAOTokens(text, limit);
       const state = {
+        color: AO_COLORS[defaultColor] || defaultColor || AO_COLORS.$C0,
         bold: false,
         italic: false,
         underline: false
@@ -853,16 +914,18 @@ layout: false
 
       function appendStyledText(value) {
         const className = currentClassName();
-        if (!className) {
+        const color = state.color;
+        if (!className && color === AO_COLORS.$C0) {
           target.appendChild(document.createTextNode(value));
           activeSpan = null;
           activeClassName = '';
           return;
         }
 
-        if (!activeSpan || activeClassName !== className) {
+        if (!activeSpan || activeClassName !== className || activeSpan.style.color !== color) {
           activeSpan = document.createElement('span');
           activeSpan.className = className;
+          activeSpan.style.color = color;
           activeClassName = className;
           target.appendChild(activeSpan);
         }
@@ -878,8 +941,16 @@ layout: false
           return;
         }
 
+        if (token.type === 'color') {
+          state.color = token.color;
+          activeSpan = null;
+          activeClassName = '';
+          return;
+        }
+
         if (token.type === 'newline') {
           target.appendChild(document.createTextNode('\n'));
+          state.color = AO_COLORS[defaultColor] || defaultColor || AO_COLORS.$C0;
           activeSpan = null;
           activeClassName = '';
           return;
@@ -890,15 +961,25 @@ layout: false
     }
 
     function buildVariantItems(terminal, variant) {
+      const variantData = terminal.variantData?.[variant];
+      if (variantData) {
+        return [
+          { kind: 'logon', file: variantData.logon, image: variantData.logonImage, defaultColor: variantData.defaultColor },
+          { kind: 'information', file: variantData.information, image: null, defaultColor: variantData.defaultColor },
+          ...((variantData.picts || []).map(item => ({ kind: 'pict', ...item, defaultColor: variantData.defaultColor }))),
+          { kind: 'logoff', file: variantData.logoff, image: variantData.logoffImage, defaultColor: variantData.defaultColor }
+        ].filter(item => item.file);
+      }
+
       return [
-        { kind: 'logon', file: replaceTerminalVariant(terminal.logon, variant), image: '01600.bmp' },
+        { kind: 'logon', file: replaceTerminalVariant(terminal.logon, variant), image: terminal.logonImage || '01600.bmp' },
         { kind: 'information', file: replaceTerminalVariant(terminal.information, variant), image: null },
         ...((terminal.picts || []).map(item => ({
           kind: 'pict',
           file: replaceTerminalVariant(item.file, variant),
           image: item.image
         }))),
-        { kind: 'logoff', file: replaceTerminalVariant(terminal.logoff, variant), image: '01600.bmp' }
+        { kind: 'logoff', file: replaceTerminalVariant(terminal.logoff, variant), image: terminal.logoffImage || '01600.bmp' }
       ].filter(item => item.file);
     }
 
@@ -907,6 +988,7 @@ layout: false
         ? terminal.variants.filter(variant => TERMINAL_VARIANTS.includes(variant))
         : [terminalVariantFromFile(terminal.logon) || 'UNFINISHED'];
       const defaultVariant =
+        terminal.defaultVariant ||
         terminalVariantFromFile(terminal.logon) ||
         terminalVariantFromFile(terminal.information) ||
         terminalVariantFromFile(terminal.logoff) ||
@@ -999,8 +1081,8 @@ layout: false
         .join('');
     }
 
-    function loadM1Catalog() {
-      return fetch('/Classic-marathon/M1/terminals.json', { cache: 'no-store' })
+    function loadClassicCatalog(path, label, title) {
+      return fetch('/Classic-marathon/' + path + '/terminals.json', { cache: 'no-store' })
         .then(response => {
           if (!response.ok) throw new Error('Failed to load terminals.json');
           return response.json();
@@ -1008,9 +1090,7 @@ layout: false
         .then(data => {
           const levels = Array.isArray(data?.levels) ? data.levels : [];
           return [{
-            id: 'm1',
-            label: '1',
-            title: 'Classic Marathon 1',
+            id: path.toLowerCase(), path, label, title,
             chapters: levels.map(level => ({
               id: level.id || level.name,
               label: (level.id ? level.id + ' ' : '') + (level.name || level.id || ''),
@@ -1024,11 +1104,31 @@ layout: false
           }];
         })
         .catch(() => [{
-          id: 'm1',
-          label: '1',
-          title: 'Classic Marathon 1',
+          id: path.toLowerCase(), path, label, title,
           chapters: []
         }]);
+    }
+
+    function loadCatalog() {
+      return Promise.all([
+        loadClassicCatalog('M1', 'M1', 'Classic Marathon 1'),
+        loadClassicCatalog('M2', 'M2', 'Classic Marathon 2')
+      ]).then(series => series.flat());
+    }
+
+    function renderSeriesSwitch() {
+      el.series.innerHTML = '';
+      catalog.forEach((series, index) => {
+        const button = document.createElement('button');
+        button.type = 'button'; button.textContent = series.label;
+        button.setAttribute('aria-pressed', index === state.classicIndex ? 'true' : 'false');
+        button.addEventListener('click', () => {
+          if (index === state.classicIndex) return;
+          state.classicIndex = index; state.chapterIndex = 0; state.terminalIndex = 0; state.pageIndex = 0; state.variantPreference = null;
+          renderSeriesSwitch(); updateView();
+        });
+        el.series.appendChild(button);
+      });
     }
 
     function setLoadingState() {
@@ -1039,7 +1139,7 @@ layout: false
       el.body.appendChild(loading);
     }
 
-    function buildDocSection(kind, text, imageSrc) {
+    function buildDocSection(kind, text, imageSrc, defaultColor) {
       const section = document.createElement('section');
       section.className = 'doc-section';
       const textLimit =
@@ -1063,7 +1163,7 @@ layout: false
 
         const textNode = document.createElement('pre');
         textNode.className = 'doc-text';
-        appendAORender(textNode, text, textLimit);
+        appendAORender(textNode, text, textLimit, defaultColor);
         row.appendChild(textNode);
         section.appendChild(row);
       } else {
@@ -1082,7 +1182,7 @@ layout: false
 
         const textNode = document.createElement('pre');
         textNode.className = 'doc-text';
-        appendAORender(textNode, text, textLimit);
+        appendAORender(textNode, text, textLimit, defaultColor);
         section.appendChild(textNode);
       }
       return section;
@@ -1097,7 +1197,8 @@ layout: false
         return {
           kind: item.kind,
           text,
-          image: item.image ? resolveImagePath(item.image) : null
+          image: item.image ? resolveImagePath(item.image) : null,
+          defaultColor: item.defaultColor || terminal.defaultColor || AO_COLORS.$C0
         };
       }));
 
@@ -1233,14 +1334,12 @@ layout: false
       if (seq !== renderSeq) return;
 
       el.body.innerHTML = '';
-      if (variantState.hasToggle) {
-        el.variantHost.appendChild(renderVariantSwitch(variantState.available, activeVariant));
-      }
+      el.variantHost.innerHTML = '';
       const pages = doc.length ? doc : [{ kind: 'information', text: '', image: null }];
       state.pageIndex = Math.max(0, Math.min(state.pageIndex, pages.length - 1));
       const page = pages[state.pageIndex];
       el.topStripText.textContent = topStripTextForKind(page.kind);
-      el.body.appendChild(buildDocSection(page.kind, page.text, page.image));
+      el.body.appendChild(buildDocSection(page.kind, page.text, page.image, page.defaultColor));
 
       const canMovePrev = state.pageIndex > 0 || hasAdjacentTerminal(-1);
       const canMoveNext = state.pageIndex < pages.length - 1 || hasAdjacentTerminal(1);
@@ -1263,14 +1362,18 @@ layout: false
       });
       el.pagerHost.innerHTML = '';
       el.pagerHost.appendChild(pager.pager);
+      if (variantState.hasToggle) {
+        el.variantHost.appendChild(renderVariantSwitch(variantState.available, activeVariant));
+      }
     }
 
-    loadM1Catalog().then(data => {
+    loadCatalog().then(data => {
       catalog.splice(0, catalog.length, ...data);
       state.classicIndex = 0;
       state.chapterIndex = 0;
       state.terminalIndex = 0;
       state.pageIndex = 0;
+      renderSeriesSwitch();
       updateTopStripTimestamp();
       updateView();
     });

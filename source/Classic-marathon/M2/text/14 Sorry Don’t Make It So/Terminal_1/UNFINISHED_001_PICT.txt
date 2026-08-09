@@ -1,0 +1,14 @@
+$C3ary, "endpoint &%d $Bnot in polygon &%d (from &%d)"$b, endpoint_index, polygon_iing the shipd.
+ndex, p$C0olyg’t believe everython$I_in$idex));nS_TRANSPARENT(line))
+{polygon= get_$C3polygon_data(*polyg$Bon_index);
+		case _clo$C0ckwise_bias
+
+$b第谷正在渗透这艘舰船。
+不要相信你读到的一切。
+
+$C3/* loif (*p$C0olygon_ind	or (inde$Ix=0;in$idex<polygon->vertex_count && p
+polygon_index,$C3 polyg第谷正在
+渗透3on_index));nS_TRANSPARENT(line))
+{polyg$C0on= get_polygon_data(*polygon_ind$C3ex);
+
+$C0*line_E_I$C3>endpoint_                   indexes[index$C0]!=endpoint_              index;++index);vasse tyc$C3!=cool                pol$Iygon->vertex_courcate $iour endpo$C0
