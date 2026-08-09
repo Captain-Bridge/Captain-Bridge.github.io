@@ -132,7 +132,7 @@
       "bodyFile": "/marathon-lore/content/docs/store/items/New_brain_domain_Recon.md"
     },
     {
-      "id": "Black_brain_domain",
+      "id": "black_brain_domain",
       "title": "黑色脑域",
       "price": "100",
       "category": "档案背景",
@@ -140,10 +140,10 @@
         "size": 1
       },
       "imageFit": "contain",
-      "coverImage": "/marathon-lore/content/docs/store/items/Black_brain_domain_cover.webp",
-      "iconImage": "/marathon-lore/content/docs/store/items/Black_brain_domain_icon.webp",
-      "detailImage": "/marathon-lore/content/docs/store/items/Black_brain_domain.webp",
-      "bodyFile": "/marathon-lore/content/docs/store/items/Black_brain_domain.md"
+      "coverImage": "/marathon-lore/content/docs/store/items/black_brain_domain_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/black_brain_domain_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/black_brain_domain.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/black_brain_domain.md"
     },
     {
       "id": "New_brain_domain",
