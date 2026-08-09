@@ -1120,7 +1120,7 @@ layout: false
       el.series.innerHTML = '';
       catalog.forEach((series, index) => {
         const button = document.createElement('button');
-        button.type = 'button'; button.textContent = series.label;
+        button.type = 'button'; button.textContent = series.id === 'm1' ? 'M1(1994)' : series.id === 'm2' ? 'M2(1995)' : series.label;
         button.setAttribute('aria-pressed', index === state.classicIndex ? 'true' : 'false');
         button.addEventListener('click', () => {
           if (index === state.classicIndex) return;
