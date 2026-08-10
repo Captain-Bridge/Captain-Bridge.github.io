@@ -2439,7 +2439,7 @@ function storeImageMarkup(src, alt, className = '', decorative = false) {
 function storePriceMarkup(price, label) {
   return `
     <span class="store-price" aria-label="${escapeHtml(label)}价格 ${escapeHtml(price)}">
-      <span class="store-price-mark" aria-hidden="true"></span>
+      <img class="store-price-mark" src="/images/laxury_coin.svg" alt="" aria-hidden="true">
       <strong>${escapeHtml(price)}</strong>
     </span>
   `;

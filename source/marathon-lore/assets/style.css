@@ -2559,10 +2559,10 @@ body {
 }
 
 .store-price-mark {
-  width:16px;
-  height:16px;
-  border:3px solid currentColor;
-  box-shadow:4px 4px 0 -2px #040708,4px 4px 0 0 currentColor
+  width:20px;
+  height:20px;
+  flex:0 0 auto;
+  object-fit:contain
 }
 
 .store-empty {
