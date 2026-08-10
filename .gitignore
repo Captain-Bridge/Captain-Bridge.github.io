@@ -8,5 +8,19 @@ public/
 _multiconfig.yml
 .npm-cache/
 artifacts/
-scripts/__pycache__/
 .codewhale
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 误提交的 Windows 系统缓存（环境变量字面目录）
+%SystemDrive%/
+
+# 根目录临时文件 / AI 会话导出
+/tmp_*
+/map
+
+# 脚本生成产物（图片对比预览、新闻同步报告）
+_review/
+*.sync-report.json
