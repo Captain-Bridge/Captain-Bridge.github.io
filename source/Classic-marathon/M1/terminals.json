@@ -2,8 +2,8 @@
   "meta": {
     "description": "Marathon M1 scenario — terminal files mapped to images",
     "logon_logoff_image": "01600.bmp",
-    "total_picts": 41,
-    "total_images": 42
+    "total_picts": 40,
+    "total_images": 41
   },
   "levels": [
     {
@@ -203,17 +203,6 @@
           "picts": [],
           "variants": [
             "UNFINISHED"
-          ]
-        },
-        {
-          "name": "Terminal_5",
-          "logon": "FINISHED_000_LOGON.txt",
-          "information": "FINISHED_001_INFORMATION.txt",
-          "logoff": "FINISHED_002_LOGOFF.txt",
-          "picts": [],
-          "variants": [
-            "UNFINISHED",
-            "FINISHED"
           ]
         }
       ]
@@ -758,21 +747,6 @@
         },
         {
           "name": "Terminal_1",
-          "logon": "UNFINISHED_000_LOGON.txt",
-          "information": "UNFINISHED_001_INFORMATION.txt",
-          "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "picts": [
-            {
-              "file": "UNFINISHED_002_PICT.txt",
-              "image": "01641.bmp"
-            }
-          ],
-          "variants": [
-            "UNFINISHED"
-          ]
-        },
-        {
-          "name": "Terminal_2",
           "logon": "FINISHED_000_LOGON.txt",
           "information": "FINISHED_001_INFORMATION.txt",
           "logoff": "FINISHED_002_LOGOFF.txt",
