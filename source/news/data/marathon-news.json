@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T17:10:15.005Z",
+  "generatedAt": "2026-08-11T15:24:39.731Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,20 +7,14 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 56,
-  "count": 56,
+  "total": 57,
+  "count": 57,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 45,
-    "englishOnlyCount": 11,
-    "chineseOnlyCount": 0,
+    "bilingualCount": 46,
+    "englishOnlyCount": 10,
+    "chineseOnlyCount": 1,
     "englishOnly": [
-      {
-        "articlePath": "/marathon_update_1_1_5_2",
-        "title": "Marathon Update 1.1.5.2",
-        "publishedAt": "2026-08-04T15:00:00.000Z",
-        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_5_2"
-      },
       {
         "articlePath": "/get_to_know_marathons_bungie_rewards",
         "title": "Get to Know Marathon’s Bungie Rewards",
@@ -82,14 +76,118 @@
         "articleUrl": "https://www.bungie.net/7/en-us/News/Article/alpha_update"
       }
     ],
-    "chineseOnly": []
+    "chineseOnly": [
+      {
+        "articlePath": "/marathon_update_1_1_5_3",
+        "title": "《失落星船：马拉松》更新1.1.5.3",
+        "publishedAt": "2026-08-11T15:00:00.000Z",
+        "articleUrl": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_3"
+      }
+    ]
   },
   "translation": {
     "attempted": false,
     "available": false,
-    "generatedCount": 11
+    "generatedCount": 10
   },
   "items": [
+    {
+      "id": "bltcf82d923412b5b73",
+      "slug": "marathon_update_1_1_5_3",
+      "pathSlug": "marathon-update-1-1-5-3",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-08-11T15:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_5_3",
+      "articleUrl": {
+        "en": null,
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_3"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-5-3/",
+      "matchType": "zh-only",
+      "languages": {
+        "en": false,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 3,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": null,
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.5.3",
+          "subtitle": "关于FPS计数",
+          "bodyHtml": "<h2>综合</h2><ul><li>修复了使用DLSS帧生成时，FPS计数显示不准确的问题。</li><li>修复了单人玩家尝试加入双人队列时，错误提示启用团队补位即可加入的视觉问题。</li></ul>",
+          "bodyText": "综合 修复了使用DLSS帧生成时，FPS计数显示不准确的问题。 修复了单人玩家尝试加入双人队列时，错误提示启用团队补位即可加入的视觉问题。",
+          "excerpt": "关于FPS计数",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt29ae7b8291b48023",
       "slug": "marathon_update_1_1_5_2",
@@ -100,10 +198,10 @@
       "articlePath": "/marathon_update_1_1_5_2",
       "articleUrl": {
         "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_5_2",
-        "zh": null
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_2"
       },
       "localPath": "/news/articles/marathon-update-1-1-5-2/",
-      "matchType": "en-only",
+      "matchType": "bilingual",
       "languages": {
         "en": true,
         "zh": true
@@ -184,12 +282,12 @@
           "excerpt": "The one about more Vault Breaker"
         },
         "zh": {
-          "title": "马拉松更新1.1.5.2",
-          "subtitle": "关于更多Vault Breaker的那个",
-          "bodyHtml": "<h2>保险库破坏者</h2><ul><li>我们延长了保险库破坏者模式的持续时间！<ul><li>新的结束日期：8月18日。</li><li>为了配合此次延长，我们增加了部分限时优惠的可用库存。</li><li>我们期待继续听取您对这一实验性PvE模式的反馈。</li></ul></li><li>更新了钥匙模板军械库的奖励内容，以明确说明其仅发放低温档案钥匙。</li></ul><h2>道具经济</h2><ul><li>赞助套件增强 - 免费赞助套件现已升级：<ul><li>起始武器现在自带随机强化（绿色）模块。</li><li>1组强化（绿色）修补套件。</li><li>1颗随机手雷（烟雾、燃烧或阔剑）。</li></ul></li></ul><h2>战斗</h2><h3>武器</h3><ul><li>V22 伏特投掷者<ul><li>伤害从 12.6 提升至 14.4。<ul><li><em>开发者注：这是对 7/24 伤害削减的部分回滚，该改动曾将伏特投掷者的伤害从 18 降至 12.6。</em></li></ul></li><li>投射物生命周期的前 1.2 秒内，跟踪速度将逐渐衰减，最大衰减 30%。</li><li>武器热量开始下降前停留在 540rpm 的时间减少约 20%。</li></ul></li><li>KKV-9SD<ul><li>基础弹匣容量从23提升至28。<ul><li>重新调整了各项属性值下的弹匣容量以作补偿。</li><li>Prestige Flechette Drum 弹匣模组仍保持87发不变。</li></ul></li><li>修复了部分弹匣模组未能正确增加弹匣内子弹数量的问题。</li></ul></li><li>V85 Circuit Breaker<ul><li>修复了与 Prestige 品质的 Overlocked Delimiter 模组相关的稳定性问题。<ul><li>该模组现已重新启用。</li></ul></li></ul></li></ul><h2>区域</h2><ul><li>修复了重复打开冷冻舱门可能会获得非预期数量的阵营声望和赛季经验值的问题。<ul><li>该操作现在每场比赛只会提供一次预期收益。</li><li>此前在低温档案库中所有被禁用声望和经验值获取的行为现已重新启用。</li></ul></li></ul><h2>通用</h2><ul><li>修复了玩家使用 LUX 购买奖励通行证物品时有时无法获得残料或设计图的问题。</li><li>修复了商店中的一个问题，即一些本应在目录部分也可见的捆绑包物品显示不正确。</li></ul>",
-          "bodyText": "保险库破坏者 我们延长了保险库破坏者模式的持续时间！ 新的结束日期：8月18日。 为了配合此次延长，我们增加了部分限时优惠的可用库存。 我们期待继续听取您对这一实验性PvE模式的反馈。 更新了钥匙模板军械库的奖励内容，以明确说明其仅发放低温档案钥匙。 道具经济 赞助套件增强 - 免费赞助套件现已升级： 起始武器现在自带随机强化（绿色）模块。 1组强化（绿色）修补套件。 1颗随机手雷（烟雾、燃烧或阔剑）。 战斗 武器 V22 伏特投掷者 伤害从 12.6 提升至 14.4。 开发者注：这是对 7/24 伤害削减的部分回滚，该改动曾将伏特投掷者的伤害从 18 降至 12.6。 投射物生命周期的前 1.2 秒内，跟踪速度将逐渐衰减，最大衰减 30%。 武器热量开始下降前停留在 540rpm 的时间减少约 20%。 KKV-9SD 基础弹匣容量从23提升至28。 重新调整了各项属性值下的弹匣容量以作补偿。 Prestige Flechette Drum 弹匣模组仍保持87发不变。 修复了部分弹匣模组未能正确增加弹匣内子弹数量的问题。 V85 Circuit Breaker 修复了与 Prestige 品质的 Overlocked Delimiter 模组相关的稳定性问题。 该模组现已重新启用。 区域 修复了重复打开冷冻舱门可能会获得非预期数量的阵营声望和赛季经验值的问题。 该操作现在每场比赛只会提供一次预期收益。 此前在低温档案库中所有被禁用声望和经验值获取的行为现已重新启用。 通用 修复了玩家使用 LUX 购买奖励通行证物品时有时无法获得残料或设计图的问题。 修复了商店中的一个问题，即一些本应在目录部分也可见的捆绑包物品显示不正确。",
-          "excerpt": "关于更多Vault Breaker的那个",
-          "source": "generated"
+          "title": "《失落星船：马拉松》更新1.1.5.2",
+          "subtitle": "关于更多破库者",
+          "bodyHtml": "<h2>破库者</h2><ul><li>我们延长了破库者模式的持续时间！<ul><li>新的结束日期：8月18日。</li><li>为了配合此次延长，我们增加了部分限定优惠的库存。</li><li>我们期待大家能继续对这一实验性PvE模式进行反馈。</li></ul></li><li>更新了钥匙模板军械库奖励，使其正确显示为仅奖励低温档案室钥匙。</li></ul><h2>物品经济</h2><ul><li>赞助包加成——免费赞助包现已升级：<ul><li>初始武器现在会随机附带强化（绿色）模组。</li><li>1层强化（绿色）修补包。</li><li>1个随机手雷（烟雾、热量或阔刀地雷）。</li></ul></li></ul><h2>战斗</h2><h3>武器</h3><ul><li>V22伏特放射器<ul><li>伤害从12.6提升至14.4。<ul><li><em>开发者提示：这是对7月24日实施的伤害削减的部分回调，之前的削减将伏特放射器的伤害从18降低到了12.6。</em></li></ul></li><li>追踪速度现在会在射弹的1.2秒内缓慢衰减，最多衰减30%。</li><li>减少了武器达到540射速时因过热而导致转速下降的时间约20%。</li></ul></li><li>KKV-9SD<ul><li>基础弹匣容量从23增加到28。<ul><li>重新调整了所有属性值的弹匣容量以进行补偿。</li><li>尊享飞镖鼓式弹匣模组仍保持为87。</li></ul></li><li>修复了某些弹匣模组无法正确增加弹匣容量的问题。</li></ul></li><li>V85断路器<ul><li>修复了与尊享品质的超频限定器模组相关的稳定性问题。<ul><li>该模组现已重新启用。</li></ul></li></ul></li></ul><h2>区域</h2><ul><li>修复了反复开启低温舱门可能获得意外数量的阵营声望和赛季经验值的问题。<ul><li>现在，此操作每场比赛只会获得一次预期收益。</li><li>所有之前低温档案室无法获取声望和经验值的操作现已重新启用。</li></ul></li></ul><h2>综合</h2><ul><li>修复了玩家有时使用奢享币购买奖励通票物品时无法获得回收资源或方案的问题。</li><li>修复了商店中某些本应在目录部分显示的组合包物品显示不正确的问题。</li></ul>",
+          "bodyText": "破库者 我们延长了破库者模式的持续时间！ 新的结束日期：8月18日。 为了配合此次延长，我们增加了部分限定优惠的库存。 我们期待大家能继续对这一实验性PvE模式进行反馈。 更新了钥匙模板军械库奖励，使其正确显示为仅奖励低温档案室钥匙。 物品经济 赞助包加成——免费赞助包现已升级： 初始武器现在会随机附带强化（绿色）模组。 1层强化（绿色）修补包。 1个随机手雷（烟雾、热量或阔刀地雷）。 战斗 武器 V22伏特放射器 伤害从12.6提升至14.4。 开发者提示：这是对7月24日实施的伤害削减的部分回调，之前的削减将伏特放射器的伤害从18降低到了12.6。 追踪速度现在会在射弹的1.2秒内缓慢衰减，最多衰减30%。 减少了武器达到540射速时因过热而导致转速下降的时间约20%。 KKV-9SD 基础弹匣容量从23增加到28。 重新调整了所有属性值的弹匣容量以进行补偿。 尊享飞镖鼓式弹匣模组仍保持为87。 修复了某些弹匣模组无法正确增加弹匣容量的问题。 V85断路器 修复了与尊享品质的超频限定器模组相关的稳定性问题。 该模组现已重新启用。 区域 修复了反复开启低温舱门可能获得意外数量的阵营声望和赛季经验值的问题。 现在，此操作每场比赛只会获得一次预期收益。 所有之前低温档案室无法获取声望和经验值的操作现已重新启用。 综合 修复了玩家有时使用奢享币购买奖励通票物品时无法获得回收资源或方案的问题。 修复了商店中某些本应在目录部分显示的组合包物品显示不正确的问题。",
+          "excerpt": "关于更多破库者",
+          "source": "official"
         }
       }
     },
