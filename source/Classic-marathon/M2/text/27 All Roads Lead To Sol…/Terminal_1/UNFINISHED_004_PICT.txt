@@ -1,12 +1,11 @@
-$C5   “Gee, and I still didn’t have to make a level…"
+$C5   “嘿，我居然还是不需要做一个关卡……”
 
-   Here’s to cooperative net play, terminals, and Vulcan2.  Heh.
+   敬合作联网游戏、终端，还有 Vulcan2。嘿。
+   感谢所有在我忙这个时容忍我的人。特别要感谢Nicole，理解我在芝加哥度过的漫长时光和夏天。现在我只需要在十二月毕业就行了……
 
-   Thanks to all those folks that put up with me while I was working on this.  Especially Nicole for understanding the long hours and summers in Chicago.  Now I just have to graduate in December…
+   感谢“那帮家伙”（Jake、John、Pagan、Adam 和 Mike）让我保持清醒。
 
-   Thanks to the Gang (Jake, John, Pagan, Adam, and Mike) for keeping me sane.
+   当然，还要感谢我的父母，理解他们的儿子一连数月扎进“莫里亚代码矿井”，制作$IMarathon$i & $IMarathon 2.$i
 
-   And of course, thanks to my parents for understanding when their son goes off into the Code Mines of Moria for months while working on $IMarathon$i & $IMarathon 2.$i
-
-   We Rule.
+   我们最牛逼。
    -Ryan
