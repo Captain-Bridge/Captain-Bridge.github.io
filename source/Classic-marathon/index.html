@@ -966,12 +966,23 @@ layout: false
       });
     }
 
+    function toInformationItems(fileName, variant, defaultColor) {
+      if (!fileName) return [];
+      const files = Array.isArray(fileName) ? fileName : [fileName];
+      return files.map(file => ({
+        kind: 'information',
+        file: replaceTerminalVariant(file, variant),
+        image: null,
+        defaultColor
+      }));
+    }
+
     function buildVariantItems(terminal, variant) {
       const variantData = terminal.variantData?.[variant];
       if (variantData) {
         return [
           { kind: 'logon', file: variantData.logon, image: variantData.logonImage, defaultColor: variantData.defaultColor },
-          { kind: 'information', file: variantData.information, image: null, defaultColor: variantData.defaultColor },
+          ...toInformationItems(variantData.information, variant, variantData.defaultColor),
           ...((variantData.picts || []).map(item => ({ kind: 'pict', ...item, defaultColor: variantData.defaultColor }))),
           { kind: 'logoff', file: variantData.logoff, image: variantData.logoffImage, defaultColor: variantData.defaultColor }
         ].filter(item => item.file);
@@ -979,7 +990,7 @@ layout: false
 
       return [
         { kind: 'logon', file: replaceTerminalVariant(terminal.logon, variant), image: terminal.logonImage || '01600.bmp' },
-        { kind: 'information', file: replaceTerminalVariant(terminal.information, variant), image: null },
+        ...toInformationItems(terminal.information, variant),
         ...((terminal.picts || []).map(item => ({
           kind: 'pict',
           file: replaceTerminalVariant(item.file, variant),
