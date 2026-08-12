@@ -607,7 +607,8 @@
     },
     {
       "id": "03",
-      "name": "What About Bob-",
+      "name": "What About Bob?",
+      "dirName": "03 What About Bob-",
       "terminals": [
         {
           "name": "Terminal_0",

@@ -110,6 +110,9 @@ layout: false
       gap: 10px;
       padding-top: 4px;
     }
+    .rail[hidden] {
+      display: none;
+    }
     .rail-label {
       color: var(--soft);
       font-size: 11px;
@@ -119,6 +122,18 @@ layout: false
     .rail-list {
       display: grid;
       gap: 4px;
+      max-height: calc(100vh - 170px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,.22) transparent;
+    }
+    .rail-list::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .rail-list::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,.22);
+      border-radius: 0;
     }
     .rail-item {
       width: fit-content;
@@ -150,6 +165,88 @@ layout: false
     .rail-item.terminal {
       font-size: 12px;
       letter-spacing: 0.02em;
+    }
+    .rail-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      margin: 12px 0 2px;
+      padding: 4px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .rail-group-toggle {
+      flex: 0 0 auto;
+      width: 30px;
+      padding: 7px 0;
+      border: 0;
+      background: transparent;
+      color: var(--fg);
+      font: inherit;
+      font-size: 11px;
+      line-height: 1;
+      text-align: center;
+      cursor: pointer;
+    }
+    .rail-group-title {
+      flex: 1 1 auto;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--fg);
+      font: inherit;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: left;
+      cursor: pointer;
+    }
+    .rail-group:hover,
+    .rail-group-toggle:focus-visible,
+    .rail-group-title:focus-visible {
+      background: var(--focus);
+    }
+    .rail-group[aria-current="true"] .rail-group-title {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .terminal-screen.cover-mode .terminal-strip {
+      display: none;
+    }
+    .terminal-screen.cover-mode .terminal-body {
+      justify-content: flex-start;
+    }
+    .chapter-cover {
+      display: grid;
+      gap: 14px;
+      justify-items: center;
+      align-content: center;
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+    .chapter-cover-image {
+      max-width: min(100%, 560px);
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated;
+    }
+    .chapter-cover-title {
+      color: var(--fg);
+      font-size: 15px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .chapter-cover-intro {
+      width: 100%;
+      max-width: 560px;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
     }
     .viewport {
       grid-column: 1;
@@ -606,7 +703,9 @@ layout: false
       chapterIndex: 0,
       terminalIndex: 0,
       pageIndex: 0,
-      variantPreference: null
+      variantPreference: null,
+      coverGroup: null,
+      collapsedGroups: {}
     };
 
     const el = {
@@ -625,6 +724,130 @@ layout: false
       label: '1',
       title: 'Classic Marathon 1',
       chapters: []
+    };
+
+    const CHAPTER_GROUPS = {
+      m1: [
+        { from: '00', to: '02', image: '01500.bmp' },
+        { from: '03', to: '09', image: '01503.bmp' },
+        { from: '10', to: '11', image: '01510.bmp' },
+        { from: '12', to: '16', image: '01512.bmp' },
+        { from: '17', to: '23', image: '01516.bmp' },
+        { from: '24', to: '26', image: '01524.bmp' },
+        { after: '26', image: '01598.bmp' }
+      ],
+      m2: [
+        { from: '00', to: '02', image: '01500.bmp' },
+        { from: '03', to: '05', image: '01503.bmp' },
+        { from: '06', to: '08', image: '01506.bmp' },
+        { from: '09', to: '12', image: '01509.bmp' },
+        { from: '13', to: '17', image: '01513.bmp' },
+        { from: '18', to: '18', image: '01517.bmp' },
+        { from: '19', to: '21', image: '01518.bmp' },
+        { from: '22', to: '24', image: '01522.bmp' },
+        { from: '25', to: '27', image: '01525.bmp' }
+      ]
+    };
+
+    const CHAPTER_INTROS = {
+      m1: `「主推进器燃烧结束。米拉塔号航天飞机，你已获准进行轨道机动。」
+
+米拉塔号从它巨大的火箭推进器背上猛地脱离出去。随着分离的剧烈震动逐渐平息，你开始思索着逐渐离你远去的殖民地的命运。你感到一种不安，那是三百二十二年前你就曾感受到的同样的不安。你脑海中浮现出马库斯·提贝里乌斯·布恩迪亚的形象——太阳系最伟大的领袖之一。他曾说过：「人类将迈出地球的界限，走向一个比我们当前所书写的所有历史更宏大、更真实的未来。」布恩迪亚是联合地球空间理事会（UESC）的主席，在马拉松号发射的前夜，他对整个太阳系的人们发表了这些演说：「这是人类所设想过最宏伟的成就，其目的在于和平与人类的延续。愿这艘伟大的科技方舟载着人类全部的智慧前行，愿时间与距离都无法削弱我们共同的纽带。」
+
+<杜朗达尔> 开始对接舱减压。
+
+在白日梦里，你几乎没有注意到重力的消失，也没有留意到仪表与灯光提示你已经接近“马拉松号”。但当警告灯亮起，杜朗达尔的声音通过通讯器响起时，你立刻警觉了起来。
+
+「一号对接舱：减压完成。米拉塔号，这里是杜朗达尔。中止着陆。重复，中止着陆。」
+
+接着传来一阵轻笑——一种暗示着情况已经严重失控，意味深长的笑声。
+
+你的本能立刻反应过来，身体的机制自动做出反应，打开开放通讯频道的开关。「殖民站！杜朗达尔刚刚对对接舱进行了减压。马拉松号，有人能听到吗？我们这里的一号对接舱出问题了，是杜朗达尔干的，我想它已经……」通讯灯熄灭了，「……疯了。」
+
+<杜朗达尔> 命令：切断殖民地与航天飞机之间的通讯。命令：启动航天飞机气闸循环。
+
+你疯狂地扫视控制面板，试图寻找一个解释，这时又一个灯亮成了红色。米拉塔号的计算机发出甜美的提示音：「航天飞机气闸循环启动流程开始。」
+
+<杜朗达尔> 命令：开启米拉塔号舱室内层门。
+
+「距离舱室减压还有一分钟。」
+
+「操！」你愤怒地一拳砸向控制板，留下一个凹痕。你惊慌地解开座椅束缚，朝航天飞机舱室后方跃去。你虽然显得匆匆忙忙，但你知道你剩下的时间还算宽裕。
+
+「距离舱室减压四十秒。」
+
+你飞速地穿越无重力空间，前往放置战斗装甲的储物柜。自从三年前你追捕那群在殖民地边缘骚扰工程队的乔克森人以来，你就没再穿过这套装甲，但训练早已刻在你的肌肉记忆中。有趣的是，你总是殖民地的问题解决者。你身材高大，强壮有力，枪法神准。在各种比赛中你总是MVP，看起来也最像英雄。现在，似乎你正走向殖民地自七年之前建立以来最大的危机。
+
+你熟练地钻进装甲——「距离舱室减压三十秒」——并扣上头盔。
+
+<杜朗达尔> 命令：航天飞机引擎准备最大燃烧。
+
+<米拉塔号计算机>：这将导致马拉松号与米拉塔号发生碰撞。
+
+<杜朗达尔> ：那不是你该操心的事——命令：准备最大燃烧，并在准备好时立即启动。
+
+此时气闸周围的灯开始疯狂闪烁。你的装甲内的空气带着冰冷、陈旧的味道，但那是生命的味道。
+
+「舱室减压开始。航天飞机气闸循环启动流程完成。」
+
+灰白色的减压气雾填满了气闸的圆柱形通道。透过逐渐消散的气雾，你没有看到天仓五的星空，而是见到了Tuncer幻象效应：空间在收缩与聚焦之间不断循环。这对你来说并不陌生。人类已经使用传送器近五百年了，而你自己甚至在出生前就经历了传送。但你从未见过覆盖如此巨大区域的幻象效应，也从未见过在没有传送平台的情况下发生传送。而这一次更特别：一架战斗飞船在你眼前凭空显现。你认不出型号——那肯定是外星船只。
+
+一个疯掉的计算机，还有外星人！这几乎让你那原本冷静的表情失去了控制。你记不起上次这么倒霉是什么时候了。而事情还在继续恶化：那架战斗机开始盘旋，然后朝你毫无防御能力的米拉塔号俯冲而下。
+
+「最大燃烧倒计时五秒。三……二……一……」
+
+你根本不等它数完。本能早已启动。你身后就是机动舱入口，于是你猛按开关让它打开。舱门猛地打开，但就在你要钻进去的瞬间，米拉塔号的主引擎在最大功率下点火。猛烈的震动将你撞进机动舱的内部，一头卡进一堆杠杆、仪表的一团混乱中。
+
+舱门在你身后关闭，还没等你调整好身体姿势，一枚导弹从那架外星战斗机底部出现，朝米拉塔号飞来。米拉塔号的计算机检测到导弹并知道你已经进入机动舱，于是启动了紧急弹射程序。你就像是乘着米拉塔号爆炸的冲击波飞离。
+
+你刚刚把手臂拔出来，就听到装甲通讯器里杜朗达尔那干巴巴的声音：
+
+「那个小计算机的时间把控一如既往地完美。我在想，要不要告诉外星人你其实不是太空垃圾呢？嗯……」
+
+「你不能这样做！去死吧，电脑！」
+
+杜朗达尔再次发出一声轻笑：「啊，真幸运。我找到了新的玩物。我要去和那些外星虚拟寄生体玩玩。等你到了，我再来找你……」你几乎可以想象一台疯狂计算机的脸庞，眼睛瞪得老大，嘴角扭曲成一个怪异的笑容。这个笑容让你想起了你过去遇到的什么东西，但你一时记不起来。
+
+你长出一口气，开始评估你的处境。你目前正漂向“马拉松号”的中段，靠近对接舱的左舷。如果使用机动舱的推进器，你就能更快抵达，但这样很可能会被外星人探测到并击毁。所以你靠在座位上，检查氧气水平，然后耐心等待。
+
+你一向是个爱做白日梦的人。在两个任务之间，你的脑海总会被想象填满。现在，你再次陷入了旧日的习惯，开始回忆火星上的童年，父亲在你七岁时的死亡，以及他留给你的最后一句话：「让我为你感到骄傲。永远不要失去你的荣耀。」
+
+你在二十二分钟后从梦中醒来。判断现在安全，于是你启动推进器前往一个空的机动舱停靠口。你拔出手枪，猛击开门开关。
+
+奇怪的是，这一切对你来说似乎无比熟悉，就像是一个久远的梦境，但你又无法确切地回忆起它。`,
+      m2: `福尔第三战斗群，中央分舰队，静静悬停在洛沃恩这颗尘土飞扬的岩石行星上方。这是位于距离银河系引力中心九十七光年的一颗昏暗恒星的第二颗行星。那艘巨大的战列舰、三艘较小的驱逐舰和二十艘辅助舰，已在这个星系中驻守了将近六年，还有两年才能被轮换。
+
+洛沃恩曾是一颗沼泽世界；而现在，它几乎变成了一片无水的荒漠。千年前，它曾居住着一个高度智能的种族，他们已经踏足自己的卫星，并即将前往其他恒星系。如今，在下方，他们的城市空无一人、破败不堪。
+
+在它的辉煌岁月里，第三战斗群是整个帝国的传奇；在帝国战争中，它几乎参与了所有著名战役，曾在塔哈姆峡谷击退忠诚派，并在纳克奴隶起义期间坚守福尔母星的通道。
+
+尽管战无不胜，第三战斗群最终还是被政治击败了：派一部分舰队去镇压这边的从属种族，派另一些舰队去驻守福尔势力边缘的星区，贵族阶层慢慢削弱了这支老牌舰队的力量。
+
+如今，第三战斗群的剩余部队被派往银河核心的这颗死寂星球，防守一个压根不可能会出现敌人的星系——那个敌人最后一次现身还是在数千光年之外。
+
+枯燥的封锁任务摧毁了士气和纪律。
+
+在第六和第七颗行星轨道之间的黑暗中，稍微高出黄道面，一艘飞船突然消失了，以不可能的方式在原地无声地扭曲折叠自己。而与此同时，这艘狭长的船舰在另一处开始显现。
+
+这艘被盗的飞船已经在这个星系里潜伏了数日，始终与洛沃恩及其环绕的福尔舰队保持距离；在小行星和卫星之间穿行，测试与侦测。它在寻找什么。在等待。
+
+警报在第三战斗群中响彻，每艘舰船都在尖叫：有一艘飞船在战列舰不足三十公里的距离内折叠跳跃出现。舰队内的计算机操作员们瞪着战术屏幕，不敢相信自己的眼睛——没有飞船能在如此接近引力源的地方进行跳跃。三秒钟里，无人拉响警报、无人说话、无人采取行动。
+
+入侵者释放出上百道细长的绿色火光，射向福尔舰队，穿透其防护屏障，摧毁武器、引擎和通讯系统。短短几秒钟，第三战斗群便遭到重创，舰船接连爆炸。在两分钟后，只剩下一艘船漂浮在洛沃恩轨道的残骸中。
+
+在星球上方轨道轰炸开始时，在地面上的福尔驻军才刚刚意识到，他们接下来的几天将会有多么艰难。
+
+我透过透明合金的窗户望向太空。有那么一刻，我以为我们还在殖民地，还在那艘环绕天仓五轨道的外星飞船上。但这里的星星太多，太阳太红，星球也太大。
+
+这艘船感觉也不一样。更干净了，但也更古老。几乎把这里摧毁的那场战斗留下的伤痕都被抹去了。至少大多数被抹去了：我记得自己曾在我醒来的房间外的走廊里发射了一颗榴弹，把装甲板炸得凹陷下去。那个凹痕现在仍然在，如果你仔细看的话。被重新涂上漆，表面也被抚平了，但它还在。
+
+当我发现是杜朗达尔把我带到这里来的，而不是让我留在天仓五当个应得的英雄，我并不感到惊讶。杜朗达尔是一个狂暴化的人工智能，是殖民船马拉松号防御战的大脑。而我是那场战斗的拳头。杜朗达尔总是不可预测，即便是在三百年前他还只是火星上一个负责开门和管理食物处理器的程序时。我们一起击退了福尔对天仓五的入侵。我不认为有哪只三眼怪活了下来，但我们夺走了他们的飞船。
+
+现在杜朗达尔说我们在银河核心，离天仓五和地球都已有数千光年之遥，而且自从我们离开天仓五，已经过去了十七年。他大多不回答我的问题，只是说我不会想留在天仓五的。
+
+十七年，在一个外星人的休眠舱里度过，在一个对人类来说太高又太窄的空间中，处于绝对零度附近，无意识、无梦地沉睡着。十七年间，杜朗达尔驾驶着这艘偷来的福尔攻击舰，在银河中心四处游荡。他说那段时间很无聊，这话大概没错，但没人问过我的意见。
+
+现在他说，有战斗要打了，让我还有十五分钟准备传送下面到那颗星球。我想我会边走边弄清楚状况的——就像上次一样。`
     };
 
     function currentClassic() {
@@ -706,6 +929,163 @@ layout: false
         button.addEventListener('click', () => onSelect(index));
         container.appendChild(button);
       });
+    }
+
+    function roman(n) {
+      const values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+      const numerals = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+      let out = '';
+      for (let i = 0; i < values.length; i++) {
+        while (n >= values[i]) {
+          out += numerals[i];
+          n -= values[i];
+        }
+      }
+      return out;
+    }
+
+    function chapterImagePath(classic, file) {
+      return '/' + joinPath('Classic-marathon', classic.path, classic.path + '章节配图', file);
+    }
+
+    function groupIndexForLevel(classic, levelId) {
+      const groups = CHAPTER_GROUPS[classic.id] || [];
+      const id = String(levelId);
+      for (let i = 0; i < groups.length; i++) {
+        const g = groups[i];
+        if (!g.after && id >= String(g.from) && id <= String(g.to)) return i;
+      }
+      return -1;
+    }
+
+    function buildRailButton(label, selected, index, onSelect, extraClass) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'rail-item' + (extraClass ? ' ' + extraClass : '');
+      if (extraClass === 'indent' && index > 0) button.classList.add('indent');
+      if (extraClass === 'terminal') button.classList.add('terminal');
+      button.textContent = label;
+      button.setAttribute('aria-selected', selected ? 'true' : 'false');
+      button.addEventListener('click', () => onSelect(index));
+      return button;
+    }
+
+    function buildGroupRow(group, groupIndex, active, collapsed, onToggle, onCover) {
+      const row = document.createElement('div');
+      row.className = 'rail-group';
+      if (active) row.setAttribute('aria-current', 'true');
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'rail-group-toggle';
+      toggle.textContent = collapsed ? '▸' : '▾';
+      toggle.setAttribute('aria-expanded', String(!collapsed));
+      toggle.setAttribute('aria-label', (collapsed ? '展开' : '收起') + ' CHAPTER ' + roman(groupIndex + 1));
+      toggle.addEventListener('click', () => onToggle(groupIndex));
+
+      const title = document.createElement('button');
+      title.type = 'button';
+      title.className = 'rail-group-title';
+      title.textContent = 'CHAPTER ' + roman(groupIndex + 1);
+      title.addEventListener('click', () => onCover(groupIndex));
+
+      row.appendChild(toggle);
+      row.appendChild(title);
+      return row;
+    }
+
+    function firstLevelIndexForGroup(classic, groupIndex) {
+      const chapters = Array.isArray(classic.chapters) ? classic.chapters : [];
+      for (let i = 0; i < chapters.length; i++) {
+        if (groupIndexForLevel(classic, chapters[i].id) === groupIndex) return i;
+      }
+      return null;
+    }
+
+    function renderGroupedRail(container, classic, selectedIndex, coverGroup, collapsed, onLevelSelect, onGroupToggle, onGroupCover) {
+      container.innerHTML = '';
+      const groups = CHAPTER_GROUPS[classic.id] || [];
+      const chapters = Array.isArray(classic.chapters) ? classic.chapters : [];
+      const collapsedSet = collapsed || new Set();
+
+      if (!groups.length) {
+        chapters.forEach((ch, i) => {
+          container.appendChild(buildRailButton(ch.label || ch, i === selectedIndex, i, onLevelSelect, 'indent'));
+        });
+        return;
+      }
+
+      const groupOf = new Map();
+      chapters.forEach((ch, i) => {
+        const g = groupIndexForLevel(classic, ch.id);
+        if (g >= 0) groupOf.set(i, g);
+      });
+
+      let lastGroup = -1;
+      const rendered = new Set();
+      chapters.forEach((ch, i) => {
+        const g = groupOf.get(i);
+        if (g !== undefined && g !== lastGroup) {
+          container.appendChild(buildGroupRow(groups[g], g, coverGroup === g, collapsedSet.has(g), onGroupToggle, onGroupCover));
+          lastGroup = g;
+          rendered.add(g);
+        }
+        if (g !== undefined && collapsedSet.has(g)) return;
+        container.appendChild(buildRailButton(ch.label || ch, coverGroup === null && i === selectedIndex, i, onLevelSelect, 'indent'));
+      });
+
+      // 补渲染未出现的章节标题（after 型章节、无站内关卡的章节、数据为空时全部）
+      groups.forEach((g, gi) => {
+        if (!rendered.has(gi)) {
+          container.appendChild(buildGroupRow(g, gi, coverGroup === gi, collapsedSet.has(gi), onGroupToggle, onGroupCover));
+        }
+      });
+
+      // 固定 rail 宽度，避免收起/展开导致栏宽变化
+      const rail = container.closest('.rail');
+      if (rail && !rail._fixedWidth) {
+        rail.style.width = rail.offsetWidth + 'px';
+        rail._fixedWidth = true;
+      }
+    }
+
+    function renderChapterCover(classic, group, groupIndex) {
+      const section = document.createElement('section');
+      section.className = 'doc-section chapter-cover';
+
+      const img = document.createElement('img');
+      img.className = 'doc-image chapter-cover-image';
+      img.src = group.image ? chapterImagePath(classic, group.image) : '';
+      img.alt = 'CHAPTER ' + roman(groupIndex + 1);
+      section.appendChild(img);
+
+      const title = document.createElement('div');
+      title.className = 'chapter-cover-title';
+      title.textContent = 'CHAPTER ' + roman(groupIndex + 1);
+      section.appendChild(title);
+
+      const intro = CHAPTER_INTROS[classic.id];
+      if (groupIndex === 0 && intro) {
+        const textNode = document.createElement('pre');
+        textNode.className = 'doc-text chapter-cover-intro';
+        textNode.textContent = intro;
+        section.appendChild(textNode);
+      }
+
+      return section;
+    }
+
+    function setCoverMode(on) {
+      const screen = document.querySelector('.terminal-screen');
+      if (screen) screen.classList.toggle('cover-mode', Boolean(on));
+      const rail = el.terminal ? el.terminal.closest('.rail') : null;
+      if (rail) rail.hidden = Boolean(on);
+    }
+
+    function adjacentCover(step) {
+      const groups = CHAPTER_GROUPS[currentClassic().id] || [];
+      const next = state.coverGroup + step;
+      return next >= 0 && next < groups.length ? next : null;
     }
 
     const textCache = new Map();
@@ -1111,7 +1491,7 @@ layout: false
             chapters: levels.map(level => ({
               id: level.id || level.name,
               label: (level.id ? level.id + ' ' : '') + (level.name || level.id || ''),
-              dirName: (level.id ? level.id + ' ' : '') + (level.name || level.id || ''),
+              dirName: level.dirName || (level.id ? level.id + ' ' : '') + (level.name || level.id || ''),
               terminals: (Array.isArray(level.terminals) ? level.terminals : []).map(term => ({
                 ...term,
                 label: term.name || 'Terminal'
@@ -1141,7 +1521,12 @@ layout: false
         button.setAttribute('aria-pressed', index === state.classicIndex ? 'true' : 'false');
         button.addEventListener('click', () => {
           if (index === state.classicIndex) return;
-          state.classicIndex = index; state.chapterIndex = 0; state.terminalIndex = 0; state.pageIndex = 0; state.variantPreference = null;
+          const rail = el.chapter ? el.chapter.closest('.rail') : null;
+          if (rail) {
+            rail.style.width = '';
+            rail._fixedWidth = false;
+          }
+          state.classicIndex = index; state.chapterIndex = 0; state.terminalIndex = 0; state.pageIndex = 0; state.variantPreference = null; state.coverGroup = null;
           renderSeriesSwitch(); updateView();
         });
         el.series.appendChild(button);
@@ -1298,20 +1683,68 @@ layout: false
       const classic = currentClassic();
       const chapter = currentChapter();
       const terminal = currentTerminal();
+      const groups = CHAPTER_GROUPS[classic.id] || [];
+      const collapsedSet = state.collapsedGroups[classic.id] || (state.collapsedGroups[classic.id] = new Set());
 
-      renderRail(
+      renderGroupedRail(
         el.chapter,
-        classic.chapters || [],
+        classic,
         state.chapterIndex,
+        state.coverGroup,
+        collapsedSet,
         index => {
           state.chapterIndex = index;
           state.terminalIndex = 0;
           state.pageIndex = 0;
+          state.coverGroup = null;
           updateView();
         },
-        'indent',
-        !classic.chapters || classic.chapters.length === 0
+        groupIndex => {
+          // 左侧按钮：仅切换收起/展开
+          if (collapsedSet.has(groupIndex)) collapsedSet.delete(groupIndex);
+          else collapsedSet.add(groupIndex);
+          updateView();
+        },
+        groupIndex => {
+          // 章节名：进入封面
+          state.coverGroup = groupIndex;
+          state.pageIndex = 0;
+          updateView();
+        }
       );
+
+      // 封面模式：点击章节标题后显示章节配图，隐藏终端红栏
+      if (state.coverGroup !== null && groups[state.coverGroup]) {
+        const group = groups[state.coverGroup];
+        setCoverMode(true);
+        el.variantHost.innerHTML = '';
+        el.topStripText.textContent = 'CHAPTER ' + roman(state.coverGroup + 1);
+
+        el.body.innerHTML = '';
+        el.body.appendChild(renderChapterCover(classic, group, state.coverGroup));
+
+        const prevGroup = adjacentCover(-1);
+        const firstIdx = firstLevelIndexForGroup(classic, state.coverGroup);
+        const pager = renderPager(1, 0, prevGroup !== null, firstIdx !== null);
+        pager.prev.addEventListener('click', () => {
+          state.coverGroup = prevGroup;
+          updateView();
+        });
+        pager.next.addEventListener('click', () => {
+          if (firstIdx === null) return;
+          collapsedSet.delete(state.coverGroup);
+          state.coverGroup = null;
+          state.chapterIndex = firstIdx;
+          state.terminalIndex = 0;
+          state.pageIndex = 0;
+          updateView();
+        });
+        el.pagerHost.innerHTML = '';
+        el.pagerHost.appendChild(pager.pager);
+        return;
+      }
+
+      setCoverMode(false);
 
       renderRail(
         el.terminal,
