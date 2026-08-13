@@ -104,6 +104,12 @@ layout: false
       pointer-events: auto;
       width: max-content;
     }
+    /* Chapter navigation keeps a stable horizontal footprint while groups
+       are collapsed/expanded; only its vertical contents should change. */
+    .menu-grid .rail:first-child {
+      width: 390px;
+      min-width: 390px;
+    }
     .rail {
       display: grid;
       align-content: start;
@@ -218,21 +224,46 @@ layout: false
     }
     .terminal-screen.cover-mode .terminal-body {
       justify-content: flex-start;
+      align-items: flex-start;
+      overflow-y: auto;
     }
     .chapter-cover {
       display: grid;
       gap: 14px;
       justify-items: center;
-      align-content: center;
+      align-content: start;
       width: 100%;
       max-width: 620px;
       margin: 0 auto;
       padding: 10px 0;
     }
     .chapter-cover-image {
+      display: block;
+      cursor: zoom-in;
       max-width: min(100%, 560px);
       width: 100%;
       height: auto;
+      image-rendering: pixelated;
+    }
+    .image-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, .92);
+      cursor: zoom-out;
+    }
+    .image-lightbox[hidden] { display: none; }
+    .image-lightbox img {
+      display: block;
+      max-width: min(96vw, 1400px);
+      max-height: 94vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
       image-rendering: pixelated;
     }
     .chapter-cover-title {
@@ -243,10 +274,32 @@ layout: false
       text-align: center;
     }
     .chapter-cover-intro {
+      box-sizing: border-box;
       width: 100%;
       max-width: 560px;
       white-space: pre-wrap;
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      text-align: left;
+      margin: 0;
+      padding: 0 8px;
+    }
+    .chapter-cover.chapter-one .chapter-cover-image {
+      width: min(560px, 100%);
+      max-height: 240px;
+      object-fit: contain;
+    }
+    .chapter-cover.chapter-one .chapter-cover-intro {
+      display: block;
+      width: min(560px, 100%) !important;
+      max-width: min(560px, 100%) !important;
+      min-width: 0;
+      white-space: pre-wrap;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: pre-wrap;
+      line-height: 1.45;
     }
     .viewport {
       grid-column: 1;
@@ -728,7 +781,7 @@ layout: false
 
     const CHAPTER_GROUPS = {
       m1: [
-        { from: '00', to: '02', image: '01500.bmp' },
+        { from: '00', to: '02', image: '/Classic-marathon/chapter-images/M1-01500.png' },
         { from: '03', to: '09', image: '01503.bmp' },
         { from: '10', to: '11', image: '01510.bmp' },
         { from: '12', to: '16', image: '01512.bmp' },
@@ -737,7 +790,7 @@ layout: false
         { after: '26', image: '01598.bmp' }
       ],
       m2: [
-        { from: '00', to: '02', image: '01500.bmp' },
+        { from: '00', to: '02', image: '/Classic-marathon/chapter-images/M2-01500.png' },
         { from: '03', to: '05', image: '01503.bmp' },
         { from: '06', to: '08', image: '01506.bmp' },
         { from: '09', to: '12', image: '01509.bmp' },
@@ -945,7 +998,10 @@ layout: false
     }
 
     function chapterImagePath(classic, file) {
-      return '/' + joinPath('Classic-marathon', classic.path, classic.path + '章节配图', file);
+      if (String(file).startsWith('/')) return file;
+      // Encode the non-ASCII chapter-image directory so static hosts consistently
+      // resolve the URL (notably for M1/M2 CHAPTER I cover images).
+      return encodeURI('/' + joinPath('Classic-marathon', classic.path, classic.path + '章节配图', file));
     }
 
     function groupIndexForLevel(classic, levelId) {
@@ -974,19 +1030,20 @@ layout: false
       const row = document.createElement('div');
       row.className = 'rail-group';
       if (active) row.setAttribute('aria-current', 'true');
+      const groupLabel = group.after ? 'END' : 'CHAPTER ' + roman(groupIndex + 1);
 
       const toggle = document.createElement('button');
       toggle.type = 'button';
       toggle.className = 'rail-group-toggle';
       toggle.textContent = collapsed ? '▸' : '▾';
       toggle.setAttribute('aria-expanded', String(!collapsed));
-      toggle.setAttribute('aria-label', (collapsed ? '展开' : '收起') + ' CHAPTER ' + roman(groupIndex + 1));
+      toggle.setAttribute('aria-label', (collapsed ? '展开' : '收起') + ' ' + groupLabel);
       toggle.addEventListener('click', () => onToggle(groupIndex));
 
       const title = document.createElement('button');
       title.type = 'button';
       title.className = 'rail-group-title';
-      title.textContent = 'CHAPTER ' + roman(groupIndex + 1);
+      title.textContent = groupLabel;
       title.addEventListener('click', () => onCover(groupIndex));
 
       row.appendChild(toggle);
@@ -1041,32 +1098,57 @@ layout: false
         }
       });
 
-      // 固定 rail 宽度，避免收起/展开导致栏宽变化
+      // Keep the chapter rail width stable; do not recalculate it from the
+      // currently visible (possibly collapsed) items.
       const rail = container.closest('.rail');
-      if (rail && !rail._fixedWidth) {
-        rail.style.width = rail.offsetWidth + 'px';
-        rail._fixedWidth = true;
+      if (rail) {
+        rail.style.width = '390px';
+        rail.style.minWidth = '390px';
       }
     }
 
     function renderChapterCover(classic, group, groupIndex) {
       const section = document.createElement('section');
-      section.className = 'doc-section chapter-cover';
+      section.className = 'doc-section chapter-cover' + (groupIndex === 0 ? ' chapter-one' : '');
 
       const img = document.createElement('img');
       img.className = 'doc-image chapter-cover-image';
       img.src = group.image ? chapterImagePath(classic, group.image) : '';
       img.alt = 'CHAPTER ' + roman(groupIndex + 1);
+      img.addEventListener('click', event => {
+        event.stopPropagation();
+        const lightbox = document.createElement('div');
+        lightbox.className = 'image-lightbox';
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-label', '放大图片预览');
+        const enlarged = document.createElement('img');
+        enlarged.src = img.currentSrc || img.src;
+        enlarged.alt = img.alt;
+        lightbox.appendChild(enlarged);
+        const close = () => lightbox.remove();
+        lightbox.addEventListener('click', close);
+        document.addEventListener('keydown', function onKey(event) {
+          if (event.key === 'Escape') {
+            close();
+            document.removeEventListener('keydown', onKey);
+          }
+        });
+        document.body.appendChild(lightbox);
+      });
+      img.addEventListener('error', () => {
+        img.alt = 'CHAPTER ' + roman(groupIndex + 1) + ' image unavailable';
+        img.classList.add('image-error');
+      });
       section.appendChild(img);
 
       const title = document.createElement('div');
       title.className = 'chapter-cover-title';
-      title.textContent = 'CHAPTER ' + roman(groupIndex + 1);
+      title.textContent = group.after ? 'END' : 'CHAPTER ' + roman(groupIndex + 1);
       section.appendChild(title);
 
       const intro = CHAPTER_INTROS[classic.id];
       if (groupIndex === 0 && intro) {
-        const textNode = document.createElement('pre');
+        const textNode = document.createElement('div');
         textNode.className = 'doc-text chapter-cover-intro';
         textNode.textContent = intro;
         section.appendChild(textNode);
@@ -1718,19 +1800,35 @@ layout: false
         const group = groups[state.coverGroup];
         setCoverMode(true);
         el.variantHost.innerHTML = '';
-        el.topStripText.textContent = 'CHAPTER ' + roman(state.coverGroup + 1);
+        el.topStripText.textContent = group.after ? 'END' : 'CHAPTER ' + roman(state.coverGroup + 1);
 
         el.body.innerHTML = '';
         el.body.appendChild(renderChapterCover(classic, group, state.coverGroup));
 
         const prevGroup = adjacentCover(-1);
         const firstIdx = firstLevelIndexForGroup(classic, state.coverGroup);
-        const pager = renderPager(1, 0, prevGroup !== null, firstIdx !== null);
+        const endLeadsToM2 = classic.id === 'm1' && group.after;
+        const pager = renderPager(1, 0, prevGroup !== null, firstIdx !== null || endLeadsToM2);
         pager.prev.addEventListener('click', () => {
           state.coverGroup = prevGroup;
           updateView();
         });
         pager.next.addEventListener('click', () => {
+          // M1's END leads into M2's opening chapter.
+          if (classic.id === 'm1' && group.after) {
+            const nextClassicIndex = catalog.findIndex(series => series.id === 'm2');
+            if (nextClassicIndex >= 0) {
+              state.classicIndex = nextClassicIndex;
+              state.chapterIndex = 0;
+              state.terminalIndex = 0;
+              state.pageIndex = 0;
+              state.coverGroup = 0;
+              state.variantPreference = null;
+              renderSeriesSwitch();
+              updateView();
+            }
+            return;
+          }
           if (firstIdx === null) return;
           collapsedSet.delete(state.coverGroup);
           state.coverGroup = null;
@@ -1797,16 +1895,36 @@ layout: false
       pager.prev.addEventListener('click', () => {
         if (state.pageIndex > 0) {
           state.pageIndex -= 1;
-        } else if (!moveTerminal(-1)) {
-          state.pageIndex = 0;
+        } else {
+          const target = findAdjacentTerminal(-1);
+          if (!target) {
+            state.pageIndex = 0;
+          } else if (groupIndexForLevel(classic, classic.chapters[target.chapterIndex].id) !== groupIndexForLevel(classic, classic.chapters[state.chapterIndex].id)) {
+            state.chapterIndex = target.chapterIndex;
+            state.terminalIndex = target.terminalIndex;
+            state.coverGroup = groupIndexForLevel(classic, classic.chapters[target.chapterIndex].id);
+            state.pageIndex = 0;
+          } else {
+            moveTerminal(-1);
+          }
         }
         updateView();
       });
       pager.next.addEventListener('click', () => {
         if (state.pageIndex < pages.length - 1) {
           state.pageIndex += 1;
-        } else if (!moveTerminal(1)) {
-          state.pageIndex = pages.length - 1;
+        } else {
+          const target = findAdjacentTerminal(1);
+          if (!target) {
+            state.pageIndex = pages.length - 1;
+          } else if (groupIndexForLevel(classic, classic.chapters[target.chapterIndex].id) !== groupIndexForLevel(classic, classic.chapters[state.chapterIndex].id)) {
+            state.chapterIndex = target.chapterIndex;
+            state.terminalIndex = target.terminalIndex;
+            state.coverGroup = groupIndexForLevel(classic, classic.chapters[target.chapterIndex].id);
+            state.pageIndex = 0;
+          } else {
+            moveTerminal(1);
+          }
         }
         updateView();
       });
@@ -1823,6 +1941,7 @@ layout: false
       state.chapterIndex = 0;
       state.terminalIndex = 0;
       state.pageIndex = 0;
+      state.coverGroup = 0;
       renderSeriesSwitch();
       updateTopStripTimestamp();
       updateView();
