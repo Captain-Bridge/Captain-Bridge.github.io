@@ -494,6 +494,106 @@
       "iconImage": "/marathon-lore/content/docs/store/items/Starlight_Jar_icon.webp",
       "detailImage": "/marathon-lore/content/docs/store/items/Starlight_Jar.webp",
       "bodyFile": "/marathon-lore/content/docs/store/items/Starlight_Jar.md"
+    },
+    {
+      "id": "The_Offspring_of_the_Sixth_Red_Sun",
+      "title": "第6红日之裔",
+      "price": "200",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun.md"
+    },
+    {
+      "id": "The_Offspring_of_the_Sixth_Red_Sun",
+      "title": "第6红日之裔",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun.md"
+    },
+    {
+      "id": "Radiant_brilliance",
+      "title": "盛放光辉",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Radiant_brilliance_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Radiant_brilliance_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Radiant_brilliance.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Radiant_brilliance.md"
+    },
+    {
+      "id": "Devouring_celestial_bodies_[356]",
+      "title": "噬星体[356]",
+      "price": "1,100",
+      "category": "救援疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Devouring_celestial_bodies_[356]_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Devouring_celestial_bodies_[356]_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Devouring_celestial_bodies_[356].webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Devouring_celestial_bodies_[356].md"
+    },
+    {
+      "id": "Five_point_star_chain",
+      "title": "五点星链",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Five_point_star_chain_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Five_point_star_chain_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Five_point_star_chain.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Five_point_star_chain.md"
+    },
+    {
+      "id": "Star_Map",
+      "title": "星图",
+      "price": "600",
+      "category": "马格南巨极武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Star_Map_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Star_Map_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Star_Map.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Star_Map.md"
+    },
+    {
+      "id": "Orbital_loop",
+      "title": "轨道回环",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Orbital_loop_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Orbital_loop_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Orbital_loop.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Orbital_loop.md"
     }
   ],
   "bundles": [
