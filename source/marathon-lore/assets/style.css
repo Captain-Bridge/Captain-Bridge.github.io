@@ -104,6 +104,26 @@ body {
   overflow:hidden
 }
 
+/* The global site navigation now provides the page title and home action.
+   Keep the legacy HUD row out of the encyclopedia layout so it does not
+   consume a second, empty header band. */
+.marathon-lore-page .lore-shell {
+  grid-template-rows:0 minmax(0,1fr) 40px;
+  row-gap:0;
+}
+.marathon-lore-page .hud-top {
+  display:none;
+}
+
+/* Encyclopedia section/detail headings sit on dark translucent panels. Keep
+   them bright and legible without changing card titles or global headings. */
+.marathon-lore-page .entry-header-copy > h2,
+.marathon-lore-page .detail-stage-head .entry-header-copy > h2 {
+  color:#e9f4ec !important;
+  font-weight:800;
+  text-shadow:0 0 10px rgba(193,254,0,.16);
+}
+
 .hud-top,.hud-left,.viewport,.hud-bottom {
   position:relative;
   z-index:2
@@ -2697,7 +2717,8 @@ body {
   min-width:0;
   min-height:0;
   overflow:hidden;
-  border-right:1px solid rgba(193,254,0,.18);
+  border-left:0;
+  border-right:0;
   background:#05090b;
   color:rgba(118,132,142,.42)
 }
@@ -2766,7 +2787,7 @@ body {
   display:flex;
   flex-direction:column;
   padding:clamp(22px,2.4vw,42px);
-  border-right:1px solid rgba(193,254,0,.18);
+  border-right:0;
   background:rgba(4,9,11,.96)
 }
 
