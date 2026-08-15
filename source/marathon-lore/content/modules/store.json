@@ -27,6 +27,36 @@
       "acquisition": "bundle-only"
     },
     {
+      "id": "fire_car_yokai_bundle_flower_of_he",
+      "title": "和之花",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/marathon-lore/content/docs/store/bundles/fire_car_yokai_bundle/flower_of_he_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/bundles/fire_car_yokai_bundle/flower_of_he.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/fire_car_yokai_bundle/flower_of_he.md",
+      "acquisition": "bundle-only"
+    },
+    {
+      "id": "white_rabbit_recon_bundle_Unrestrained",
+      "title": "无拘",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/marathon-lore/content/docs/store/bundles/white_rabbit_recon_bundle/Unrestrained_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/bundles/white_rabbit_recon_bundle/Unrestrained.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/white_rabbit_recon_bundle/Unrestrained.md",
+      "acquisition": "bundle-only"
+    },
+    {
+      "id": "Retro_Remix_sentinal_bundle_gear_structure",
+      "title": "齿轮构造",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/marathon-lore/content/docs/store/bundles/Retro_Remix_sentinal_bundle/gear_structure_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/bundles/Retro_Remix_sentinal_bundle/gear_structure.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/Retro_Remix_sentinal_bundle/gear_structure.md",
+      "acquisition": "bundle-only"
+    },
+    {
       "id": "Crush_the_coffin_v75",
       "title": "碾压棺椁",
       "price": "600",
@@ -568,7 +598,7 @@
     },
     {
       "id": "Star_Map",
-      "title": "星图",
+      "title": "星图[937]",
       "price": "600",
       "category": "马格南巨极武器风格",
       "layout": {
@@ -594,12 +624,1494 @@
       "iconImage": "/marathon-lore/content/docs/store/items/Orbital_loop_icon.webp",
       "detailImage": "/marathon-lore/content/docs/store/items/Orbital_loop.webp",
       "bodyFile": "/marathon-lore/content/docs/store/items/Orbital_loop.md"
+    },
+    {
+      "id": "Planetary_Center",
+      "title": "行星中心",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Planetary_Center_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Planetary_Center_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Planetary_Center.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Planetary_Center.md"
+    },
+    {
+      "id": "The_will_of_yokai",
+      "title": "妖怪之意",
+      "price": "600",
+      "category": "多功能匕首武器风格",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_will_of_yokai_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_will_of_yokai_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_will_of_yokai.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_will_of_yokai.md"
+    },
+    {
+      "id": "The_pain_of_yokai",
+      "title": "妖怪之痛",
+      "price": "600",
+      "category": "复仇者轻机枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_pain_of_yokai_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_pain_of_yokai_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_pain_of_yokai.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_pain_of_yokai.md"
+    },
+    {
+      "id": "The_teeth_of_yokai",
+      "title": "妖怪之牙",
+      "price": "600",
+      "category": "双击重型战斗步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_teeth_of_yokai_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_teeth_of_yokai_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_teeth_of_yokai.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_teeth_of_yokai.md"
+    },
+    {
+      "id": "The_paw_of_yokai",
+      "title": "妖怪之爪",
+      "price": "600",
+      "category": "米斯利亚2442武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_paw_of_yokai_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_paw_of_yokai_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_paw_of_yokai.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_paw_of_yokai.md"
+    },
+    {
+      "id": "The_rage_of_yokai",
+      "title": "妖怪之怒",
+      "price": "600",
+      "category": "BRRT冲锋枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_rage_of_yokai_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_rage_of_yokai_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_rage_of_yokai.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_rage_of_yokai.md"
+    },
+    {
+      "id": "The_yokai_of_fire_and_car",
+      "title": "火之车妖怪",
+      "price": "1,500",
+      "category": "盗贼疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_yokai_of_fire_and_car_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_yokai_of_fire_and_car_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_yokai_of_fire_and_car.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_yokai_of_fire_and_car.md"
+    },
+    {
+      "id": "hell_fire",
+      "title": "地狱业火",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/hell_fire_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/hell_fire_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/hell_fire.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/hell_fire.md"
+    },
+    {
+      "id": "The_tart_of_yokai",
+      "title": "妖怪之挞",
+      "price": "600",
+      "category": "V00 ZEUS电磁炮武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/The_tart_of_yokai_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/The_tart_of_yokai_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/The_tart_of_yokai.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/The_tart_of_yokai.md"
+    },
+    {
+      "id": "Fire_car_yokai_clan",
+      "title": "火之车妖怪氏族",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Fire_car_yokai_clan_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Fire_car_yokai_clan_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Fire_car_yokai_clan.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Fire_car_yokai_clan.md"
+    },
+    {
+      "id": "Ghostly_smile",
+      "title": "鬼面微笑",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Ghostly_smile_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Ghostly_smile_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Ghostly_smile.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Ghostly_smile.md"
+    },
+    {
+      "id": "white_rabbit_recon",
+      "title": "白兔",
+      "price": "1,100",
+      "category": "侦察疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/white_rabbit_recon_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/white_rabbit_recon_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/white_rabbit_recon.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/white_rabbit_recon.md"
+    },
+    {
+      "id": "Crazy_Rabbit",
+      "title": "狂徒兔兔",
+      "price": "600",
+      "category": "复仇者轻机枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Crazy_Rabbit_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Crazy_Rabbit_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Crazy_Rabbit.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Crazy_Rabbit.md"
+    },
+    {
+      "id": "Innocence",
+      "title": "无邪",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Innocence_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Innocence_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Innocence.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Innocence.md"
+    },
+    {
+      "id": "Battlefield_Mastery",
+      "title": "纵横战场",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Battlefield_Mastery_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Battlefield_Mastery_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Battlefield_Mastery.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Battlefield_Mastery.md"
+    },
+    {
+      "id": "winking_eye",
+      "title": "眨眨眼",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/winking_eye_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/winking_eye_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/winking_eye.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/winking_eye.md"
+    },
+    {
+      "id": "Playful_Bunny_iron_scout_rifle",
+      "title": "嬉游兔兔",
+      "price": "600",
+      "category": "铁律精密步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_iron_scout_rifle_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_iron_scout_rifle_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_iron_scout_rifle.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Playful_Bunny_iron_scout_rifle.md"
+    },
+    {
+      "id": "Playful_Bunny_repeater",
+      "title": "嬉游兔兔",
+      "price": "600",
+      "category": "连击者重型精密步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_repeater_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_repeater_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_repeater.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Playful_Bunny_repeater.md"
+    },
+    {
+      "id": "Playful_Bunny_carry_V99",
+      "title": "嬉游兔兔",
+      "price": "600",
+      "category": "V99聚能步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_carry_V99_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_carry_V99_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_carry_V99.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Playful_Bunny_carry_V99.md"
+    },
+    {
+      "id": "Playful_Bunny_far_range",
+      "title": "嬉游兔兔",
+      "price": "600",
+      "category": "远征武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_far_range_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_far_range_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_far_range.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Playful_Bunny_far_range.md"
+    },
+    {
+      "id": "Playful_Bunny_boundary",
+      "title": "嬉游兔兔",
+      "price": "600",
+      "category": "边界武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_boundary_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_boundary_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Playful_Bunny_boundary.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Playful_Bunny_boundary.md"
+    },
+    {
+      "id": "Retro_Remix_sentinal",
+      "title": "复古_混音",
+      "price": "1,100",
+      "category": "哨兵疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_sentinal_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_sentinal_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_sentinal.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_sentinal.md"
+    },
+    {
+      "id": "cube",
+      "title": "立方体",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/cube_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/cube_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/cube.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/cube.md"
+    },
+    {
+      "id": "Retro_Remix_V22",
+      "title": "复古_混音",
+      "price": "600",
+      "category": "V22伏特放射器武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V22_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V22_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V22.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_V22.md"
+    },
+    {
+      "id": "Style_Task",
+      "title": "风格任务",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Style_Task_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Style_Task_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Style_Task.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Style_Task.md"
+    },
+    {
+      "id": "Retro_Remix_emblem",
+      "title": "复古_混音",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_emblem_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_emblem_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_emblem.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_emblem.md"
+    },
+    {
+      "id": "Retro_Remix_V00",
+      "title": "复古_混音",
+      "price": "600",
+      "category": "V00 ZEUS电磁炮武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V00_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V00_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V00.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_V00.md"
+    },
+    {
+      "id": "Acid_Etched_Abyss_emblem",
+      "title": "酸蚀深渊",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_emblem_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_emblem_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_emblem.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_emblem.md"
+    },
+    {
+      "id": "Retro_Remix_V85",
+      "title": "复古_混音",
+      "price": "600",
+      "category": "V85断路器武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V85_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V85_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_V85.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_V85.md"
+    },
+    {
+      "id": "Retro_Remix_WSTR",
+      "title": "复古_混音",
+      "price": "600",
+      "category": "WSTR战斗霰弹枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_WSTR_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_WSTR_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_WSTR.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_WSTR.md"
+    },
+    {
+      "id": "Retro_Remix_2442",
+      "title": "复古_混音",
+      "price": "600",
+      "category": "米斯利亚2442武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_2442_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_2442_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_2442.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_2442.md"
+    },
+    {
+      "id": "Retro_Remix_copperhead",
+      "title": "复古_混音",
+      "price": "600",
+      "category": "铜斑蛇速射武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Retro_Remix_copperhead_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Retro_Remix_copperhead_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Retro_Remix_copperhead.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Retro_Remix_copperhead.md"
+    },
+    {
+      "id": "Alatavectus_demolition_assassin",
+      "title": "阿拉塔 · 维克图斯",
+      "price": "1,500",
+      "category": "刺客疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Alatavectus_demolition_assassin_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Alatavectus_demolition_assassin_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Alatavectus_demolition_assassin.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Alatavectus_demolition_assassin.md"
+    },
+    {
+      "id": "Vectus_Talisman",
+      "title": "维克图斯护符",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Vectus_Talisman_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Vectus_Talisman_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Vectus_Talisman.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Vectus_Talisman.md"
+    },
+    {
+      "id": "arachne_flag",
+      "title": "阿拉克尼旗帜",
+      "price": "200",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/arachne_flag_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/arachne_flag_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/arachne_flag.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/arachne_flag.md"
+    },
+    {
+      "id": "arachne_emblem",
+      "title": "阿拉克尼印章",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/arachne_emblem_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/arachne_emblem_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/arachne_emblem.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/arachne_emblem.md"
+    },
+    {
+      "id": "Acid_Etched_Abyss_thief",
+      "title": "酸蚀深渊",
+      "price": "1,100",
+      "category": "盗贼疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_thief_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_thief_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_thief.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_thief.md"
+    },
+    {
+      "id": "Acid_Etched_Abyss_M1T",
+      "title": "酸蚀深渊",
+      "price": "600",
+      "category": "风行者M1T武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_M1T_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_M1T_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_M1T.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_M1T.md"
+    },
+    {
+      "id": "Sputtering_acid",
+      "title": "溅射酸液",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Sputtering_acid_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Sputtering_acid_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Sputtering_acid.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Sputtering_acid.md"
+    },
+    {
+      "id": "Acid_Etched_Abyss_card",
+      "title": "酸蚀深渊",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_card_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_card_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_card.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Acid_Etched_Abyss_card.md"
+    },
+    {
+      "id": "Brutal_Deterrence_riot",
+      "title": "残酷威慑",
+      "price": "500",
+      "category": "暴徒疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_riot_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_riot_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_riot.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_riot.md"
+    },
+    {
+      "id": "Brutal_Deterrence_br33",
+      "title": "残酷威慑",
+      "price": "500",
+      "category": "BR33连发步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_br33_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_br33_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_br33.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_br33.md"
+    },
+    {
+      "id": "Vector_Block",
+      "title": "矢量方块",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Vector_Block_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Vector_Block_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Vector_Block.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Vector_Block.md"
+    },
+    {
+      "id": "Brutal_Deterrence_overrun",
+      "title": "残酷威慑",
+      "price": "500",
+      "category": "奔袭突击步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_overrun_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_overrun_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_overrun.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Brutal_Deterrence_overrun.md"
+    },
+    {
+      "id": "Dexterous_Harvester_thief",
+      "title": "灵巧收割者",
+      "price": "500",
+      "category": "盗贼疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_thief_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_thief_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_thief.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_thief.md"
+    },
+    {
+      "id": "exit_strategy",
+      "title": "退出策略",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/exit_strategy_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/exit_strategy_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/exit_strategy.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/exit_strategy.md"
+    },
+    {
+      "id": "Newly_Cast_Winter_demolition_HMG",
+      "title": "新铸寒冬",
+      "price": "500",
+      "category": "爆破重机枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Newly_Cast_Winter_demolition_HMG_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Newly_Cast_Winter_demolition_HMG_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Newly_Cast_Winter_demolition_HMG.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Newly_Cast_Winter_demolition_HMG.md"
+    },
+    {
+      "id": "Mist_Assassin_shell",
+      "title": "迷雾杀机",
+      "price": "500",
+      "category": "刺客疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_shell_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_shell_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_shell.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Mist_Assassin_shell.md"
+    },
+    {
+      "id": "Dexterous_Harvester_conquest_LMG",
+      "title": "灵巧收割者",
+      "price": "500",
+      "category": "征服轻机枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_conquest_LMG_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_conquest_LMG_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_conquest_LMG.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Dexterous_Harvester_conquest_LMG.md"
+    },
+    {
+      "id": "dimensionality_reduction_strike",
+      "title": "降维打击",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/dimensionality_reduction_strike_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/dimensionality_reduction_strike_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/dimensionality_reduction_strike.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/dimensionality_reduction_strike.md"
+    },
+    {
+      "id": "Mist_Assassin_impact",
+      "title": "迷雾杀机",
+      "price": "500",
+      "category": "冲击重型突击步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_impact_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_impact_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_impact.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Mist_Assassin_impact.md"
+    },
+    {
+      "id": "Mist_Assassin_magnum",
+      "title": "迷雾杀机",
+      "price": "500",
+      "category": "马格南巨极武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_magnum_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_magnum_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Mist_Assassin_magnum.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Mist_Assassin_magnum.md"
+    },
+    {
+      "id": "solo_crusher_riot",
+      "title": "独行粉碎者",
+      "price": "500",
+      "category": "暴徒疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/solo_crusher_riot_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/solo_crusher_riot_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/solo_crusher_riot.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/solo_crusher_riot.md"
+    },
+    {
+      "id": "solo_crusher_2442",
+      "title": "独行粉碎者",
+      "price": "500",
+      "category": "米斯利亚2442武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/solo_crusher_2442_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/solo_crusher_2442_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/solo_crusher_2442.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/solo_crusher_2442.md"
+    },
+    {
+      "id": "solo_crusher_knife",
+      "title": "独行粉碎者",
+      "price": "800",
+      "category": "多功能匕首武器风格",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/solo_crusher_knife_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/solo_crusher_knife_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/solo_crusher_knife.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/solo_crusher_knife.md"
+    },
+    {
+      "id": "face_centered_cubic",
+      "title": "定心立方",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/face_centered_cubic_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/face_centered_cubic_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/face_centered_cubic.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/face_centered_cubic.md"
+    },
+    {
+      "id": "Invasion_Protocol_thief",
+      "title": "入侵协议",
+      "price": "500",
+      "category": "盗贼疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_thief_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_thief_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_thief.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Invasion_Protocol_thief.md"
+    },
+    {
+      "id": "Invasion_Protocol_knife",
+      "title": "入侵协议",
+      "price": "800",
+      "category": "多功能匕首武器风格",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_knife_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_knife_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_knife.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Invasion_Protocol_knife.md"
+    },
+    {
+      "id": "Dont_slack_off",
+      "title": "\"别松懈。\"",
+      "price": "600",
+      "category": "BRRT冲锋枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Dont_slack_off_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Dont_slack_off_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Dont_slack_off.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Dont_slack_off.md"
+    },
+    {
+      "id": "Invasion_Protocol_Charm",
+      "title": "入侵协议",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_Charm_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_Charm_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Invasion_Protocol_Charm.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Invasion_Protocol_Charm.md"
+    },
+    {
+      "id": "Azure_Sky_triage",
+      "title": "青冥",
+      "price": "500",
+      "category": "救援疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Azure_Sky_triage_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Azure_Sky_triage_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Azure_Sky_triage.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Azure_Sky_triage.md"
+    },
+    {
+      "id": "Azure_Sky_ARES",
+      "title": "青冥",
+      "price": "600",
+      "category": "ARES电磁炮武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Azure_Sky_ARES_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Azure_Sky_ARES_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Azure_Sky_ARES.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Azure_Sky_ARES.md"
+    },
+    {
+      "id": "Azure_Sky_knife",
+      "title": "青冥",
+      "price": "800",
+      "category": "多功能匕首武器风格",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Azure_Sky_knife_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Azure_Sky_knife_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Azure_Sky_knife.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Azure_Sky_knife.md"
+    },
+    {
+      "id": "Multiple_Labels_4l",
+      "title": "多重标记4l",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Multiple_Labels_4l_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Multiple_Labels_4l_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Multiple_Labels_4l.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Multiple_Labels_4l.md"
+    },
+    {
+      "id": "Carbon_Bloom_recon",
+      "title": "碳素绽放",
+      "price": "500",
+      "category": "侦察疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_recon_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_recon_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_recon.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Carbon_Bloom_recon.md"
+    },
+    {
+      "id": "Carbon_Bloom_knife",
+      "title": "碳素绽放",
+      "price": "800",
+      "category": "多功能匕首武器风格",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_knife_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_knife_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_knife.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Carbon_Bloom_knife.md"
+    },
+    {
+      "id": "Carbon_Bloom_M77",
+      "title": "碳素绽放",
+      "price": "600",
+      "category": "M77突击步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_M77_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_M77_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Carbon_Bloom_M77.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Carbon_Bloom_M77.md"
+    },
+    {
+      "id": "Signal_focusing",
+      "title": "信号聚焦",
+      "price": "600",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Signal_focusing_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Signal_focusing_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Signal_focusing.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Signal_focusing.md"
+    },
+    {
+      "id": "Azazel_assassin",
+      "title": "阿撒兹勒",
+      "price": "500",
+      "category": "刺客疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Azazel_assassin_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Azazel_assassin_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Azazel_assassin.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Azazel_assassin.md"
+    },
+    {
+      "id": "Azazel_boundary",
+      "title": "阿撒兹勒",
+      "price": "600",
+      "category": "边界武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Azazel_boundary_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Azazel_boundary_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Azazel_boundary.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Azazel_boundary.md"
+    },
+    {
+      "id": "Azazel_knife",
+      "title": "阿撒兹勒",
+      "price": "800",
+      "category": "多功能匕首武器风格",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Azazel_knife_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Azazel_knife_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Azazel_knife.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Azazel_knife.md"
+    },
+    {
+      "id": "recycle",
+      "title": "回收",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/recycle_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/recycle_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/recycle.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/recycle.md"
+    },
+    {
+      "id": "speeding_TSL_triage",
+      "title": "超速-TSL",
+      "price": "1,120",
+      "category": "救援疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/speeding_TSL_triage_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/speeding_TSL_triage_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/speeding_TSL_triage.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/speeding_TSL_triage.md"
+    },
+    {
+      "id": "Type7_0",
+      "title": "类型7.0",
+      "price": "210",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Type7_0_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Type7_0_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Type7_0.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Type7_0.md"
+    },
+    {
+      "id": "speeding_TSL_far_range",
+      "title": "超速-TSL",
+      "price": "540",
+      "category": "远征武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/speeding_TSL_far_range_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/speeding_TSL_far_range_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/speeding_TSL_far_range.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/speeding_TSL_far_range.md"
+    },
+    {
+      "id": "speeding_TSL_card",
+      "title": "超速-TSL",
+      "price": "120",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/speeding_TSL_card_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/speeding_TSL_card_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/speeding_TSL_card.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/speeding_TSL_card.md"
+    },
+    {
+      "id": "Distortion_synchronization",
+      "title": "畸变.同步",
+      "price": "110",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Distortion_synchronization_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Distortion_synchronization_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Distortion_synchronization.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Distortion_synchronization.md"
+    },
+    {
+      "id": "Luxury_palace_recon",
+      "title": "豪华宫殿",
+      "price": "1,120",
+      "category": "侦察疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Luxury_palace_recon_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Luxury_palace_recon_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Luxury_palace_recon.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Luxury_palace_recon.md"
+    },
+    {
+      "id": "Luxury_palace_CE",
+      "title": "豪华宫殿",
+      "price": "540",
+      "category": "近战战术手枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Luxury_palace_CE_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Luxury_palace_CE_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Luxury_palace_CE.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Luxury_palace_CE.md"
+    },
+    {
+      "id": "black_bird",
+      "title": "布莱克伯德",
+      "price": "210",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/black_bird_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/black_bird_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/black_bird.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/black_bird.md"
+    },
+    {
+      "id": "Luxury_palace_card",
+      "title": "豪华宫殿",
+      "price": "120",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Luxury_palace_card_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Luxury_palace_card_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Luxury_palace_card.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Luxury_palace_card.md"
+    },
+    {
+      "id": "tatical_R8",
+      "title": "R8战术",
+      "price": "110",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/tatical_R8_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/tatical_R8_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/tatical_R8.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/tatical_R8.md"
+    },
+    {
+      "id": "Cyber_Red_Blade_destroyer",
+      "title": "赛博红刃",
+      "price": "1,120",
+      "category": "毁灭者疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_destroyer_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_destroyer_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_destroyer.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_destroyer.md"
+    },
+    {
+      "id": "Cyber_Red_Blade_retaliator_LMG",
+      "title": "赛博红刃",
+      "price": "540",
+      "category": "复仇者轻机枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_retaliator_LMG_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_retaliator_LMG_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_retaliator_LMG.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_retaliator_LMG.md"
+    },
+    {
+      "id": "blood_cube",
+      "title": "血立方",
+      "price": "210",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/blood_cube_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/blood_cube_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/blood_cube.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/blood_cube.md"
+    },
+    {
+      "id": "Cyber_Red_Blade_card",
+      "title": "赛博红刃",
+      "price": "120",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_card_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_card_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_card.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Cyber_Red_Blade_card.md"
+    },
+    {
+      "id": "universal_constant",
+      "title": "普适常数",
+      "price": "110",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/universal_constant_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/universal_constant_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/universal_constant.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/universal_constant.md"
+    },
+    {
+      "id": "white_rabbit_thief",
+      "title": "白兔",
+      "price": "1,120",
+      "category": "盗贼疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/white_rabbit_thief_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/white_rabbit_thief_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/white_rabbit_thief.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/white_rabbit_thief.md"
+    },
+    {
+      "id": "pink_mist",
+      "title": "粉色迷雾",
+      "price": "540",
+      "category": "双击重型战斗步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/pink_mist_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/pink_mist_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/pink_mist.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/pink_mist.md"
+    },
+    {
+      "id": "rabbits_foot_charm",
+      "title": "幸运兔脚",
+      "price": "210",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/rabbits_foot_charm_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/rabbits_foot_charm_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/rabbits_foot_charm.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/rabbits_foot_charm.md"
+    },
+    {
+      "id": "white_rabbit_card",
+      "title": "白兔",
+      "price": "120",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/white_rabbit_card_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/white_rabbit_card_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/white_rabbit_card.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/white_rabbit_card.md"
+    },
+    {
+      "id": "lucky_star",
+      "title": "幸运星",
+      "price": "120",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/lucky_star_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/lucky_star_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/lucky_star.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/lucky_star.md"
+    },
+    {
+      "id": "Crush_the_coffin_riot",
+      "title": "碾压棺椁",
+      "price": "1,120",
+      "category": "暴徒疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_riot_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_riot_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_riot.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Crush_the_coffin_riot.md"
+    },
+    {
+      "id": "Synchronous_channel",
+      "title": "同步通道",
+      "price": "210",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Synchronous_channel_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Synchronous_channel_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Synchronous_channel.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Synchronous_channel.md"
+    },
+    {
+      "id": "Crush_the_coffin_BRRT",
+      "title": "碾压棺椁",
+      "price": "540",
+      "category": "BRRT冲锋枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_BRRT_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_BRRT_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_BRRT.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Crush_the_coffin_BRRT.md"
+    },
+    {
+      "id": "Crush_the_coffin_card",
+      "title": "碾压棺椁",
+      "price": "120",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_card_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_card_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Crush_the_coffin_card.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Crush_the_coffin_card.md"
+    },
+    {
+      "id": "Coin_Synthesis",
+      "title": "铸币合成",
+      "price": "110",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Coin_Synthesis_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Coin_Synthesis_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Coin_Synthesis.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Coin_Synthesis.md"
+    },
+    {
+      "id": "prototype_synthesis_assassin",
+      "title": "原型合成",
+      "price": "1,120",
+      "category": "刺客疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction": "vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_assassin_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_assassin_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_assassin.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/prototype_synthesis_assassin.md"
+    },
+    {
+      "id": "prototype_synthesis_overrun",
+      "title": "原型合成",
+      "price": "540",
+      "category": "奔袭突击步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction": "horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_overrun_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_overrun_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_overrun.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/prototype_synthesis_overrun.md"
+    },
+    {
+      "id": "Prototype_sequencer",
+      "title": "原型测序仪",
+      "price": "210",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/Prototype_sequencer_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/Prototype_sequencer_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/Prototype_sequencer.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/Prototype_sequencer.md"
+    },
+    {
+      "id": "prototype_synthesis_card",
+      "title": "原型合成",
+      "price": "120",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_card_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_card_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/prototype_synthesis_card.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/prototype_synthesis_card.md"
+    },
+    {
+      "id": "operational_metrics",
+      "title": "运行指标",
+      "price": "110",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/items/operational_metrics_cover.webp",
+      "iconImage": "/marathon-lore/content/docs/store/items/operational_metrics_icon.webp",
+      "detailImage": "/marathon-lore/content/docs/store/items/operational_metrics.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/items/operational_metrics.md"
     }
   ],
   "bundles": [
     {
-      "id": "Crush_the_coffin",
-      "title": "碾压棺椁组合包",
+      "id": "Crush_the_coffin_bundle",
+      "title": "碾压棺椁",
       "category": "武器背包",
       "price": "1,600",
       "featured": true,
@@ -615,6 +2127,112 @@
         "Crush_the_coffin_bundle_ZR30",
         "Crush_the_coffin_bundle_3000_bullets"
         
+      ]
+    },
+    {
+      "id": "yokai_weapon_bundle",
+      "title": "妖怪之械",
+      "category": "武器背包",
+      "price": "1,900",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/bundles/yokai_weapon_bundle/yokai_weapon_bundle_cover.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/yokai_weapon_bundle/yokai_weapon_bundle.md",
+      "itemIds": [
+        "The_will_of_yokai",
+        "The_pain_of_yokai",
+        "The_teeth_of_yokai",
+        "The_paw_of_yokai",
+        "The_rage_of_yokai"
+        
+      ]
+    },
+    {
+      "id": "fire_car_yokai_bundle",
+      "title": "火之车妖怪",
+      "category": "盗贼背包",
+      "price": "1,900",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/bundles/fire_car_yokai_bundle/fire_car_yokai_bundle_cover.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/fire_car_yokai_bundle/fire_car_yokai_bundle.md",
+      "itemIds": [
+        "The_yokai_of_fire_and_car",
+        "The_tart_of_yokai",
+        "hell_fire",
+        "fire_car_yokai_bundle_flower_of_he",
+        "Fire_car_yokai_clan",
+        "Ghostly_smile"        
+      ]
+    },
+    {
+      "id": "white_rabbit_recon_bundle",
+      "title": "白兔[侦察]",
+      "category": "侦察背包",
+      "price": "1,600",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/bundles/white_rabbit_recon_bundle/white_rabbit_recon_bundle_cover.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/white_rabbit_recon_bundle/white_rabbit_recon_bundle.md",
+      "itemIds": [
+        "white_rabbit_recon",
+        "Crazy_Rabbit",
+        "Innocence",
+        "white_rabbit_recon_bundle_Unrestrained",
+        "Battlefield_Mastery",
+        "winking_eye"      
+      ]
+    },
+    {
+      "id": "white_rabbit_weapon_bundle",
+      "title": "白兔",
+      "category": "武器背包",
+      "price": "1,800",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle_cover.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle.md",
+      "itemIds": [
+        "Playful_Bunny_iron_scout_rifle",
+        "Playful_Bunny_repeater",
+        "Playful_Bunny_carry_V99",
+        "Playful_Bunny_far_range",
+        "Playful_Bunny_boundary"    
+      ]
+    },
+    {
+      "id": "Retro_Remix_sentinal_bundle",
+      "title": "复古_混音",
+      "category": "哨兵背包",
+      "price": "1,600",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/bundles/Retro_Remix_sentinal_bundle/Retro_Remix_sentinal_bundle_cover.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/Retro_Remix_sentinal_bundle/Retro_Remix_sentinal_bundle.md",
+      "itemIds": [
+        "Retro_Remix_sentinal",
+        "Retro_Remix_V22",
+        "cube",
+        "Retro_Remix_sentinal_bundle_gear_structure",
+        "Style_Task",
+        "Retro_Remix_emblem"
+      ]
+    },
+    {
+      "id": "Retro_Remix_weapon_bundle",
+      "title": "复古_混音",
+      "category": "武器背包",
+      "price": "1,800",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/marathon-lore/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle_cover.webp",
+      "bodyFile": "/marathon-lore/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle.md",
+      "itemIds": [
+        "Retro_Remix_V00",
+        "Retro_Remix_V85",
+        "Retro_Remix_WSTR",
+        "Retro_Remix_2442",
+        "Retro_Remix_copperhead"
       ]
     }
   ]

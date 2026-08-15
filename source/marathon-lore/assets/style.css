@@ -2174,6 +2174,61 @@ body {
   }
 }
 
+/* Final bundle layout contract: bundle cards use only their own aspect-driven
+   grid tracks and never inherit catalog spanning/height rules. */
+.store-bundle-grid {
+  display:grid !important;
+  grid-auto-flow:row !important;
+  align-items:stretch !important;
+  align-content:start !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  grid-template-rows:var(--store-bundle-featured-height) !important;
+  grid-auto-rows:var(--store-bundle-small-height) !important;
+}
+.store-bundle-grid .store-bundle-featured {
+  grid-column:1 / -1 !important;
+  grid-row:1 !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+  align-self:stretch !important;
+}
+.store-bundle-grid .store-bundle-small {
+  grid-column:span 1 !important;
+  grid-row:auto !important;
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+  align-self:stretch !important;
+}
+.store-bundle-grid .store-card-media {
+  position:absolute !important;
+  inset:0 !important;
+}
+
+@media (max-width:900px) {
+  .store-bundle-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-template-rows:var(--store-bundle-featured-height) !important;
+    grid-auto-rows:var(--store-bundle-small-height) !important;
+  }
+  .store-bundle-grid .store-bundle-featured { grid-column:1 / -1 !important; }
+}
+
+@media (max-width:720px) {
+  .store-bundle-grid {
+    grid-template-columns:minmax(0,1fr) !important;
+    grid-template-rows:var(--store-bundle-featured-height) !important;
+    grid-auto-rows:var(--store-bundle-small-height) !important;
+  }
+  .store-bundle-grid .store-bundle-featured,
+  .store-bundle-grid .store-bundle-small {
+    grid-column:1 !important;
+  }
+}
+
 @media (max-width:480px) {
   .lore-shell {
     padding:8px 10px
@@ -2350,10 +2405,12 @@ body {
 .store-bundle-grid {
   --store-grid-columns:3;
   --store-bundle-unit:var(--store-grid-unit);
-  grid-template-columns:repeat(var(--store-grid-columns),minmax(0,var(--store-bundle-unit)));
-  grid-auto-rows:auto;
+  grid-template-columns:repeat(var(--store-grid-columns),minmax(0,1fr));
+  grid-auto-rows:clamp(360px,42vw,560px);
+  grid-template-rows:clamp(420px,32vw,760px);
   grid-auto-flow:row;
-  justify-content:center;
+  justify-content:stretch;
+  align-items:start;
 }
 
 .store-tile-single {
@@ -2379,18 +2436,26 @@ body {
 
 .store-bundle-featured {
   grid-column:1/-1;
-  grid-row:auto;
-  aspect-ratio:12/5;
-  height:auto;
+  grid-row:1;
+  height:var(--store-bundle-featured-height,100%);
+  aspect-ratio:auto;
   width:100%
 }
 
 .store-bundle-small {
   grid-column:span 1;
   grid-row:auto;
-  aspect-ratio:7/10;
-  height:auto;
-  width:100%
+  aspect-ratio:auto;
+  height:var(--store-bundle-small-height,100%);
+  width:100%;
+  min-height:1px;
+  align-self:start
+}
+
+/* Bundle cards use an independent three-column matrix, never the catalog tile spans. */
+.store-bundle-grid .store-bundle-small {
+  grid-column:span 1;
+  grid-row:auto;
 }
 
 .store-card {
@@ -2410,6 +2475,20 @@ body {
   transition:transform .16s ease,border-color .16s ease,background-color .16s ease,box-shadow .16s ease
 }
 
+/* Bundle listing sizes must win over the generic card height. */
+.store-bundle-grid .store-bundle-featured {
+  height:var(--store-bundle-featured-height,100%) !important;
+  min-height:0;
+  align-self:start;
+}
+
+.store-bundle-grid .store-bundle-small {
+  height:var(--store-bundle-small-height,100%) !important;
+  min-height:0;
+  align-self:start;
+  grid-row:auto;
+}
+
 .store-card:hover,
 .store-card:focus-visible {
   z-index:1;
@@ -2424,7 +2503,12 @@ body {
 }
 
 .store-bundle-grid .store-card {
-  height:auto;
+  height:100% !important;
+}
+
+.store-bundle-grid .store-card-media {
+  position:absolute;
+  inset:0;
 }
 
 .store-image-frame {
@@ -2454,6 +2538,11 @@ body {
 
 .store-image-fit-cover .store-image {
   object-fit:cover
+}
+
+/* Keep the full cover visible; each tile follows its own image ratio. */
+.store-bundle-card .store-card-media .store-image {
+  object-fit:contain;
 }
 
 .store-card:hover .store-image,
@@ -2895,15 +2984,20 @@ body {
 
 @media (max-width:1280px) {
   .view-store {
-    overflow:visible
+    overflow:hidden
   }
 
-  .store-grid,
   .store-detail-layout,
   .store-detail-info,
   .store-detail-visual {
     min-height:0;
     overflow:visible
+  }
+
+  .store-grid {
+    min-height:0;
+    overflow-y:auto;
+    overflow-x:hidden
   }
 
   .store-detail-layout {
@@ -2922,7 +3016,9 @@ body {
   }
 
   .store-bundle-grid {
-    --store-grid-columns:2
+    --store-grid-columns:2;
+    grid-template-rows:clamp(300px,58vw,520px);
+    grid-auto-rows:clamp(280px,65vw,440px)
   }
 
   .store-detail-layout {
@@ -2966,7 +3062,9 @@ body {
   }
 
   .store-bundle-grid {
-    --store-grid-columns:1
+    --store-grid-columns:1;
+    grid-template-rows:clamp(300px,90vw,520px);
+    grid-auto-rows:clamp(280px,100vw,440px)
   }
 
   .store-tile-single,
@@ -2979,8 +3077,14 @@ body {
     height:100%;
   }
 
-  .store-bundle-featured {
-    aspect-ratio:7/10
+  .store-bundle-grid .store-bundle-featured {
+    aspect-ratio:auto;
+    height:100%
+  }
+
+  .store-bundle-grid .store-bundle-small {
+    height:100%;
+    aspect-ratio:auto
   }
 
   .store-card-media {

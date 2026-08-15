@@ -2474,15 +2474,18 @@ function updateStoreGridLayout(root = appView) {
       if (twoRowUnit > 0) unit = Math.min(unit, twoRowUnit);
     }
 
-    if (isBundle && columns >= 2 && grid.querySelector('.store-bundle-small')) {
-      const gridTop = grid.getBoundingClientRect().top;
-      const bottomReserve = 16;
-      const availableHeight = window.innerHeight - gridTop - bottomReserve;
-      const featuredAspect = 12 / 5;
-      // Featured card spans all columns; small cards keep their 7:10 ratio.
-      const rowGapTotal = gap + gap * (columns - 1) / featuredAspect;
-      const twoRowUnit = (availableHeight - rowGapTotal) / (columns / featuredAspect + 10 / 7);
-      if (twoRowUnit > 0) unit = Math.min(unit, twoRowUnit);
+    if (isBundle && grid.querySelector('.store-bundle-small')) {
+      const featuredAspect = 2210 / 990;
+      const smallAspect = 0.733;
+      const fullWidth = grid.clientWidth - padding;
+      const featuredHeight = fullWidth / featuredAspect;
+      // availableWidth already excludes the inter-column gaps.
+      const smallWidth = availableWidth / columns;
+      const smallHeight = smallWidth / smallAspect;
+      grid.style.setProperty('--store-bundle-featured-height', `${featuredHeight}px`);
+      grid.style.setProperty('--store-bundle-small-height', `${smallHeight}px`);
+      grid.style.gridTemplateRows = `${featuredHeight}px`;
+      grid.style.gridAutoRows = `${smallHeight}px`;
     }
 
     grid.style.setProperty('--store-grid-unit', `${unit}px`);
@@ -2608,7 +2611,7 @@ async function storeItemDetailView(category, item) {
     <div class="view view-store store-detail-view">
       <header class="store-detail-header">
         ${storeTabs('catalog')}
-        <span>单个藏品详情</span>
+        <span>${item.title}</span>
       </header>
       <div class="store-detail-layout">
         <aside class="store-detail-info scrollbar">
