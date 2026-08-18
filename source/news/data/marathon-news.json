@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T00:04:28.596Z",
+  "generatedAt": "2026-08-18T15:18:28.025Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,13 +7,13 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 58,
-  "count": 58,
+  "total": 59,
+  "count": 59,
   "itemsPerPage": 8,
   "bilingualSummary": {
     "bilingualCount": 48,
     "englishOnlyCount": 10,
-    "chineseOnlyCount": 0,
+    "chineseOnlyCount": 1,
     "englishOnly": [
       {
         "articlePath": "/get_to_know_marathons_bungie_rewards",
@@ -76,7 +76,14 @@
         "articleUrl": "https://www.bungie.net/7/en-us/News/Article/alpha_update"
       }
     ],
-    "chineseOnly": []
+    "chineseOnly": [
+      {
+        "articlePath": "/marathon_update_1_1_5_4",
+        "title": "《失落星船：马拉松》更新1.1.5.4",
+        "publishedAt": "2026-08-18T15:00:00.000Z",
+        "articleUrl": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_4"
+      }
+    ]
   },
   "translation": {
     "attempted": true,
@@ -84,6 +91,103 @@
     "generatedCount": 10
   },
   "items": [
+    {
+      "id": "blt0a37e822f4c469c9",
+      "slug": "marathon_update_1_1_5_4",
+      "pathSlug": "marathon-update-1-1-5-4",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-08-18T15:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_5_4",
+      "articleUrl": {
+        "en": null,
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_4"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-5-4/",
+      "matchType": "zh-only",
+      "languages": {
+        "en": false,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 29,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": null,
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.5.4",
+          "subtitle": "关于军械盗劫",
+          "bodyHtml": "<h2>军械盗劫</h2><ul><li>军械盗劫PvPvE体验现已上线！</li><li>参与跨越多个区域的多轮疾行追逐。击败UESC，获取武器柜钥匙，追踪烈焰风暴。尽情享受战斗吧。</li><li>使用UESC清单撤离，在更新的米达和特莱克斯军械库中进行装备。</li><li>结束日期：9月2日。</li><li>查看预览博客了解更多信息！<ul><li><a href=\"https://www.bungie.net/News/Article/ordnance_heist\" target=\"_blank\">https://www.bungie.net/7/zh-chs/News/article/ordnance_heist</a></li></ul></li></ul><h2>物品经济</h2><ul><li>更新了排名地图，以提升战利品的数量和品质。<ul><li><em>开发者说明：将推出更多装备，玩家应会遇到更多蓝色和紫色装备。</em></li></ul></li><li>修复了玩家断线后，赞助包物品有时仍会在大厅中保持解压状态的问题。<ul><li>扭曲物品现已重新启用。</li></ul></li><li>修复了关口植入物的可用库存低于其他阵营的问题。</li><li>修复了玩家在完成鲁克或赞助包疾行且保险库已满时，物品栏物品可能丢失的问题。</li></ul><h2>战斗</h2><h3>武器</h3><ul><li>V85断路器<ul><li>降低了超频限定器尊享模组与该武器搭配使用时的效果。</li><li>降低了终极手段和鲁莽行动模组与该武器搭配使用时的伤害加成。</li><li><em>开发者说明：这些临时改动旨在消除使用这些武器和模组组合时，意外出现一击击倒身体射击的情况。</em></li></ul></li><li>边界<ul><li>修复了与机械枪套核心搭配使用时，射速可能意外提升的问题。</li></ul></li></ul><h2>用户界面和体验</h2><ul><li>修复了玩家在单人或鲁克疾行后尝试返回三人组时，系统可能默认关闭团队补位的问题。</li></ul><h2>合约</h2><ul><li>修复了部分赛博艾克米合约名称与目标不符的问题。</li><li>修复了低温档案室关闭后，已完成的低温档案室合约无法领取的问题。</li></ul><h2>本地化</h2><ul><li>修复了意大利语指南针的显示问题。</li></ul>",
+          "bodyText": "军械盗劫 军械盗劫PvPvE体验现已上线！ 参与跨越多个区域的多轮疾行追逐。击败UESC，获取武器柜钥匙，追踪烈焰风暴。尽情享受战斗吧。 使用UESC清单撤离，在更新的米达和特莱克斯军械库中进行装备。 结束日期：9月2日。 查看预览博客了解更多信息！ https://www.bungie.net/7/zh-chs/News/article/ordnance_heist 物品经济 更新了排名地图，以提升战利品的数量和品质。 开发者说明：将推出更多装备，玩家应会遇到更多蓝色和紫色装备。 修复了玩家断线后，赞助包物品有时仍会在大厅中保持解压状态的问题。 扭曲物品现已重新启用。 修复了关口植入物的可用库存低于其他阵营的问题。 修复了玩家在完成鲁克或赞助包疾行且保险库已满时，物品栏物品可能丢失的问题。 战斗 武器 V85断路器 降低了超频限定器尊享模组与该武器搭配使用时的效果。 降低了终极手段和鲁莽行动模组与该武器搭配使用时的伤害加成。 开发者说明：这些临时改动旨在消除使用这些武器和模组组合时，意外出现一击击倒身体射击的情况。 边界 修复了与机械枪套核心搭配使用时，射速可能意外提升的问题。 用户界面和体验 修复了玩家在单人或鲁克疾行后尝试返回三人组时，系统可能默认关闭团队补位的问题。 合约 修复了部分赛博艾克米合约名称与目标不符的问题。 修复了低温档案室关闭后，已完成的低温档案室合约无法领取的问题。 本地化 修复了意大利语指南针的显示问题。",
+          "excerpt": "关于军械盗劫",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt21d2e68fdcff14b0",
       "slug": "ordnance_heist",
