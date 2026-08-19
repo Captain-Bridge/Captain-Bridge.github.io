@@ -2607,6 +2607,23 @@ async function loadStoreTagline(bodyFile) {
   }
 }
 
+async function loadStoreShellDescription(bodyFile) {
+  if (!bodyFile) return '';
+  try {
+    const markdown = await loadMarkdownSource(bodyFile);
+    const lines = markdown.replace(/\r\n?/g, '\n').split('\n');
+    const dividerIndex = lines.findIndex(line => (
+      /<span\b[^>]*color\s*:\s*rgb\(\s*26\s*,\s*122\s*,\s*215\s*\)[^>]*>/i.test(line)
+    ));
+    if (dividerIndex < 0) return '';
+    const description = lines.slice(dividerIndex + 1).join('\n').trim();
+    return description ? markdownToHtml(description) : '';
+  } catch (error) {
+    console.warn(`[store] Failed to load shell description "${bodyFile}".`, error);
+    return '';
+  }
+}
+
 function storeDetailVisual(item) {
   if (!item) {
     return `<div class="store-detail-visual store-detail-visual-empty">${storeImageMarkup('', '暂无商品图片', 'store-detail-image')}</div>`;
@@ -2678,9 +2695,11 @@ async function storeBundleDetailView(category, bundle) {
   const members = (bundle.itemIds || []).map(itemId => getStoreItem(category, itemId)).filter(Boolean);
   const activeItem = members.find(item => item.id === selectedStoreItemId) || members[0] || null;
   selectedStoreItemId = activeItem?.id || null;
+  const showFullMemberBody = activeItem?.category?.includes('疾行者外壳') || false;
 
-  const [bodyContent, tagline] = await Promise.all([
+  const [bodyContent, selectedBody, tagline] = await Promise.all([
     loadStoreMarkdown(bundle.bodyFile),
+    showFullMemberBody ? loadStoreShellDescription(activeItem?.bodyFile) : Promise.resolve(''),
     loadStoreTagline(activeItem?.bodyFile)
   ]);
 
@@ -2696,7 +2715,9 @@ async function storeBundleDetailView(category, bundle) {
             ${buildBreadcrumbs(['商店', '组合包', bundle.title])}
             <h1>${escapeHtml(bundle.title)}</h1>
             <div class="store-markdown markdown-body">${bodyContent}</div>
-            ${tagline ? `<p class="store-selected-description">${escapeHtml(tagline)}</p>` : ''}
+            ${selectedBody
+              ? `<div class="store-selected-description store-markdown markdown-body">${selectedBody}</div>`
+              : (tagline ? `<p class="store-selected-description">${escapeHtml(tagline)}</p>` : '')}
           </div>
           <div class="store-detail-controls">
             <div class="store-member-heading">
