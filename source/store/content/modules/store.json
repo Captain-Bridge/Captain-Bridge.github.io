@@ -1,7 +1,7 @@
 {
   "id": "store",
   "title": "商店",
-  "count": "更新至2026年8月15日",
+  "count": "施工中",
   "icon": "/marathon-lore/assets/images/icons/store.svg",
   "summary": "浏览藏品与组合包。",
   "view": "store",
@@ -55,6 +55,88 @@
       "detailImage": "/store/content/docs/store/bundles/Retro_Remix_sentinal_bundle/gear_structure.webp",
       "bodyFile": "/store/content/docs/store/bundles/Retro_Remix_sentinal_bundle/gear_structure.md",
       "acquisition": "bundle-only"
+    },
+    {
+      "id": "Rage_Leaves_a_Mark",
+      "title": "怒意留痕",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/store/content/docs/store/bundles/yokai_of_Wrath_Appearance_bundle/Rage_Leaves_a_Mark_icon.webp",
+      "detailImage": "/store/content/docs/store/bundles/yokai_of_Wrath_Appearance_bundle/Rage_Leaves_a_Mark.webp",
+      "bodyFile": "/store/content/docs/store/bundles/yokai_of_Wrath_Appearance_bundle/Rage_Leaves_a_Mark.md",
+      "acquisition": "bundle-only"
+    },
+    {
+      "id": "yokai_of_Wrath_Appearance",
+      "title": "怒之相妖怪",
+      "price": "1,500",
+      "category": "毁灭者疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction":"vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/yokai_of_Wrath_Appearance_cover.webp",
+      "iconImage": "/store/content/docs/store/items/yokai_of_Wrath_Appearance_icon.webp",
+      "detailImage": "/store/content/docs/store/items/yokai_of_Wrath_Appearance.webp",
+      "bodyFile": "/store/content/docs/store/items/yokai_of_Wrath_Appearance.md"
+    },
+    {
+      "id": "The_posion_of_yokai",
+      "title": "妖怪之毒",
+      "price": "600",
+      "category": "铜斑蛇速射武器风格",
+      "layout": {
+        "size": 2,
+        "direction":"horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/The_posion_of_yokai_cover.webp",
+      "iconImage": "/store/content/docs/store/items/The_posion_of_yokai_icon.webp",
+      "detailImage": "/store/content/docs/store/items/The_posion_of_yokai.webp",
+      "bodyFile": "/store/content/docs/store/items/The_posion_of_yokai.md"
+    },
+    {
+      "id": "The_Heart_in_Bondage",
+      "title": "束缚之心",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/The_Heart_in_Bondage_cover.webp",
+      "iconImage": "/store/content/docs/store/items/The_Heart_in_Bondage_icon.webp",
+      "detailImage": "/store/content/docs/store/items/The_Heart_in_Bondage.webp",
+      "bodyFile": "/store/content/docs/store/items/The_Heart_in_Bondage.md"
+    },
+    {
+      "id": "Angry_faced_yokai_Clan",
+      "title": "怒之相妖怪氏族",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Angry_faced_yokai_Clan_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Angry_faced_yokai_Clan_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Angry_faced_yokai_Clan.webp",
+      "bodyFile": "/store/content/docs/store/items/Angry_faced_yokai_Clan.md"
+    },
+    {
+      "id": "hell_fire_emblem",
+      "title": "地狱业火",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/hell_fire_emblem_cover.webp",
+      "iconImage": "/store/content/docs/store/items/hell_fire_emblem_icon.webp",
+      "detailImage": "/store/content/docs/store/items/hell_fire_emblem.webp",
+      "bodyFile": "/store/content/docs/store/items/hell_fire_emblem.md"
     },
     {
       "id": "Crush_the_coffin_v75",
@@ -2110,22 +2192,21 @@
   ],
   "bundles": [
     {
-      "id": "Crush_the_coffin_bundle",
-      "title": "碾压棺椁",
-      "category": "武器背包",
-      "price": "1,600",
+      "id": "yokai_of_Wrath_Appearance_bundle",
+      "title": "怒之相妖怪",
+      "category": "毁灭者背包",
+      "price": "1,900",
       "featured": true,
       "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/Crush_the_coffin_bundle/Crush_the_coffin_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/Crush_the_coffin_bundle/Crush_the_coffin_bundle.md",
+      "coverImage": "/store/content/docs/store/bundles/yokai_of_Wrath_Appearance_bundle/yokai_of_Wrath_Appearance_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/yokai_of_Wrath_Appearance_bundle/yokai_of_Wrath_Appearance_bundle.md",
       "itemIds": [
-        "Crush_the_coffin_v75",
-        "Crush_the_coffin_HBR",
-        "Crush_the_coffin_M77",
-        "Crush_the_coffin_overrun",     
-        "igniter",
-        "Crush_the_coffin_bundle_ZR30",
-        "Crush_the_coffin_bundle_3000_bullets"
+        "yokai_of_Wrath_Appearance",
+        "The_posion_of_yokai",
+        "The_Heart_in_Bondage",
+        "Rage_Leaves_a_Mark",     
+        "Angry_faced_yokai_Clan",
+        "hell_fire_emblem"
         
       ]
     },
@@ -2237,3 +2318,4 @@
     }
   ]
 }
+
