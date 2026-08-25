@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T15:18:28.025Z",
+  "generatedAt": "2026-08-25T15:47:39.002Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,11 +7,11 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 59,
-  "count": 59,
+  "total": 60,
+  "count": 60,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 48,
+    "bilingualCount": 49,
     "englishOnlyCount": 10,
     "chineseOnlyCount": 1,
     "englishOnly": [
@@ -78,10 +78,10 @@
     ],
     "chineseOnly": [
       {
-        "articlePath": "/marathon_update_1_1_5_4",
-        "title": "《失落星船：马拉松》更新1.1.5.4",
-        "publishedAt": "2026-08-18T15:00:00.000Z",
-        "articleUrl": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_4"
+        "articlePath": "/marathon_update_1_1_5_5",
+        "title": "《失落星船：马拉松》更新1.1.5.5",
+        "publishedAt": "2026-08-25T15:00:00.000Z",
+        "articleUrl": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_5"
       }
     ]
   },
@@ -92,18 +92,18 @@
   },
   "items": [
     {
-      "id": "blt0a37e822f4c469c9",
-      "slug": "marathon_update_1_1_5_4",
-      "pathSlug": "marathon-update-1-1-5-4",
+      "id": "blt0bb1a90a661f9944",
+      "slug": "marathon_update_1_1_5_5",
+      "pathSlug": "marathon-update-1-1-5-5",
       "category": "updates",
       "author": "Marathon Dev Team",
-      "publishedAt": "2026-08-18T15:00:00.000Z",
-      "articlePath": "/marathon_update_1_1_5_4",
+      "publishedAt": "2026-08-25T15:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_5_5",
       "articleUrl": {
         "en": null,
-        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_4"
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_5"
       },
-      "localPath": "/news/articles/marathon-update-1-1-5-4/",
+      "localPath": "/news/articles/marathon-update-1-1-5-5/",
       "matchType": "zh-only",
       "languages": {
         "en": false,
@@ -173,11 +173,114 @@
         "inline": []
       },
       "metrics": {
-        "wordCount": 29,
+        "wordCount": 11,
         "readMinutes": 1
       },
       "content": {
         "en": null,
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.5.5",
+          "subtitle": "关于UESC清单",
+          "bodyHtml": "<h2>军械盗劫</h2><ul><li>修复了撤离后UESC清单未在团队成员之间共享的问题。<ul><li>尚未领取的玩家请前往邮箱查收我们此前在该问题存在期间发放的150份UESC清单。</li></ul></li><li>完成钥匙模板后获得的烈焰风暴武器柜钥匙数量由1把增加至3把。</li><li>更新了烈焰风暴武器柜的战利品。<ul><li>增加了植入物和核心的掉落次数，并提高了尊享稀有度的掉落概率。</li><li>为了给这些增长留出空间，我们略微下调了武器芯片和消耗品的数量。</li></ul></li><li><em>开发者说明：上述两项改动已于8月22日（星期六）上线。</em></li></ul><h2>综合</h2><ul><li>修复了在低温档案室开启隐藏储藏箱时会持续获得经验值和米达声望的问题。<ul><li>该操作及其他此前暂时停用的功能现已全部恢复。</li></ul></li></ul>",
+          "bodyText": "军械盗劫 修复了撤离后UESC清单未在团队成员之间共享的问题。 尚未领取的玩家请前往邮箱查收我们此前在该问题存在期间发放的150份UESC清单。 完成钥匙模板后获得的烈焰风暴武器柜钥匙数量由1把增加至3把。 更新了烈焰风暴武器柜的战利品。 增加了植入物和核心的掉落次数，并提高了尊享稀有度的掉落概率。 为了给这些增长留出空间，我们略微下调了武器芯片和消耗品的数量。 开发者说明：上述两项改动已于8月22日（星期六）上线。 综合 修复了在低温档案室开启隐藏储藏箱时会持续获得经验值和米达声望的问题。 该操作及其他此前暂时停用的功能现已全部恢复。",
+          "excerpt": "关于UESC清单",
+          "source": "official"
+        }
+      }
+    },
+    {
+      "id": "blt0a37e822f4c469c9",
+      "slug": "marathon_update_1_1_5_4",
+      "pathSlug": "marathon-update-1-1-5-4",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-08-18T15:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_5_4",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_5_4",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_4"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-5-4/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 295,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.5.4",
+          "subtitle": "The one about Ordnance Heist",
+          "bodyHtml": "<h2>Ordnance Heist</h2><ul><li>The Ordnance Heist PvPvE experience is live!</li><li>Engage in a multi-run chase across different zones. Take down UESC, acquire Locker keys, hunt for the Firestorm. Let it rain.</li><li>Extract with UESC Manifests to gear up in the updated MIDA and Traxus Armories.</li><li>End Date: September 1st.</li><li>Check out our preview blog for more info!<ul><li><a href=\"https://www.bungie.net/News/Article/ordnance_heist\" target=\"_blank\">https://www.bungie.net/News/Article/ordnance_heist</a></li></ul></li></ul><h2>Item Economy</h2><ul><li>Updated Ranked maps to increase the volume and quality of available loot.<ul><li><em>Dev Note: More gear will be available, and players should encounter more blue and purple gear.</em></li></ul></li><li>Fixed an issue where players would occasionally still have their Sponsored Kit contents unpacked in the lobby after a disconnect.<ul><li>Warped items have now been re-enabled.</li></ul></li><li>Fixed an issue where the available stock of Sekiguchi implants was less than the other factions.</li><li>Fixed an issue where players could lose inventory items after completing a Rook or Sponsored Kit run with a full Vault.</li></ul><h2>Combat</h2><h3>Weapons</h3><ul><li>V85 Circuit Breaker<ul><li>Reduced the effectiveness of the Overclocked Delimiter Prestige Mod when paired with this weapon.</li><li>Reduced damage bonus of the Last Resort and Reckless Behavior mods when paired with this weapon.</li><li><em>Dev Note: These temporary changes are aimed at removing unintended one-hit knockdown body shots being possible with these weapons and mods used together.</em></li></ul></li><li>Outland<ul><li>Fixed an issue where the rate of fire could increase unintentionally when paired with the Mechanized Holsters core.</li></ul></li></ul><h2>User Interface and Experience</h2><ul><li>Fixed an issue where players could be defaulted to Crew Fill off when attempting to return to Trios after Solo or Rook runs.</li></ul><h2>Contracts</h2><ul><li>Fixed an issue where some CyberAcme contracts had mismatched names and objectives.</li><li>Fixed an issue where completed Cryo Archive contracts could not be claimed after Cryo Archive availability ended.</li></ul><h2>Localization</h2><ul><li>Fixed a visual display issue with the compass in Italian.</li></ul>",
+          "bodyText": "Ordnance Heist The Ordnance Heist PvPvE experience is live! Engage in a multi-run chase across different zones. Take down UESC, acquire Locker keys, hunt for the Firestorm. Let it rain. Extract with UESC Manifests to gear up in the updated MIDA and Traxus Armories. End Date: September 1st. Check out our preview blog for more info! https://www.bungie.net/News/Article/ordnance_heist Item Economy Updated Ranked maps to increase the volume and quality of available loot. Dev Note: More gear will be available, and players should encounter more blue and purple gear. Fixed an issue where players would occasionally still have their Sponsored Kit contents unpacked in the lobby after a disconnect. Warped items have now been re-enabled. Fixed an issue where the available stock of Sekiguchi implants was less than the other factions. Fixed an issue where players could lose inventory items after completing a Rook or Sponsored Kit run with a full Vault. Combat Weapons V85 Circuit Breaker Reduced the effectiveness of the Overclocked Delimiter Prestige Mod when paired with this weapon. Reduced damage bonus of the Last Resort and Reckless Behavior mods when paired with this weapon. Dev Note: These temporary changes are aimed at removing unintended one-hit knockdown body shots being possible with these weapons and mods used together. Outland Fixed an issue where the rate of fire could increase unintentionally when paired with the Mechanized Holsters core. User Interface and Experience Fixed an issue where players could be defaulted to Crew Fill off when attempting to return to Trios after Solo or Rook runs. Contracts Fixed an issue where some CyberAcme contracts had mismatched names and objectives. Fixed an issue where completed Cryo Archive contracts could not be claimed after Cryo Archive availability ended. Localization Fixed a visual display issue with the compass in Italian.",
+          "excerpt": "The one about Ordnance Heist"
+        },
         "zh": {
           "title": "《失落星船：马拉松》更新1.1.5.4",
           "subtitle": "关于军械盗劫",
