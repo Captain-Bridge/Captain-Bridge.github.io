@@ -67,6 +67,88 @@
       "acquisition": "bundle-only"
     },
     {
+      "id": "lucky_step",
+      "title": "幸运步履",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/store/content/docs/store/bundles/white_rabbit_vandal_bundle/lucky_step_icon.webp",
+      "detailImage": "/store/content/docs/store/bundles/white_rabbit_vandal_bundle/lucky_step.webp",
+      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_vandal_bundle/lucky_step.md",
+      "acquisition": "bundle-only"
+    },
+    {
+      "id": "white_rabbit_vandal",
+      "title": "白兔",
+      "price": "1,500",
+      "category": "暴徒疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction":"vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/white_rabbit_vandal_cover.webp",
+      "iconImage": "/store/content/docs/store/items/white_rabbit_vandal_icon.webp",
+      "detailImage": "/store/content/docs/store/items/white_rabbit_vandal.webp",
+      "bodyFile": "/store/content/docs/store/items/white_rabbit_vandal.md"
+    },
+    {
+      "id": "Playful_Bunny_WSTR",
+      "title": "嬉游兔兔",
+      "price": "600",
+      "category": "WSTR战斗霰弹枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction":"horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Playful_Bunny_WSTR_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Playful_Bunny_WSTR_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Playful_Bunny_WSTR.webp",
+      "bodyFile": "/store/content/docs/store/items/Playful_Bunny_WSTR.md"
+    },
+    {
+      "id": "evil_thought",
+      "title": "恶念",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/evil_thought_cover.webp",
+      "iconImage": "/store/content/docs/store/items/evil_thought_icon.webp",
+      "detailImage": "/store/content/docs/store/items/evil_thought.webp",
+      "bodyFile": "/store/content/docs/store/items/evil_thought.md"
+    },
+    {
+      "id": "Nameless_Rabbit",
+      "title": "无名兔",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Nameless_Rabbit_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Nameless_Rabbit_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Nameless_Rabbit.webp",
+      "bodyFile": "/store/content/docs/store/items/Nameless_Rabbit.md"
+    },
+    {
+      "id": "Playful_Bunny_emblem",
+      "title": "嬉游兔兔",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Playful_Bunny_emblem_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Playful_Bunny_emblem_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Playful_Bunny_emblem.webp",
+      "bodyFile": "/store/content/docs/store/items/Playful_Bunny_emblem.md"
+    },
+    {
       "id": "yokai_of_Wrath_Appearance",
       "title": "怒之相妖怪",
       "price": "1,500",
@@ -2192,22 +2274,74 @@
   ],
   "bundles": [
     {
-      "id": "yokai_of_Wrath_Appearance_bundle",
-      "title": "怒之相妖怪",
-      "category": "毁灭者背包",
-      "price": "1,900",
+      "id": "white_rabbit_vandal_bundle",
+      "title": "白兔[暴徒]",
+      "category": "暴徒背包",
+      "price": "1,600",
       "featured": true,
       "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/yokai_of_Wrath_Appearance_bundle/yokai_of_Wrath_Appearance_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/yokai_of_Wrath_Appearance_bundle/yokai_of_Wrath_Appearance_bundle.md",
+      "coverImage": "/store/content/docs/store/bundles/white_rabbit_vandal_bundle/white_rabbit_vandal_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_vandal_bundle/white_rabbit_vandal_bundle.md",
       "itemIds": [
-        "yokai_of_Wrath_Appearance",
-        "The_posion_of_yokai",
-        "The_Heart_in_Bondage",
-        "Rage_Leaves_a_Mark",     
-        "Angry_faced_yokai_Clan",
-        "hell_fire_emblem"
+        "white_rabbit_vandal",
+        "Playful_Bunny_WSTR",
+        "evil_thought",
+        "lucky_step",     
+        "Nameless_Rabbit",
+        "Playful_Bunny_emblem"
         
+      ]
+    },
+    {
+      "id": "white_rabbit_weapon_bundle",
+      "title": "白兔",
+      "category": "武器背包",
+      "price": "1,800",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle.md",
+      "itemIds": [
+        "Playful_Bunny_iron_scout_rifle",
+        "Playful_Bunny_repeater",
+        "Playful_Bunny_carry_V99",
+        "Playful_Bunny_far_range",
+        "Playful_Bunny_boundary"    
+      ]
+    },
+    {
+      "id": "Retro_Remix_sentinal_bundle",
+      "title": "复古_混音",
+      "category": "哨兵背包",
+      "price": "1,600",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/bundles/Retro_Remix_sentinal_bundle/Retro_Remix_sentinal_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Retro_Remix_sentinal_bundle/Retro_Remix_sentinal_bundle.md",
+      "itemIds": [
+        "Retro_Remix_sentinal",
+        "Retro_Remix_V22",
+        "cube",
+        "Retro_Remix_sentinal_bundle_gear_structure",
+        "Style_Task",
+        "Retro_Remix_emblem"
+      ]
+    },
+    {
+      "id": "Retro_Remix_weapon_bundle",
+      "title": "复古_混音",
+      "category": "武器背包",
+      "price": "1,800",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle.md",
+      "itemIds": [
+        "Retro_Remix_V00",
+        "Retro_Remix_V85",
+        "Retro_Remix_WSTR",
+        "Retro_Remix_2442",
+        "Retro_Remix_copperhead"
       ]
     },
     {
@@ -2262,58 +2396,6 @@
         "white_rabbit_recon_bundle_Unrestrained",
         "Battlefield_Mastery",
         "winking_eye"      
-      ]
-    },
-    {
-      "id": "white_rabbit_weapon_bundle",
-      "title": "白兔",
-      "category": "武器背包",
-      "price": "1,800",
-      "featured": false,
-      "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle.md",
-      "itemIds": [
-        "Playful_Bunny_iron_scout_rifle",
-        "Playful_Bunny_repeater",
-        "Playful_Bunny_carry_V99",
-        "Playful_Bunny_far_range",
-        "Playful_Bunny_boundary"    
-      ]
-    },
-    {
-      "id": "Retro_Remix_sentinal_bundle",
-      "title": "复古_混音",
-      "category": "哨兵背包",
-      "price": "1,600",
-      "featured": false,
-      "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/Retro_Remix_sentinal_bundle/Retro_Remix_sentinal_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/Retro_Remix_sentinal_bundle/Retro_Remix_sentinal_bundle.md",
-      "itemIds": [
-        "Retro_Remix_sentinal",
-        "Retro_Remix_V22",
-        "cube",
-        "Retro_Remix_sentinal_bundle_gear_structure",
-        "Style_Task",
-        "Retro_Remix_emblem"
-      ]
-    },
-    {
-      "id": "Retro_Remix_weapon_bundle",
-      "title": "复古_混音",
-      "category": "武器背包",
-      "price": "1,800",
-      "featured": false,
-      "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle.md",
-      "itemIds": [
-        "Retro_Remix_V00",
-        "Retro_Remix_V85",
-        "Retro_Remix_WSTR",
-        "Retro_Remix_2442",
-        "Retro_Remix_copperhead"
       ]
     }
   ]
