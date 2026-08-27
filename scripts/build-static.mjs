@@ -25,7 +25,30 @@ await stripFrontMatter(publicDir);
 await (await import('./prerender.mjs')).prerender(root);
 async function walk(dir) { for (const entry of await fs.readdir(dir, { withFileTypes: true })) { const full = path.join(dir, entry.name); if (entry.isDirectory()) await walk(full); else if (entry.name.toLowerCase().endsWith('.html')) htmlFiles.push(path.relative(publicDir, full)); } }
 await walk(publicDir);
-const urls = htmlFiles.filter(file => !file.includes(`${path.sep}404.html`)).map(file => file.replaceAll(path.sep, '/')).map(file => file === 'index.html' ? '/' : `/${file.replace(/index\.html$/, '')}`);
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url => `  <url><loc>${siteUrl}${url}</loc></url>`).join('\n')}\n</urlset>\n`;
+
+// lastmod：新闻文章用发布时间（更准确），其余页面用文件 mtime 兜底。
+const newsLastmod = new Map();
+try {
+  const newsData = JSON.parse(await fs.readFile(path.join(sourceDir, 'news/data/marathon-news.json'), 'utf8'));
+  for (const item of newsData.items || []) {
+    if (item.localPath && item.publishedAt) newsLastmod.set(item.localPath, item.publishedAt.slice(0, 10));
+  }
+} catch {
+  // 新闻数据缺失时退化为文件 mtime
+}
+
+const urls = [];
+for (const file of htmlFiles) {
+  if (file.includes(`${path.sep}404.html`)) continue;
+  const rel = file.replaceAll(path.sep, '/');
+  const url = rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
+  let lastmod = newsLastmod.get(url);
+  if (!lastmod) {
+    const st = await fs.stat(path.join(publicDir, file));
+    lastmod = st.mtime.toISOString().slice(0, 10);
+  }
+  urls.push({ url, lastmod });
+}
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${siteUrl}${u.url}</loc><lastmod>${u.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await fs.writeFile(path.join(publicDir, 'sitemap.xml'), sitemap, 'utf8');
 console.log(`Built ${htmlFiles.length} HTML files into public/`);
