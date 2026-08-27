@@ -1,9 +1,10 @@
-// SEO 预渲染：把 JS 渲染模块的内容以 <noscript> 静态快照注入到产物 HTML，
-// 让不执行 JavaScript 的搜索引擎爬虫（百度、Bing 快照、各类长尾爬虫）也能读到内容。
+// SEO 构建时后处理：两件事
+//   1. 把 JS 渲染模块的内容以 <noscript> 静态快照注入产物 HTML，让不执行 JS 的爬虫可读；
+//   2. 为新闻文章页补全 SEO meta（title/description/canonical/OG/Twitter/JSON-LD）。
 //
 // 设计原则：
 //   1. 单一数据源 —— 只读取 source/ 下已有的 json/md，不复制、不硬编码内容。
-//   2. 零前端回归 —— 只往 public/ 的 HTML 里追加 <noscript>，不碰任何 JS 渲染逻辑。
+//   2. 零前端回归 —— 只改动 public/ 产物，不碰任何 JS 渲染逻辑、不改 source/ 源码。
 //   3. 合规 —— 用 <noscript> 而非隐藏文本（display:none/hidden 属于 cloaking 风险）。
 //   4. 幂等 —— 重复构建时先移除旧注入，再写入新内容。
 //
@@ -12,6 +13,7 @@
 //   - /marathon-lore/   百科（6 模块 × 全部条目的标题 + 摘要 + 标签）
 //   - /factions/        阵营（6 阵营的升级节点说明）
 //   - /map/{map}/       互动地图（5 张地图的 POI 名称与描述）
+//   - /news/articles/*/ 新闻详情页（SEO meta 增强）
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -19,6 +21,11 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const NOSCRIPT_OPEN = '<noscript class="seo-prerender">';
 const NOSCRIPT_CLOSE = '</noscript>';
+const SITE_URL = 'https://marathon.uesc.top';
+const SITE_NAME = '《失落星船：马拉松》中文站';
+const SITE_SHORT = '马拉松中文站';
+const SEO_META_START = '<!-- seo-meta:start -->';
+const SEO_META_END = '<!-- seo-meta:end -->';
 
 function esc(value) {
   return String(value ?? '')
@@ -216,6 +223,91 @@ async function buildMap(sourceDir, mapId) {
 }
 
 // ---------------------------------------------------------------
+// 5. 新闻文章页 SEO meta 增强
+// ---------------------------------------------------------------
+async function buildNewsIndex(sourceDir) {
+  const data = await readJson(path.join(sourceDir, 'news/data/marathon-news.json'));
+  const items = data && Array.isArray(data.items) ? data.items : [];
+  const map = new Map();
+  for (const item of items) {
+    if (item.localPath) map.set(item.localPath, item);
+  }
+  return map;
+}
+
+function buildArticleMeta(item) {
+  const zh = item?.content?.zh || {};
+  const en = item?.content?.en || {};
+  const title = zh.title || en.title || item?.slug || '';
+  const excerpt = zh.excerpt || zh.subtitle || zh.bodyText || en.excerpt || en.subtitle || en.bodyText || '';
+  const desc = String(excerpt).replace(/\s+/g, ' ').trim().slice(0, 155);
+  const url = SITE_URL + (item?.localPath || '');
+  const rawImage = item?.images?.primary?.url || '';
+  const image = /^https?:\/\//i.test(rawImage) ? rawImage : `${SITE_URL}/images/share-card.png`;
+  const publishedAt = item?.publishedAt || '';
+  const author = item?.author || 'Bungie';
+  const pageTitle = title ? `${title} - ${SITE_SHORT}` : SITE_NAME;
+  return { pageTitle, title, desc, url, image, publishedAt, author };
+}
+
+function buildHeadBlock(meta) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: meta.title,
+    description: meta.desc,
+    image: meta.image,
+    datePublished: meta.publishedAt,
+    author: { '@type': 'Organization', name: meta.author },
+    publisher: { '@type': 'Organization', name: SITE_NAME },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': meta.url },
+    inLanguage: 'zh-CN',
+  };
+  const jsonLdStr = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
+  return [
+    `<link rel="canonical" href="${esc(meta.url)}">`,
+    `<meta property="og:type" content="article">`,
+    `<meta property="og:locale" content="zh_CN">`,
+    `<meta property="og:site_name" content="${esc(SITE_NAME)}">`,
+    `<meta property="og:title" content="${esc(meta.pageTitle)}">`,
+    `<meta property="og:description" content="${esc(meta.desc)}">`,
+    `<meta property="og:url" content="${esc(meta.url)}">`,
+    `<meta property="og:image" content="${esc(meta.image)}">`,
+    `<meta property="article:published_time" content="${esc(meta.publishedAt)}">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${esc(meta.pageTitle)}">`,
+    `<meta name="twitter:description" content="${esc(meta.desc)}">`,
+    `<meta name="twitter:image" content="${esc(meta.image)}">`,
+    `<script type="application/ld+json">${jsonLdStr}</script>`,
+  ].join('\n');
+}
+
+async function enhanceArticle(publicFile, meta) {
+  const file = path.resolve(publicFile);
+  let html;
+  try {
+    html = await fs.readFile(file, 'utf8');
+  } catch {
+    return false;
+  }
+  // 替换 <title>
+  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(meta.pageTitle)}</title>`);
+  // 替换 description（存在则替换，不存在则插入）
+  if (/<meta name="description"/.test(html)) {
+    html = html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(meta.desc)}">`);
+  } else {
+    html = html.replace('</head>', `<meta name="description" content="${esc(meta.desc)}">\n</head>`);
+  }
+  // 移除旧注入（幂等）
+  html = html.replace(new RegExp(`${SEO_META_START}[\\s\\S]*?${SEO_META_END}\\s*`), '');
+  // 插入新块到 </head> 前
+  const block = `${SEO_META_START}\n${buildHeadBlock(meta)}\n${SEO_META_END}`;
+  html = html.replace('</head>', `${block}\n</head>`);
+  await fs.writeFile(file, html, 'utf8');
+  return true;
+}
+
+// ---------------------------------------------------------------
 // 入口
 // ---------------------------------------------------------------
 export async function prerender(root) {
@@ -260,7 +352,28 @@ export async function prerender(root) {
 
   const results = await Promise.all(tasks);
   const injected = results.filter(Boolean).length;
-  console.log(`[prerender] 注入 noscript 静态快照：${injected}/${results.length} 个页面`);
+
+  // 5. 新闻文章页 meta 增强
+  let articleCount = 0;
+  try {
+    const newsIndex = await buildNewsIndex(sourceDir);
+    const articlesDir = path.join(publicDir, 'news/articles');
+    const entries = await fs.readdir(articlesDir, { withFileTypes: true });
+    const articleTasks = [];
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const localPath = `/news/articles/${entry.name}/`;
+      const item = newsIndex.get(localPath);
+      if (!item) continue;
+      articleTasks.push(enhanceArticle(path.join(articlesDir, entry.name, 'index.html'), buildArticleMeta(item)));
+    }
+    const articleResults = await Promise.all(articleTasks);
+    articleCount = articleResults.filter(Boolean).length;
+  } catch {
+    articleCount = 0;
+  }
+
+  console.log(`[prerender] 注入 noscript 静态快照：${injected}/${results.length} 个页面；增强文章 meta：${articleCount} 篇`);
   return injected;
 }
 
