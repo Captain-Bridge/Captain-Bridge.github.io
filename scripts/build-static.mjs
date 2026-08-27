@@ -21,6 +21,8 @@ async function stripFrontMatter(dir) {
   }
 }
 await stripFrontMatter(publicDir);
+// SEO 预渲染：把 JS 渲染模块（新闻/百科/阵营/地图）的内容以 <noscript> 注入，供爬虫抓取。
+await (await import('./prerender.mjs')).prerender(root);
 async function walk(dir) { for (const entry of await fs.readdir(dir, { withFileTypes: true })) { const full = path.join(dir, entry.name); if (entry.isDirectory()) await walk(full); else if (entry.name.toLowerCase().endsWith('.html')) htmlFiles.push(path.relative(publicDir, full)); } }
 await walk(publicDir);
 const urls = htmlFiles.filter(file => !file.includes(`${path.sep}404.html`)).map(file => file.replaceAll(path.sep, '/')).map(file => file === 'index.html' ? '/' : `/${file.replace(/index\.html$/, '')}`);
