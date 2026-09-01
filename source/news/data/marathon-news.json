@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T15:47:39.002Z",
+  "generatedAt": "2026-09-01T23:23:52.551Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,13 +7,13 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 60,
-  "count": 60,
+  "total": 61,
+  "count": 61,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 49,
+    "bilingualCount": 51,
     "englishOnlyCount": 10,
-    "chineseOnlyCount": 1,
+    "chineseOnlyCount": 0,
     "englishOnly": [
       {
         "articlePath": "/get_to_know_marathons_bungie_rewards",
@@ -76,14 +76,7 @@
         "articleUrl": "https://www.bungie.net/7/en-us/News/Article/alpha_update"
       }
     ],
-    "chineseOnly": [
-      {
-        "articlePath": "/marathon_update_1_1_5_5",
-        "title": "《失落星船：马拉松》更新1.1.5.5",
-        "publishedAt": "2026-08-25T15:00:00.000Z",
-        "articleUrl": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_5"
-      }
-    ]
+    "chineseOnly": []
   },
   "translation": {
     "attempted": true,
@@ -92,21 +85,21 @@
   },
   "items": [
     {
-      "id": "blt0bb1a90a661f9944",
-      "slug": "marathon_update_1_1_5_5",
-      "pathSlug": "marathon-update-1-1-5-5",
+      "id": "blt2196828e06ce6564",
+      "slug": "marathon_update_1_1_9",
+      "pathSlug": "marathon-update-1-1-9",
       "category": "updates",
       "author": "Marathon Dev Team",
-      "publishedAt": "2026-08-25T15:00:00.000Z",
-      "articlePath": "/marathon_update_1_1_5_5",
+      "publishedAt": "2026-09-01T15:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_9",
       "articleUrl": {
-        "en": null,
-        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_5"
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_9"
       },
-      "localPath": "/news/articles/marathon-update-1-1-5-5/",
-      "matchType": "zh-only",
+      "localPath": "/news/articles/marathon-update-1-1-9/",
+      "matchType": "bilingual",
       "languages": {
-        "en": false,
+        "en": true,
         "zh": true
       },
       "taxonomies": [
@@ -173,11 +166,120 @@
         "inline": []
       },
       "metrics": {
-        "wordCount": 11,
+        "wordCount": 314,
         "readMinutes": 1
       },
       "content": {
-        "en": null,
+        "en": {
+          "title": "Marathon Update 1.1.9",
+          "subtitle": "The one about Rook's inventory",
+          "bodyHtml": "<h2>Item Economy</h2><h3>C.A.R.R.I Armory Update</h3><ul><li>Added a Superior Shield Implant and a Superior Backpack.<ul><li>These will be able to be acquired 3x per week.</li></ul></li><li>Reduced CyberAcme Commendations cost for some items.<ul><li>Deluxe Backpack: 20 -&gt; 15.</li><li>Deluxe Shield Implant: 12 -&gt; 10.</li><li>Deluxe Key Template: 40 -&gt; 30.</li><li>Superior Key Template: 75 -&gt; 50.</li></ul></li></ul><h2>Combat</h2><h3>Rook Inventory Update</h3><ul><li>Added items to Rook’s inventory:<ul><li>Compromised Sneak Pack.</li><li>2x Claymores.</li><li>1x Depleted Self Revive.</li><li>1x Signal Jammer.</li></ul></li><li>These updates will last until the end of Season 2.</li></ul><h3>Mods</h3><ul><li>Fixed an issue where the Full-Auto Selector mod incorrectly stated that it increased rate of fire.</li></ul><h2>User Interface and Experience</h2><ul><li>Fixed a visual issue with the Threat indicator text when selecting a Ranked mode.</li><li>Fixed an issue where the audible invite sent notice and player joined notice would not always play when inviting a player.</li></ul><h2>Contracts</h2><ul><li>Fixed an issue in Return on Investment 4/5 where objectives could become un-interactable if players walked away while mid-completion.</li><li>Fixed an issue in Unsanctioned Hostilities 5/5 where the contract would not progress when acquiring quest items from other players.</li></ul><h2>Codex</h2><ul><li>Made additional updates to prevent players from getting into a state where they have completed a Codex challenge but not get credit for that completion.</li><li>Fixed an issue where players who reached Level 100 in Season 1 but did not claim the Century Runner emblem before Season 2 launched could not claim it.</li></ul><h2>Zones</h2><ul><li>Sponsored Night Marsh returns.</li></ul><h4>Cryo Archive</h4><ul><li>Fixed an issue allowing players to get outside of the playable map area.</li><li>Fixed an issue where the door in and out of the Compiler fight could incorrectly close.</li></ul><h2>Localization</h2><ul><li>Fixed several issues with text getting cut off in Russian.</li></ul><h2>General</h2><ul><li>Fixed an issue where parts of the Acid Abyss Thief skin would show in the player view when using the KKV-9SD.</li><li>Fixed a minor typo in the Thief Weaverunner Shell description.</li></ul>",
+          "bodyText": "Item Economy C.A.R.R.I Armory Update Added a Superior Shield Implant and a Superior Backpack. These will be able to be acquired 3x per week. Reduced CyberAcme Commendations cost for some items. Deluxe Backpack: 20 -&gt; 15. Deluxe Shield Implant: 12 -&gt; 10. Deluxe Key Template: 40 -&gt; 30. Superior Key Template: 75 -&gt; 50. Combat Rook Inventory Update Added items to Rook’s inventory: Compromised Sneak Pack. 2x Claymores. 1x Depleted Self Revive. 1x Signal Jammer. These updates will last until the end of Season 2. Mods Fixed an issue where the Full-Auto Selector mod incorrectly stated that it increased rate of fire. User Interface and Experience Fixed a visual issue with the Threat indicator text when selecting a Ranked mode. Fixed an issue where the audible invite sent notice and player joined notice would not always play when inviting a player. Contracts Fixed an issue in Return on Investment 4/5 where objectives could become un-interactable if players walked away while mid-completion. Fixed an issue in Unsanctioned Hostilities 5/5 where the contract would not progress when acquiring quest items from other players. Codex Made additional updates to prevent players from getting into a state where they have completed a Codex challenge but not get credit for that completion. Fixed an issue where players who reached Level 100 in Season 1 but did not claim the Century Runner emblem before Season 2 launched could not claim it. Zones Sponsored Night Marsh returns. Cryo Archive Fixed an issue allowing players to get outside of the playable map area. Fixed an issue where the door in and out of the Compiler fight could incorrectly close. Localization Fixed several issues with text getting cut off in Russian. General Fixed an issue where parts of the Acid Abyss Thief skin would show in the player view when using the KKV-9SD. Fixed a minor typo in the Thief Weaverunner Shell description.",
+          "excerpt": "The one about Rook's inventory"
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.9",
+          "subtitle": "关于鲁克的物品栏。",
+          "bodyHtml": "<h2>物品经济</h2><h3>C.A.R.R.I军械库更新</h3><ul><li>新增一个卓越护盾植入物和一个卓越背包。<ul><li>每周可获取3次。</li></ul></li><li>降低了部分物品需要消耗的赛博艾克米嘉奖。<ul><li>豪华背包：20 -&gt; 15。</li><li>豪华护盾植入物：12 -&gt; 10。</li><li>豪华钥匙模板：40 -&gt; 30。</li><li>卓越钥匙模板：75 -&gt; 50。</li></ul></li></ul><h2>战斗</h2><h3>鲁克物品栏更新</h3><ul><li>鲁克的物品栏新增以下物品：<ul><li>受损的潜行包。</li><li>2x阔刀地雷。</li><li>1x耗尽的自我复活。</li><li>1x信号干扰器。</li></ul></li><li>更新将持续至第2赛季结束。</li></ul><h3>模组</h3><ul><li>修复了全自动切换器模组可提高射速的错误说明。</li></ul><h2>用户界面和体验</h2><ul><li>修复了选择排名模式时，威胁指示器文本显示异常的问题。</li><li>修复了邀请玩家时，邀请已发送和玩家已加入的提示音有时不会播放的问题。</li></ul><h2>合约</h2><ul><li>修复了投资回报率[4/5]中，玩家在完成目标途中离开，会导致目标无法交互的问题。</li><li>修复了无规冲突[5/5]中，从其他玩家处获取任务物品后，合约无法继续推进的问题。</li></ul><h2>百科</h2><ul><li>进行了额外更新，避免玩家完成百科挑战后无法获得信用点。</li><li>修复了在第1赛季达到100级但未在第2赛季开始前领取百年老手徽标的玩家，此后无法领取该徽标的问题。</li></ul><h2>区域</h2><ul><li>赞助夜间沼泽回归。</li></ul><h4>低温档案室</h4><ul><li>修复了玩家可以离开可游玩地图区域的问题。</li><li>修复了编译者战斗区域出入口的门可能错误关闭的问题。</li></ul><h2>本地化</h2><ul><li>修复了多个俄语文本显示不完整的问题。</li></ul><h2>综合</h2><ul><li>修复了使用KKV-9SD时，玩家视野中会出现酸蚀深渊盗贼皮肤的部分模型的问题。</li><li>修复了盗贼织行者外壳说明中的一处小错误。</li></ul>",
+          "bodyText": "物品经济 C.A.R.R.I军械库更新 新增一个卓越护盾植入物和一个卓越背包。 每周可获取3次。 降低了部分物品需要消耗的赛博艾克米嘉奖。 豪华背包：20 -&gt; 15。 豪华护盾植入物：12 -&gt; 10。 豪华钥匙模板：40 -&gt; 30。 卓越钥匙模板：75 -&gt; 50。 战斗 鲁克物品栏更新 鲁克的物品栏新增以下物品： 受损的潜行包。 2x阔刀地雷。 1x耗尽的自我复活。 1x信号干扰器。 更新将持续至第2赛季结束。 模组 修复了全自动切换器模组可提高射速的错误说明。 用户界面和体验 修复了选择排名模式时，威胁指示器文本显示异常的问题。 修复了邀请玩家时，邀请已发送和玩家已加入的提示音有时不会播放的问题。 合约 修复了投资回报率[4/5]中，玩家在完成目标途中离开，会导致目标无法交互的问题。 修复了无规冲突[5/5]中，从其他玩家处获取任务物品后，合约无法继续推进的问题。 百科 进行了额外更新，避免玩家完成百科挑战后无法获得信用点。 修复了在第1赛季达到100级但未在第2赛季开始前领取百年老手徽标的玩家，此后无法领取该徽标的问题。 区域 赞助夜间沼泽回归。 低温档案室 修复了玩家可以离开可游玩地图区域的问题。 修复了编译者战斗区域出入口的门可能错误关闭的问题。 本地化 修复了多个俄语文本显示不完整的问题。 综合 修复了使用KKV-9SD时，玩家视野中会出现酸蚀深渊盗贼皮肤的部分模型的问题。 修复了盗贼织行者外壳说明中的一处小错误。",
+          "excerpt": "关于鲁克的物品栏。",
+          "source": "official"
+        }
+      }
+    },
+    {
+      "id": "blt0bb1a90a661f9944",
+      "slug": "marathon_update_1_1_5_5",
+      "pathSlug": "marathon-update-1-1-5-5",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-08-25T15:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_5_5",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_5_5",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_5_5"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-5-5/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 145,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.5.5",
+          "subtitle": "The one about the UESC Manifests",
+          "bodyHtml": "<h2>Ordnance Heist</h2><ul><li>Fixed an issue where UESC Manifests were not shared among crew upon exfil.<ul><li>If you have not already claimed it, players should check their mailbox for the 150 Manifests we had previously sent out while this issue was active.</li></ul></li><li>Increased the number of Firestorm Locker Keys granted upon completion of a key template, up to 3 from 1.</li><li>Updated Firestorm Arms Locker loot.<ul><li>Increased the number of rolls for implants and cores, with a higher chance of these items dropping at Prestige rarity.</li><li>To make room for these increases, slightly reduced weapon chip and consumable item count.</li></ul></li><li><em>Dev Note: The above two changes originally went live on Friday, 8/21.</em></li></ul><h2>General</h2><ul><li>Fixed an issue where opening the Hidden Cache in Cryo Archive would continuously grant XP and MIDA reputation.<ul><li>This action, as well as any others that were temporarily disabled, have now been re-enabled.</li></ul></li></ul>",
+          "bodyText": "Ordnance Heist Fixed an issue where UESC Manifests were not shared among crew upon exfil. If you have not already claimed it, players should check their mailbox for the 150 Manifests we had previously sent out while this issue was active. Increased the number of Firestorm Locker Keys granted upon completion of a key template, up to 3 from 1. Updated Firestorm Arms Locker loot. Increased the number of rolls for implants and cores, with a higher chance of these items dropping at Prestige rarity. To make room for these increases, slightly reduced weapon chip and consumable item count. Dev Note: The above two changes originally went live on Friday, 8/21. General Fixed an issue where opening the Hidden Cache in Cryo Archive would continuously grant XP and MIDA reputation. This action, as well as any others that were temporarily disabled, have now been re-enabled.",
+          "excerpt": "The one about the UESC Manifests"
+        },
         "zh": {
           "title": "《失落星船：马拉松》更新1.1.5.5",
           "subtitle": "关于UESC清单",
