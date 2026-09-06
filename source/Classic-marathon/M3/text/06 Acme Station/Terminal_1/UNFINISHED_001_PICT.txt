@@ -1,0 +1,14 @@
+$C2汇合站单元
+来源: $C6空间站意志单元 Hrled$C2
+目标: $C6汇合站单元$C2
+参考: $C6计划周期降级$C2
+标记: $I强制执行$i
+
+兹委任空间站汇合单元按照通知内容执行并完成预定任务。
+$C6^28199bfubrictefxal
+^28199thdmncobwbsnw$C2
+$C6^28199bfubrictefxal
+^28199thdmncobwbsnw$C2
+所有被分派任务的单元自此起根据$I“强制执行”$i标记降级一级，直至接收到$I“接收确认”$i标记为止。
+$C6^28199bfubrictefxal
+^28199thdmncobwbsnw$C2

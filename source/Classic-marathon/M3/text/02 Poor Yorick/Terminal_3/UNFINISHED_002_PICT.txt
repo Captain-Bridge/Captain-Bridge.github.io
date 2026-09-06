@@ -1,0 +1,11 @@
+$C2驯化单位
+来源: $C6机械雇佣兵第谷$C2
+目标: $C6驯化单位 7$C2
+参考: $C6叛变战斗单位$C2
+标记: $I重定向$i
+
+继续搜索，摧毁它后返回这里报告。
+$C6^19201facltebicubcc
+^19201facltebicubcc$C2
+$C6^19201facltebicubcc
+^19201facltebicubcc$C2

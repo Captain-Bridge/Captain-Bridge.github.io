@@ -1,0 +1,15 @@
+$C2驯化单位
+来源: $C6机械雇佣兵第谷$C2
+目标: $C6驯化单位 7$C2
+参考: $C6叛变战斗单位$C2
+标记: $Iobfuscation$i
+
+我给你准备了一些新玩具，你会用得上。去这里找找看，完了告诉我你的感想。
+$C6^4910cercifucatcleqlib
+^4911dixpicatnccbieana$C2
+$C6^4910cercifucatcleqlib
+^4911dixpicatnccbieana$C2
+$C6^4910cercifucatcleqlib
+^4911dixpicatnccbieana$C2
+$C6^4910cercifucatcleqlib
+^4911dixpicatnccbieana$C2

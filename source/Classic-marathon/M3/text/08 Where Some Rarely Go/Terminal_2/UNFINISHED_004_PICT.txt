@@ -1,0 +1,11 @@
+$C2Lh’owon command
+来源: $C6Lh’owon Command$C2
+目标: $C6边防驻军 7AF 单位指挥部$C2
+参考: $C6Proposal.49AB3$C2
+标记: $Iapproval$i
+
+$C6{ cmd: 参考 附加ed }$C2
+
+此为对提案 proposal.49AB3 的批准，内容为边防驻军 7AF 通往补给塔 2 的备用通道。
+
+{ 错误：未找到提案 proposal.49AB3 }

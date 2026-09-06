@@ -1,0 +1,14 @@
+$C2驯化单位
+来源: $C6机械雇佣兵第谷$C2
+目标: $C6驯化单位 7$C2
+参考: $C6叛变战斗单位$C2
+标记: $I煽动$i
+
+你的任务很简单：杀死该区域内所有的执法者。他们仍在听从舰长的命令。你会得到其他船员的支持。他们以为自己正在执行提菲尔最高指挥部的命令。虫子就是这么听话。
+$C6^4910cercifucatcleql
+^4911dixpicatnccbiea$C2
+$C6^4910cercifucatcleql
+^4911dixpicatnccbiea$C2
+$C6^4910cercifucatcleql
+^4911dixpicatnccbiea$C2
+Have fun.

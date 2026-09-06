@@ -799,6 +799,13 @@ layout: false
         { from: '19', to: '21', image: '01518.bmp' },
         { from: '22', to: '24', image: '01522.bmp' },
         { from: '25', to: '27', image: '01525.bmp' }
+      ],
+      m3: [
+        { from: '00', to: '00', image: '/Classic-marathon/M3/M3-PROLOGUE.png', label: 'Prologue' },
+        { from: '01', to: '05', image: '/Classic-marathon/M3/M3-DESPAIR.png', label: 'Despair' },
+        { from: '06', to: '17', image: '/Classic-marathon/M3/M3-RAGE.png', label: 'Rage' },
+        { from: '18', to: '24', image: '/Classic-marathon/M3/M3-ENVY.png', label: 'Envy' },
+        { after: '24', image: '/Classic-marathon/M3/M3-END.png', label: 'END' }
       ]
     };
 
@@ -1030,7 +1037,7 @@ layout: false
       const row = document.createElement('div');
       row.className = 'rail-group';
       if (active) row.setAttribute('aria-current', 'true');
-      const groupLabel = group.after ? 'END' : 'CHAPTER ' + roman(groupIndex + 1);
+      const groupLabel = group.label || (group.after ? 'END' : 'CHAPTER ' + roman(groupIndex + 1));
 
       const toggle = document.createElement('button');
       toggle.type = 'button';
@@ -1111,11 +1118,14 @@ layout: false
       const section = document.createElement('section');
       section.className = 'doc-section chapter-cover' + (groupIndex === 0 ? ' chapter-one' : '');
 
-      const img = document.createElement('img');
-      img.className = 'doc-image chapter-cover-image';
-      img.src = group.image ? chapterImagePath(classic, group.image) : '';
-      img.alt = 'CHAPTER ' + roman(groupIndex + 1);
-      img.addEventListener('click', event => {
+      const endingImage = '';
+      const imageSrc = endingImage || (group.image ? chapterImagePath(classic, group.image) : '');
+      const img = imageSrc ? document.createElement('img') : null;
+      if (img) {
+        img.className = 'doc-image chapter-cover-image';
+        img.src = imageSrc;
+        img.alt = 'CHAPTER ' + roman(groupIndex + 1);
+        img.addEventListener('click', event => {
         event.stopPropagation();
         const lightbox = document.createElement('div');
         lightbox.className = 'image-lightbox';
@@ -1134,16 +1144,17 @@ layout: false
           }
         });
         document.body.appendChild(lightbox);
-      });
-      img.addEventListener('error', () => {
+        });
+        img.addEventListener('error', () => {
         img.alt = 'CHAPTER ' + roman(groupIndex + 1) + ' image unavailable';
         img.classList.add('image-error');
-      });
-      section.appendChild(img);
+        });
+        section.appendChild(img);
+      }
 
       const title = document.createElement('div');
       title.className = 'chapter-cover-title';
-      title.textContent = group.after ? 'END' : 'CHAPTER ' + roman(groupIndex + 1);
+      title.textContent = group.label || (group.after ? 'END' : 'CHAPTER ' + roman(groupIndex + 1));
       section.appendChild(title);
 
       const intro = CHAPTER_INTROS[classic.id];
@@ -1197,10 +1208,11 @@ layout: false
 
     function terminalBase(level, terminal) {
       const classic = currentClassic();
-      return '/' + joinPath('Classic-marathon', classic.path, 'text', level.dirName || level.label || level.name || level.id || '', terminal.name || '');
+      return encodeURI('/' + joinPath('Classic-marathon', classic.path, 'text', level.dirName || level.label || level.name || level.id || '', terminal.name || ''));
     }
 
     function resolveImagePath(fileName) {
+      if (String(fileName).startsWith('/')) return fileName;
       return '/' + joinPath('Classic-marathon', currentClassic().path, 'picts', fileName);
     }
 
@@ -1446,11 +1458,11 @@ layout: false
           { kind: 'logon', file: variantData.logon, image: variantData.logonImage, defaultColor: variantData.defaultColor },
           ...toInformationItems(variantData.information, variant, variantData.defaultColor),
           ...((variantData.picts || []).map(item => ({ kind: 'pict', ...item, defaultColor: variantData.defaultColor }))),
-          { kind: 'logoff', file: variantData.logoff, image: variantData.logoffImage, defaultColor: variantData.defaultColor }
+        { kind: 'logoff', file: variantData.logoff, image: variantData.logoffImage, defaultColor: variantData.defaultColor }
         ].filter(item => item.file);
       }
 
-      return [
+        return [
         { kind: 'logon', file: replaceTerminalVariant(terminal.logon, variant), image: terminal.logonImage || '01600.bmp' },
         ...toInformationItems(terminal.information, variant),
         ...((terminal.picts || []).map(item => ({
@@ -1591,7 +1603,8 @@ layout: false
     function loadCatalog() {
       return Promise.all([
         loadClassicCatalog('M1', 'M1', 'Classic Marathon 1'),
-        loadClassicCatalog('M2', 'M2', 'Classic Marathon 2')
+        loadClassicCatalog('M2', 'M2', 'Classic Marathon 2'),
+        loadClassicCatalog('M3', 'M3', 'Marathon Infinity')
       ]).then(series => series.flat());
     }
 
@@ -1599,7 +1612,7 @@ layout: false
       el.series.innerHTML = '';
       catalog.forEach((series, index) => {
         const button = document.createElement('button');
-        button.type = 'button'; button.textContent = series.id === 'm1' ? 'M1(1994)' : series.id === 'm2' ? 'M2(1995)' : series.label;
+        button.type = 'button'; button.textContent = series.id === 'm1' ? 'M1(1994)' : series.id === 'm2' ? 'M2(1995)' : series.id === 'm3' ? 'M3(1996)' : series.label;
         button.setAttribute('aria-pressed', index === state.classicIndex ? 'true' : 'false');
         button.addEventListener('click', () => {
           if (index === state.classicIndex) return;
@@ -1815,8 +1828,8 @@ layout: false
         });
         pager.next.addEventListener('click', () => {
           // M1's END leads into M2's opening chapter.
-          if (classic.id === 'm1' && group.after) {
-            const nextClassicIndex = catalog.findIndex(series => series.id === 'm2');
+          if ((classic.id === 'm1' && group.after) || (classic.id === 'm2' && group.after)) {
+            const nextClassicIndex = catalog.findIndex(series => series.id === (classic.id === 'm1' ? 'm2' : 'm3'));
             if (nextClassicIndex >= 0) {
               state.classicIndex = nextClassicIndex;
               state.chapterIndex = 0;
@@ -1916,7 +1929,12 @@ layout: false
         } else {
           const target = findAdjacentTerminal(1);
           if (!target) {
-            state.pageIndex = pages.length - 1;
+            if (classic.id === 'm3' && chapter && String(chapter.id) === '24') {
+              state.coverGroup = (CHAPTER_GROUPS.m3 || []).findIndex(entry => entry.label === 'END');
+              state.pageIndex = 0;
+            } else {
+              state.pageIndex = pages.length - 1;
+            }
           } else if (groupIndexForLevel(classic, classic.chapters[target.chapterIndex].id) !== groupIndexForLevel(classic, classic.chapters[state.chapterIndex].id)) {
             state.chapterIndex = target.chapterIndex;
             state.terminalIndex = target.terminalIndex;

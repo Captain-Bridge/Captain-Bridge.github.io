@@ -1,0 +1,12 @@
+$C2驯化单位
+来源: $C6机械雇佣兵第谷$C2
+目标: $C6驯化单位 7$C2
+参考: $C6叛变战斗单位$C2
+标记: $I情报$i
+
+我更希望暂时保密我的位置，至少等我和舰长先解决一下我们在军衔上的分歧。
+$C6^7391docivlbdile3x1  $C2官僚制度，$C6
+^7002nckeqlcacibule  $C2多么美妙，不是吗? 
+$C6^7391docivlbdile3x1$C2
+$C6^7002nckeqlcacibule
+^7391docivlbdile3x1$C2

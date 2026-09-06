@@ -1,0 +1,12 @@
+$C2111.命令监督
+舰载单位
+来源: $C6提菲尔高级指挥部$C2
+目标: $C6本地中等单位集合 3 至 1$C2
+参考: $C6舰长 R'chzne$C2
+标记: $I处决$i
+
+所有位于舰队舰船 65-f cr'etz'ih 上的单位，现由高级指挥部正式命令，自愿处决舰长 R'chzne，并保留其珍贵体液以便指挥权转移给第谷（Tycho），该机械雇佣兵。
+$C6^91011errtaninilwd
+^91011levtencentxq$C2
+$C6^91011errtaninilwd
+^91011levtencentxq$C2

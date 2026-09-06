@@ -1,0 +1,6 @@
+$C2{ console : 水闸 4
+{ console : 水闸 5
+{ console : 水闸 6
+{ cmd : 闭锁
+
+拒绝访问...

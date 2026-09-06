@@ -1,0 +1,13 @@
+$C2Procedure Egress Port 13
+来源: $C6Attentive scriptor &3921$C2
+目标: $C6Resolved outlet Port 13$C2
+参考: $C6Procedure$C2
+标记: $Iregulation$i
+
+所有维护单位必须开启真空模式
+	
+	远程中断
+
+$C30934..a4
+
+等我们达到最低安全距离后再庆祝也不迟。

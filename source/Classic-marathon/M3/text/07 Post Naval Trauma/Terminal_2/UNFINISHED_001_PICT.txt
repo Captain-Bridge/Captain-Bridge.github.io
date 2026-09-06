@@ -1,0 +1,16 @@
+$C2全舰警报
+来源: $C6舰载指挥$C2
+目标: $C6未解终端C2
+参考: $C6全舰警报$C2
+标记: $I广播$i
+
+在 2a 层、第 3thrax 区域发现身份不明的$I{?非腺控?}$i入侵者。
+$C6^31882stkevctnngld
+^31882ybordeclqkng$C2
+所有集成单元命令立即驱逐入侵者。
+$C6^31882stkevctnngld
+^31882ybordeclqkng$C2
+第8 $I{追击?}$i 小组命令在上述区域内扩散部署。
+$C6^31882stkevctnngld
+^31882ybordeclqkng$C2
+执法单元$I{?脱控?}$i, 警告所有集成单元需 $I{依法处理?}$i 予以配合。

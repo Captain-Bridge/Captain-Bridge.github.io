@@ -1,0 +1,16 @@
+$C2集成补给单元
+来源: $C6维护服务指挥部$C2
+目标: $C6集成补给单元$C2
+参考: $C6周期结束补给$C2
+标记: $I维护$i
+
+
+装甲单元 4B 按计划进行维护与补给轮换。
+$C6^73312whlpshgdwntrn
+^73312dtdrpwpdsdmy$C2
+向军需官申请完整配额的Warpedos。
+$C6^73312whlpshgdwntrn
+^73312dtdrpwpdsdmy$C2
+根据维护指令 F2.ezz 重新服务。
+$C6^73312whlpshgdwntrn
+^73312dtdrpwpdsdmy$C2
