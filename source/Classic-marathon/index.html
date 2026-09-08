@@ -1432,7 +1432,6 @@ layout: false
 
         if (token.type === 'newline') {
           target.appendChild(document.createTextNode('\n'));
-          state.color = AO_COLORS[defaultColor] || defaultColor || AO_COLORS.$C0;
           activeSpan = null;
           activeClassName = '';
           return;
