@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T00:27:23.743Z",
+  "generatedAt": "2026-09-16T02:16:35.684Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,11 +7,11 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 62,
-  "count": 62,
+  "total": 63,
+  "count": 63,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 52,
+    "bilingualCount": 53,
     "englishOnlyCount": 10,
     "chineseOnlyCount": 0,
     "englishOnly": [
@@ -84,6 +84,109 @@
     "generatedCount": 10
   },
   "items": [
+    {
+      "id": "blt272296c3bc55fd16",
+      "slug": "marathon_update_1_1_9_1",
+      "pathSlug": "marathon-update-1-1-9-1",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-09-15T15:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_9_1",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9_1",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_9_1"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-9-1/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 26,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.9.1",
+          "subtitle": "The one about an Overflow issue",
+          "bodyHtml": "<h2>General</h2><ul><li>Fixed an issue in the Vault where holding the Sell button on selected items while Overflow was not open would sell all items in Overflow.</li></ul>",
+          "bodyText": "General Fixed an issue in the Vault where holding the Sell button on selected items while Overflow was not open would sell all items in Overflow.",
+          "excerpt": "The one about an Overflow issue"
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.9.1",
+          "subtitle": "关于溢出问题",
+          "bodyHtml": "<h2>综合</h2><ul><li>修复了保险库中，当溢出未打开时，按住选定物品上的出售按钮会出售溢出中的所有物品。</li></ul>",
+          "bodyText": "综合 修复了保险库中，当溢出未打开时，按住选定物品上的出售按钮会出售溢出中的所有物品。",
+          "excerpt": "关于溢出问题",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt47f9b19a717fba20",
       "slug": "nightfallrefreshandsymbiosis",
