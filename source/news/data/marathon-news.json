@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T17:32:14.654Z",
+  "generatedAt": "2026-09-24T17:41:59.125Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -85,8 +85,8 @@
     "chineseOnly": []
   },
   "translation": {
-    "attempted": true,
-    "available": true,
+    "attempted": false,
+    "available": false,
     "generatedCount": 11
   },
   "items": [
