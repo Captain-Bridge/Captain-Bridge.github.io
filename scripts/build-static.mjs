@@ -5,6 +5,7 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const sourceDir = path.join(root, 'source');
 const publicDir = path.join(root, 'public');
 const siteUrl = 'https://marathon.uesc.top';
+const gaMeasurementId = 'G-NX8R0D0494';
 await fs.rm(publicDir, { recursive: true, force: true });
 await fs.cp(sourceDir, publicDir, { recursive: true });
 const htmlFiles = [];
@@ -21,6 +22,33 @@ async function stripFrontMatter(dir) {
   }
 }
 await stripFrontMatter(publicDir);
+
+// Add the site-wide GA4 tag to every deployed HTML page. Keeping this in the
+// build step means source pages remain readable while all routes get tracking.
+async function injectGoogleAnalytics(dir) {
+  const snippet = `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${gaMeasurementId}');
+</script>`;
+  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      await injectGoogleAnalytics(full);
+      continue;
+    }
+    if (!entry.name.toLowerCase().endsWith('.html')) continue;
+    const text = await fs.readFile(full, 'utf8');
+    if (text.includes(`googletagmanager.com/gtag/js?id=${gaMeasurementId}`)) continue;
+    const tracked = text.includes('</head>') ? text.replace('</head>', `${snippet}\n</head>`) : `${snippet}\n${text}`;
+    await fs.writeFile(full, tracked, 'utf8');
+  }
+}
+await injectGoogleAnalytics(publicDir);
+
 // SEO 预渲染：把 JS 渲染模块（新闻/百科/阵营/地图）的内容以 <noscript> 注入，供爬虫抓取。
 await (await import('./prerender.mjs')).prerender(root);
 // Background videos are decorative and must not compete with document content on mobile.
