@@ -1,6 +1,6 @@
 // SEO 构建时后处理：两件事
 //   1. 把 JS 渲染模块的内容以 <noscript> 静态快照注入产物 HTML，让不执行 JS 的爬虫可读；
-//   2. 为新闻文章页补全 SEO meta（title/description/canonical/OG/Twitter/JSON-LD）。
+//   2. 为所有入口页补全 SEO meta（title/description/canonical/OG/Twitter/JSON-LD）。
 //
 // 设计原则：
 //   1. 单一数据源 —— 只读取 source/ 下已有的 json/md，不复制、不硬编码内容。
@@ -13,6 +13,8 @@
 //   - /marathon-lore/   百科（6 模块 × 全部条目的标题 + 摘要 + 标签）
 //   - /factions/        阵营（6 阵营的升级节点说明）
 //   - /map/{map}/       互动地图（5 张地图的 POI 名称与描述）
+//   - /store/           商店目录摘要
+//   - /Classic-marathon/ 经典终端目录摘要
 //   - /news/articles/*/ 新闻详情页（SEO meta 增强）
 
 import fs from 'node:fs/promises';
@@ -82,6 +84,20 @@ function fmtDate(iso) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return String(iso).slice(0, 10);
   return d.toISOString().slice(0, 10);
+}
+
+function plainText(value) {
+  return String(value ?? '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function summarize(...values) {
+  const candidates = values.map(plainText).filter(Boolean);
+  const preferred = candidates.find((value) => value.length >= 80) || candidates[0] || '';
+  return preferred.slice(0, 155);
 }
 
 // ---------------------------------------------------------------
@@ -223,7 +239,54 @@ async function buildMap(sourceDir, mapId) {
 }
 
 // ---------------------------------------------------------------
-// 5. 新闻文章页 SEO meta 增强
+// 5. 商店目录 /store/
+// ---------------------------------------------------------------
+async function buildStore(sourceDir) {
+  const data = await readJson(path.join(sourceDir, 'store/content/modules/store.json'));
+  if (!data) return '';
+  const items = Array.isArray(data.items) ? data.items : [];
+  const bundles = Array.isArray(data.bundles) ? data.bundles : [];
+  const itemRows = items.map((item) => {
+    const meta = [item.category, item.price ? `价格 ${item.price}` : '组合包限定'].filter(Boolean).join(' · ');
+    return `  <li><strong>${esc(item.title || item.id)}</strong>${meta ? ` — ${esc(meta)}` : ''}</li>`;
+  }).join('\n');
+  const bundleRows = bundles.map((bundle) => {
+    const meta = [bundle.category, bundle.price ? `价格 ${bundle.price}` : ''].filter(Boolean).join(' · ');
+    return `  <li><strong>${esc(bundle.title || bundle.id)}</strong>${meta ? ` — ${esc(meta)}` : ''}</li>`;
+  }).join('\n');
+  return [
+    `<h2>商店目录（${items.length} 件商品，${bundles.length} 个组合包）</h2>`,
+    `<p>${esc(data.summary || '浏览《失落星船：马拉松》的商品、武器风格、外壳与组合包。')}</p>`,
+    items.length ? `<section><h3>商品</h3><ul>\n${itemRows}\n</ul></section>` : '',
+    bundles.length ? `<section><h3>组合包</h3><ul>\n${bundleRows}\n</ul></section>` : '',
+  ].filter(Boolean).join('\n');
+}
+
+// ---------------------------------------------------------------
+// 6. 经典 Marathon 终端目录 /Classic-marathon/
+// ---------------------------------------------------------------
+async function buildClassic(sourceDir) {
+  const editions = [
+    ['M1', 'Marathon 1'],
+    ['M2', 'Marathon 2: Durandal'],
+    ['M3', 'Marathon Infinity'],
+  ];
+  const sections = [];
+  for (const [id, title] of editions) {
+    const data = await readJson(path.join(sourceDir, 'Classic-marathon', id, 'terminals.json'));
+    const levels = Array.isArray(data?.levels) ? data.levels : [];
+    const terminalCount = levels.reduce((sum, level) => sum + (Array.isArray(level.terminals) ? level.terminals.length : 0), 0);
+    const rows = levels.map((level) => {
+      const count = Array.isArray(level.terminals) ? level.terminals.length : 0;
+      return `  <li>${esc(level.name || level.id)}（${count} 个终端）</li>`;
+    }).join('\n');
+    sections.push(`<section><h3>${esc(title)}</h3><p>收录 ${terminalCount} 个终端。</p><ul>\n${rows}\n</ul></section>`);
+  }
+  return `<h2>经典 Marathon 终端中文资料</h2>\n<p>浏览原始三部曲的章节、终端文本和图像记录。</p>\n${sections.join('\n')}`;
+}
+
+// ---------------------------------------------------------------
+// 7. 新闻文章页 SEO meta 增强
 // ---------------------------------------------------------------
 async function buildNewsIndex(sourceDir) {
   const data = await readJson(path.join(sourceDir, 'news/data/marathon-news.json'));
@@ -239,15 +302,125 @@ function buildArticleMeta(item) {
   const zh = item?.content?.zh || {};
   const en = item?.content?.en || {};
   const title = zh.title || en.title || item?.slug || '';
-  const excerpt = zh.excerpt || zh.subtitle || zh.bodyText || en.excerpt || en.subtitle || en.bodyText || '';
-  const desc = String(excerpt).replace(/\s+/g, ' ').trim().slice(0, 155);
+  const desc = summarize(zh.excerpt, zh.bodyText, zh.subtitle, en.excerpt, en.bodyText, en.subtitle);
   const url = SITE_URL + (item?.localPath || '');
   const rawImage = item?.images?.primary?.url || '';
-  const image = /^https?:\/\//i.test(rawImage) ? rawImage : `${SITE_URL}/images/share-card.png`;
+  const image = /^https?:\/\//i.test(rawImage) ? rawImage : `${SITE_URL}/images/share-card.webp`;
   const publishedAt = item?.publishedAt || '';
   const author = item?.author || 'Bungie';
   const pageTitle = title ? `${title} - ${SITE_SHORT}` : SITE_NAME;
   return { pageTitle, title, desc, url, image, publishedAt, author };
+}
+
+const LANDING_SEO = {
+  '/': {
+    title: '《失落星船：马拉松》中文站 - Escape Will Make Me God',
+    description: '《失落星船：马拉松》中文资料站，收录新闻、百科、阵营、互动地图、商店与经典 Marathon 终端。',
+    type: 'WebSite',
+  },
+  '/news/': { title: '最新消息 - 《失落星船：马拉松》中文站', description: '按时间整理 Bungie Marathon 官方新闻、赛季更新、补丁说明与开发者消息。', type: 'CollectionPage' },
+  '/marathon-lore/': { title: '百科 - 《失落星船：马拉松》中文站', description: '《失落星船：马拉松》中文百科，收录世界观、任务、收藏品、装备与赛季资料。', type: 'CollectionPage' },
+  '/factions/': { title: '阵营 - 《失落星船：马拉松》中文站', description: '《失落星船：马拉松》阵营资料，查看各阵营升级节点、解锁奖励与所需材料。', type: 'CollectionPage' },
+  '/store/': { title: '商店 - 《失落星船：马拉松》中文站', description: '《失落星船：马拉松》商店目录，查看组合包、武器风格、外壳与档案收藏品。', type: 'CollectionPage' },
+  '/about/': { title: '社区内容 - 《失落星船：马拉松》中文站', description: '了解《失落星船：马拉松》中文站、官方入口、站点作者与推荐社区资源。', type: 'CollectionPage' },
+  '/Classic-marathon/': { title: '经典 Marathon 终端中文资料 - 《失落星船：马拉松》中文站', description: '浏览 Marathon 1、Marathon 2 与 Marathon Infinity 的章节、终端文本和图像记录。', type: 'CollectionPage' },
+  '/map/': { title: '互动地图入口 - 《失落星船：马拉松》中文站', description: '互动地图入口，默认打开外围区域地图。', type: 'WebPage', noindex: true, canonical: '/map/perimeter/' },
+};
+
+function routeFromPublicFile(publicDir, file) {
+  const rel = path.relative(publicDir, file).replaceAll(path.sep, '/');
+  return rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
+}
+
+function readTag(html, pattern) {
+  return html.match(pattern)?.[1]?.trim() || '';
+}
+
+function pageSeoFor(route, html) {
+  const explicit = LANDING_SEO[route] || {};
+  const title = explicit.title || readTag(html, /<title[^>]*>([\s\S]*?)<\/title>/i) || '《失落星船：马拉松》中文站';
+  const description = explicit.description || readTag(html, /<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i) || `${title}，马拉松中文资料与社区内容。`;
+  return {
+    title,
+    description,
+    type: explicit.type || 'CollectionPage',
+    noindex: Boolean(explicit.noindex),
+    canonical: explicit.canonical || route,
+  };
+}
+
+function buildLandingHeadBlock(meta, url) {
+  const absoluteUrl = SITE_URL + (meta.canonical || url);
+  const jsonLd = meta.type === 'WebSite'
+    ? {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: meta.title,
+      description: meta.description,
+      url: absoluteUrl,
+      inLanguage: 'zh-CN',
+    }
+    : {
+      '@context': 'https://schema.org',
+      '@type': meta.type,
+      name: meta.title,
+      description: meta.description,
+      url: absoluteUrl,
+      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL + '/' },
+      inLanguage: 'zh-CN',
+    };
+  return [
+    `<link rel="canonical" href="${esc(absoluteUrl)}">`,
+    `<meta property="og:type" content="website">`,
+    `<meta property="og:locale" content="zh_CN">`,
+    `<meta property="og:site_name" content="${esc(SITE_NAME)}">`,
+    `<meta property="og:title" content="${esc(meta.title)}">`,
+    `<meta property="og:description" content="${esc(meta.description)}">`,
+    `<meta property="og:url" content="${esc(absoluteUrl)}">`,
+    `<meta property="og:image" content="${SITE_URL}/images/share-card.webp">`,
+    `<meta property="og:image:width" content="1200">`,
+    `<meta property="og:image:height" content="630">`,
+    `<meta property="og:image:alt" content="${esc(SITE_NAME)}">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${esc(meta.title)}">`,
+    `<meta name="twitter:description" content="${esc(meta.description)}">`,
+    `<meta name="twitter:image" content="${SITE_URL}/images/share-card.webp">`,
+    meta.noindex ? '<meta name="robots" content="noindex,follow">' : '',
+    `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>`,
+  ].filter(Boolean).join('\n');
+}
+
+async function enhanceLandingPages(publicDir) {
+  async function walk(dir) {
+    for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+      const file = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await walk(file);
+        continue;
+      }
+      if (!entry.name.toLowerCase().endsWith('.html')) continue;
+      const route = routeFromPublicFile(publicDir, file);
+      if (route.startsWith('/news/articles/')) continue;
+      let html = await fs.readFile(file, 'utf8');
+      const meta = pageSeoFor(route, html);
+      html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${esc(meta.title)}</title>`);
+      if (/<meta\s+name=["']description["']/i.test(html)) {
+        html = html.replace(/<meta\s+name=["']description["']\s+content=["'][^"']*["']/i, `<meta name="description" content="${esc(meta.description)}"`);
+      } else {
+        html = html.replace('</head>', `<meta name="description" content="${esc(meta.description)}">\n</head>`);
+      }
+      html = html
+        .replace(/\s*<link\s+rel=["']canonical["'][^>]*>/gi, '')
+        .replace(/\s*<meta\s+property=["']og:[^>]*>/gi, '')
+        .replace(/\s*<meta\s+name=["']twitter:[^>]*>/gi, '')
+        .replace(/\s*<meta\s+name=["']robots["'][^>]*>/gi, '')
+        .replace(new RegExp(`${SEO_META_START.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\s\\S]*?${SEO_META_END.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*`, 'g'), '');
+      const block = `${SEO_META_START}\n${buildLandingHeadBlock(meta, route)}\n${SEO_META_END}`;
+      html = html.replace('</head>', `${block}\n</head>`);
+      await fs.writeFile(file, html, 'utf8');
+    }
+  }
+  await walk(publicDir);
 }
 
 function buildHeadBlock(meta) {
@@ -349,11 +522,14 @@ export async function prerender(root) {
       })()
     );
   }
+  // 5. 商店和经典终端目录
+  tasks.push((async () => inject(path.join(publicDir, 'store/index.html'), await buildStore(sourceDir)))());
+  tasks.push((async () => inject(path.join(publicDir, 'Classic-marathon/index.html'), await buildClassic(sourceDir)))());
 
   const results = await Promise.all(tasks);
   const injected = results.filter(Boolean).length;
 
-  // 5. 新闻文章页 meta 增强
+  // 6. 新闻文章页 meta 增强
   let articleCount = 0;
   try {
     const newsIndex = await buildNewsIndex(sourceDir);
@@ -373,7 +549,10 @@ export async function prerender(root) {
     articleCount = 0;
   }
 
-  console.log(`[prerender] 注入 noscript 静态快照：${injected}/${results.length} 个页面；增强文章 meta：${articleCount} 篇`);
+  // 7. 所有非文章入口页统一元数据。
+  await enhanceLandingPages(publicDir);
+
+  console.log(`[prerender] 注入 noscript 静态快照：${injected}/${results.length} 个页面；增强文章 meta：${articleCount} 篇；入口页元数据已统一`);
   return injected;
 }
 

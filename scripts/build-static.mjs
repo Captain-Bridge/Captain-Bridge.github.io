@@ -23,6 +23,22 @@ async function stripFrontMatter(dir) {
 await stripFrontMatter(publicDir);
 // SEO 预渲染：把 JS 渲染模块（新闻/百科/阵营/地图）的内容以 <noscript> 注入，供爬虫抓取。
 await (await import('./prerender.mjs')).prerender(root);
+// Background videos are decorative and must not compete with document content on mobile.
+async function optimizeBackgroundVideos(dir) {
+  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) await optimizeBackgroundVideos(full);
+    else if (entry.name.toLowerCase().endsWith('.html')) {
+      const text = await fs.readFile(full, 'utf8');
+      const optimized = text.replace(
+        /(<video\b[^>]*class=["'][^"']*(?:page-bg-video|viewport-bg-video)[^"']*["'][^>]*)\s+preload=["']metadata["']/gi,
+        '$1 preload="none"'
+      );
+      if (optimized !== text) await fs.writeFile(full, optimized, 'utf8');
+    }
+  }
+}
+await optimizeBackgroundVideos(publicDir);
 async function walk(dir) { for (const entry of await fs.readdir(dir, { withFileTypes: true })) { const full = path.join(dir, entry.name); if (entry.isDirectory()) await walk(full); else if (entry.name.toLowerCase().endsWith('.html')) htmlFiles.push(path.relative(publicDir, full)); } }
 await walk(publicDir);
 
@@ -41,6 +57,7 @@ const urls = [];
 for (const file of htmlFiles) {
   if (file.includes(`${path.sep}404.html`)) continue;
   const rel = file.replaceAll(path.sep, '/');
+  if (rel === 'map/index.html') continue;
   const url = rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
   let lastmod = newsLastmod.get(url);
   if (!lastmod) {

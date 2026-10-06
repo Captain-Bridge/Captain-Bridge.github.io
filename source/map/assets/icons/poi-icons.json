@@ -251,7 +251,7 @@
     {
       "id": "green_card",
       "label": "访问通行码",
-      "path": "/map/assets/icons/green_card.png",
+      "path": "/map/assets/icons/green_card.webp",
       "accentColor": "#8089ef",
       "order": 310,
       "iconSize": 120
@@ -259,7 +259,7 @@
     {
       "id": "yellow_card",
       "label": "物资通行码",
-      "path": "/map/assets/icons/yellow_card.png",
+      "path": "/map/assets/icons/yellow_card.webp",
       "accentColor": "#8089ef",
       "order": 320,
       "iconSize": 120
@@ -267,7 +267,7 @@
     {
       "id": "red_card",
       "label": "万用通行码",
-      "path": "/map/assets/icons/red_card.png",
+      "path": "/map/assets/icons/red_card.webp",
       "accentColor": "#8089ef",
       "order": 330,
       "iconSize": 120
