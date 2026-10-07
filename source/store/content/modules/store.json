@@ -77,6 +77,197 @@
       "acquisition": "bundle-only"
     },
     {
+      "id": "X",
+      "title": "X",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/store/content/docs/store/bundles/Holy_talisman_Assassin_bundle/X_icon.webp",
+      "detailImage": "/store/content/docs/store/bundles/Holy_talisman_Assassin_bundle/X.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Holy_talisman_Assassin_bundle/X.md",
+      "acquisition": "bundle-only"
+    },
+    {
+      "id": "X_ray_eye",
+      "title": "X光眼",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/store/content/docs/store/bundles/ENDOFLEX_Thief_bundle/X_ray_eye_icon.webp",
+      "detailImage": "/store/content/docs/store/bundles/ENDOFLEX_Thief_bundle/X_ray_eye.webp",
+      "bodyFile": "/store/content/docs/store/bundles/ENDOFLEX_Thief_bundle/X_ray_eye.md",
+      "acquisition": "bundle-only"
+    },
+    {
+      "id": "Fuchen_flight",
+      "title": "富克伦飞行",
+      "category": "武器贴纸",
+      "imageFit": "contain",
+      "iconImage": "/store/content/docs/store/bundles/Fuchen_D01_Destroyer_bundle/Fuchen_flight_icon.webp",
+      "detailImage": "/store/content/docs/store/bundles/Fuchen_D01_Destroyer_bundle/Fuchen_flight.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Fuchen_D01_Destroyer_bundle/Fuchen_flight.md",
+      "acquisition": "bundle-only"
+    },
+    {
+      "id": "Alatavectus_Triage",
+      "title": "阿拉塔 · 维克图斯",
+      "price": "1,100",
+      "category": "救援疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction":"vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Alatavectus_Triage_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Alatavectus_Triage_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Alatavectus_Triage.webp",
+      "bodyFile": "/store/content/docs/store/items/Alatavectus_Triage.md"
+    },
+    {
+      "id": "Alatavectus_Double_Tap",
+      "title": "阿拉塔 · 维克图斯",
+      "price": "400",
+      "category": "双击重型战斗步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction":"horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Alatavectus_Double_Tap_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Alatavectus_Double_Tap_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Alatavectus_Double_Tap.webp",
+      "bodyFile": "/store/content/docs/store/items/Alatavectus_Double_Tap.md"
+    },
+    {
+      "id": "Ebony_shroud",
+      "title": "乌木裹尸布",
+      "price": "100",
+      "category": "档案背景",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Ebony_shroud_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Ebony_shroud_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Ebony_shroud.webp",
+      "bodyFile": "/store/content/docs/store/items/Ebony_shroud.md"
+    },
+    {
+      "id": "Alatavectus_Repeater",
+      "title": "阿拉塔 · 维克图斯",
+      "price": "400",
+      "category": "连击者重型精密步枪武器风格",
+      "layout": {
+        "size": 2,
+        "direction":"horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Alatavectus_Repeater_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Alatavectus_Repeater_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Alatavectus_Repeater.webp",
+      "bodyFile": "/store/content/docs/store/items/Alatavectus_Repeater.md"
+    },
+    {
+      "id": "Blade_of_Fusion",
+      "title": "合体之刃",
+      "price": "100",
+      "category": "档案徽标",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Blade_of_Fusion_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Blade_of_Fusion_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Blade_of_Fusion.webp",
+      "bodyFile": "/store/content/docs/store/items/Blade_of_Fusion.md"
+    },
+    {
+      "id": "ENDOFLEX_Thief",
+      "title": "ENDOFLEX",
+      "price": "1,100",
+      "category": "盗贼疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction":"vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/ENDOFLEX_Thief_cover.webp",
+      "iconImage": "/store/content/docs/store/items/ENDOFLEX_Thief_icon.webp",
+      "detailImage": "/store/content/docs/store/items/ENDOFLEX_Thief.webp",
+      "bodyFile": "/store/content/docs/store/items/ENDOFLEX_Thief.md"
+    },
+    {
+      "id": "ENDOWEAVE_V66",
+      "title": "ENDOWEAVE",
+      "price": "400",
+      "category": "V66瞭望武器风格",
+      "layout": {
+        "size": 2,
+        "direction":"horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/ENDOWEAVE_V66_cover.webp",
+      "iconImage": "/store/content/docs/store/items/ENDOWEAVE_V66_icon.webp",
+      "detailImage": "/store/content/docs/store/items/ENDOWEAVE_V66.webp",
+      "bodyFile": "/store/content/docs/store/items/ENDOWEAVE_V66.md"
+    },
+    {
+      "id": "ENDOWEAVE_pendant",
+      "title": "ENDOWEAVE",
+      "price": "400",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/ENDOWEAVE_pendant_cover.webp",
+      "iconImage": "/store/content/docs/store/items/ENDOWEAVE_pendant_icon.webp",
+      "detailImage": "/store/content/docs/store/items/ENDOWEAVE_pendant.webp",
+      "bodyFile": "/store/content/docs/store/items/ENDOWEAVE_pendant.md"
+    },
+    {
+      "id": "Fuchen_D01_Destroyer",
+      "title": "富克伦-D01",
+      "price": "1,100",
+      "category": "毁灭者疾行者外壳",
+      "layout": {
+        "size": 2,
+        "direction":"vertical"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Fuchen_D01_Destroyer_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Fuchen_D01_Destroyer_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Fuchen_D01_Destroyer.webp",
+      "bodyFile": "/store/content/docs/store/items/Fuchen_D01_Destroyer.md"
+    },
+    {
+      "id": "Advanced_Combat_Artillery",
+      "title": "高级战斗炮兵",
+      "price": "600",
+      "category": "ARES电磁炮武器风格",
+      "layout": {
+        "size": 2,
+        "direction":"horizontal"
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Advanced_Combat_Artillery_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Advanced_Combat_Artillery_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Advanced_Combat_Artillery.webp",
+      "bodyFile": "/store/content/docs/store/items/Advanced_Combat_Artillery.md"
+    },
+    {
+      "id": "Security_label",
+      "title": "安全标签",
+      "price": "200",
+      "category": "武器挂件",
+      "layout": {
+        "size": 1
+      },
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/items/Security_label_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Security_label_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Security_label.webp",
+      "bodyFile": "/store/content/docs/store/items/Security_label.md"
+    },
+    {
       "id": "white_rabbit_vandal",
       "title": "白兔",
       "price": "1,500",
@@ -704,20 +895,6 @@
       "bodyFile": "/store/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun.md"
     },
     {
-      "id": "The_Offspring_of_the_Sixth_Red_Sun",
-      "title": "第6红日之裔",
-      "price": "100",
-      "category": "档案背景",
-      "layout": {
-        "size": 1
-      },
-      "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun_cover.webp",
-      "iconImage": "/store/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun_icon.webp",
-      "detailImage": "/store/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun.webp",
-      "bodyFile": "/store/content/docs/store/items/The_Offspring_of_the_Sixth_Red_Sun.md"
-    },
-    {
       "id": "Radiant_brilliance",
       "title": "盛放光辉",
       "price": "100",
@@ -1258,7 +1435,7 @@
       "bodyFile": "/store/content/docs/store/items/Retro_Remix_copperhead.md"
     },
     {
-      "id": "Alatavectus_demolition_assassin",
+      "id": "Alatavectus_assassin",
       "title": "阿拉塔 · 维克图斯",
       "price": "1,500",
       "category": "刺客疾行者外壳",
@@ -1267,10 +1444,10 @@
         "direction": "vertical"
       },
       "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/items/Alatavectus_demolition_assassin_cover.webp",
-      "iconImage": "/store/content/docs/store/items/Alatavectus_demolition_assassin_icon.webp",
-      "detailImage": "/store/content/docs/store/items/Alatavectus_demolition_assassin.webp",
-      "bodyFile": "/store/content/docs/store/items/Alatavectus_demolition_assassin.md"
+      "coverImage": "/store/content/docs/store/items/Alatavectus_assassin_cover.webp",
+      "iconImage": "/store/content/docs/store/items/Alatavectus_assassin_icon.webp",
+      "detailImage": "/store/content/docs/store/items/Alatavectus_assassin.webp",
+      "bodyFile": "/store/content/docs/store/items/Alatavectus_assassin.md"
     },
     {
       "id": "Vectus_Talisman",
@@ -2274,39 +2451,70 @@
   ],
   "bundles": [
     {
-      "id": "white_rabbit_vandal_bundle",
-      "title": "白兔[暴徒]",
-      "category": "暴徒背包",
-      "price": "1,600",
-      "featured": true,
+      "id": "Alatavectus_Triage_bundle",
+      "title": "阿拉塔 · 维克图斯[救援]",
+      "category": "救援背包",
+      "price": "1,500",
+      "featured": false,
       "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/white_rabbit_vandal_bundle/white_rabbit_vandal_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_vandal_bundle/white_rabbit_vandal_bundle.md",
+      "coverImage": "/store/content/docs/store/bundles/Alatavectus_Triage_bundle/Alatavectus_Triage_bundle.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Alatavectus_Triage_bundle/Alatavectus_Triage_bundle.md",
       "itemIds": [
-        "white_rabbit_vandal",
-        "Playful_Bunny_WSTR",
-        "evil_thought",
-        "lucky_step",     
-        "Nameless_Rabbit",
-        "Playful_Bunny_emblem"
-        
+        "Alatavectus_Triage",
+        "Alatavectus_Double_Tap",
+        "Alatavectus_Repeater",
+        "Ebony_shroud",
+        "Blade_of_Fusion" 
       ]
     },
     {
-      "id": "white_rabbit_weapon_bundle",
-      "title": "白兔",
-      "category": "武器背包",
-      "price": "1,800",
+      "id": "ENDOFLEX_Thief_bundle",
+      "title": "ENDOFLEX[盗贼]",
+      "category": "盗贼背包",
+      "price": "1,400",
       "featured": false,
       "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_weapon_bundle/white_rabbit_weapon_bundle.md",
+      "coverImage": "/store/content/docs/store/bundles/ENDOFLEX_Thief_bundle/ENDOFLEX_Thief_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/ENDOFLEX_Thief_bundle/ENDOFLEX_Thief_bundle.md",
       "itemIds": [
-        "Playful_Bunny_iron_scout_rifle",
-        "Playful_Bunny_repeater",
-        "Playful_Bunny_carry_V99",
-        "Playful_Bunny_far_range",
-        "Playful_Bunny_boundary"    
+        "ENDOFLEX_Thief",
+        "ENDOWEAVE_V66",
+        "ENDOWEAVE_pendant",
+        "X_ray_eye"
+      ]
+    },
+    {
+      "id": "Fuchen_D01_Destroyer_bundle",
+      "title": "富克伦-D01",
+      "category": "毁灭者背包",
+      "price": "1,500",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/bundles/Fuchen_D01_Destroyer_bundle/Fuchen_D01_Destroyer_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Fuchen_D01_Destroyer_bundle/Fuchen_D01_Destroyer_bundle.md",
+      "itemIds": [
+        "Fuchen_D01_Destroyer",
+        "Advanced_Combat_Artillery",
+        "Security_label",
+        "Fuchen_flight"
+      ]
+    },
+    {
+      "id": "white_rabbit_recon_bundle",
+      "title": "白兔[侦察]",
+      "category": "侦察背包",
+      "price": "1,600",
+      "featured": false,
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/bundles/white_rabbit_recon_bundle/white_rabbit_recon_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_recon_bundle/white_rabbit_recon_bundle.md",
+      "itemIds": [
+        "white_rabbit_recon",
+        "Crazy_Rabbit",
+        "Innocence",
+        "white_rabbit_recon_bundle_Unrestrained",
+        "Battlefield_Mastery",
+        "winking_eye"      
       ]
     },
     {
@@ -2328,76 +2536,22 @@
       ]
     },
     {
-      "id": "Retro_Remix_weapon_bundle",
-      "title": "复古_混音",
-      "category": "武器背包",
-      "price": "1,800",
-      "featured": false,
-      "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/Retro_Remix_weapon_bundle/Retro_Remix_weapon_bundle.md",
-      "itemIds": [
-        "Retro_Remix_V00",
-        "Retro_Remix_V85",
-        "Retro_Remix_WSTR",
-        "Retro_Remix_2442",
-        "Retro_Remix_copperhead"
-      ]
-    },
-    {
-      "id": "yokai_weapon_bundle",
-      "title": "妖怪之械",
-      "category": "武器背包",
+      "id": "Holy_talisman_Assassin_bundle",
+      "title": "圣符",
+      "category": "刺客背包",
       "price": "1,900",
       "featured": false,
       "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/yokai_weapon_bundle/yokai_weapon_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/yokai_weapon_bundle/yokai_weapon_bundle.md",
+      "coverImage": "/store/content/docs/store/bundles/Holy_talisman_Assassin_bundle/Holy_talisman_Assassin_bundle_cover.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Holy_talisman_Assassin_bundle/Holy_talisman_Assassin_bundle.md",
       "itemIds": [
-        "The_will_of_yokai",
-        "The_pain_of_yokai",
-        "The_teeth_of_yokai",
-        "The_paw_of_yokai",
-        "The_rage_of_yokai"
-        
-      ]
-    },
-    {
-      "id": "fire_car_yokai_bundle",
-      "title": "火之车妖怪",
-      "category": "盗贼背包",
-      "price": "1,900",
-      "featured": false,
-      "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/fire_car_yokai_bundle/fire_car_yokai_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/fire_car_yokai_bundle/fire_car_yokai_bundle.md",
-      "itemIds": [
-        "The_yokai_of_fire_and_car",
-        "The_tart_of_yokai",
-        "hell_fire",
-        "fire_car_yokai_bundle_flower_of_he",
-        "Fire_car_yokai_clan",
-        "Ghostly_smile"        
-      ]
-    },
-    {
-      "id": "white_rabbit_recon_bundle",
-      "title": "白兔[侦察]",
-      "category": "侦察背包",
-      "price": "1,600",
-      "featured": false,
-      "imageFit": "contain",
-      "coverImage": "/store/content/docs/store/bundles/white_rabbit_recon_bundle/white_rabbit_recon_bundle_cover.webp",
-      "bodyFile": "/store/content/docs/store/bundles/white_rabbit_recon_bundle/white_rabbit_recon_bundle.md",
-      "itemIds": [
-        "white_rabbit_recon",
-        "Crazy_Rabbit",
-        "Innocence",
-        "white_rabbit_recon_bundle_Unrestrained",
-        "Battlefield_Mastery",
-        "winking_eye"      
+        "Holy_talisman_Assassin",
+        "Holy_talisman_extension_ARES",
+        "Starlight_Jar",
+        "X",
+        "The_Offspring_of_the_Sixth_Red_Sun",
+        "Radiant_brilliance"
       ]
     }
   ]
 }
-

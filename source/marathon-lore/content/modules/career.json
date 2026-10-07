@@ -174,7 +174,7 @@
         {
           "id": "achievements",
           "title": "里程碑",
-          "count": "3 / 3",
+          "count": "4 / 4",
           "icon": "/marathon-lore/assets/images/icons/season_rank.svg",
           "children": [
             {
@@ -227,6 +227,23 @@
               ],
               "bodyFile": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手II.md",
               "image": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手II.webp"
+            },
+            {
+              "id": "nightfall-accomplisher",
+              "title": "暮夜达成者",
+              "count": "已完成",
+              "icon": "badge",
+              "iconImage": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手III_icon.webp",
+              "variant": "b",
+              "accent": "blue",
+              "summary": "在第二赛季达到赛季等级100。",
+              "meta": [
+                "生涯",
+                "赛季等级",
+                "里程碑"
+              ],
+              "bodyFile": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手III.md",
+              "image": "/marathon-lore/content/docs/career/season-rank/achievement/百年老手III.webp"
             }
           ]
         },

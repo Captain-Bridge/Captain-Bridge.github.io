@@ -379,10 +379,6 @@ function normalizeStoreCategory(category) {
     });
   }
 
-  if (bundles.length && !featuredBundleId) {
-    bundles[0] = { ...bundles[0], featured: true };
-  }
-
   bundles.sort((a, b) => Number(b.featured) - Number(a.featured));
   return { ...category, items, bundles };
 }
@@ -396,7 +392,8 @@ async function ensureCategoryLoaded(categoryId) {
     return categoryModuleCache.get(categoryId);
   }
 
-  const request = fetch(category.module)
+    const moduleUrl = `${category.module}${category.module.includes('?') ? '&' : '?'}v=20261007`;
+    const request = fetch(moduleUrl, { cache: 'no-store' })
     .then(response => {
       if (!response.ok) {
         throw new Error(`Failed to load category module ${category.module}: ${response.status}`);
@@ -3201,7 +3198,7 @@ window.addEventListener('orientationchange', () => {
 });
 
 async function bootstrap() {
-  const response = await fetch('/store/content/index.json');
+  const response = await fetch('/store/content/index.json?v=20261007', { cache: 'no-store' });
   if (!response.ok) {
     throw new Error('Failed to load lore index.json');
   }
