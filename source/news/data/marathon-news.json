@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T11:55:22.303Z",
+  "generatedAt": "2026-10-10T11:40:22.723Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,11 +7,11 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 67,
-  "count": 67,
+  "total": 68,
+  "count": 68,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 57,
+    "bilingualCount": 58,
     "englishOnlyCount": 10,
     "chineseOnlyCount": 0,
     "englishOnly": [
@@ -84,6 +84,109 @@
     "generatedCount": 10
   },
   "items": [
+    {
+      "id": "blt223d607fa479be20",
+      "slug": "marathon_update_1_1_9_3",
+      "pathSlug": "marathon-update-1-1-9-3",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-10-08T17:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_9_3",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9_3",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_9_3"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-9-3/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 21,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.9.3",
+          "subtitle": "The one about Night Marsh crashes",
+          "bodyHtml": "<h2>General</h2><ul><li>Removed incorrect information from the Nightfall Refresh explainer screen.</li><li>Fixed an issue causing players to experience crashes on Night Marsh.</li></ul>",
+          "bodyText": "General Removed incorrect information from the Nightfall Refresh explainer screen. Fixed an issue causing players to experience crashes on Night Marsh.",
+          "excerpt": "The one about Night Marsh crashes"
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.9.3",
+          "subtitle": "关于夜间沼泽崩溃",
+          "bodyHtml": "<h2>General</h2><ul><li>移除了暮夜刷新说明界面中的错误信息。</li><li>修复了导致玩家在夜间沼泽遇到游戏崩溃的问题。</li></ul>",
+          "bodyText": "General 移除了暮夜刷新说明界面中的错误信息。 修复了导致玩家在夜间沼泽遇到游戏崩溃的问题。",
+          "excerpt": "关于夜间沼泽崩溃",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt7f7820f3c3c5f536",
       "slug": "nighfall_refresh_symbiosis_roadmap",
