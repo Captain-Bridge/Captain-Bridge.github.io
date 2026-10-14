@@ -2364,7 +2364,7 @@
     },
     {
       "id": "Coin_Synthesis",
-      "title": "铸币合成",
+      "title": "铸币钥匙",
       "price": "110",
       "category": "档案徽标",
       "layout": {
@@ -2450,6 +2450,23 @@
     }
   ],
   "bundles": [
+    {
+      "id": "Crush_the_coffin_vandal",
+      "title": "碾压棺椁",
+      "category": "暴徒背包",
+      "price": "1,400",
+      "featured": true,
+      "imageFit": "contain",
+      "coverImage": "/store/content/docs/store/bundles/Crush_the_coffin_vandal_bundle/Crush_the_coffin_vandal.webp",
+      "bodyFile": "/store/content/docs/store/bundles/Crush_the_coffin_vandal_bundle/Crush_the_coffin_vandal.md",
+      "itemIds": [
+        "Crush_the_coffin_riot",
+        "Crush_the_coffin_BRRT",
+        "Synchronous_channel",
+        "Crush_the_coffin_card",
+        "Coin_Synthesis" 
+      ]
+    },
     {
       "id": "Alatavectus_Triage_bundle",
       "title": "阿拉塔 · 维克图斯[救援]",
