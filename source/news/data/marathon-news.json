@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T16:15:43.366Z",
+  "generatedAt": "2026-10-21T00:30:16.652Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,20 +7,14 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 69,
-  "count": 69,
+  "total": 70,
+  "count": 70,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 58,
-    "englishOnlyCount": 11,
+    "bilingualCount": 60,
+    "englishOnlyCount": 10,
     "chineseOnlyCount": 0,
     "englishOnly": [
-      {
-        "articlePath": "/marathon_update_1_1_9_4",
-        "title": "Marathon Update 1.1.9.4",
-        "publishedAt": "2026-10-13T15:00:00.000Z",
-        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9_4"
-      },
       {
         "articlePath": "/get_to_know_marathons_bungie_rewards",
         "title": "Get to Know Marathon’s Bungie Rewards",
@@ -87,9 +81,112 @@
   "translation": {
     "attempted": true,
     "available": true,
-    "generatedCount": 11
+    "generatedCount": 10
   },
   "items": [
+    {
+      "id": "blt8ec372716aa3e1a9",
+      "slug": "marathon_update_1_1_9_5",
+      "pathSlug": "marathon-update-1-1-9-5",
+      "category": "community",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-10-20T17:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_9_5",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9_5",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_9_5"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-9-5/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 278,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.9.5",
+          "subtitle": "The one about Vault Breaker and C.A.R.R.I. returning",
+          "bodyHtml": "<h2>Events</h2><h3>Vault Breaker</h3><ul><li>Vault Breaker will be available from October 20 – November 10.</li><li>Vault Breaker Armory:<ul><li>Tier 1 Repeatable Offers<ul><li>Materials Pack 1: Stock decreased from 5/week to 2/week.</li><li>Materials Pack 2: Stock decreased from 5/week to 2/week.</li><li>Cryo Archive Key Template: Stock decreased from 3/week to 1/week.</li><li>Deluxe weapon: Stock decreased from 3/week to 2/week.</li><li>Deluxe Backpack: Stock decreased from 3/week to 2/week.</li><li>Deluxe Shield Implant: Stock decreased from 3/week to 2/week.</li></ul></li><li>Tier 2 Repeatable Offers:<ul><li>Vault Key 4, 5, and 6: Only available for purchase during the 2nd and 3rd weeks of Vault Breaker being active.</li></ul></li><li>Tier 2 Limited Offers that will only be available during the 2nd and 3rd weeks of Vault Breaker being active:<ul><li>DRRVISH</li><li>Salt Wages</li><li>Omnipositor</li><li>Biotoxic Disinjector</li><li>Biotoxic Disinjector Ammo</li></ul></li><li>Upgrades<ul><li>All upgrades will be available for purchase from the start.</li></ul></li><li>Econ Changes<ul><li>Solo players will receive 50% more Tier 1 and Tier 2 event currency from Vault Breaker.</li><li>Monitor scan XP has been reduced by 50%.</li><li>A selection of Tier 3 standard contracts are not intended to be completed during Vault Breaker and will not be available during the event.</li></ul></li></ul></li></ul><h3>C.A.R.R.I.</h3><ul><li>C.A.R.R.I. Armory has returned and will run through the end of Nightfall refresh.</li></ul><h3>Sponsored Night Marsh</h3><ul><li>Sponsored Night Marsh will be available this weekend, starting Thursday, 10/22.</li></ul><h2>Weapons</h2><ul><li>Updated the description of the Repeater HPR to correctly state it reloads 2 rounds at a time.</li></ul><h2>Codex</h2><ul><li>Fixed an issue with the timing requirements on the Recon Trifecta Mastery challenge.</li></ul><h2>General</h2><ul><li>Fixed an issue in profile stats where Global Exfils would appear different when previewing different seasons.</li><li>Fixed an issue where the profile stats page could sometimes appear blank.</li></ul>",
+          "bodyText": "Events Vault Breaker Vault Breaker will be available from October 20 – November 10. Vault Breaker Armory: Tier 1 Repeatable Offers Materials Pack 1: Stock decreased from 5/week to 2/week. Materials Pack 2: Stock decreased from 5/week to 2/week. Cryo Archive Key Template: Stock decreased from 3/week to 1/week. Deluxe weapon: Stock decreased from 3/week to 2/week. Deluxe Backpack: Stock decreased from 3/week to 2/week. Deluxe Shield Implant: Stock decreased from 3/week to 2/week. Tier 2 Repeatable Offers: Vault Key 4, 5, and 6: Only available for purchase during the 2nd and 3rd weeks of Vault Breaker being active. Tier 2 Limited Offers that will only be available during the 2nd and 3rd weeks of Vault Breaker being active: DRRVISH Salt Wages Omnipositor Biotoxic Disinjector Biotoxic Disinjector Ammo Upgrades All upgrades will be available for purchase from the start. Econ Changes Solo players will receive 50% more Tier 1 and Tier 2 event currency from Vault Breaker. Monitor scan XP has been reduced by 50%. A selection of Tier 3 standard contracts are not intended to be completed during Vault Breaker and will not be available during the event. C.A.R.R.I. C.A.R.R.I. Armory has returned and will run through the end of Nightfall refresh. Sponsored Night Marsh Sponsored Night Marsh will be available this weekend, starting Thursday, 10/22. Weapons Updated the description of the Repeater HPR to correctly state it reloads 2 rounds at a time. Codex Fixed an issue with the timing requirements on the Recon Trifecta Mastery challenge. General Fixed an issue in profile stats where Global Exfils would appear different when previewing different seasons. Fixed an issue where the profile stats page could sometimes appear blank.",
+          "excerpt": "The one about Vault Breaker and C.A.R.R.I. returning"
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.9.5",
+          "subtitle": "关于破库者及C.A.R.R.I.回归",
+          "bodyHtml": "<h2>活动</h2><h3>破库者</h3><ul><li>破库者将于10月21日至11月11日期间开放。</li><li>破库者军械库：<ul><li>1阶可重复优惠<ul><li>材料包1：库存从每周5件减少到每周2件。</li><li>材料包2：库存从每周5件减少到每周2件。</li><li>低温档案室钥匙模板：库存从每周3件减少到每周1件。</li><li>豪华武器：库存从每周3件减少到每周2件。</li><li>豪华背包：库存从每周3件减少到每周2件。</li><li>豪华护盾植入物：库存从每周3件减少到每周2件。</li></ul></li><li>2阶可重复优惠：<ul><li>保险库钥匙4、5和6：仅在破库者上线的第2周和第3周开放购买。</li></ul></li><li>仅在破库者上线的第2周和第3周开放购买的2阶限定优惠：<ul><li>DRRVISH</li><li>苦涩报酬</li><li>全向器</li><li>生物毒素分离注射器</li><li>生物毒素分离注射器弹药</li></ul></li><li>升级<ul><li>所有升级从开始时即可购买。</li></ul></li><li>经济改动<ul><li>单人玩家在破库者中获得的1阶和2阶活动货币数量将增加50%。</li><li>监控扫描获得的经验值降低了50%。</li><li>部分3阶标准合约并非在破库者期间完成，因此活动期间将无法进行。</li></ul></li></ul></li></ul><h3>C.A.R.R.I.</h3><ul><li>C.A.R.R.I.军械库现已回归，并持续至暮夜刷新结束。</li></ul><h3>赞助夜间沼泽</h3><ul><li>赞助夜间沼泽将于本周末上线，10月23日周五开始。</li></ul><h2>武器</h2><ul><li>更新了连击者重型精密步枪的描述，正确说明其每次填装2发弹药。</li></ul><h2>百科</h2><ul><li>修复了侦察三连胜精通挑战中关于时机要求的问题。</li></ul><h2>综合</h2><ul><li>修复了在档案数据统计中，预览不同赛季时，全局撤离显示不一致的问题。</li><li>修复了档案数据统计页面有时可能显示为空白的问题。</li></ul>",
+          "bodyText": "活动 破库者 破库者将于10月21日至11月11日期间开放。 破库者军械库： 1阶可重复优惠 材料包1：库存从每周5件减少到每周2件。 材料包2：库存从每周5件减少到每周2件。 低温档案室钥匙模板：库存从每周3件减少到每周1件。 豪华武器：库存从每周3件减少到每周2件。 豪华背包：库存从每周3件减少到每周2件。 豪华护盾植入物：库存从每周3件减少到每周2件。 2阶可重复优惠： 保险库钥匙4、5和6：仅在破库者上线的第2周和第3周开放购买。 仅在破库者上线的第2周和第3周开放购买的2阶限定优惠： DRRVISH 苦涩报酬 全向器 生物毒素分离注射器 生物毒素分离注射器弹药 升级 所有升级从开始时即可购买。 经济改动 单人玩家在破库者中获得的1阶和2阶活动货币数量将增加50%。 监控扫描获得的经验值降低了50%。 部分3阶标准合约并非在破库者期间完成，因此活动期间将无法进行。 C.A.R.R.I. C.A.R.R.I.军械库现已回归，并持续至暮夜刷新结束。 赞助夜间沼泽 赞助夜间沼泽将于本周末上线，10月23日周五开始。 武器 更新了连击者重型精密步枪的描述，正确说明其每次填装2发弹药。 百科 修复了侦察三连胜精通挑战中关于时机要求的问题。 综合 修复了在档案数据统计中，预览不同赛季时，全局撤离显示不一致的问题。 修复了档案数据统计页面有时可能显示为空白的问题。",
+          "excerpt": "关于破库者及C.A.R.R.I.回归",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt70d1902d7028d8c0",
       "slug": "marathon_update_1_1_9_4",
@@ -100,10 +197,10 @@
       "articlePath": "/marathon_update_1_1_9_4",
       "articleUrl": {
         "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9_4",
-        "zh": null
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_9_4"
       },
       "localPath": "/news/articles/marathon-update-1-1-9-4/",
-      "matchType": "en-only",
+      "matchType": "bilingual",
       "languages": {
         "en": true,
         "zh": true
@@ -184,12 +281,12 @@
           "excerpt": "The one about the CyberAcme contracts"
         },
         "zh": {
-          "title": "Marathon 更新 1.1.9.4",
-          "subtitle": "关于 赛博艾克米 合约的那个",
-          "bodyHtml": "<h2>百科</h2><ul><li>修复了护航无人机 百科 只有在 前哨 上完成目标才会解锁的问题。</li></ul><h2>合同</h2><ul><li>修复了玩家可能会卡在重复同一夜沼 CyAc 引导合同的问题。</li></ul><h2>阵营</h2><ul><li>修复了 纽卡洛里 军械库 升级错误地显示会解锁 机动规避： 植入物，而不是预期的风险/回报植入物的问题。</li></ul><h2>综合</h2><ul><li>修复了 Nightfall Refresh 说明界面显示错误信息的问题。</li></ul>",
-          "bodyText": "百科 修复了护航无人机 百科 只有在 前哨 上完成目标才会解锁的问题。 合同 修复了玩家可能会卡在重复同一夜沼 CyAc 引导合同的问题。 阵营 修复了 纽卡洛里 军械库 升级错误地显示会解锁 机动规避： 植入物，而不是预期的风险/回报植入物的问题。 综合 修复了 Nightfall Refresh 说明界面显示错误信息的问题。",
-          "excerpt": "关于 赛博艾克米 合约的那个",
-          "source": "generated"
+          "title": "《失落星船：马拉松》更新1.1.9.4",
+          "subtitle": "关于赛博艾克米合约",
+          "bodyHtml": "<h2>百科</h2><ul><li>修复了护航队无人机百科仅在前哨完成目标时才会解锁的问题。</li></ul><h2>合约</h2><ul><li>修复了玩家可能会卡在重复同一夜间沼泽赛博艾克米指引合同的问题。</li></ul><h2>阵营</h2><ul><li>修复了纽卡洛里军械库升级错误地表明它将解锁机动规避植入物，而不是预期的风险与回报植入物的问题。</li></ul><h2>综合</h2><ul><li>修复了暮夜刷新说明界面显示错误信息的问题。</li></ul>",
+          "bodyText": "百科 修复了护航队无人机百科仅在前哨完成目标时才会解锁的问题。 合约 修复了玩家可能会卡在重复同一夜间沼泽赛博艾克米指引合同的问题。 阵营 修复了纽卡洛里军械库升级错误地表明它将解锁机动规避植入物，而不是预期的风险与回报植入物的问题。 综合 修复了暮夜刷新说明界面显示错误信息的问题。",
+          "excerpt": "关于赛博艾克米合约",
+          "source": "official"
         }
       }
     },
