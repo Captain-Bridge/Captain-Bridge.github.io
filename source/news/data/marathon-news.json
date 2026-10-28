@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T00:30:16.652Z",
+  "generatedAt": "2026-10-28T01:00:27.631Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,11 +7,11 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 70,
-  "count": 70,
+  "total": 71,
+  "count": 71,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 60,
+    "bilingualCount": 61,
     "englishOnlyCount": 10,
     "chineseOnlyCount": 0,
     "englishOnly": [
@@ -84,6 +84,109 @@
     "generatedCount": 10
   },
   "items": [
+    {
+      "id": "blta34d047bcdf350ff",
+      "slug": "marathon_update_1_1_9_6",
+      "pathSlug": "marathon-update-1-1-9-6",
+      "category": "community",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-10-27T16:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_9_6",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9_6",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_9_6"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-9-6/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 51,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.9.6",
+          "subtitle": "The one about the rogue dropship",
+          "bodyHtml": "<h2>Events</h2><ul><li>Sponsored Perimeter will be available this weekend, starting Thursday, 10/29.</li></ul><h2>Contracts</h2><ul><li>Fixed an issue where players were not receiving the intended bonus reputation rewards when completing certain contracts solo or in duos.</li></ul><h2>Zones</h2><ul><li>Fixed an issue on Night Marsh where players could get downed by an improperly spawning UESC dropship.</li></ul>",
+          "bodyText": "Events Sponsored Perimeter will be available this weekend, starting Thursday, 10/29. Contracts Fixed an issue where players were not receiving the intended bonus reputation rewards when completing certain contracts solo or in duos. Zones Fixed an issue on Night Marsh where players could get downed by an improperly spawning UESC dropship.",
+          "excerpt": "The one about the rogue dropship"
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.9.6",
+          "subtitle": "关于失常运输舰",
+          "bodyHtml": "<h2>活动</h2><ul><li>赞助外围区域将于本周末上线，10月30日周五开始。</li></ul><h2>合约</h2><ul><li>修复了玩家在单人或双人完成特定合约时，未能获得预期额外声望奖励的问题。</li></ul><h2>区域</h2><ul><li>修复了在夜间沼泽中，玩家可能因UESC运输舰生成位置异常而被击倒的问题。</li></ul>",
+          "bodyText": "活动 赞助外围区域将于本周末上线，10月30日周五开始。 合约 修复了玩家在单人或双人完成特定合约时，未能获得预期额外声望奖励的问题。 区域 修复了在夜间沼泽中，玩家可能因UESC运输舰生成位置异常而被击倒的问题。",
+          "excerpt": "关于失常运输舰",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt8ec372716aa3e1a9",
       "slug": "marathon_update_1_1_9_5",
