@@ -1,99 +1,84 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { checkContent } from '../tools/check-content.mjs';
+import { buildNewsIndex } from './build-news-index.mjs';
+import { buildLore } from './build-lore.mjs';
+import { prerender } from './prerender.mjs';
+
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const sourceDir = path.join(root, 'source');
 const publicDir = path.join(root, 'public');
 const siteUrl = 'https://marathon.uesc.top';
 const gaMeasurementId = 'G-NX8R0D0494';
+
+// Validate before replacing the previous build, including Linux-sensitive paths.
+await checkContent();
+if (path.dirname(publicDir) !== root || path.basename(publicDir) !== 'public') throw new Error('Invalid build output directory');
 await fs.rm(publicDir, { recursive: true, force: true });
-await fs.cp(sourceDir, publicDir, { recursive: true });
-const htmlFiles = [];
-// Static HTML pages may keep Hexo front matter for source compatibility; never ship it.
-async function stripFrontMatter(dir) {
+await fs.cp(sourceDir, publicDir, {
+  recursive: true,
+  filter: async file => {
+    const name = path.basename(file);
+    if (/\.bmp$/i.test(name) && await fs.stat(file.replace(/\.bmp$/i, '.webp')).then(() => true, () => false)) return false;
+    return !(/^README(?:\.|$)/i.test(name) || name.endsWith('.sync-report.json') || name === '_data' || name === 'templete.json');
+  },
+});
+await buildNewsIndex(root);
+await buildLore(root);
+
+async function listFiles(dir, result = []) {
   for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) await stripFrontMatter(full);
-    else if (entry.name.toLowerCase().endsWith('.html')) {
-      const text = await fs.readFile(full, 'utf8');
-      const match = text.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
-      if (match) await fs.writeFile(full, text.slice(match[0].length), 'utf8');
-    }
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) await listFiles(file, result);
+    else result.push(file);
   }
+  return result;
 }
-await stripFrontMatter(publicDir);
-
-// Add the site-wide GA4 tag to every deployed HTML page. Keeping this in the
-// build step means source pages remain readable while all routes get tracking.
-async function injectGoogleAnalytics(dir) {
-  const snippet = `<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '${gaMeasurementId}');
-</script>`;
-  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      await injectGoogleAnalytics(full);
-      continue;
-    }
-    if (!entry.name.toLowerCase().endsWith('.html')) continue;
-    const text = await fs.readFile(full, 'utf8');
-    if (text.includes(`googletagmanager.com/gtag/js?id=${gaMeasurementId}`)) continue;
-    const tracked = text.includes('</head>') ? text.replace('</head>', `${snippet}\n</head>`) : `${snippet}\n${text}`;
-    await fs.writeFile(full, tracked, 'utf8');
-  }
+const files = await listFiles(publicDir);
+const htmlFiles = files.filter(file => file.endsWith('.html'));
+// A content-derived version replaces manually maintained date query strings.
+const hash = createHash('sha256');
+for (const file of files.filter(file => /\.(?:m?js|css)$/.test(file)).sort()) {
+  hash.update(path.relative(publicDir, file));
+  hash.update(await fs.readFile(file));
 }
-await injectGoogleAnalytics(publicDir);
-
-// SEO 预渲染：把 JS 渲染模块（新闻/百科/阵营/地图）的内容以 <noscript> 注入，供爬虫抓取。
-await (await import('./prerender.mjs')).prerender(root);
-// Background videos are decorative and must not compete with document content on mobile.
-async function optimizeBackgroundVideos(dir) {
-  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) await optimizeBackgroundVideos(full);
-    else if (entry.name.toLowerCase().endsWith('.html')) {
-      const text = await fs.readFile(full, 'utf8');
-      const optimized = text.replace(
-        /(<video\b[^>]*class=["'][^"']*(?:page-bg-video|viewport-bg-video)[^"']*["'][^>]*)\s+preload=["']metadata["']/gi,
-        '$1 preload="none"'
-      );
-      if (optimized !== text) await fs.writeFile(full, optimized, 'utf8');
-    }
-  }
+const version = hash.digest('hex').slice(0, 12);
+for (const file of files.filter(file => /\.(?:m?js)$/.test(file))) {
+  const text = await fs.readFile(file, 'utf8');
+  const updated = text.replace(/(from\s+['"]\.\/archive-[\w-]+\.mjs)(['"])/g, `$1?v=${version}$2`);
+  if (text !== updated) await fs.writeFile(file, updated);
 }
-await optimizeBackgroundVideos(publicDir);
-async function walk(dir) { for (const entry of await fs.readdir(dir, { withFileTypes: true })) { const full = path.join(dir, entry.name); if (entry.isDirectory()) await walk(full); else if (entry.name.toLowerCase().endsWith('.html')) htmlFiles.push(path.relative(publicDir, full)); } }
-await walk(publicDir);
-
-// lastmod：新闻文章用发布时间（更准确），其余页面用文件 mtime 兜底。
-const newsLastmod = new Map();
-try {
-  const newsData = JSON.parse(await fs.readFile(path.join(sourceDir, 'news/data/marathon-news.json'), 'utf8'));
-  for (const item of newsData.items || []) {
-    if (item.localPath && item.publishedAt) newsLastmod.set(item.localPath, item.publishedAt.slice(0, 10));
-  }
-} catch {
-  // 新闻数据缺失时退化为文件 mtime
-}
-
-const urls = [];
+const analytics = `<script async src="https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaMeasurementId}');</script>`;
 for (const file of htmlFiles) {
-  if (file.includes(`${path.sep}404.html`)) continue;
-  const rel = file.replaceAll(path.sep, '/');
-  if (rel === 'map/index.html') continue;
-  const url = rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
-  let lastmod = newsLastmod.get(url);
-  if (!lastmod) {
-    const st = await fs.stat(path.join(publicDir, file));
-    lastmod = st.mtime.toISOString().slice(0, 10);
-  }
-  urls.push({ url, lastmod });
+  let html = await fs.readFile(file, 'utf8');
+  html = html.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+  if (!/<link\b[^>]*rel=["'](?:shortcut )?icon["']/i.test(html)) html = html.replace('</head>', '<link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">\n</head>');
+  // data-src keeps decoration out of the preload scanner on mobile.
+  html = html.replace(/<video\b[^>]*>[\s\S]*?<\/video>/gi, video => {
+    if (!/class=["'][^"']*(?:page-bg-video|viewport-bg-video)/i.test(video)) return video;
+    return video.replace(/\sautoplay\b/gi, '')
+      .replace(/\bpreload=["'][^"']*["']/gi, 'preload="none"')
+      .replace(/\bsrc=/gi, 'data-src=')
+      .replace('<video', '<video data-background-video');
+  });
+  html = html.replace('</head>', '<link rel="stylesheet" href="/css/mobile.css">\n<script src="/js/site-media.js" defer></script>\n</head>');
+  html = html.replace(/((?:src|href)=["']\/[^"']+\.(?:css|m?js))(?:\?[^"']*)?(["'])/g, `$1?v=${version}$2`);
+  if (!html.includes(`googletagmanager.com/gtag/js?id=${gaMeasurementId}`)) html = html.replace('</head>', analytics + '\n</head>');
+  await fs.writeFile(file, html);
 }
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${siteUrl}${u.url}</loc><lastmod>${u.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`;
-await fs.writeFile(path.join(publicDir, 'sitemap.xml'), sitemap, 'utf8');
-console.log(`Built ${htmlFiles.length} HTML files into public/`);
+await prerender(root);
+await checkContent(publicDir);
+
+// Build-output mtimes describe a build, not a content modification. Omit lastmod
+// until a reliable editorial modification date is available.
+const urls = htmlFiles.map(file => path.relative(publicDir, file).replaceAll(path.sep, '/'))
+  .filter(file => file !== 'map/index.html' && !/(^|\/)404\.html$/.test(file))
+  .map(file => file === 'index.html' ? '/' : '/' + file.replace(/index\.html$/, ''));
+const xmlEscape = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url => `  <url><loc>${xmlEscape(siteUrl + url.split('/').map(encodeURIComponent).join('/'))}</loc></url>`).join('\n')}\n</urlset>\n`;
+await fs.writeFile(path.join(publicDir, 'sitemap.xml'), sitemap);
+await fs.writeFile(path.join(publicDir, '.nojekyll'), '');
+console.log(`Built ${htmlFiles.length} HTML files into public/ (assets ${version})`);

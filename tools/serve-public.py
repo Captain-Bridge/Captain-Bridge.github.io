@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import mimetypes
 import socket
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -18,8 +19,10 @@ def port_is_busy(host: str, port: int) -> bool:
 
 
 def main() -> None:
+    # Windows registry MIME associations may otherwise serve ES modules as text/plain.
+    mimetypes.add_type("application/javascript", ".mjs")
     parser = argparse.ArgumentParser(
-        description="Serve the built Hexo site from the repository public directory."
+        description="Serve the built static site from the repository public directory."
     )
     parser.add_argument("--host", default="127.0.0.1", help="Host to bind to.")
     parser.add_argument("--port", type=int, default=4000, help="Port to listen on.")

@@ -16,44 +16,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10011.bmp"
+              "image": "10011.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10005.bmp"
+              "image": "10005.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10006.bmp"
+              "image": "10006.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10011.bmp"
+                  "image": "10011.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10005.bmp"
+                  "image": "10005.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10006.bmp"
+                  "image": "10006.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -65,28 +65,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01610.bmp",
+          "logonImage": "01610.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10008.bmp"
+              "image": "10008.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01610.bmp",
+          "logoffImage": "01610.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01610.bmp",
+              "logonImage": "01610.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10008.bmp"
+                  "image": "10008.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01610.bmp",
+              "logoffImage": "01610.webp",
               "defaultColor": "$C0"
             }
           }
@@ -98,28 +98,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01619.bmp",
+          "logonImage": "01619.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10007.bmp"
+              "image": "10007.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01619.bmp",
+          "logoffImage": "01619.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01619.bmp",
+              "logonImage": "01619.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -131,28 +131,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01619.bmp",
+          "logonImage": "01619.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10007.bmp"
+              "image": "10007.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01619.bmp",
+          "logoffImage": "01619.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01619.bmp",
+              "logonImage": "01619.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -171,57 +171,57 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10001.bmp"
+              "image": "10001.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10001.bmp"
+              "image": "10001.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10001.bmp"
+              "image": "10001.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10001.bmp"
+                  "image": "10001.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10001.bmp"
+                  "image": "10001.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10001.bmp"
+                  "image": "10001.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "10002.bmp"
+                  "image": "10002.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -233,36 +233,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10010.bmp"
+              "image": "10010.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10010.bmp"
+                  "image": "10010.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -274,36 +274,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -316,49 +316,49 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -377,65 +377,65 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10201.bmp"
+              "image": "10201.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10202.bmp"
+              "image": "10202.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_005_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10201.bmp"
+                  "image": "10201.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10202.bmp"
+                  "image": "10202.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_005_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -447,36 +447,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -488,28 +488,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01618.bmp",
+          "logonImage": "01618.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01618.bmp"
+              "image": "01618.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01618.bmp",
+          "logoffImage": "01618.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01618.bmp",
+              "logonImage": "01618.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01618.bmp"
+                  "image": "01618.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01618.bmp",
+              "logoffImage": "01618.webp",
               "defaultColor": "$C0"
             }
           }
@@ -522,53 +522,53 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10210.bmp"
+              "image": "10210.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10210.bmp"
+                  "image": "10210.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "10110.bmp"
+                  "image": "10110.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "10110.bmp"
+                  "image": "10110.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -580,36 +580,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -627,44 +627,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10301.bmp"
+              "image": "10301.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10301.bmp"
+                  "image": "10301.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -676,28 +676,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01601.bmp",
+          "logonImage": "01601.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01613.bmp"
+              "image": "01613.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01601.bmp",
+          "logoffImage": "01601.webp",
           "defaultColor": "$C5",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01601.bmp",
+              "logonImage": "01601.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01613.bmp"
+                  "image": "01613.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01601.bmp",
+              "logoffImage": "01601.webp",
               "defaultColor": "$C5"
             }
           }
@@ -710,53 +710,53 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -774,28 +774,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01619.bmp",
+          "logonImage": "01619.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10007.bmp"
+              "image": "10007.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01619.bmp",
+          "logoffImage": "01619.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01619.bmp",
+              "logonImage": "01619.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -814,49 +814,49 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10501.bmp"
+              "image": "10501.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10501.bmp"
+              "image": "10501.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10501.bmp"
+                  "image": "10501.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10501.bmp"
+                  "image": "10501.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "10502.bmp"
+                  "image": "10502.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -868,36 +868,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10520.bmp"
+              "image": "10520.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10506.bmp"
+              "image": "10506.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10520.bmp"
+                  "image": "10520.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10506.bmp"
+                  "image": "10506.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -916,41 +916,41 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10601.bmp"
+              "image": "10601.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10601.bmp"
+                  "image": "10601.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "10601.bmp"
+                  "image": "10601.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -963,45 +963,45 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01617.bmp",
+          "logonImage": "01617.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01618.bmp"
+              "image": "01618.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01617.bmp",
+          "logoffImage": "01617.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01617.bmp",
+              "logonImage": "01617.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01618.bmp"
+                  "image": "01618.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01617.bmp",
+              "logoffImage": "01617.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01618.bmp",
+              "logonImage": "01618.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11120.bmp"
+                  "image": "11120.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "01617.bmp"
+                  "image": "01617.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01618.bmp",
+              "logoffImage": "01618.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1023,15 +1023,15 @@
           "picts": [
             {
               "file": "UNFINISHED_000_PICT.txt",
-              "image": "10701.bmp"
+              "image": "10701.webp"
             },
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10701.bmp"
+              "image": "10701.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
@@ -1040,15 +1040,15 @@
               "picts": [
                 {
                   "file": "UNFINISHED_000_PICT.txt",
-                  "image": "10701.bmp"
+                  "image": "10701.webp"
                 },
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10701.bmp"
+                  "image": "10701.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1060,28 +1060,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01617.bmp",
+          "logonImage": "01617.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01617.bmp"
+              "image": "01617.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01617.bmp",
+          "logoffImage": "01617.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01617.bmp",
+              "logonImage": "01617.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01617.bmp"
+                  "image": "01617.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01617.bmp",
+              "logoffImage": "01617.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1093,28 +1093,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1127,61 +1127,61 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10702.bmp"
+              "image": "10702.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10702.bmp"
+              "image": "10702.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10702.bmp"
+              "image": "10702.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10702.bmp"
+                  "image": "10702.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10702.bmp"
+                  "image": "10702.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10702.bmp"
+                  "image": "10702.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01616.bmp",
+              "logonImage": "01616.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11116.bmp"
+                  "image": "11116.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "11116.bmp"
+                  "image": "11116.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01616.bmp",
+              "logoffImage": "01616.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1193,44 +1193,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10702.bmp"
+              "image": "10702.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10702.bmp"
+              "image": "10702.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10702.bmp"
+              "image": "10702.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10702.bmp"
+                  "image": "10702.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10702.bmp"
+                  "image": "10702.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10702.bmp"
+                  "image": "10702.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1248,44 +1248,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10801.bmp"
+              "image": "10801.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10801.bmp"
+              "image": "10801.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10801.bmp"
+                  "image": "10801.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10801.bmp"
+                  "image": "10801.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1298,41 +1298,41 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "01604.bmp"
+                  "image": "01604.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1344,60 +1344,60 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01617.bmp",
+          "logonImage": "01617.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10803.bmp"
+              "image": "10803.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_005_PICT.txt",
-              "image": "01617.bmp"
+              "image": "01617.webp"
             }
           ],
           "logoff": "UNFINISHED_006_LOGOFF.txt",
-          "logoffImage": "01617.bmp",
+          "logoffImage": "01617.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01617.bmp",
+              "logonImage": "01617.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10803.bmp"
+                  "image": "10803.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_005_PICT.txt",
-                  "image": "01617.bmp"
+                  "image": "01617.webp"
                 }
               ],
               "logoff": "UNFINISHED_006_LOGOFF.txt",
-              "logoffImage": "01617.bmp",
+              "logoffImage": "01617.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1409,52 +1409,52 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01616.bmp",
+          "logonImage": "01616.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11118.bmp"
+              "image": "11118.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_005_LOGOFF.txt",
-          "logoffImage": "01616.bmp",
+          "logoffImage": "01616.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01616.bmp",
+              "logonImage": "01616.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11118.bmp"
+                  "image": "11118.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_005_LOGOFF.txt",
-              "logoffImage": "01616.bmp",
+              "logoffImage": "01616.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1466,36 +1466,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1507,28 +1507,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01617.bmp",
+          "logonImage": "01617.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10802.bmp"
+              "image": "10802.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01617.bmp",
+          "logoffImage": "01617.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01617.bmp",
+              "logonImage": "01617.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10802.bmp"
+                  "image": "10802.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01617.bmp",
+              "logoffImage": "01617.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1540,44 +1540,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01617.bmp",
+          "logonImage": "01617.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10762.bmp"
+              "image": "10762.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10761.bmp"
+              "image": "10761.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10761.bmp"
+              "image": "10761.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01617.bmp",
+          "logoffImage": "01617.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01617.bmp",
+              "logonImage": "01617.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10762.bmp"
+                  "image": "10762.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10761.bmp"
+                  "image": "10761.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10761.bmp"
+                  "image": "10761.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01617.bmp",
+              "logoffImage": "01617.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1589,36 +1589,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1630,36 +1630,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01617.bmp",
+          "logonImage": "01617.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11120.bmp"
+              "image": "11120.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01617.bmp",
+          "logoffImage": "01617.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01617.bmp",
+              "logonImage": "01617.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11120.bmp"
+                  "image": "11120.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01617.bmp",
+              "logoffImage": "01617.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1677,36 +1677,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10902.bmp"
+              "image": "10902.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10902.bmp"
+              "image": "10902.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10902.bmp"
+                  "image": "10902.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10902.bmp"
+                  "image": "10902.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1718,60 +1718,60 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11116.bmp"
+              "image": "11116.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11116.bmp"
+              "image": "11116.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10921.bmp"
+              "image": "10921.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "10921.bmp"
+              "image": "10921.webp"
             },
             {
               "file": "UNFINISHED_005_PICT.txt",
-              "image": "11116.bmp"
+              "image": "11116.webp"
             }
           ],
           "logoff": "UNFINISHED_006_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11116.bmp"
+                  "image": "11116.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11116.bmp"
+                  "image": "11116.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10921.bmp"
+                  "image": "10921.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "10921.bmp"
+                  "image": "10921.webp"
                 },
                 {
                   "file": "UNFINISHED_005_PICT.txt",
-                  "image": "11116.bmp"
+                  "image": "11116.webp"
                 }
               ],
               "logoff": "UNFINISHED_006_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1783,28 +1783,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01618.bmp",
+          "logonImage": "01618.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01618.bmp",
+          "logoffImage": "01618.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01618.bmp",
+              "logonImage": "01618.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01618.bmp",
+              "logoffImage": "01618.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1816,28 +1816,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01604.bmp"
+              "image": "01604.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01604.bmp"
+                  "image": "01604.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1850,45 +1850,45 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01604.bmp"
+              "image": "01604.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01604.bmp"
+                  "image": "01604.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "01604.bmp"
+                  "image": "01604.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "10903.bmp"
+                  "image": "10903.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1906,28 +1906,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01619.bmp",
+          "logonImage": "01619.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10007.bmp"
+              "image": "10007.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01619.bmp",
+          "logoffImage": "01619.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01619.bmp",
+              "logonImage": "01619.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -1945,36 +1945,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11101.bmp"
+              "image": "11101.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11101.bmp"
+              "image": "11101.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11101.bmp"
+                  "image": "11101.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11101.bmp"
+                  "image": "11101.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -1986,36 +1986,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11211.bmp"
+              "image": "11211.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11211.bmp"
+              "image": "11211.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11211.bmp"
+                  "image": "11211.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11211.bmp"
+                  "image": "11211.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2027,28 +2027,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10502.bmp"
+              "image": "10502.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10502.bmp"
+                  "image": "10502.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2067,49 +2067,49 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2121,36 +2121,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01603.bmp",
+          "logonImage": "01603.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11801.bmp"
+              "image": "11801.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11801.bmp"
+              "image": "11801.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01603.bmp",
+          "logoffImage": "01603.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01603.bmp",
+              "logonImage": "01603.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11801.bmp"
+                  "image": "11801.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11801.bmp"
+                  "image": "11801.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01603.bmp",
+              "logoffImage": "01603.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2168,36 +2168,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -2209,28 +2209,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01600.bmp",
+          "logonImage": "01600.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01600.bmp",
+          "logoffImage": "01600.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2243,41 +2243,41 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01600.bmp",
+              "logonImage": "01600.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01600.bmp",
+              "logoffImage": "01600.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2295,36 +2295,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -2337,41 +2337,41 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01622.bmp",
+          "logonImage": "01622.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11801.bmp"
+              "image": "11801.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01603.bmp",
+          "logoffImage": "01603.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01622.bmp",
+              "logonImage": "01622.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11801.bmp"
+                  "image": "11801.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01603.bmp",
+              "logoffImage": "01603.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01603.bmp",
+              "logonImage": "01603.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2389,28 +2389,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01610.bmp",
+          "logonImage": "01610.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10007.bmp"
+              "image": "10007.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01610.bmp",
+          "logoffImage": "01610.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01610.bmp",
+              "logonImage": "01610.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01610.bmp",
+              "logoffImage": "01610.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2428,44 +2428,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10401.bmp"
+              "image": "10401.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10401.bmp"
+              "image": "10401.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10401.bmp"
+              "image": "10401.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10401.bmp"
+                  "image": "10401.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10401.bmp"
+                  "image": "10401.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10401.bmp"
+                  "image": "10401.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2477,44 +2477,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10520.bmp"
+              "image": "10520.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10520.bmp"
+              "image": "10520.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10520.bmp"
+              "image": "10520.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10520.bmp"
+                  "image": "10520.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10520.bmp"
+                  "image": "10520.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10520.bmp"
+                  "image": "10520.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2526,28 +2526,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10502.bmp"
+              "image": "10502.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10502.bmp"
+                  "image": "10502.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2559,36 +2559,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10501.bmp"
+              "image": "10501.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10501.bmp"
+              "image": "10501.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10501.bmp"
+                  "image": "10501.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10501.bmp"
+                  "image": "10501.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2600,44 +2600,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10504.bmp"
+              "image": "10504.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10504.bmp"
+              "image": "10504.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10504.bmp"
+              "image": "10504.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10504.bmp"
+                  "image": "10504.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10504.bmp"
+                  "image": "10504.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10504.bmp"
+                  "image": "10504.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2649,52 +2649,52 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10503.bmp"
+              "image": "10503.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10503.bmp"
+              "image": "10503.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "10503.bmp"
+              "image": "10503.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "10503.bmp"
+              "image": "10503.webp"
             }
           ],
           "logoff": "UNFINISHED_005_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10503.bmp"
+                  "image": "10503.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10503.bmp"
+                  "image": "10503.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "10503.bmp"
+                  "image": "10503.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "10503.bmp"
+                  "image": "10503.webp"
                 }
               ],
               "logoff": "UNFINISHED_005_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2706,44 +2706,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11121.bmp"
+              "image": "11121.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11121.bmp"
+              "image": "11121.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11121.bmp"
+              "image": "11121.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11121.bmp"
+                  "image": "11121.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11121.bmp"
+                  "image": "11121.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11121.bmp"
+                  "image": "11121.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -2762,69 +2762,69 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11701.bmp"
+              "image": "11701.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11701.bmp"
+              "image": "11701.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11701.bmp"
+              "image": "11701.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "11701.bmp"
+              "image": "11701.webp"
             }
           ],
           "logoff": "UNFINISHED_005_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11701.bmp"
+                  "image": "11701.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11701.bmp"
+                  "image": "11701.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11701.bmp"
+                  "image": "11701.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "11701.bmp"
+                  "image": "11701.webp"
                 }
               ],
               "logoff": "UNFINISHED_005_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -2836,28 +2836,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01616.bmp",
+          "logonImage": "01616.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01616.bmp",
+          "logoffImage": "01616.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01616.bmp",
+              "logonImage": "01616.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01616.bmp",
+              "logoffImage": "01616.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2875,28 +2875,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01603.bmp",
+          "logonImage": "01603.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11801.bmp"
+              "image": "11801.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01603.bmp",
+          "logoffImage": "01603.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01603.bmp",
+              "logonImage": "01603.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11801.bmp"
+                  "image": "11801.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01603.bmp",
+              "logoffImage": "01603.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2908,28 +2908,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01603.bmp",
+          "logonImage": "01603.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11802.bmp"
+              "image": "11802.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01603.bmp",
+          "logoffImage": "01603.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01603.bmp",
+              "logonImage": "01603.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11802.bmp"
+                  "image": "11802.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01603.bmp",
+              "logoffImage": "01603.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2942,41 +2942,41 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01603.bmp",
+          "logonImage": "01603.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11802.bmp"
+              "image": "11802.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01603.bmp",
+          "logoffImage": "01603.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01603.bmp",
+              "logonImage": "01603.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11802.bmp"
+                  "image": "11802.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01603.bmp",
+              "logoffImage": "01603.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01603.bmp",
+              "logonImage": "01603.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11803.bmp"
+                  "image": "11803.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01603.bmp",
+              "logoffImage": "01603.webp",
               "defaultColor": "$C0"
             }
           }
@@ -2988,36 +2988,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -3036,45 +3036,45 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01603.bmp",
+          "logonImage": "01603.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11801.bmp"
+              "image": "11801.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01603.bmp",
+          "logoffImage": "01603.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01603.bmp",
+              "logonImage": "01603.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11801.bmp"
+                  "image": "11801.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01603.bmp",
+              "logoffImage": "01603.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             }
           }
@@ -3087,49 +3087,49 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01605.bmp",
+          "logonImage": "01605.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01605.bmp",
+          "logoffImage": "01605.webp",
           "defaultColor": "$C2",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01605.bmp",
+              "logonImage": "01605.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01605.bmp",
+              "logoffImage": "01605.webp",
               "defaultColor": "$C2"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "01609.bmp"
+                  "image": "01609.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -3147,36 +3147,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12002.bmp"
+              "image": "12002.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "12001.bmp"
+              "image": "12001.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12002.bmp"
+                  "image": "12002.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "12001.bmp"
+                  "image": "12001.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3188,28 +3188,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01609.bmp"
+              "image": "01609.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01609.bmp"
+                  "image": "01609.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -3221,28 +3221,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01618.bmp",
+          "logonImage": "01618.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12001.bmp"
+              "image": "12001.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01618.bmp",
+          "logoffImage": "01618.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01618.bmp",
+              "logonImage": "01618.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12001.bmp"
+                  "image": "12001.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01618.bmp",
+              "logoffImage": "01618.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3254,28 +3254,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01618.bmp",
+          "logonImage": "01618.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12001.bmp"
+              "image": "12001.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01618.bmp",
+          "logoffImage": "01618.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01618.bmp",
+              "logonImage": "01618.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12001.bmp"
+                  "image": "12001.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01618.bmp",
+              "logoffImage": "01618.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3287,28 +3287,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01616.bmp",
+          "logonImage": "01616.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12001.bmp"
+              "image": "12001.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01616.bmp",
+          "logoffImage": "01616.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01616.bmp",
+              "logonImage": "01616.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12001.bmp"
+                  "image": "12001.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01616.bmp",
+              "logoffImage": "01616.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3320,52 +3320,52 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "12003.bmp"
+              "image": "12003.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11118.bmp"
+              "image": "11118.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "11118.bmp"
+              "image": "11118.webp"
             }
           ],
           "logoff": "UNFINISHED_005_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "12003.bmp"
+                  "image": "12003.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11118.bmp"
+                  "image": "11118.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "11118.bmp"
+                  "image": "11118.webp"
                 }
               ],
               "logoff": "UNFINISHED_005_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3377,28 +3377,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12003.bmp"
+              "image": "12003.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12003.bmp"
+                  "image": "12003.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3410,36 +3410,36 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01609.bmp"
+              "image": "01609.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "12004.bmp"
+              "image": "12004.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01609.bmp"
+                  "image": "01609.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "12004.bmp"
+                  "image": "12004.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -3458,41 +3458,41 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "01609.bmp"
+              "image": "01609.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "01609.bmp"
+                  "image": "01609.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01619.bmp",
+              "logonImage": "01619.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "FINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3510,44 +3510,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11112.bmp"
+              "image": "11112.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11112.bmp"
+                  "image": "11112.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3565,28 +3565,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01608.bmp",
+          "logonImage": "01608.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10007.bmp"
+              "image": "10007.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01608.bmp",
+          "logoffImage": "01608.webp",
           "defaultColor": "$C1",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01608.bmp",
+              "logonImage": "01608.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01608.bmp",
+              "logoffImage": "01608.webp",
               "defaultColor": "$C1"
             }
           }
@@ -3598,44 +3598,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3648,61 +3648,61 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3714,44 +3714,44 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01615.bmp",
+          "logonImage": "01615.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "11114.bmp"
+              "image": "11114.webp"
             }
           ],
           "logoff": "UNFINISHED_004_LOGOFF.txt",
-          "logoffImage": "01615.bmp",
+          "logoffImage": "01615.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01615.bmp",
+              "logonImage": "01615.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "11114.bmp"
+                  "image": "11114.webp"
                 }
               ],
               "logoff": "UNFINISHED_004_LOGOFF.txt",
-              "logoffImage": "01615.bmp",
+              "logoffImage": "01615.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3770,53 +3770,53 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01610.bmp",
+          "logonImage": "01610.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12401.bmp"
+              "image": "12401.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "12402.bmp"
+              "image": "12402.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01610.bmp",
+          "logoffImage": "01610.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01610.bmp",
+              "logonImage": "01610.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12401.bmp"
+                  "image": "12401.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "12402.bmp"
+                  "image": "12402.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01610.bmp",
+              "logoffImage": "01610.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01610.bmp",
+              "logonImage": "01610.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "12403.bmp"
+                  "image": "12403.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "12403.bmp"
+                  "image": "12403.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01610.bmp",
+              "logoffImage": "01610.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3829,53 +3829,53 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01610.bmp",
+          "logonImage": "01610.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12411.bmp"
+              "image": "12411.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "12412.bmp"
+              "image": "12412.webp"
             }
           ],
           "logoff": "UNFINISHED_003_LOGOFF.txt",
-          "logoffImage": "01610.bmp",
+          "logoffImage": "01610.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01610.bmp",
+              "logonImage": "01610.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12411.bmp"
+                  "image": "12411.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "12412.bmp"
+                  "image": "12412.webp"
                 }
               ],
               "logoff": "UNFINISHED_003_LOGOFF.txt",
-              "logoffImage": "01610.bmp",
+              "logoffImage": "01610.webp",
               "defaultColor": "$C0"
             },
             "FINISHED": {
               "logon": "FINISHED_000_LOGON.txt",
-              "logonImage": "01610.bmp",
+              "logonImage": "01610.webp",
               "picts": [
                 {
                   "file": "FINISHED_001_PICT.txt",
-                  "image": "12403.bmp"
+                  "image": "12403.webp"
                 },
                 {
                   "file": "FINISHED_002_PICT.txt",
-                  "image": "12403.bmp"
+                  "image": "12403.webp"
                 }
               ],
               "logoff": "FINISHED_003_LOGOFF.txt",
-              "logoffImage": "01610.bmp",
+              "logoffImage": "01610.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3887,28 +3887,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01619.bmp",
+          "logonImage": "01619.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12420.bmp"
+              "image": "12420.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01619.bmp",
+          "logoffImage": "01619.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01619.bmp",
+              "logonImage": "01619.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12420.bmp"
+                  "image": "12420.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3920,28 +3920,28 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01619.bmp",
+          "logonImage": "01619.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "10502.bmp"
+              "image": "10502.webp"
             }
           ],
           "logoff": "UNFINISHED_002_LOGOFF.txt",
-          "logoffImage": "01619.bmp",
+          "logoffImage": "01619.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01619.bmp",
+              "logonImage": "01619.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "10502.bmp"
+                  "image": "10502.webp"
                 }
               ],
               "logoff": "UNFINISHED_002_LOGOFF.txt",
-              "logoffImage": "01619.bmp",
+              "logoffImage": "01619.webp",
               "defaultColor": "$C0"
             }
           }
@@ -3953,100 +3953,100 @@
           ],
           "defaultVariant": "UNFINISHED",
           "logon": "UNFINISHED_000_LOGON.txt",
-          "logonImage": "01620.bmp",
+          "logonImage": "01620.webp",
           "picts": [
             {
               "file": "UNFINISHED_001_PICT.txt",
-              "image": "12404.bmp"
+              "image": "12404.webp"
             },
             {
               "file": "UNFINISHED_002_PICT.txt",
-              "image": "10007.bmp"
+              "image": "10007.webp"
             },
             {
               "file": "UNFINISHED_003_PICT.txt",
-              "image": "12405.bmp"
+              "image": "12405.webp"
             },
             {
               "file": "UNFINISHED_004_PICT.txt",
-              "image": "12406.bmp"
+              "image": "12406.webp"
             },
             {
               "file": "UNFINISHED_005_PICT.txt",
-              "image": "01000.bmp"
+              "image": "01000.webp"
             },
             {
               "file": "UNFINISHED_006_PICT.txt",
-              "image": "01000.bmp"
+              "image": "01000.webp"
             },
             {
               "file": "UNFINISHED_007_PICT.txt",
-              "image": "01000.bmp"
+              "image": "01000.webp"
             },
             {
               "file": "UNFINISHED_008_PICT.txt",
-              "image": "01000.bmp"
+              "image": "01000.webp"
             },
             {
               "file": "UNFINISHED_009_PICT.txt",
-              "image": "01000.bmp"
+              "image": "01000.webp"
             },
             {
               "file": "UNFINISHED_010_PICT.txt",
-              "image": "01000.bmp"
+              "image": "01000.webp"
             }
           ],
           "logoff": "UNFINISHED_011_LOGOFF.txt",
-          "logoffImage": "01620.bmp",
+          "logoffImage": "01620.webp",
           "defaultColor": "$C0",
           "variantData": {
             "UNFINISHED": {
               "logon": "UNFINISHED_000_LOGON.txt",
-              "logonImage": "01620.bmp",
+              "logonImage": "01620.webp",
               "picts": [
                 {
                   "file": "UNFINISHED_001_PICT.txt",
-                  "image": "12404.bmp"
+                  "image": "12404.webp"
                 },
                 {
                   "file": "UNFINISHED_002_PICT.txt",
-                  "image": "10007.bmp"
+                  "image": "10007.webp"
                 },
                 {
                   "file": "UNFINISHED_003_PICT.txt",
-                  "image": "12405.bmp"
+                  "image": "12405.webp"
                 },
                 {
                   "file": "UNFINISHED_004_PICT.txt",
-                  "image": "12406.bmp"
+                  "image": "12406.webp"
                 },
                 {
                   "file": "UNFINISHED_005_PICT.txt",
-                  "image": "01000.bmp"
+                  "image": "01000.webp"
                 },
                 {
                   "file": "UNFINISHED_006_PICT.txt",
-                  "image": "01000.bmp"
+                  "image": "01000.webp"
                 },
                 {
                   "file": "UNFINISHED_007_PICT.txt",
-                  "image": "01000.bmp"
+                  "image": "01000.webp"
                 },
                 {
                   "file": "UNFINISHED_008_PICT.txt",
-                  "image": "01000.bmp"
+                  "image": "01000.webp"
                 },
                 {
                   "file": "UNFINISHED_009_PICT.txt",
-                  "image": "01000.bmp"
+                  "image": "01000.webp"
                 },
                 {
                   "file": "UNFINISHED_010_PICT.txt",
-                  "image": "01000.bmp"
+                  "image": "01000.webp"
                 }
               ],
               "logoff": "UNFINISHED_011_LOGOFF.txt",
-              "logoffImage": "01620.bmp",
+              "logoffImage": "01620.webp",
               "defaultColor": "$C0"
             }
           }

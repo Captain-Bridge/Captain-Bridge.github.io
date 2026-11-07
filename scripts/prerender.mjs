@@ -18,6 +18,7 @@
 //   - /news/articles/*/ 新闻详情页（SEO meta 增强）
 
 import fs from 'node:fs/promises';
+import { collectLoreEntries } from '../source/js/archive-data.mjs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -130,25 +131,6 @@ async function buildNews(sourceDir) {
 // 2. 百科 /marathon-lore/
 // ---------------------------------------------------------------
 // 遍历模块树，收集叶子条目（带 title + summary 或 bodyFile 的节点）。
-function collectLoreEntries(node, out) {
-  if (!node || typeof node !== 'object') return;
-  if (Array.isArray(node.sections) && node.sections.length) {
-    for (const child of node.sections) collectLoreEntries(child, out);
-    return;
-  }
-  if (Array.isArray(node.children) && node.children.length) {
-    for (const child of node.children) collectLoreEntries(child, out);
-    return;
-  }
-  if (Array.isArray(node.nodes) && node.nodes.length) {
-    for (const child of node.nodes) collectLoreEntries(child, out);
-    return;
-  }
-  if (node.title && (node.summary || node.bodyFile)) {
-    out.push(node);
-  }
-}
-
 async function buildLore(sourceDir) {
   const index = await readJson(path.join(sourceDir, 'marathon-lore/content/index.json'));
   const modules = Array.isArray(index) ? index : [];
@@ -159,15 +141,14 @@ async function buildLore(sourceDir) {
     const moduleRel = String(mod?.module || '').replace(/^\/marathon-lore\/content\//, '');
     if (!moduleRel) continue;
     const moduleData = await readJson(path.join(sourceDir, 'marathon-lore/content', moduleRel));
-    const entries = [];
-    collectLoreEntries(moduleData, entries);
+    const entries = moduleData ? collectLoreEntries(moduleData) : [];
     if (!entries.length) continue;
 
     const items = entries
-      .map((e) => {
+      .map(({ entry: e, url }) => {
         const meta = Array.isArray(e.meta) && e.meta.length ? ` <small>（${e.meta.map(esc).join(' / ')}）</small>` : '';
         const summary = e.summary ? ` — ${esc(String(e.summary).slice(0, 160))}` : '';
-        return `  <li><strong>${esc(e.title)}</strong>${summary}${meta}</li>`;
+        return `  <li><a href="${esc(url)}">${esc(e.title)}</a>${summary}${meta}</li>`;
       })
       .join('\n');
 
@@ -400,7 +381,7 @@ async function enhanceLandingPages(publicDir) {
       }
       if (!entry.name.toLowerCase().endsWith('.html')) continue;
       const route = routeFromPublicFile(publicDir, file);
-      if (route.startsWith('/news/articles/')) continue;
+      if (route.startsWith('/news/articles/') || route.startsWith('/marathon-lore/entry/')) continue;
       let html = await fs.readFile(file, 'utf8');
       const meta = pageSeoFor(route, html);
       html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${esc(meta.title)}</title>`);

@@ -784,23 +784,23 @@ layout: false
     const CHAPTER_GROUPS = {
       m1: [
         { from: '00', to: '02', image: '/Classic-marathon/chapter-images/M1-01500.webp' },
-        { from: '03', to: '09', image: '01503.bmp' },
-        { from: '10', to: '11', image: '01510.bmp' },
-        { from: '12', to: '16', image: '01512.bmp' },
-        { from: '17', to: '23', image: '01516.bmp' },
-        { from: '24', to: '26', image: '01524.bmp' },
-        { after: '26', image: '01598.bmp' }
+        { from: '03', to: '09', image: '01503.webp' },
+        { from: '10', to: '11', image: '01510.webp' },
+        { from: '12', to: '16', image: '01512.webp' },
+        { from: '17', to: '23', image: '01516.webp' },
+        { from: '24', to: '26', image: '01524.webp' },
+        { after: '26', image: '01598.webp' }
       ],
       m2: [
         { from: '00', to: '02', image: '/Classic-marathon/chapter-images/M2-01500.webp' },
-        { from: '03', to: '05', image: '01503.bmp' },
-        { from: '06', to: '08', image: '01506.bmp' },
-        { from: '09', to: '12', image: '01509.bmp' },
-        { from: '13', to: '17', image: '01513.bmp' },
-        { from: '18', to: '18', image: '01517.bmp' },
-        { from: '19', to: '21', image: '01518.bmp' },
-        { from: '22', to: '24', image: '01522.bmp' },
-        { from: '25', to: '27', image: '01525.bmp' }
+        { from: '03', to: '05', image: '01503.webp' },
+        { from: '06', to: '08', image: '01506.webp' },
+        { from: '09', to: '12', image: '01509.webp' },
+        { from: '13', to: '17', image: '01513.webp' },
+        { from: '18', to: '18', image: '01517.webp' },
+        { from: '19', to: '21', image: '01518.webp' },
+        { from: '22', to: '24', image: '01522.webp' },
+        { from: '25', to: '27', image: '01525.webp' }
       ],
       m3: [
         { from: '00', to: '00', image: '/Classic-marathon/M3/M3-PROLOGUE.webp', label: 'Prologue' },
@@ -1111,8 +1111,8 @@ layout: false
       // currently visible (possibly collapsed) items.
       const rail = container.closest('.rail');
       if (rail) {
-        rail.style.width = '390px';
-        rail.style.minWidth = '390px';
+        rail.style.width = 'min(390px, 100%)';
+        rail.style.minWidth = '0';
       }
     }
 
@@ -1220,7 +1220,7 @@ layout: false
 
     async function fetchTextFile(url) {
       if (textCache.has(url)) return textCache.get(url);
-      const pending = fetch(url, { cache: 'no-store' }).then(response => {
+      const pending = fetch(url).then(response => {
         if (!response.ok) throw new Error('Failed to fetch ' + url);
         return response.text();
       });
@@ -1464,14 +1464,14 @@ layout: false
       }
 
         return [
-        { kind: 'logon', file: replaceTerminalVariant(terminal.logon, variant), image: terminal.logonImage || '01600.bmp' },
+        { kind: 'logon', file: replaceTerminalVariant(terminal.logon, variant), image: terminal.logonImage || '01600.webp' },
         ...toInformationItems(terminal.information, variant),
         ...((terminal.picts || []).map(item => ({
           kind: 'pict',
           file: replaceTerminalVariant(item.file, variant),
           image: item.image
         }))),
-        { kind: 'logoff', file: replaceTerminalVariant(terminal.logoff, variant), image: terminal.logoffImage || '01600.bmp' }
+        { kind: 'logoff', file: replaceTerminalVariant(terminal.logoff, variant), image: terminal.logoffImage || '01600.webp' }
       ].filter(item => item.file);
     }
 
@@ -1574,7 +1574,7 @@ layout: false
     }
 
     function loadClassicCatalog(path, label, title) {
-      return fetch('/Classic-marathon/' + path + '/terminals.json', { cache: 'no-store' })
+      return fetch('/Classic-marathon/' + path + '/terminals.json')
         .then(response => {
           if (!response.ok) throw new Error('Failed to load terminals.json');
           return response.json();

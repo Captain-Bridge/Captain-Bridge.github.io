@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build-static.mjs",
+    "check:content": "node tools/check-content.mjs",
+    "check:browser": "node tools/check-browser.mjs",
+    "test": "node --test tests/*.test.mjs",
     "check:pages-size": "node tools/check-pages-size.mjs public",
     "clean": "node scripts/clean-static.mjs",
     "convert:png-webp": "python tools/convert-png-to-webp.py",

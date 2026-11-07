@@ -1,7 +1,6 @@
 (() => {
-  const DATA_URL = "/news/data/marathon-news.json";
+  const DATA_URL = "/news/data/news-index.json";
   const FALLBACK_ICON = "/marathon-lore/assets/images/icons/marathon-brand-mark.webp";
-  const FEATURE_PREVIEW_LIMIT = 180;
 
   const state = {
     data: null,
@@ -80,36 +79,16 @@
     } else {
       url.searchParams.set("page", String(page));
     }
-    window.history.replaceState({}, "", url);
+    if (url.href !== window.location.href) window.history.pushState({}, "", url);
   }
 
   function getPrimaryImage(item) {
-    return item.images?.primary?.url || FALLBACK_ICON;
+    return item.image || FALLBACK_ICON;
   }
 
-  function getExcerpt(item) {
-    return (
-      item.content?.zh?.excerpt ||
-      item.content?.zh?.subtitle ||
-      item.content?.zh?.bodyText?.slice(0, 220) ||
-      item.content?.en?.excerpt ||
-      item.content?.en?.subtitle ||
-      item.content?.en?.bodyText?.slice(0, 220) ||
-      ""
-    );
-  }
-
-  function getDisplayTitle(item) {
-    return item.content?.zh?.title || item.content?.en?.title || item.slug || "";
-  }
-
-  function getDisplaySubtitle(item) {
-    return item.content?.zh?.subtitle || item.content?.en?.subtitle || getExcerpt(item);
-  }
-
-  function getDisplayBodyPreview(item) {
-    return item.content?.zh?.bodyText || item.content?.en?.bodyText || "";
-  }
+  function getExcerpt(item) { return item.excerpt || ''; }
+  function getDisplayTitle(item) { return item.title || item.slug || ''; }
+  function getDisplaySubtitle(item) { return item.subtitle || getExcerpt(item); }
 
   function createCard(item) {
     const imageUrl = getPrimaryImage(item);
@@ -127,7 +106,7 @@
     return `
       <article class="article-card">
         <a class="article-thumb${isFallback ? " fallback" : ""}" href="${detailUrl}">
-          <img src="${escapeHtml(imageUrl)}" alt="${title}">
+          <img src="${escapeHtml(imageUrl)}" alt="${title}" loading="lazy" decoding="async" width="960" height="540">
         </a>
         <div class="article-body">
           <span class="article-kicker">${category}</span>
@@ -162,18 +141,13 @@
     const category = escapeHtml(item.category);
     const articleUrl = escapeHtml(item.localPath || item.articleUrl?.en || item.articleUrl);
     const sourceUrl = escapeHtml(item.articleUrl?.en || item.articleUrl);
-    const bodySource = getDisplayBodyPreview(item).replace(/\s+/g, " ").trim();
-    const reducedBodySource = bodySource.startsWith(subtitleText)
-      ? bodySource.slice(subtitleText.length).trim()
-      : bodySource;
-    const previewSource = reducedBodySource || bodySource;
-    const previewText = previewSource.slice(0, FEATURE_PREVIEW_LIMIT).trim();
+    const previewText = item.preview || '';
     const bodyPreview = escapeHtml(previewText);
     const hasPreview = Boolean(previewText);
 
     els.feature.innerHTML = `
       <div class="feature-media">
-        <img src="${escapeHtml(imageUrl)}" alt="${title}">
+        <img src="${escapeHtml(imageUrl)}" alt="${title}" fetchpriority="high" decoding="async" width="960" height="540">
       </div>
       <div class="feature-copy">
         <span class="article-kicker">${category}</span>
@@ -184,7 +158,7 @@
           <span>${item.metrics.wordCount} 字</span>
         </div>
         <p class="feature-subtitle">${subtitle}</p>
-        ${hasPreview ? `<p class="feature-preview">${bodyPreview}${previewSource.length > FEATURE_PREVIEW_LIMIT ? "..." : ""}</p>` : ""}
+        ${hasPreview ? `<p class="feature-preview">${bodyPreview}${item.hasMorePreview ? "..." : ""}</p>` : ""}
         <div class="article-actions">
           <a class="action-link" href="${articleUrl}">进入详情页</a>
           <a class="action-link secondary" href="${sourceUrl}" target="_blank" rel="noreferrer">查看 Bungie 原文</a>
@@ -229,7 +203,7 @@
       .join("");
   }
 
-  function renderPage() {
+  function renderPage(updateHistory = true) {
     const items = state.data?.items || [];
     const itemsPerPage = state.data?.itemsPerPage || 8;
     const totalPages = Math.max(1, Math.ceil(items.length / itemsPerPage));
@@ -254,11 +228,11 @@
     }
 
     renderPagination(totalPages);
-    setPageInUrl(state.currentPage);
+    if (updateHistory) setPageInUrl(state.currentPage);
   }
 
   async function loadData() {
-    const response = await fetch(DATA_URL, { cache: "no-store" });
+    const response = await fetch(DATA_URL);
     if (!response.ok) {
       throw new Error(`Unable to load ${DATA_URL}`);
     }
@@ -277,8 +251,8 @@
 
     if (els.sourceState) {
       els.sourceState.textContent =
-        data.translation?.generatedCount || data.bilingualSummary?.bilingualCount
-          ? "中英正文已就绪"
+        data.bilingualCount
+          ? `中英双语 ${data.bilingualCount}/${data.count} 篇`
           : "英文正文";
     }
 
@@ -292,7 +266,7 @@
     }
 
     renderFeature(data.items[0]);
-    renderPage();
+    renderPage(false);
   }
 
   function bindEvents() {
@@ -332,6 +306,11 @@
     }
   }
 
+  window.addEventListener('popstate', () => {
+    if (!state.data) return;
+    state.currentPage = getPageFromUrl();
+    renderPage(false);
+  });
   bindEvents();
 
   loadData().catch((error) => {

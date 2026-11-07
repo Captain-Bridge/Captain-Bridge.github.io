@@ -122,7 +122,7 @@
           "summary": "解锁军械库中的KKV-9SD。",
           "unlockName": "已解锁可购买物品",
           "unlockNums": "",
-          "unlockIcon": "/factions/data/kkv-9SD.webp",
+          "unlockIcon": "/factions/data/KKV-9SD.webp",
           "materials": [
             {
               "materialId": "material_1",

@@ -835,7 +835,7 @@ function refreshPoiVisualScale() {
 }
 
 function getPoiVisualScale(iconSize) {
-  const minimumPixels = 14;
+  const minimumPixels = window.matchMedia('(pointer: coarse)').matches ? 24 : 14;
   const currentPixels = iconSize * state.zoom;
 
   if (currentPixels <= 0) {
@@ -1147,7 +1147,7 @@ function getActivePointerPoints() {
 }
 
 async function fetchJson(path) {
-  const response = await fetch(path, { cache: "no-store" });
+  const response = await fetch(path);
 
   if (!response.ok) {
     throw new Error(`Failed to fetch ${path}: ${response.status}`);

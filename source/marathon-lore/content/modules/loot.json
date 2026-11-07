@@ -556,7 +556,7 @@
               ],
               "icon": "badge",
               "iconImage": "/marathon-lore/content/docs/loot/weapon/biotoxic_disinjector_icon.webp",
-              "bodyFile": "/marathon-lore/content/docs/loot/weapon/biotoxic_disinjector.md",
+              "bodyFile": null,
               "image": "/marathon-lore/content/docs/loot/weapon/biotoxic_disinjector.webp"
             }
           ]

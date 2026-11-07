@@ -665,7 +665,7 @@
             {
               "materialId": "material_2",
               "materialName": "生物透镜种子",
-              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
               "materialNums": "4"
             },
             {
@@ -694,13 +694,13 @@
             {
               "materialId": "material_2",
               "materialName": "神经绝缘体",
-              "materialIcon": "/factions/data/neural_insulator.webp",
+              "materialIcon": "/marathon-lore/content/docs/loot/items/neural_insulator_icon.webp",
               "materialNums": "9"
             },
             {
               "materialId": "material_3",
               "materialName": "酶复制器",
-              "materialIcon": "/factions/data/enzyme_replicator.webp",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
               "materialNums": "5"
             }
           ]
@@ -766,7 +766,7 @@
             {
               "materialId": "material_3",
               "materialName": "蒲公英种子",
-              "materialIcon": "/factions/data/Dandelion_seed.webp",
+              "materialIcon": "/factions/data/Dandelion_seeds.webp",
               "materialNums": "3"
             }
           ]
@@ -795,7 +795,7 @@
             {
               "materialId": "material_3",
               "materialName": "生物透镜种子",
-              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
               "materialNums": "2"
             }
           ]
@@ -824,7 +824,7 @@
             {
               "materialId": "material_3",
               "materialName": "酶复制器",
-              "materialIcon": "/factions/data/enzyme_replicator.webp",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
               "materialNums": "4"
             }
           ]
@@ -889,7 +889,7 @@
             {
               "materialId": "material_3",
               "materialName": "蒲公英种子",
-              "materialIcon": "/factions/data/Dandelion_seed.webp",
+              "materialIcon": "/factions/data/Dandelion_seeds.webp",
               "materialNums": "10"
             }
           ]
@@ -947,7 +947,7 @@
             {
               "materialId": "material_3",
               "materialName": "酶复制器",
-              "materialIcon": "/factions/data/enzyme_replicator.webp",
+              "materialIcon": "/factions/data/Enzyme_replicator.webp",
               "materialNums": "5"
             }
           ]
@@ -1069,7 +1069,7 @@
             {
               "materialId": "material_3",
               "materialName": "生物透镜种子",
-              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
               "materialNums": "1"
             }
           ]
@@ -1131,7 +1131,7 @@
             {
               "materialId": "material_2",
               "materialName": "生物透镜种子",
-              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
               "materialNums": "7"
             },
             {
@@ -1234,7 +1234,7 @@
             {
               "materialId": "material_3",
               "materialName": "生物透镜种子",
-              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
               "materialNums": "2"
             }
           ]
@@ -1325,7 +1325,7 @@
             {
               "materialId": "material_2",
               "materialName": "生物透镜种子",
-              "materialIcon": "/factions/data/Biological_Lens_Seed.webp",
+              "materialIcon": "/factions/data/Biological_lens_seed.webp",
               "materialNums": "7"
             },
             {
