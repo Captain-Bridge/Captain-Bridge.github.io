@@ -62,6 +62,7 @@ const routes = [
   ['article', '/news/articles/marathon-update-1-1-9-6/', '.story-content'],
   ['lore', '/marathon-lore/', '[data-kind="category"]'],
   ['lore-detail', '/marathon-lore/#marathon-lore/loot/weapon/secret_collection/biotoxic_disinjector/__variant_b', '.detail-copy'],
+  ['lore-recording', '/marathon-lore/#marathon-lore/world/perimeter/perimeter_collection/vacuum_tree/vacuum_tree_log1', '.detail-copy.terminal'],
   ['lore-ranked', '/marathon-lore/#marathon-lore/career/rating/rank', '.entry-card'],
   ['lore-static', '/marathon-lore/entry/loot/weapon/secret_collection/biotoxic_disinjector/', '.lore-article h1'],
   ['tags', '/marathon-lore/#marathon-lore/tags', '.tag-item'],
@@ -73,7 +74,7 @@ const routes = [
 ];
 try {
   for (const width of [320, 360, 390, 768, 844, 1440]) {
-    for (const [name, route, selector] of routes) {
+    for (const [name, route, selector] of routes.filter(([name]) => !process.env.CHECK_ROUTES || process.env.CHECK_ROUTES.split(',').includes(name))) {
       const target = await fetch(`${cdp}/json/new?about:blank`, { method: 'PUT' }).then(response => response.json());
       const client = await connect(target.webSocketDebuggerUrl);
       const errors = [];
@@ -135,6 +136,34 @@ try {
           if (width === 1440 && terminal.width < 620) errors.push('Classic terminal screen was narrowed by the outer layout');
           if (!terminal.font.includes('Consolas') || terminal.color !== 'rgb(0, 255, 0)') errors.push('Classic terminal typography or color changed');
         }
+        if (ready && name === 'lore-recording') {
+          await evaluate(`document.querySelector('.detail-stage-body').scrollIntoView({block:'start'})`);
+          await delay(100);
+          if (width === 1440) {
+            const before = await evaluate(`(() => {const copy=document.querySelector('.detail-copy'); const r=copy.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+100,top:copy.scrollTop,imageTop:document.querySelector('.visual-media').getBoundingClientRect().top,page:scrollY}})()`);
+            await client.send('Input.dispatchMouseEvent', { type: 'mouseWheel', x: before.x, y: before.y, deltaX: 0, deltaY: 420 });
+            await delay(250);
+            const after = await evaluate(`({top:document.querySelector('.detail-copy').scrollTop,imageTop:document.querySelector('.visual-media').getBoundingClientRect().top,page:scrollY})`);
+            if (after.top <= before.top || Math.abs(after.imageTop-before.imageTop)>1 || after.page !== before.page) errors.push('Recording wheel did not independently scroll the text');
+            await evaluate(`document.querySelector('.detail-copy').scrollTop=0`);
+            await delay(400);
+            await client.send('Input.dispatchMouseEvent', { type: 'mouseWheel', x: before.x, y: before.y, deltaX: 0, deltaY: -300 });
+            await delay(250);
+            if (await evaluate('scrollY') >= after.page) errors.push('Recording scroll edge trapped the page');
+            await evaluate(`document.querySelector('.detail-copy').scrollTop=0;document.querySelector('.detail-ticker-top').scrollIntoView({block:'start'})`);
+          } else {
+            const before = await evaluate(`(() => {const copy=document.querySelector('.detail-copy');copy.scrollIntoView({block:'start'});return {page:scrollY,height:copy.clientHeight,scroll:copy.scrollHeight}})()`);
+            await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: width / 2, y: 260, id: 0 }] });
+            for (let i=1;i<=6;i++) {
+              await client.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: width / 2, y: 260-i*25, id: 0 }] });
+              await delay(20);
+            }
+            await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+            await delay(200);
+            if (await evaluate('scrollY') <= before.page || before.scroll > before.height+1) errors.push('Recording text does not use native page scrolling on mobile');
+            await evaluate(`document.querySelector('.detail-ticker-top').scrollIntoView({block:'start'})`);
+          }
+        }
         if (width === 390 || width === 1440) {
           await evaluate(`Promise.race([Promise.all([...document.images].filter(image=>{const r=image.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0}).map(image=>image.decode().catch(()=>{}))),new Promise(resolve=>setTimeout(resolve,4000))])`);
           const shot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
@@ -142,6 +171,13 @@ try {
         }
         // Exercise primary navigation and detail rendering on a phone and desktop.
         if (ready && (width === 390 || width === 1440)) {
+          if (name === 'lore-recording') {
+            if (!await evaluate(`Boolean(document.querySelector('[data-audio-track]') && document.querySelector('audio source')?.src.includes('vacuum_tree_log1.opus'))`)) errors.push('Recording audio control is missing');
+            await evaluate(`document.querySelector('[data-log-id="vacuum_tree_log2"]').click()`);
+            if (!await waitFor(`document.querySelector('.detail-copy')?.getAttribute('aria-label')==='盆栽照料手册' && document.querySelector('.detail-copy').scrollTop===0 && !document.querySelector('audio')`)) errors.push('Recording switch failed to reset text and audio');
+            await evaluate(`document.querySelector('[data-log-id="vacuum_tree_log1"]').click()`);
+            if (!await waitFor(`Boolean(document.querySelector('audio source')?.src.includes('vacuum_tree_log1.opus'))`)) errors.push('Recording audio did not return after switching');
+          }
           if (width === 390 && name === 'home') {
             await evaluate(`document.querySelector('.site-menu-toggle').click()`);
             if (!await waitFor(`document.querySelector('.site-menu-toggle').getAttribute('aria-expanded')==='true' && document.querySelector('.site-navigation').getBoundingClientRect().height>0`)) errors.push('Mobile navigation did not open');

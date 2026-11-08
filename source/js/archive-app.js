@@ -2194,12 +2194,7 @@ async function detailView(generation) {
         ${summaryText ? `<blockquote>${summaryText}</blockquote>` : ''}
         <div class="markdown-body">${bodyContent}</div>
       `
-    : `
-        ${metaList(activeLog?.meta || [])}
-        <h2>${activeLog?.title || entry.title}</h2>
-        ${summaryText ? `<blockquote>${summaryText}</blockquote>` : ''}
-        ${bodyContent}
-      `;
+    : bodyContent;
 
   const visualSource = {
     ...(isVariantB ? (entry.variantB || entry) : (activeLog || entry.variantA || entry)),
@@ -2220,9 +2215,10 @@ async function detailView(generation) {
   const copyClass = !isVariantB
     ? 'detail-copy scrollbar terminal'
     : 'detail-copy scrollbar';
+  const copyMarkup = `<div class="${copyClass}" tabindex="0" role="region" aria-label="${escapeHtml(activeLog?.title || entry.title)}">${content}</div>`;
   const pair = isVariantB
-    ? `<div class="${copyClass}">${content}</div>${visual(visualSource, audioBlock)}`
-    : `${visual(visualSource, audioBlock)}<div class="${copyClass}">${content}</div>`;
+    ? `${copyMarkup}${visual(visualSource, audioBlock)}`
+    : `${visual(visualSource, audioBlock)}${copyMarkup}`;
   const hasLogRail = activeVariant === 'a' && logs.length > 1;
   const layoutClass = hasLogRail ? 'detail-layout detail-layout-a' : 'detail-layout detail-layout-b';
   const railMarkup = hasLogRail
@@ -2276,12 +2272,14 @@ async function detailView(generation) {
       <a class="entry-permalink" href="${escapeHtml(loreEntryUrl(category.id, section.id, state.nodePath))}">独立阅读 / 分享条目</a>
       <div class="${layoutClass}">
         ${railMarkup}
-	        <section class="detail-stage" data-debug-name="detail-stage">
+	        <section class="detail-stage${isVariantB ? '' : ' detail-stage-terminal'}" data-debug-name="detail-stage">
 	          <div class="detail-stage-head">
 	            <div class="entry-header-copy">
 	              ${buildBreadcrumbs([category.title, section.title, ...folderChain.map(item => item.title), entry.title])}
 	              <h2>${activeLog?.title || entry.title}</h2>
 	              ${headCopy}
+                  ${!isVariantB && !hasLogRail && summaryText ? `<p>${summaryText}</p>` : ''}
+                  ${isVariantB ? '' : metaList(activeLog?.meta || [])}
 	            </div>
 		          </div>
             ${topTicker}
