@@ -6,12 +6,17 @@ import { checkContent } from '../tools/check-content.mjs';
 import { buildNewsIndex } from './build-news-index.mjs';
 import { buildLore } from './build-lore.mjs';
 import { prerender } from './prerender.mjs';
+import { applySiteShell } from './site-shell.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const sourceDir = path.join(root, 'source');
 const publicDir = path.join(root, 'public');
 const siteUrl = 'https://marathon.uesc.top';
 const gaMeasurementId = 'G-NX8R0D0494';
+const newsCovers = await fs.readFile(path.join(sourceDir, 'news/assets/cover-index.json'), 'utf8').then(JSON.parse).catch(error => {
+  if (error.code === 'ENOENT') return {};
+  throw error;
+});
 
 // Validate before replacing the previous build, including Linux-sensitive paths.
 await checkContent();
@@ -55,6 +60,14 @@ const analytics = `<script async src="https://www.googletagmanager.com/gtag/js?i
 for (const file of htmlFiles) {
   let html = await fs.readFile(file, 'utf8');
   html = html.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+  html = html.replace(/<img\b[^>]*>/gi, tag => {
+    const src = tag.match(/\bsrc=["']([^"']+)["']/)?.[1];
+    const cover = newsCovers[src];
+    if (!cover) return tag;
+    let updated = tag.replace(src, cover.path);
+    if (!/\bwidth=/.test(updated)) updated = updated.replace('<img', `<img width="${cover.width}" height="${cover.height}"`);
+    return updated;
+  });
   if (!/<link\b[^>]*rel=["'](?:shortcut )?icon["']/i.test(html)) html = html.replace('</head>', '<link rel="icon" href="/marathon-lore/assets/images/icons/marathon-icon.jpg">\n</head>');
   // data-src keeps decoration out of the preload scanner on mobile.
   html = html.replace(/<video\b[^>]*>[\s\S]*?<\/video>/gi, video => {
@@ -65,6 +78,9 @@ for (const file of htmlFiles) {
       .replace('<video', '<video data-background-video');
   });
   html = html.replace('</head>', '<link rel="stylesheet" href="/css/mobile.css">\n<script src="/js/site-media.js" defer></script>\n</head>');
+  const relative = path.relative(publicDir, file).replaceAll(path.sep, '/');
+  const route = relative === 'index.html' ? '/' : '/' + relative.replace(/index\.html$/, '');
+  html = applySiteShell(html, route);
   html = html.replace(/((?:src|href)=["']\/[^"']+\.(?:css|m?js))(?:\?[^"']*)?(["'])/g, `$1?v=${version}$2`);
   if (!html.includes(`googletagmanager.com/gtag/js?id=${gaMeasurementId}`)) html = html.replace('</head>', analytics + '\n</head>');
   await fs.writeFile(file, html);

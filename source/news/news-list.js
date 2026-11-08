@@ -110,7 +110,7 @@
         </a>
         <div class="article-body">
           <span class="article-kicker">${category}</span>
-          <h2 class="article-title">${title}</h2>
+          <h2 class="article-title"><a href="${detailUrl}">${title}</a></h2>
           <div class="article-meta">
             <span>${publishedAt}</span>
             <span>${author}</span>

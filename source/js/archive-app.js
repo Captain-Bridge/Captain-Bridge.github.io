@@ -1436,22 +1436,23 @@ async function showPreviewTooltip(anchor, bodyFile) {
 
 function buildCategoryTabs(activeCategoryId) {
   return `
-    <div class="section-tabs">
+    <nav class="section-tabs" aria-label="百科分类">
       ${categoryData.map(item => `
         <button
           class="tab-btn ${item.id === activeCategoryId ? 'is-active' : ''}"
           type="button"
           data-kind="category"
           data-category-id="${item.id}"
+          ${item.id === activeCategoryId ? 'aria-current="page"' : ''}
         >${item.title}</button>
       `).join('')}
-    </div>
+    </nav>
   `;
 }
 
 function buildSectionTabs(category, activeSectionId) {
   return `
-    <div class="section-tabs">
+    <nav class="section-tabs" aria-label="${escapeAttr(category.title)}子分类">
       ${category.sections.map(item => `
         <button
           class="tab-btn ${item.id === activeSectionId ? 'is-active' : ''}"
@@ -1459,9 +1460,10 @@ function buildSectionTabs(category, activeSectionId) {
           data-kind="section"
           data-category-id="${category.id}"
           data-section-id="${item.id}"
+          ${item.id === activeSectionId ? 'aria-current="page"' : ''}
         >${item.title}</button>
       `).join('')}
-    </div>
+    </nav>
   `;
 }
 
@@ -1469,10 +1471,10 @@ function buildDeepViewTabs(category, activeSectionId) {
   return `
     <div class="deep-view-tabs">
       <div class="deep-view-tabs-primary">
-        ${buildSectionTabs(category, activeSectionId)}
+        ${buildCategoryTabs(category.id)}
       </div>
       <div class="deep-view-tabs-secondary">
-        ${buildCategoryTabs(category.id)}
+        ${buildSectionTabs(category, activeSectionId)}
       </div>
     </div>
   `;
@@ -1568,13 +1570,14 @@ function rootView() {
         </div>
       </div>
       <div class="top-grid scrollbar">
-        ${categoryData.map(category => `
+        ${categoryData.map((category, index) => `
           <button
             class="card top-card"
             type="button"
             data-kind="category"
             data-category-id="${category.id}"
           >
+            <span class="archive-card-index">${String(index + 1).padStart(2, '0')} ↗</span>
             <div class="card-head">
               <span class="card-icon">${iconVisual(category)}</span>
               <div>

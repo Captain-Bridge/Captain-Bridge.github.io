@@ -11,6 +11,17 @@ import { markdownToHtml, escapeHtml } from '../source/js/archive-markdown.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const json = async relative => JSON.parse(await fs.readFile(path.join(root, relative), 'utf8'));
 
+test('homepage redesign preserves the baseline module copy and quotation', async () => {
+  const home = await fs.readFile(path.join(root, 'source/index.html'), 'utf8');
+  const baseline = await json('tests/fixtures/home-copy.json');
+  for (const { href, title, paragraphs } of baseline.cards) {
+    assert.ok(home.includes(`href="${href}"`), href);
+    assert.ok(home.includes(title), title);
+    for (const text of paragraphs) assert.ok(home.includes(text), text);
+  }
+  for (const text of baseline.quote) assert.ok(home.includes(text), text);
+});
+
 test('built HTML links and asset URLs resolve with exact filename case', async () => {
   await checkLinks(path.join(root, 'public'));
 });
@@ -78,12 +89,14 @@ test('built lore pages include full readable content, links and sitemap entries'
   assert.doesNotMatch(sitemap, /<lastmod>/, 'Build timestamps must not masquerade as content dates');
 });
 
-test('background video URLs are deferred before the preload scanner sees them', async () => {
+test('decorative video never creates an eager media request', async () => {
   for (const route of ['index.html', 'marathon-lore/index.html', 'store/index.html']) {
     const html = await fs.readFile(path.join(root, 'public', route), 'utf8');
     const video = html.match(/<video\b[\s\S]*?<\/video>/)?.[0];
-    assert.ok(video?.includes('data-background-video'));
-    assert.doesNotMatch(video, /\sautoplay\b|\ssrc=/);
-    assert.match(video, /data-src=/);
+    if (video) {
+      assert.ok(video.includes('data-background-video'));
+      assert.doesNotMatch(video, /\sautoplay\b|\ssrc=/);
+      assert.match(video, /data-src=/);
+    }
   }
 });

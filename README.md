@@ -58,3 +58,11 @@ npm run check:browser
 - 缺失正文的「生物毒素分离注射器」目前展示条目摘要；相邻的 `biotoxic_disinjector_icon.md` 内容属于其他条目，未用作替代。补齐正确正文后再设置 `bodyFile`。
 
 仓库中的 `_config*.yml`、`themes/` 及部分旧 Hexo 脚本用于历史参考，当前静态构建不读取它们。原始归档 ZIP 保留供资料维护使用。
+
+## 前端设计结构
+
+- `scripts/site-shell.mjs` 在构建时统一生成品牌导航、模块标题与页脚，保留原有内容 URL；`source/js/site-ui.js` 管理手机导航和媒体加载失败的替代封面。
+- `source/css/site.css` 是全站设计层，在页面基础样式和手机兼容样式后加载。采用贴近 Marathon（2026）的黑底、荧光黄绿、冷白文字、技术网格与直角切边，保持响应式内容布局。页面标题与首页引文沿用基础版本。
+- 首页使用现有游戏图像生成的 800 / 1600 像素 WebP，手机首屏不加载视频；最新新闻由构建阶段生成，无额外运行时列表请求。
+- 经典终端的原始 HTML、脚本、终端屏幕字体、配色和内容排版保留。设计层只调整它的品牌导航、目录、作品切换和外部布局。
+- 新闻封面可通过 `node tools/cache-news-covers.mjs` 下载并生成 WebP（需要 Python / Pillow）。缓存映射维护在 `source/news/assets/cover-index.json`；构建过程只读取本地缓存，不联网。源新闻 JSON 仍保留官方图片 URL。

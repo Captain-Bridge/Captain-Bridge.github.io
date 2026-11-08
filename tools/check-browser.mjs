@@ -62,10 +62,13 @@ const routes = [
   ['article', '/news/articles/marathon-update-1-1-9-6/', '.story-content'],
   ['lore', '/marathon-lore/', '[data-kind="category"]'],
   ['lore-detail', '/marathon-lore/#marathon-lore/loot/weapon/secret_collection/biotoxic_disinjector/__variant_b', '.detail-copy'],
+  ['lore-ranked', '/marathon-lore/#marathon-lore/career/rating/rank', '.entry-card'],
   ['lore-static', '/marathon-lore/entry/loot/weapon/secret_collection/biotoxic_disinjector/', '.lore-article h1'],
   ['tags', '/marathon-lore/#marathon-lore/tags', '.tag-item'],
   ['store', '/store/', '.store-card'], ['bundles', '/store/#bundles', '.store-bundle-card'],
   ['map', '/map/perimeter/', '.map-poi'], ['factions', '/factions/', '.force-node'],
+  ['map-marsh', '/map/dire-marsh/', '.map-poi'], ['map-night', '/map/dire-marsh-night/', '.map-poi'],
+  ['map-outpost', '/map/outpost/', '.map-poi'], ['map-cryo', '/map/cryo-archive/', '.map-poi'],
   ['classic', '/Classic-marathon/', '#terminal-body .doc-section'], ['about', '/about/', 'main'],
 ];
 try {
@@ -110,12 +113,47 @@ try {
         if (name === 'lore' && requests.some(url => /content\/modules\//.test(url))) errors.push('Lore home eagerly fetched category modules');
         if (name === 'news' && requests.some(url => /marathon-news\.json/.test(url))) errors.push('News fetched full article data');
         if (await evaluate(`Boolean(document.querySelector('main')?.innerText.includes('undefined'))`)) errors.push('Rendered an undefined data field');
+        if (ready && (name === 'lore-detail' || name === 'lore-ranked')) {
+          const menus = await evaluate(`(() => {
+            const parent = document.querySelector('.deep-view-tabs-primary');
+            const child = document.querySelector('.deep-view-tabs-secondary');
+            return { parentBottom: parent.getBoundingClientRect().bottom, childTop: child.getBoundingClientRect().top,
+              parentKinds: [...parent.querySelectorAll('button')].every(button => button.dataset.kind === 'category'),
+              childKinds: [...child.querySelectorAll('button')].every(button => button.dataset.kind === 'section'),
+              parentActive: getComputedStyle(parent.querySelector('.is-active')).backgroundColor,
+              childActive: getComputedStyle(child.querySelector('.is-active')).backgroundColor };
+          })()`);
+          if (menus.childTop <= menus.parentBottom || !menus.parentKinds || !menus.childKinds || menus.parentActive === menus.childActive) errors.push('Encyclopedia menu hierarchy is not visually distinct');
+        }
+        if (ready && (name === 'store' || name === 'bundles')) {
+          const columns = await evaluate(`getComputedStyle(document.querySelector('.store-grid')).gridTemplateColumns.trim().split(/\\s+/).length`);
+          const expected = width > 1000 ? 4 : width > 700 ? 2 : 1;
+          if (columns !== expected) errors.push(`Store grid has ${columns} columns; expected ${expected}`);
+        }
+        if (name === 'classic') {
+          const terminal = await evaluate(`({width:document.querySelector('.terminal-screen').getBoundingClientRect().width,color:getComputedStyle(document.querySelector('.terminal-body')).color,font:getComputedStyle(document.querySelector('.terminal-body')).fontFamily})`);
+          if (width === 1440 && terminal.width < 620) errors.push('Classic terminal screen was narrowed by the outer layout');
+          if (!terminal.font.includes('Consolas') || terminal.color !== 'rgb(0, 255, 0)') errors.push('Classic terminal typography or color changed');
+        }
         if (width === 390 || width === 1440) {
+          await evaluate(`Promise.race([Promise.all([...document.images].filter(image=>{const r=image.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0}).map(image=>image.decode().catch(()=>{}))),new Promise(resolve=>setTimeout(resolve,4000))])`);
           const shot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
           await fs.writeFile(path.join(output, `${name}-${width}.png`), Buffer.from(shot.data, 'base64'));
         }
         // Exercise primary navigation and detail rendering on a phone and desktop.
         if (ready && (width === 390 || width === 1440)) {
+          if (width === 390 && name === 'home') {
+            await evaluate(`document.querySelector('.site-menu-toggle').click()`);
+            if (!await waitFor(`document.querySelector('.site-menu-toggle').getAttribute('aria-expanded')==='true' && document.querySelector('.site-navigation').getBoundingClientRect().height>0`)) errors.push('Mobile navigation did not open');
+            await evaluate(`document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}))`);
+            if (!await waitFor(`document.querySelector('.site-menu-toggle').getAttribute('aria-expanded')==='false'`)) errors.push('Mobile navigation did not close');
+          }
+          if (name === 'article') {
+            await evaluate(`document.querySelector('[data-lang="en"]').click()`);
+            if (!await waitFor(`!document.querySelector('[data-lang-panel="en"]').hidden && document.querySelector('[data-lang-panel="zh"]').hidden`)) errors.push('English news body switch failed');
+            await evaluate(`document.querySelector('[data-lang="zh"]').click()`);
+            if (!await waitFor(`!document.querySelector('[data-lang-panel="zh"]').hidden`)) errors.push('Chinese news body switch failed');
+          }
           if (name === 'lore') {
             if (width === 390) {
               await evaluate(`{ const originalFetch = window.fetch; window.fetch = (input, ...args) => { if (String(input).includes('/modules/')) { window.fetch = originalFetch; return Promise.reject(new Error('Simulated one-time network failure')); } return originalFetch(input, ...args); }; }`);
@@ -140,6 +178,10 @@ try {
             if (!await waitFor(`Boolean(document.querySelector('.store-detail-layout'))`)) errors.push('Store detail navigation failed');
             const detail = await evaluate('({scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth})');
             if (detail.scroll > width + 1 || detail.body > width + 1) errors.push('Store detail overflow');
+            if (name === 'bundles' && await evaluate(`document.querySelectorAll('.store-member').length > 1`)) {
+              await evaluate(`document.querySelectorAll('.store-member')[1].click()`);
+              if (!await waitFor(`document.querySelectorAll('.store-member')[1]?.getAttribute('aria-pressed')==='true'`)) errors.push('Bundle member selection failed');
+            }
             const shot = await client.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
             await fs.writeFile(path.join(output, `${name}-detail-${width}.png`), Buffer.from(shot.data, 'base64'));
           }
@@ -148,6 +190,16 @@ try {
             if (!await waitFor(`location.search.includes('page=2')`)) errors.push('News next page failed');
             await evaluate('history.back()');
             if (!await waitFor(`!location.search.includes('page=2') && document.querySelector('[data-page-state]').textContent.includes('1')`)) errors.push('News browser back failed');
+          }
+          if (name === 'classic') {
+            for (const index of [1, 2]) {
+              await evaluate(`document.querySelectorAll('#series-switch button')[${index}].click()`);
+              if (!await waitFor(`document.querySelectorAll('#series-switch button')[${index}]?.getAttribute('aria-pressed')==='true' && Boolean(document.querySelector('#terminal-body .doc-section'))`)) errors.push(`Classic series ${index + 1} failed`);
+            }
+          }
+          if (name === 'factions') {
+            await evaluate(`document.querySelectorAll('.force-faction-button')[1].click()`);
+            if (!await waitFor(`document.querySelectorAll('.force-faction-button')[1]?.classList.contains('active') && Boolean(document.querySelector('.force-node'))`)) errors.push('Faction switching failed');
           }
           if (name === 'map') {
             const before = await evaluate(`document.querySelector('#map-transform').style.transform`);
