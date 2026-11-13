@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T16:19:50.163Z",
+  "generatedAt": "2026-11-13T00:43:17.518Z",
   "locale": "multi",
   "primaryLanguage": "en",
   "availableLanguages": [
@@ -7,20 +7,14 @@
     "zh"
   ],
   "source": "bungie-contentstack",
-  "total": 73,
-  "count": 73,
+  "total": 75,
+  "count": 75,
   "itemsPerPage": 8,
   "bilingualSummary": {
-    "bilingualCount": 62,
-    "englishOnlyCount": 11,
+    "bilingualCount": 65,
+    "englishOnlyCount": 10,
     "chineseOnlyCount": 0,
     "englishOnly": [
-      {
-        "articlePath": "/symbiosis_open_play_week_crew_up",
-        "title": "Marathon Symbiosis: Open Play Week and Crew Up Event",
-        "publishedAt": "2026-11-10T14:00:00.000Z",
-        "articleUrl": "https://www.bungie.net/7/en-us/News/Article/symbiosis_open_play_week_crew_up"
-      },
       {
         "articlePath": "/get_to_know_marathons_bungie_rewards",
         "title": "Get to Know Marathon’s Bungie Rewards",
@@ -87,9 +81,221 @@
   "translation": {
     "attempted": true,
     "available": true,
-    "generatedCount": 11
+    "generatedCount": 10
   },
   "items": [
+    {
+      "id": "blt6df00070786020bf",
+      "slug": "dev_deep_dive_expedition_phase_1",
+      "pathSlug": "dev-deep-dive-expedition-phase-1",
+      "category": "community",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-11-12T14:00:00.000Z",
+      "articlePath": "/dev_deep_dive_expedition_phase_1",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/dev_deep_dive_expedition_phase_1",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/dev_deep_dive_expedition_phase_1"
+      },
+      "localPath": "/news/articles/dev-deep-dive-expedition-phase-1/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Expedition_Header_1080x1080.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt3fe29acb356f0d9b/6af4df796214fe37a16334a6/Expedition_Header_1080x1080.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Expedition_Header_1080x1080.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        "cover": [
+          {
+            "title": "Expedition_Header_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt3fe29acb356f0d9b/6af4df796214fe37a16334a6/Expedition_Header_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Expedition_Header_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Expedition_Header_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt17fa004ad434f37f/6af4ddd66214fe4a49633496/Expedition_Header_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Expedition_Header_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Expedition_Header_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltbc3d0aad941b0914/6af4dde53ff2a0ce5bcc7b0a/Expedition_Header_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Expedition_Header_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": [
+          "https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltfdf03ffa113d34b6/6af4de7839e2b49c8d6a88dd/Expedition_Blog_Run_01_1920x814.jpg",
+          "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt03a4edde20f7c50a/6af4e7cd38ac9d3b0eabb346/Marathon_Future_Blog_1920x1080.jpg",
+          "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt0e426962d25e93db/6af4de776214fe424c63349e/Expedition_Blog_Boost_02_1920x814.jpg",
+          "https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltdffc4d47b23392bc/6af4df79752ef53fe9d9b48c/Expedition_Blog_Reservoir_03_1920x814.jpg",
+          "https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltbd565fb3561d8946/6af4df79d194d6241ed45b45/Expedition_Blog_Perimeter_01_1920x814.jpg"
+        ]
+      },
+      "metrics": {
+        "wordCount": 1046,
+        "readMinutes": 5
+      },
+      "content": {
+        "en": {
+          "title": "Dev Deep Dive: Expedition - Phase 1",
+          "subtitle": "Symbiosis is the start of something new.",
+          "bodyHtml": "<p>CyberAcme and other interested parties have aligned to establish a Runner non-aggression pact to combat the increased UESC security measures across Tau Ceti IV. No matter if you can beat them: it's better if you join them.</p><p>With the update just around the corner, we’d like to give some insight on Phase 1 of our new permanent cooperative PvE game mode: Expedition.</p><iframe src=\"https://www.youtube.com/embed/0PXGV5YuTWo\" allowfullscreen=\"\" frameborder=\"0\"></iframe><p><a href=\"https://www.youtube.com/watch?v=0PXGV5YuTWo\"></a></p><h1>Expedition: Phase 1</h1><p>Expedition is a fully PvE cooperative roguelite mode with a dedicated queue across Perimeter, Night Marsh, Outpost, and Cryo Archive. Whether you’re rolling out solo, duo, or with a full trio, you’ll work together with multiple Runner crews to confront the ever-evolving horrors that make Tau Ceti a dangerous, unforgiving frontier. And worry not, you’ll be able to complete Priority Contracts while in Expedition mode, so you’ll be able to uncover more mysteries at your own pace.</p><p>Featuring a whole new curated experience with bespoke rulesets, Expedition includes a new in-run upgrade system we're calling Flash Boosts. All in all, our goal is to make buildcrafting more interesting and make every run series unique, and an opportunity to test a new build out.</p><p>Each session will consist of three runs of escalating difficulty called a Run Series. Build up your shell, complete your series, push your limits and profits that would even make Traxus proud.</p><p>And this is just the start. We’ll reveal more about Expedition’s Phase 2 in March, then keep improving the mode with your feedback as we shape Marathon’s future.</p><h1>Run Series</h1><img asset_uid=\"bltfdf03ffa113d34b6\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltfdf03ffa113d34b6/6af4de7839e2b49c8d6a88dd/Expedition_Blog_Run_01_1920x814.jpg\" alt=\"Expedition_Blog_Run_01_1920x814.jpg\" height=\"auto\"/><p>With this first iteration you’ll be set out on what’s called a “Run Series.”</p><p>Through a series, you’ll be tasked with completing three runs across Tau Ceti in succession with the final run being the pinnacle challenge or the “Critical Incident.” Here you can adjust the difficulty to challenge yourself and/or your crew for better rewards. If you’re looking for a higher-end challenge, you can also roll your current run series into a new one, so you can see just how far you’re capable of progressing.</p><p>Here’s a quick look at what your experience in Expedition might look like:</p><ul><li>Your first two runs are the foundation of your Run Series. You’ll explore, complete contracts, search for loot to shape up your build, and sort through your very first bevy of Flash Boosts. As you and your Crew work through these initial stages, you’ll be preparing for the Critical Incident – so be sure to keep careful track of who’s building in what direction.</li><li>Your final run, the Critical Incident, is where that preparation pays off. Raise the floor on the difficulty to take on tougher activities, like solving Upper Complex in Night Marsh, accessing Pinwheel on Outpost, or testing your luck against a new enemy, the Tick Queen on Perimeter.</li></ul><img asset_uid=\"blt03a4edde20f7c50a\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt03a4edde20f7c50a/6af4e7cd38ac9d3b0eabb346/Marathon_Future_Blog_1920x1080.jpg\" alt=\"Marathon_Future_Blog_1920x1080.jpg\" height=\"auto\"/><p>A run series can be reset at any point in the chain to cash out your current rewards, or if you didn’t get your build just right on the first attempt. Also, if you join a crew already in progress, the run series will pick up from the highest run in that chain. So, if a crew is on the final run you’ll be able to join them – however, you’ll only have access to your faction loadouts instead of being able to curate your own build run over run.</p><p>Perimeter, Night Marsh, Outpost, and Cryo Archive will be available for Expedition with similar scaling difficulties you would experience in Extraction, and you can freely choose the zone for each run in your series. Want to stick with the revamped Perimeter for each run? Go for it! Want to spread out across Tau Ceti and finish the series on the Marathon ship? It's your party, and you choose where to have it. That is, if you’ve managed to unlock all of them by increasing your Runner Level.</p><p>The Critical Incident will allow you to attempt the more complicated zone activities like Upper Complex in Night Marsh, or the Pinwheel in Outpost, or even some new challenges like fighting the Tick Queen in Perimeter.</p><p>If you’ve managed to survive your Run Series, you have the option to cash out your rewards or keep it going to see how far you can progress, so you can keep using that broken build you managed to source on your runs.</p><p>Looking to mobilize some extra gear for your next Extraction run? Be sure to bank your credits to purchase gear to take into your next live fire exercise and put some XP to use by buffing up your Cradle. All said and done, Flash Boosts and other gear that you pick up during Expedition, will be sold upon the completion of your Run Series – but, your credits and XP will still live on and help you in other, less survivable areas.</p><h1>Run Kits</h1><p>With Phase 1, each faction will have their own set of loadouts specializing in different playstyles and weaponry. Although the loadout will be locked per run series, weapons and items can be looted or improved on your runs until you reset the series.<br /><br />You’ll start with basic faction loadout and as you progress, you’ll be able to unlock faction upgrades to continually improve your starting faction loadout.</p><h1>Flash Boosts</h1><img asset_uid=\"blt0e426962d25e93db\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt0e426962d25e93db/6af4de776214fe424c63349e/Expedition_Blog_Boost_02_1920x814.jpg\" alt=\"Expedition_Blog_Boost_02_1920x814.jpg\" height=\"auto\"/><p>Apart from your loadout, the main drivers for power progression and buildcrafting in the run series are your Flash Boosts. These can be looted from around the zones, killing a tough foe, or completing objectives. And each can be upgraded by stacking multiples of the same flash boost, increasing their rarity and potency.</p><h1>Perimeter Gets a Glow-Up</h1><img asset_uid=\"bltdffc4d47b23392bc\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltdffc4d47b23392bc/6af4df79752ef53fe9d9b48c/Expedition_Blog_Reservoir_03_1920x814.jpg\" alt=\"Expedition_Blog_Reservoir_03_1920x814.jpg\" height=\"auto\"/><p>Symbiosis introduces a revamped Perimeter swallowed by fungi and opening up two new major zones, Reservoir (shown above) and the Burrows. This new version of the map will be Perimeter’s new look and feel going forward, but worry not – you can still engage with all of the previous Contracts! Consider this more of a plus-up than anything else.<br /></p><img asset_uid=\"bltbd565fb3561d8946\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltbd565fb3561d8946/6af4df79d194d6241ed45b45/Expedition_Blog_Perimeter_01_1920x814.jpg\" alt=\"Expedition_Blog_Perimeter_01_1920x814.jpg\" height=\"auto\"/><p>We'll be sharing a more in-depth look at Expedition and the Symbiosis update in our Dev Insights Part 2 launching on December 1<sup>st</sup>. Keep an eye on our social channels for the latest updates on when that’ll drop.<br /><br />That's it for now and thank you for your constant stream of feedback as we move into the future of Marathon.</p>",
+          "bodyText": "CyberAcme and other interested parties have aligned to establish a Runner non-aggression pact to combat the increased UESC security measures across Tau Ceti IV. No matter if you can beat them: it's better if you join them. With the update just around the corner, we’d like to give some insight on Phase 1 of our new permanent cooperative PvE game mode: Expedition. Expedition: Phase 1 Expedition is a fully PvE cooperative roguelite mode with a dedicated queue across Perimeter, Night Marsh, Outpost, and Cryo Archive. Whether you’re rolling out solo, duo, or with a full trio, you’ll work together with multiple Runner crews to confront the ever-evolving horrors that make Tau Ceti a dangerous, unforgiving frontier. And worry not, you’ll be able to complete Priority Contracts while in Expedition mode, so you’ll be able to uncover more mysteries at your own pace. Featuring a whole new curated experience with bespoke rulesets, Expedition includes a new in-run upgrade system we're calling Flash Boosts. All in all, our goal is to make buildcrafting more interesting and make every run series unique, and an opportunity to test a new build out. Each session will consist of three runs of escalating difficulty called a Run Series. Build up your shell, complete your series, push your limits and profits that would even make Traxus proud. And this is just the start. We’ll reveal more about Expedition’s Phase 2 in March, then keep improving the mode with your feedback as we shape Marathon’s future. Run Series With this first iteration you’ll be set out on what’s called a “Run Series.” Through a series, you’ll be tasked with completing three runs across Tau Ceti in succession with the final run being the pinnacle challenge or the “Critical Incident.” Here you can adjust the difficulty to challenge yourself and/or your crew for better rewards. If you’re looking for a higher-end challenge, you can also roll your current run series into a new one, so you can see just how far you’re capable of progressing. Here’s a quick look at what your experience in Expedition might look like: Your first two runs are the foundation of your Run Series. You’ll explore, complete contracts, search for loot to shape up your build, and sort through your very first bevy of Flash Boosts. As you and your Crew work through these initial stages, you’ll be preparing for the Critical Incident – so be sure to keep careful track of who’s building in what direction. Your final run, the Critical Incident, is where that preparation pays off. Raise the floor on the difficulty to take on tougher activities, like solving Upper Complex in Night Marsh, accessing Pinwheel on Outpost, or testing your luck against a new enemy, the Tick Queen on Perimeter. A run series can be reset at any point in the chain to cash out your current rewards, or if you didn’t get your build just right on the first attempt. Also, if you join a crew already in progress, the run series will pick up from the highest run in that chain. So, if a crew is on the final run you’ll be able to join them – however, you’ll only have access to your faction loadouts instead of being able to curate your own build run over run. Perimeter, Night Marsh, Outpost, and Cryo Archive will be available for Expedition with similar scaling difficulties you would experience in Extraction, and you can freely choose the zone for each run in your series. Want to stick with the revamped Perimeter for each run? Go for it! Want to spread out across Tau Ceti and finish the series on the Marathon ship? It's your party, and you choose where to have it. That is, if you’ve managed to unlock all of them by increasing your Runner Level. The Critical Incident will allow you to attempt the more complicated zone activities like Upper Complex in Night Marsh, or the Pinwheel in Outpost, or even some new challenges like fighting the Tick Queen in Perimeter. If you’ve managed to survive your Run Series, you have the option to cash out your rewards or keep it going to see how far you can progress, so you can keep using that broken build you managed to source on your runs. Looking to mobilize some extra gear for your next Extraction run? Be sure to bank your credits to purchase gear to take into your next live fire exercise and put some XP to use by buffing up your Cradle. All said and done, Flash Boosts and other gear that you pick up during Expedition, will be sold upon the completion of your Run Series – but, your credits and XP will still live on and help you in other, less survivable areas. Run Kits With Phase 1, each faction will have their own set of loadouts specializing in different playstyles and weaponry. Although the loadout will be locked per run series, weapons and items can be looted or improved on your runs until you reset the series. You’ll start with basic faction loadout and as you progress, you’ll be able to unlock faction upgrades to continually improve your starting faction loadout. Flash Boosts Apart from your loadout, the main drivers for power progression and buildcrafting in the run series are your Flash Boosts. These can be looted from around the zones, killing a tough foe, or completing objectives. And each can be upgraded by stacking multiples of the same flash boost, increasing their rarity and potency. Perimeter Gets a Glow-Up Symbiosis introduces a revamped Perimeter swallowed by fungi and opening up two new major zones, Reservoir (shown above) and the Burrows. This new version of the map will be Perimeter’s new look and feel going forward, but worry not – you can still engage with all of the previous Contracts! Consider this more of a plus-up than anything else. We'll be sharing a more in-depth look at Expedition and the Symbiosis update in our Dev Insights Part 2 launching on December 1 st . Keep an eye on our social channels for the latest updates on when that’ll drop. That's it for now and thank you for your constant stream of feedback as we move into the future of Marathon.",
+          "excerpt": "Symbiosis is the start of something new."
+        },
+        "zh": {
+          "title": "开发者深度解析：远征——第1阶段",
+          "subtitle": "共生——某种新的开始。",
+          "bodyHtml": "<p>为了应对天仓五IV上不断加剧的UESC安全措施，赛博艾克米和利益相关方达成了一项疾行者互不侵犯协议。你能不能击败他们并不重要，而是最好加入他们。</p><p>距更新推出日期已经不远，现在我们想为你详细介绍一下我们全新的常驻合作PvE游戏模式：“远征”的第1阶段。</p><iframe src=\"https://www.youtube.com/embed/0PXGV5YuTWo\" allowfullscreen=\"\" frameborder=\"0\"></iframe><p><a href=\"https://www.youtube.com/watch?v=0PXGV5YuTWo\"></a></p><h1>远征：第1阶段</h1><p>远征是一种纯PvE合作roguelite游戏模式，玩家可在外围区域、夜间沼泽、前哨和低温档案室地图上游玩此模式。不论你是单排、双排还是组满三人团队，你将需要与其他疾行者团队合作，应对不断进化的恐怖威胁，在天仓五危险、严酷的边境中奋力求生。但不必担心，你将可以在远征模式中完成优先合约，也就是说你能够以自己的步调揭开更多谜团。</p><p>远征模式采用了我们称之为“闪刷加成”的疾行中升级系统，可以通过定制规则提供精心设计的全新体验。总而言之，我们的目标是为了让配装玩法更有趣，让每一次连续疾行都拥有独一无二的体验，方便玩家们可以测试新的配装方案。</p><p>每一局游戏都包含三次难度不断提升的疾行，我们称之为“连续疾行”。你需要为你的外壳进行配装，完成连续疾行，突破你的极限，用丰厚的收益让特莱克斯也为你自豪。</p><p>而这还仅仅只是个开始。我们将在三月公布更多关于远征第2阶段的情报，然后根据大家的反馈不断优化这个模式，引领《失落星船：马拉松》的未来。</p><h1>连续疾行</h1><img asset_uid=\"bltfdf03ffa113d34b6\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltfdf03ffa113d34b6/6af4de7839e2b49c8d6a88dd/Expedition_Blog_Run_01_1920x814.jpg\" alt=\"Expedition_Blog_Run_01_1920x814.jpg\" height=\"auto\"/><p>在第一个版本的远征模式中，大家将会进行被称为“连续疾行”的作战。</p><p>在每一次连续疾行中，你的任务是在天仓五完成三场疾行，而最终疾行则是被称为“重大事件”的巅峰挑战。大家还可以调整难度，让你自己和/或你的团队挑战更高的奖励。如果你追求更大的挑战，还可以将当前的连续疾行重置，开始一次新的连续疾行，看看自己能走到多远。</p><p>我们来大致看看你在远征模式中能够得到什么样的体验：</p><ul><li>在前两次疾行中，你需要为你的连续疾行打下基础。你需要探索、完成合约、搜刮战利品并打造配装，然后选择你的第一批闪刷加成。随着你和你的团队完成这些早期工作，你将会为重大事件做好准备——你们需要仔细分配谁往哪个方向配装。</li><li>你的所有准备工作都会在最终疾行，即重大事件中得到回报。此时难度将会提升，你们需要完成更困难的任务，如在夜间沼泽破解上层设施，在前哨进入风轮飞船，或在外围区域挑战新的敌人——虱虫女王，试试自己的斤两。</li></ul><img asset_uid=\"blt03a4edde20f7c50a\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt03a4edde20f7c50a/6af4e7cd38ac9d3b0eabb346/Marathon_Future_Blog_1920x1080.jpg\" alt=\"Marathon_Future_Blog_1920x1080.jpg\" height=\"auto\"/><p>如果你想要兑现当前奖励，或者未能打造出合适的配装，那么你可以在连续疾行中随时撤离并重置。同样，如果你中途加入一支疾行中的团队，你们也将从这次连续疾行中进度最远的疾行继续开始。也就是说，如果一支团队已经推进到最终疾行，你可以加入他们，但你仅能使用你选择的阵营配装，无法通过一次次疾行打磨自己的配置。</p><p>外围区域、夜间沼泽、前哨和低温档案室将会支持远征模式，并且会采用和撤离模式相同的难度梯度，而且你可以为你的连续疾行中的每一次疾行自由选择区域。想要每一次疾行都在改版的外围区域进行？完全可以！想要踏遍整个天仓五，并最后在马拉松号上完成你的连续疾行？这是你的派对，由你选择在哪里举行。前提是，你得先通过提升疾行者等级解锁所有区域。</p><p>重大事件让你可以尝试更复杂的区域任务，例如夜间沼泽的上层设施、前哨的风轮，甚至是一些新的挑战，如在外围区域大战虱虫女王。</p><p>如果你在连续疾行中成功存活，之后就可以选择兑现你的奖励，又或者继续战斗，看看你能够走多远，并继续使用你在疾行期间努力搜集的配装。</p><p>想要为你的下一次撤离疾行调动一些额外装备？不要忘记积攒信用点并购买装备，将其带入你的下一次实弹行动，还可以花费经验值来增强你的摇篮。总而言之，你在远征模式中获得的闪刷加成和搜刮到的装备都会在你完成连续疾行时出售，但你的信用点和经验值将会保留，在其他更难以生存的区域中为你提供帮助。</p><h1>疾行配装包</h1><p>在第1阶段中，每个阵营都有各自的配装套装，专门用于不同的游戏风格和武器。虽然每次连续疾行中配装本身会被锁定，但你可以在疾行过程中搜刮或强化武器和物品，直到你重置连续疾行。<br /><br />一开始你将使用基础阵营配装，然后随着你不断推进进度，还会解锁阵营升级，不断强化你的初始阵营配装。</p><h1>闪刷加成</h1><img asset_uid=\"blt0e426962d25e93db\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt0e426962d25e93db/6af4de776214fe424c63349e/Expedition_Blog_Boost_02_1920x814.jpg\" alt=\"Expedition_Blog_Boost_02_1920x814.jpg\" height=\"auto\"/><p>除了配装，连续疾行中还有一个力量成长和配装玩法的主要驱动要素，那就是闪刷加成。你可以通过在区域中搜集、消灭强大敌人或完成目标来获得闪刷加成。你还可以多次叠加相同的闪刷加成，对其进行升级，提升稀有度和威力。</p><h1>外围区域迎来蜕变</h1><img asset_uid=\"bltdffc4d47b23392bc\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltdffc4d47b23392bc/6af4df79752ef53fe9d9b48c/Expedition_Blog_Reservoir_03_1920x814.jpg\" alt=\"Expedition_Blog_Reservoir_03_1920x814.jpg\" height=\"auto\"/><p>共生为外围区域带来了全面改版，这张地图现在已被真菌淹没，还开放了两个新的区域，储水库（上图所示）和地洞。这个新版本地图将会成为外围区域在未来的全新面貌和风格，但不必担心——你依然可以完成之前的所有合约！本次改版是锦上添花，而非推翻重来。<br /></p><img asset_uid=\"bltbd565fb3561d8946\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltbd565fb3561d8946/6af4df79d194d6241ed45b45/Expedition_Blog_Perimeter_01_1920x814.jpg\" alt=\"Expedition_Blog_Perimeter_01_1920x814.jpg\" height=\"auto\"/><p>我们将会在12月2日发布的开发者见解第二部分中更进一步地介绍远征模式和共生更新。<sup></sup>请关注我们的社交频道，第一时间了解最新发布的情报。<br /><br />本次分享就到这里，感谢大家持续不断的反馈，与我们一同走向《失落星船：马拉松》的未来。</p>",
+          "bodyText": "为了应对天仓五IV上不断加剧的UESC安全措施，赛博艾克米和利益相关方达成了一项疾行者互不侵犯协议。你能不能击败他们并不重要，而是最好加入他们。 距更新推出日期已经不远，现在我们想为你详细介绍一下我们全新的常驻合作PvE游戏模式：“远征”的第1阶段。 远征：第1阶段 远征是一种纯PvE合作roguelite游戏模式，玩家可在外围区域、夜间沼泽、前哨和低温档案室地图上游玩此模式。不论你是单排、双排还是组满三人团队，你将需要与其他疾行者团队合作，应对不断进化的恐怖威胁，在天仓五危险、严酷的边境中奋力求生。但不必担心，你将可以在远征模式中完成优先合约，也就是说你能够以自己的步调揭开更多谜团。 远征模式采用了我们称之为“闪刷加成”的疾行中升级系统，可以通过定制规则提供精心设计的全新体验。总而言之，我们的目标是为了让配装玩法更有趣，让每一次连续疾行都拥有独一无二的体验，方便玩家们可以测试新的配装方案。 每一局游戏都包含三次难度不断提升的疾行，我们称之为“连续疾行”。你需要为你的外壳进行配装，完成连续疾行，突破你的极限，用丰厚的收益让特莱克斯也为你自豪。 而这还仅仅只是个开始。我们将在三月公布更多关于远征第2阶段的情报，然后根据大家的反馈不断优化这个模式，引领《失落星船：马拉松》的未来。 连续疾行 在第一个版本的远征模式中，大家将会进行被称为“连续疾行”的作战。 在每一次连续疾行中，你的任务是在天仓五完成三场疾行，而最终疾行则是被称为“重大事件”的巅峰挑战。大家还可以调整难度，让你自己和/或你的团队挑战更高的奖励。如果你追求更大的挑战，还可以将当前的连续疾行重置，开始一次新的连续疾行，看看自己能走到多远。 我们来大致看看你在远征模式中能够得到什么样的体验： 在前两次疾行中，你需要为你的连续疾行打下基础。你需要探索、完成合约、搜刮战利品并打造配装，然后选择你的第一批闪刷加成。随着你和你的团队完成这些早期工作，你将会为重大事件做好准备——你们需要仔细分配谁往哪个方向配装。 你的所有准备工作都会在最终疾行，即重大事件中得到回报。此时难度将会提升，你们需要完成更困难的任务，如在夜间沼泽破解上层设施，在前哨进入风轮飞船，或在外围区域挑战新的敌人——虱虫女王，试试自己的斤两。 如果你想要兑现当前奖励，或者未能打造出合适的配装，那么你可以在连续疾行中随时撤离并重置。同样，如果你中途加入一支疾行中的团队，你们也将从这次连续疾行中进度最远的疾行继续开始。也就是说，如果一支团队已经推进到最终疾行，你可以加入他们，但你仅能使用你选择的阵营配装，无法通过一次次疾行打磨自己的配置。 外围区域、夜间沼泽、前哨和低温档案室将会支持远征模式，并且会采用和撤离模式相同的难度梯度，而且你可以为你的连续疾行中的每一次疾行自由选择区域。想要每一次疾行都在改版的外围区域进行？完全可以！想要踏遍整个天仓五，并最后在马拉松号上完成你的连续疾行？这是你的派对，由你选择在哪里举行。前提是，你得先通过提升疾行者等级解锁所有区域。 重大事件让你可以尝试更复杂的区域任务，例如夜间沼泽的上层设施、前哨的风轮，甚至是一些新的挑战，如在外围区域大战虱虫女王。 如果你在连续疾行中成功存活，之后就可以选择兑现你的奖励，又或者继续战斗，看看你能够走多远，并继续使用你在疾行期间努力搜集的配装。 想要为你的下一次撤离疾行调动一些额外装备？不要忘记积攒信用点并购买装备，将其带入你的下一次实弹行动，还可以花费经验值来增强你的摇篮。总而言之，你在远征模式中获得的闪刷加成和搜刮到的装备都会在你完成连续疾行时出售，但你的信用点和经验值将会保留，在其他更难以生存的区域中为你提供帮助。 疾行配装包 在第1阶段中，每个阵营都有各自的配装套装，专门用于不同的游戏风格和武器。虽然每次连续疾行中配装本身会被锁定，但你可以在疾行过程中搜刮或强化武器和物品，直到你重置连续疾行。 一开始你将使用基础阵营配装，然后随着你不断推进进度，还会解锁阵营升级，不断强化你的初始阵营配装。 闪刷加成 除了配装，连续疾行中还有一个力量成长和配装玩法的主要驱动要素，那就是闪刷加成。你可以通过在区域中搜集、消灭强大敌人或完成目标来获得闪刷加成。你还可以多次叠加相同的闪刷加成，对其进行升级，提升稀有度和威力。 外围区域迎来蜕变 共生为外围区域带来了全面改版，这张地图现在已被真菌淹没，还开放了两个新的区域，储水库（上图所示）和地洞。这个新版本地图将会成为外围区域在未来的全新面貌和风格，但不必担心——你依然可以完成之前的所有合约！本次改版是锦上添花，而非推翻重来。 我们将会在12月2日发布的开发者见解第二部分中更进一步地介绍远征模式和共生更新。 请关注我们的社交频道，第一时间了解最新发布的情报。 本次分享就到这里，感谢大家持续不断的反馈，与我们一同走向《失落星船：马拉松》的未来。",
+          "excerpt": "共生——某种新的开始。",
+          "source": "official"
+        }
+      }
+    },
+    {
+      "id": "bltf7cecb9d2b7559b7",
+      "slug": "marathon_update_1_1_9_7",
+      "pathSlug": "marathon-update-1-1-9-7",
+      "category": "updates",
+      "author": "Marathon Dev Team",
+      "publishedAt": "2026-11-10T17:00:00.000Z",
+      "articlePath": "/marathon_update_1_1_9_7",
+      "articleUrl": {
+        "en": "https://www.bungie.net/7/en-us/News/Article/marathon_update_1_1_9_7",
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/marathon_update_1_1_9_7"
+      },
+      "localPath": "/news/articles/marathon-update-1-1-9-7/",
+      "matchType": "bilingual",
+      "languages": {
+        "en": true,
+        "zh": true
+      },
+      "taxonomies": [
+        {
+          "taxonomy_uid": "game",
+          "term_uid": "marathon"
+        }
+      ],
+      "images": {
+        "primary": {
+          "title": "Front_Page_Banner_1920x590.jpg",
+          "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+          "permanentUrl": "Permanent URL Not Defined!",
+          "filename": "Front_Page_Banner_1920x590.jpg",
+          "contentType": "image/jpeg",
+          "description": null,
+          "dimension": {
+            "width": 1920,
+            "height": 590
+          }
+        },
+        "cover": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "mobile": [
+          {
+            "title": "Front_Page_Mobile_1080x1080.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt526e46856af251e8/69af5523856e0e000832ee88/Front_Page_Mobile_1080x1080.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Mobile_1080x1080.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1080,
+              "height": 1080
+            }
+          }
+        ],
+        "banner": [
+          {
+            "title": "Front_Page_Banner_1920x590.jpg",
+            "url": "https://images.contentstack.io/v3/assets/blte410e3b15535c144/blt2da9ceda8d899126/69af552377fad000083ddd4a/Front_Page_Banner_1920x590.jpg",
+            "permanentUrl": "Permanent URL Not Defined!",
+            "filename": "Front_Page_Banner_1920x590.jpg",
+            "contentType": "image/jpeg",
+            "description": null,
+            "dimension": {
+              "width": 1920,
+              "height": 590
+            }
+          }
+        ],
+        "inline": []
+      },
+      "metrics": {
+        "wordCount": 274,
+        "readMinutes": 1
+      },
+      "content": {
+        "en": {
+          "title": "Marathon Update 1.1.9.7",
+          "subtitle": "The one about Ordnance Heist returning",
+          "bodyHtml": "<h2>Events</h2><ul><li>Sponsored Night Marsh will be available this weekend, starting Thursday, November 12.</li><li>Sponsored Survival: Perimeter will be available all week until November 17.</li></ul><h4>Ordnance Heist</h4><ul><li>Ordnance Heist is back! The event will be available from November 10 - November 24.</li><li>MIDA Armory<ul><li>Deluxe sponsored kit: Stock decreased from 3/week to 2/week.</li><li>Superior sponsored kit: No longer offered.</li><li>MIDA themed weapon: Stock decreased from 2/week to 1/week and rarity decreased from Superior to Deluxe.</li><li>Sneak Backpack: Rarity decreased from Superior to Deluxe.</li><li>Synapse Cube: Stock decreased from 1/week to 1 total.</li></ul></li><li>Traxus Armory<ul><li>Deluxe sponsored kit: Stock decreased from 3/week to 2/week.</li><li>Superior sponsored kit: No longer offered.</li><li>Traxus themed weapon: Stock decreased from 2/week to 1/week and rarity decreased from Superior to Deluxe.</li><li>Ammo Backpack: Rarity decreased from Superior to Deluxe.</li><li>Synapse Cube: Stock decreased from 1/week to 1 total.</li></ul></li><li>Economy Changes<ul><li>Firestorm key templates will only grant 1 key upon completion.</li><li>Firestorm arms lockers now only require 1 key to open.</li><li>The Firestorm will have a 15% chance to drop from supply drops prior to and during the event.<ul><li>After the event, it will have a 30% drop rate.</li></ul></li></ul></li></ul><h2>Zones</h2><ul><li>Fixed an issue on Outpost where players could die in a location that left their loot bags inaccessible.</li><li>Fixed an issue in Vault 4 of Cryo Archive where players could fall into a particular spot and get stuck.</li></ul><h2>General</h2><ul><li>Updated Report options on player profiles.</li><li>Fixed an issue where using a consumable as an overheat weapon animation begins would cause a bright flash to appear on screen.</li><li>Fixed an issue where Stickers were not properly displaying when applied with NuCal weapon styles.</li></ul>",
+          "bodyText": "Events Sponsored Night Marsh will be available this weekend, starting Thursday, November 12. Sponsored Survival: Perimeter will be available all week until November 17. Ordnance Heist Ordnance Heist is back! The event will be available from November 10 - November 24. MIDA Armory Deluxe sponsored kit: Stock decreased from 3/week to 2/week. Superior sponsored kit: No longer offered. MIDA themed weapon: Stock decreased from 2/week to 1/week and rarity decreased from Superior to Deluxe. Sneak Backpack: Rarity decreased from Superior to Deluxe. Synapse Cube: Stock decreased from 1/week to 1 total. Traxus Armory Deluxe sponsored kit: Stock decreased from 3/week to 2/week. Superior sponsored kit: No longer offered. Traxus themed weapon: Stock decreased from 2/week to 1/week and rarity decreased from Superior to Deluxe. Ammo Backpack: Rarity decreased from Superior to Deluxe. Synapse Cube: Stock decreased from 1/week to 1 total. Economy Changes Firestorm key templates will only grant 1 key upon completion. Firestorm arms lockers now only require 1 key to open. The Firestorm will have a 15% chance to drop from supply drops prior to and during the event. After the event, it will have a 30% drop rate. Zones Fixed an issue on Outpost where players could die in a location that left their loot bags inaccessible. Fixed an issue in Vault 4 of Cryo Archive where players could fall into a particular spot and get stuck. General Updated Report options on player profiles. Fixed an issue where using a consumable as an overheat weapon animation begins would cause a bright flash to appear on screen. Fixed an issue where Stickers were not properly displaying when applied with NuCal weapon styles.",
+          "excerpt": "The one about Ordnance Heist returning"
+        },
+        "zh": {
+          "title": "《失落星船：马拉松》更新1.1.9.7",
+          "subtitle": "关于军械盗劫回归",
+          "bodyHtml": "<h2>活动</h2><ul><li>赞助夜间沼泽将于本周末上线，11月13日周五开始。</li><li>赞助生存：外围区域将整周开放，直至11月18日。</li></ul><h4>军械盗劫</h4><ul><li>军械盗劫现已回归！活动将于11月11日至11月25日期间开放。</li><li>米达军械库<ul><li>豪华赞助包：库存从每周3件减少到每周2件。</li><li>卓越赞助包：不再提供。</li><li>米达主题武器：库存从每周2件减少到每周1件，稀有度从卓越降至豪华。</li><li>潜行包背包：稀有度从卓越降至豪华。</li><li>突触立方：库存从每周1件减少到总共1件。</li></ul></li><li>特莱克斯军械库<ul><li>豪华赞助包：库存从每周3件减少到每周2件。</li><li>卓越赞助包：不再提供。</li><li>特莱克斯主题武器：库存从每周2件减少到每周1件，稀有度从卓越降至豪华。</li><li>弹药背包：稀有度从卓越降至豪华。</li><li>突触立方：库存从每周1件减少到总共1件。</li></ul></li><li>经济改动<ul><li>完成烈焰风暴钥匙模板后，仅会获得1把钥匙。</li><li>开启烈焰风暴武器柜现在仅需1把钥匙。</li><li>在活动前及活动期间，烈焰风暴将有15%的几率从补给投放中掉落。<ul><li>活动结束后，其掉率将变为30%。</li></ul></li></ul></li></ul><h2>区域</h2><ul><li>修复了前哨中，玩家可能会在某些位置死亡，而其掉落的战利品包无法被拾取的问题。</li><li>修复了低温档案室4号保险库中，玩家可能会掉入特定地点并被卡住的问题。</li></ul><h2>综合</h2><ul><li>更新了玩家个人资料中的举报选项。  </li><li>修复了在武器过热动画开始时使用消耗品，会导致屏幕上出现强烈闪光的问题。</li><li>修复了在使用纽卡洛里武器风格时，贴纸无法正常显示的问题。</li></ul>",
+          "bodyText": "活动 赞助夜间沼泽将于本周末上线，11月13日周五开始。 赞助生存：外围区域将整周开放，直至11月18日。 军械盗劫 军械盗劫现已回归！活动将于11月11日至11月25日期间开放。 米达军械库 豪华赞助包：库存从每周3件减少到每周2件。 卓越赞助包：不再提供。 米达主题武器：库存从每周2件减少到每周1件，稀有度从卓越降至豪华。 潜行包背包：稀有度从卓越降至豪华。 突触立方：库存从每周1件减少到总共1件。 特莱克斯军械库 豪华赞助包：库存从每周3件减少到每周2件。 卓越赞助包：不再提供。 特莱克斯主题武器：库存从每周2件减少到每周1件，稀有度从卓越降至豪华。 弹药背包：稀有度从卓越降至豪华。 突触立方：库存从每周1件减少到总共1件。 经济改动 完成烈焰风暴钥匙模板后，仅会获得1把钥匙。 开启烈焰风暴武器柜现在仅需1把钥匙。 在活动前及活动期间，烈焰风暴将有15%的几率从补给投放中掉落。 活动结束后，其掉率将变为30%。 区域 修复了前哨中，玩家可能会在某些位置死亡，而其掉落的战利品包无法被拾取的问题。 修复了低温档案室4号保险库中，玩家可能会掉入特定地点并被卡住的问题。 综合 更新了玩家个人资料中的举报选项。 修复了在武器过热动画开始时使用消耗品，会导致屏幕上出现强烈闪光的问题。 修复了在使用纽卡洛里武器风格时，贴纸无法正常显示的问题。",
+          "excerpt": "关于军械盗劫回归",
+          "source": "official"
+        }
+      }
+    },
     {
       "id": "blt7a548789c2a5888e",
       "slug": "symbiosis_open_play_week_crew_up",
@@ -100,10 +306,10 @@
       "articlePath": "/symbiosis_open_play_week_crew_up",
       "articleUrl": {
         "en": "https://www.bungie.net/7/en-us/News/Article/symbiosis_open_play_week_crew_up",
-        "zh": null
+        "zh": "https://www.bungie.net/7/zh-chs/News/Article/symbiosis_open_play_week_crew_up"
       },
       "localPath": "/news/articles/symbiosis-open-play-week-crew-up/",
-      "matchType": "en-only",
+      "matchType": "bilingual",
       "languages": {
         "en": true,
         "zh": true
@@ -186,12 +392,12 @@
           "excerpt": "Play with your friends during Open Play Week"
         },
         "zh": {
-          "title": "Marathon 共生：开放游玩周与组队活动",
-          "subtitle": "在开放游玩周期间与好友一起游玩",
-          "bodyHtml": "<p>Marathon 的进化将于 12 月 8 日随着我们的下一个更新“共生”上线而开启。此次更新将为游戏带来大量更新与改动，其中包括我们永久 PvE 游戏模式的第一阶段。因此，为了让每个人都有机会亲身感受 Marathon 的成长与进步，我们将在开放游玩周期间向所有人开放游戏。</p><p>我们来聊聊吧！</p><h2><span style=\"color: #c0f304;\"><strong>开放游玩周期间，所有人都可游玩</strong></span></h2><p>就像我们在第 2 赛季开始时所做的那样，我们希望每个人都能体验即将登陆 Marathon 的新内容。这将是邀请朋友的绝佳时机，不仅能让他们试玩这款游戏，还能帮你获得一些 Crew Up 奖励。</p><p>在 12 月 8 日至 12 月 15 日的开放游玩周期间，玩家将能够访问并体验“共生”提供的所有内容，包括全新的远征 PvE 游戏模式、全新的 Bishop 外壳、更新后的 Perimeter 地图，以及所有新装备和奖励。如果你在开放游玩周结束后选择购买 Marathon，你解锁的所有物品和进度都将保留。</p><h2><span style=\"color: #c0f304;\"><strong>Crew Up 活动：一起玩，一起赢</strong></span></h2><p>Crew Up 是一个目标明确的活动：与好友组队，在全新的远征 PvE 游戏模式中以更注重协作的心态探索 Tau Ceti IV。奖励：你每次行动中能获得的所有装备，外加一些独特的外观物品。</p><p>在 Crew Up 活动期间完成连续挑战将解锁新的 百科 条目，让队伍中的每位成员都能获得一些新的外观奖励：</p><ul><li>徽章：女王之巢</li><li>背景：女王领地</li><li>武器贴纸：女王巨口</li><li>武器挂饰：集束串</li><li>毁灭者皮肤：Arata Vectus</li><li>称号：灭除者</li></ul><br/><img alt=\"Crew_Up_Rewards_1920x1080.jpg\" height=\"auto\" src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltc6f9ee971cc78ff1/6af2ed9f568c2ec169570f9c/Crew_Up_Rewards_1920x1080.jpg\"/><p>Crew Up 将于 Symbiosis 上线日 12 月 8 日太平洋时间中午 12 点开始，并持续至 12 月 22 日上午 10 点（太平洋时间）。在首周，我们将举办开放游玩周，因此即使你的朋友尚未拥有 Marathon，也能免费加入你的行动并参与 Crew Up。 </p><h2><span style=\"color: #c0f304;\"><strong>如何参与</strong></span></h2><p>想要参加 Crew Up 的玩家需要在 12 月 8 日 Symbiosis 上线时，在 <a href=\"/7/en/codes/redeem?token=DMA-T7Y-XJL  \" target=\"_blank\">bungie.net/redeem</a> 兑换以下代码。别担心，临近那天我们会提醒你！ </p><h4 style=\"text-align: center;\" target=\"_blank\">- <a href=\"/7/en/codes/redeem?token=DMA-T7Y-XJL  \" target=\"_blank\"><strong>DMA-T7Y-XJL</strong></a> -</h4><p>代码兑换后，游戏内 百科 中会新开放一个 Events 区域，并显示玩家必须在新 PvE 游戏模式 Expedition 中完成的特定 Crew Up 挑战。这些挑战起初很简单，但会逐渐变得更复杂、更苛刻。还好有你的朋友来帮忙！</p><p>你需要记住的一点是，这些任务不能单人完成，它们要求你加入或创建一个至少包含一名已兑换 Crew Up 活动代码的其他玩家的队伍。我们建议你将队伍成员添加为 Bungie 好友以便保留，不过，如果玩家在同一平台并且彼此已添加到各自的专有好友列表中，也可以获得进度。 </p><h2><span style=\"color: #c0f304;\"><strong>常见问题</strong></span></h2><h3>我需要拥有 Marathon 才能参加 Crew Up 活动吗？</h3><p>在开放游玩周（12 月 8 日至 15 日）期间，所有人都可以下载并游玩完整游戏，无需购买。此后，直到活动于 12 月 22 日结束，玩家必须拥有 Marathon 许可证才能游玩该活动。</p><h3>开放游玩周结束后，我还能完成 Crew Up 挑战吗？</h3><p>是的。Open Play Week 结束后，Crew Up 还会额外持续一周，让你有更多时间完成活动目标。</p><h3>我需要玩满一定时长才能参与活动吗？</h3><p>完成新手教程后，你就可以开始完成 Crew Up 的活动了。</p><h3>我的朋友需要完成每一个挑战吗？</h3><p>Crew Up 围绕共同游玩而设计，但每位玩家都可以推进进度并领取自己的 百科 奖励。</p><h3>在 Open Play Week 期间，我可以和朋友一起玩其他 Marathon 模式吗？</h3><p>当然可以！Crew Up 聚焦于全新的 Expedition PvE 游戏模式，但你可以和朋友一起尝试 Extraction，并通过这种方式获得战利品、经验值和阵营升级。如果他们在 Open Play Week 结束后购买游戏，他们也能保留自己获得的一切。</p>",
-          "bodyText": "Marathon 的进化将于 12 月 8 日随着我们的下一个更新“共生”上线而开启。此次更新将为游戏带来大量更新与改动，其中包括我们永久 PvE 游戏模式的第一阶段。因此，为了让每个人都有机会亲身感受 Marathon 的成长与进步，我们将在开放游玩周期间向所有人开放游戏。 我们来聊聊吧！ 开放游玩周期间，所有人都可游玩 就像我们在第 2 赛季开始时所做的那样，我们希望每个人都能体验即将登陆 Marathon 的新内容。这将是邀请朋友的绝佳时机，不仅能让他们试玩这款游戏，还能帮你获得一些 Crew Up 奖励。 在 12 月 8 日至 12 月 15 日的开放游玩周期间，玩家将能够访问并体验“共生”提供的所有内容，包括全新的远征 PvE 游戏模式、全新的 Bishop 外壳、更新后的 Perimeter 地图，以及所有新装备和奖励。如果你在开放游玩周结束后选择购买 Marathon，你解锁的所有物品和进度都将保留。 Crew Up 活动：一起玩，一起赢 Crew Up 是一个目标明确的活动：与好友组队，在全新的远征 PvE 游戏模式中以更注重协作的心态探索 Tau Ceti IV。奖励：你每次行动中能获得的所有装备，外加一些独特的外观物品。 在 Crew Up 活动期间完成连续挑战将解锁新的 百科 条目，让队伍中的每位成员都能获得一些新的外观奖励： 徽章：女王之巢 背景：女王领地 武器贴纸：女王巨口 武器挂饰：集束串 毁灭者皮肤：Arata Vectus 称号：灭除者 Crew Up 将于 Symbiosis 上线日 12 月 8 日太平洋时间中午 12 点开始，并持续至 12 月 22 日上午 10 点（太平洋时间）。在首周，我们将举办开放游玩周，因此即使你的朋友尚未拥有 Marathon，也能免费加入你的行动并参与 Crew Up。 如何参与 想要参加 Crew Up 的玩家需要在 12 月 8 日 Symbiosis 上线时，在 bungie.net/redeem 兑换以下代码。别担心，临近那天我们会提醒你！ - DMA-T7Y-XJL - 代码兑换后，游戏内 百科 中会新开放一个 Events 区域，并显示玩家必须在新 PvE 游戏模式 Expedition 中完成的特定 Crew Up 挑战。这些挑战起初很简单，但会逐渐变得更复杂、更苛刻。还好有你的朋友来帮忙！ 你需要记住的一点是，这些任务不能单人完成，它们要求你加入或创建一个至少包含一名已兑换 Crew Up 活动代码的其他玩家的队伍。我们建议你将队伍成员添加为 Bungie 好友以便保留，不过，如果玩家在同一平台并且彼此已添加到各自的专有好友列表中，也可以获得进度。 常见问题 我需要拥有 Marathon 才能参加 Crew Up 活动吗？ 在开放游玩周（12 月 8 日至 15 日）期间，所有人都可以下载并游玩完整游戏，无需购买。此后，直到活动于 12 月 22 日结束，玩家必须拥有 Marathon 许可证才能游玩该活动。 开放游玩周结束后，我还能完成 Crew Up 挑战吗？ 是的。Open Play Week 结束后，Crew Up 还会额外持续一周，让你有更多时间完成活动目标。 我需要玩满一定时长才能参与活动吗？ 完成新手教程后，你就可以开始完成 Crew Up 的活动了。 我的朋友需要完成每一个挑战吗？ Crew Up 围绕共同游玩而设计，但每位玩家都可以推进进度并领取自己的 百科 奖励。 在 Open Play Week 期间，我可以和朋友一起玩其他 Marathon 模式吗？ 当然可以！Crew Up 聚焦于全新的 Expedition PvE 游戏模式，但你可以和朋友一起尝试 Extraction，并通过这种方式获得战利品、经验值和阵营升级。如果他们在 Open Play Week 结束后购买游戏，他们也能保留自己获得的一切。",
-          "excerpt": "在开放游玩周期间与好友一起游玩",
-          "source": "generated"
+          "title": "《失落星船：马拉松》共生：公开试玩周和组队活动",
+          "subtitle": "在公开试玩周与好友并肩作战",
+          "bodyHtml": "<p>《失落星船：马拉松》进化将于12月9日开始，届时将推出下一个重大更新——共生，它将为游戏带来大量更新与改动，包括永久PvE模式的第一阶段。为了让大家都能亲身体验《失落星船：马拉松》的成长与进步，我们特别推出了公开试玩周，向所有玩家开放。</p><p>一起来看看详情吧！</p><h2><span style=\"color: #c0f304;\"><strong>公开试玩周期间每个人都可以玩</strong></span></h2><p>正如第2赛季初那样，我们希望每一位玩家都能体验《失落星船：马拉松》中的新内容。抓紧这次的绝佳机会，不仅可以邀请你的朋友来试玩这款游戏，还能帮你获取组队奖励。</p><p>在12月9日至12月16日的公开试玩周期间，玩家可以尽情体验共生的所有内容，包括全新远征PvE模式、全新毕肖外壳、外围区域地图更新，以及各类全新装备与奖励。若你在公开试玩周结束后选择购买《失落星船：马拉松》，此前解锁的所有物品及进度都将保留。</p><h2><span style=\"color: #c0f304;\"><strong>组队活动：并肩作战，共获胜利</strong></span></h2><p>组队活动的目标非常明确：与好友组建队伍，在全新远征PvE模式中，以更紧密的协作姿态共同探索天仓五IV。奖励包括：你在疾行过程中获取的所有装备，以及其他独特装饰。</p><p>在组队活动期间完成连续挑战，即可解锁新的百科条目，并让每位队员获得全新装饰奖励：</p><ul><li>徽标：女王巢穴</li><li>背景：女王统治</li><li>武器贴纸：女王之口</li><li>武器挂件：虱虫卵群落</li><li>毁灭者皮肤：阿拉塔·维克图斯</li><li>称号：灭绝者</li></ul><br /><img src=\"https://images.contentstack.io/v3/assets/blte410e3b15535c144/bltc6f9ee971cc78ff1/6af2ed9f568c2ec169570f9c/Crew_Up_Rewards_1920x1080.jpg\" alt=\"Crew_Up_Rewards_1920x1080.jpg\" height=\"auto\"/><p>共生将于北京时间12月9日凌晨4点上线，而组队活动也将同步开启，北京时间12月22日凌晨2点结束。第一周为公开试玩周，即使你的朋友尚未拥有《失落星船：马拉松》，也能免费参与组队活动，与你携手共进。 </p><h2><span style=\"color: #c0f304;\"><strong>如何参与</strong></span></h2><p>若想参与组队活动，玩家需在12月9日共生上线后，前往<a href=\"/7/en/codes/redeem?token=DMA-T7Y-XJL  \" target=\"_blank\">bungie.net/redeem</a>兑换以下代码。别担心，临近日期时我们会再次提醒你！ </p><h4 target=\"_blank\" style=\"text-align: center;\">- <a href=\"/7/en/codes/redeem?token=DMA-T7Y-XJL  \" target=\"_blank\"><strong>DMA-T7Y-XJL</strong></a> -</h4><p>兑换代码后，游戏内百科将开启新的活动部分，显示玩家须在全新PvE游戏模式远征中完成的特定组队挑战。初期较为简单，但后续会更加复杂且更具挑战性。好在有朋友可以助你一臂之力！</p><p>请注意，这些任务无法单人完成；你必须加入或组建团队，且至少需有另一名玩家同样兑换了组队活动代码。我们建议你将队员添加为Bungie好友；不过如果玩家使用同一平台且已将对方添加到各自的平台好友列表中，同样可以获得进度。 </p><h2><span style=\"color: #c0f304;\"><strong>常见问题</strong></span></h2><h3>参与组队活动是否需要拥有《失落星船：马拉松》？</h3><p>在公开试玩周（12月9日至16日）期间，任何人均可下载并游玩完整版游戏，无需购买。在此之后，直至12月23日活动结束，玩家必须拥有《失落星船：马拉松》许可才能参与该活动。</p><h3>公开试玩周结束后，我还能完成组队挑战吗？</h3><p>可以。在公开试玩周结束后，组队活动还会额外持续一周，让你有更多时间完成活动目标。</p><h3>我需要游玩达到一定时长才能参与活动吗？</h3><p>完成新手教程后，你即可开始完成组队活动。</p><h3>我的好友需要完成每一项挑战吗？</h3><p>组队活动的核心在于共同游玩，但每位玩家都可获得进度，并领取自己的百科奖励。</p><h3>在公开试玩周期间，我可以和好友一起游玩其他《失落星船：马拉松》模式吗？</h3><p>当然可以！组队活动侧重于全新远征PvE模式，但你也可以和好友一起尝试撤离，从中获取战利品、经验值以及阵营升级。如果他们在公开试玩周结束后购买了游戏，此前获得的所有奖励也都将保留。</p>",
+          "bodyText": "《失落星船：马拉松》进化将于12月9日开始，届时将推出下一个重大更新——共生，它将为游戏带来大量更新与改动，包括永久PvE模式的第一阶段。为了让大家都能亲身体验《失落星船：马拉松》的成长与进步，我们特别推出了公开试玩周，向所有玩家开放。 一起来看看详情吧！ 公开试玩周期间每个人都可以玩 正如第2赛季初那样，我们希望每一位玩家都能体验《失落星船：马拉松》中的新内容。抓紧这次的绝佳机会，不仅可以邀请你的朋友来试玩这款游戏，还能帮你获取组队奖励。 在12月9日至12月16日的公开试玩周期间，玩家可以尽情体验共生的所有内容，包括全新远征PvE模式、全新毕肖外壳、外围区域地图更新，以及各类全新装备与奖励。若你在公开试玩周结束后选择购买《失落星船：马拉松》，此前解锁的所有物品及进度都将保留。 组队活动：并肩作战，共获胜利 组队活动的目标非常明确：与好友组建队伍，在全新远征PvE模式中，以更紧密的协作姿态共同探索天仓五IV。奖励包括：你在疾行过程中获取的所有装备，以及其他独特装饰。 在组队活动期间完成连续挑战，即可解锁新的百科条目，并让每位队员获得全新装饰奖励： 徽标：女王巢穴 背景：女王统治 武器贴纸：女王之口 武器挂件：虱虫卵群落 毁灭者皮肤：阿拉塔·维克图斯 称号：灭绝者 共生将于北京时间12月9日凌晨4点上线，而组队活动也将同步开启，北京时间12月22日凌晨2点结束。第一周为公开试玩周，即使你的朋友尚未拥有《失落星船：马拉松》，也能免费参与组队活动，与你携手共进。 如何参与 若想参与组队活动，玩家需在12月9日共生上线后，前往 bungie.net/redeem 兑换以下代码。别担心，临近日期时我们会再次提醒你！ - DMA-T7Y-XJL - 兑换代码后，游戏内百科将开启新的活动部分，显示玩家须在全新PvE游戏模式远征中完成的特定组队挑战。初期较为简单，但后续会更加复杂且更具挑战性。好在有朋友可以助你一臂之力！ 请注意，这些任务无法单人完成；你必须加入或组建团队，且至少需有另一名玩家同样兑换了组队活动代码。我们建议你将队员添加为Bungie好友；不过如果玩家使用同一平台且已将对方添加到各自的平台好友列表中，同样可以获得进度。 常见问题 参与组队活动是否需要拥有《失落星船：马拉松》？ 在公开试玩周（12月9日至16日）期间，任何人均可下载并游玩完整版游戏，无需购买。在此之后，直至12月23日活动结束，玩家必须拥有《失落星船：马拉松》许可才能参与该活动。 公开试玩周结束后，我还能完成组队挑战吗？ 可以。在公开试玩周结束后，组队活动还会额外持续一周，让你有更多时间完成活动目标。 我需要游玩达到一定时长才能参与活动吗？ 完成新手教程后，你即可开始完成组队活动。 我的好友需要完成每一项挑战吗？ 组队活动的核心在于共同游玩，但每位玩家都可获得进度，并领取自己的百科奖励。 在公开试玩周期间，我可以和好友一起游玩其他《失落星船：马拉松》模式吗？ 当然可以！组队活动侧重于全新远征PvE模式，但你也可以和好友一起尝试撤离，从中获取战利品、经验值以及阵营升级。如果他们在公开试玩周结束后购买了游戏，此前获得的所有奖励也都将保留。",
+          "excerpt": "在公开试玩周与好友并肩作战",
+          "source": "official"
         }
       }
     },
