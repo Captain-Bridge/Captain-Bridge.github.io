@@ -88,12 +88,10 @@
 .home-introduction > div > p { margin: 4px 0 18px; color: #aeb9b0; font-size: 14px; line-height: 1.9; }
 .explore-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 24px; border-left: 1px solid #35473c; border-top: 1px solid #35473c; }
 .explore-grid > a { position: relative; display: flex; flex-direction: column; padding: 26px; color: #f0f3ed; text-decoration: none; border-right: 1px solid #35473c; border-bottom: 1px solid #35473c; transition: background .2s; }
-.explore-grid > a:hover { background-color: #101813; }
 .explore-grid h3 { margin: 0 0 10px; font-size: 25px; line-height: 1.4; }
 .explore-grid p { margin: 0 0 28px; color: #aeb9b0; font-size: 13px; line-height: 1.8; }
 .explore-number { font: 10px/1.5 Consolas, monospace; letter-spacing: .06em; }
-.explore-feature { grid-column: span 2; min-height: 390px; background: #c1fe00; }
-.explore-grid > .explore-feature:hover { background: #c1fe00; }
+.explore-feature { grid-column: span 2; min-height: 390px; }
 .explore-feature > img { width: 78px; height: 78px; object-fit: contain; margin: 38px 0; filter: brightness(0); }
 .explore-feature p { color: #aeb9b0; }
 .explore-map { grid-column: span 2; justify-content: space-between; min-height: 390px; isolation: isolate; overflow: hidden; background: #121b15; }
@@ -550,6 +548,12 @@
 .button-acid { background: #c1fe00; border-color: #c1fe00; color: #080b09; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%); }
 .button-acid:hover { background: #dcff68; color: #080b09; }
 .button-outline { border: 1px solid #c1fe00; background: #080b0980; color: #c1fe00; }
+/* 首页主视觉的两个入口按钮共用一套状态：静止时是深底描边（原本互动地图的样子），
+   悬停时整块点亮为荧光黄并切角（原本百科的样子）。clip-path 在静止态写成斜切量为 0
+   的退化多边形，与悬停态顶点数一致，才能让切角本身也参与过渡，而不是硬跳。 */
+.home-hero-actions .button { border: 1px solid #c1fe00; background-color: #080b0980; color: #c1fe00; clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 0px) 100%, 0 100%); transition: background-color .3s ease, color .3s ease, clip-path .3s ease; }
+.home-hero-actions .button:hover { background-color: #c1fe00; color: #080b09; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%); }
+.home-hero-actions .button:focus-visible { background-color: #c1fe00; color: #080b09; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%); }
 .text-link { color: #c1fe00; }
 .site-home .home-shell { padding-top: 26px; }
 .home-hero { min-height: 580px; display: flex; align-items: flex-end; border: 1px solid #3c4b40; background: #0c1712; }
@@ -563,23 +567,29 @@
 .hero-cross { top: 30px; color: #c1fe00; font-size: 30px; }.hero-cross-two { right: 85px; }
 .home-explore { margin-top: 28px; }
 .explore-grid { gap: 12px; border: 0; margin-top: 0; grid-template-columns: repeat(4, minmax(0,1fr)); }
-.explore-grid > a { border: 1px solid #394b3f; background: #111a14; padding: 26px; min-height: 270px; }
-.explore-grid > a:hover { background: #19271c; border-color: #c1fe00; }
-.explore-grid > .explore-feature { grid-column: span 2; background: #c1fe00; color: #080b09; }
-.explore-grid > .explore-feature:hover { background: #d6ff59; }
+/* Home explore cards: every tile rests on the dark archive surface and lights up
+   to the fluorescent block on hover, so the whole grid shares one interaction. */
+.explore-grid > a { border: 1px solid #394b3f; background: #111a14; padding: 26px; min-height: 270px; transition: background-color .3s ease, border-color .3s ease, color .3s ease; }
+.explore-grid > a:hover { background: #c1fe00; border-color: #c1fe00; color: #080b09; }
+.explore-grid > .explore-feature { grid-column: span 2; }
 .explore-grid > .explore-map { grid-column: span 2; min-height: 330px; background: #101a13; }
 .explore-grid > .explore-small { grid-column: span 1; }
 .explore-grid > .explore-small:nth-child(2), .explore-grid > .explore-small:nth-child(4), .explore-grid > .explore-small:nth-child(7) { grid-column: span 2; }
-.explore-grid h3 { color: #f2f6ed; font-size: 24px; }.explore-grid p { color: #aeb9b0; font-size: 13px; }
-.explore-grid .explore-feature h3, .explore-grid .explore-feature p { color: #080b09; }
-.explore-number { align-self: flex-start; color: #c1fe00; font-size: 11px; }.explore-feature .explore-number { color: #080b09; }
-.explore-module-icon { filter: none; width: 42px; height: 42px; object-fit: contain; margin: 25px 0; }
-.explore-small > .explore-module-icon { filter: brightness(0) invert(1); }
-.explore-feature .explore-module-icon { filter: brightness(0); width: 64px; height: 64px; }
-.explore-map > .explore-map-preview { opacity: .7; }.explore-map > div { margin-top: auto; position: relative; }
-.explore-grid .explore-cta { margin-top: auto; align-self: flex-end; font: 26px/1 sans-serif; color: #c1fe00; }
-.explore-grid .explore-feature .explore-cta { color: #080b09; }
-.explore-grid small { color: #aeb9b0; font-size: 11px; }
+.explore-grid h3 { color: #f2f6ed; font-size: 24px; transition: color .3s ease; }
+.explore-grid p { color: #aeb9b0; font-size: 13px; transition: color .3s ease; }
+.explore-grid small { color: #aeb9b0; font-size: 11px; transition: color .3s ease; }
+.explore-grid > a:hover h3, .explore-grid > a:hover p, .explore-grid > a:hover small { color: #080b09; }
+.explore-number { align-self: flex-start; color: #c1fe00; font-size: 11px; transition: color .3s ease; }
+.explore-grid > a:hover .explore-number, .explore-grid > a:hover .explore-cta { color: #080b09; }
+.explore-grid .explore-module-icon { width: 42px; height: 42px; object-fit: contain; margin: 25px 0; filter: brightness(0) invert(1); transition: filter .3s ease; }
+.explore-grid .explore-feature .explore-module-icon { width: 64px; height: 64px; }
+.explore-grid > a:hover .explore-module-icon { filter: brightness(0); }
+.explore-grid .explore-cta { margin-top: auto; align-self: flex-end; font: 26px/1 sans-serif; color: #c1fe00; transition: color .3s ease; }
+.explore-map > .explore-map-preview { opacity: .7; transition: opacity .3s ease; }
+.explore-map > div { margin-top: auto; position: relative; }
+.explore-map::after { transition: opacity .3s ease; }
+.explore-grid > .explore-map:hover > .explore-map-preview { opacity: 0; }
+.explore-grid > .explore-map:hover::after { opacity: 0; }
 .home-news { padding-top: 48px; }.home-news-item { color: #f2f6ed; }.home-news-image > span { background: #c1fe00; color: #080b09; }
 .home-original-quote { margin-top: 48px; padding: 30px; border-top: 1px solid #394b3f; color: #aeb9b0; }
 .home-original-quote summary { cursor: pointer; font-size: clamp(22px, 3vw, 34px); line-height: 1.5; font-weight: 750; color: #c1fe00; }
